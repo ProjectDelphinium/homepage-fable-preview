@@ -7,6 +7,9 @@
 
 ---
 
+## Framing (open)
+Jared is **not convinced** we have the right homepage framing yet. Treat current headline/journey as a draft to test, not a locked story. Iterate framing; do not double down as if the sell is settled.
+
 ## Mission
 
 Build a better public marketing homepage for Delphinium (Canvas engagement layer for virtual/online K-12). This is **not** a pixel clone of the current HubSpot site. When Jared locks a version, Web Design stages it on **Zoho** (staging/preview). **Do not** cut DNS or unpublish HubSpot.
