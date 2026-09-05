@@ -24,6 +24,7 @@ body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);l
 h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.015em;line-height:1.02;margin:0}
 p{margin:0}
 a{color:inherit}
+::selection{background:var(--sun);color:var(--ink)}
 .wrap{width:min(var(--w),calc(100% - 48px));margin:0 auto}
 .screen{min-height:100vh;display:flex;align-items:center;padding:120px 0}
 .eyebrow{font-weight:800;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:22px;display:inline-flex;align-items:center;gap:10px}
@@ -36,13 +37,20 @@ a{color:inherit}
 .btn.sun{background:var(--sun);color:var(--ink)}
 .btn .arr{display:inline-block;transition:transform .18s ease}
 .btn:hover .arr{transform:translateX(4px)}
+.btn:focus-visible,.toggle:focus-visible,.chip:focus-visible,.jump:focus-visible,.logo:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 .small{font-size:14px;color:var(--mute);font-weight:700;letter-spacing:.04em}
+.jump{font-weight:800;text-decoration:none;border-bottom:2px solid var(--sun);padding-bottom:2px}
+.jump:hover{background:var(--sun)}
 
 /* reveal */
 .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
 .rv.in{opacity:1;transform:none}
 .rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}.rv.d3{transition-delay:.36s}.rv.d4{transition-delay:.48s}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media (prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+  .clock::before,.googly::before,.googly::after{animation:none !important}
+}
 
 /* nav */
 .nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);background:rgba(251,249,244,.82);border-bottom:1px solid rgba(21,19,43,.08)}
@@ -56,14 +64,18 @@ a{color:inherit}
 .hero .muted{color:var(--mute);font-weight:400}
 .hero h1{max-width:11em}
 .hero h1 .bang{display:inline-block;background:var(--sun);padding:0 .18em;border-radius:.16em;transform:rotate(-1.2deg)}
-.hero .cta{margin-top:40px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.hero .cta-row{margin-top:40px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
 .proof{margin-top:70px;display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center;border-top:2px solid var(--ink);padding-top:34px}
 .proof .num{font-family:var(--display);font-weight:700;font-size:clamp(84px,12vw,170px);line-height:.85;letter-spacing:-.05em}
 .proof .num small{display:block;font-family:var(--body);font-size:14px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--mute);margin-top:10px}
 .proof .what{font-family:var(--display);font-size:clamp(22px,2.4vw,32px);font-weight:400;line-height:1.25;max-width:20em}
 .proof .ctx{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
 .pill{display:inline-block;padding:7px 13px;border-radius:999px;border:1.5px solid rgba(21,19,43,.18);font-size:13.5px;font-weight:800;letter-spacing:.02em;background:#fff}
-@media (max-width:760px){.proof{grid-template-columns:1fr}}
+@media (max-width:760px){
+  .proof{grid-template-columns:1fr;gap:18px}
+  .hero{padding:56px 0 72px}
+  .hero .cta-row .btn{width:100%;justify-content:center}
+}
 
 /* 2 problem */
 .problem{background:var(--ink);color:#fff}
@@ -79,9 +91,10 @@ a{color:inherit}
 
 /* 3 makeover */
 .makeover{background:var(--paper2)}
-.makeover h2{max-width:9em}
+.makeover h2{max-width:10em}
 .makeover h2 em{font-style:normal;background:var(--sun);padding:0 .14em;border-radius:.14em}
-.stage{position:relative;margin-top:50px;border-radius:22px;overflow:hidden;box-shadow:0 34px 90px rgba(21,19,43,.22);background:#fff;aspect-ratio:16/9.6;min-height:420px;user-select:none}
+.stage{position:relative;margin-top:50px;border-radius:22px;overflow:hidden;box-shadow:0 34px 90px rgba(21,19,43,.22);background:#fff;aspect-ratio:16/9.6;min-height:420px;user-select:none;touch-action:none;cursor:ew-resize}
+.stage:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
 .layer{position:absolute;inset:0}
 .layer.before{background:#f4f4f6;z-index:2;clip-path:inset(0 50% 0 0)}
 .layer.after{background:#fff;z-index:1}
@@ -93,12 +106,11 @@ a{color:inherit}
 .before .side .gl{background:#dcdce2}
 .before .lnk{font-size:13.5px;color:#4a6fd0;text-decoration:underline;margin-bottom:8px}
 .divider{position:absolute;top:0;bottom:0;left:50%;width:3px;background:var(--ink);z-index:4;transform:translateX(-50%);pointer-events:none}
-.handle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:62px;height:62px;border-radius:50%;background:var(--ink);color:var(--sun);display:grid;place-items:center;font-size:20px;font-weight:900;letter-spacing:-2px;box-shadow:0 12px 30px rgba(0,0,0,.35);z-index:5;pointer-events:none}
-.stage input[type=range]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:6;margin:0}
+.handle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:62px;height:62px;border-radius:50%;background:var(--ink);color:var(--sun);display:grid;place-items:center;font-size:20px;font-weight:900;letter-spacing:-2px;box-shadow:0 12px 30px rgba(0,0,0,.35);z-index:5;pointer-events:none;transition:background .25s,color .25s}
+.stage.is-on .handle{background:var(--sun);color:var(--ink)}
 .lbl{position:absolute;top:16px;z-index:5;font-size:12.5px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;padding:8px 12px;border-radius:999px;pointer-events:none}
 .lbl.b{left:16px;background:#dcdce2;color:#555}
 .lbl.a{right:16px;background:var(--sun);color:var(--ink)}
-/* after mock */
 .after .band{grid-column:1/-1;height:74px;border-radius:14px;background:linear-gradient(100deg,var(--blue) 0,#6d8bff 55%,var(--sun) 100%);position:relative;overflow:hidden}
 .after .band b{position:absolute;left:18px;bottom:14px;color:#fff;font-family:var(--display);font-size:20px;font-weight:600}
 .after .band .pts{position:absolute;right:16px;top:14px;background:rgba(21,19,43,.85);color:var(--sun);font-weight:900;font-size:13px;padding:7px 12px;border-radius:999px}
@@ -123,13 +135,36 @@ a{color:inherit}
 .near .dots{display:flex;gap:6px;margin-top:7px}
 .near .dots i{width:20px;height:20px;border-radius:50%;background:var(--blue)}
 .near .dots i:nth-child(2){background:var(--green)}.near .dots i:nth-child(3){background:var(--amber)}.near .dots i:nth-child(4){background:var(--red)}
-.mk-ctrl{margin-top:26px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.toggle{display:inline-flex;align-items:center;gap:14px;background:none;border:2px solid var(--ink);border-radius:999px;padding:10px 18px 10px 10px;font:inherit;font-weight:800;cursor:pointer;color:var(--ink)}
-.toggle .sw{width:56px;height:32px;border-radius:999px;background:#cfcfd6;position:relative;transition:background .3s}
+.mk-ctrl{margin-top:22px;display:grid;grid-template-columns:1fr auto;gap:18px 24px;align-items:center}
+.mk-slide{display:grid;gap:8px}
+.mk-slide label{font-size:12.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.mk-slider{-webkit-appearance:none;appearance:none;width:100%;height:8px;border-radius:999px;background:linear-gradient(90deg,var(--sun),#e6e6ec);outline:none;cursor:pointer}
+.mk-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:28px;height:28px;border-radius:50%;background:var(--ink);border:3px solid #fff;box-shadow:0 4px 12px rgba(21,19,43,.28)}
+.mk-slider::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:var(--ink);border:3px solid #fff;box-shadow:0 4px 12px rgba(21,19,43,.28)}
+.toggle{display:inline-flex;align-items:center;gap:14px;background:#fff;border:2px solid var(--ink);border-radius:999px;padding:10px 18px 10px 10px;font:inherit;font-weight:800;cursor:pointer;color:var(--ink);white-space:nowrap}
+.toggle .sw{width:56px;height:32px;border-radius:999px;background:#cfcfd6;position:relative;transition:background .3s;flex:0 0 56px}
 .toggle .sw::after{content:"";position:absolute;top:4px;left:4px;width:24px;height:24px;border-radius:50%;background:#fff;transition:transform .3s;box-shadow:0 2px 6px rgba(0,0,0,.2)}
 .toggle.on .sw{background:var(--green)}.toggle.on .sw::after{transform:translateX(24px)}
-.mk-note{font-size:15px;color:var(--mute);font-weight:700}
-@media (max-width:720px){.course{grid-template-columns:1fr}.course .side{display:none}.stage{aspect-ratio:auto;height:440px}.tiles{grid-template-columns:1fr 1fr}}
+.mk-note{grid-column:1/-1;font-size:15px;color:var(--mute);font-weight:700}
+@media (max-width:860px){
+  .course{grid-template-columns:1fr;padding:18px 16px;gap:14px}
+  .before .side{display:none}
+  .after .side{grid-template-columns:1fr 1fr;align-items:stretch}
+  .after .near{display:none}
+  .stage{aspect-ratio:3/4;min-height:520px;height:auto}
+  .tiles{grid-template-columns:1fr 1fr}
+  .after .band{height:64px}
+  .after .band b{font-size:16px}
+  .handle{width:72px;height:72px}
+  .lbl{font-size:11px;padding:7px 10px}
+  .mk-ctrl{grid-template-columns:1fr}
+  .toggle{justify-content:center}
+}
+@media (max-width:520px){
+  .after .side{grid-template-columns:1fr}
+  .stage{min-height:560px;aspect-ratio:auto;height:620px}
+  .tiles{gap:8px}
+}
 
 /* 3b fun */
 .fun{background:var(--sun);overflow:hidden;position:relative}
@@ -142,37 +177,38 @@ a{color:inherit}
 .card.q{font-family:var(--display);font-size:clamp(21px,2.1vw,26px);font-weight:400;line-height:1.3;transform:rotate(1.2deg)}
 .card.q footer{font-family:var(--body);font-size:13px;font-weight:800;color:var(--mute);margin-top:18px;letter-spacing:.06em;text-transform:uppercase}
 .card.q + .card.q{margin-top:26px;transform:rotate(-1deg)}
-.googly{position:absolute;width:70px;height:70px;border-radius:50%;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.15)}
-.googly::before,.googly::after{content:"";position:absolute;top:18px;width:22px;height:22px;background:#fff;border:2px solid var(--ink);border-radius:50%;box-shadow:inset -7px 4px 0 0 var(--ink);animation:look 4s ease-in-out infinite}
+.googly{position:absolute;width:70px;height:70px;border-radius:50%;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.15);pointer-events:none}
+.googly::before,.googly::after{content:"";position:absolute;top:18px;width:22px;height:22px;background:#fff;border:2px solid var(--ink);border-radius:50%;box-shadow:inset var(--lx,-7px) var(--ly,4px) 0 0 var(--ink);animation:look 4s ease-in-out infinite}
 .googly::before{left:10px}.googly::after{right:10px}
 .googly i{position:absolute;bottom:14px;left:26px;width:18px;height:8px;border-bottom:3px solid var(--ink);border-radius:0 0 10px 10px}
 @keyframes look{0%,40%,100%{box-shadow:inset -7px 4px 0 0 var(--ink)}55%,85%{box-shadow:inset 7px 5px 0 0 var(--ink)}}
 .g1{right:6%;top:12%}.g2{left:4%;bottom:10%;width:52px;height:52px}
-@media (max-width:860px){.fun .grid{grid-template-columns:1fr}}
+.fun.look .googly::before,.fun.look .googly::after{animation:none}
+@media (max-width:860px){.fun .grid{grid-template-columns:1fr}.g1,.g2{display:none}}
 
 /* 4 research */
 .why{background:var(--paper)}
-.why .pillars{margin-top:60px;display:grid;gap:22px;max-width:760px}
-.why .pillar{display:grid;grid-template-columns:70px 1fr;gap:18px;align-items:start}
-.why .pillar .n{font-family:var(--display);font-size:52px;line-height:.9;color:var(--blue);font-weight:300}
-.why .pillar p{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.4vw,30px);line-height:1.2}
-.why .pillar p span{display:block;font-family:var(--body);font-size:14px;color:var(--mute);font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-top:8px}
-.why .belong{margin-top:60px;padding:34px 38px;border-left:5px solid var(--sun);background:#fff;border-radius:0 18px 18px 0;max-width:720px;font-family:var(--display);font-size:clamp(20px,2vw,26px);font-weight:400;line-height:1.3}
+.why .pillars{margin-top:60px;display:grid;gap:28px;max-width:760px}
+.why .pillar{display:grid;gap:8px}
+.why .pillar .n{font-family:var(--body);font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.why .pillar p{font-family:var(--display);font-weight:400;font-size:clamp(24px,2.6vw,34px);line-height:1.15}
+.why .belong{margin-top:60px;padding:28px 32px;border-left:5px solid var(--sun);background:#fff;border-radius:0 18px 18px 0;max-width:720px;font-family:var(--display);font-size:clamp(20px,2vw,26px);font-weight:400;line-height:1.3}
 
 /* 5 voices */
 .voices{background:var(--ink);color:#fff}
-.voices .grid{margin-top:60px;display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.voices .grid{margin-top:60px;display:grid;grid-template-columns:1.15fr .85fr;gap:22px}
 .voice{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:30px 30px 26px;display:flex;flex-direction:column;gap:22px}
-.voice q{quotes:none;font-family:var(--display);font-weight:400;font-size:clamp(21px,1.9vw,25px);line-height:1.3;flex:1}
+.voice.wide{grid-row:span 2}
+.voice q{quotes:none;font-family:var(--display);font-weight:400;font-size:clamp(22px,2.1vw,30px);line-height:1.25;flex:1}
 .voice q b{color:var(--sun);font-weight:600}
 .who{display:flex;align-items:center;gap:14px}
 .ini{width:48px;height:48px;border-radius:50%;background:var(--sun);color:var(--ink);display:grid;place-items:center;font-weight:900;font-size:15px;flex:0 0 48px}
 .ini.b{background:var(--blue);color:#fff}.ini.g{background:var(--green);color:#fff}
 .who b{display:block;font-size:15px}.who span{font-size:13px;color:rgba(255,255,255,.6)}
-.voice .nums{display:flex;align-items:center;gap:14px;font-family:var(--display);font-size:30px;font-weight:600}
+.voice .nums{display:flex;align-items:center;gap:14px;font-family:var(--display);font-size:34px;font-weight:600}
 .voice .nums small{display:block;font-family:var(--body);font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55)}
 .voice .nums .to{color:var(--sun)}
-@media (max-width:900px){.voices .grid{grid-template-columns:1fr}}
+@media (max-width:900px){.voices .grid{grid-template-columns:1fr}.voice.wide{grid-row:auto}}
 
 /* 6 product story */
 .story{background:var(--paper)}
@@ -185,8 +221,7 @@ a{color:inherit}
 .step li{padding-left:26px;position:relative;font-weight:700;color:var(--ink2)}
 .step li::before{content:"";position:absolute;left:0;top:9px;width:12px;height:12px;border-radius:50%;background:var(--sun)}
 .step.cb li::before{background:var(--green)}.step.eb li::before{background:var(--blue)}
-@media (max-width:860px){.step{grid-template-columns:1fr;gap:34px}}
-/* control tower mock */
+@media (max-width:860px){.step{grid-template-columns:1fr;gap:28px;padding:48px 0}}
 .ct{background:#fff;border-radius:22px;box-shadow:0 26px 60px rgba(21,19,43,.16);padding:22px;font-size:14px}
 .ct .hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
 .ct .hd b{font-family:var(--display);font-size:20px}
@@ -207,7 +242,6 @@ a{color:inherit}
 .ct .send{margin-top:14px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .ct .send .btn{padding:12px 18px;font-size:14px;box-shadow:none}
 .ct .send .cc{font-size:12.5px;color:#666;font-weight:700}
-/* family mock */
 .fam{background:#fff;border-radius:22px;box-shadow:0 26px 60px rgba(21,19,43,.16);padding:22px;display:grid;gap:12px}
 .fam .row{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:12px 14px;border-radius:14px;background:#f7f7fa}
 .fam .row b{font-size:14px}.fam .row span{display:block;font-size:12px;color:#777}
@@ -216,7 +250,6 @@ a{color:inherit}
 .fam .tag{font-size:11.5px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border-radius:999px;background:var(--sun)}
 .fam .msg{border:1.5px dashed rgba(21,19,43,.25);border-radius:14px;padding:12px 14px;font-size:13px;color:#555}
 .fam .msg b{color:var(--ink)}
-/* eb mock */
 .ebm{background:#fff;border-radius:22px;box-shadow:0 26px 60px rgba(21,19,43,.16);padding:22px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .ebm .box{border-radius:16px;padding:16px;background:#f7f7fa;font-size:13px;font-weight:700;color:#555}
 .ebm .box b{display:block;font-family:var(--display);font-size:24px;color:var(--ink);font-weight:600;margin-bottom:4px}
@@ -228,11 +261,11 @@ a{color:inherit}
 
 /* 7 beats */
 .beats{background:var(--paper2);padding:120px 0}
-.beat{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;padding:clamp(34px,5vw,60px) 0;border-top:2px solid rgba(21,19,43,.12)}
+.beat{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;padding:clamp(28px,4.5vw,52px) 0;border-top:2px solid rgba(21,19,43,.12)}
 .beat:first-of-type{border-top:0}
-.beat h3{font-size:clamp(28px,3.6vw,50px);font-weight:500;max-width:14em}
+.beat h3{font-size:clamp(28px,3.6vw,48px);font-weight:500;max-width:14em}
 .beat h3 b{font-weight:700;background:var(--sun);padding:0 .12em;border-radius:.12em}
-.beat p{margin-top:12px;color:var(--ink2);font-size:17px;max-width:30em}
+.beat p{margin-top:12px;color:var(--ink2);font-size:17px;max-width:28em}
 .beat .vis{width:min(260px,32vw);display:flex;justify-content:flex-end}
 .clock{width:120px;height:120px;border-radius:50%;border:5px solid var(--ink);position:relative;background:#fff}
 .clock::before{content:"";position:absolute;left:50%;top:50%;width:4px;height:44px;background:var(--ink);transform-origin:50% 100%;transform:translate(-50%,-100%) rotate(0deg);animation:tick 6s linear infinite;border-radius:2px}
@@ -253,20 +286,28 @@ a{color:inherit}
 .books{display:flex;align-items:flex-end;gap:6px}
 .books i{display:block;width:26px;height:80px;border-radius:6px 6px 3px 3px;background:var(--blue)}
 .books i:nth-child(2){height:100px;background:var(--green)}.books i:nth-child(3){height:64px;background:var(--sun)}.books i:nth-child(4){height:90px;background:var(--ink)}
-@media (max-width:720px){.beat{grid-template-columns:1fr}.beat .vis{justify-content:flex-start;width:auto}}
+@media (max-width:720px){.beat{grid-template-columns:1fr;gap:18px}.beat .vis{justify-content:flex-start;width:auto}}
 
 /* cta */
-.cta{background:var(--ink);color:#fff;text-align:center;padding:150px 0}
-.cta h2{font-size:clamp(40px,6.4vw,92px);max-width:12em;margin:0 auto}
-.cta h2 span{color:var(--sun)}
-.cta .lede{color:rgba(255,255,255,.7);margin:26px auto 0}
-.cta .btn{margin-top:44px}
-.cta .nothing{margin-top:40px;font-family:var(--display);font-style:italic;font-size:clamp(18px,1.9vw,24px);color:rgba(255,255,255,.55)}
+.cta-end{background:var(--ink);color:#fff;text-align:center;padding:150px 0}
+.cta-end h2{font-size:clamp(40px,6.4vw,92px);max-width:12em;margin:0 auto}
+.cta-end h2 span{color:var(--sun)}
+.cta-end .lede{color:rgba(255,255,255,.7);margin:26px auto 0}
+.cta-end .btn{margin-top:44px}
+.cta-end .nothing{margin-top:40px;font-family:var(--display);font-style:italic;font-size:clamp(18px,1.9vw,24px);color:rgba(255,255,255,.55)}
 .trust{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:60px}
 .trust .pill{background:transparent;color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.25)}
 footer{background:#0f0d20;color:rgba(255,255,255,.55);font-size:14px;padding:30px 0}
 footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 footer a{text-decoration:none}
+@media (max-width:760px){
+  .screen{min-height:auto;padding:88px 0}
+  .wrap{width:min(var(--w),calc(100% - 32px))}
+  .cta-end{padding:96px 0}
+  .cta-end .btn{width:min(100%,420px);justify-content:center}
+  .nav .wrap{height:60px}
+  .beats{padding:80px 0}
+}
 </style>
 </head>
 <body>
@@ -283,8 +324,9 @@ footer a{text-decoration:none}
   <div class="wrap">
     <p class="eyebrow rv">For virtual and online K-12 schools on Canvas</p>
     <h1 class="big rv d1"><span class="muted">Canvas delivers content.</span><br>Delphinium delivers <span class="bang">ENGAGEMENT!</span></h1>
-    <div class="cta rv d2">
+    <div class="cta-row rv d2">
       <a class="btn" href="https://delphi-me.com/schedule-jared">Schedule a demo with Jared <span class="arr">&rarr;</span></a>
+      <a class="jump" href="#makeover">See the three-minute Makeover</a>
       <span class="small">About three minutes to turn on. No migration.</span>
     </div>
 
@@ -296,6 +338,7 @@ footer a{text-decoration:none}
           <span class="pill">72 fully online classes</span>
           <span class="pill">6,000 students</span>
           <span class="pill">Year without vs. year with</span>
+          <span class="pill">Asynchronous</span>
         </div>
       </div>
     </div>
@@ -325,9 +368,9 @@ footer a{text-decoration:none}
   <div class="wrap">
     <p class="eyebrow rv">The three-minute Makeover</p>
     <h2 class="big rv d1">Which class would <em>YOU</em> rather take?</h2>
-    <p class="lede rv d2" style="margin-top:22px">Same Canvas course. Same teacher. Same content. Drag, or just turn it on.</p>
+    <p class="lede rv d2" style="margin-top:22px">Same Canvas course. Same teacher. Same content. Drag the stage, use the slider, or just turn it on.</p>
 
-    <div class="stage rv d2" id="stage">
+    <div class="stage rv d2" id="stage" tabindex="0" role="img" aria-label="Demo scenario. Drag to compare a standard Canvas course with the same course after a Delphinium Makeover.">
       <span class="lbl b">Standard Canvas</span>
       <span class="lbl a">With Delphinium</span>
 
@@ -369,19 +412,22 @@ footer a{text-decoration:none}
       </div>
 
       <div class="divider" id="divider"></div>
-      <div class="handle" id="handle">&lsaquo;&rsaquo;</div>
-      <input type="range" id="scrub" min="0" max="100" value="50" aria-label="Compare standard Canvas with Delphinium">
+      <div class="handle" id="handle" aria-hidden="true">&lsaquo;&rsaquo;</div>
     </div>
 
     <div class="mk-ctrl rv d3">
-      <button class="toggle" id="toggle" type="button" aria-pressed="false"><span class="sw"></span>Turn Delphinium on</button>
-      <span class="mk-note">Color-coded modules, progress, points, a next step. No rebuild.</span>
+      <div class="mk-slide">
+        <label for="scrub">Drag to compare</label>
+        <input class="mk-slider" type="range" id="scrub" min="0" max="100" value="50" aria-label="Compare standard Canvas with Delphinium">
+      </div>
+      <button class="toggle" id="toggle" type="button" aria-pressed="false"><span class="sw"></span><span id="toggleLabel">Turn Delphinium on</span></button>
+      <span class="mk-note">Labelled demo scenario. Color-coded modules, progress, points, a next step. No rebuild.</span>
     </div>
   </div>
 </section>
 
 <!-- 3b. STUDENTS FEEL IT -->
-<section class="screen fun">
+<section class="screen fun" id="fun">
   <div class="googly g1" aria-hidden="true"><i></i></div>
   <div class="googly g2" aria-hidden="true"><i></i></div>
   <div class="wrap">
@@ -392,7 +438,7 @@ footer a{text-decoration:none}
         <div class="word rv d2"><span>Their most common word</span>Fun.</div>
       </div>
       <div>
-        <div class="card q rv d2">Students have redone a quiz they did poorly on just to earn more points for their avatar. Engagement and work completion went up.<footer>Tiffany Dance &middot; Instructional Coach, Davis Connect</footer></div>
+        <div class="card q rv d2">Students have redone a quiz they did poorly on just to earn more points for their avatar. Sometimes just for googly eyes.<footer>Tiffany Dance &middot; Instructional Coach, Davis Connect</footer></div>
         <div class="card q rv d3">I was sitting on the couch watching Netflix and the thought popped into my head: I could be doing homework right now.<footer>Student survey response</footer></div>
       </div>
     </div>
@@ -405,9 +451,9 @@ footer a{text-decoration:none}
     <p class="eyebrow rv">Why it works</p>
     <h2 class="mid rv d1">Fourteen years of published behavioral research, turned into a course students want to open.</h2>
     <div class="pillars">
-      <div class="pillar rv d1"><div class="n">1</div><p>Students see where they have been, where they are, and where they are going.<span>Self-regulated learning</span></p></div>
-      <div class="pillar rv d2"><div class="n">2</div><p>Small nudges, progress meters, and celebrations pull them back in.<span>Behavioral economics</span></p></div>
-      <div class="pillar rv d3"><div class="n">3</div><p>Nobody learns alone. Avatars and Who's Near Me make an online class feel like a class.<span>Social presence</span></p></div>
+      <div class="pillar rv d1"><div class="n">Self-regulated learning</div><p>Students see where they have been, where they are, and where they are going.</p></div>
+      <div class="pillar rv d2"><div class="n">Behavioral economics</div><p>Small nudges, progress meters, and celebrations pull them back in.</p></div>
+      <div class="pillar rv d3"><div class="n">Social presence</div><p>Avatars and Who's Near Me make an online class feel like a class.</p></div>
     </div>
     <div class="belong rv d3">Most students are not motivated by competition. Delphinium is designed for the majority: progress, belonging, and goals they can see.</div>
   </div>
@@ -419,14 +465,14 @@ footer a{text-decoration:none}
     <p class="eyebrow rv" style="color:var(--sun)">From Davis</p>
     <h2 class="mid rv d1">The people who turned it on.</h2>
     <div class="grid">
-      <div class="voice rv d1">
-        <q>Delphinium has been a <b>game changer</b> for our teachers and students.</q>
-        <div class="who"><div class="ini">TD</div><div><b>Tiffany Dance</b><span>Instructional Coach, Davis Connect</span></div></div>
-      </div>
-      <div class="voice rv d2">
+      <div class="voice wide rv d1">
         <div class="nums"><div>12<small>emails a day</small></div><span class="to">&rarr;</span><div>6<small>messages a week</small></div></div>
         <q>This has <b>saved most of my Saturday nights.</b></q>
         <div class="who"><div class="ini b">NN</div><div><b>Natalie Niederhauser</b><span>HS Math Teacher, Davis Connect &middot; 100+ students</span></div></div>
+      </div>
+      <div class="voice rv d2">
+        <q>Delphinium has been a <b>game changer</b> for our teachers and students.</q>
+        <div class="who"><div class="ini">TD</div><div><b>Tiffany Dance</b><span>Instructional Coach, Davis Connect</span></div></div>
       </div>
       <div class="voice rv d3">
         <q>We can confidently say that we're seeing <b>better success</b> with Delphinium. We're in the process of going districtwide.</q>
@@ -445,7 +491,7 @@ footer a{text-decoration:none}
     <div class="steps">
       <div class="step rv">
         <div>
-          <div class="k">01 &middot; Delphinium</div>
+          <div class="k">Delphinium Core</div>
           <h3>The engagement layer on the Canvas you already have.</h3>
           <p class="lede">Turn it on inside a course. Students get a visual home. Teachers get a Control Tower: every student, red, yellow, or green, and a Message Center to reach the right ones in about 40 seconds.</p>
           <ul><li>Control Tower early-warning view</li><li>Message Center with templates and multi-channel send</li><li>Canvas LTI 1.3. No migration, no new tool to learn</li></ul>
@@ -476,10 +522,10 @@ footer a{text-decoration:none}
 
       <div class="step cb rv">
         <div>
-          <div class="k" style="color:var(--green)">02 &middot; Community Builder</div>
+          <div class="k" style="color:var(--green)">Community Builder</div>
           <h3>Bring families into the loop, calmly and early.</h3>
-          <p class="lede">Parents should not need Canvas literacy to see how their kid is doing. They get the same live, color-coded picture as the student and teacher, and they are included when a student needs support.</p>
-          <ul><li>Color-coded parent and observer view</li><li>Weekly progress to families</li><li>Celebrate wins, not only rescues</li><li>Auto-translate into 160 languages</li></ul>
+          <p class="lede">Parents should not need Canvas literacy to see how their kid is doing. Same live, color-coded picture. Include them when a student needs support. Celebrate wins, not only rescues.</p>
+          <ul><li>Color-coded parent and observer view</li><li>Weekly progress to families</li><li>Auto-translate into 160 languages</li></ul>
         </div>
         <div class="fam" aria-hidden="true">
           <div class="row g"><span class="dot"></span><div><b>Algebra 1</b><span>On track &middot; 88%</span></div><span class="tag">Win</span></div>
@@ -490,10 +536,10 @@ footer a{text-decoration:none}
 
       <div class="step eb rv">
         <div>
-          <div class="k">03 &middot; Engagement Builder</div>
-          <h3>Drive engagement. Build champions. Transform Canvas.</h3>
-          <p class="lede">The full Makeover: avatars, points, prize boxes, goal tracking, and a polished look every course in the school shares.</p>
-          <ul><li>Avatars, points, prize boxes, achievements</li><li>Students set, track, and own their goals</li><li>Who's Near Me and shared celebrations</li><li>One school-wide look, set once</li></ul>
+          <div class="k">Engagement Builder</div>
+          <h3>A course students want to open again.</h3>
+          <p class="lede">The full Makeover: avatars, points, prize boxes, goal tracking, and one polished look every course in the school shares.</p>
+          <ul><li>Avatars, points, prize boxes, achievements</li><li>Students set, track, and own their goals</li><li>Who's Near Me and shared celebrations</li></ul>
         </div>
         <div class="ebm" aria-hidden="true">
           <div class="box"><b>1,240</b>points this term</div>
@@ -516,20 +562,20 @@ footer a{text-decoration:none}
 
     <div class="beat rv"><div><h3>One polished look, <b>every class</b> in the school.</h3><p>School-wide layout templates, so students never wonder where to click.</p></div><div class="vis"><div class="stack"><i></i><i></i><i></i></div></div></div>
 
-    <div class="beat rv"><div><h3>Message templates that <b>write themselves</b> in.</h3><p>Relative dates, conditional sends, Canvas plus email plus banner plus to-do. Filter a struggling group and reach all of them in about 40 seconds.</p></div><div class="vis"><div class="tpl"><b>Hi <mark>{first name}</mark>,</b> your <mark>{assignment}</mark> is due <mark>{in 2 days}</mark>. You are closer than you think.</div></div></div>
+    <div class="beat rv"><div><h3>Message templates that <b>write themselves</b> in.</h3><p>Relative dates, conditional sends, Canvas plus email plus banner plus to-do. Filter a struggling group and reach them in about 40 seconds.</p></div><div class="vis"><div class="tpl"><b>Hi <mark>{first name}</mark>,</b> your <mark>{assignment}</mark> is due <mark>{in 2 days}</mark>. You are closer than you think.</div></div></div>
 
     <div class="beat rv"><div><h3>About <b>three minutes.</b> Just turn it on.</h3><p>No migration. No new tool for teachers. Light enough for Chromebooks and weak Wi-Fi.</p></div><div class="vis"><div class="clock" aria-hidden="true"></div></div></div>
 
-    <div class="beat rv"><div><h3><b>Compliant</b> and independently tested.</h3><p>Canvas LTI 1.3 plugin on AWS. Student data encrypted in transit and at rest, stored in the United States, never sold.</p><div class="pills"><span class="pill">FERPA</span><span class="pill">HECVAT available</span><span class="pill">US-hosted on AWS</span><span class="pill">Canvas LTI 1.3</span><span class="pill">WCAG 2.0 AA</span></div></div></div>
+    <div class="beat rv"><div><h3><b>FERPA-aware.</b> Canvas-native. US-hosted.</h3><p>Student data stays in Canvas. Leaderboards use aliases. Compliance owns the deep docs.</p><div class="pills"><span class="pill">FERPA</span><span class="pill">HECVAT available</span><span class="pill">US-hosted on AWS</span><span class="pill">Canvas LTI 1.3</span><span class="pill">WCAG 2.0 AA</span></div></div></div>
 
-    <div class="beat rv"><div><h3>Real people, <b>real training.</b></h3><p>Hands-on Zoom onboarding for your pilot teachers, self-paced lessons for everyone, and a support forum our team actually watches.</p></div><div class="vis"><div class="sup"><span>Zoom onboarding</span><span>Self-paced lessons</span><span>Monitored forum</span></div></div></div>
+    <div class="beat rv"><div><h3>Real people, <b>real training.</b></h3><p>Onboarding and support from the team that built it. We stay reachable after you turn it on.</p></div><div class="vis"><div class="sup"><span>Pilot with your teachers</span><span>Stay reachable</span><span>Educator-to-educator</span></div></div></div>
 
     <div class="beat rv"><div><h3>Built on <b>research,</b> not hunches.</h3><p>Fourteen years of published work on motivation, nudges, and social presence, by an educator who still teaches.</p></div><div class="vis"><div class="books"><i></i><i></i><i></i><i></i></div></div></div>
   </div>
 </section>
 
 <!-- CTA -->
-<section class="cta">
+<section class="cta-end">
   <div class="wrap">
     <h2 class="rv">Fewer failures. <span>Up to 31%.</span><br>Same courses, same teachers.</h2>
     <p class="lede rv d1">See your own Canvas course get the Makeover, live, in about three minutes.</p>
@@ -550,48 +596,113 @@ footer a{text-decoration:none}
 
 <script>
 (function(){
-  // reveal on scroll
   var els=document.querySelectorAll('.rv');
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(entries){
       entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-    },{threshold:.15});
+    },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
     els.forEach(function(el){ io.observe(el); });
   } else { els.forEach(function(el){ el.classList.add('in'); }); }
 
-  // Makeover scrub + toggle
-  var scrub=document.getElementById('scrub'), before=document.getElementById('before'),
-      divider=document.getElementById('divider'), handle=document.getElementById('handle'),
-      toggle=document.getElementById('toggle'), raf=null;
-  function setPos(v){
-    v=Math.max(0,Math.min(100,v));
+  var scrub=document.getElementById('scrub');
+  var before=document.getElementById('before');
+  var divider=document.getElementById('divider');
+  var handle=document.getElementById('handle');
+  var toggle=document.getElementById('toggle');
+  var toggleLabel=document.getElementById('toggleLabel');
+  var stage=document.getElementById('stage');
+  var raf=null, dragging=false, interacted=false, pos=50;
+
+  function setPos(v, fromUser){
+    v=Math.max(0,Math.min(100,+v));
+    pos=v;
     before.style.clipPath='inset(0 '+(100-v)+'% 0 0)';
-    divider.style.left=v+'%'; handle.style.left=v+'%';
-    scrub.value=v;
-    var on=v<25; toggle.classList.toggle('on',on); toggle.setAttribute('aria-pressed',on?'true':'false');
-    toggle.lastChild.nodeValue=on?'Delphinium is on':'Turn Delphinium on';
+    divider.style.left=v+'%';
+    handle.style.left=v+'%';
+    if(scrub && +scrub.value!==v) scrub.value=String(Math.round(v));
+    var on=v<=12;
+    toggle.classList.toggle('on',on);
+    stage.classList.toggle('is-on',on);
+    toggle.setAttribute('aria-pressed',on?'true':'false');
+    toggleLabel.textContent=on?'Delphinium is on':'Turn Delphinium on';
+    if(fromUser) interacted=true;
   }
-  scrub.addEventListener('input',function(){ if(raf){cancelAnimationFrame(raf);raf=null;} setPos(+scrub.value); });
+
   function animateTo(target){
-    var start=+scrub.value, t0=null, dur=900;
+    var start=pos, t0=null, dur=780;
     if(raf) cancelAnimationFrame(raf);
     function step(ts){
       if(!t0) t0=ts;
-      var p=Math.min(1,(ts-t0)/dur); p=1-Math.pow(1-p,3);
-      setPos(start+(target-start)*p);
+      var p=Math.min(1,(ts-t0)/dur);
+      p=1-Math.pow(1-p,3);
+      setPos(start+(target-start)*p,false);
       if(p<1) raf=requestAnimationFrame(step); else raf=null;
     }
     raf=requestAnimationFrame(step);
   }
-  toggle.addEventListener('click',function(){ animateTo(toggle.classList.contains('on')?100:0); });
-  setPos(50);
-  // first-view nudge: when the stage scrolls in, ease toward Delphinium once
-  var stage=document.getElementById('stage'), nudged=false;
-  if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-    new IntersectionObserver(function(en,o){ en.forEach(function(e){ if(e.isIntersecting && !nudged){ nudged=true; setTimeout(function(){ animateTo(0); },700); o.disconnect(); } }); },{threshold:.5}).observe(stage);
+
+  function xToPos(clientX){
+    var r=stage.getBoundingClientRect();
+    if(!r.width) return pos;
+    return ((clientX-r.left)/r.width)*100;
   }
 
-  // Control Tower filter
+  function stopDrag(){ dragging=false; }
+
+  stage.addEventListener('pointerdown',function(e){
+    if(e.pointerType==='mouse' && e.button!==0) return;
+    interacted=true;
+    if(raf){ cancelAnimationFrame(raf); raf=null; }
+    dragging=true;
+    stage.setPointerCapture(e.pointerId);
+    setPos(xToPos(e.clientX),true);
+    e.preventDefault();
+  });
+  stage.addEventListener('pointermove',function(e){
+    if(!dragging) return;
+    setPos(xToPos(e.clientX),true);
+  });
+  stage.addEventListener('pointerup',stopDrag);
+  stage.addEventListener('pointercancel',stopDrag);
+  stage.addEventListener('lostpointercapture',stopDrag);
+
+  stage.addEventListener('keydown',function(e){
+    var next=pos;
+    if(e.key==='ArrowLeft' || e.key==='ArrowDown') next=pos-8;
+    else if(e.key==='ArrowRight' || e.key==='ArrowUp') next=pos+8;
+    else if(e.key==='Home') next=0;
+    else if(e.key==='End') next=100;
+    else return;
+    e.preventDefault();
+    interacted=true;
+    if(raf){ cancelAnimationFrame(raf); raf=null; }
+    setPos(next,true);
+  });
+
+  scrub.addEventListener('input',function(){
+    if(raf){ cancelAnimationFrame(raf); raf=null; }
+    setPos(+scrub.value,true);
+  });
+  scrub.addEventListener('change',function(){ setPos(+scrub.value,true); });
+
+  toggle.addEventListener('click',function(){
+    interacted=true;
+    animateTo(toggle.classList.contains('on')?100:0);
+  });
+
+  setPos(50,false);
+
+  if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    new IntersectionObserver(function(en,o){
+      en.forEach(function(e){
+        if(e.isIntersecting && !interacted){
+          setTimeout(function(){ if(!interacted) animateTo(0); },650);
+          o.disconnect();
+        }
+      });
+    },{threshold:.45}).observe(stage);
+  }
+
   var chips=document.querySelectorAll('#ct .chip'), rows=document.querySelectorAll('#roster li'), send=document.getElementById('sendbtn');
   chips.forEach(function(c){
     c.addEventListener('click',function(){
@@ -605,8 +716,28 @@ footer a{text-decoration:none}
       send.textContent='Message '+n+' student'+(n===1?'':'s')+(f==='all'?'':' + families');
     });
   });
+
+  var fun=document.getElementById('fun');
+  var googs=fun?fun.querySelectorAll('.googly'):[];
+  if(fun && googs.length && window.matchMedia('(pointer:fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    window.addEventListener('pointermove',function(e){
+      var looking=false;
+      googs.forEach(function(g){
+        var r=g.getBoundingClientRect();
+        var cx=r.left+r.width/2, cy=r.top+r.height/2;
+        var dx=e.clientX-cx, dy=e.clientY-cy;
+        var ang=Math.atan2(dy,dx);
+        var lx=(Math.cos(ang)*7).toFixed(1)+'px';
+        var ly=(Math.sin(ang)*5).toFixed(1)+'px';
+        g.style.setProperty('--lx',lx);
+        g.style.setProperty('--ly',ly);
+        if(Math.abs(dx)<420 && Math.abs(dy)<280) looking=true;
+      });
+      fun.classList.toggle('look',looking);
+    },{passive:true});
+  }
 })();
 </script>
-<!-- Rails: Davis named with 72 classes / 6,000 students / same courses, teachers, content = exact 31% (hero). Forward-looking = "up to 31%" (CTA). 72% + Fun; Niederhauser / Dance / Hansen (synthesis-attributed quotes only). No pricing, no $229K, no UC Davis, no em dashes, no AI faces, no feature-card grid. CTA = https://delphi-me.com/schedule-jared -->
+<!-- Rails: Davis named with 72 classes / 6,000 students / same courses, teachers, content = exact 31% (hero). Forward-looking = "up to 31%" (CTA). 72% + Fun; Niederhauser / Dance / Hansen (synthesis-attributed quotes only). FERPA/alias only, no invented encryption. No pricing, no $229K, no UC Davis, no em dashes, no AI faces, no feature-card grid, no 01-06 counters. No draft banner. CTA = https://delphi-me.com/schedule-jared -->
 </body>
 </html>

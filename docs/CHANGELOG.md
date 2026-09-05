@@ -15,3 +15,10 @@
 - Jared: tell the Davis District prospectus story, not text-heavy.
 - Sequence: bold+31% Davis proof, problem (silence), Makeover solve, why/research, Davis voices, Core / Community Builder / Engagement Builder, supporting beats, CTA up to 31%.
 - Framing still unlocked. HubSpot untouched.
+
+## 2026-09-05 — Craft polish on prospectus story
+- Kept the prospectus sequence. No generic SaaS rebuild. No draft banner.
+- Makeover: pointer-drag on the stage, visible slider, dedicated toggle label, keyboard, cancel-on-interact auto-nudge. Mobile shows avatar + next-up instead of hiding the delight.
+- Claims: Tiffany quiz line no longer adds an un sourced completion claim. Compliance is FERPA/alias + approved trust strip (dropped invented encryption / never-sold). Training beat no longer invents Zoom/forum/self-paced.
+- Removed 01/02/03 counters. Research pillars use names, not numbers. Voices are editorial (Natalie featured). Engagement Builder headline is SOURCE-safe.
+- CTA remains https://delphi-me.com/schedule-jared. Exact 31% only with named Davis context; CTA stays "up to 31%."
