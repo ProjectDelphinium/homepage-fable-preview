@@ -64,6 +64,11 @@ img{max-width:100%}
 .rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}.rv.d3{transition-delay:.36s}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
 
+
+.draft-banner{background:var(--ink);color:#fff;text-align:center;padding:8px 16px;font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;position:sticky;top:0;z-index:60}
+.draft-banner span{color:var(--sun)}
+.nav{top:0}
+
 /* ---------- nav ---------- */
 .nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(251,247,239,.78);border-bottom:1px solid rgba(21,19,43,.08)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
@@ -372,6 +377,7 @@ footer .trustedby b{color:rgba(255,255,255,.8);font-weight:800;margin-left:6px}
 </style>
 </head>
 <body>
+<div class="draft-banner">Draft preview <span>· not the live delphi-me.com site</span></div>
 
 <!-- ============ NAV ============ -->
 <header class="nav">
@@ -393,13 +399,18 @@ footer .trustedby b{color:rgba(255,255,255,.8);font-weight:800;margin-left:6px}
 
 <main id="top">
 
-<!-- ============ SCENE 1: HOOK / RECOGNITION ============ -->
+<!-- ============ SCENE 1: PRODUCT PITCH (Jared 2026-09-05: sell first, not 4–5 scrolls down) ============ -->
 <section class="scene hook">
   <div class="wrap grid">
     <div>
-      <div class="timestamp rv"><span class="blink"></span> Monday · 8:14 a.m. · fully online program</div>
-      <h1 class="rv d1">Forty-one students haven't started this week.<br><em>The gradebook looks fine.</em></h1>
-      <p class="lede rv d2" style="margin-top:26px">In an online school, silence doesn't look like anything. It looks like a gradebook with a few blanks in it, and a Canvas course that's technically "published."</p>
+      <div class="eyebrow rv">Canvas engagement layer · virtual and online K-12</div>
+      <h1 class="rv d1">Canvas delivers content.<br><em>Delphinium delivers engagement.</em></h1>
+      <p class="lede rv d2" style="margin-top:22px">Turns the Canvas courses virtual schools already have into a visual, motivating student experience and an early-warning system for teachers. About three minutes. No migration. Just turn it on.</p>
+      <p class="lede rv d2" style="margin-top:12px;font-size:16.5px">Davis Connect study (named): course failure dropped <strong>31%</strong>. What we promise a program: <strong>up to 31%</strong> fewer failures, without changing the course.</p>
+      <div class="rv d3" style="margin-top:28px;display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+        <a class="btn blue" href="https://delphi-me.com/schedule-jared">Book 15 minutes with Jared</a>
+        <a class="btn ghost" href="#makeover">See the 3-minute Makeover</a>
+      </div>
     </div>
     <div class="rv d2">
       <div class="gradebook" aria-hidden="true">
@@ -423,12 +434,15 @@ footer .trustedby b{color:rgba(255,255,255,.8);font-weight:800;margin-left:6px}
   </div>
 </section>
 
-<!-- ============ SCENE 2: PROBLEM ============ -->
+<!-- ============ SCENE 1b: RECOGNITION (after the sell) ============ -->
 <section class="scene problem">
   <div class="wrap cols">
     <div>
-      <div class="eyebrow rv">So you chase</div>
-      <h2 class="rv d1">Every week, someone opens a spreadsheet and starts writing emails.</h2>
+      <div class="timestamp rv"><span class="blink"></span> Monday · 8:14 a.m. · the silence that brought you here</div>
+      <div class="eyebrow rv">Why it exists</div>
+      <h2 class="rv d1">Forty-one students haven't started this week. The gradebook still looks fine.</h2>
+      <p class="lede rv d2" style="margin-top:18px">In an online school, silence doesn't look like anything. It looks like blanks in a published Canvas course. Then someone opens a spreadsheet and starts writing emails.</p>
+      <h2 class="rv d1" style="font-size:clamp(26px,3vw,36px);margin-top:28px">Every week, someone starts chasing.</h2>
       <p class="lede rv d2" style="margin-top:22px">Teachers chase. Counselors chase. A principal pulls a report to find out who to chase. And the people who could help most, the parents, usually hear about it last.</p>
       <p class="quoteline rv d3">"When a parent finds out late, the grade has already taken a hit."</p>
     </div>

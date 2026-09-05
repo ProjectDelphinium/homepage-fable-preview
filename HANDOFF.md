@@ -15,6 +15,18 @@ Primary CTA: book a conversation → `https://delphi-me.com/schedule-jared`
 
 ---
 
+
+## Jared 2026-09-05 — product sell first
+The first Fable dump made you scroll 4–5 screens (recognition → chase → insight → silence) before the category headline. **Wrong.**
+
+**Rule:** first viewport must sell Delphinium the product:
+- ★ Headline: Canvas delivers content. Delphinium delivers engagement.
+- 25-word / 3-minute / just turn it on
+- Davis: named study = 31%; promises = up to 31%
+- CTA + jump to Makeover
+
+Recognition/chase can follow as *why*, not as the opener. Do not put the sell after a long problem film.
+
 ## Starting point
 
 `index.html` was generated with **Claude Fable 5.1** from the locked BRIEF + SOURCE pack. It already includes:

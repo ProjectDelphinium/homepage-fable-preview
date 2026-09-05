@@ -19,10 +19,23 @@ You are continuing the Delphinium public marketing homepage redesign.
 4. context/position-and-value-statements.md
 5. Current index.html
 
+
+## Jared 2026-09-05 — product sell first
+The first Fable dump made you scroll 4–5 screens (recognition → chase → insight → silence) before the category headline. **Wrong.**
+
+**Rule:** first viewport must sell Delphinium the product:
+- ★ Headline: Canvas delivers content. Delphinium delivers engagement.
+- 25-word / 3-minute / just turn it on
+- Davis: named study = 31%; promises = up to 31%
+- CTA + jump to Makeover
+
+Recognition/chase can follow as *why*, not as the opener. Do not put the sell after a long problem film.
+
 ## Goal for this session
 Improve the existing Fable 5.1 `index.html` draft into a stronger, shareable homepage that matches the BRIEF peak stack and SOURCE claims. Do not rebuild a generic SaaS template from scratch.
 
 Prioritize:
+0. **Product pitch in the first viewport** (headline + 3-min + CTA) — Jared: do not wait 4–5 scrolls
 1. Craft + uniqueness (playful-premium; personal/fun/quirky/approachable/cutting-edge)
 2. Makeover signature (“Which class would YOU rather take?”) as first visual peak
 3. Davis proof: study named → exact 31%; forward-looking promises → “up to 31%”
