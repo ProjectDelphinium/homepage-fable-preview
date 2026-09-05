@@ -1,0 +1,17 @@
+---
+description: Delphinium marketing homepage draft — claims and safety rails
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+# Delphinium homepage draft
+
+- Claims ceiling: `context/SOURCE.md`. Never invent stats, customers, testimonials, or security badges.
+- 31% rule: promises/CTAs = "up to 31%"; exact 31% only when Davis study is named with context. Never "UC Davis."
+- Peak order: Makeover → Davis → motivation/Fun/Tiffany → family supporting → Control Tower/Message how.
+- Family/parent is supporting, not HE hero, not gut peak.
+- CTA: https://delphi-me.com/schedule-jared
+- Do not touch HubSpot, DNS, or production Zoho. This repo is draft only.
+- No em dashes in user-facing copy. Prefer Niederhauser / Dance spellings.
+- Keep a DRAFT / not-live banner until Zoho staging.
