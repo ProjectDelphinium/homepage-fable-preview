@@ -74,7 +74,9 @@ a{color:inherit}
 @media (max-width:760px){
   .proof{grid-template-columns:1fr;gap:18px}
   .hero{padding:56px 0 72px}
+  .hero .cta-row{flex-direction:column;align-items:stretch;gap:16px}
   .hero .cta-row .btn{width:100%;justify-content:center}
+  .hero .cta-row .jump,.hero .cta-row .small{text-align:center}
 }
 
 /* 2 problem */
@@ -108,9 +110,10 @@ a{color:inherit}
 .divider{position:absolute;top:0;bottom:0;left:50%;width:3px;background:var(--ink);z-index:4;transform:translateX(-50%);pointer-events:none}
 .handle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:62px;height:62px;border-radius:50%;background:var(--ink);color:var(--sun);display:grid;place-items:center;font-size:20px;font-weight:900;letter-spacing:-2px;box-shadow:0 12px 30px rgba(0,0,0,.35);z-index:5;pointer-events:none;transition:background .25s,color .25s}
 .stage.is-on .handle{background:var(--sun);color:var(--ink)}
-.lbl{position:absolute;top:16px;z-index:5;font-size:12.5px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;padding:8px 12px;border-radius:999px;pointer-events:none}
+.lbl{position:absolute;top:16px;z-index:5;font-size:12.5px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;padding:8px 12px;border-radius:999px;pointer-events:none;transition:opacity .2s ease}
 .lbl.b{left:16px;background:#dcdce2;color:#555}
 .lbl.a{right:16px;background:var(--sun);color:var(--ink)}
+.lbl.hide{opacity:0}
 .after .band{grid-column:1/-1;height:74px;border-radius:14px;background:linear-gradient(100deg,var(--blue) 0,#6d8bff 55%,var(--sun) 100%);position:relative;overflow:hidden}
 .after .band b{position:absolute;left:18px;bottom:14px;color:#fff;font-family:var(--display);font-size:20px;font-weight:600}
 .after .band .pts{position:absolute;right:16px;top:14px;background:rgba(21,19,43,.85);color:var(--sun);font-weight:900;font-size:13px;padding:7px 12px;border-radius:999px}
@@ -138,7 +141,7 @@ a{color:inherit}
 .mk-ctrl{margin-top:22px;display:grid;grid-template-columns:1fr auto;gap:18px 24px;align-items:center}
 .mk-slide{display:grid;gap:8px}
 .mk-slide label{font-size:12.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
-.mk-slider{-webkit-appearance:none;appearance:none;width:100%;height:8px;border-radius:999px;background:linear-gradient(90deg,var(--sun),#e6e6ec);outline:none;cursor:pointer}
+.mk-slider{-webkit-appearance:none;appearance:none;width:100%;height:8px;border-radius:999px;background:linear-gradient(90deg,#d8d8e0 0 50%,var(--sun) 50% 100%);outline:none;cursor:pointer}
 .mk-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:28px;height:28px;border-radius:50%;background:var(--ink);border:3px solid #fff;box-shadow:0 4px 12px rgba(21,19,43,.28)}
 .mk-slider::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:var(--ink);border:3px solid #fff;box-shadow:0 4px 12px rgba(21,19,43,.28)}
 .toggle{display:inline-flex;align-items:center;gap:14px;background:#fff;border:2px solid var(--ink);border-radius:999px;padding:10px 18px 10px 10px;font:inherit;font-weight:800;cursor:pointer;color:var(--ink);white-space:nowrap}
@@ -611,6 +614,8 @@ footer a{text-decoration:none}
   var toggle=document.getElementById('toggle');
   var toggleLabel=document.getElementById('toggleLabel');
   var stage=document.getElementById('stage');
+  var lblB=stage.querySelector('.lbl.b');
+  var lblA=stage.querySelector('.lbl.a');
   var raf=null, dragging=false, interacted=false, pos=50;
 
   function setPos(v, fromUser){
@@ -618,13 +623,18 @@ footer a{text-decoration:none}
     pos=v;
     before.style.clipPath='inset(0 '+(100-v)+'% 0 0)';
     divider.style.left=v+'%';
-    handle.style.left=v+'%';
-    if(scrub && +scrub.value!==v) scrub.value=String(Math.round(v));
+    handle.style.left=Math.max(8,Math.min(92,v))+'%';
+    if(scrub){
+      if(+scrub.value!==v) scrub.value=String(Math.round(v));
+      scrub.style.background='linear-gradient(90deg,#d8d8e0 0 '+v+'%,var(--sun) '+v+'% 100%)';
+    }
     var on=v<=12;
     toggle.classList.toggle('on',on);
     stage.classList.toggle('is-on',on);
     toggle.setAttribute('aria-pressed',on?'true':'false');
     toggleLabel.textContent=on?'Delphinium is on':'Turn Delphinium on';
+    if(lblB) lblB.classList.toggle('hide',v<16);
+    if(lblA) lblA.classList.toggle('hide',v>84);
     if(fromUser) interacted=true;
   }
 

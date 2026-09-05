@@ -22,3 +22,4 @@
 - Claims: Tiffany quiz line no longer adds an un sourced completion claim. Compliance is FERPA/alias + approved trust strip (dropped invented encryption / never-sold). Training beat no longer invents Zoom/forum/self-paced.
 - Removed 01/02/03 counters. Research pillars use names, not numbers. Voices are editorial (Natalie featured). Engagement Builder headline is SOURCE-safe.
 - CTA remains https://delphi-me.com/schedule-jared. Exact 31% only with named Davis context; CTA stays "up to 31%."
+- After browser check: slider track fill now follows the split; handle stays inset when fully on; before/after labels fade at the edges; hero CTAs stack on small screens.
