@@ -41,6 +41,23 @@ Canvas **engagement layer** for **virtual/online K-12**. Turns an existing Canva
 | “I don’t know, Dad” | Color-coded parent view |
 | Teachers buried in outreach | Message Center |
 
+### Jared 2026-09-05: prospectus story remake (Fable)
+**Framing still unlocked.** Live draft: https://japomani.github.io/delphinium-homepage-fable-preview/
+Sequence (Davis District prospectus pattern — persuasive, not text-heavy):
+1. Bold statement + named Davis 31% proof (hero)
+2. Problem (silence / gray wall / late parents / chase)
+3. Proof we solve it — Makeover + 72% / Fun / Tiffany
+4. Theory / why (14 yrs research; SRL, nudges, social presence; qualitative)
+5. Social proof — Tiffany, Natalie, Ryan Hansen
+6. Product story — Core → Community Builder → Engagement Builder
+7. Supporting beats — more from Canvas, school-wide look, templates, ~3 min, compliant, support/training, research-driven
+8. CTA — Fewer failures. Up to 31%.
+
+Do not publish quote pricing. No UC Davis. No em dashes.
+
+### Jared 2026-09-05: sell first
+First viewport = product pitch (headline + 3-min + Davis promise + CTA). Recognition/chase come after. Do not wait 4–5 scrolls to say what Delphinium is.
+
 ### Homepage job
 Prove content→engagement + measured outcome → book `/schedule-jared`.  
 Peak stack: Makeover visual → Davis gut → Fun/Tiffany emotional → family confidence / student support → Control Tower/Message how.

@@ -147,3 +147,6 @@ When Jared (or Web Design) says the draft is good enough:
 ## Suggested Cursor agent prompt (paste / launch)
 
 See `docs/CURSOR_AGENT_PROMPT.md`.
+
+## Latest (2026-09-05 evening)
+Prospectus-story remake is on `main` (commit fc903b2). Sequence: bold+Davis 31% → silence problem → Makeover → 72%/Fun → research why → Tiffany/Natalie/Ryan → Core/CB/EB → supporting beats → CTA up to 31%. Framing still unlocked.
