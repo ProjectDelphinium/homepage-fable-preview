@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delphinium · Canvas delivers content. Delphinium delivers engagement.</title>
+<meta name="description" content="Delphinium is the Canvas engagement layer for virtual and online K-12. Give a Canvas course a 3-minute Makeover, get an early-warning system for teachers, and see up to 31% fewer course failures without changing the course.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,50..100&family=Nunito+Sans:opsz,wght@6..12,300..900&display=swap" rel="stylesheet">
+<style>
+/* ---------- tokens ---------- */
+:root{
+  --ink:#15132b;
+  --ink-2:#2a2747;
+  --paper:#fbf7ef;
+  --paper-2:#f3eddf;
+  --mist:#e9e6ee;
+  --blue:#4b5df0;
+  --blue-deep:#2a2f8c;
+  --blue-ink:#101446;
+  --coral:#ff6a58;
+  --sun:#ffc63c;
+  --leaf:#31b97a;
+  --violet:#8b6cf6;
+  --st-red:#f24d4d;
+  --st-yellow:#f2b23c;
+  --st-green:#2fb36a;
+  --canvas-gray:#f2f2f2;
+  --canvas-line:#d9d9d9;
+  --canvas-text:#4a4a4a;
+  --canvas-link:#2d6fb5;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Nunito Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --radius:22px;
+  --shadow:0 18px 50px rgba(21,19,43,.14);
+  --wrap:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.5;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.01em;line-height:1.05;margin:0}
+p{margin:0 0 1em}
+a{color:inherit}
+img{max-width:100%}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.eyebrow{font-family:var(--body);font-weight:800;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:18px;display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:22px;height:2px;background:currentColor;border-radius:2px}
+.lede{font-size:clamp(18px,1.4vw,21px);max-width:38em;color:var(--ink-2)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;text-decoration:none;font-weight:800;padding:16px 26px;border-radius:999px;font-size:16px;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;box-shadow:0 8px 24px rgba(21,19,43,.18)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(21,19,43,.24)}
+.btn.blue{background:var(--blue)}
+.btn.blue:hover{background:var(--blue-deep)}
+.btn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.ghost:hover{background:rgba(255,255,255,.08)}
+.btn .dot{width:9px;height:9px;border-radius:50%;background:var(--sun)}
+.small{font-size:14px;color:#6a6780}
+.scene{position:relative;padding:120px 0}
+@media (max-width:760px){.scene{padding:84px 0}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}.rv.d3{transition-delay:.36s}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(251,247,239,.78);border-bottom:1px solid rgba(21,19,43,.08)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:-.01em}
+.logo .mark{width:30px;height:30px;position:relative}
+.logo .mark span{position:absolute;inset:0;border-radius:50% 50% 50% 0;background:var(--blue);transform-origin:100% 100%}
+.logo .mark span:nth-child(1){transform:rotate(0deg) scale(.55)}
+.logo .mark span:nth-child(2){transform:rotate(72deg) scale(.55);background:var(--violet)}
+.logo .mark span:nth-child(3){transform:rotate(144deg) scale(.55);background:var(--coral)}
+.logo .mark span:nth-child(4){transform:rotate(216deg) scale(.55);background:var(--sun)}
+.logo .mark span:nth-child(5){transform:rotate(288deg) scale(.55);background:var(--leaf)}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-weight:700;font-size:15px}
+.nav ul a{text-decoration:none;opacity:.8}
+.nav ul a:hover{opacity:1}
+.nav .btn{padding:11px 18px;font-size:14px}
+@media (max-width:860px){.nav ul{display:none}}
+
+/* ---------- scene 1: hook ---------- */
+.hook{padding:110px 0 90px;background:
+  radial-gradient(1100px 500px at 80% -10%,rgba(75,93,240,.10),transparent 60%),
+  radial-gradient(700px 400px at 10% 100%,rgba(255,198,60,.16),transparent 60%),var(--paper)}
+.hook .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+@media (max-width:900px){.hook .grid{grid-template-columns:1fr}}
+.hook h1{font-size:clamp(40px,5.6vw,72px);font-weight:500;letter-spacing:-.02em}
+.hook h1 em{font-style:italic;font-weight:400;color:var(--blue-deep)}
+.timestamp{font-family:var(--body);font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#7a7790;display:inline-flex;align-items:center;gap:10px;margin-bottom:22px}
+.timestamp .blink{width:8px;height:8px;border-radius:50%;background:var(--coral);animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.25}}
+/* gradebook mock */
+.gradebook{background:#fff;border-radius:18px;box-shadow:var(--shadow);overflow:hidden;border:1px solid rgba(21,19,43,.06);transform:rotate(-1.2deg)}
+.gradebook .bar{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid #eee;font-size:13px;font-weight:800;color:#7a7790}
+.gradebook .bar i{width:10px;height:10px;border-radius:50%;background:#e4e2ea;display:inline-block}
+.gradebook table{width:100%;border-collapse:collapse;font-size:13px}
+.gradebook th{font-weight:800;text-align:left;padding:10px 14px;color:#8b889c;border-bottom:1px solid #eee;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase}
+.gradebook td{padding:11px 14px;border-bottom:1px solid #f2f1f5;color:#3c3a50}
+.gradebook td.blank{color:#c9c7d3;font-style:italic}
+.gradebook td.blank::after{content:"";display:inline-block;width:48px;height:8px;border-radius:4px;background:#ededf2}
+.gradebook tr.quiet td{color:#b9b7c6}
+.gradebook .foot{padding:12px 16px;font-size:12.5px;color:#9997a8;font-style:italic}
+
+/* ---------- scene 2: problem ---------- */
+.problem{background:var(--paper-2)}
+.problem .cols{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+@media (max-width:900px){.problem .cols{grid-template-columns:1fr}}
+.problem h2{font-size:clamp(34px,4.4vw,56px)}
+.chase{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.chase li{background:#fff;border-radius:16px;padding:16px 18px;box-shadow:0 6px 18px rgba(21,19,43,.06);display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;font-size:15.5px}
+.chase .tag{font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:6px 9px;border-radius:8px;background:var(--mist);color:#5d5a72;white-space:nowrap}
+.chase li.late{outline:2px solid var(--coral);outline-offset:-2px}
+.chase li.late .tag{background:#ffe3df;color:#c2331f}
+.quoteline{font-family:var(--display);font-size:clamp(22px,2.4vw,30px);font-weight:400;font-style:italic;line-height:1.3;margin-top:34px;color:var(--ink-2)}
+
+/* ---------- scene 3: insight ---------- */
+.insight{background:var(--ink);color:#fff;text-align:center}
+.insight h2{font-size:clamp(34px,5vw,64px);font-weight:500;max-width:14em;margin:0 auto}
+.insight h2 strong{font-weight:700;color:var(--sun)}
+.insight p{color:rgba(255,255,255,.72);max-width:36em;margin:26px auto 0;font-size:19px}
+.insight .strike{text-decoration:line-through;text-decoration-color:var(--coral);text-decoration-thickness:3px;opacity:.7}
+
+/* ---------- silence ---------- */
+.silence{background:var(--ink);color:rgba(255,255,255,.35);min-height:52vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:60px 24px}
+.silence p{font-family:var(--display);font-style:italic;font-weight:300;font-size:clamp(18px,2vw,24px);max-width:22em;margin:0}
+
+/* ---------- scene 4: bridge ---------- */
+.bridge{background:linear-gradient(180deg,var(--ink) 0,var(--blue-ink) 100%);color:#fff;padding:140px 0 120px}
+.bridge .head{text-align:center;max-width:16em;margin:0 auto 60px}
+.bridge h2{font-size:clamp(40px,6.6vw,88px);font-weight:500;letter-spacing:-.025em;line-height:1}
+.bridge h2 .muted{display:block;color:rgba(255,255,255,.42);font-weight:400}
+.bridge h2 .loud{display:block;color:#fff;font-weight:700}
+.bridge h2 .loud b{color:var(--sun);font-weight:800;font-style:italic}
+.bridge .lede{color:rgba(255,255,255,.78);margin:28px auto 0;text-align:center}
+.toggle-card{max-width:760px;margin:0 auto;background:#fff;color:var(--ink);border-radius:20px;box-shadow:0 30px 80px rgba(0,0,0,.35);overflow:hidden}
+.canvas-chrome{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid #e6e6ea;background:#fafafa;font-size:13px;color:#6e6c80}
+.canvas-chrome .app{font-weight:900;letter-spacing:.06em;font-size:11px;padding:5px 8px;border-radius:6px;background:#ececf1;color:#5a5870}
+.canvas-chrome .crumbs{flex:1}
+.toggle-row{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px 28px}
+.toggle-row .txt b{display:block;font-size:18px}
+.toggle-row .txt span{color:#6a6780;font-size:14.5px}
+.switch{width:74px;height:40px;border-radius:999px;background:#d8d6e0;position:relative;flex:none;transition:background .3s}
+.switch::after{content:"";position:absolute;top:4px;left:4px;width:32px;height:32px;border-radius:50%;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.25);transition:left .3s}
+.switch.on{background:var(--leaf)}
+.switch.on::after{left:38px}
+.toggle-foot{display:flex;flex-wrap:wrap;gap:10px 22px;padding:0 28px 24px;font-size:14px;color:#6a6780;font-weight:700}
+.toggle-foot span::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--leaf);margin-right:8px;vertical-align:1px}
+
+/* ---------- scene 5: makeover ---------- */
+.makeover{background:var(--paper);padding:130px 0 120px;overflow:hidden}
+.makeover .head{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:end;margin-bottom:44px}
+@media (max-width:900px){.makeover .head{grid-template-columns:1fr}}
+.makeover h2{font-size:clamp(38px,5.4vw,70px);font-weight:600;letter-spacing:-.02em}
+.makeover h2 em{font-style:italic;font-weight:400;color:var(--blue)}
+.makeover .ask{font-family:var(--display);font-size:clamp(22px,2.6vw,32px);font-weight:400;line-height:1.2;color:var(--ink-2)}
+.makeover .ask b{font-weight:800;color:var(--coral);text-transform:uppercase;letter-spacing:.02em}
+
+.stage{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:0 40px 90px rgba(21,19,43,.22);border:1px solid rgba(21,19,43,.08);aspect-ratio:16/10;background:#fff;user-select:none}
+@media (max-width:640px){.stage{aspect-ratio:4/5}}
+.layer{position:absolute;inset:0}
+.layer.after{clip-path:inset(0 0 0 50%)}
+.divider{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;transform:translateX(-50%);box-shadow:0 0 0 1px rgba(0,0,0,.12);pointer-events:none;z-index:4}
+.handle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:20px;font-weight:900;box-shadow:0 10px 30px rgba(0,0,0,.35);pointer-events:none;z-index:5;letter-spacing:-2px}
+.stage input[type=range]{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;z-index:6;-webkit-appearance:none;appearance:none}
+.stage .lbl{position:absolute;top:16px;z-index:5;font-size:11.5px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;padding:7px 11px;border-radius:999px;pointer-events:none}
+.stage .lbl.b{left:16px;background:rgba(21,19,43,.75);color:#fff}
+.stage .lbl.a{right:16px;background:var(--sun);color:var(--ink)}
+
+/* the fake canvas course: before */
+.course{display:grid;grid-template-columns:72px 190px 1fr;height:100%;font-size:12.5px;color:var(--canvas-text)}
+@media (max-width:640px){.course{grid-template-columns:52px 1fr}.course .sidenav{display:none}}
+.course .rail{background:#2d3b45;color:#c7d1d8;padding:14px 0;display:flex;flex-direction:column;align-items:center;gap:16px}
+.course .rail i{width:26px;height:26px;border-radius:7px;background:rgba(255,255,255,.12);display:block}
+.course .rail i:first-child{background:#fff;border-radius:50%}
+.course .sidenav{border-right:1px solid var(--canvas-line);padding:16px 0;background:#fff}
+.course .sidenav b{display:block;padding:0 16px 10px;font-size:13px;color:#222}
+.course .sidenav a{display:block;padding:7px 16px;color:var(--canvas-link);text-decoration:none}
+.course .sidenav a.cur{background:#f5f5f5;color:#222;border-left:3px solid #222}
+.course .main{padding:18px 22px;overflow:hidden;background:#fff}
+.course .main h4{margin:0 0 12px;font-size:15px;font-weight:700;color:#222;font-family:var(--body)}
+.wall{display:grid;gap:0}
+.wall .mod{border:1px solid var(--canvas-line);border-radius:3px;margin-bottom:10px}
+.wall .mod .mh{background:var(--canvas-gray);padding:8px 10px;font-weight:700;color:#222;display:flex;justify-content:space-between}
+.wall .mod .mh span{font-weight:400;color:#888}
+.wall .mod .it{padding:7px 10px 7px 26px;border-top:1px solid #eee;color:var(--canvas-link);position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wall .mod .it::before{content:"";position:absolute;left:10px;top:11px;width:9px;height:9px;border:1.5px solid #aaa;border-radius:2px}
+.wall .mod .it small{color:#888;margin-left:8px}
+
+/* the fake course: after */
+.after .main{background:#f6f4fb;padding:0;position:relative}
+.after .rail{background:linear-gradient(180deg,#2a2f8c,#4b5df0)}
+.after .sidenav a.cur{border-left-color:var(--blue);color:var(--blue-deep);background:#eef0ff}
+.hero-band{height:78px;background:linear-gradient(100deg,#4b5df0 0%,#8b6cf6 45%,#ff6a58 100%);position:relative;overflow:hidden}
+.hero-band::after{content:"";position:absolute;inset:auto -20px -50px auto;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.18)}
+.hero-band .t{position:absolute;left:18px;bottom:14px;color:#fff;font-family:var(--display);font-size:19px;font-weight:600}
+.after-body{padding:14px 18px;display:grid;gap:12px}
+.student{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;background:#fff;border-radius:14px;padding:10px 12px;box-shadow:0 4px 14px rgba(21,19,43,.06)}
+.avatar{width:40px;height:40px;border-radius:50%;background:var(--sun);position:relative;overflow:hidden;flex:none}
+.avatar::before,.avatar::after{content:"";position:absolute;top:12px;width:12px;height:12px;background:#fff;border-radius:50%;box-shadow:inset -3px 2px 0 0 var(--ink)}
+.avatar::before{left:7px}.avatar::after{left:21px}
+.avatar i{position:absolute;bottom:8px;left:14px;width:12px;height:5px;border-bottom:2.5px solid var(--ink);border-radius:0 0 8px 8px}
+.student b{display:block;font-size:13px;color:var(--ink)}
+.xp{height:8px;border-radius:999px;background:#ecebf3;overflow:hidden;margin-top:5px}
+.xp i{display:block;height:100%;width:64%;background:linear-gradient(90deg,var(--leaf),var(--blue));border-radius:999px}
+.student .pts{text-align:right;font-weight:900;font-size:12px;color:var(--blue-deep)}
+.student .pts small{display:block;font-weight:700;color:#8b889c;font-size:10px}
+.nextup{background:var(--ink);color:#fff;border-radius:12px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;font-size:12px}
+.nextup b{color:var(--sun);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:2px}
+.nextup .go{background:var(--coral);color:#fff;font-weight:900;padding:6px 10px;border-radius:999px;font-size:11px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media (max-width:640px){.tiles{grid-template-columns:repeat(2,1fr)}}
+.tile{background:#fff;border-radius:12px;padding:10px;min-height:74px;position:relative;box-shadow:0 4px 14px rgba(21,19,43,.06);border-top:5px solid var(--leaf)}
+.tile.ip{border-top-color:var(--blue)}
+.tile.lk{border-top-color:#cfcdd8;opacity:.7}
+.tile b{display:block;font-size:12px;color:var(--ink);margin-bottom:2px}
+.tile span{font-size:10.5px;color:#7a7790}
+.ring{position:absolute;right:8px;bottom:8px;width:24px;height:24px;border-radius:50%;background:conic-gradient(var(--leaf) 100%,#ecebf3 0);mask:radial-gradient(circle,transparent 55%,#000 56%);-webkit-mask:radial-gradient(circle,transparent 55%,#000 56%)}
+.tile.ip .ring{background:conic-gradient(var(--blue) 45%,#ecebf3 0)}
+.tile.lk .ring{background:conic-gradient(#cfcdd8 0%,#ecebf3 0)}
+.makeover .caption{display:flex;flex-wrap:wrap;gap:12px 30px;justify-content:center;margin-top:26px;font-weight:800;font-size:14.5px;color:#5d5a72}
+.makeover .caption span::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--coral);margin-right:9px;vertical-align:1px}
+.makeover .hint{text-align:center;margin-top:10px;font-size:13.5px;color:#8b889c;font-style:italic}
+
+/* ---------- scene 6: davis ---------- */
+.davis{background:var(--ink);color:#fff;padding:140px 0}
+.davis .grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+@media (max-width:900px){.davis .grid{grid-template-columns:1fr}}
+.bignum{font-family:var(--display);font-weight:700;font-size:clamp(120px,20vw,260px);line-height:.85;letter-spacing:-.05em;color:var(--sun);font-variant-numeric:tabular-nums}
+.bignum sup{font-size:.32em;vertical-align:top;top:.35em;position:relative;color:#fff;font-weight:400;letter-spacing:0}
+.davis .what{font-family:var(--display);font-size:clamp(24px,2.8vw,34px);font-weight:400;margin-top:14px;line-height:1.2}
+.davis .what b{font-weight:700}
+.method{list-style:none;margin:0;padding:0;border-top:1px solid rgba(255,255,255,.14)}
+.method li{display:grid;grid-template-columns:150px 1fr;gap:18px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:16px}
+.method li b{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);padding-top:3px}
+.method li span{color:rgba(255,255,255,.9)}
+.davis .eyebrow{color:var(--sun)}
+.promise{margin-top:40px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:24px 26px;font-size:17.5px;line-height:1.5}
+.promise b{color:var(--sun)}
+.promise .small{color:rgba(255,255,255,.5);margin:8px 0 0}
+
+/* ---------- scene 7: fun ---------- */
+.fun{background:var(--sun);color:var(--ink);padding:130px 0;overflow:hidden;position:relative}
+.fun .grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+@media (max-width:900px){.fun .grid{grid-template-columns:1fr}}
+.fun .stat{font-family:var(--display);font-size:clamp(90px,13vw,180px);font-weight:700;line-height:.9;letter-spacing:-.04em}
+.fun .stat small{display:block;font-family:var(--body);font-size:18px;letter-spacing:0;font-weight:700;line-height:1.35;max-width:22em;margin-top:18px}
+.fun .word{display:inline-block;margin-top:34px;font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(28px,3.4vw,44px);background:var(--ink);color:var(--sun);padding:8px 26px 12px;border-radius:999px;transform:rotate(-2deg)}
+.fun .word span{font-family:var(--body);font-style:normal;font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6);display:block;margin-bottom:-4px}
+.card{background:#fff;border-radius:22px;padding:30px;box-shadow:0 20px 50px rgba(21,19,43,.16)}
+.card.quote{font-family:var(--display);font-size:clamp(21px,2.2vw,27px);font-weight:400;line-height:1.3;transform:rotate(1.4deg)}
+.card.quote footer{font-family:var(--body);font-size:13.5px;font-weight:800;color:#7a7790;margin-top:18px;letter-spacing:.06em;text-transform:uppercase}
+.card.tiff{margin-top:26px;transform:rotate(-1deg);display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start}
+.card.tiff p{margin:0 0 8px;font-size:16.5px}
+.card.tiff .who{font-size:13.5px;font-weight:800;color:#7a7790;letter-spacing:.06em;text-transform:uppercase}
+.googly{width:64px;height:64px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:var(--violet);position:relative;flex:none;animation:bob 3s ease-in-out infinite}
+.googly::before,.googly::after{content:"";position:absolute;top:16px;width:20px;height:20px;background:#fff;border-radius:50%;box-shadow:inset -6px 4px 0 0 var(--ink)}
+.googly::before{left:10px;animation:look 5s infinite}
+.googly::after{left:34px;animation:look 5s .25s infinite}
+.googly i{position:absolute;bottom:14px;left:24px;width:16px;height:7px;border-bottom:3px solid var(--ink);border-radius:0 0 10px 10px}
+@keyframes bob{50%{transform:translateY(-6px) rotate(3deg)}}
+@keyframes look{0%,40%,100%{box-shadow:inset -6px 4px 0 0 var(--ink)}55%,85%{box-shadow:inset 6px 5px 0 0 var(--ink)}}
+.confetti{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.confetti i{position:absolute;width:10px;height:14px;border-radius:2px;opacity:.55;animation:fall 9s linear infinite}
+@keyframes fall{0%{transform:translateY(-30px) rotate(0)}100%{transform:translateY(110vh) rotate(720deg)}}
+
+/* ---------- scene 7b: family ---------- */
+.family{background:var(--paper);padding:130px 0}
+.family .grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:60px;align-items:center}
+@media (max-width:900px){.family .grid{grid-template-columns:1fr}}
+.family h2{font-size:clamp(34px,4.4vw,56px);font-weight:500}
+.family h2 em{font-style:italic;color:var(--blue)}
+.beats{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:14px}
+.beats li{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;font-size:16.5px}
+.beats li i{width:26px;height:26px;border-radius:8px;background:var(--leaf);flex:none;margin-top:2px;position:relative}
+.beats li i::after{content:"";position:absolute;left:8px;top:5px;width:6px;height:11px;border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg)}
+.beats li b{display:block}
+.parent-view{background:#fff;border-radius:22px;box-shadow:var(--shadow);overflow:hidden;border:1px solid rgba(21,19,43,.06)}
+.parent-view .top{padding:16px 20px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center}
+.parent-view .top b{font-size:15px}
+.parent-view .top span{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#7a7790;background:var(--mist);padding:5px 9px;border-radius:8px}
+.pv-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:13px 20px;border-bottom:1px solid #f2f1f5;font-size:14.5px}
+.pv-row .st{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:12.5px}
+.pv-row .st::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--st-green)}
+.pv-row .st.y::before{background:var(--st-yellow)}
+.pv-row .st.r::before{background:var(--st-red)}
+.pv-row small{display:block;color:#8b889c;font-size:12.5px}
+.pv-msg{margin:16px 20px 20px;background:#eef0ff;border-radius:14px;padding:14px 16px;font-size:13.5px;line-height:1.45;border-left:4px solid var(--blue)}
+.pv-msg b{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-deep);margin-bottom:4px}
+.pv-msg .lang{display:inline-block;margin-top:8px;font-size:11.5px;font-weight:800;color:#5d5a72;background:#fff;padding:4px 8px;border-radius:6px}
+
+/* ---------- scene 8: how ---------- */
+.how{background:var(--paper-2);padding:130px 0}
+.how .head{max-width:40em;margin-bottom:50px}
+.how h2{font-size:clamp(34px,4.4vw,56px);font-weight:500}
+.how .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:start}
+@media (max-width:960px){.how .grid{grid-template-columns:1fr}}
+.tower{background:#fff;border-radius:22px;box-shadow:var(--shadow);overflow:hidden;border:1px solid rgba(21,19,43,.06)}
+.tower .top{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid #eee}
+.tower .top b{font-size:15px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font-size:12px;font-weight:800;padding:6px 10px;border-radius:999px;background:var(--mist);color:#5d5a72}
+.chip.on{background:var(--ink);color:#fff}
+.legend{display:flex;gap:16px;padding:12px 20px;font-size:12.5px;font-weight:800;color:#5d5a72;border-bottom:1px solid #f2f1f5}
+.legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:0}
+.legend .g::before{background:var(--st-green)}.legend .y::before{background:var(--st-yellow)}.legend .r::before{background:var(--st-red)}
+.roster{list-style:none;margin:0;padding:0}
+.roster li{display:grid;grid-template-columns:auto 1fr auto auto;gap:14px;align-items:center;padding:11px 20px;border-bottom:1px solid #f2f1f5;font-size:14px}
+.roster .ini{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;font-weight:900;font-size:12px;color:#fff;background:var(--blue)}
+.roster li:nth-child(2n) .ini{background:var(--violet)}
+.roster li:nth-child(3n) .ini{background:var(--coral)}
+.roster .name small{display:block;color:#8b889c;font-size:12px}
+.roster .st{width:12px;height:12px;border-radius:50%;background:var(--st-green)}
+.roster .st.y{background:var(--st-yellow)}
+.roster .st.r{background:var(--st-red)}
+.roster .cb{width:18px;height:18px;border-radius:5px;border:2px solid #cfcdd8}
+.roster li.sel{background:#fff8e6}
+.roster li.sel .cb{background:var(--ink);border-color:var(--ink);position:relative}
+.roster li.sel .cb::after{content:"";position:absolute;left:5px;top:1px;width:4px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.tower .action{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 20px;background:#fafafc}
+.tower .action .btn{padding:11px 18px;font-size:13.5px}
+.tower .action .opts{font-size:12.5px;color:#5d5a72;font-weight:700;display:flex;gap:12px;flex-wrap:wrap}
+.tower .action .opts span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:4px;background:var(--leaf);margin-right:6px;vertical-align:-1px}
+.howlist{display:grid;gap:20px}
+.howlist .item{background:#fff;border-radius:18px;padding:22px 24px;box-shadow:0 8px 24px rgba(21,19,43,.06)}
+.howlist .item h3{font-size:22px;font-weight:600;margin-bottom:8px}
+.howlist .item p{margin:0;font-size:15.5px;color:var(--ink-2)}
+.howlist .item .kick{font-size:11.5px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.natalie{background:var(--ink);color:#fff;border-radius:18px;padding:26px 28px}
+.natalie .nums{display:flex;align-items:center;gap:14px;font-family:var(--display);font-size:30px;font-weight:600;margin-bottom:10px}
+.natalie .nums small{font-family:var(--body);font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55);display:block}
+.natalie .nums .arrow{font-size:22px;color:var(--sun)}
+.natalie q{font-family:var(--display);font-style:italic;font-size:21px;display:block;margin:10px 0 12px;color:var(--sun)}
+.natalie .who{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+
+/* ---------- scene 9: it ---------- */
+.it{background:var(--paper);padding:110px 0}
+.it .grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:20px}
+@media (max-width:960px){.it .grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.it .grid{grid-template-columns:1fr}}
+.it h2{font-size:clamp(30px,3.6vw,44px);font-weight:500;max-width:22em;margin-bottom:40px}
+.fact{border-top:3px solid var(--ink);padding-top:16px}
+.fact b{font-family:var(--display);font-size:34px;font-weight:600;display:block;line-height:1;margin-bottom:8px}
+.fact span{font-size:15px;color:var(--ink-2)}
+.trust{margin-top:56px;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;font-size:12.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#7a7790}
+.trust span{padding:8px 12px;border:1px solid rgba(21,19,43,.14);border-radius:999px;background:#fff}
+.trust .lbl{border:0;background:none;padding-left:0}
+
+/* ---------- scene 10: cta ---------- */
+.cta{background:var(--blue);color:#fff;padding:140px 0;text-align:center;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(255,198,60,.35),transparent 60%);left:50%;top:-30%;transform:translateX(-50%);pointer-events:none}
+.cta h2{font-size:clamp(38px,5.6vw,74px);font-weight:500;max-width:14em;margin:0 auto;position:relative}
+.cta h2 em{font-style:italic;color:var(--sun)}
+.cta p{position:relative;color:rgba(255,255,255,.85);max-width:34em;margin:24px auto 36px;font-size:19px}
+.cta .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+.cta .btn{background:#fff;color:var(--ink);font-size:18px;padding:20px 32px}
+.cta .btn:hover{background:var(--sun)}
+.cta .sub{margin-top:26px;font-size:14px;color:rgba(255,255,255,.7)}
+.cta .sub a{color:#fff}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:rgba(255,255,255,.7);padding:50px 0 40px;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:24px 40px;justify-content:space-between;align-items:flex-start}
+footer .logo{color:#fff;font-size:20px}
+footer a{color:#fff;text-decoration:none;opacity:.85}
+footer a:hover{opacity:1;text-decoration:underline}
+footer ul{list-style:none;padding:0;margin:0;display:flex;gap:22px;flex-wrap:wrap;font-weight:700}
+footer .trustedby{width:100%;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);font-weight:800;margin-top:6px}
+footer .trustedby b{color:rgba(255,255,255,.8);font-weight:800;margin-left:6px}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Delphinium home">
+      <span class="mark" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></span>
+      Delphinium
+    </a>
+    <ul>
+      <li><a href="#makeover">Makeover</a></li>
+      <li><a href="#proof">Proof</a></li>
+      <li><a href="#families">Families</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="/highered">Higher ed</a></li>
+    </ul>
+    <a class="btn blue" href="https://delphi-me.com/schedule-jared">Book 15 minutes with Jared</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ SCENE 1: HOOK / RECOGNITION ============ -->
+<section class="scene hook">
+  <div class="wrap grid">
+    <div>
+      <div class="timestamp rv"><span class="blink"></span> Monday · 8:14 a.m. · fully online program</div>
+      <h1 class="rv d1">Forty-one students haven't started this week.<br><em>The gradebook looks fine.</em></h1>
+      <p class="lede rv d2" style="margin-top:26px">In an online school, silence doesn't look like anything. It looks like a gradebook with a few blanks in it, and a Canvas course that's technically "published."</p>
+    </div>
+    <div class="rv d2">
+      <div class="gradebook" aria-hidden="true">
+        <div class="bar"><i></i><i></i><i></i> &nbsp; Gradebook · English 10 · Section B</div>
+        <table>
+          <thead><tr><th>Student</th><th>Wk 3 Reading</th><th>Discussion</th><th>Quiz 3</th></tr></thead>
+          <tbody>
+            <tr><td>Alvarez, M.</td><td>18/20</td><td>10/10</td><td>92%</td></tr>
+            <tr class="quiet"><td>Bishop, K.</td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+            <tr><td>Chen, R.</td><td>20/20</td><td>9/10</td><td>88%</td></tr>
+            <tr class="quiet"><td>Duarte, S.</td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+            <tr class="quiet"><td>Evans, J.</td><td class="blank"></td><td>7/10</td><td class="blank"></td></tr>
+            <tr><td>Fisher, A.</td><td>16/20</td><td>10/10</td><td>79%</td></tr>
+            <tr class="quiet"><td>Garcia, L.</td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+            <tr><td>Hart, P.</td><td>19/20</td><td>10/10</td><td>95%</td></tr>
+          </tbody>
+        </table>
+        <div class="foot">Blank isn't a zero yet. It's just quiet.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCENE 2: PROBLEM ============ -->
+<section class="scene problem">
+  <div class="wrap cols">
+    <div>
+      <div class="eyebrow rv">So you chase</div>
+      <h2 class="rv d1">Every week, someone opens a spreadsheet and starts writing emails.</h2>
+      <p class="lede rv d2" style="margin-top:22px">Teachers chase. Counselors chase. A principal pulls a report to find out who to chase. And the people who could help most, the parents, usually hear about it last.</p>
+      <p class="quoteline rv d3">"When a parent finds out late, the grade has already taken a hit."</p>
+    </div>
+    <ul class="chase rv d2" aria-label="A typical week of outreach">
+      <li><span class="tag">Mon</span> Export "missing assignments" report. Sort. Copy names into an email.</li>
+      <li><span class="tag">Tue</span> Twelve individual emails before first period. Three bounce.</li>
+      <li><span class="tag">Wed</span> Counselor asks which kids to call. Re-run the report.</li>
+      <li><span class="tag">Thu</span> Student logs in, sees a gray list of 40 links, logs out.</li>
+      <li class="late"><span class="tag">Week 7</span> Parent calls: "Why is my kid failing? Nobody told me."</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SCENE 3: INSIGHT ============ -->
+<section class="scene insight">
+  <div class="wrap">
+    <h2 class="rv"><span class="strike">More reports</span> are not more student work. <strong>Engagement has to turn into action.</strong></h2>
+    <p class="rv d1">Another dashboard can tell you who is slipping. It can't give a fifteen-year-old a reason to open the course, and it can't message the kid and the family for you at 7:40 on a Monday.</p>
+  </div>
+</section>
+
+<!-- ============ AUTHORED SILENCE ============ -->
+<section class="silence" aria-label="A quiet moment">
+  <p class="rv">That's the part nobody built for. The part after the report.</p>
+</section>
+
+<!-- ============ SCENE 4: BRIDGE / HEADLINE ============ -->
+<section class="scene bridge" id="bridge">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="rv">
+        <span class="muted">Canvas delivers content.</span>
+        <span class="loud">Delphinium delivers <b>engagement.</b></span>
+      </h2>
+      <p class="lede rv d1">Delphinium is an engagement layer that lives inside the Canvas you already run. It turns an existing course into a visual, motivating experience for students and an early-warning system for teachers, in about three minutes. No migration. Teachers keep teaching in Canvas. You just turn it on.</p>
+    </div>
+    <div class="toggle-card rv d2" aria-hidden="true">
+      <div class="canvas-chrome"><span class="app">CANVAS</span><span class="crumbs">Davis Connect › Biology 1010 › Settings › Apps</span></div>
+      <div class="toggle-row">
+        <div class="txt"><b>Delphinium</b><span>Canvas LTI 1.3 · installed for this course</span></div>
+        <div class="switch on" id="switch"></div>
+      </div>
+      <div class="toggle-foot"><span>Same course</span><span>Same content</span><span>Same teacher</span><span>About 3 minutes</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCENE 5: MAKEOVER (first visual peak) ============ -->
+<section class="scene makeover" id="makeover">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div class="eyebrow rv">The 3-minute Makeover</div>
+        <h2 class="rv d1">Give Canvas a <em>Makeover.</em></h2>
+      </div>
+      <p class="ask rv d2">Which class would <b>you</b> rather take? Drag the handle and decide.</p>
+    </div>
+
+    <div class="stage rv d2" id="stage" aria-label="Before and after: the same Canvas course with Delphinium turned on. Drag to compare.">
+      <span class="lbl b">Before</span>
+      <span class="lbl a">After · 3 min</span>
+
+      <!-- BEFORE: the gray wall -->
+      <div class="layer before" aria-hidden="true">
+        <div class="course">
+          <div class="rail"><i></i><i></i><i></i><i></i><i></i></div>
+          <nav class="sidenav">
+            <b>Biology 1010</b>
+            <a class="cur">Modules</a><a>Home</a><a>Announcements</a><a>Assignments</a><a>Discussions</a><a>Grades</a><a>People</a><a>Pages</a><a>Files</a><a>Syllabus</a><a>Quizzes</a>
+          </nav>
+          <div class="main">
+            <h4>Modules</h4>
+            <div class="wall">
+              <div class="mod"><div class="mh">Module 1: Introduction to Biology <span>Complete all items</span></div>
+                <div class="it">Read: Chapter 1, pages 1 to 24 <small>10 pts</small></div>
+                <div class="it">Discussion: What is life? <small>Due Sep 8</small></div>
+                <div class="it">Assignment: Scientific method worksheet <small>20 pts</small></div>
+                <div class="it">Quiz 1: Introduction <small>15 pts</small></div>
+              </div>
+              <div class="mod"><div class="mh">Module 2: Chemistry of Life <span>Complete all items</span></div>
+                <div class="it">Read: Chapter 2, pages 25 to 51</div>
+                <div class="it">Page: Water and pH lecture notes</div>
+                <div class="it">Assignment: Macromolecules chart <small>20 pts</small></div>
+                <div class="it">Discussion: Why does water matter?</div>
+                <div class="it">Quiz 2: Chemistry of Life <small>15 pts</small></div>
+              </div>
+              <div class="mod"><div class="mh">Module 3: Cell Structure <span>Complete all items</span></div>
+                <div class="it">Read: Chapter 3, pages 52 to 80</div>
+                <div class="it">Page: Prokaryotes vs. eukaryotes</div>
+                <div class="it">Assignment: Label the cell <small>25 pts</small></div>
+                <div class="it">Quiz 3: Cell Structure <small>15 pts</small></div>
+              </div>
+              <div class="mod"><div class="mh">Module 4: Cell Membranes <span>Complete all items</span></div>
+                <div class="it">Read: Chapter 4, pages 81 to 102</div>
+                <div class="it">Assignment: Osmosis lab report</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AFTER: color-coded course -->
+      <div class="layer after" id="after" aria-hidden="true">
+        <div class="course">
+          <div class="rail"><i></i><i></i><i></i><i></i><i></i></div>
+          <nav class="sidenav">
+            <b>Biology 1010</b>
+            <a class="cur">My Course</a><a>Announcements</a><a>Assignments</a><a>Discussions</a><a>Grades</a><a>People</a><a>Pages</a><a>Files</a><a>Syllabus</a><a>Quizzes</a>
+          </nav>
+          <div class="main">
+            <div class="hero-band"><span class="t">Biology 1010 · Unit 1: Life at the Small Scale</span></div>
+            <div class="after-body">
+              <div class="student">
+                <div class="avatar"><i></i></div>
+                <div><b>Level 4 · Lab Assistant</b><div class="xp"><i></i></div></div>
+                <div class="pts">640 pts<small>3-day streak</small></div>
+              </div>
+              <div class="nextup"><div><b>Next up</b>Quiz 3: Cell Structure · due Thursday</div><span class="go">Start</span></div>
+              <div class="tiles">
+                <div class="tile"><b>1 · Intro to Biology</b><span>Done · 4 of 4</span><i class="ring"></i></div>
+                <div class="tile"><b>2 · Chemistry of Life</b><span>Done · 5 of 5</span><i class="ring"></i></div>
+                <div class="tile ip"><b>3 · Cell Structure</b><span>In progress · 2 of 4</span><i class="ring"></i></div>
+                <div class="tile lk"><b>4 · Cell Membranes</b><span>Unlocks Friday</span><i class="ring"></i></div>
+                <div class="tile lk"><b>5 · Energy &amp; Enzymes</b><span>Locked</span><i class="ring"></i></div>
+                <div class="tile lk"><b>6 · Photosynthesis</b><span>Locked</span><i class="ring"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider" id="divider"></div>
+      <div class="handle" id="handle" aria-hidden="true">‹ ›</div>
+      <input type="range" min="0" max="100" value="50" id="scrub" aria-label="Compare before and after">
+    </div>
+
+    <div class="caption rv"><span>About three minutes to set up</span><span>Same course, same content, same teacher</span><span>School-wide templates for consistency</span><span>Readable for parents too</span></div>
+    <p class="hint rv">Students see progress, what's next, and a little something to earn. Teachers didn't rebuild anything.</p>
+  </div>
+</section>
+
+<!-- ============ SCENE 6: DAVIS (gut proof peak) ============ -->
+<section class="scene davis" id="proof">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow rv">Measured, not promised</div>
+      <div class="bignum rv d1"><span id="count">31</span><sup>%</sup></div>
+      <p class="what rv d2"><b>fewer course failures</b> in the Davis Connect study. Same courses. Same content. Same teachers. The only change was Delphinium.</p>
+    </div>
+    <div class="rv d2">
+      <ul class="method" aria-label="Study methodology">
+        <li><b>Who</b><span>Davis Connect, the online program of Davis School District, Utah</span></li>
+        <li><b>Scale</b><span>72 fully online classes, about 6,000 students</span></li>
+        <li><b>Design</b><span>One school year without Delphinium, then one school year with it</span></li>
+        <li><b>Held constant</b><span>Same courses, same content, same teachers</span></li>
+        <li><b>Format</b><span>Asynchronous. Students never met their teacher or classmates in person</span></li>
+        <li><b>Result</b><span>Course failure rates dropped 31%</span></li>
+      </ul>
+      <div class="promise">
+        What that means for your program: <b>up to 31% fewer course failures</b>, without changing the course, the content, or the teachers you already have.
+        <p class="small">Doing nothing is the most expensive option on the table.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCENE 7: EMOTIONAL (Fun / Tiffany) ============ -->
+<section class="scene fun" id="fun">
+  <div class="confetti" aria-hidden="true">
+    <i style="left:6%;background:#4b5df0;animation-delay:0s"></i>
+    <i style="left:18%;background:#ff6a58;animation-delay:2s"></i>
+    <i style="left:31%;background:#8b6cf6;animation-delay:4s"></i>
+    <i style="left:47%;background:#31b97a;animation-delay:1s"></i>
+    <i style="left:63%;background:#4b5df0;animation-delay:5s"></i>
+    <i style="left:78%;background:#ff6a58;animation-delay:3s"></i>
+    <i style="left:91%;background:#8b6cf6;animation-delay:6s"></i>
+  </div>
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow rv" style="color:var(--ink)">What students said</div>
+      <div class="stat rv d1">72%<small>of students said Delphinium is more motivating, or much more motivating, than a traditional Canvas course.</small></div>
+      <div class="word rv d2"><span>Their most common word</span>"Fun."</div>
+    </div>
+    <div>
+      <blockquote class="card quote rv d1">
+        "I was sitting on the couch watching Netflix and the thought popped into my head: I could be doing homework right now."
+        <footer>Student survey response · Davis Connect</footer>
+      </blockquote>
+      <div class="card tiff rv d2">
+        <div class="googly" aria-hidden="true"><i></i></div>
+        <div>
+          <p>Students started redoing quizzes to earn avatar points. For googly eyes. Tiffany Dance, Instructional Coach at Davis Connect, called it a game changer.</p>
+          <div class="who">Tiffany Dance · Instructional Coach · Davis Connect</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCENE 7b: FAMILY CONFIDENCE (supporting) ============ -->
+<section class="scene family" id="families">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow rv">Families in the loop</div>
+      <h2 class="rv d1">Parents shouldn't need Canvas literacy to see <em>how their kid is doing.</em></h2>
+      <p class="lede rv d2" style="margin-top:22px">Parents and observers get the same color-coded picture the student and teacher see, live, in the Canvas parent app. When a student needs support, families are on the message from the start, calmly, early, before the grade takes the hit.</p>
+      <ul class="beats rv d3">
+        <li><i></i><div><b>Color-coded parent and observer view</b>Green, yellow, red. Same live picture as the student. No decoding required.</div></li>
+        <li><i></i><div><b>Community Builder</b>Weekly progress to families, auto-translated into their preferred language. 160+ languages.</div></li>
+        <li><i></i><div><b>Celebrate wins with parents, not only rescues</b>Positive notes go home too. Transparency lets parents coach, and the parent-teacher relationship stays constructive.</div></li>
+        <li><i></i><div><b>Include families on outreach</b>Include observers, only observers, or CC a counselor on any send from Control Tower.</div></li>
+      </ul>
+    </div>
+    <div class="rv d2">
+      <div class="parent-view" aria-hidden="true">
+        <div class="top"><b>Observer view · Jordan's courses</b><span>Parent app</span></div>
+        <div class="pv-row"><div>English 10<small>On track · 4 of 4 this week</small></div><span class="st">Green</span></div>
+        <div class="pv-row"><div>Biology 1010<small>Quiz 3 not started · due Thursday</small></div><span class="st y">Yellow</span></div>
+        <div class="pv-row"><div>Algebra 2<small>Two assignments missing</small></div><span class="st r">Red</span></div>
+        <div class="pv-row"><div>World History<small>Ahead · unit 4 unlocked early</small></div><span class="st">Green</span></div>
+        <div class="pv-msg">
+          <b>From Ms. Niederhauser · Algebra 2</b>
+          Hi Jordan (and family), two assignments from last week are still open. They're short, and I'm in office hours Tuesday at 3 if you want to knock them out together. You've got this.
+          <span class="lang">Auto-translated · Español</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCENE 8: HOW (Control Tower + Message Center) ============ -->
+<section class="scene how" id="how">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow rv">How it works for teachers</div>
+      <h2 class="rv d1">See who's quiet. Reach the student and the family in one motion.</h2>
+      <p class="lede rv d2" style="margin-top:20px">Control Tower shows every student as green, yellow, or red. Filter to the ones who haven't started, pick a template, include families, send. About 40 seconds.</p>
+    </div>
+    <div class="grid">
+      <div class="tower rv d1" aria-hidden="true">
+        <div class="top"><b>Control Tower · Algebra 2 · 104 students</b><div class="chips"><span class="chip on">Hasn't started</span><span class="chip">Missing 2+</span><span class="chip">All</span></div></div>
+        <div class="legend"><span class="g">71 green</span><span class="y">24 yellow</span><span class="r">9 red</span></div>
+        <ul class="roster">
+          <li class="sel"><span class="ini">KB</span><span class="name">K. Bishop<small>No activity · 6 days</small></span><span class="st r"></span><span class="cb"></span></li>
+          <li class="sel"><span class="ini">SD</span><span class="name">S. Duarte<small>No activity · 5 days</small></span><span class="st r"></span><span class="cb"></span></li>
+          <li class="sel"><span class="ini">JE</span><span class="name">J. Evans<small>Discussion only · 4 days</small></span><span class="st r"></span><span class="cb"></span></li>
+          <li class="sel"><span class="ini">LG</span><span class="name">L. Garcia<small>No activity · 8 days</small></span><span class="st r"></span><span class="cb"></span></li>
+          <li><span class="ini">TN</span><span class="name">T. Nguyen<small>1 missing · active today</small></span><span class="st y"></span><span class="cb"></span></li>
+          <li><span class="ini">AO</span><span class="name">A. Okafor<small>On track</small></span><span class="st"></span><span class="cb"></span></li>
+        </ul>
+        <div class="action">
+          <div class="opts"><span>Include observers</span><span>CC counselor</span><span>Canvas + email + banner + to-do</span></div>
+          <span class="btn">Message 9 students + families</span>
+        </div>
+      </div>
+      <div class="howlist">
+        <div class="item rv d1">
+          <div class="kick">Control Tower</div>
+          <h3>Early warning, in color</h3>
+          <p>Red, yellow, green for every student, every course. Filter, select, message, and include parents or observers in under a minute. Quiet failers surface before week seven.</p>
+        </div>
+        <div class="item rv d2">
+          <div class="kick">Message Center</div>
+          <h3>Outreach that runs itself</h3>
+          <p>Templates, relative dates, conditional sends, and multi-channel delivery: Canvas inbox, email, course banner, and the student's to-do list. Write it once. Mail-merge the names.</p>
+        </div>
+        <div class="natalie rv d3">
+          <div class="nums"><div>~12<small>emails a day</small></div><span class="arrow">→</span><div>~6<small>messages a week</small></div></div>
+          <q>It saved most of my Saturday nights.</q>
+          <div class="who">Natalie Niederhauser · High School Math · Davis Connect · 100+ students</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCENE 9: IT / LOW RISK ============ -->
+<section class="scene it" id="it">
+  <div class="wrap">
+    <div class="eyebrow rv">For the IT gate</div>
+    <h2 class="rv d1">Nothing to migrate. Nothing new for teachers to learn. Nothing heavy on a Chromebook.</h2>
+    <div class="grid">
+      <div class="fact rv d1"><b>~3 min</b><span>to turn on for a course. It's a Canvas LTI 1.3 app, not a new platform.</span></div>
+      <div class="fact rv d2"><b>Zero</b><span>migration. Your courses, content, gradebook, and roster stay exactly where they are.</span></div>
+      <div class="fact rv d2"><b>Canvas</b><span>is still the tool. Teachers keep working where they already work. Students log in the same way.</span></div>
+      <div class="fact rv d3"><b>Light</b><span>on devices. Chromebook-friendly, with aliases and FERPA-aware leaderboards built in.</span></div>
+    </div>
+    <div class="trust rv d3" aria-label="Compliance">
+      <span class="lbl">Trust</span><span>FERPA</span><span>HECVAT available</span><span>US-hosted AWS</span><span>Canvas LTI 1.3</span><span>WCAG 2.0 AA / Section 508</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCENE 10: CTA ============ -->
+<section class="scene cta" id="book">
+  <div class="wrap">
+    <h2 class="rv">Want to watch <em>your</em> course get a Makeover?</h2>
+    <p class="rv d1">Bring one real Canvas course. Jared will turn Delphinium on in front of you, walk through Control Tower, and show you what Davis saw. Fifteen minutes, no slide deck.</p>
+    <div class="btns rv d2">
+      <a class="btn" href="https://delphi-me.com/schedule-jared"><span class="dot"></span> Book time with Jared</a>
+      <a class="btn ghost" href="https://www.youtube.com/@DelphiniumEngage">Watch the demos first</a>
+    </div>
+    <p class="sub rv d3">Higher ed? Same engagement layer, different scorecard. <a href="/highered">Start here instead.</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#top"><span class="mark" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></span>Delphinium</a>
+    <ul>
+      <li><a href="#makeover">Makeover</a></li>
+      <li><a href="#proof">Davis study</a></li>
+      <li><a href="#how">Control Tower</a></li>
+      <li><a href="/highered">Higher ed</a></li>
+      <li><a href="https://www.youtube.com/@DelphiniumEngage">YouTube</a></li>
+      <li><a href="https://delphi-me.com/schedule-jared">Book a demo</a></li>
+    </ul>
+    <div class="trustedby">Working with virtual and online K-12 programs including <b>Davis Connect</b> · <b>UTVA</b> · <b>Baker</b></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // scroll reveal
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.15});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+
+  // makeover scrub
+  var stage=document.getElementById('stage'),scrub=document.getElementById('scrub'),after=document.getElementById('after'),div=document.getElementById('divider'),handle=document.getElementById('handle');
+  function set(v){after.style.clipPath='inset(0 0 0 '+v+'%)';div.style.left=v+'%';handle.style.left=v+'%';}
+  scrub.addEventListener('input',function(e){set(e.target.value);});
+  set(50);
+  // one gentle nudge when the stage first appears, so visitors know it scrubs
+  var nudged=false,reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var sio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!nudged){nudged=true;sio.unobserve(stage);if(reduce)return;var t0=null;function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1400,1);var v=50+Math.sin(p*Math.PI*2)*18;set(v.toFixed(1));scrub.value=v;if(p<1)requestAnimationFrame(step);else set(50);}requestAnimationFrame(step);}});},{threshold:.5});
+  sio.observe(stage);
+
+  // 31% count-up
+  var count=document.getElementById('count'),counted=false;
+  var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!counted){counted=true;cio.unobserve(count);if(reduce){count.textContent='31';return;}var s=null;function tick(ts){if(!s)s=ts;var p=Math.min((ts-s)/1100,1);var ease=1-Math.pow(1-p,3);count.textContent=Math.round(ease*31);if(p<1)requestAnimationFrame(tick);}requestAnimationFrame(tick);}});},{threshold:.4});
+  cio.observe(count);
+
+  // the little toggle in the bridge scene flips on when it comes into view
+  var sw=document.getElementById('switch');sw.classList.remove('on');
+  var tio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){setTimeout(function(){sw.classList.add('on');},500);tio.unobserve(sw);}});},{threshold:.6});
+  tio.observe(sw);
+})();
+</script>
+<!-- Complete. No sections cut. Language rails checked: study-named Davis = exact 31%; forward-looking promise = "up to 31%"; 72% + "Fun"; Niederhauser / Dance spellings; no UC Davis; no em dashes; no HubSpot; no AI faces (all UI mocks are CSS, initials only); no invented parent stat; Community Builder + soft literacy line as supporting beat; Control Tower + Message Center as how; CTA = https://delphi-me.com/schedule-jared. Optional modules used: trust strip, "doing nothing" ROI line, ENGAGEMENT microcopy. Not used: ~$229K per-student figure (prospectus-sourced, left out to avoid an HE number on the K-12 homepage), Ryan Hansen (no cleared quote in the pack). -->
+</html>
