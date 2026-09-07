@@ -96,3 +96,21 @@ Maximize the Canvas (and teacher/content spend) you already own — lower failur
 - Proof adjacent: early outreach + Davis study when narrating failure drop; Natalie teacher-time when messaging
 
 **Hard soft-rules:** No invented parent NPS; no trainee quotes; “I always know how my child is doing” only as capability paraphrase unless Jared clears attribution.
+
+## 7) Homepage visitor takeaway + CTA (Slack feedback 2026-09-06)
+**One takeaway (entire page should land here):**
+“We already have Canvas. Delphinium turns that Canvas course into something students actually engage with—and gives our teachers the visibility to know who needs help.”
+
+**Visual centerpiece:** before/after Makeover transformation (not repeated section copy).
+
+**Section pattern:** each section answers **one** question; avoid repeating the same claim across sections. Prefer **Learn more** → specific YouTube video (not only channel footer link).
+
+**Primary CTA:** Schedule a demo with Jared  
+**Under CTA:** “Meet the person behind Delphinium and see how it could work in your Canvas courses.” (who Jared is + what the demo is like)
+
+**Suggested Learn more targets (official channel):**
+- Engagement Builder / Makeover: https://www.youtube.com/watch?v=HuYuD8UQoiM
+- Control Tower: https://www.youtube.com/watch?v=PIe6VxqLwkw
+- Early-warning spot: https://www.youtube.com/watch?v=wcYutkaPZ7A
+- Community Builder / families: https://www.youtube.com/watch?v=Q80sFMP4wFQ
+- Overview narrative: https://www.youtube.com/watch?v=DuZRx9aN9tw

@@ -15,3 +15,6 @@
 - Jared: tell the Davis District prospectus story, not text-heavy.
 - Sequence: bold+31% Davis proof, problem (silence), Makeover solve, why/research, Davis voices, Core / Community Builder / Engagement Builder, supporting beats, CTA up to 31%.
 - Framing still unlocked. HubSpot untouched.
+
+## 2026-09-06 — Marketing Slack feedback into BRIEF
+- Cut claim repetition; Makeover is visual centerpiece; one question per section + Learn more YT links; page takeaway + CTA subline (Jared demo).
