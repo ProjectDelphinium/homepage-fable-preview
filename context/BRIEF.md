@@ -55,6 +55,23 @@ Sequence (Davis District prospectus pattern — persuasive, not text-heavy):
 
 Do not publish quote pricing. No UC Davis. No em dashes.
 
+
+### Marketing 2026-09-06 — #social-media-marketing feedback (fold into draft)
+Source: `brand/position-and-value-statements-2026-09-04.md` §7. Peak hierarchy still Makeover → proof → CT/messaging/family as how.
+
+1. **Cut repetition** — strategic foundation is good; do not restate the same claims in every section.
+2. **Visual centerpiece** = before/after Makeover transformation (not repeated section copy).
+3. **Each section answers one question**; add **Learn more** → specific YT videos (not only channel footer).
+4. **One page takeaway** (entire page lands here): We already have Canvas. Delphinium turns that Canvas course into something students actually engage with, and gives our teachers the visibility to know who needs help. *(Public HTML: no em dashes.)*
+5. **CTA:** Schedule a demo with Jared. Under it: Meet the person behind Delphinium and see how it could work in your Canvas courses.
+
+**Learn more URLs (official channel):**
+- Makeover / Engagement Builder: https://www.youtube.com/watch?v=HuYuD8UQoiM
+- Control Tower: https://www.youtube.com/watch?v=PIe6VxqLwkw
+- Early-warning spot: https://www.youtube.com/watch?v=wcYutkaPZ7A
+- Community Builder / families: https://www.youtube.com/watch?v=Q80sFMP4wFQ
+- Overview: https://www.youtube.com/watch?v=DuZRx9aN9tw
+
 ### Jared 2026-09-05: sell first
 First viewport = product pitch (headline + 3-min + Davis promise + CTA). Recognition/chase come after. Do not wait 4–5 scrolls to say what Delphinium is.
 

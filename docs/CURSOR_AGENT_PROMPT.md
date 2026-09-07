@@ -7,56 +7,49 @@ Copy this when launching a Cursor cloud agent or starting an Agent session on th
 You are continuing the Delphinium public marketing homepage redesign.
 
 ## Repo & preview
-- Repo: japomani/delphinium-homepage-fable-preview
+- Repo: ProjectDelphinium/homepage-fable-preview (mirror japomani/delphinium-homepage-fable-preview)
 - Branch: main
 - Public draft: https://japomani.github.io/delphinium-homepage-fable-preview/
-- Live site https://delphi-me.com/ is HubSpot — DO NOT edit HubSpot, DNS, or production. This repo is draft-only. Zoho staging is handled later by Web Design after Jared says “stage this.”
+- Live site https://delphi-me.com/ is HubSpot — DO NOT edit HubSpot, DNS, or production. This repo is draft-only. Zoho staging is handled later by Web Design after Jared says "stage this."
 
 ## Read first (in order)
 1. HANDOFF.md
 2. context/BRIEF.md
 3. context/SOURCE.md
-4. context/position-and-value-statements.md
+4. context/position-and-value-statements.md (if present)
 5. Current index.html
+6. docs/CHANGELOG.md
 
+## Story sequence (keep; framing NOT locked)
+Persuasive, not text-heavy. One idea per screen.
+1. Bold + named Davis 31% proof (hero headline + study context)
+2. Problem — silence / gray wall / quiet gradebook / parents late / teachers chase
+3. Proof we solve it — Makeover ("Which class would YOU rather take?") + 72% / Fun / Tiffany
+4. Theory / why — 14 years research (SRL, nudges, social presence); qualitative
+5. Social proof — Tiffany Dance, Natalie Niederhauser, Ryan Hansen
+6. Product story — Core → Community Builder → Engagement Builder
+7. Supporting beats — Canvas multiplier, school-wide look, templates, ~3 min, compliant, support, research
+8. CTA — Fewer failures. Up to 31%. → https://delphi-me.com/schedule-jared
 
-## Jared 2026-09-05 — product sell first
-The first Fable dump made you scroll 4–5 screens (recognition → chase → insight → silence) before the category headline. **Wrong.**
-
-**Rule:** first viewport must sell Delphinium the product:
-- ★ Headline: Canvas delivers content. Delphinium delivers engagement.
-- 25-word / 3-minute / just turn it on
-- Davis: named study = 31%; promises = up to 31%
-- CTA + jump to Makeover
-
-Recognition/chase can follow as *why*, not as the opener. Do not put the sell after a long problem film.
-
-## Goal for this session
-Improve the existing Fable 5.1 `index.html` draft into a stronger, shareable homepage that matches the BRIEF peak stack and SOURCE claims. Do not rebuild a generic SaaS template from scratch.
+## Goal
+Polish craft on the existing prospectus-story `index.html`. Do not rebuild a generic SaaS template. Do not revert to recognition-chase-first.
 
 Prioritize:
-0. **Product pitch in the first viewport** (headline + 3-min + CTA) — Jared: do not wait 4–5 scrolls
 1. Craft + uniqueness (playful-premium; personal/fun/quirky/approachable/cutting-edge)
-2. Makeover signature (“Which class would YOU rather take?”) as first visual peak
-3. Davis proof: study named → exact 31%; forward-looking promises → “up to 31%”
-4. Family/parent supporting beat (literacy line, Community Builder, celebrate wins) — not gut peak
-5. Mobile art direction
-6. DRAFT banner (not the live site)
+2. Makeover interaction + separate mobile art direction
+3. Claims: named Davis = exact 31%; promises/CTAs = "up to 31%"
+4. Tighten text-heavy spots; more air; big type
+5. Family beat supporting only (Community Builder)
+6. NO draft/preview banner
 7. CTA → https://delphi-me.com/schedule-jared
 
 ## Constraints
-- Claims ceiling = context/SOURCE.md only; never invent stats/customers/testimonials
-- No “UC Davis”; spell Niederhauser / Dance correctly
-- No em dashes; no AI faces; no feature-card-grid template tells
-- Keep single-file or small static site that GitHub Pages can serve from /
-- Push to main so Pages updates (or open a PR if you prefer review first — Jared wants shareable iteration)
-
-## Done when
-- Preview still loads on GitHub Pages
-- Peak stack order intact
-- Claims audit against SOURCE passes
-- Mobile + desktop look intentional
-- Short CHANGELOG note in docs/CHANGELOG.md describing what you changed
+- Claims ceiling = context/SOURCE.md only
+- No "UC Davis"; spell Niederhauser / Dance correctly
+- No em dashes; no AI faces; no feature-card-grid / clay / 01-06 / gradient-text tells
+- Never publish quote pricing / SMS fees / quote dollars
+- Keep Pages-servable static site from /
+- Push main or open PR; append docs/CHANGELOG.md
 
 ## Out of scope
-Zoho publish, HubSpot edits, DNS, CRM, serverless product code.
+Zoho publish, HubSpot, DNS, CRM, serverless, Claude/Fable regenerations unless Jared expressly asks Web Design for Claude.

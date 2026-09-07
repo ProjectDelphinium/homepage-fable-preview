@@ -150,3 +150,6 @@ See `docs/CURSOR_AGENT_PROMPT.md`.
 
 ## Latest (2026-09-05 evening)
 Prospectus-story remake is on `main` (commit fc903b2). Sequence: bold+Davis 31% → silence problem → Makeover → 72%/Fun → research why → Tiffany/Natalie/Ryan → Core/CB/EB → supporting beats → CTA up to 31%. Framing still unlocked.
+
+## Marketing 2026-09-06
+Fold #social-media-marketing feedback: cut repetition; Makeover centerpiece; one question/section + Learn more YT; one-page takeaway; CTA subline about meeting Jared. See context/BRIEF.md and position-and-value §7.
