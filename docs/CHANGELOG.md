@@ -26,3 +26,8 @@
 
 ## 2026-09-06 — Marketing Slack feedback into BRIEF
 - Cut claim repetition; Makeover is visual centerpiece; one question per section + Learn more YT links; page takeaway + CTA subline (Jared demo).
+
+## 2026-09-06 — Apply Marketing Slack feedback on homepage
+- Each proof once: 31% Davis in hero, up to 31% at CTA, 72%/Fun in students, gray wall in problem, ~3 min only on Makeover.
+- Cut restated Makeover copy from hero, Engagement Builder, and CTA. Cut 3-min and research supporting beats. Cut 40-second restatement from templates.
+- Page takeaway lands at CTA. Jared subline under hero and end Schedule buttons. Discreet Learn more links to the official YouTube videos. No draft banner.

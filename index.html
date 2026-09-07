@@ -37,10 +37,15 @@ a{color:inherit}
 .btn.sun{background:var(--sun);color:var(--ink)}
 .btn .arr{display:inline-block;transition:transform .18s ease}
 .btn:hover .arr{transform:translateX(4px)}
-.btn:focus-visible,.toggle:focus-visible,.chip:focus-visible,.jump:focus-visible,.logo:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.btn:focus-visible,.toggle:focus-visible,.chip:focus-visible,.jump:focus-visible,.more:focus-visible,.logo:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 .small{font-size:14px;color:var(--mute);font-weight:700;letter-spacing:.04em}
 .jump{font-weight:800;text-decoration:none;border-bottom:2px solid var(--sun);padding-bottom:2px}
 .jump:hover{background:var(--sun)}
+.more{font-weight:800;font-size:15px;text-decoration:none;border-bottom:1.5px solid currentColor;opacity:.7}
+.more:hover{opacity:1}
+.cta-block{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin-top:36px}
+.who-jared{font-size:15px;color:var(--mute);font-weight:700;max-width:28em;line-height:1.4}
+.takeaway{margin-top:22px;max-width:32em}
 
 /* reveal */
 .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
@@ -64,7 +69,7 @@ a{color:inherit}
 .hero .muted{color:var(--mute);font-weight:400}
 .hero h1{max-width:11em}
 .hero h1 .bang{display:inline-block;background:var(--sun);padding:0 .18em;border-radius:.16em;transform:rotate(-1.2deg)}
-.hero .cta-row{margin-top:40px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.hero .cta-row{margin-top:18px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
 .proof{margin-top:70px;display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center;border-top:2px solid var(--ink);padding-top:34px}
 .proof .num{font-family:var(--display);font-weight:700;font-size:clamp(84px,12vw,170px);line-height:.85;letter-spacing:-.05em}
 .proof .num small{display:block;font-family:var(--body);font-size:14px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--mute);margin-top:10px}
@@ -74,9 +79,10 @@ a{color:inherit}
 @media (max-width:760px){
   .proof{grid-template-columns:1fr;gap:18px}
   .hero{padding:56px 0 72px}
-  .hero .cta-row{flex-direction:column;align-items:stretch;gap:16px}
-  .hero .cta-row .btn{width:100%;justify-content:center}
-  .hero .cta-row .jump,.hero .cta-row .small{text-align:center}
+  .hero .cta-row{flex-direction:column;align-items:stretch;gap:14px}
+  .hero .cta-block{align-items:stretch}
+  .hero .cta-block .btn{width:100%;justify-content:center}
+  .hero .who-jared,.hero .cta-row .jump,.hero .cta-row .more{text-align:center}
 }
 
 /* 2 problem */
@@ -90,6 +96,7 @@ a{color:inherit}
 .gl.t{height:14px;width:48%;background:#8f8f9c;margin-bottom:18px}
 .gl.s{width:78%}.gl.xs{width:60%}
 .problem .hold{margin-top:70px;font-family:var(--display);font-style:italic;font-weight:300;font-size:clamp(20px,2.2vw,28px);color:rgba(255,255,255,.45)}
+.problem .more{color:var(--sun);opacity:.9;display:inline-block;margin-top:28px}
 
 /* 3 makeover */
 .makeover{background:var(--paper2)}
@@ -148,7 +155,7 @@ a{color:inherit}
 .toggle .sw{width:56px;height:32px;border-radius:999px;background:#cfcfd6;position:relative;transition:background .3s;flex:0 0 56px}
 .toggle .sw::after{content:"";position:absolute;top:4px;left:4px;width:24px;height:24px;border-radius:50%;background:#fff;transition:transform .3s;box-shadow:0 2px 6px rgba(0,0,0,.2)}
 .toggle.on .sw{background:var(--green)}.toggle.on .sw::after{transform:translateX(24px)}
-.mk-note{grid-column:1/-1;font-size:15px;color:var(--mute);font-weight:700}
+.mk-note{grid-column:1/-1;font-size:15px;color:var(--mute);font-weight:700;display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
 @media (max-width:860px){
   .course{grid-template-columns:1fr;padding:18px 16px;gap:14px}
   .before .side{display:none}
@@ -220,6 +227,7 @@ a{color:inherit}
 .step .k{font-weight:800;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
 .step h3{font-size:clamp(32px,4vw,54px)}
 .step .lede{margin-top:18px;font-size:clamp(17px,1.35vw,20px)}
+.step .more{display:inline-block;margin-top:22px}
 .step ul{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:10px}
 .step li{padding-left:26px;position:relative;font-weight:700;color:var(--ink2)}
 .step li::before{content:"";position:absolute;left:0;top:9px;width:12px;height:12px;border-radius:50%;background:var(--sun)}
@@ -272,7 +280,7 @@ a{color:inherit}
 .beat .vis{width:min(260px,32vw);display:flex;justify-content:flex-end}
 .clock{width:120px;height:120px;border-radius:50%;border:5px solid var(--ink);position:relative;background:#fff}
 .clock::before{content:"";position:absolute;left:50%;top:50%;width:4px;height:44px;background:var(--ink);transform-origin:50% 100%;transform:translate(-50%,-100%) rotate(0deg);animation:tick 6s linear infinite;border-radius:2px}
-.clock::after{content:"3 min";position:absolute;inset:auto 0 -36px 0;text-align:center;font-weight:900;letter-spacing:.1em;font-size:12px;text-transform:uppercase}
+.clock::after{content:"light";position:absolute;inset:auto 0 -36px 0;text-align:center;font-weight:900;letter-spacing:.1em;font-size:12px;text-transform:uppercase}
 @keyframes tick{to{transform:translate(-50%,-100%) rotate(90deg)}}
 .rows{display:grid;gap:8px;width:200px}
 .rows i{display:block;height:34px;border-radius:9px;background:#fff;border:1.5px solid rgba(21,19,43,.12);border-left:8px solid var(--blue)}
@@ -296,7 +304,9 @@ a{color:inherit}
 .cta-end h2{font-size:clamp(40px,6.4vw,92px);max-width:12em;margin:0 auto}
 .cta-end h2 span{color:var(--sun)}
 .cta-end .lede{color:rgba(255,255,255,.7);margin:26px auto 0}
-.cta-end .btn{margin-top:44px}
+.cta-end .cta-block{align-items:center;margin-top:44px}
+.cta-end .who-jared{color:rgba(255,255,255,.62);text-align:center}
+.cta-end .more{color:var(--sun);margin-top:22px;display:inline-block}
 .cta-end .nothing{margin-top:40px;font-family:var(--display);font-style:italic;font-size:clamp(18px,1.9vw,24px);color:rgba(255,255,255,.55)}
 .trust{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:60px}
 .trust .pill{background:transparent;color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.25)}
@@ -327,10 +337,13 @@ footer a{text-decoration:none}
   <div class="wrap">
     <p class="eyebrow rv">For virtual and online K-12 schools on Canvas</p>
     <h1 class="big rv d1"><span class="muted">Canvas delivers content.</span><br>Delphinium delivers <span class="bang">ENGAGEMENT!</span></h1>
-    <div class="cta-row rv d2">
+    <div class="cta-block rv d2">
       <a class="btn" href="https://delphi-me.com/schedule-jared">Schedule a demo with Jared <span class="arr">&rarr;</span></a>
-      <a class="jump" href="#makeover">See the three-minute Makeover</a>
-      <span class="small">About three minutes to turn on. No migration.</span>
+      <p class="who-jared">Meet the person behind Delphinium and see how it could work in your Canvas courses.</p>
+    </div>
+    <div class="cta-row rv d2">
+      <a class="jump" href="#makeover">See the Makeover</a>
+      <a class="more" href="https://www.youtube.com/watch?v=DuZRx9aN9tw" target="_blank" rel="noopener">Learn more</a>
     </div>
 
     <div class="proof rv d3">
@@ -363,15 +376,16 @@ footer a{text-decoration:none}
       <div class="gl t"></div><div class="gl"></div><div class="gl s"></div><div class="gl"></div><div class="gl xs"></div><div class="gl"></div><div class="gl s"></div><div class="gl"></div><div class="gl xs"></div>
     </div>
     <p class="hold rv d3">Nobody chose this. It is just what content delivery looks like without engagement.</p>
+    <a class="more rv d3" href="https://www.youtube.com/watch?v=wcYutkaPZ7A" target="_blank" rel="noopener">Learn more</a>
   </div>
 </section>
 
 <!-- 3. PROOF WE CAN SOLVE IT: MAKEOVER -->
 <section class="screen makeover" id="makeover">
   <div class="wrap">
-    <p class="eyebrow rv">The three-minute Makeover</p>
+    <p class="eyebrow rv">The Makeover</p>
     <h2 class="big rv d1">Which class would <em>YOU</em> rather take?</h2>
-    <p class="lede rv d2" style="margin-top:22px">Same Canvas course. Same teacher. Same content. Drag the stage, use the slider, or just turn it on.</p>
+    <p class="lede rv d2" style="margin-top:22px">Drag the stage, use the slider, or turn it on.</p>
 
     <div class="stage rv d2" id="stage" tabindex="0" role="img" aria-label="Demo scenario. Drag to compare a standard Canvas course with the same course after a Delphinium Makeover.">
       <span class="lbl b">Standard Canvas</span>
@@ -424,7 +438,7 @@ footer a{text-decoration:none}
         <input class="mk-slider" type="range" id="scrub" min="0" max="100" value="50" aria-label="Compare standard Canvas with Delphinium">
       </div>
       <button class="toggle" id="toggle" type="button" aria-pressed="false"><span class="sw"></span><span id="toggleLabel">Turn Delphinium on</span></button>
-      <span class="mk-note">Labelled demo scenario. Color-coded modules, progress, points, a next step. No rebuild.</span>
+      <span class="mk-note">Labelled demo scenario. About three minutes. No rebuild. <a class="more" href="https://www.youtube.com/watch?v=HuYuD8UQoiM" target="_blank" rel="noopener">Learn more</a></span>
     </div>
   </div>
 </section>
@@ -495,9 +509,10 @@ footer a{text-decoration:none}
       <div class="step rv">
         <div>
           <div class="k">Delphinium Core</div>
-          <h3>The engagement layer on the Canvas you already have.</h3>
-          <p class="lede">Turn it on inside a course. Students get a visual home. Teachers get a Control Tower: every student, red, yellow, or green, and a Message Center to reach the right ones in about 40 seconds.</p>
-          <ul><li>Control Tower early-warning view</li><li>Message Center with templates and multi-channel send</li><li>Canvas LTI 1.3. No migration, no new tool to learn</li></ul>
+          <h3>See who needs help. Reach them today.</h3>
+          <p class="lede">Control Tower: every student, red, yellow, or green. Message Center: the right ones, in about 40 seconds.</p>
+          <ul><li>Early-warning view inside the course</li><li>Templates and multi-channel send</li></ul>
+          <a class="more" href="https://www.youtube.com/watch?v=PIe6VxqLwkw" target="_blank" rel="noopener">Learn more</a>
         </div>
         <div class="ct" id="ct" aria-label="Control Tower demo">
           <div class="hd"><b>Control Tower</b><span class="small">Algebra 1 &middot; Period 2</span></div>
@@ -529,6 +544,7 @@ footer a{text-decoration:none}
           <h3>Bring families into the loop, calmly and early.</h3>
           <p class="lede">Parents should not need Canvas literacy to see how their kid is doing. Same live, color-coded picture. Include them when a student needs support. Celebrate wins, not only rescues.</p>
           <ul><li>Color-coded parent and observer view</li><li>Weekly progress to families</li><li>Auto-translate into 160 languages</li></ul>
+          <a class="more" href="https://www.youtube.com/watch?v=Q80sFMP4wFQ" target="_blank" rel="noopener">Learn more</a>
         </div>
         <div class="fam" aria-hidden="true">
           <div class="row g"><span class="dot"></span><div><b>Algebra 1</b><span>On track &middot; 88%</span></div><span class="tag">Win</span></div>
@@ -540,9 +556,10 @@ footer a{text-decoration:none}
       <div class="step eb rv">
         <div>
           <div class="k">Engagement Builder</div>
-          <h3>A course students want to open again.</h3>
-          <p class="lede">The full Makeover: avatars, points, prize boxes, goal tracking, and one polished look every course in the school shares.</p>
+          <h3>What students open every day.</h3>
+          <p class="lede">Avatars, points, prize boxes, and goals they can see.</p>
           <ul><li>Avatars, points, prize boxes, achievements</li><li>Students set, track, and own their goals</li><li>Who's Near Me and shared celebrations</li></ul>
+          <a class="more" href="https://www.youtube.com/watch?v=HuYuD8UQoiM" target="_blank" rel="noopener">Learn more</a>
         </div>
         <div class="ebm" aria-hidden="true">
           <div class="box"><b>1,240</b>points this term</div>
@@ -565,28 +582,27 @@ footer a{text-decoration:none}
 
     <div class="beat rv"><div><h3>One polished look, <b>every class</b> in the school.</h3><p>School-wide layout templates, so students never wonder where to click.</p></div><div class="vis"><div class="stack"><i></i><i></i><i></i></div></div></div>
 
-    <div class="beat rv"><div><h3>Message templates that <b>write themselves</b> in.</h3><p>Relative dates, conditional sends, Canvas plus email plus banner plus to-do. Filter a struggling group and reach them in about 40 seconds.</p></div><div class="vis"><div class="tpl"><b>Hi <mark>{first name}</mark>,</b> your <mark>{assignment}</mark> is due <mark>{in 2 days}</mark>. You are closer than you think.</div></div></div>
+    <div class="beat rv"><div><h3>Message templates that <b>write themselves</b> in.</h3><p>Relative dates, conditional sends, Canvas plus email plus banner plus to-do.</p></div><div class="vis"><div class="tpl"><b>Hi <mark>{first name}</mark>,</b> your <mark>{assignment}</mark> is due <mark>{in 2 days}</mark>. You are closer than you think.</div></div></div>
 
-    <div class="beat rv"><div><h3>About <b>three minutes.</b> Just turn it on.</h3><p>No migration. No new tool for teachers. Light enough for Chromebooks and weak Wi-Fi.</p></div><div class="vis"><div class="clock" aria-hidden="true"></div></div></div>
+    <div class="beat rv"><div><h3>No new tool. Light on <b>Chromebooks.</b></h3><p>Teachers keep using Canvas. Works on weak Wi-Fi.</p></div><div class="vis"><div class="clock" aria-hidden="true"></div></div></div>
 
     <div class="beat rv"><div><h3><b>FERPA-aware.</b> Canvas-native. US-hosted.</h3><p>Student data stays in Canvas. Leaderboards use aliases. Compliance owns the deep docs.</p><div class="pills"><span class="pill">FERPA</span><span class="pill">HECVAT available</span><span class="pill">US-hosted on AWS</span><span class="pill">Canvas LTI 1.3</span><span class="pill">WCAG 2.0 AA</span></div></div></div>
 
     <div class="beat rv"><div><h3>Real people, <b>real training.</b></h3><p>Onboarding and support from the team that built it. We stay reachable after you turn it on.</p></div><div class="vis"><div class="sup"><span>Pilot with your teachers</span><span>Stay reachable</span><span>Educator-to-educator</span></div></div></div>
-
-    <div class="beat rv"><div><h3>Built on <b>research,</b> not hunches.</h3><p>Fourteen years of published work on motivation, nudges, and social presence, by an educator who still teaches.</p></div><div class="vis"><div class="books"><i></i><i></i><i></i><i></i></div></div></div>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta-end">
   <div class="wrap">
-    <h2 class="rv">Fewer failures. <span>Up to 31%.</span><br>Same courses, same teachers.</h2>
-    <p class="lede rv d1">See your own Canvas course get the Makeover, live, in about three minutes.</p>
-    <a class="btn sun rv d2" href="https://delphi-me.com/schedule-jared">Schedule a demo with Jared <span class="arr">&rarr;</span></a>
-    <p class="nothing rv d3">Doing nothing is the most expensive option on the table.</p>
-    <div class="trust rv d3">
-      <span class="pill">FERPA</span><span class="pill">HECVAT available</span><span class="pill">US-hosted on AWS</span><span class="pill">Canvas LTI 1.3</span><span class="pill">WCAG 2.0 AA</span>
+    <h2 class="rv">Fewer failures. <span>Up to 31%.</span></h2>
+    <p class="lede takeaway rv d1">We already have Canvas. Delphinium turns that Canvas course into something students actually engage with, and gives our teachers the visibility to know who needs help.</p>
+    <div class="cta-block rv d2">
+      <a class="btn sun" href="https://delphi-me.com/schedule-jared">Schedule a demo with Jared <span class="arr">&rarr;</span></a>
+      <p class="who-jared">Meet the person behind Delphinium and see how it could work in your Canvas courses.</p>
     </div>
+    <a class="more rv d3" href="https://www.youtube.com/watch?v=DuZRx9aN9tw" target="_blank" rel="noopener">Learn more</a>
+    <p class="nothing rv d3">Doing nothing is the most expensive option on the table.</p>
   </div>
 </section>
 
@@ -748,6 +764,6 @@ footer a{text-decoration:none}
   }
 })();
 </script>
-<!-- Rails: Davis named with 72 classes / 6,000 students / same courses, teachers, content = exact 31% (hero). Forward-looking = "up to 31%" (CTA). 72% + Fun; Niederhauser / Dance / Hansen (synthesis-attributed quotes only). FERPA/alias only, no invented encryption. No pricing, no $229K, no UC Davis, no em dashes, no AI faces, no feature-card grid, no 01-06 counters. No draft banner. CTA = https://delphi-me.com/schedule-jared -->
+<!-- Rails: Davis named with 72 classes / 6,000 students / same courses, teachers, content = exact 31% (hero). Forward-looking = "up to 31%" (CTA). 72% + Fun once; gray wall once; 3 min once (Makeover). Niederhauser / Dance / Hansen only. FERPA/alias only. No pricing, no $229K, no UC Davis, no em dashes, no AI faces, no feature-card grid, no 01-06 counters. No draft banner. CTA = https://delphi-me.com/schedule-jared. Learn more = official YT. Takeaway + Jared subline. -->
 </body>
 </html>
