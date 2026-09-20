@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Delphinium · Canvas delivers content. Delphinium delivers engagement.</title>
+<meta name="description" content="The Canvas engagement layer for virtual and online K-12. Give Canvas a Makeover in about three minutes. No migration.">
+<link rel="icon" href="assets/Delphinium-Logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="scrollcraft.css">
+<style id="delphinium-theme">
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap");
+:root {
+  --sc-canvas: #eef1f8;
+  --sc-surface: #ffffff;
+  --sc-ink: #1a2140;
+  --sc-ink-soft: #5a6380;
+  --sc-accent: #ff5a3c;
+  --sc-accent-ink: #ffffff;
+  --sc-font-display: "Outfit", system-ui, sans-serif;
+  --sc-font-text: "DM Sans", system-ui, sans-serif;
+  --sc-shadow-color: 228 35% 18%;
+  --dl-primary: #283391;
+  --dl-primary-soft: #3d4bb0;
+  --dl-ok: #2f9e6b;
+  --dl-warn: #e0a106;
+  --dl-bad: #d64545;
+  --dl-canvas-chrome: #e4e7ed;
+  --dl-canvas-module: #f7f8fa;
+}
+body { font-family: var(--sc-font-text); background: var(--sc-canvas); color: var(--sc-ink); }
+.app-chrome { position: fixed; inset: 0 0 auto; z-index: var(--sc-z-chrome); display: flex; align-items: center; gap: var(--sc-4); min-height: 3.25rem; padding: 0.55rem var(--sc-gutter); background: color-mix(in oklab, var(--sc-surface) 88%, transparent); border-bottom: 1px solid var(--sc-hairline); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.app-chrome__mark { display: flex; align-items: center; gap: 0.65rem; text-decoration: none; color: var(--sc-ink); font-family: var(--sc-font-display); font-weight: 700; font-size: var(--sc-t-sm); letter-spacing: var(--sc-track-snug); }
+.app-chrome__mark img { width: 28px; height: 28px; object-fit: contain; }
+.app-chrome__status { margin-left: 0.25rem; padding: 0.2rem 0.55rem; border-radius: var(--sc-r-pill); background: color-mix(in oklab, var(--dl-primary) 10%, transparent); color: var(--dl-primary); font-size: var(--sc-t-xs); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+.app-chrome__spacer { flex: 1; }
+.app-chrome__he { color: var(--sc-ink-soft); font-size: var(--sc-t-xs); text-decoration: none; }
+.app-chrome__he:hover { color: var(--dl-primary); }
+.app-chrome__cta { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 0.95rem; border-radius: var(--sc-r-pill); background: var(--dl-primary); color: #fff; text-decoration: none; font-family: var(--sc-font-display); font-weight: 600; font-size: var(--sc-t-sm); box-shadow: var(--sc-e1); }
+.app-chrome__cta:hover { background: var(--dl-primary-soft); }
+main { padding-top: 3.25rem; }
+.sc-wrap { width: min(100% - (var(--sc-gutter) * 2), var(--sc-maxw)); margin-inline: auto; }
+.sc-stack { display: flex; flex-direction: column; gap: var(--sc-4); }
+.sc-display { font-family: var(--sc-font-display); font-weight: 700; letter-spacing: var(--sc-track-tight); line-height: var(--sc-leading-tight); text-wrap: balance; margin: 0; }
+.sc-display--xl { font-size: var(--sc-t-3xl); }
+.sc-display--lg { font-size: var(--sc-t-2xl); }
+.sc-display--md { font-size: var(--sc-t-xl); }
+.sc-body { font-size: var(--sc-t-base); line-height: var(--sc-leading-body); color: var(--sc-ink-soft); max-width: var(--sc-measure); text-wrap: pretty; margin: 0; }
+.sc-section { padding: var(--sc-section) 0; }
+.eyebrow { font-size: var(--sc-t-xs); font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dl-primary); margin: 0 0 var(--sc-3); }
+.accent-word { color: var(--sc-accent); font-weight: 800; }
+.cta-inline { display: inline-flex; align-items: center; gap: 0.45rem; margin-top: var(--sc-5); padding: 0.7rem 1.15rem; border-radius: var(--sc-r-pill); background: var(--dl-primary); color: #fff; text-decoration: none; font-family: var(--sc-font-display); font-weight: 600; font-size: var(--sc-t-sm); }
+.cta-inline:hover { background: var(--dl-primary-soft); }
+.hook-stage { display: grid; place-items: center; padding: var(--sc-8) var(--sc-gutter); text-align: left; }
+.hook-card { width: min(100%, 52rem); padding: clamp(1.5rem, 4vw, 3rem); border-radius: var(--sc-r-lg); background: var(--sc-surface); box-shadow: var(--sc-e2), var(--sc-edge); border: 1px solid var(--sc-hairline); }
+.hook-card .line-muted { font-family: var(--sc-font-display); font-size: var(--sc-t-xl); font-weight: 500; color: var(--sc-ink-soft); margin: 0 0 var(--sc-3); letter-spacing: var(--sc-track-snug); }
+.hook-card h1 { font-size: clamp(2rem, 1.4rem + 3.2vw, 3.6rem); margin: 0; }
+.hook-card .sub { margin-top: var(--sc-5); font-size: var(--sc-t-base); color: var(--sc-ink-soft); max-width: 42ch; }
+.makeover { display: grid; gap: var(--sc-5); padding: var(--sc-6) var(--sc-gutter) var(--sc-7); align-content: center; min-height: 100%; }
+.makeover__head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: var(--sc-4); width: min(100%, 72rem); margin-inline: auto; }
+.makeover__head h2 { font-size: clamp(1.6rem, 1.2rem + 2vw, 2.6rem); margin: 0; max-width: 18ch; }
+.makeover__prompt { font-family: var(--sc-font-display); font-weight: 700; font-size: var(--sc-t-lg); color: var(--dl-primary); margin: 0; }
+.makeover-frame { position: relative; width: min(100%, 72rem); margin-inline: auto; border-radius: 14px; overflow: hidden; background: #2d333f; box-shadow: var(--sc-e3); aspect-ratio: 16 / 10; touch-action: none; user-select: none; }
+.makeover-frame[data-demo-label]::after { content: attr(data-demo-label); position: absolute; top: 0.6rem; right: 0.6rem; z-index: 5; padding: 0.2rem 0.5rem; border-radius: var(--sc-r-sm); background: rgba(0,0,0,0.45); color: #fff; font-size: 0.65rem; letter-spacing: 0.06em; text-transform: uppercase; pointer-events: none; }
+.course-ui { position: absolute; inset: 0; display: grid; grid-template-columns: 56px 1fr; background: var(--dl-canvas-chrome); font-size: 11px; }
+.course-ui__rail { background: #1f2733; display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 10px 0; }
+.course-ui__dot { width: 22px; height: 22px; border-radius: 6px; background: #3a4556; }
+.course-ui__dot.is-active { background: #0e8ecf; }
+.course-ui__main { display: grid; grid-template-rows: auto 1fr; min-width: 0; background: #f5f6f8; }
+.course-ui__topbar { display: flex; align-items: center; gap: 8px; padding: 8px 12px; background: #fff; border-bottom: 1px solid #dde1e8; color: #4a5568; font-weight: 600; }
+.course-ui__crumb { opacity: 0.7; font-weight: 500; }
+.course-ui__body { display: grid; grid-template-columns: 200px 1fr; min-height: 0; }
+.course-ui__nav { background: #fff; border-right: 1px solid #dde1e8; padding: 10px 0; overflow: hidden; }
+.nav-item { display: flex; align-items: center; gap: 8px; padding: 7px 12px; color: #4a5568; white-space: nowrap; }
+.nav-item::before { content: ""; width: 8px; height: 8px; border-radius: 2px; background: #c5cbd6; flex: 0 0 auto; }
+.nav-item.is-current { background: #eef6fc; color: #0e5f8a; font-weight: 700; }
+.course-ui__content { padding: 12px 14px; overflow: hidden; display: flex; flex-direction: column; gap: 8px; }
+.mod { border-radius: 6px; padding: 10px 12px; background: var(--dl-canvas-module); border: 1px solid #e1e5ec; }
+.mod__title { font-weight: 700; color: #2d3748; margin-bottom: 6px; font-size: 12px; }
+.mod__lines { display: flex; flex-direction: column; gap: 5px; }
+.mod__line { height: 7px; border-radius: 3px; background: #d8dde6; width: 100%; }
+.mod__line:nth-child(2) { width: 92%; }
+.mod__line:nth-child(3) { width: 78%; }
+.mod__line:nth-child(4) { width: 86%; }
+.course-ui--dl { background: linear-gradient(160deg, #1e2a6b 0%, #283391 55%, #3a4db8 100%); }
+.course-ui--dl .course-ui__rail { background: #161d4a; }
+.course-ui--dl .course-ui__dot.is-active { background: var(--sc-accent); }
+.course-ui--dl .course-ui__main { margin: 8px 8px 8px 0; border-radius: 12px; overflow: hidden; background: #f7f8ff; }
+.course-ui--dl .course-ui__topbar { background: color-mix(in oklab, var(--dl-primary) 8%, #fff); border-bottom-color: color-mix(in oklab, var(--dl-primary) 18%, transparent); color: var(--dl-primary); }
+.course-ui--dl .course-ui__nav { background: #fff; border-right-color: color-mix(in oklab, var(--dl-primary) 12%, transparent); }
+.course-ui--dl .nav-item::before { background: var(--dl-primary); opacity: 0.35; }
+.course-ui--dl .nav-item.is-current { background: color-mix(in oklab, var(--dl-primary) 12%, #fff); color: var(--dl-primary); }
+.course-ui--dl .nav-item.is-current::before { opacity: 1; background: var(--sc-accent); }
+.course-ui--dl .course-ui__content { background: linear-gradient(180deg, #f7f8ff, #eef1fb); }
+.course-ui--dl .mod { border: none; color: #fff; box-shadow: var(--sc-e1); }
+.course-ui--dl .mod--a { background: linear-gradient(135deg, #3d4bb0, #283391); }
+.course-ui--dl .mod--b { background: linear-gradient(135deg, #2f9e6b, #247a53); }
+.course-ui--dl .mod--c { background: linear-gradient(135deg, #e07a2f, #c45d18); }
+.course-ui--dl .mod__title { color: #fff; }
+.course-ui--dl .mod__line { background: rgba(255,255,255,0.35); }
+.dl-progress { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+.dl-progress__bar { flex: 1; height: 10px; border-radius: 999px; background: color-mix(in oklab, var(--dl-primary) 15%, #fff); overflow: hidden; }
+.dl-progress__fill { height: 100%; width: 68%; border-radius: inherit; background: linear-gradient(90deg, var(--dl-primary), var(--sc-accent)); }
+.dl-progress__label { font-weight: 700; color: var(--dl-primary); font-size: 11px; }
+.dl-badges { display: flex; gap: 6px; margin-bottom: 6px; }
+.dl-badge { width: 22px; height: 22px; border-radius: 50%; background: #fff; border: 2px solid var(--sc-accent); box-shadow: var(--sc-e1); }
+.dl-badge:nth-child(2) { border-color: var(--dl-ok); }
+.dl-badge:nth-child(3) { border-color: var(--dl-warn); }
+.makeover-after { position: absolute; inset: 0; clip-path: inset(0 0 0 var(--makeover, 48%)); will-change: clip-path; }
+.makeover-before { position: absolute; inset: 0; }
+.makeover-handle { position: absolute; top: 0; bottom: 0; left: var(--makeover, 48%); width: 0; z-index: 4; transform: translateX(-50%); }
+.makeover-handle__line { position: absolute; inset: 0 auto 0 50%; width: 3px; transform: translateX(-50%); background: #fff; box-shadow: 0 0 0 1px rgba(0,0,0,0.25), 0 4px 16px rgba(0,0,0,0.25); }
+.makeover-handle__knob { position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; transform: translate(-50%, -50%); border-radius: 50%; background: #fff; color: var(--dl-primary); display: grid; place-items: center; font-weight: 800; font-size: 14px; box-shadow: var(--sc-e2); border: 2px solid var(--dl-primary); cursor: ew-resize; font-family: var(--sc-font-display); }
+.makeover-labels { position: absolute; inset: auto 0 0.7rem; display: flex; justify-content: space-between; padding: 0 0.8rem; z-index: 3; pointer-events: none; }
+.makeover-labels span { padding: 0.25rem 0.55rem; border-radius: var(--sc-r-pill); background: rgba(20,24,40,0.72); color: #fff; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+.makeover-controls { width: min(100%, 72rem); margin-inline: auto; display: grid; gap: 0.5rem; }
+.makeover-controls label { font-size: var(--sc-t-xs); font-weight: 600; color: var(--sc-ink-soft); letter-spacing: 0.04em; text-transform: uppercase; }
+.makeover-controls input[type="range"] { width: 100%; accent-color: var(--dl-primary); height: 1.5rem; }
+.proof { display: grid; grid-template-columns: 1.1fr 1fr; gap: var(--sc-7); align-items: center; }
+.proof__stat { font-family: var(--sc-font-display); font-weight: 800; font-size: clamp(3.5rem, 2rem + 6vw, 7rem); letter-spacing: var(--sc-track-tight); line-height: 0.92; color: var(--dl-primary); margin: 0; }
+.proof__stat span { color: var(--sc-accent); }
+.proof__meta { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: var(--sc-5); }
+.chip { padding: 0.35rem 0.7rem; border-radius: var(--sc-r-pill); background: color-mix(in oklab, var(--dl-primary) 8%, #fff); border: 1px solid color-mix(in oklab, var(--dl-primary) 14%, transparent); font-size: var(--sc-t-xs); font-weight: 600; color: var(--dl-primary); }
+.emo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sc-5); }
+.emo-card { background: var(--sc-surface); border-radius: var(--sc-r-lg); padding: var(--sc-6); border: 1px solid var(--sc-hairline); box-shadow: var(--sc-e1), var(--sc-edge); }
+.emo-card__num { font-family: var(--sc-font-display); font-size: var(--sc-t-3xl); font-weight: 800; color: var(--dl-primary); letter-spacing: var(--sc-track-tight); line-height: 1; margin: 0 0 var(--sc-3); }
+.emo-card__word { font-family: var(--sc-font-display); font-size: var(--sc-t-2xl); font-weight: 800; color: var(--sc-accent); margin: 0 0 var(--sc-3); }
+.emo-card blockquote { margin: 0; font-style: italic; color: var(--sc-ink); line-height: 1.5; }
+.emo-card cite { display: block; margin-top: var(--sc-4); font-style: normal; font-size: var(--sc-t-xs); color: var(--sc-ink-soft); font-weight: 600; }
+.family { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--sc-6); align-items: start; }
+.family__copy { display: flex; flex-direction: column; gap: var(--sc-4); }
+.family-points { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.9rem; }
+.family-points li { display: grid; grid-template-columns: 14px 1fr; gap: 0.75rem; align-items: start; }
+.family-points__mark { width: 10px; height: 10px; border-radius: 50%; margin-top: 0.35rem; background: var(--dl-primary); box-shadow: 0 0 0 4px color-mix(in oklab, var(--dl-primary) 16%, transparent); }
+.family-points__mark--warm { background: var(--dl-warn); box-shadow: 0 0 0 4px color-mix(in oklab, var(--dl-warn) 20%, transparent); }
+.family-points__mark--ok { background: var(--dl-ok); box-shadow: 0 0 0 4px color-mix(in oklab, var(--dl-ok) 18%, transparent); }
+.family-points strong { display: block; color: var(--sc-ink); font-size: var(--sc-t-base); margin-bottom: 0.2rem; }
+.family-points p { margin: 0; color: var(--sc-ink-soft); font-size: var(--sc-t-sm); max-width: 42ch; }
+.parent-view { background: var(--sc-surface); border: 1px solid var(--sc-hairline); border-radius: var(--sc-r-lg); box-shadow: var(--sc-e2), var(--sc-edge); padding: 1.1rem 1.15rem 1.2rem; }
+.parent-view__label { display: inline-flex; margin-bottom: 0.85rem; padding: 0.28rem 0.65rem; border-radius: var(--sc-r-pill); border: 1px solid color-mix(in oklab, var(--dl-primary) 18%, transparent); background: color-mix(in oklab, var(--dl-primary) 8%, #fff); color: var(--dl-primary); font-size: var(--sc-t-xs); font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+.parent-view__head { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin-bottom: 0.95rem; }
+.parent-view__head strong { display: block; font-family: var(--sc-font-display); font-size: var(--sc-t-lg); color: var(--sc-ink); }
+.parent-view__head small { color: var(--sc-ink-soft); font-size: var(--sc-t-sm); }
+.parent-view__chip { flex: 0 0 auto; padding: 0.35rem 0.65rem; border-radius: var(--sc-r-pill); background: color-mix(in oklab, var(--dl-warn) 22%, #fff); color: #7a5a05; font-size: var(--sc-t-xs); font-weight: 700; }
+.parent-mod { padding: 0.7rem 0.75rem; border-radius: var(--sc-r-md); border: 1px solid var(--sc-hairline); background: #fff; margin-bottom: 0.45rem; }
+.parent-mod__row { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+.parent-mod b { font-size: var(--sc-t-sm); color: var(--sc-ink); }
+.parent-mod > span { display: block; margin-top: 0.2rem; font-size: var(--sc-t-xs); color: var(--sc-ink-soft); }
+.quality-bar { margin-top: 0.45rem; height: 6px; border-radius: 99px; background: #e8ebf3; overflow: hidden; }
+.quality-bar > i { display: block; height: 100%; border-radius: inherit; }
+.parent-view__note { margin: 0.85rem 0 0; padding: 0.75rem 0.85rem; border-radius: var(--sc-r-md); background: color-mix(in oklab, var(--dl-primary) 7%, #fff); border: 1px dashed color-mix(in oklab, var(--dl-primary) 22%, transparent); font-size: var(--sc-t-sm); color: var(--sc-ink-soft); }
+.parent-view__note strong { color: var(--dl-primary); font-weight: 700; }
+.how-stage { display: grid; gap: var(--sc-5); padding: var(--sc-6) var(--sc-gutter); align-content: center; }
+.how-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--sc-5); width: min(100%, 72rem); margin-inline: auto; }
+.panel { background: var(--sc-surface); border-radius: var(--sc-r-lg); border: 1px solid var(--sc-hairline); box-shadow: var(--sc-e2); overflow: hidden; }
+.panel__bar { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; padding: 0.7rem 1rem; background: var(--dl-primary); color: #fff; font-family: var(--sc-font-display); font-weight: 700; font-size: var(--sc-t-sm); }
+.panel__body { padding: 0.85rem 1rem 1.1rem; }
+.tower-filters { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
+.filter-pill { border: 1px solid var(--sc-hairline-strong); background: #fff; border-radius: var(--sc-r-pill); padding: 0.3rem 0.65rem; font-size: var(--sc-t-xs); font-weight: 600; color: var(--sc-ink-soft); cursor: pointer; font-family: var(--sc-font-text); }
+.filter-pill.is-on { background: color-mix(in oklab, var(--dl-primary) 12%, #fff); color: var(--dl-primary); border-color: color-mix(in oklab, var(--dl-primary) 30%, transparent); }
+.student-row { display: grid; grid-template-columns: 10px 1fr auto; gap: 0.65rem; align-items: center; padding: 0.55rem 0.35rem; border-bottom: 1px solid var(--sc-hairline); font-size: var(--sc-t-sm); }
+.student-row:last-child { border-bottom: 0; }
+.student-row.is-hidden { display: none; }
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+.dot--r { background: var(--dl-bad); }
+.dot--y { background: var(--dl-warn); }
+.dot--g { background: var(--dl-ok); }
+.student-row button { border: 0; background: color-mix(in oklab, var(--dl-primary) 10%, #fff); color: var(--dl-primary); border-radius: var(--sc-r-sm); padding: 0.3rem 0.55rem; font-size: var(--sc-t-xs); font-weight: 700; cursor: pointer; font-family: var(--sc-font-display); }
+.msg-compose { display: grid; gap: 0.55rem; }
+.msg-compose label { font-size: var(--sc-t-xs); font-weight: 700; color: var(--sc-ink-soft); text-transform: uppercase; letter-spacing: 0.06em; }
+.msg-compose select, .msg-compose textarea { width: 100%; border: 1px solid var(--sc-hairline-strong); border-radius: var(--sc-r-md); padding: 0.55rem 0.7rem; font: inherit; background: #fff; color: var(--sc-ink); }
+.msg-compose textarea { min-height: 6rem; resize: vertical; }
+.msg-channels { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.channel { padding: 0.25rem 0.55rem; border-radius: var(--sc-r-pill); background: color-mix(in oklab, var(--dl-primary) 8%, #fff); color: var(--dl-primary); font-size: var(--sc-t-xs); font-weight: 600; }
+.how-note { width: min(100%, 72rem); margin: 0 auto; color: var(--sc-ink-soft); font-size: var(--sc-t-sm); max-width: 70ch; }
+.how-note strong { color: var(--sc-ink); }
+.risk-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sc-5); }
+.risk-item h3 { font-family: var(--sc-font-display); font-size: var(--sc-t-lg); margin: 0 0 var(--sc-2); color: var(--dl-primary); }
+.risk-item p { margin: 0; color: var(--sc-ink-soft); }
+.roi-band { background: var(--dl-primary); color: #fff; border-radius: var(--sc-r-lg); padding: clamp(1.4rem, 3vw, 2.2rem); display: grid; grid-template-columns: auto 1fr; gap: var(--sc-6); align-items: center; }
+.roi-band__num { font-family: var(--sc-font-display); font-size: clamp(2.2rem, 1.5rem + 3vw, 3.5rem); font-weight: 800; letter-spacing: var(--sc-track-tight); line-height: 1; white-space: nowrap; }
+.roi-band p { margin: 0; color: color-mix(in oklab, #fff 82%, transparent); max-width: 46ch; }
+.roi-band strong { color: #fff; }
+.close-stage { display: grid; place-items: center; padding: var(--sc-8) var(--sc-gutter) var(--sc-6); }
+.close-card { width: min(100%, 40rem); background: var(--sc-surface); border-radius: var(--sc-r-lg); border: 1px solid var(--sc-hairline); box-shadow: var(--sc-e3); padding: clamp(1.5rem, 4vw, 2.5rem); }
+.close-card h2 { font-size: clamp(1.6rem, 1.2rem + 1.8vw, 2.3rem); margin: 0 0 var(--sc-3); }
+.close-card p { margin: 0 0 var(--sc-5); color: var(--sc-ink-soft); }
+.book-form { display: grid; gap: 0.65rem; }
+.book-form label { font-size: var(--sc-t-xs); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--sc-ink-soft); }
+.book-form input { width: 100%; border: 1.5px solid var(--sc-hairline-strong); border-radius: var(--sc-r-md); padding: 0.75rem 0.9rem; font: inherit; font-size: var(--sc-t-base); background: #fff; color: var(--sc-ink); }
+.book-form input:focus { outline: 2px solid color-mix(in oklab, var(--dl-primary) 45%, transparent); border-color: var(--dl-primary); }
+.book-form a.book-submit { display: inline-flex; justify-content: center; align-items: center; margin-top: 0.35rem; padding: 0.85rem 1rem; border-radius: var(--sc-r-md); background: var(--sc-accent); color: var(--sc-accent-ink); font-family: var(--sc-font-display); font-weight: 700; font-size: var(--sc-t-base); text-decoration: none; border: 0; cursor: pointer; }
+.book-form a.book-submit:hover { filter: brightness(1.05); }
+.trust { display: flex; flex-wrap: wrap; gap: 0.45rem 0.85rem; justify-content: center; margin-top: var(--sc-7); padding: 0 var(--sc-gutter) var(--sc-6); color: var(--sc-ink-soft); font-size: var(--sc-t-xs); font-weight: 600; letter-spacing: 0.02em; }
+.trust span::before { content: "·"; margin-right: 0.85rem; opacity: 0.45; }
+.trust span:first-child::before { content: none; margin: 0; }
+.foot-mini { text-align: center; padding: 0 var(--sc-gutter) var(--sc-7); color: var(--sc-ink-soft); font-size: var(--sc-t-xs); }
+.foot-mini a { color: var(--dl-primary); }
+@media (max-width: 860px) {
+  .app-chrome__status, .app-chrome__he { display: none; }
+  .hook-card h1 { font-size: var(--sc-t-2xl); }
+  .makeover-frame { aspect-ratio: 4 / 5; }
+  .course-ui__body { grid-template-columns: 1fr; }
+  .course-ui__nav { display: none; }
+  .course-ui { grid-template-columns: 40px 1fr; }
+  .proof, .emo-grid, .family, .how-grid, .risk-row { grid-template-columns: 1fr; }
+  .roi-band { grid-template-columns: 1fr; gap: var(--sc-3); }
+  .makeover__head h2 { font-size: var(--sc-t-xl); }
+}
+
+</style>
+</head>
+<body data-grammar="live-surface">
+
+<span data-sc-progress></span>
+<div class="sc-grain" aria-hidden="true"></div>
+
+<header class="app-chrome" role="banner">
+  <a class="app-chrome__mark" href="#top">
+    <img src="assets/Delphinium-Logo.png" width="28" height="28" alt="">
+    Delphinium
+  </a>
+  <span class="app-chrome__status">Engagement layer</span>
+  <span class="app-chrome__spacer"></span>
+  <a class="app-chrome__he" href="https://delphi-me.com/highered">Higher ed path</a>
+  <a class="app-chrome__cta" href="https://delphi-me.com/schedule-jared">Book a conversation</a>
+</header>
+
+<main id="top">
+
+  <section data-sc-act="pin" data-sc-span="1.55" data-sc-drift="#eef1f8" aria-label="Hook">
+    <div data-sc-stage class="hook-stage">
+      <div class="hook-card" data-sc-cue="0 0.95 0">
+        <p class="line-muted">Canvas delivers content.</p>
+        <h1 class="sc-display">
+          Delphinium delivers
+          <span class="accent-word">ENGAGEMENT!</span>
+        </h1>
+        <p class="sub">
+          The Canvas engagement layer for virtual and online K-12.
+          Turn the courses you already run into a visual, motivating experience
+          and an early-warning system for teachers in about three minutes.
+        </p>
+        <a class="cta-inline" href="https://delphi-me.com/schedule-jared">Book a conversation</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="makeover" data-sc-act="pin" data-sc-span="2.4" data-sc-drift="#e8ebf4" aria-label="Three-minute Makeover">
+    <div data-sc-stage class="makeover">
+      <div class="makeover__head" data-sc-cue="0.02 0.95">
+        <div>
+          <p class="eyebrow">Give Canvas a Makeover</p>
+          <h2 class="sc-display">Gray wall of text becomes a color-coded course.</h2>
+        </div>
+        <p class="makeover__prompt">Which class would YOU rather take?</p>
+      </div>
+
+      <div class="makeover-frame" id="makeoverFrame" data-demo-label="Sample course UI" data-sc-verify-state="0.48" style="--makeover: 48%;" role="img" aria-label="Interactive before and after comparison of a Canvas course and a Delphinium course">
+        <div class="makeover-before course-ui" aria-hidden="true">
+          <div class="course-ui__rail"><div class="course-ui__dot is-active"></div><div class="course-ui__dot"></div><div class="course-ui__dot"></div><div class="course-ui__dot"></div></div>
+          <div class="course-ui__main">
+            <div class="course-ui__topbar"><span>Modules</span><span class="course-ui__crumb">/ Algebra I / Unit 3</span></div>
+            <div class="course-ui__body">
+              <div class="course-ui__nav">
+                <div class="nav-item">Home</div><div class="nav-item is-current">Modules</div><div class="nav-item">Assignments</div><div class="nav-item">Grades</div><div class="nav-item">People</div>
+              </div>
+              <div class="course-ui__content">
+                <div class="mod"><div class="mod__title">Module 1: Getting Started</div><div class="mod__lines"><span class="mod__line"></span><span class="mod__line"></span><span class="mod__line"></span></div></div>
+                <div class="mod"><div class="mod__title">Module 2: Linear Equations</div><div class="mod__lines"><span class="mod__line"></span><span class="mod__line"></span><span class="mod__line"></span><span class="mod__line"></span></div></div>
+                <div class="mod"><div class="mod__title">Module 3: Graphing</div><div class="mod__lines"><span class="mod__line"></span><span class="mod__line"></span></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="makeover-after course-ui course-ui--dl" aria-hidden="true">
+          <div class="course-ui__rail"><div class="course-ui__dot is-active"></div><div class="course-ui__dot"></div><div class="course-ui__dot"></div><div class="course-ui__dot"></div></div>
+          <div class="course-ui__main">
+            <div class="course-ui__topbar"><span>Your path</span><span class="course-ui__crumb">/ Algebra I · Level up</span></div>
+            <div class="course-ui__body">
+              <div class="course-ui__nav">
+                <div class="nav-item">Home</div><div class="nav-item is-current">Journey</div><div class="nav-item">Quests</div><div class="nav-item">Progress</div><div class="nav-item">Squad</div>
+              </div>
+              <div class="course-ui__content">
+                <div class="dl-progress"><div class="dl-progress__bar"><div class="dl-progress__fill"></div></div><span class="dl-progress__label">68%</span></div>
+                <div class="dl-badges" aria-hidden="true"><span class="dl-badge"></span><span class="dl-badge"></span><span class="dl-badge"></span></div>
+                <div class="mod mod--a"><div class="mod__title">Quest 1 · Warm-up wins</div><div class="mod__lines"><span class="mod__line"></span><span class="mod__line"></span></div></div>
+                <div class="mod mod--b"><div class="mod__title">Quest 2 · Linear equations</div><div class="mod__lines"><span class="mod__line"></span><span class="mod__line"></span><span class="mod__line"></span></div></div>
+                <div class="mod mod--c"><div class="mod__title">Boss challenge · Graphing</div><div class="mod__lines"><span class="mod__line"></span><span class="mod__line"></span></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="makeover-labels" aria-hidden="true"><span>Canvas</span><span>Delphinium</span></div>
+        <div class="makeover-handle" id="makeoverHandle" aria-hidden="true"><div class="makeover-handle__line"></div><div class="makeover-handle__knob" title="Drag to compare">⟷</div></div>
+      </div>
+
+      <div class="makeover-controls" data-sc-cue="0.08 0.98">
+        <label for="makeoverRange">Scrub the Makeover</label>
+        <input id="makeoverRange" type="range" min="4" max="96" value="48" aria-valuetext="Showing both Canvas and Delphinium">
+      </div>
+    </div>
+  </section>
+
+  <section class="sc-section" data-sc-act="flow" data-sc-drift="#eef1f8" aria-label="Davis proof">
+    <div class="sc-wrap proof">
+      <div data-sc-in data-sc-stagger="60">
+        <p class="eyebrow">Davis Connect · Davis School District</p>
+        <p class="proof__stat"><span data-sc-count="0 31">0</span>%</p>
+        <p class="sc-body" style="color:var(--sc-ink);font-weight:600;max-width:28ch;margin-top:var(--sc-3)">decrease in course failure rates.</p>
+        <div class="proof__meta">
+          <span class="chip">72 fully online classes</span>
+          <span class="chip">6,000 students</span>
+          <span class="chip">Same courses</span>
+          <span class="chip">Same teachers</span>
+          <span class="chip">Same content</span>
+        </div>
+      </div>
+      <div class="sc-stack" data-sc-in data-sc-stagger="70">
+        <h2 class="sc-display sc-display--md">Named study. Real methodology.</h2>
+        <p class="sc-body">Year without Delphinium versus year with it. Asynchronous online classes where students never met their teacher or classmates in person.</p>
+        <p class="sc-body">When we promise results on this page, we say <strong style="color:var(--sc-ink)">up to 31%</strong> fewer failures. The exact 31% belongs to the Davis study above.</p>
+        <a class="cta-inline" href="https://delphi-me.com/schedule-jared">Book a conversation</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sc-section" data-sc-act="flow" data-sc-drift="#f5f6fb" aria-label="Motivation and student voice">
+    <div class="sc-wrap sc-stack" style="gap:var(--sc-6)">
+      <div data-sc-in>
+        <p class="eyebrow">What students feel</p>
+        <h2 class="sc-display sc-display--md">More motivating. Their word was Fun.</h2>
+      </div>
+      <div class="emo-grid" data-sc-in data-sc-stagger="80">
+        <article class="emo-card">
+          <p class="emo-card__num"><span data-sc-count="0 72">0</span>%</p>
+          <p class="sc-body" style="color:var(--sc-ink)">of students said Delphinium is more or much more motivating than a traditional Canvas course.</p>
+        </article>
+        <article class="emo-card">
+          <p class="emo-card__word">Fun</p>
+          <p class="sc-body" style="color:var(--sc-ink)">The most common open-ended word students used to describe Delphinium.</p>
+        </article>
+        <article class="emo-card">
+          <blockquote>“I was sitting on the couch watching Netflix and the thought popped into my head: I could be doing homework right now.”</blockquote>
+          <cite>Student survey</cite>
+        </article>
+      </div>
+      <p class="sc-body" data-sc-in style="max-width:58ch"><strong style="color:var(--sc-ink)">Tiffany Dance</strong>, Instructional Coach at Davis Connect, called it a game changer: students redoing quizzes for avatar points and googly eyes.</p>
+    </div>
+  </section>
+
+  <section class="sc-section" data-sc-act="flow" data-sc-drift="#eef1f8" id="act-family" aria-label="Family confidence">
+    <div class="sc-wrap family">
+      <div class="family__copy" data-sc-in data-sc-stagger="70">
+        <p class="eyebrow">Parents and observers</p>
+        <h2 class="sc-display sc-display--md">Color-coded clarity instead of “I don’t know.”</h2>
+        <p class="sc-body">Families can see where a student is without digging through a gray gradebook, so the school-family relationship stays a partnership.</p>
+        <ul class="family-points">
+          <li><span class="family-points__mark" aria-hidden="true"></span><div><strong>See status at a glance</strong><p>Red, yellow, green progress that parents and observers can read fast.</p></div></li>
+          <li><span class="family-points__mark family-points__mark--warm" aria-hidden="true"></span><div><strong>Reach student, family, and counselor together</strong><p>Message Center can CC the right people in one send.</p></div></li>
+          <li><span class="family-points__mark family-points__mark--ok" aria-hidden="true"></span><div><strong>Calm outreach before crisis</strong><p>Act on silence early, not after the quarter is lost.</p></div></li>
+        </ul>
+      </div>
+      <aside class="parent-view" data-sc-in aria-label="Color-coded parent and observer view">
+        <div class="parent-view__label">Parent / observer view</div>
+        <div class="parent-view__head">
+          <div><strong>Jordan M.</strong><small>Algebra I · sample</small></div>
+          <span class="parent-view__chip">Needs a nudge</span>
+        </div>
+        <div class="parent-mod"><div class="parent-mod__row"><b>Warm-up wins</b><span style="color:var(--dl-ok);font-weight:700">Done</span></div><span>Completed Tue</span><div class="quality-bar"><i style="width:100%;background:var(--dl-ok)"></i></div></div>
+        <div class="parent-mod"><div class="parent-mod__row"><b>Linear equations</b><span style="color:var(--dl-warn);font-weight:700">In progress</span></div><span>2 of 4 activities</span><div class="quality-bar"><i style="width:55%;background:var(--dl-warn)"></i></div></div>
+        <div class="parent-mod"><div class="parent-mod__row"><b>Graphing challenge</b><span style="color:var(--dl-bad);font-weight:700">Not started</span></div><span>Due this week</span><div class="quality-bar"><i style="width:8%;background:var(--dl-bad)"></i></div></div>
+        <p class="parent-view__note"><strong>Calm outreach:</strong> message Jordan, CC family or observer, include counselor from the same workflow before grades take a hit.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section data-sc-act="pin" data-sc-span="2.1" data-sc-drift="#e8ebf4" aria-label="Control Tower and Message Center">
+    <div data-sc-stage class="how-stage">
+      <div class="makeover__head" data-sc-cue="0.02 0.9" style="width:min(100%,72rem);margin-inline:auto">
+        <div>
+          <p class="eyebrow">How teachers act on it</p>
+          <h2 class="sc-display" style="font-size:clamp(1.5rem,1.1rem + 1.8vw,2.3rem)">See who’s behind. Reach them.</h2>
+        </div>
+      </div>
+      <div class="how-grid" data-sc-cue="0.08 0.95">
+        <div class="panel" id="controlTower">
+          <div class="panel__bar"><span>Control Tower</span><span style="font-weight:500;opacity:.8;font-size:.75rem">Sample roster</span></div>
+          <div class="panel__body">
+            <div class="tower-filters" role="group" aria-label="Filter by status">
+              <button type="button" class="filter-pill is-on" data-filter="all">All</button>
+              <button type="button" class="filter-pill" data-filter="r">Red</button>
+              <button type="button" class="filter-pill" data-filter="y">Yellow</button>
+              <button type="button" class="filter-pill" data-filter="g">Green</button>
+            </div>
+            <div class="student-row" data-status="r"><span class="dot dot--r" aria-label="Red"></span><span>Jordan M. · no login 5 days</span><button type="button" data-msg="Jordan">Message</button></div>
+            <div class="student-row" data-status="r"><span class="dot dot--r" aria-label="Red"></span><span>Avery K. · 0 of 4 due</span><button type="button" data-msg="Avery">Message</button></div>
+            <div class="student-row" data-status="y"><span class="dot dot--y" aria-label="Yellow"></span><span>Sam R. · slipping pace</span><button type="button" data-msg="Sam">Message</button></div>
+            <div class="student-row" data-status="g"><span class="dot dot--g" aria-label="Green"></span><span>Casey L. · on track</span><button type="button" data-msg="Casey">Message</button></div>
+            <div class="student-row" data-status="g"><span class="dot dot--g" aria-label="Green"></span><span>Riley P. · ahead</span><button type="button" data-msg="Riley">Message</button></div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel__bar"><span>Message Center</span><span style="font-weight:500;opacity:.8;font-size:.75rem">Multi-channel</span></div>
+          <div class="panel__body msg-compose">
+            <label for="msgTo">To</label>
+            <select id="msgTo"><option>Struggling group (red)</option><option>Jordan M.</option><option>Avery K.</option><option>Sam R.</option></select>
+            <label for="msgBody">Message</label>
+            <textarea id="msgBody">Hey - noticed you have not started this week’s quest yet. Want a quick path to catch up? Reply and I will help.</textarea>
+            <div class="msg-channels" aria-label="Channels"><span class="channel">Canvas</span><span class="channel">Email</span><span class="channel">Banner</span><span class="channel">To-do</span></div>
+            <button type="button" class="cta-inline" id="msgSend" style="margin-top:0.4rem;border:0;cursor:pointer;width:fit-content">Send · CC family / counselor</button>
+            <p id="msgStatus" class="sc-body" style="font-size:var(--sc-t-xs);min-height:1.2em" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+      <p class="how-note" data-sc-cue="0.2"><strong>Natalie Niederhauser</strong>, HS Math at Davis Connect (100+ students): about 12 emails a day became about 6 manual messages a week. “Saved most of my Saturday nights.”<br><span style="display:inline-block;margin-top:0.55rem">Ryan Hansen, Digital Learning Director, Davis School District, backs the same early-warning story from the district seat.</span></p>
+    </div>
+  </section>
+
+  <section class="sc-section" data-sc-act="flow" data-sc-drift="#eef1f8" aria-label="Low risk">
+    <div class="sc-wrap sc-stack" style="gap:var(--sc-6)">
+      <div data-sc-in>
+        <p class="eyebrow">Low risk</p>
+        <h2 class="sc-display sc-display--md">About three minutes. No migration. Just turn it on.</h2>
+        <p class="sc-body" style="margin-top:var(--sc-4)">Teachers keep using Canvas. You maximize the Canvas you already own. Chromebook-friendly. Built as a Canvas LTI layer, not a rip-and-replace.</p>
+      </div>
+      <div class="risk-row" data-sc-in data-sc-stagger="70">
+        <div class="risk-item"><h3>~3 minutes</h3><p>Turn Delphinium on inside an existing course.</p></div>
+        <div class="risk-item"><h3>No migration</h3><p>Same courses, same content, same teacher workflows.</p></div>
+        <div class="risk-item"><h3>Maximize Canvas</h3><p>An engagement layer on the LMS spend you already pay.</p></div>
+      </div>
+      <a class="cta-inline" data-sc-in href="https://delphi-me.com/schedule-jared">Book a conversation</a>
+    </div>
+  </section>
+
+  <section class="sc-section" data-sc-act="flow" data-sc-drift="#e8ebf4" aria-label="Admin ROI">
+    <div class="sc-wrap" data-sc-in>
+      <div class="roi-band">
+        <div class="roi-band__num">~$229K</div>
+        <div>
+          <p>invested per student on the path to finish. Failure reduction means more of that investment reaches the finish line.</p>
+          <p style="margin-top:0.75rem"><strong>Doing nothing is the most expensive option on the table.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="book" data-sc-act="pin" data-sc-span="1.25" data-sc-drift="#eef1f8" aria-label="Book a conversation">
+    <div data-sc-stage class="close-stage">
+      <div class="close-card" data-sc-cue="0.06">
+        <h2 class="sc-display">Ready when you are.</h2>
+        <p>Book a conversation with Jared. See the Makeover on your own Canvas course and talk through up to 31% fewer failures for your online program.</p>
+        <form class="book-form" action="https://delphi-me.com/schedule-jared" method="get">
+          <label for="bookIntent">What do you want to explore?</label>
+          <input id="bookIntent" name="intent" type="text" placeholder="Makeover for our Algebra courses…" autocomplete="off">
+          <a class="book-submit" id="bookSubmit" href="https://delphi-me.com/schedule-jared">Book a conversation</a>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust" role="contentinfo">
+    <span>FERPA</span><span>HECVAT available</span><span>US AWS</span><span>Canvas LTI 1.3</span><span>WCAG 2.0 AA / Sec 508</span>
+  </div>
+  <p class="foot-mini">Delphinium · Prototype for feedback · <a href="https://delphi-me.com/highered">Higher ed</a></p>
+
+</main>
+
+<script src="scrollcraft.js"></script>
+<script>
+ScrollCraft.mount(document.body);
+(function () {
+  const frame = document.getElementById('makeoverFrame');
+  const range = document.getElementById('makeoverRange');
+  if (!frame || !range) return;
+  function setMakeover(pct) {
+    const v = Math.max(4, Math.min(96, Number(pct)));
+    frame.style.setProperty('--makeover', v + '%');
+    frame.setAttribute('data-sc-verify-state', (v / 100).toFixed(2));
+    range.value = String(Math.round(v));
+    const side = v < 35 ? 'Mostly Delphinium' : v > 65 ? 'Mostly Canvas' : 'Split view';
+    range.setAttribute('aria-valuetext', side + ', ' + Math.round(v) + ' percent');
+  }
+  range.addEventListener('input', () => setMakeover(range.value));
+  let dragging = false;
+  function pointerPct(clientX) {
+    const r = frame.getBoundingClientRect();
+    return ((clientX - r.left) / r.width) * 100;
+  }
+  frame.addEventListener('pointerdown', (e) => { dragging = true; frame.setPointerCapture?.(e.pointerId); setMakeover(pointerPct(e.clientX)); });
+  frame.addEventListener('pointermove', (e) => { if (dragging) setMakeover(pointerPct(e.clientX)); });
+  frame.addEventListener('pointerup', () => { dragging = false; });
+  frame.addEventListener('pointercancel', () => { dragging = false; });
+  setMakeover(48);
+})();
+(function () {
+  const tower = document.getElementById('controlTower');
+  if (!tower) return;
+  const pills = tower.querySelectorAll('.filter-pill');
+  const rows = tower.querySelectorAll('.student-row');
+  const msgTo = document.getElementById('msgTo');
+  const msgStatus = document.getElementById('msgStatus');
+  pills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      pills.forEach((p) => p.classList.remove('is-on'));
+      pill.classList.add('is-on');
+      const f = pill.getAttribute('data-filter');
+      rows.forEach((row) => row.classList.toggle('is-hidden', !(f === 'all' || row.getAttribute('data-status') === f)));
+    });
+  });
+  tower.querySelectorAll('[data-msg]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const name = btn.getAttribute('data-msg');
+      if (msgTo) {
+        for (const opt of msgTo.options) {
+          if (opt.textContent.includes(name)) { msgTo.value = opt.value; opt.selected = true; break; }
+        }
+      }
+      if (msgStatus) msgStatus.textContent = 'Ready to message ' + name + '.';
+    });
+  });
+  document.getElementById('msgSend')?.addEventListener('click', () => {
+    if (msgStatus) msgStatus.textContent = 'Demo only: in product this sends Canvas + email + banner + to-do, with optional family or counselor CC.';
+  });
+})();
+(function () {
+  const input = document.getElementById('bookIntent');
+  const link = document.getElementById('bookSubmit');
+  if (!input || !link) return;
+  const base = 'https://delphi-me.com/schedule-jared';
+  input.addEventListener('input', () => {
+    const q = input.value.trim();
+    link.href = q ? base + '?intent=' + encodeURIComponent(q) : base;
+  });
+})();
+</script>
+</body>
+</html>
