@@ -1,0 +1,68 @@
+{
+  "purpose": "Shareable form landing pages wrapping Zoho source embeds until WebFormServeServlet works",
+  "forms": [
+    {
+      "name": "Webinar Sign Up Davis",
+      "slug": "webinar-sign-up-davis",
+      "file": "/workspace/delphinium-os/crm-migration/migration/zoho-ready/forms-shareable-pages/webinar-sign-up-davis.html",
+      "zoho_id": "3131408000002265584",
+      "module": "Contacts",
+      "broken_zoho_hosted_url": "https://crm.zoho.com/crm/WebFormServeServlet?rid=f4f2acefd40abc754b1fcd799683df6015f90c3ba18fda54e3c70f22f991046d308956539950e6ffa18b7294451cde52",
+      "intended_public_path": "/forms/webinar-sign-up-davis"
+    },
+    {
+      "name": "Support Form",
+      "slug": "support-form",
+      "file": "/workspace/delphinium-os/crm-migration/migration/zoho-ready/forms-shareable-pages/support-form.html",
+      "zoho_id": "3131408000002284281",
+      "module": "Cases",
+      "broken_zoho_hosted_url": "https://crm.zoho.com/crm/WebFormServeServlet?rid=794c55bbeb2f15df77c8febc453e4de3ebb04184af26615f8da402292fb3274a92a522a932444dee079dd097d2c8d393",
+      "intended_public_path": "/forms/support-form"
+    },
+    {
+      "name": "Get the Most out of Canvas",
+      "slug": "get-the-most-out-of-canvas",
+      "file": "/workspace/delphinium-os/crm-migration/migration/zoho-ready/forms-shareable-pages/get-the-most-out-of-canvas.html",
+      "zoho_id": "3131408000002287063",
+      "module": "Contacts",
+      "broken_zoho_hosted_url": "https://crm.zoho.com/crm/WebFormServeServlet?rid=83b835567aab71972eb3b64462937fd37979b17747ff9dc3301bcf3732dee75b46424093c89070af620566cb49c832ee",
+      "intended_public_path": "/forms/get-the-most-out-of-canvas"
+    },
+    {
+      "name": "Contact Us",
+      "slug": "contact-us",
+      "file": "/workspace/delphinium-os/crm-migration/migration/zoho-ready/forms-shareable-pages/contact-us.html",
+      "zoho_id": "3131408000002292063",
+      "module": "Contacts",
+      "broken_zoho_hosted_url": "https://crm.zoho.com/crm/WebFormServeServlet?rid=ed78500820bdc181e458228620e95be9dc7b13c1cb2a55acd2ccdd3596f7e7bb53e4f7df5c3e0f5357105b28240fed1b",
+      "intended_public_path": "/forms/contact-us"
+    },
+    {
+      "name": "Webinar Sign Up Generic",
+      "slug": "webinar-sign-up-generic",
+      "file": "/workspace/delphinium-os/crm-migration/migration/zoho-ready/forms-shareable-pages/webinar-sign-up-generic.html",
+      "zoho_id": "3131408000002252904",
+      "module": "Contacts",
+      "broken_zoho_hosted_url": "https://crm.zoho.com/crm/WebFormServeServlet?rid=3f00cbcb950288269456b80f74f33bf292ec8d37c67dae031ce11684b027c2f1be8858dda98a9f948add2456ccfd708b",
+      "intended_public_path": "/forms/webinar-sign-up-generic"
+    },
+    {
+      "name": "TBA Form LP",
+      "slug": "tba-form-lp",
+      "file": "/workspace/delphinium-os/crm-migration/migration/zoho-ready/forms-shareable-pages/tba-form-lp.html",
+      "zoho_id": "3131408000002270397",
+      "module": "Contacts",
+      "broken_zoho_hosted_url": "https://crm.zoho.com/crm/WebFormServeServlet?rid=a3b9a1c1fc516f9afc6f65d6829e9469d881a44f1b0a18a41050bc1c4a499754acda52b82277c63a7ebe47beebf964f2",
+      "intended_public_path": "/forms/tba-form-lp"
+    },
+    {
+      "name": "Help Desk Request Form",
+      "slug": "help-desk-request-form",
+      "file": "/workspace/delphinium-os/crm-migration/migration/zoho-ready/forms-shareable-pages/help-desk-request-form.html",
+      "zoho_id": "3131408000002278381",
+      "module": "Cases",
+      "broken_zoho_hosted_url": "https://crm.zoho.com/crm/WebFormServeServlet?rid=b635652698945f6e8287912f6796054624ca2b27e88cce6965227b703a689e97299eef67ac53fa07afc39c00b7d351ec",
+      "intended_public_path": "/forms/help-desk-request-form"
+    }
+  ]
+}

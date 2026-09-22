@@ -1,0 +1,19 @@
+/* Delphinium homepage theme tokens (Split stage). Composition in index.html. */
+:root {
+  --sc-canvas: #f4f1ea;
+  --sc-surface: #fffdf8;
+  --sc-ink: #1a1f3a;
+  --sc-ink-soft: #5c6280;
+  --sc-accent: #283391;
+  --sc-accent-ink: #fffdf8;
+  --sc-font-display: "Fraunces", "Georgia", serif;
+  --sc-font-text: "DM Sans", system-ui, sans-serif;
+  --sc-shadow-color: 228 40% 12%;
+  --dl-canvas-gray: #9aa0b4;
+  --dl-canvas-wall: #e8eaf0;
+  --dl-warm: #f4c95f;
+  --dl-mint: #6bc4a6;
+  --dl-coral: #e07a5f;
+  --dl-sky: #7eb8d4;
+  --split: 0.5;
+}

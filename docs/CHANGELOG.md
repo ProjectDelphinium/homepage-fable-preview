@@ -31,3 +31,19 @@
 - Each proof once: 31% Davis in hero, up to 31% at CTA, 72%/Fun in students, gray wall in problem, ~3 min only on Makeover.
 - Cut restated Makeover copy from hero, Engagement Builder, and CTA. Cut 3-min and research supporting beats. Cut 40-second restatement from templates.
 - Page takeaway lands at CTA. Jared subline under hero and end Schedule buttons. Discreet Learn more links to the official YouTube videos. No draft banner.
+
+## 2026-09-09 — CRM Migration form share pages
+- Added `/forms/<slug>/` Zoho embed wrappers for CRM Migration shareable links. HubSpot untouched.
+
+## 2026-09-19 — Cursor workspace sync
+
+- Added `builds/` (homepage, homepage-live-v1, homepage-split-v1) from Web Design desk
+- Added `ops/` (FINGERPRINTS, brief pack, brand SOURCE, HubSpot inventory)
+- Added `refs/scroll-craft/` taste/skill notes only (full engine not vendored)
+- Docs: `docs/CURSOR_DESKTOP.md`, `docs/ZOHO_SITES_PUBLISH.md`; HANDOFF Local builds section
+
+## 2026-09-22 — Write access restored
+
+- Cursor GitHub App write access to this repo is working again.
+- Draft PR #1 (`cursor/homepage-craft-polish-0226`) merged with latest `main` so it includes the workspace sync (`builds/`, `ops/`, docs).
+- Primary homepage CTA is now **Schedule a demo** → `https://delphi-me.com/schedule-demo`.
