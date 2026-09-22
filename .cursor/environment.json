@@ -1,5 +1,5 @@
 {
-  "name": "Delphinium homepage (static draft)",
+  "name": "delphinium-bizops",
   "user": "ubuntu",
   "install": "cd builds/homepage && npm ci",
   "terminals": [
