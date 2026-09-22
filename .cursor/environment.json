@@ -1,0 +1,13 @@
+{
+  "name": "Delphinium homepage (static draft)",
+  "user": "ubuntu",
+  "install": "cd builds/homepage && npm ci",
+  "terminals": [
+    {
+      "name": "static-server",
+      "command": "python3 -m http.server 8765"
+    }
+  ],
+  "ports": [8765],
+  "chromeExecutablePath": "/usr/bin/google-chrome-stable"
+}
