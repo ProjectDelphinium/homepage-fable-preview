@@ -35,6 +35,24 @@
 ## 2026-09-09 — CRM Migration form share pages
 - Added `/forms/<slug>/` Zoho embed wrappers for CRM Migration shareable links. HubSpot untouched.
 
+## 2026-09-22 — Craft polish + Marketing hero pack
+
+- Applied Marketing-locked hero pack from `builds/homepage/COPY-IMAGE-PACK.md`: category headline, courses-you-already-have sub, **up to a 31%** outcome, no Davis on hero.
+- Moved named Davis Connect study (exact **31%**, 72 courses / 6k+ / same courses·teachers·content) to supporting `#davis` after Makeover + Fun.
+- Problem language: struggling / disengaged / failure risk (not silence / gone quiet). Soft parent late-find-out line.
+- Makeover: pack subcopy; mobile art direction (toggle-first under 520px, hide scrub handle, shorter stage).
+- CTA subline: See how Delphinium reconnects struggling students to your Canvas courses. Still `Schedule a demo` → `/schedule-demo`.
+- Voices eyebrow no longer "From Davis" (Davis = proof, not brand). Logo in nav from `assets/`.
+- Framing still unlocked. HubSpot / DNS / Zoho untouched.
+
+### TODO needs Jared (do not invent locks)
+- Parent colloquial: soft late-find-out is live; ship "I don't know, Dad" only if Jared wants it.
+- Makeover UI fidelity: illustrated demo vs real product screenshots.
+- Voices: which quotes + people photos / logos ship.
+- Customer logo set + optional ~$229K ROI line in supporting beats.
+- CTA subline "to" wording: Marketing preference live; Jared to lock.
+- Community Builder weight vs supporting-only placement (Marketing pass).
+
 ## 2026-09-19 — Cursor workspace sync
 
 - Added `builds/` (homepage, homepage-live-v1, homepage-split-v1) from Web Design desk
