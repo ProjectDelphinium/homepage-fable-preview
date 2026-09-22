@@ -3,7 +3,8 @@
 **Owner desk:** Web Design (Grok Bot) · **User:** Jared Chapman · **Timezone:** America/Denver  
 **Status:** Continue development of the Fable 5.1 draft; HubSpot live site untouched  
 **Share URL:** https://japomani.github.io/delphinium-homepage-fable-preview/  
-**Repo:** https://github.com/japomani/delphinium-homepage-fable-preview  
+**Repo:** https://github.com/ProjectDelphinium/homepage-fable-preview  
+**Mirror:** https://github.com/japomani/delphinium-homepage-fable-preview  
 
 ---
 
@@ -130,6 +131,29 @@ Optional later: expand from one `index.html` into a small static structure (`/`,
 - Open PRs against `ProjectDelphinium/serverless` (product app — wrong repo)
 - Claim Zoho cutover is done
 - Borrow Marketing/Product Claude pools unless Jared/Constructor says so for a new generate
+
+---
+
+
+## Local builds
+
+This repo is the **single Cursor workspace** for Delphinium homepage design. Open it in Cursor desktop; Cloud Agents use the same tree.
+
+| Path | What |
+|------|------|
+| `builds/homepage/` | Primary scroll-craft homepage build (BRIEF, SCORE, verify shots) |
+| `builds/homepage-live-v1/` | Live-surface grammar variant |
+| `builds/homepage-split-v1/` | Split-stage variant |
+| `index.html` (repo root) | Current GitHub Pages public draft (Fable / prospectus story) |
+| `ops/FINGERPRINTS.md` | Design fingerprints |
+| `ops/brief/` | Web-design brief pack (research, wow, Zoho notes) |
+| `ops/brand/SOURCE.md` | Brand SOURCE (claims ceiling; also mirrored in `context/SOURCE.md`) |
+| `ops/inventory/hubspot-live.md` | HubSpot live inventory (reference only — do not edit HubSpot) |
+| `refs/scroll-craft/` | Taste / skill notes only — full engine stays on agent box at `/workspace/scroll-craft/` |
+
+**Zoho Sites publish:** staging-only via Code Snippet / custom HTML/CSS (Pro). There is **no Zoho Sites REST API** for this workflow. Never cut DNS or HubSpot. Jared OK required before any Zoho publish. See `docs/ZOHO_SITES_PUBLISH.md`.
+
+**Cursor desktop:** see `docs/CURSOR_DESKTOP.md`.
 
 ---
 

@@ -21,3 +21,10 @@
 
 ## 2026-09-09 — CRM Migration form share pages
 - Added `/forms/<slug>/` Zoho embed wrappers for CRM Migration shareable links. HubSpot untouched.
+
+## 2026-09-19 — Cursor workspace sync
+
+- Added `builds/` (homepage, homepage-live-v1, homepage-split-v1) from Web Design desk
+- Added `ops/` (FINGERPRINTS, brief pack, brand SOURCE, HubSpot inventory)
+- Added `refs/scroll-craft/` taste/skill notes only (full engine not vendored)
+- Docs: `docs/CURSOR_DESKTOP.md`, `docs/ZOHO_SITES_PUBLISH.md`; HANDOFF Local builds section
