@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Delphinium · Canvas delivers content. Delphinium delivers engagement.</title>
+  <meta name="description" content="The Canvas engagement layer for virtual and online K-12. Give Canvas a Makeover in about three minutes. Schools have seen up to 31% fewer course failures.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://delphi-me.com/hubfs/Delphinium%20Logo.png">
+  <style>
+    :root {
+      --paper: #fffdf6;
+      --butter: #fbeab2;
+      --ink: #23232a;
+      --ink-soft: #5a5a66;
+      --canvas: #ededed;
+      --canvas-ink: #6b6b75;
+      --navy: #2b2f7e;
+      --navy-deep: #1d2158;
+      --accent: #c7007a;
+      --accent-hover: #a50064;
+      --mark: #f8f000;
+      --cyan: #00aeef;
+      --green: #00a651;
+      --max: 1120px;
+      --nav-h: 3.5rem;
+      --draft-h: 2rem;
+      --radius: 12px;
+      --shadow: 0 24px 60px rgba(43, 47, 126, 0.12);
+      --font-display: "Outfit", system-ui, sans-serif;
+      --font-text: "Source Sans 3", system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font-text);
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--paper);
+      text-wrap: pretty;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--navy); }
+    a:hover { color: var(--accent); }
+
+    .dl-draft {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10000;
+      height: var(--draft-h);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--mark);
+      color: var(--ink);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .dl-nav {
+      position: sticky;
+      top: var(--draft-h);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      min-height: var(--nav-h);
+      padding: 0.5rem clamp(1rem, 4vw, 2rem);
+      background: color-mix(in srgb, var(--paper) 92%, transparent);
+      border-bottom: 1px solid color-mix(in srgb, var(--navy) 12%, transparent);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .dl-nav__logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      flex: 1;
+      min-width: 0;
+    }
+    .dl-nav__logo img {
+      width: min(140px, 42vw);
+      height: auto;
+    }
+    .dl-nav__he {
+      display: none;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--ink-soft);
+      white-space: nowrap;
+    }
+    @media (min-width: 720px) {
+      .dl-nav__he { display: inline; }
+    }
+    .dl-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      padding: 0.65rem 1.15rem;
+      border-radius: 999px;
+      border: none;
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.9375rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 150ms ease, transform 150ms ease;
+      white-space: nowrap;
+    }
+    .dl-btn:hover {
+      background: var(--accent-hover);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+    .dl-btn--ghost {
+      background: transparent;
+      color: var(--navy);
+      border: 2px solid color-mix(in srgb, var(--navy) 25%, transparent);
+    }
+    .dl-btn--ghost:hover { background: color-mix(in srgb, var(--navy) 6%, transparent); color: var(--navy); }
+
+    main { padding-top: 0; }
+
+    .dl-wrap {
+      width: min(100% - 2rem, var(--max));
+      margin-inline: auto;
+    }
+    .dl-section {
+      padding: clamp(3.5rem, 8vw, 7.5rem) 0;
+    }
+
+    .dl-hero__eyebrow {
+      margin: 0 0 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--navy);
+    }
+    .dl-hero__h1 {
+      margin: 0;
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(2.1rem, 5.5vw, 3.75rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      text-wrap: balance;
+      color: var(--ink-soft);
+    }
+    .dl-hero__h1 strong {
+      display: block;
+      margin-top: 0.35rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .dl-hero__h1 .hl {
+      background: var(--mark);
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+      padding: 0 0.12em;
+    }
+    .dl-hero__lead {
+      margin: 1.25rem 0 0;
+      max-width: 42ch;
+      color: var(--ink-soft);
+      font-size: 1.125rem;
+    }
+    .dl-hero__proof {
+      margin: 1rem 0 0;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--ink);
+      font-variant-numeric: tabular-nums;
+    }
+    .dl-hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem 1.25rem;
+      margin-top: 1.5rem;
+    }
+    .dl-hero__watch {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .dl-makeover {
+      margin-top: clamp(2rem, 5vw, 3.5rem);
+    }
+    .dl-makeover__head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 1rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .dl-makeover__prompt {
+      margin: 0;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+      color: var(--navy);
+      max-width: 22ch;
+      text-wrap: balance;
+    }
+    .dl-makeover__controls {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .dl-makeover__label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .dl-seg {
+      display: inline-flex;
+      border-radius: 999px;
+      overflow: hidden;
+      border: 1px solid color-mix(in srgb, var(--navy) 20%, transparent);
+    }
+    .dl-seg button {
+      border: none;
+      background: transparent;
+      padding: 0.45rem 0.85rem;
+      font-family: var(--font-display);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--ink-soft);
+    }
+    .dl-seg button[aria-pressed="true"] {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .dl-stage {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid color-mix(in srgb, var(--navy) 18%, transparent);
+      aspect-ratio: 16 / 10;
+      background: var(--canvas);
+      touch-action: none;
+      user-select: none;
+    }
+    .dl-stage::after {
+      content: "Illustrated demo scenario";
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      z-index: 5;
+      padding: 0.2rem 0.45rem;
+      border-radius: 4px;
+      background: rgba(0, 0, 0, 0.55);
+      color: #fff;
+      font-size: 0.625rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      pointer-events: none;
+    }
+    .dl-stage__before,
+    .dl-stage__after {
+      position: absolute;
+      inset: 0;
+    }
+    .dl-stage__after {
+      clip-path: inset(0 calc(100% - var(--reveal, 50%)) 0 0);
+      transition: clip-path 80ms linear;
+    }
+    .dl-stage.is-auto .dl-stage__after {
+      transition: clip-path 1.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .canvas-mock {
+      height: 100%;
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      background: #e4e7ed;
+      font-size: clamp(10px, 1.4vw, 12px);
+    }
+    .canvas-mock__rail {
+      background: #1f2733;
+      padding: 10px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .canvas-mock__dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 5px;
+      background: #3a4556;
+    }
+    .canvas-mock__main {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      background: #f5f6f8;
+    }
+    .canvas-mock__bar {
+      padding: 8px 12px;
+      background: #fff;
+      border-bottom: 1px solid #dde1e8;
+      font-weight: 600;
+      color: #4a5568;
+    }
+    .canvas-mock__body { padding: 10px 12px; overflow: hidden; }
+    .canvas-mock__module {
+      background: #fff;
+      border: 1px solid #d5d9e6;
+      border-radius: 4px;
+      margin-bottom: 6px;
+      padding: 8px 10px;
+      color: var(--canvas-ink);
+    }
+    .canvas-mock__module span {
+      display: block;
+      font-size: 0.85em;
+      color: #9aa3b2;
+      margin-top: 2px;
+    }
+
+    .dl-stage__after img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 72% center;
+    }
+
+    .dl-stage__handle {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: var(--reveal, 50%);
+      width: 3px;
+      background: var(--mark);
+      transform: translateX(-50%);
+      z-index: 4;
+      pointer-events: none;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+    }
+    .dl-stage__handle::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--paper);
+      border: 3px solid var(--navy);
+      box-shadow: var(--shadow);
+    }
+    .dl-stage input[type="range"] {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      opacity: 0;
+      cursor: ew-resize;
+      z-index: 6;
+    }
+    .dl-makeover__cap {
+      margin: 0.75rem 0 0;
+      font-size: 0.875rem;
+      color: var(--ink-soft);
+      max-width: 52ch;
+    }
+    .dl-makeover__body {
+      margin-top: 2rem;
+      max-width: 62ch;
+    }
+    .dl-makeover__body h2 {
+      margin: 0 0 0.75rem;
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      line-height: 1.1;
+      text-wrap: balance;
+    }
+
+    .dl-proof {
+      background: var(--paper);
+    }
+    .dl-stat {
+      margin: 0;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(4rem, 12vw, 7.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      font-variant-numeric: tabular-nums;
+      color: var(--navy);
+    }
+    .dl-stat__unit {
+      display: block;
+      font-size: clamp(1.25rem, 3vw, 1.75rem);
+      font-weight: 600;
+      color: var(--ink);
+      margin-top: 0.35rem;
+      max-width: 28ch;
+      line-height: 1.2;
+    }
+    .dl-proof__ctx {
+      margin: 1.25rem 0 0;
+      max-width: 52ch;
+      color: var(--ink-soft);
+      font-size: 1rem;
+    }
+    .dl-proof__link {
+      display: inline-block;
+      margin-top: 1rem;
+      font-weight: 600;
+      font-size: 0.9375rem;
+    }
+
+    .dl-students {
+      background: var(--butter);
+    }
+    .dl-quote {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, 3.2vw, 2rem);
+      line-height: 1.25;
+      font-weight: 600;
+      color: var(--ink);
+      max-width: 36ch;
+      text-wrap: balance;
+    }
+    .dl-quote cite {
+      display: block;
+      margin-top: 0.75rem;
+      font-family: var(--font-text);
+      font-size: 0.875rem;
+      font-weight: 400;
+      font-style: normal;
+      color: var(--ink-soft);
+    }
+    .dl-fun {
+      margin-top: 2rem;
+      display: grid;
+      gap: 1rem;
+    }
+    @media (min-width: 720px) {
+      .dl-fun { grid-template-columns: auto 1fr; align-items: end; gap: 2rem; }
+    }
+    .dl-fun__num {
+      margin: 0;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(3rem, 8vw, 5rem);
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+      color: var(--navy);
+    }
+    .dl-fun__word {
+      margin: 0.25rem 0 0;
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--green);
+    }
+    .dl-video-facade {
+      margin-top: 2rem;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid color-mix(in srgb, var(--navy) 20%, transparent);
+      background: #111;
+      position: relative;
+      aspect-ratio: 16 / 9;
+      max-width: 640px;
+    }
+    .dl-video-facade img { width: 100%; height: 100%; object-fit: cover; opacity: 0.92; }
+    .dl-video-facade button {
+      position: absolute;
+      inset: 0;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+    }
+    .dl-video-facade button span {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: color-mix(in srgb, var(--paper) 90%, transparent);
+      border: 2px solid var(--navy);
+      display: grid;
+      place-items: center;
+    }
+    .dl-video-facade button span::after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 0 10px 16px;
+      border-color: transparent transparent transparent var(--navy);
+      margin-left: 4px;
+    }
+    .dl-video-facade iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .dl-how h2 {
+      margin: 0 0 0.5rem;
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      text-wrap: balance;
+    }
+    .dl-how__grid {
+      margin-top: 2rem;
+      display: grid;
+      gap: 2rem;
+    }
+    @media (min-width: 800px) {
+      .dl-how__grid { grid-template-columns: 1fr 1fr; }
+    }
+    .dl-product-shot {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid color-mix(in srgb, var(--navy) 22%, transparent);
+      box-shadow: var(--shadow);
+      background: #0f1420;
+    }
+    .dl-product-shot img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .dl-product-shot figcaption {
+      padding: 0.65rem 0.85rem;
+      font-size: 0.8125rem;
+      color: var(--ink-soft);
+      background: var(--paper);
+      border-top: 1px solid color-mix(in srgb, var(--navy) 10%, transparent);
+    }
+    .dl-family {
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid color-mix(in srgb, var(--navy) 12%, transparent);
+      max-width: 62ch;
+      color: var(--ink-soft);
+      font-size: 1rem;
+    }
+    .dl-family strong { color: var(--ink); }
+
+    .dl-risk {
+      margin-top: 2rem;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.125rem;
+      color: var(--navy);
+    }
+    .dl-trust-inline {
+      margin-top: 0.75rem;
+      font-size: 0.8125rem;
+      color: var(--ink-soft);
+      letter-spacing: 0.02em;
+    }
+
+    .dl-close {
+      background: linear-gradient(165deg, var(--navy-deep) 0%, var(--navy) 55%, #1a1d4a 100%);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .dl-close::before {
+      content: "";
+      position: absolute;
+      inset: -20% -10% auto;
+      height: 70%;
+      opacity: 0.35;
+      background:
+        linear-gradient(125deg, transparent 40%, var(--mark) 40%, var(--mark) 46%, transparent 46%),
+        linear-gradient(125deg, transparent 48%, var(--cyan) 48%, var(--cyan) 54%, transparent 54%),
+        linear-gradient(125deg, transparent 56%, var(--navy) 56%, var(--navy) 62%, transparent 62%),
+        linear-gradient(125deg, transparent 64%, var(--accent) 64%, var(--accent) 70%, transparent 70%),
+        linear-gradient(125deg, transparent 72%, var(--green) 72%, var(--green) 78%, transparent 78%);
+      pointer-events: none;
+    }
+    .dl-close .dl-wrap { position: relative; z-index: 1; }
+    .dl-close h2 {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      line-height: 1.1;
+      text-wrap: balance;
+      color: #fff;
+    }
+    .dl-close p {
+      margin: 1rem 0 0;
+      max-width: 42ch;
+      color: color-mix(in srgb, #fff 82%, transparent);
+    }
+    .dl-close .dl-btn { margin-top: 1.5rem; }
+    .dl-close .dl-trust-inline { color: color-mix(in srgb, #fff 70%, transparent); }
+
+    .dl-logos {
+      padding: 2.5rem 0 3rem;
+      background: var(--paper);
+      border-top: 1px solid color-mix(in srgb, var(--navy) 8%, transparent);
+    }
+    .dl-logos p {
+      margin: 0 0 1rem;
+      text-align: center;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .dl-logos__row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem 2rem;
+      opacity: 0.55;
+      filter: grayscale(0.35);
+    }
+    .dl-logos__row img {
+      height: 28px;
+      width: auto;
+      max-width: 120px;
+      object-fit: contain;
+    }
+
+    .dl-footer {
+      padding: 2rem 0 3rem;
+      background: var(--navy-deep);
+      color: color-mix(in srgb, #fff 75%, transparent);
+      font-size: 0.875rem;
+    }
+    .dl-footer a { color: #fff; text-decoration: none; }
+    .dl-footer a:hover { text-decoration: underline; }
+    .dl-footer__inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .dl-footer img { width: 100px; opacity: 0.9; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .dl-stage.is-auto .dl-stage__after { transition: none; }
+    }
+
+    @media (max-width: 719px) {
+      .dl-nav__cta { padding: 0.55rem 0.85rem; font-size: 0.8125rem; }
+      .dl-stage { aspect-ratio: 4 / 5; }
+    }
+  </style>
+</head>
+<body class="dl-v2">
+  <div class="dl-draft" role="status">Draft · not the live delphi-me.com site</div>
+
+  <header class="dl-nav">
+    <a class="dl-nav__logo" href="#top" aria-label="Delphinium home">
+      <img src="https://delphi-me.com/hubfs/Delphinium%20Logo.png" width="663" height="471" alt="Delphinium">
+    </a>
+    <a class="dl-nav__he" href="/highered">Higher Ed Online</a>
+    <a class="dl-btn dl-nav__cta" href="https://jared-delphi-me.zohobookings.com/4937208000000036014">Schedule a demo</a>
+  </header>
+
+  <main id="top">
+    <section class="dl-section dl-hero" aria-labelledby="hero-heading">
+      <div class="dl-wrap">
+        <p class="dl-hero__eyebrow">Canvas engagement layer</p>
+        <h1 class="dl-hero__h1" id="hero-heading">
+          Canvas delivers content.
+          <strong>Delphinium delivers <span class="hl">engagement</span>.</strong>
+        </h1>
+        <p class="dl-hero__lead">Give the Canvas courses you already run a three-minute Makeover. Students get a course they want to open. Teachers get early warning on who needs help. No migration.</p>
+        <p class="dl-hero__proof">Up to 31% fewer course failures. Same courses, same teachers, same content.</p>
+        <div class="dl-hero__actions">
+          <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014">Schedule a demo</a>
+          <a class="dl-hero__watch" href="https://www.youtube.com/watch?v=DuZRx9aN9tw" target="_blank" rel="noopener noreferrer">Watch the overview</a>
+        </div>
+
+        <div class="dl-makeover" id="makeover">
+          <div class="dl-makeover__head">
+            <p class="dl-makeover__prompt">Which class would YOU rather take?</p>
+            <div class="dl-makeover__controls">
+              <span class="dl-makeover__label">View</span>
+              <div class="dl-seg" role="group" aria-label="Before or after Makeover">
+                <button type="button" id="btn-before" aria-pressed="false">Before</button>
+                <button type="button" id="btn-after" aria-pressed="true">After</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="dl-stage" id="makeover-stage" style="--reveal: 72%">
+            <div class="dl-stage__before" aria-hidden="true">
+              <div class="canvas-mock">
+                <div class="canvas-mock__rail" aria-hidden="true">
+                  <div class="canvas-mock__dot"></div>
+                  <div class="canvas-mock__dot"></div>
+                  <div class="canvas-mock__dot"></div>
+                </div>
+                <div class="canvas-mock__main">
+                  <div class="canvas-mock__bar">Introduction to Biology</div>
+                  <div class="canvas-mock__body">
+                    <div class="canvas-mock__module">Module 1: Getting Started<span>Pages · Assignments · Due dates</span></div>
+                    <div class="canvas-mock__module">Module 2: Cells and Structure<span>Readings · Quiz 1</span></div>
+                    <div class="canvas-mock__module">Module 3: Energy and Metabolism<span>Discussion · Lab write-up</span></div>
+                    <div class="canvas-mock__module">Module 4: Genetics<span>Exam review materials</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dl-stage__after">
+              <img src="https://delphi-me.com/hubfs/datathumb.png" width="838" height="299" alt="Delphinium course home with color-coded progress (product still from delphi-me.com)" loading="lazy">
+            </div>
+            <div class="dl-stage__handle" aria-hidden="true"></div>
+            <input type="range" id="makeover-range" min="0" max="100" value="72" aria-label="Drag to compare before and after Makeover">
+          </div>
+          <p class="dl-makeover__cap">Drag the line. Left is a typical Canvas module list. Right is the same course with Delphinium turned on (product still).</p>
+
+          <div class="dl-makeover__body">
+            <h2>Same course. Three minutes later.</h2>
+            <p>Nothing about the course changed: same modules, same assignments, same teacher. Delphinium adds the layer students respond to: visible progress, color that means something, and a reason to come back tomorrow. Teachers do not rebuild anything. They turn it on.</p>
+            <p><a href="https://www.youtube.com/watch?v=HuYuD8UQoiM" target="_blank" rel="noopener noreferrer">See a Makeover start to finish</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dl-section dl-proof" aria-labelledby="proof-heading">
+      <div class="dl-wrap">
+        <p class="dl-stat" id="proof-heading" aria-label="Davis Connect study result">31%<span class="dl-stat__unit">fewer course failures at Davis Connect</span></p>
+        <p class="dl-proof__ctx">Davis School District (Utah). 72 fully online classes. 6,000 students. The year before Delphinium against the year with it. Same courses, same teachers, same content.</p>
+        <a class="dl-proof__link" href="/highered">Higher Ed Online results</a>
+      </div>
+    </section>
+
+    <section class="dl-section dl-students" aria-labelledby="students-heading">
+      <div class="dl-wrap">
+        <h2 class="visually-hidden" id="students-heading">Student motivation</h2>
+        <blockquote class="dl-quote">
+          I was sitting on the couch watching Netflix and the thought popped into my head: I could be doing homework right now.
+          <cite>Delphinium student survey response</cite>
+        </blockquote>
+        <div class="dl-fun">
+          <div>
+            <p class="dl-fun__num">72%</p>
+            <p class="dl-fun__word">Fun.</p>
+          </div>
+          <p>Of students say a Delphinium course is more or much more motivating than a traditional Canvas course. The word they use most: Fun. Tiffany Dance, Instructional Coach at Davis Connect, calls it a game changer. Her students redo quizzes for avatar points and googly eyes.</p>
+        </div>
+        <figure class="dl-video-facade" id="makeover-video">
+          <img src="https://44351218.fs1.hubspotusercontent-na1.net/hubfs/44351218/Gamification%20with%20Title%20Card.mp4/medium.jpg?t=1751624379495" width="600" height="338" alt="Makeover video title card" loading="lazy">
+          <button type="button" aria-label="Play Makeover video"><span></span></button>
+        </figure>
+      </div>
+    </section>
+
+    <section class="dl-section dl-how" aria-labelledby="how-heading">
+      <div class="dl-wrap">
+        <h2 id="how-heading">Early warning for teachers. About forty seconds to act on it.</h2>
+        <p>Control Tower shows every student as red, yellow, or green from your Canvas data. Message Center sends one message to every struggling student, and to their families if you choose, in about forty seconds. Templates, multiple channels, no spreadsheet.</p>
+        <p>Natalie Niederhauser teaches high school math to more than 100 students at Davis Connect. She went from about 12 emails a day to about 6 messages a week. &ldquo;Saved most of my Saturday nights.&rdquo;</p>
+        <div class="dl-how__grid">
+          <figure class="dl-product-shot">
+            <img src="https://delphi-me.com/hubfs/datathumb.png" width="838" height="299" alt="Roster-style data view from delphi-me.com marketing still" loading="lazy" style="object-position: 55% top;">
+            <figcaption>Product data UI from delphi-me.com (marketing still, not a full Control Tower capture).</figcaption>
+          </figure>
+          <figure class="dl-product-shot">
+            <img src="https://delphi-me.com/hubfs/commthumb.png" width="838" height="299" alt="Communication feature still from delphi-me.com" loading="lazy" style="object-position: 60% top;">
+            <figcaption>Communication feature still from delphi-me.com. Stands in for Message Center until a cleared MC still is captured.</figcaption>
+          </figure>
+        </div>
+        <div class="dl-family">
+          <p><strong>Families stay in the loop.</strong> When a parent finds out late, the grade has already taken a hit. Delphinium gives observers the same color-coded picture teachers see. Community Builder helps schools celebrate wins with parents, with translate support for many languages.</p>
+        </div>
+        <p class="dl-risk">About three minutes to turn on. No migration. Teachers stay in Canvas.</p>
+        <p class="dl-trust-inline">Canvas LTI 1.3 · FERPA · Chromebook-friendly</p>
+        <p style="margin-top:1rem;font-size:0.9375rem;">
+          <a href="https://www.youtube.com/watch?v=PIe6VxqLwkw" target="_blank" rel="noopener noreferrer">Control Tower on YouTube</a>
+          ·
+          <a href="https://www.youtube.com/watch?v=Q80sFMP4wFQ" target="_blank" rel="noopener noreferrer">Community Builder on YouTube</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="dl-section dl-close" aria-labelledby="close-heading">
+      <div class="dl-wrap">
+        <h2 id="close-heading">See it on a Canvas course, live with Jared.</h2>
+        <p>Meet the person behind Delphinium and see how it could work in your Canvas courses.</p>
+        <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014">Schedule a demo</a>
+        <p class="dl-trust-inline" style="margin-top:1rem;">No migration to plan. Nothing to install before the call. You stay in Canvas.</p>
+      </div>
+    </section>
+
+    <section class="dl-logos" aria-label="Programs on Canvas">
+      <div class="dl-wrap">
+        <p>Programs on Canvas</p>
+        <div class="dl-logos__row">
+          <img src="https://delphi-me.com/hs-fs/hubfs/bakerwebacademylogo.webp" width="140" height="88" alt="" loading="lazy">
+          <img src="https://delphi-me.com/hs-fs/hubfs/cropped-utva_pbk12_logo_rgb-1.webp" width="140" height="88" alt="" loading="lazy">
+          <img src="https://delphi-me.com/hs-fs/hubfs/web_kelseypeak_logo.png" width="450" height="150" alt="" loading="lazy">
+          <img src="https://delphi-me.com/hs-fs/hubfs/web_rockypeak_logo.png" width="450" height="150" alt="" loading="lazy">
+          <img src="https://delphi-me.com/hs-fs/hubfs/richfieldlogo.png" width="340" height="280" alt="" loading="lazy">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="dl-footer">
+    <div class="dl-wrap dl-footer__inner">
+      <img src="https://delphi-me.com/hubfs/Delphinium%20Logo.png" width="663" height="471" alt="Delphinium">
+      <div>
+        <a href="/highered">Higher Ed Online</a>
+        ·
+        <a href="https://www.youtube.com/@DelphiniumEngagement" target="_blank" rel="noopener noreferrer">YouTube</a>
+        ·
+        <a href="https://delphi-me.com/contact-us">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+
+  <script>
+    (function () {
+      var BOOK = "https://jared-delphi-me.zohobookings.com/4937208000000036014";
+      document.querySelectorAll('a.dl-btn').forEach(function (a) {
+        if (!a.getAttribute("href") || a.getAttribute("href") === "#") a.href = BOOK;
+      });
+
+      var stage = document.getElementById("makeover-stage");
+      var range = document.getElementById("makeover-range");
+      var btnBefore = document.getElementById("btn-before");
+      var btnAfter = document.getElementById("btn-after");
+      var autoDone = false;
+
+      function setReveal(pct) {
+        var v = Math.max(0, Math.min(100, pct));
+        stage.style.setProperty("--reveal", v + "%");
+        range.value = String(v);
+        btnBefore.setAttribute("aria-pressed", v < 50 ? "true" : "false");
+        btnAfter.setAttribute("aria-pressed", v >= 50 ? "true" : "false");
+      }
+
+      range.addEventListener("input", function () {
+        setReveal(Number(range.value));
+      });
+
+      btnBefore.addEventListener("click", function () { setReveal(8); });
+      btnAfter.addEventListener("click", function () { setReveal(92); });
+
+      var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!reduced && stage && "IntersectionObserver" in window) {
+        var obs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting && !autoDone) {
+              autoDone = true;
+              stage.classList.add("is-auto");
+              setReveal(12);
+              requestAnimationFrame(function () {
+                setReveal(88);
+              });
+              window.setTimeout(function () {
+                stage.classList.remove("is-auto");
+              }, 2000);
+              obs.disconnect();
+            }
+          });
+        }, { threshold: 0.35 });
+        obs.observe(stage);
+      }
+
+      var facade = document.getElementById("makeover-video");
+      if (facade) {
+        var btn = facade.querySelector("button");
+        btn.addEventListener("click", function () {
+          var iframe = document.createElement("iframe");
+          iframe.src = "https://www.youtube.com/embed/HuYuD8UQoiM?autoplay=1&rel=0";
+          iframe.title = "Delphinium Makeover video";
+          iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+          iframe.allowFullscreen = true;
+          facade.innerHTML = "";
+          facade.appendChild(iframe);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
