@@ -32,7 +32,7 @@ Leave the Zoho Sites badge alone. Design above it. Do not add a sticky bottom ba
 
 At rest the course band is half gray Canvas list, half student course, split by five logo-colored stripes. **Turn it on** is a navy outline button, not a booking button. It adds `is-on`: on a wide screen the gray half collapses and the blade moves to the left edge (about 700ms). Press again (**Show the Canvas list**) to return to the split. With JavaScript off, the split still shows. `prefers-reduced-motion: reduce` skips the slide and still toggles.
 
-Under 800px the band stacks: gray list, horizontal fan rule, the same button, color course. Turning it on dims the gray list to 45% instead of collapsing it. No range input. Module names stay at least 16px. The band does not capture scroll.
+Under 800px the band stacks: gray list, horizontal fan rule, the same button, color course. Turning it on dims the gray list to 45% instead of collapsing it. No range input. Module names stay at least 16px. The small meta line under each name hides on that stack so all four names stay in the first view. The caption still says same modules and same assignments. The band does not capture scroll.
 
 The student side shows the same four module names, a "Your progress" stripe, one **Avatar points** chip, and **Start here**. It does not show a roster.
 
