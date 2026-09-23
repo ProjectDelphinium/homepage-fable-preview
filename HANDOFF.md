@@ -5,6 +5,7 @@
 **Share URL:** https://japomani.github.io/delphinium-homepage-fable-preview/  
 **Repo:** https://github.com/ProjectDelphinium/homepage-fable-preview  
 **Mirror:** https://github.com/japomani/delphinium-homepage-fable-preview  
+Biz ops · Cursor Environment delphinium-bizops · never Product/serverless.
 
 ---
 
