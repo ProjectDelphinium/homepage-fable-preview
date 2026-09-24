@@ -65,17 +65,28 @@
       z-index: 9999;
     }
     .dl-nav {
+      position: relative;
       display: flex;
       align-items: center;
       gap: 1.25rem;
       min-height: 3.75rem;
       padding: 0.5rem clamp(1rem, 4vw, 2.25rem);
       background: color-mix(in srgb, var(--paper) 94%, transparent);
-      border-bottom: 1px solid var(--line);
+      border-bottom: 0;
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
     }
-    .dl-nav__logo { display: flex; align-items: center; margin-right: auto; }
+    .dl-nav::after {
+      content: "";
+      position: absolute;
+      left: calc(clamp(1rem, 4vw, 2.25rem) + 128px + 1.25rem);
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background: var(--line);
+      pointer-events: none;
+    }
+    .dl-nav__logo { display: flex; align-items: center; margin-right: auto; position: relative; z-index: 1; }
     .dl-nav__logo img { width: 128px; height: auto; }
     .dl-nav__links { display: none; gap: 1.5rem; }
     .dl-nav__links a, .dl-nav__he {
