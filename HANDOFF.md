@@ -1,6 +1,7 @@
 # Cursor handoff — Delphinium public homepage redesign
 
 **Owner desk:** Web Design (Grok Bot) · **User:** Jared Chapman · **Timezone:** America/Denver  
+**Biz ops:** Cursor Environment `delphinium-bizops` · never Product/serverless.  
 **Status:** Continue development of the Fable 5.1 draft; HubSpot live site untouched  
 **Share URL:** https://japomani.github.io/delphinium-homepage-fable-preview/  
 **Repo:** https://github.com/ProjectDelphinium/homepage-fable-preview  
@@ -174,6 +175,12 @@ See `docs/CURSOR_AGENT_PROMPT.md`.
 
 ## Latest (2026-09-05 evening)
 Prospectus-story remake is on `main` (commit fc903b2). Sequence: bold+Davis 31% → silence problem → Makeover → 72%/Fun → research why → Tiffany/Natalie/Ryan → Core/CB/EB → supporting beats → CTA up to 31%. Framing still unlocked.
+
+## Sites v5 (2026-09-24)
+Reset to Sites v2 and rebuilt on the prospectus arc: `zoho-sites/homepage-sites-v5.html` + `zoho-sites/SNIPPETS-V5.md` (brief: `design-loop/2026-09-24/BRIEF-V5.md`). Real Makeover and product UI from the prospectus / hires packs, live delphi-me Mux videos, all Schedule CTAs to the Zoho Bookings URL via Sites modal + portal-embed.
+
+- **zoho-ready pack on `main` (2026-09-24):** live-intended Sites HTML from Web Design. Case section **restored** (plain-weight "Education moved online," + "teachers can read the room"); cover "Cut failures by up to" / 31%; `videoLabel(el)` for modal titles; Makeover stages `align-items: start` + Canvas-only before crop (`module-only-20260924b`). Supersedes the light-revise kicker-only Case cut.
+- **HE twin site (later):** K-12 staging is the current path. A Higher Ed twin with an audience switch (like delphi-me.com's top choice), its own videos and stats, and no parents is a later IA item. Not built yet.
 
 ## Marketing 2026-09-06
 Fold #social-media-marketing feedback: cut repetition; Makeover centerpiece; one question/section + Learn more YT; one-page takeaway; CTA subline about meeting Jared. See context/BRIEF.md and position-and-value §7.

@@ -8,6 +8,8 @@
 2. Use branch `main` for the public draft; open PRs for design work.
 3. Cloud Agents should use **this same repo** so they see builds, ops docs, and context together.
 
+**Biz ops:** Cursor Environment `delphinium-bizops` · never Product/serverless.
+
 **Mirror:** `japomani/delphinium-homepage-fable-preview` (GitHub Pages preview). Prefer pushing / PRing against `ProjectDelphinium/homepage-fable-preview`.
 
 ## What is in the tree

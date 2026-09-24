@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Delphinium · Canvas delivers content. Delphinium delivers engagement.</title>
+  <meta name="description" content="The Canvas engagement layer for K-12 online schools. Turn the Canvas courses you already run into engaging student experiences and an early-warning system for teachers. Up to 31% fewer course failures.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://raw.githubusercontent.com/ProjectDelphinium/homepage-fable-preview/12fa8a763a99dd6ba4d5cbf57b4f01400e57b195/zoho-sites/assets/from-hied-hires-2026-09-24/delphinium-wordmark.svg">
+  <style>
+    :root {
+      --paper: #fffdf6;
+      --paper-2: #f8f4e8;
+      --white: #ffffff;
+      --lav: #f5f4fa;
+      --mist: #eef4f4;
+      --sky: #edf6fb;
+      --butter: #fff6c7;
+      --ink: #23232a;
+      --ink-soft: #55555f;
+      --line: rgba(43, 47, 126, 0.12);
+      --navy: #2b2f7e;
+      --navy-deep: #1d2158;
+      --blue: #2461b8;
+      --accent: #c7007a;
+      --accent-hover: #a50064;
+      --mark: #f8f000;
+      --cyan: #00aeef;
+      --green: #00a651;
+      --green-ink: #0a7f40;
+      --max: 1160px;
+      --radius: 14px;
+      --shadow: 0 18px 50px rgba(43, 47, 126, 0.12);
+      --shadow-sm: 0 4px 16px rgba(43, 47, 126, 0.08);
+      --font-display: "Outfit", system-ui, sans-serif;
+      --font-text: "Source Sans 3", system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 6.5rem; }
+    body {
+      margin: 0;
+      font-family: var(--font-text);
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--paper);
+      text-wrap: pretty;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--navy); text-underline-offset: 0.18em; }
+    a:hover { color: var(--accent); }
+    h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; }
+    .visually-hidden {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+
+    .dl-top {
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+    }
+.dl-nav {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      min-height: 3.75rem;
+      padding: 0.5rem clamp(1rem, 4vw, 2.25rem);
+      background: color-mix(in srgb, var(--paper) 94%, transparent);
+      border-bottom: 0;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    /* Hairline starts after the logo so it never cuts through the wordmark */
+    .dl-nav::after {
+      content: "";
+      position: absolute;
+      left: calc(clamp(1rem, 4vw, 2.25rem) + 128px + 1.25rem);
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background: var(--line);
+      pointer-events: none;
+    }
+    .dl-nav__logo { display: flex; align-items: center; margin-right: auto; position: relative; z-index: 1; }
+    .dl-nav__logo img { width: 128px; height: auto; }
+    .dl-nav__links { display: none; gap: 1.5rem; }
+    .dl-nav__links a, .dl-nav__he {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--ink-soft);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .dl-nav__links a:hover, .dl-nav__he:hover { color: var(--accent); }
+    .dl-nav__he { display: none; }
+    @media (min-width: 980px) { .dl-nav__links { display: flex; } }
+    @media (min-width: 720px) { .dl-nav__he { display: inline; } }
+
+    .dl-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.8rem 1.4rem;
+      border-radius: 999px;
+      border: 0;
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.1;
+      text-decoration: none;
+      cursor: pointer;
+      white-space: nowrap;
+      /* Shadow from delphi-me.com .atmc-btn-dark / .atmc-btn-white */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      transition: background 150ms ease, transform 150ms ease, box-shadow 150ms ease;
+    }
+    .dl-btn:hover {
+      background: var(--accent-hover);
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    .dl-btn:focus-visible, .dl-play:focus-visible, .dl-seg button:focus-visible, .dl-link:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+    .dl-nav .dl-btn { padding: 0.6rem 1.1rem; font-size: 0.9375rem; box-shadow: none; }
+
+    .dl-wrap { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
+    .dl-section { padding: clamp(4rem, 9vw, 7rem) 0; }
+
+    .dl-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin: 0 0 1rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+    .dl-eyebrow::before {
+      content: "";
+      width: 2.25rem;
+      height: 3px;
+      border-radius: 2px;
+      background: var(--accent);
+      flex: none;
+    }
+    .dl-h2 {
+      margin: 0;
+      font-size: clamp(1.9rem, 4.2vw, 3rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      max-width: 22ch;
+    }
+    .dl-h2 em { font-style: normal; color: var(--accent); }
+    .dl-h2__plain { font-weight: 400; }
+    .dl-lede {
+      margin: 1.1rem 0 0;
+      max-width: 60ch;
+      color: var(--ink-soft);
+      font-size: 1.1875rem;
+    }
+    .dl-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      color: var(--navy);
+      background: none;
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .dl-link:hover { color: var(--accent); }
+    .dl-link__icon {
+      display: inline-grid;
+      place-items: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      border: 2px solid currentColor;
+      flex: none;
+    }
+    .dl-link__icon::after {
+      content: "";
+      border-style: solid;
+      border-width: 5px 0 5px 8px;
+      border-color: transparent transparent transparent currentColor;
+      margin-left: 2px;
+    }
+    .dl-link small { font-weight: 400; color: var(--ink-soft); font-size: 0.875rem; }
+
+    /* Hero */
+    .dl-hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(1.25rem, 3vw, 2.25rem) 0 clamp(3rem, 6vw, 4.5rem);
+    }
+    .dl-hero__petals {
+      position: absolute;
+      top: -6rem;
+      right: -8rem;
+      width: min(46vw, 560px);
+      aspect-ratio: 1;
+      opacity: 0.16;
+      pointer-events: none;
+      background:
+        linear-gradient(118deg, transparent 30%, var(--mark) 30%, var(--mark) 40%, transparent 40%),
+        linear-gradient(118deg, transparent 42%, var(--cyan) 42%, var(--cyan) 52%, transparent 52%),
+        linear-gradient(118deg, transparent 54%, var(--green) 54%, var(--green) 62%, transparent 62%),
+        linear-gradient(118deg, transparent 64%, var(--accent) 64%, var(--accent) 72%, transparent 72%);
+      border-radius: 50%;
+      filter: blur(1px);
+    }
+    .dl-hero__inner { position: relative; padding-top: 0.35rem; }
+    .dl-hero__h1 {
+      margin: 0;
+      font-weight: 300;
+      font-size: clamp(2.4rem, 6.4vw, 4.6rem);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      color: var(--ink-soft);
+      max-width: 18ch;
+    }
+    .dl-hero__h1 strong {
+      display: block;
+      margin-top: 1.2rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    /* Magazine B: yellow highlighter under oversized magenta engagement */
+    .dl-hero__engage {
+      position: relative;
+      display: block;
+      width: max-content;
+      max-width: 100%;
+      margin-top: 0.2rem;
+      padding: 0.08em 0.06em 0.12em;
+      font-size: 1.14em;
+      line-height: 0.95;
+      letter-spacing: -0.035em;
+      isolation: isolate;
+    }
+    .dl-hero__engage::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: -0.08em;
+      right: -0.12em;
+      top: 0.42em;
+      bottom: 0.08em;
+      background-color: var(--mark);
+      /* Irregular brush silhouette via SVG mask */
+      -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60' preserveAspectRatio='none'%3E%3Cpath fill='black' d='M8 28c18-14 42-18 70-16 38 3 62 14 98 12 28-2 48-12 78-10 36 2 58 14 92 10 18-2 32-8 42-4 4 2 4 8-2 14-12 12-38 16-68 18-42 3-72-6-108-4-30 2-52 12-84 10-34-2-58-12-88-8-16 2-28 8-34 2-3-3-2-14 4-24z'/%3E%3C/svg%3E");
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60' preserveAspectRatio='none'%3E%3Cpath fill='black' d='M8 28c18-14 42-18 70-16 38 3 62 14 98 12 28-2 48-12 78-10 36 2 58 14 92 10 18-2 32-8 42-4 4 2 4 8-2 14-12 12-38 16-68 18-42 3-72-6-108-4-30 2-52 12-84 10-34-2-58-12-88-8-16 2-28 8-34 2-3-3-2-14 4-24z'/%3E%3C/svg%3E");
+      -webkit-mask-size: 100% 100%;
+      mask-size: 100% 100%;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      transform: rotate(-0.6deg);
+    }
+    .dl-hero__h1 em {
+      font-style: normal;
+      color: var(--accent);
+      font-weight: 800;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .dl-hero__engage::before { transform: none; }
+    }
+    .dl-hero__lead {
+      margin: 1.5rem 0 0;
+      max-width: 52ch;
+      font-size: clamp(1.15rem, 1.8vw, 1.3rem);
+      color: var(--ink-soft);
+    }
+    .dl-hero__lead b { color: var(--ink); font-weight: 600; }
+    .dl-hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem 1.75rem;
+      margin-top: 2rem;
+    }
+    .dl-cover {
+      margin-top: clamp(2.5rem, 5vw, 3.5rem);
+      display: grid;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+      max-width: 980px;
+    }
+    @media (min-width: 760px) { .dl-cover { grid-template-columns: minmax(240px, 0.8fr) 1.2fr; } }
+    .dl-cover__stat {
+      padding: 1.6rem 1.75rem;
+      background: var(--butter);
+      border-bottom: 4px solid var(--navy);
+      text-align: center;
+      display: grid;
+      align-content: center;
+    }
+    @media (min-width: 760px) { .dl-cover__stat { border-bottom: 0; border-right: 4px solid var(--navy); } }
+    .dl-cover__upto {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--navy);
+      line-height: 1.25;
+      max-width: 14rem;
+      margin-inline: auto;
+    }
+    .dl-cover__num {
+      display: block;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(3.4rem, 8vw, 4.6rem);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      color: var(--navy);
+      font-variant-numeric: tabular-nums;
+    }
+    .dl-cover__label {
+      display: block;
+      margin-top: 0.35rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    .dl-cover__points {
+      margin: 0;
+      padding: 1.4rem 1.75rem;
+      list-style: none;
+      display: grid;
+      gap: 0.85rem;
+      align-content: center;
+    }
+    .dl-cover__points li {
+      display: grid;
+      grid-template-columns: 1.6rem 1fr;
+      gap: 0.6rem;
+      font-size: 1.02rem;
+      line-height: 1.4;
+      color: var(--ink-soft);
+    }
+    .dl-cover__points b { color: var(--ink); font-weight: 600; }
+    .dl-tick {
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 50%;
+      background: color-mix(in srgb, var(--green) 14%, transparent);
+      display: grid;
+      place-items: center;
+    }
+    .dl-tick::after {
+      content: "";
+      width: 0.45rem;
+      height: 0.8rem;
+      border: solid var(--green-ink);
+      border-width: 0 2.5px 2.5px 0;
+      transform: rotate(45deg) translate(-1px, -1px);
+    }
+
+    /* Case for engagement */
+    .dl-case { background: var(--white); border-top: 1px solid var(--line); }
+    .dl-case__grid { display: grid; gap: 2.5rem; align-items: start; }
+    @media (min-width: 900px) { .dl-case__grid { grid-template-columns: 1.1fr 0.9fr; gap: 4rem; } }
+    .dl-pull {
+      margin: 0;
+      padding: 0.25rem 0 0.25rem 1.4rem;
+      border-left: 4px solid var(--accent);
+    }
+    .dl-pull p {
+      margin: 0;
+      font-family: var(--font-text);
+      font-style: italic;
+      font-size: clamp(1.15rem, 2vw, 1.35rem);
+      line-height: 1.5;
+      color: var(--ink);
+    }
+    .dl-pull cite {
+      display: block;
+      margin-top: 0.85rem;
+      font-style: normal;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .dl-pull cite span { display: block; font-weight: 400; color: var(--ink-soft); }
+
+    /* Makeover */
+    .dl-mk { background: var(--lav); }
+    .dl-mk__title {
+      margin: 0 auto;
+      text-align: center;
+      font-weight: 400;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: var(--ink-soft);
+    }
+    .dl-mk__title strong {
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: underline;
+      text-decoration-thickness: 0.09em;
+      text-underline-offset: 0.12em;
+    }
+    .dl-mk__sub {
+      margin: 0.85rem auto 0;
+      max-width: 54ch;
+      text-align: center;
+      color: var(--ink-soft);
+    }
+    .dl-seg {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.75rem;
+    }
+    .dl-seg__inner {
+      display: inline-flex;
+      padding: 0.3rem;
+      border-radius: 999px;
+      background: var(--white);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--line);
+    }
+    .dl-seg button {
+      border: 0;
+      background: transparent;
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      font-family: var(--font-display);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--ink-soft);
+      cursor: pointer;
+      transition: background 200ms ease, color 200ms ease;
+    }
+    .dl-seg button[aria-pressed="true"] { background: var(--navy); color: #fff; }
+    .dl-mk__stage {
+      margin-top: 2rem;
+      display: grid;
+      gap: 2rem;
+      align-items: start;
+    }
+    .dl-mk__side { margin: 0; display: grid; justify-items: center; gap: 1rem; }
+    .dl-mk__side img { width: 100%; border-radius: 18px; }
+    .dl-pill {
+      display: inline-block;
+      padding: 0.4rem 1.1rem;
+      border-radius: 999px;
+      font-family: var(--font-display);
+      font-size: clamp(1rem, 1.8vw, 1.25rem);
+      font-weight: 400;
+      line-height: 1.2;
+      box-shadow: var(--shadow-sm);
+    }
+    .dl-pill--canvas { background: #4a4a4f; color: #fff; }
+    .dl-pill--dl { background: var(--butter); color: var(--ink); }
+    .dl-pill--dl b { color: var(--accent); font-weight: 600; }
+    .dl-mk__side--before img { max-width: 440px; }
+    @media (min-width: 860px) {
+      .dl-seg { display: none; }
+      .dl-mk__stage { grid-template-columns: 0.68fr 1fr; gap: clamp(2rem, 5vw, 4.5rem); }
+      .js .dl-mk__side { transition: opacity 700ms ease, transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1); }
+      .js .dl-mk__stage:not(.is-in) .dl-mk__side--after { opacity: 0; transform: translateX(28px); }
+    }
+    @media (max-width: 859px) {
+      .dl-mk__stage { grid-template-areas: "stack"; }
+      .dl-mk__side { grid-area: stack; transition: opacity 450ms ease; }
+      .dl-mk__stage[data-view="before"] .dl-mk__side--after,
+      .dl-mk__stage[data-view="after"] .dl-mk__side--before { opacity: 0; pointer-events: none; }
+    }
+    .dl-mk__foot {
+      margin-top: clamp(2.5rem, 5vw, 3.5rem);
+      display: grid;
+      gap: 1.5rem 3rem;
+      align-items: start;
+    }
+    @media (min-width: 860px) { .dl-mk__foot { grid-template-columns: 1fr 1fr; } }
+    .dl-mk__foot h3 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(1.4rem, 2.6vw, 1.85rem);
+      line-height: 1.15;
+      color: var(--navy);
+    }
+    .dl-mk__foot p { margin: 0 0 1rem; color: var(--ink-soft); }
+    .dl-mk__cap { font-size: 0.85rem; color: var(--ink-soft); }
+
+    /* Proof */
+    .dl-proof { background: var(--paper); }
+    .dl-proof__cards {
+      margin-top: 2.5rem;
+      display: grid;
+      gap: 1.25rem;
+    }
+    @media (min-width: 900px) { .dl-proof__cards { grid-template-columns: 1.25fr 1fr 1fr; } }
+    .dl-card {
+      padding: 1.6rem 1.6rem 1.5rem;
+      border-radius: var(--radius);
+      background: var(--white);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+    }
+    .dl-card__kicker {
+      margin: 0 0 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .dl-card__num {
+      margin: 0;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(3.4rem, 7vw, 4.75rem);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      font-variant-numeric: tabular-nums;
+    }
+    .dl-card__num--green { color: var(--green); }
+    .dl-card__num--navy { color: var(--navy); }
+    .dl-card__num--accent { color: var(--accent); }
+    .dl-card__txt { margin: 0.75rem 0 0; font-size: 1.05rem; line-height: 1.45; color: var(--ink); }
+    .dl-card__txt b { font-weight: 700; }
+    .dl-card__ctx {
+      margin: 1rem 0 0;
+      padding-top: 0.85rem;
+      border-top: 1px solid var(--line);
+      font-size: 0.875rem;
+      line-height: 1.5;
+      color: var(--ink-soft);
+    }
+    .dl-quotes {
+      margin-top: 2.75rem;
+      display: grid;
+      gap: 2rem 3rem;
+    }
+    @media (min-width: 900px) { .dl-quotes { grid-template-columns: 1.15fr 0.85fr; } }
+    .dl-quote-big {
+      margin: 0;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      line-height: 1.25;
+      color: var(--navy);
+    }
+    .dl-quote-big cite {
+      display: block;
+      margin-top: 0.9rem;
+      font-family: var(--font-text);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+    }
+
+    /* Insight-poor bridge */
+    .dl-gap { background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .dl-gap__rows { margin: 2rem 0 0; padding: 0; list-style: none; }
+    .dl-gap__rows li {
+      display: grid;
+      gap: 0.35rem 2rem;
+      padding: 1.1rem 0;
+      border-top: 1px solid var(--line);
+    }
+    .dl-gap__rows li:last-child { border-bottom: 1px solid var(--line); }
+    @media (min-width: 760px) { .dl-gap__rows li { grid-template-columns: 15rem 1fr; } }
+    .dl-gap__who {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--navy);
+    }
+    .dl-gap__who::before { content: ""; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--navy); }
+    .dl-gap__rows p { margin: 0; color: var(--ink-soft); }
+    .dl-gap__rows p b { color: var(--navy); }
+    .dl-gap__close { margin: 1.75rem 0 0; font-size: 1.2rem; font-weight: 600; }
+    .dl-gap__close span { color: var(--accent); }
+
+    /* Products */
+    .dl-products { background: var(--paper); }
+    .dl-prod {
+      display: grid;
+      gap: 2rem;
+      align-items: center;
+      padding-top: clamp(3rem, 7vw, 5.5rem);
+    }
+    @media (min-width: 960px) {
+      .dl-prod { grid-template-columns: 0.9fr 1.1fr; gap: clamp(2.5rem, 5vw, 4.5rem); }
+      .dl-prod--flip .dl-prod__media { order: -1; }
+      .dl-prod--wide { grid-template-columns: 1fr; }
+    }
+    .dl-prod__tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0 0 0.75rem;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .dl-prod__tag--core { background: color-mix(in srgb, var(--green) 12%, transparent); color: var(--green-ink); }
+    .dl-prod__tag--eb { background: color-mix(in srgb, var(--navy) 10%, transparent); color: var(--navy); }
+    .dl-prod__tag--cb { background: color-mix(in srgb, var(--blue) 12%, transparent); color: var(--blue); }
+    .dl-prod h3 {
+      margin: 0;
+      font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    .dl-prod__sub { margin: 0.75rem 0 0; font-size: 1.15rem; color: var(--ink-soft); max-width: 48ch; }
+    .dl-list { margin: 1.25rem 0 0; padding: 0; list-style: none; display: grid; gap: 0.6rem; }
+    .dl-list li {
+      position: relative;
+      padding-left: 1.4rem;
+      font-size: 1.02rem;
+      line-height: 1.5;
+      color: var(--ink);
+    }
+    .dl-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.6em;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .dl-prod .dl-pull { margin-top: 1.6rem; }
+    .dl-prod .dl-pull p { font-size: 1.08rem; }
+    .dl-prod__more { margin-top: 1.4rem; }
+    .dl-tray {
+      position: relative;
+      margin: 0;
+      padding: clamp(1rem, 3vw, 1.75rem);
+      border-radius: 20px;
+      border: 1px solid var(--line);
+    }
+    .dl-tray--mist { background: var(--mist); }
+    .dl-tray--sky { background: var(--sky); }
+    .dl-tray--white { background: #fcfdff; }
+    .dl-tray__main { width: 100%; border-radius: 10px; }
+    .dl-tray__float {
+      position: absolute;
+      width: 46%;
+      right: -1rem;
+      bottom: -2.25rem;
+      border-radius: 12px;
+      box-shadow: 0 22px 50px rgba(29, 33, 88, 0.22);
+    }
+    .dl-tray--has-float { margin-bottom: 2.5rem; }
+    @media (max-width: 599px) {
+      .dl-tray__float { position: static; width: 78%; margin: -1.5rem 0 0 auto; }
+      .dl-tray--has-float { margin-bottom: 0; }
+    }
+    .dl-tray figcaption {
+      margin-top: 0.85rem;
+      font-size: 0.8rem;
+      color: var(--ink-soft);
+    }
+    .dl-tray--has-float figcaption { max-width: 50%; }
+    @media (max-width: 599px) { .dl-tray--has-float figcaption { max-width: none; } }
+    .dl-widgets__sm { display: grid; gap: 0.75rem; }
+    .dl-widgets__lg { display: none; }
+    @media (min-width: 760px) {
+      .dl-widgets__sm { display: none; }
+      .dl-widgets__lg { display: block; }
+    }
+    .dl-eb-copy { display: grid; gap: 1.5rem 3.5rem; }
+    @media (min-width: 960px) { .dl-eb-copy { grid-template-columns: 0.9fr 1.1fr; align-items: start; } }
+    @media (min-width: 960px) { .dl-eb-copy--foot { align-items: center; } }
+    .dl-note {
+      margin-top: 1.5rem;
+      padding: 1.1rem 1.25rem;
+      border-radius: 12px;
+      background: var(--butter);
+      font-size: 1rem;
+      line-height: 1.5;
+      color: var(--ink);
+    }
+    .dl-note b { color: var(--navy); }
+    .dl-stat-inline {
+      margin-top: 1.6rem;
+      display: grid;
+      grid-template-columns: auto auto 1fr;
+      align-items: center;
+      gap: 0.75rem 1rem;
+      padding: 1.1rem 1.25rem;
+      border-radius: 12px;
+      background: var(--white);
+      border: 1px solid var(--line);
+    }
+    .dl-stat-inline__n { font-family: var(--font-display); font-weight: 700; font-size: 1.6rem; line-height: 1; color: var(--navy); white-space: nowrap; }
+    .dl-stat-inline__n small { display: block; margin-top: 0.2rem; font-family: var(--font-text); font-size: 0.75rem; font-weight: 600; color: var(--ink-soft); letter-spacing: 0.04em; }
+    .dl-stat-inline__arrow { color: var(--accent); font-weight: 700; font-size: 1.3rem; }
+    .dl-stat-inline p { grid-column: 1 / -1; margin: 0; font-size: 0.98rem; color: var(--ink-soft); }
+    .dl-stat-inline p b { color: var(--ink); }
+
+    /* How it works */
+    .dl-how { background: var(--white); border-top: 1px solid var(--line); }
+    .dl-how__cards { margin-top: 2.5rem; display: grid; gap: 1.25rem; }
+    @media (min-width: 860px) { .dl-how__cards { grid-template-columns: repeat(3, 1fr); } }
+    .dl-how__card { padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--line); background: var(--paper); }
+    .dl-how__icon {
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: color-mix(in srgb, var(--navy) 9%, transparent);
+      color: var(--navy);
+      margin-bottom: 1rem;
+    }
+    .dl-how__card h3 { margin: 0 0 0.4rem; font-size: 1.25rem; color: var(--ink); }
+    .dl-how__card p { margin: 0; font-size: 1rem; color: var(--ink-soft); }
+    .dl-trust {
+      margin: 2rem 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .dl-trust span {
+      padding: 0.4rem 0.85rem;
+      border-radius: 999px;
+      background: var(--lav);
+      border: 1px solid var(--line);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    /* Videos */
+    .dl-videos { background: var(--paper-2); }
+    .dl-videos__grid { margin-top: 2.5rem; display: grid; gap: 1.5rem; }
+    @media (min-width: 900px) {
+      .dl-videos__grid { grid-template-columns: 1.35fr 1fr; grid-template-rows: auto auto; }
+      .dl-vid--feature { grid-row: span 2; }
+    }
+    .dl-vid { margin: 0; }
+    .dl-play {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #111;
+      cursor: pointer;
+      aspect-ratio: 16 / 9;
+      box-shadow: var(--shadow);
+      text-decoration: none;
+    }
+    .dl-play img { width: 100%; height: 100%; object-fit: cover; transition: transform 500ms ease; }
+    .dl-play:hover img { transform: scale(1.03); }
+    .dl-play__btn {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 76px;
+      height: 76px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      display: grid;
+      place-items: center;
+      transition: transform 200ms ease;
+    }
+    .dl-play:hover .dl-play__btn { transform: translate(-50%, -50%) scale(1.07); }
+    .dl-play__btn::after {
+      content: "";
+      border-style: solid;
+      border-width: 13px 0 13px 21px;
+      border-color: transparent transparent transparent #fff;
+      margin-left: 5px;
+    }
+    .dl-vid figcaption { margin-top: 0.85rem; }
+    .dl-vid figcaption b { display: block; font-family: var(--font-display); font-size: 1.15rem; color: var(--ink); }
+    .dl-vid figcaption span { font-size: 0.95rem; color: var(--ink-soft); }
+    .dl-vid--feature figcaption b { font-size: 1.4rem; }
+
+    /* Close */
+    .dl-close {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 60%, #23276a 100%);
+      color: #fff;
+      text-align: center;
+    }
+    .dl-close::before {
+      content: "";
+      position: absolute;
+      inset: -30% -20% auto;
+      height: 80%;
+      opacity: 0.22;
+      pointer-events: none;
+      background:
+        linear-gradient(125deg, transparent 40%, var(--mark) 40%, var(--mark) 45%, transparent 45%),
+        linear-gradient(125deg, transparent 47%, var(--cyan) 47%, var(--cyan) 52%, transparent 52%),
+        linear-gradient(125deg, transparent 54%, var(--green) 54%, var(--green) 59%, transparent 59%),
+        linear-gradient(125deg, transparent 61%, var(--accent) 61%, var(--accent) 66%, transparent 66%);
+    }
+    .dl-close .dl-wrap { position: relative; }
+    .dl-close h2 {
+      margin: 0 auto;
+      max-width: 20ch;
+      font-size: clamp(2rem, 4.6vw, 3.2rem);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+    .dl-close p { margin: 1.1rem auto 0; max-width: 46ch; color: rgba(255, 255, 255, 0.84); }
+    .dl-close .dl-btn { margin-top: 2rem; padding: 1rem 1.9rem; font-size: 1.1rem; }
+    .dl-close__small { font-size: 0.9rem; color: rgba(255, 255, 255, 0.7) !important; }
+
+    .dl-he { background: var(--paper); padding: clamp(2.5rem, 5vw, 3.5rem) 0; border-bottom: 1px solid var(--line); }
+    .dl-he__inner { display: grid; gap: 1rem 2.5rem; align-items: center; }
+    @media (min-width: 860px) { .dl-he__inner { grid-template-columns: 1fr auto; } }
+    .dl-he p { margin: 0; color: var(--ink-soft); font-size: 1rem; max-width: 70ch; }
+    .dl-he p b { color: var(--ink); }
+    .dl-he .dl-eyebrow { margin-bottom: 0.5rem; }
+
+    .dl-footer {
+      padding: 2.25rem 0 5.5rem;
+      background: var(--navy-deep);
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 0.9rem;
+    }
+    .dl-footer__inner { display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center; justify-content: space-between; }
+    .dl-footer__logo { background: #fff; border-radius: 10px; padding: 0.4rem 0.6rem; }
+    .dl-footer__logo img { width: 104px; }
+    .dl-footer a { color: #fff; text-decoration: none; }
+    .dl-footer a:hover { text-decoration: underline; color: #fff; }
+    .dl-footer nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; }
+
+    /* Video modal */
+    .dl-modal { position: fixed; inset: 0; z-index: 100000; display: grid; place-items: center; padding: 1rem; }
+    .dl-modal[hidden] { display: none; }
+    .dl-modal__backdrop { position: absolute; inset: 0; background: rgba(15, 17, 45, 0.82); }
+    .dl-modal__box { position: relative; width: min(100%, 1100px); }
+    .dl-modal__frame { position: relative; aspect-ratio: 16 / 9; background: #000; border-radius: 12px; overflow: hidden; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5); }
+    .dl-modal__frame iframe,
+    .dl-modal__frame video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .dl-modal__frame video { object-fit: contain; background: #000; display: block; }
+    .dl-modal__bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 0.6rem; color: #fff; }
+    .dl-modal__title { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; }
+    .dl-modal__close {
+      box-sizing: border-box;
+      border: 0;
+      background: rgba(255, 255, 255, 0.18);
+      color: #fff;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      font-size: 1.35rem;
+      font-weight: 400;
+      line-height: 1;
+      cursor: pointer;
+      /* Optical center for the × glyph (sits high/left by default) */
+      text-indent: 0;
+    }
+    .dl-modal__close:hover { background: rgba(255, 255, 255, 0.3); }
+    .dl-modal__close-x {
+      display: block;
+      width: 0.85rem;
+      height: 0.85rem;
+      position: relative;
+    }
+    .dl-modal__close-x::before,
+    .dl-modal__close-x::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 100%;
+      height: 2px;
+      background: currentColor;
+      border-radius: 1px;
+    }
+    .dl-modal__close-x::before { transform: translate(-50%, -50%) rotate(45deg); }
+    .dl-modal__close-x::after { transform: translate(-50%, -50%) rotate(-45deg); }
+
+    /* Reveal */
+    .js .dl-reveal { opacity: 0; transform: translateY(18px); transition: opacity 700ms ease, transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1); }
+    .js .dl-reveal.is-in { opacity: 1; transform: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .js .dl-reveal, .js .dl-mk__side { opacity: 1 !important; transform: none !important; transition: none !important; }
+      .dl-play img, .dl-play__btn, .dl-btn { transition: none; }
+    }
+
+    .dl-modal--book .dl-modal__frame {
+      aspect-ratio: auto;
+      height: min(80vh, 760px);
+      background: #fff;
+    }
+    .dl-modal--book .dl-modal__frame iframe {
+      background: #fff;
+    }
+  </style>
+  <link rel="preconnect" href="https://bookings.nimbuspop.com" crossorigin>
+  <link rel="preconnect" href="https://jared-delphi-me.zohobookings.com" crossorigin>
+  <link rel="dns-prefetch" href="https://bookings.nimbuspop.com">
+  <link rel="dns-prefetch" href="https://jared-delphi-me.zohobookings.com">
+  <script src="https://bookings.nimbuspop.com/assets/embed.js" defer></script>
+</head>
+<body class="dl-v5">
+  <div class="dl-top">
+<header class="dl-nav">
+      <a class="dl-nav__logo" href="#top" aria-label="Delphinium home">
+        <img src="https://raw.githubusercontent.com/ProjectDelphinium/homepage-fable-preview/12fa8a763a99dd6ba4d5cbf57b4f01400e57b195/zoho-sites/assets/from-hied-hires-2026-09-24/delphinium-wordmark.svg" width="225" height="155" alt="Delphinium">
+      </a>
+      <nav class="dl-nav__links" aria-label="Page sections">
+        <a href="#makeover">Makeover</a>
+        <a href="#proof">Proof</a>
+        <a href="#product">Product</a>
+        <a href="#videos">Videos</a>
+      </nav>
+      <a class="dl-nav__he" href="#highered">Higher Ed Online</a>
+      <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
+    </header>
+  </div>
+
+  <main id="top">
+    <section class="dl-hero" aria-labelledby="hero-heading">
+      <div class="dl-hero__petals" aria-hidden="true"></div>
+      <div class="dl-wrap dl-hero__inner">
+        <h1 class="dl-hero__h1" id="hero-heading">
+          Canvas delivers content.
+          <strong>Delphinium delivers
+            <span class="dl-hero__engage"><em>engagement!</em></span>
+          </strong>
+        </h1>
+        <p class="dl-hero__lead">Delphinium turns the Canvas courses you already run into <b>engaging student experiences</b> and an <b>early-warning system</b> for teachers. No migration and no extra work. Just turn it on.</p>
+        <div class="dl-hero__actions">
+          <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
+          <a class="dl-link" href="https://stream.mux.com/LoTwl8xXgp9g14ewgXHaehN71e200PFdg5wKCE00TTJkI/capped-1080p.mp4" data-mux="LoTwl8xXgp9g14ewgXHaehN71e200PFdg5wKCE00TTJkI" data-title="Watch the K-12 overview" title="Watch the K-12 overview">
+            <span class="dl-link__icon" aria-hidden="true"></span>
+            Watch the K-12 overview
+          </a>
+        </div>
+
+        <div class="dl-cover dl-reveal">
+          <div class="dl-cover__stat">
+            <span class="dl-cover__upto">Cut failures by up to</span>
+            <span class="dl-cover__num">31%</span>
+          </div>
+          <ul class="dl-cover__points">
+            <li><span class="dl-tick" aria-hidden="true"></span><span><b>Go live in less than 3 minutes.</b> Keep Canvas, enhance with Delphinium.</span></li>
+            <li><span class="dl-tick" aria-hidden="true"></span><span><b>Zero learning curve.</b> Teachers keep using Canvas exactly as before.</span></li>
+            <li><span class="dl-tick" aria-hidden="true"></span><span><b>Built on science.</b> 14 years of published behavioral research.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="dl-section dl-case" aria-labelledby="case-heading">
+      <div class="dl-wrap dl-case__grid">
+        <div class="dl-reveal">
+          <p class="dl-eyebrow">The case for engagement</p>
+          <h2 class="dl-h2" id="case-heading"><span class="dl-h2__plain">Education moved online,</span> <em>Engagement</em> didn't follow.</h2>
+          <p class="dl-lede">In a classroom, teachers can read the room, catch a glance, and stand by the student who is drifting. None of that survives the move to a screen. For an online student, Canvas is the entire school experience, and too often it looks like a gray wall of text.</p>
+        </div>
+        <blockquote class="dl-pull dl-reveal">
+          <p>&ldquo;If you ask kids, they don't like Canvas. It's basic&hellip; it needs something else to engage&hellip;&rdquo;</p>
+          <cite>Ryan Hansen<span>Digital Learning Director, Davis School District</span></cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="dl-section dl-mk" id="makeover" aria-labelledby="mk-heading">
+      <div class="dl-wrap">
+        <h2 class="dl-mk__title dl-reveal" id="mk-heading">Which class would <strong>YOU</strong> rather take?</h2>
+        <p class="dl-mk__sub dl-reveal">On the left, a Canvas module as students usually see it. On the right, Canvas with Delphinium turned on. No new content and no extra work for teachers.</p>
+
+        <div class="dl-seg" role="group" aria-label="Compare Canvas and Canvas plus Delphinium">
+          <div class="dl-seg__inner">
+            <button type="button" data-view="before" aria-pressed="false">Canvas</button>
+            <button type="button" data-view="after" aria-pressed="true">Canvas + Delphinium</button>
+          </div>
+        </div>
+
+        <div class="dl-mk__stage" id="mk-stage" data-view="after">
+          <figure class="dl-mk__side dl-mk__side--before">
+            <span class="dl-pill dl-pill--canvas">Canvas</span>
+            <img src="https://raw.githubusercontent.com/ProjectDelphinium/homepage-fable-preview/cursor/sites-v5-hires-2026-09-24/zoho-sites/assets/from-hied-hires-2026-09-24/makeover-before-canvas-hires.png?v=module-only-20260924b" width="747" height="762" alt="A standard Canvas module: a gray list of pages, PDFs, and assignments for Unit 5, Nuclear Chemistry." loading="lazy">
+          </figure>
+          <figure class="dl-mk__side dl-mk__side--after">
+            <span class="dl-pill dl-pill--dl">Canvas + <b>Delphinium!</b></span>
+            <img src="https://raw.githubusercontent.com/ProjectDelphinium/homepage-fable-preview/cursor/sites-v5-hires-2026-09-24/zoho-sites/assets/from-hied-hires-2026-09-24/makeover-after-delphinium-hires.png" width="1155" height="1282" alt="The same kind of Canvas course with Delphinium on: a course home with teacher photo, a countdown to the last day to submit, and color-coded weekly unit cards with progress bars." loading="lazy">
+          </figure>
+        </div>
+
+        <div class="dl-mk__foot">
+          <div class="dl-reveal">
+            <h3>Go live in less than 3 minutes. Keep Canvas, enhance with Delphinium.</h3>
+            <p>Delphinium reads the course you already have. Green is done, blue is in progress, white is not started. A countdown answers the question every online student asks: how much time do I have left? Edit anything in Canvas and it flows through automatically.</p>
+          </div>
+          <div class="dl-reveal">
+            <p>Teachers do not learn a new tool. Students get a course they want to open, and a clear view of where they stand and where they are headed.</p>
+            <a class="dl-link" href="https://stream.mux.com/tKbhHrk01Yk89aFYU02CJbJqa002qUZWyNLhuNcuyDUMyY/capped-1080p.mp4" data-mux="tKbhHrk01Yk89aFYU02CJbJqa002qUZWyNLhuNcuyDUMyY" data-title="See the student experience" title="See the student experience">
+              <span class="dl-link__icon" aria-hidden="true"></span>
+              See the student experience
+            </a>
+            <p class="dl-mk__cap" style="margin-top:1rem;">Sample course shown. Screens from the Delphinium product.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dl-section dl-proof" id="proof" aria-labelledby="proof-heading">
+      <div class="dl-wrap">
+        <p class="dl-eyebrow">Proof it works</p>
+        <h2 class="dl-h2" id="proof-heading">The courses didn't change. The teachers didn't change. <em>Engagement did.</em></h2>
+
+        <div class="dl-proof__cards">
+          <article class="dl-card dl-reveal">
+            <p class="dl-card__kicker">Fewer failures</p>
+            <p class="dl-card__num dl-card__num--green">31%</p>
+            <p class="dl-card__txt"><b>decrease in course failure rates</b> in the Davis Connect study.</p>
+            <p class="dl-card__ctx">Davis School District, Utah. 72 fully online, asynchronous classes and 6,000 students. The year before Delphinium against the year with it. Same courses, same content, same teachers.</p>
+          </article>
+          <article class="dl-card dl-reveal">
+            <p class="dl-card__kicker">Motivation</p>
+            <p class="dl-card__num dl-card__num--navy">72%</p>
+            <p class="dl-card__txt">of students say a Delphinium course is <b>more or much more motivating</b> than a traditional Canvas course.</p>
+          </article>
+          <article class="dl-card dl-reveal">
+            <p class="dl-card__kicker">In their words</p>
+            <p class="dl-card__num dl-card__num--accent">&ldquo;Fun.&rdquo;</p>
+            <p class="dl-card__txt">The word students use most when we ask how a Delphinium course is different.</p>
+          </article>
+        </div>
+
+        <div class="dl-quotes">
+          <blockquote class="dl-quote-big dl-reveal">
+            &ldquo;I was sitting on the couch watching Netflix and the thought popped into my head: I could be doing homework right now.&rdquo;
+            <cite>Delphinium student survey response</cite>
+          </blockquote>
+          <blockquote class="dl-pull dl-reveal">
+            <p>&ldquo;We have had students redo a quiz that they did poorly on to earn more points so they could just earn googly eyes for their avatar.&rdquo;</p>
+            <cite>Tiffany Dance<span>Instructional Coach, Davis Connect</span></cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="dl-section dl-gap" aria-labelledby="gap-heading">
+      <div class="dl-wrap">
+        <p class="dl-eyebrow">Delphinium turns data into action</p>
+        <h2 class="dl-h2" id="gap-heading">Canvas is data-rich, but <em>insight-poor.</em></h2>
+        <p class="dl-lede">Canvas captures a lot: assignments, gradebook, modules, analytics. But it lives on pages built for storage, not engagement.</p>
+        <ul class="dl-gap__rows">
+          <li class="dl-reveal"><span class="dl-gap__who">The student sees</span><p><b>a gray wall of text.</b> The signals they need, like progress and what to do next, are buried. A struggling student can fade with nothing to pull them back.</p></li>
+          <li class="dl-reveal"><span class="dl-gap__who">The parent wants</span><p><b>to be the cheerleader and coach</b> their kid needs, but gets data without a story they can act on.</p></li>
+          <li class="dl-reveal"><span class="dl-gap__who">The teacher faces</span><p><b>hours of slow manual work</b> to find and reach at-risk students, one at a time. Paid for in lost evenings.</p></li>
+        </ul>
+        <p class="dl-gap__close">What you need is a way to turn that data into action: <span>Delphinium.</span></p>
+      </div>
+    </section>
+
+    <section class="dl-section dl-products" id="product" aria-labelledby="product-heading" style="padding-top:clamp(4rem,9vw,7rem);">
+      <div class="dl-wrap">
+        <p class="dl-eyebrow">What your school gets</p>
+        <h2 class="dl-h2" id="product-heading">One layer over Canvas. Students, teachers, and families all <em>see the same picture.</em></h2>
+
+        <article class="dl-prod" aria-labelledby="core-heading">
+          <div class="dl-reveal">
+            <p class="dl-prod__tag dl-prod__tag--core">Delphinium Core · Control Tower</p>
+            <h3 id="core-heading">Know where every student stands, and act on it without leaving the page.</h3>
+            <p class="dl-prod__sub">Turn Delphinium on and your existing courses become an early-warning system, so teachers can step in before a slipping grade becomes a failed course.</p>
+            <ul class="dl-list">
+              <li>Every student red, yellow, or green from live Canvas data</li>
+              <li>Click any student for grades, progress, engagement, and who is observing</li>
+              <li>Filter to struggling students and message all of them, families included, in about 40 seconds</li>
+              <li>Runs on the Canvas courses you already have, including in the Canvas parent app</li>
+            </ul>
+            <blockquote class="dl-pull">
+              <p>&ldquo;I can see with color my students' progress, see their points, their percentages&hellip; to tell me where a student is very quickly and with color.&rdquo;</p>
+              <cite>Natalie Niederhauser<span>High School Math Teacher, Davis Connect</span></cite>
+            </blockquote>
+            <div class="dl-prod__more">
+              <a class="dl-link" href="https://stream.mux.com/bVXbIyK200RWbCuLWzSFX102TIn4HekyW4XZfV01L01FyaA/capped-1080p.mp4" data-mux="bVXbIyK200RWbCuLWzSFX102TIn4HekyW4XZfV01L01FyaA" data-title="Watch: Data" title="Watch: Data">
+                <span class="dl-link__icon" aria-hidden="true"></span>
+                Watch: Data
+              </a>
+            </div>
+          </div>
+          <figure class="dl-prod__media dl-tray dl-tray--mist dl-tray--has-float dl-reveal">
+            <img class="dl-tray__main" src="https://raw.githubusercontent.com/ProjectDelphinium/homepage-fable-preview/cursor/sites-v5-hires-2026-09-24/zoho-sites/assets/from-hied-hires-2026-09-24/control-tower-roster-hires.png" width="2248" height="1414" alt="Control Tower roster: every student in a row with grade, points, and green, yellow, or red activity and status flags." loading="lazy">
+            <img class="dl-tray__float" src="https://raw.githubusercontent.com/ProjectDelphinium/homepage-fable-preview/cursor/sites-v5-hires-2026-09-24/zoho-sites/assets/from-hied-hires-2026-09-24/control-tower-student-detail-hires.png" width="2028" height="1783" alt="Student detail panel showing grades, progress, observers, and engagement counts for past due, missing, and late work." loading="lazy">
+            <figcaption>Control Tower and student detail. Sample data.</figcaption>
+          </figure>
+        </article>
+
+        <article class="dl-prod dl-prod--wide" aria-labelledby="eb-heading">
+          <div class="dl-eb-copy dl-reveal">
+            <div>
+              <p class="dl-prod__tag dl-prod__tag--eb">Engagement Builder</p>
+              <h3 id="eb-heading">Turn the gray wall of text into a class students want to open.</h3>
+              <p class="dl-prod__sub">When students can see where they stand and where they're headed, they own the journey.</p>
+            </div>
+            <div>
+              <ul class="dl-list">
+                <li>Color-coded progress and work quality, visible at a glance</li>
+                <li>Nudges, celebrations, and progress trackers that reward momentum</li>
+                <li>Avatars, prize boxes, and achievements. Leaderboards use aliases and show students only who is near them, and you can switch them off.</li>
+                <li>School-wide layouts so every course starts on brand</li>
+              </ul>
+            </div>
+          </div>
+          <figure class="dl-prod__media dl-tray dl-tray--white dl-reveal">
+            <img class="dl-widgets__lg dl-tray__main" src="https://raw.githubusercontent.com/ProjectDelphinium/homepage-fable-preview/cursor/sites-v5-hires-2026-09-24/zoho-sites/assets/from-hied-hires-2026-09-24/engagement-widgets-hires.png" width="2800" height="915" alt="Engagement Builder widgets: Who's Near Me alias leaderboard, prize boxes, an avatar, a percent-complete gauge, a performance ring, and achievements." loading="lazy">
+            <div class="dl-widgets__sm">
+              <img class="dl-tray__main" src="https://raw.githubusercontent.com/ProjectDelphinium/homepage-fable-preview/cursor/sites-v5-prospectus-5c51/zoho-sites/assets/from-prospectus-2026-09-24/engagement-widgets-left.png" width="1176" height="639" alt="Who's Near Me alias leaderboard, prize boxes, and a student avatar." loading="lazy">
+              <img class="dl-tray__main" src="https://raw.githubusercontent.com/ProjectDelphinium/homepage-fable-preview/cursor/sites-v5-prospectus-5c51/zoho-sites/assets/from-prospectus-2026-09-24/engagement-widgets-right.png" width="1183" height="639" alt="Percent of assignments complete gauge, performance ring, and achievements." loading="lazy">
+            </div>
+            <figcaption>Engagement Builder widgets inside a Canvas course.</figcaption>
+          </figure>
+          <div class="dl-eb-copy dl-eb-copy--foot dl-reveal">
+            <blockquote class="dl-pull" style="margin-top:0;">
+              <p>&ldquo;Our students absolutely love the interactive elements where they earn points to enhance their avatars and unlock prize boxes.&rdquo;</p>
+              <cite>Tiffany Dance<span>Instructional Coach, Davis Connect</span></cite>
+            </blockquote>
+            <div class="dl-prod__more" style="margin-top:0;">
+              <a class="dl-link" href="https://stream.mux.com/tKbhHrk01Yk89aFYU02CJbJqa002qUZWyNLhuNcuyDUMyY/capped-1080p.mp4" data-mux="tKbhHrk01Yk89aFYU02CJbJqa002qUZWyNLhuNcuyDUMyY" data-title="Watch: Gamification" title="Watch: Gamification">
+                <span class="dl-link__icon" aria-hidden="true"></span>
+                Watch: Gamification
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="dl-prod dl-prod--flip" aria-labelledby="cb-heading">
+          <div class="dl-reveal">
+            <p class="dl-prod__tag dl-prod__tag--cb">Community Builder · Message Center</p>
+            <h3 id="cb-heading">Reach the right student at the right moment, without the manual email.</h3>
+            <p class="dl-prod__sub">Stop blasting the whole class. Target exactly the students who need to hear from you.</p>
+            <ul class="dl-list">
+              <li>Templates and relative-date schedules that follow each teacher across sections and semesters</li>
+              <li>Rules like &ldquo;only send if points are below 50&rdquo; reach at-risk students automatically</li>
+              <li>One message lands as a Canvas message, announcement, to-do item, banner, and email</li>
+              <li>Celebrate students who are thriving, not just rescue the ones who aren't</li>
+            </ul>
+            <div class="dl-stat-inline">
+              <span class="dl-stat-inline__n">~12<small>emails a day</small></span>
+              <span class="dl-stat-inline__arrow" aria-hidden="true">&rarr;</span>
+              <span class="dl-stat-inline__n">~6<small>messages a week</small></span>
+              <p><b>Natalie Niederhauser</b>, high school math, 100+ students at Davis Connect: &ldquo;saved most of my Saturday nights.&rdquo;</p>
+            </div>
+            <p class="dl-note"><b>Families stay in the loop.</b> Parents and observers get the same color-coded picture teachers see, readable at a glance with no Canvas know-how required. Include them on messages, share the good news, and auto-translate so every family hears from you in their own language.</p>
+            <div class="dl-prod__more">
+              <a class="dl-link" href="https://stream.mux.com/CG9AfH1Ohcx4Tgz6juR4uFAUDFspppNF1kfrJCxWlk00/capped-1080p.mp4" data-mux="CG9AfH1Ohcx4Tgz6juR4uFAUDFspppNF1kfrJCxWlk00" data-title="Watch: Communication" title="Watch: Communication">
+                <span class="dl-link__icon" aria-hidden="true"></span>
+                Watch: Communication
+              </a>
+            </div>
+          </div>
+          <figure class="dl-prod__media dl-tray dl-tray--sky dl-tray--has-float dl-reveal">
+            <img class="dl-tray__main" src="https://raw.githubusercontent.com/ProjectDelphinium/homepage-fable-preview/cursor/sites-v5-hires-2026-09-24/zoho-sites/assets/from-hied-hires-2026-09-24/message-center-schedule-hires.png" width="1995" height="1200" alt="Message Center templates: Welcome to Class, Student Support Follow-Up, Weekly Progress Report, and Low Activity Warning, with default and disable settings." loading="lazy">
+            <img class="dl-tray__float" src="https://raw.githubusercontent.com/ProjectDelphinium/homepage-fable-preview/cursor/sites-v5-hires-2026-09-24/zoho-sites/assets/from-hied-hires-2026-09-24/community-builder-create-message-hires.png" width="1870" height="1765" alt="Create Message window with a personalized message to struggling students and an option to include observers." loading="lazy">
+            <figcaption>School-wide Message Center templates and the message composer.</figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section class="dl-section dl-how" aria-labelledby="how-heading">
+      <div class="dl-wrap">
+        <p class="dl-eyebrow">How it works</p>
+        <h2 class="dl-h2" id="how-heading">Turn it on. Teachers keep teaching in Canvas.</h2>
+        <div class="dl-how__cards">
+          <div class="dl-how__card dl-reveal">
+            <span class="dl-how__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"/><path d="M10 3v6L4.5 18.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3"/><path d="M7.5 15h9"/></svg>
+            </span>
+            <h3>Built on science</h3>
+            <p>14 years of published research in self-regulated learning, behavioral economics, and social presence, built into the design.</p>
+          </div>
+          <div class="dl-how__card dl-reveal">
+            <span class="dl-how__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
+            </span>
+            <h3>Lightning fast setup</h3>
+            <p>Go live in less than 3 minutes. Keep Canvas, enhance with Delphinium. No migration and nothing to rebuild.</p>
+          </div>
+          <div class="dl-how__card dl-reveal">
+            <span class="dl-how__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="m8 11 3 3 5-5"/><path d="M8 21h8"/></svg>
+            </span>
+            <h3>Zero learning curve</h3>
+            <p>Teachers keep using Canvas exactly as before. Edits in Canvas flow through automatically, so there are never two systems to maintain.</p>
+          </div>
+        </div>
+        <p class="dl-trust" aria-label="Platform notes">
+          <span>Canvas LTI 1.3</span>
+          <span>FERPA</span>
+          <span>Alias-based leaderboards</span>
+          <span>Chromebook-friendly</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="dl-section dl-videos" id="videos" aria-labelledby="videos-heading">
+      <div class="dl-wrap">
+        <p class="dl-eyebrow">See it in action</p>
+        <h2 class="dl-h2" id="videos-heading">Hear it from the directors and teachers who use it.</h2>
+        <div class="dl-videos__grid">
+          <figure class="dl-vid dl-vid--feature dl-reveal">
+            <a class="dl-play" href="https://stream.mux.com/LoTwl8xXgp9g14ewgXHaehN71e200PFdg5wKCE00TTJkI/capped-1080p.mp4" data-mux="LoTwl8xXgp9g14ewgXHaehN71e200PFdg5wKCE00TTJkI" data-title="Delphinium for K-12 online schools" aria-label="Play: Delphinium for K-12 online schools">
+              <img src="https://image.mux.com/LoTwl8xXgp9g14ewgXHaehN71e200PFdg5wKCE00TTJkI/thumbnail.jpg?time=3&amp;width=1920" width="1280" height="720" alt="" loading="lazy">
+              <span class="dl-play__btn" aria-hidden="true"></span>
+            </a>
+            <figcaption><b>Delphinium for K-12 online schools</b><span>A quick look at Delphinium in K-12 online courses.</span></figcaption>
+          </figure>
+          <figure class="dl-vid dl-reveal">
+            <a class="dl-play" href="https://stream.mux.com/32SFE7z1kEHl4JU01lvaXzTMg01kxeKQt4TeHQEjh4Fb8/capped-1080p.mp4" data-mux="32SFE7z1kEHl4JU01lvaXzTMg01kxeKQt4TeHQEjh4Fb8" data-title="Digital Learning and Curriculum Directors" aria-label="Play: Digital Learning and Curriculum Directors">
+              <img src="https://delphi-me.com/hs-fs/hubfs/directorthumb.png?width=960&amp;name=directorthumb.png" width="960" height="540" alt="" loading="lazy">
+            </a>
+            <figcaption><b>For digital learning and curriculum directors</b><span>Dr. Ryan Hansen, Director of Digital Learning</span></figcaption>
+          </figure>
+          <figure class="dl-vid dl-reveal">
+            <a class="dl-play" href="https://stream.mux.com/qHMrqxfysc8NPiOTXwvqkbrZk7iEWdHpK00i36GbmBRo/capped-1080p.mp4" data-mux="qHMrqxfysc8NPiOTXwvqkbrZk7iEWdHpK00i36GbmBRo" data-title="Teachers and Instructional Coaches" aria-label="Play: Teachers and Instructional Coaches">
+              <img src="https://delphi-me.com/hs-fs/hubfs/teacherthumb.png?width=960&amp;name=teacherthumb.png" width="960" height="540" alt="" loading="lazy">
+            </a>
+            <figcaption><b>For teachers and instructional coaches</b><span>Natalie Niederhauser, Math Teacher</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="dl-section dl-close" aria-labelledby="close-heading">
+      <div class="dl-wrap">
+        <h2 id="close-heading">See Delphinium on one of your Canvas courses.</h2>
+        <p>Meet Jared, the person behind Delphinium. See how it could work in your Canvas courses and get your questions answered.</p>
+        <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
+        <p class="dl-close__small">No migration to plan. Nothing to install before the call. You stay in Canvas.</p>
+      </div>
+    </section>
+
+    <section class="dl-he" id="highered" aria-labelledby="he-heading">
+      <div class="dl-wrap dl-he__inner">
+        <div>
+          <p class="dl-eyebrow">Higher Ed Online</p>
+          <h2 class="visually-hidden" id="he-heading">Higher Ed Online</h2>
+          <p>Running online programs in Canvas at a college or university? In Higher Ed Online sections with Delphinium, we've seen <b>as much as 47% lower course failure</b> and <b>as much as 67% lower withdrawal</b>. Ask for the study context that matches your campus.</p>
+        </div>
+        <a class="dl-link" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo &rarr;</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="dl-footer">
+    <div class="dl-wrap dl-footer__inner">
+      <span class="dl-footer__logo"><img src="https://raw.githubusercontent.com/ProjectDelphinium/homepage-fable-preview/12fa8a763a99dd6ba4d5cbf57b4f01400e57b195/zoho-sites/assets/from-hied-hires-2026-09-24/delphinium-wordmark.svg" width="225" height="155" alt="Delphinium" loading="lazy"></span>
+      <nav aria-label="Footer">
+        <a href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
+        <a href="#highered">Higher Ed Online</a>
+        <a href="https://www.youtube.com/@DelphiniumEngagement" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://delphi-me.com/contact-us">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  
+  <div class="dl-modal dl-modal--book" id="dl-book-modal" hidden>
+    <div class="dl-modal__backdrop" data-book-close></div>
+    <div class="dl-modal__box" role="dialog" aria-modal="true" aria-labelledby="dl-book-title">
+      <div class="dl-modal__bar">
+        <p class="dl-modal__title" id="dl-book-title">Schedule a demo</p>
+        <button type="button" class="dl-modal__close" data-book-close aria-label="Close scheduling"><span class="dl-modal__close-x" aria-hidden="true"></span></button>
+      </div>
+      <div class="dl-modal__frame" id="dl-book-frame"></div>
+    </div>
+  </div>
+
+  <div class="dl-modal" id="dl-modal" hidden>
+    <div class="dl-modal__backdrop" data-close></div>
+    <div class="dl-modal__box" role="dialog" aria-modal="true" aria-labelledby="dl-modal-title">
+      <div class="dl-modal__bar">
+        <p class="dl-modal__title" id="dl-modal-title">Video</p>
+        <button type="button" class="dl-modal__close" data-close aria-label="Close video"><span class="dl-modal__close-x" aria-hidden="true"></span></button>
+      </div>
+      <div class="dl-modal__frame"></div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add("js");
+      var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var hasIO = "IntersectionObserver" in window;
+
+      var reveals = document.querySelectorAll(".dl-reveal");
+      if (reduced || !hasIO) {
+        reveals.forEach(function (el) { el.classList.add("is-in"); });
+      } else {
+        var rio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add("is-in"); rio.unobserve(e.target); }
+          });
+        }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+        reveals.forEach(function (el) { rio.observe(el); });
+      }
+
+      var stage = document.getElementById("mk-stage");
+      var segButtons = document.querySelectorAll(".dl-seg button");
+      var userPicked = false;
+      function setView(v) {
+        stage.setAttribute("data-view", v);
+        segButtons.forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-view") === v ? "true" : "false"); });
+      }
+      segButtons.forEach(function (b) {
+        b.addEventListener("click", function () { userPicked = true; setView(b.getAttribute("data-view")); });
+      });
+      if (stage) {
+        if (reduced || !hasIO) {
+          stage.classList.add("is-in");
+        } else {
+          var mobile = window.matchMedia("(max-width: 859px)").matches;
+          if (mobile) setView("before");
+          var sio = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+              if (!e.isIntersecting) return;
+              window.setTimeout(function () {
+                stage.classList.add("is-in");
+                if (!userPicked) setView("after");
+              }, mobile ? 1300 : 250);
+              sio.disconnect();
+            });
+          }, { threshold: 0.45 });
+          sio.observe(stage);
+        }
+      }
+
+      var modal = document.getElementById("dl-modal");
+      var frame = modal.querySelector(".dl-modal__frame");
+      var title = document.getElementById("dl-modal-title");
+      var lastFocus = null;
+      function videoLabel(el) {
+        var dt = el.getAttribute("data-title");
+        if (dt && dt.trim()) return dt.trim();
+        var clone = el.cloneNode(true);
+        [".dl-link__icon", ".dl-play__btn", ".dl-play__dur", "small", "img"].forEach(function (sel) {
+          clone.querySelectorAll(sel).forEach(function (n) { n.remove(); });
+        });
+        var txt = (clone.textContent || "").replace(/\s+/g, " ").trim();
+        if (txt) return txt;
+        var aria = el.getAttribute("aria-label") || "";
+        if (aria) {
+          aria = aria.replace(/^Play:\s*/i, "").replace(/,\s*\d+\s*minutes?.*$/i, "").trim();
+          if (aria) return aria;
+        }
+        var fig = el.closest("figure");
+        if (fig) {
+          var b = fig.querySelector("figcaption b");
+          if (b && b.textContent) return b.textContent.trim();
+        }
+        return "Video";
+      }
+      function openVideo(id, name, poster, mp4) {
+        lastFocus = document.activeElement;
+        var src = mp4 || ("https://stream.mux.com/" + id + "/capped-1080p.mp4");
+        var cover = poster || ("https://image.mux.com/" + id + "/thumbnail.jpg?time=3&width=1920");
+        var video = document.createElement("video");
+        video.controls = true;
+        video.autoplay = true;
+        video.playsInline = true;
+        video.preload = "auto";
+        video.poster = cover;
+        video.src = src;
+        video.setAttribute("controlslist", "nodownload");
+        video.setAttribute("playsinline", "");
+        video.title = name;
+        frame.innerHTML = "";
+        frame.appendChild(video);
+        title.textContent = name;
+        modal.hidden = false;
+        document.body.style.overflow = "hidden";
+        var playPromise = video.play();
+        if (playPromise && playPromise.catch) playPromise.catch(function () {});
+        modal.querySelector(".dl-modal__close").focus();
+      }
+      function closeVideo() {
+        modal.hidden = true;
+        frame.innerHTML = "";
+        document.body.style.overflow = "";
+        if (lastFocus) lastFocus.focus();
+      }
+      modal.querySelectorAll("[data-close]").forEach(function (el) { el.addEventListener("click", closeVideo); });
+      document.addEventListener("keydown", function (ev) {
+        if (ev.key === "Escape" && !modal.hidden) closeVideo();
+      });
+      /* Capture-phase click beats legacy theme codeSnippet that still embeds player.mux.com */
+      document.addEventListener("click", function (ev) {
+        var el = ev.target && ev.target.closest && ev.target.closest("[data-mux]");
+        if (!el) return;
+        if (el.closest(".theme-content-area")) return;
+        ev.preventDefault();
+        ev.stopPropagation();
+        if (ev.stopImmediatePropagation) ev.stopImmediatePropagation();
+        var img = el.querySelector("img");
+        var poster = img ? img.getAttribute("src") : "";
+        if (poster && poster.indexOf("width=") === -1 && poster.indexOf("image.mux.com") !== -1) {
+          poster = poster + (poster.indexOf("?") === -1 ? "?" : "&") + "width=1920";
+        }
+        openVideo(
+          el.getAttribute("data-mux"),
+          videoLabel(el),
+          poster,
+          el.getAttribute("href")
+        );
+      }, true);
+    })();
+      /* Zoho Bookings: preload portal-embed iframe; Schedule CTAs open modal instantly */
+      (function () {
+        var BOOK_URL = "https://jared-delphi-me.zohobookings.com/portal-embed#/4937208000000036014";
+        var FALLBACK = "https://jared-delphi-me.zohobookings.com/4937208000000036014";
+        var bookModal = document.getElementById("dl-book-modal");
+        var bookFrame = document.getElementById("dl-book-frame");
+        if (!bookModal || !bookFrame) return;
+        var iframe = null;
+        var lastFocus = null;
+
+        function ensureIframe() {
+          if (iframe) return iframe;
+          iframe = document.createElement("iframe");
+          iframe.src = BOOK_URL;
+          iframe.title = "Schedule a demo";
+          iframe.setAttribute("allowfullscreen", "");
+          iframe.setAttribute("loading", "eager");
+          bookFrame.appendChild(iframe);
+          return iframe;
+        }
+
+        function openBook(e) {
+          if (e) e.preventDefault();
+          lastFocus = document.activeElement;
+          ensureIframe();
+          bookModal.hidden = false;
+          document.documentElement.style.overflow = "hidden";
+          var closeBtn = bookModal.querySelector(".dl-modal__close");
+          if (closeBtn) closeBtn.focus();
+        }
+
+        function closeBook() {
+          bookModal.hidden = true;
+          document.documentElement.style.overflow = "";
+          if (lastFocus && lastFocus.focus) lastFocus.focus();
+        }
+
+        document.querySelectorAll("[data-bookings-open]").forEach(function (el) {
+          el.addEventListener("click", openBook);
+        });
+
+        bookModal.querySelectorAll("[data-book-close]").forEach(function (el) {
+          el.addEventListener("click", closeBook);
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && !bookModal.hidden) closeBook();
+        });
+
+        function warm() { ensureIframe(); }
+        if ("requestIdleCallback" in window) {
+          requestIdleCallback(warm, { timeout: 2000 });
+        } else {
+          setTimeout(warm, 800);
+        }
+
+        // Official API still available if we ever want floating button:
+        // Bookings.buttonModal({ url: BOOK_URL, text: "Schedule a demo", color: "#c7007a", position: "bottom-right" });
+        window.dlOpenBookings = openBook;
+        window.dlBookingsFallback = FALLBACK;
+      })();
+
+</script>
+</body>
+</html>
