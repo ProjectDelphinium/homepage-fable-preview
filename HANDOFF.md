@@ -179,5 +179,8 @@ Prospectus-story remake is on `main` (commit fc903b2). Sequence: bold+Davis 31% 
 ## Sites v5 (2026-09-24)
 Reset to Sites v2 and rebuilt on the prospectus arc: `zoho-sites/homepage-sites-v5.html` + `zoho-sites/SNIPPETS-V5.md` (brief: `design-loop/2026-09-24/BRIEF-V5.md`). Real Makeover and product UI from the prospectus in `zoho-sites/assets/from-prospectus-2026-09-24/`, live delphi-me Mux videos, all Schedule CTAs to the Zoho Bookings URL.
 
+- **Light revise (2026-09-24):** handout pacing applied to v5 (Case cut to a kicker, mid-page CTA after Proof, insight-poor folded into Control Tower, "Do more, in less time" product frame, face + handout quotes near Engagement Builder, no video durations). See `design-loop/2026-09-24/LIGHT-REVISE-NOTES.md`.
+- **HE twin site (later):** K-12 staging is the current path. A Higher Ed twin with an audience switch (like delphi-me.com's top choice), its own videos and stats, and no parents is a later IA item. Not built yet.
+
 ## Marketing 2026-09-06
 Fold #social-media-marketing feedback: cut repetition; Makeover centerpiece; one question/section + Learn more YT; one-page takeaway; CTA subline about meeting Jared. See context/BRIEF.md and position-and-value §7.

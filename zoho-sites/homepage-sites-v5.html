@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="https://delphi-me.com/hubfs/Delphinium%20Logo.png">
+  <link rel="preload" as="image" href="assets/from-hied-hires-2026-09-24/delphinium-wordmark.svg">
   <style>
     :root {
       --paper: #fffdf6;
@@ -64,32 +64,29 @@
       top: 0;
       z-index: 9999;
     }
-    .dl-draft {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 1.9rem;
-      padding: 0.2rem 1rem;
-      background: var(--mark);
-      color: var(--ink);
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      text-align: center;
-    }
     .dl-nav {
+      position: relative;
       display: flex;
       align-items: center;
       gap: 1.25rem;
       min-height: 3.75rem;
       padding: 0.5rem clamp(1rem, 4vw, 2.25rem);
       background: color-mix(in srgb, var(--paper) 94%, transparent);
-      border-bottom: 1px solid var(--line);
+      border-bottom: 0;
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
     }
-    .dl-nav__logo { display: flex; align-items: center; margin-right: auto; }
+    .dl-nav::after {
+      content: "";
+      position: absolute;
+      left: calc(clamp(1rem, 4vw, 2.25rem) + 128px + 1.25rem);
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background: var(--line);
+      pointer-events: none;
+    }
+    .dl-nav__logo { display: flex; align-items: center; margin-right: auto; position: relative; z-index: 1; }
     .dl-nav__logo img { width: 128px; height: auto; }
     .dl-nav__links { display: none; gap: 1.5rem; }
     .dl-nav__links a, .dl-nav__he {
@@ -197,13 +194,12 @@
       border-color: transparent transparent transparent currentColor;
       margin-left: 2px;
     }
-    .dl-link small { font-weight: 400; color: var(--ink-soft); font-size: 0.875rem; }
 
     /* Hero */
     .dl-hero {
       position: relative;
       overflow: hidden;
-      padding: clamp(3.5rem, 8vw, 6.5rem) 0 clamp(3rem, 6vw, 4.5rem);
+      padding: clamp(4.5rem, 9vw, 7.5rem) 0 clamp(3rem, 6vw, 4.5rem);
     }
     .dl-hero__petals {
       position: absolute;
@@ -221,7 +217,7 @@
       border-radius: 50%;
       filter: blur(1px);
     }
-    .dl-hero__inner { position: relative; }
+    .dl-hero__inner { position: relative; padding-top: 1.75rem; }
     .dl-hero__h1 {
       margin: 0;
       font-weight: 300;
@@ -334,10 +330,6 @@
       transform: rotate(45deg) translate(-1px, -1px);
     }
 
-    /* Case for engagement */
-    .dl-case { background: var(--white); border-top: 1px solid var(--line); }
-    .dl-case__grid { display: grid; gap: 2.5rem; align-items: start; }
-    @media (min-width: 900px) { .dl-case__grid { grid-template-columns: 1.1fr 0.9fr; gap: 4rem; } }
     .dl-pull {
       margin: 0;
       padding: 0.25rem 0 0.25rem 1.4rem;
@@ -363,6 +355,16 @@
 
     /* Makeover */
     .dl-mk { background: var(--lav); }
+    .dl-mk__kicker {
+      margin: 0 auto 1rem;
+      text-align: center;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(1.05rem, 2vw, 1.3rem);
+      line-height: 1.3;
+      color: var(--navy);
+    }
+    .dl-mk__kicker em { font-style: normal; color: var(--accent); }
     .dl-mk__title {
       margin: 0 auto;
       text-align: center;
@@ -530,32 +532,28 @@
       color: var(--ink-soft);
     }
 
-    /* Insight-poor bridge */
-    .dl-gap { background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-    .dl-gap__rows { margin: 2rem 0 0; padding: 0; list-style: none; }
-    .dl-gap__rows li {
-      display: grid;
-      gap: 0.35rem 2rem;
-      padding: 1.1rem 0;
+    /* Mid-page ask */
+    .dl-midcta {
+      padding: clamp(2.5rem, 5vw, 3.5rem) 0;
+      background: var(--butter);
       border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
     }
-    .dl-gap__rows li:last-child { border-bottom: 1px solid var(--line); }
-    @media (min-width: 760px) { .dl-gap__rows li { grid-template-columns: 15rem 1fr; } }
-    .dl-gap__who {
+    .dl-midcta__inner {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      gap: 0.6rem;
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+      justify-content: space-between;
+      gap: 1.25rem 2.5rem;
+    }
+    .dl-midcta h2 {
+      margin: 0;
+      font-size: clamp(1.6rem, 3.6vw, 2.4rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
       color: var(--navy);
     }
-    .dl-gap__who::before { content: ""; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--navy); }
-    .dl-gap__rows p { margin: 0; color: var(--ink-soft); }
-    .dl-gap__rows p b { color: var(--navy); }
-    .dl-gap__close { margin: 1.75rem 0 0; font-size: 1.2rem; font-weight: 600; }
-    .dl-gap__close span { color: var(--accent); }
+    .dl-midcta .dl-btn { padding: 1rem 1.9rem; font-size: 1.1rem; }
 
     /* Products */
     .dl-products { background: var(--paper); }
@@ -680,26 +678,71 @@
     .dl-stat-inline__arrow { color: var(--accent); font-weight: 700; font-size: 1.3rem; }
     .dl-stat-inline p { grid-column: 1 / -1; margin: 0; font-size: 0.98rem; color: var(--ink-soft); }
     .dl-stat-inline p b { color: var(--ink); }
-
-    /* How it works */
-    .dl-how { background: var(--white); border-top: 1px solid var(--line); }
-    .dl-how__cards { margin-top: 2.5rem; display: grid; gap: 1.25rem; }
-    @media (min-width: 860px) { .dl-how__cards { grid-template-columns: repeat(3, 1fr); } }
-    .dl-how__card { padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--line); background: var(--paper); }
-    .dl-how__icon {
-      width: 2.75rem;
-      height: 2.75rem;
-      border-radius: 50%;
+    .dl-voices {
+      margin-top: clamp(3rem, 7vw, 5.5rem);
       display: grid;
-      place-items: center;
-      background: color-mix(in srgb, var(--navy) 9%, transparent);
-      color: var(--navy);
-      margin-bottom: 1rem;
+      gap: 2rem;
+      align-items: center;
+      padding: clamp(1.5rem, 4vw, 2.75rem);
+      border-radius: 20px;
+      background: var(--lav);
+      border: 1px solid var(--line);
     }
-    .dl-how__card h3 { margin: 0 0 0.4rem; font-size: 1.25rem; color: var(--ink); }
-    .dl-how__card p { margin: 0; font-size: 1rem; color: var(--ink-soft); }
+    @media (min-width: 860px) { .dl-voices { grid-template-columns: minmax(220px, 0.7fr) 1.3fr; gap: clamp(2.5rem, 5vw, 4rem); } }
+    .dl-voices__face { margin: 0 auto; width: min(100%, 320px); }
+    @media (max-width: 859px) { .dl-voices__face { width: min(62%, 240px); } }
+    .dl-voices__face img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid var(--white);
+      box-shadow: var(--shadow);
+    }
+    .dl-voices h3 {
+      margin: 0;
+      font-size: clamp(1.4rem, 2.8vw, 2rem);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      color: var(--navy);
+      max-width: 26ch;
+    }
+    .dl-voices__cols { margin-top: 1.6rem; display: grid; gap: 1.5rem 2.5rem; }
+    @media (min-width: 640px) { .dl-voices__cols { grid-template-columns: 1fr 1fr; } }
+    .dl-voices__who {
+      margin: 0 0 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .dl-voices blockquote {
+      margin: 0 0 1rem;
+      padding-left: 1rem;
+      border-left: 3px solid var(--accent);
+      font-style: italic;
+      font-size: 1.08rem;
+      line-height: 1.5;
+      color: var(--ink);
+    }
+    .dl-voices blockquote:last-child { margin-bottom: 0; }
+
+    /* How it works (trust strip) */
+    .dl-how { padding: clamp(2.75rem, 6vw, 4rem) 0; background: var(--white); border-top: 1px solid var(--line); }
+    .dl-how__inner { display: grid; gap: 1rem 3.5rem; align-items: center; }
+    @media (min-width: 900px) { .dl-how__inner { grid-template-columns: 0.9fr 1.1fr; } }
+    .dl-how h2 {
+      margin: 0;
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    .dl-how p { margin: 0; font-size: 1.05rem; color: var(--ink-soft); }
+    .dl-how .dl-trust { margin-top: 1.25rem; }
     .dl-trust {
-      margin: 2rem 0 0;
+      margin: 1.25rem 0 0;
       display: flex;
       flex-wrap: wrap;
       gap: 0.6rem;
@@ -759,18 +802,6 @@
       border-width: 13px 0 13px 21px;
       border-color: transparent transparent transparent #fff;
       margin-left: 5px;
-    }
-    .dl-play__dur {
-      position: absolute;
-      right: 0.75rem;
-      top: 0.75rem;
-      padding: 0.25rem 0.6rem;
-      border-radius: 6px;
-      background: rgba(20, 20, 30, 0.78);
-      color: #fff;
-      font-size: 0.8rem;
-      font-weight: 600;
-      font-variant-numeric: tabular-nums;
     }
     .dl-vid figcaption { margin-top: 0.85rem; }
     .dl-vid figcaption b { display: block; font-family: var(--font-display); font-size: 1.15rem; color: var(--ink); }
@@ -859,17 +890,31 @@
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .js .dl-reveal, .js .dl-mk__side { opacity: 1 !important; transform: none !important; transition: none !important; }
+      .js .dl-reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+      .js .dl-mk__side { transform: none !important; transition: none !important; }
       .dl-play img, .dl-play__btn, .dl-btn { transition: none; }
     }
+
+    .dl-modal--book .dl-modal__frame {
+      aspect-ratio: auto;
+      height: min(80vh, 760px);
+      background: #fff;
+    }
+    .dl-modal--book .dl-modal__frame iframe {
+      background: #fff;
+    }
   </style>
+  <link rel="preconnect" href="https://bookings.nimbuspop.com" crossorigin>
+  <link rel="preconnect" href="https://jared-delphi-me.zohobookings.com" crossorigin>
+  <link rel="dns-prefetch" href="https://bookings.nimbuspop.com">
+  <link rel="dns-prefetch" href="https://jared-delphi-me.zohobookings.com">
+  <script src="https://bookings.nimbuspop.com/assets/embed.js" defer></script>
 </head>
 <body class="dl-v5">
   <div class="dl-top">
-    <div class="dl-draft" role="status">Draft · not the live delphi-me.com site</div>
     <header class="dl-nav">
       <a class="dl-nav__logo" href="#top" aria-label="Delphinium home">
-        <img src="https://delphi-me.com/hubfs/Delphinium%20Logo.png" width="663" height="471" alt="Delphinium">
+        <img src="assets/from-hied-hires-2026-09-24/delphinium-wordmark.svg" width="225" height="155" alt="Delphinium">
       </a>
       <nav class="dl-nav__links" aria-label="Page sections">
         <a href="#makeover">Makeover</a>
@@ -878,7 +923,7 @@
         <a href="#videos">Videos</a>
       </nav>
       <a class="dl-nav__he" href="#highered">Higher Ed Online</a>
-      <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014">Schedule a demo</a>
+      <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
     </header>
   </div>
 
@@ -886,17 +931,16 @@
     <section class="dl-hero" aria-labelledby="hero-heading">
       <div class="dl-hero__petals" aria-hidden="true"></div>
       <div class="dl-wrap dl-hero__inner">
-        <p class="dl-eyebrow">The Canvas engagement layer for K-12 online</p>
         <h1 class="dl-hero__h1" id="hero-heading">
           Canvas delivers content.
           <strong>Delphinium delivers <em>engagement</em>.</strong>
         </h1>
         <p class="dl-hero__lead">Delphinium turns the Canvas courses you already run into <b>engaging student experiences</b> and an <b>early-warning system</b> for teachers. No migration and no extra work. Just turn it on.</p>
         <div class="dl-hero__actions">
-          <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014">Schedule a demo</a>
+          <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
           <a class="dl-link" href="https://stream.mux.com/LoTwl8xXgp9g14ewgXHaehN71e200PFdg5wKCE00TTJkI/capped-1080p.mp4" data-mux="LoTwl8xXgp9g14ewgXHaehN71e200PFdg5wKCE00TTJkI" data-title="Delphinium for K-12 online schools">
             <span class="dl-link__icon" aria-hidden="true"></span>
-            Watch the K-12 overview <small>3:29</small>
+            Watch the K-12 overview
           </a>
         </div>
 
@@ -907,7 +951,7 @@
             <span class="dl-cover__label">fewer course failures</span>
           </div>
           <ul class="dl-cover__points">
-            <li><span class="dl-tick" aria-hidden="true"></span><span><b>About three minutes to turn on.</b> Your existing Canvas courses become Delphinium courses.</span></li>
+            <li><span class="dl-tick" aria-hidden="true"></span><span><b>Go live in less than 3 minutes.</b> Keep Canvas, enhance with Delphinium.</span></li>
             <li><span class="dl-tick" aria-hidden="true"></span><span><b>Zero learning curve.</b> Teachers keep using Canvas exactly as before.</span></li>
             <li><span class="dl-tick" aria-hidden="true"></span><span><b>Built on science.</b> 14 years of published behavioral research.</span></li>
           </ul>
@@ -915,22 +959,9 @@
       </div>
     </section>
 
-    <section class="dl-section dl-case" aria-labelledby="case-heading">
-      <div class="dl-wrap dl-case__grid">
-        <div class="dl-reveal">
-          <p class="dl-eyebrow">The case for engagement</p>
-          <h2 class="dl-h2" id="case-heading">Education moved online. <em>Engagement</em> didn't follow.</h2>
-          <p class="dl-lede">In a classroom, teachers read the room, catch a glance, and stand by the student who is drifting. None of that survives the move to a screen. For an online student, Canvas is the entire school experience, and too often it looks like a gray wall of text.</p>
-        </div>
-        <blockquote class="dl-pull dl-reveal">
-          <p>&ldquo;If you ask kids, they don't like Canvas. It's basic&hellip; it needs something else to engage&hellip;&rdquo;</p>
-          <cite>Ryan Hansen<span>Digital Learning Director, Davis School District</span></cite>
-        </blockquote>
-      </div>
-    </section>
-
     <section class="dl-section dl-mk" id="makeover" aria-labelledby="mk-heading">
       <div class="dl-wrap">
+        <p class="dl-mk__kicker dl-reveal">Education moved online. <em>Engagement</em> didn't.</p>
         <h2 class="dl-mk__title dl-reveal" id="mk-heading">Which class would <strong>YOU</strong> rather take?</h2>
         <p class="dl-mk__sub dl-reveal">On the left, a Canvas module as students usually see it. On the right, Canvas with Delphinium turned on. No new content and no extra work for teachers.</p>
 
@@ -948,20 +979,20 @@
           </figure>
           <figure class="dl-mk__side dl-mk__side--after">
             <span class="dl-pill dl-pill--dl">Canvas + <b>Delphinium!</b></span>
-            <img src="assets/from-prospectus-2026-09-24/makeover-after-delphinium.png" width="996" height="860" alt="The same kind of Canvas course with Delphinium on: a course home with teacher photo, a countdown to the last day to submit, and color-coded weekly unit cards with progress bars." loading="lazy">
+            <img src="assets/from-hied-hires-2026-09-24/makeover-after-delphinium-hires.png" width="1847" height="1575" alt="The same kind of Canvas course with Delphinium on: a course home with teacher photo, a countdown to the last day to submit, and color-coded weekly unit cards with progress bars." loading="lazy">
           </figure>
         </div>
 
         <div class="dl-mk__foot">
           <div class="dl-reveal">
-            <h3>Nothing to rebuild. About three minutes later.</h3>
+            <h3>Go live in less than 3 minutes. Keep Canvas, enhance with Delphinium.</h3>
             <p>Delphinium reads the course you already have. Green is done, blue is in progress, white is not started. A countdown answers the question every online student asks: how much time do I have left? Edit anything in Canvas and it flows through automatically.</p>
           </div>
           <div class="dl-reveal">
             <p>Teachers do not learn a new tool. Students get a course they want to open, and a clear view of where they stand and where they are headed.</p>
             <a class="dl-link" href="https://stream.mux.com/tKbhHrk01Yk89aFYU02CJbJqa002qUZWyNLhuNcuyDUMyY/capped-1080p.mp4" data-mux="tKbhHrk01Yk89aFYU02CJbJqa002qUZWyNLhuNcuyDUMyY" data-title="Gamification in Delphinium">
               <span class="dl-link__icon" aria-hidden="true"></span>
-              See the student experience <small>5:22</small>
+              See the student experience
             </a>
             <p class="dl-mk__cap" style="margin-top:1rem;">Sample course shown. Screens from the Delphinium product.</p>
           </div>
@@ -1006,30 +1037,24 @@
       </div>
     </section>
 
-    <section class="dl-section dl-gap" aria-labelledby="gap-heading">
-      <div class="dl-wrap">
-        <p class="dl-eyebrow">Delphinium turns data into action</p>
-        <h2 class="dl-h2" id="gap-heading">Canvas is data-rich, but <em>insight-poor.</em></h2>
-        <p class="dl-lede">Canvas captures a lot: assignments, gradebook, modules, analytics. But it lives on pages built for storage, not engagement.</p>
-        <ul class="dl-gap__rows">
-          <li class="dl-reveal"><span class="dl-gap__who">The student sees</span><p><b>a gray wall of text.</b> The signals they need, like progress and what to do next, are buried. A struggling student can fade with nothing to pull them back.</p></li>
-          <li class="dl-reveal"><span class="dl-gap__who">The parent wants</span><p><b>to be the cheerleader and coach</b> their kid needs, but gets data without a story they can act on.</p></li>
-          <li class="dl-reveal"><span class="dl-gap__who">The teacher faces</span><p><b>hours of slow manual work</b> to find and reach at-risk students, one at a time. Paid for in lost evenings.</p></li>
-        </ul>
-        <p class="dl-gap__close">What you need is a way to turn that data into action: <span>Delphinium.</span></p>
+    <section class="dl-midcta" aria-labelledby="mid-cta-heading">
+      <div class="dl-wrap dl-midcta__inner">
+        <h2 id="mid-cta-heading">Ready to transform your Canvas?</h2>
+        <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
       </div>
     </section>
 
-    <section class="dl-section dl-products" id="product" aria-labelledby="product-heading" style="padding-top:clamp(4rem,9vw,7rem);">
+    <section class="dl-section dl-products" id="product" aria-labelledby="product-heading">
       <div class="dl-wrap">
         <p class="dl-eyebrow">What your school gets</p>
-        <h2 class="dl-h2" id="product-heading">One layer over Canvas. Students, teachers, and families all <em>see the same picture.</em></h2>
+        <h2 class="dl-h2" id="product-heading">Do more, <em>in less time.</em></h2>
+        <p class="dl-lede">One layer over Canvas, so students, teachers, and families all see the same picture.</p>
 
         <article class="dl-prod" aria-labelledby="core-heading">
           <div class="dl-reveal">
             <p class="dl-prod__tag dl-prod__tag--core">Delphinium Core · Control Tower</p>
-            <h3 id="core-heading">Know where every student stands, and act on it without leaving the page.</h3>
-            <p class="dl-prod__sub">Turn Delphinium on and your existing courses become an early-warning system, so teachers can step in before a slipping grade becomes a failed course.</p>
+            <h3 id="core-heading">Turn Canvas into an early-warning system.</h3>
+            <p class="dl-prod__sub">Canvas is data-rich, but insight-poor. Control Tower turns that data into action, so teachers know where every student stands and can step in before a slipping grade becomes a failed course.</p>
             <ul class="dl-list">
               <li>Every student red, yellow, or green from live Canvas data</li>
               <li>Click any student for grades, progress, engagement, and who is observing</li>
@@ -1043,13 +1068,13 @@
             <div class="dl-prod__more">
               <a class="dl-link" href="https://stream.mux.com/bVXbIyK200RWbCuLWzSFX102TIn4HekyW4XZfV01L01FyaA/capped-1080p.mp4" data-mux="bVXbIyK200RWbCuLWzSFX102TIn4HekyW4XZfV01L01FyaA" data-title="Data in Delphinium">
                 <span class="dl-link__icon" aria-hidden="true"></span>
-                Watch: Data <small>3:59</small>
+                Watch: Data
               </a>
             </div>
           </div>
           <figure class="dl-prod__media dl-tray dl-tray--mist dl-tray--has-float dl-reveal">
-            <img class="dl-tray__main" src="assets/from-prospectus-2026-09-24/control-tower-roster.png" width="1173" height="773" alt="Control Tower roster: every student in a row with grade, points, and green, yellow, or red activity and status flags." loading="lazy">
-            <img class="dl-tray__float" src="assets/from-prospectus-2026-09-24/control-tower-student-detail.png" width="866" height="776" alt="Student detail panel showing grades, progress, observers, and engagement counts for past due, missing, and late work." loading="lazy">
+            <img class="dl-tray__main" src="assets/from-hied-hires-2026-09-24/control-tower-roster-hires.png" width="2453" height="1619" alt="Control Tower roster: every student in a row with grade, points, and green, yellow, or red activity and status flags." loading="lazy">
+            <img class="dl-tray__float" src="assets/from-hied-hires-2026-09-24/control-tower-student-detail-hires.png" width="2305" height="2064" alt="Student detail panel showing grades, progress, observers, and engagement counts for past due, missing, and late work." loading="lazy">
             <figcaption>Control Tower and student detail. Sample data.</figcaption>
           </figure>
         </article>
@@ -1058,8 +1083,8 @@
           <div class="dl-eb-copy dl-reveal">
             <div>
               <p class="dl-prod__tag dl-prod__tag--eb">Engagement Builder</p>
-              <h3 id="eb-heading">Turn the gray wall of text into a class students want to open.</h3>
-              <p class="dl-prod__sub">When students can see where they stand and where they're headed, they own the journey.</p>
+              <h3 id="eb-heading">Transform Canvas into an engagement engine.</h3>
+              <p class="dl-prod__sub">Turn the gray wall of text into a class students want to open.</p>
             </div>
             <div>
               <ul class="dl-list">
@@ -1071,7 +1096,7 @@
             </div>
           </div>
           <figure class="dl-prod__media dl-tray dl-tray--white dl-reveal">
-            <img class="dl-widgets__lg dl-tray__main" src="assets/from-prospectus-2026-09-24/engagement-widgets.png" width="2359" height="639" alt="Engagement Builder widgets: Who's Near Me alias leaderboard, prize boxes, an avatar, a percent-complete gauge, a performance ring, and achievements." loading="lazy">
+            <img class="dl-widgets__lg dl-tray__main" src="assets/from-hied-hires-2026-09-24/engagement-widgets-hires.png" width="3879" height="1265" alt="Engagement Builder widgets: Who's Near Me alias leaderboard, prize boxes, an avatar, a percent-complete gauge, a performance ring, and achievements." loading="lazy">
             <div class="dl-widgets__sm">
               <img class="dl-tray__main" src="assets/from-prospectus-2026-09-24/engagement-widgets-left.png" width="1176" height="639" alt="Who's Near Me alias leaderboard, prize boxes, and a student avatar." loading="lazy">
               <img class="dl-tray__main" src="assets/from-prospectus-2026-09-24/engagement-widgets-right.png" width="1183" height="639" alt="Percent of assignments complete gauge, performance ring, and achievements." loading="lazy">
@@ -1086,17 +1111,37 @@
             <div class="dl-prod__more" style="margin-top:0;">
               <a class="dl-link" href="https://stream.mux.com/tKbhHrk01Yk89aFYU02CJbJqa002qUZWyNLhuNcuyDUMyY/capped-1080p.mp4" data-mux="tKbhHrk01Yk89aFYU02CJbJqa002qUZWyNLhuNcuyDUMyY" data-title="Gamification in Delphinium">
                 <span class="dl-link__icon" aria-hidden="true"></span>
-                Watch: Gamification <small>5:22</small>
+                Watch: Gamification
               </a>
             </div>
           </div>
         </article>
 
+        <div class="dl-voices dl-reveal" role="group" aria-labelledby="voices-heading">
+          <figure class="dl-voices__face">
+            <img src="assets/from-hied-handout-2026-09-24/portrait-instructor-square.jpg" width="900" height="900" alt="" loading="lazy">
+          </figure>
+          <div>
+            <h3 id="voices-heading">Empower students with clear signals, so they can take charge of their own learning.</h3>
+            <div class="dl-voices__cols">
+              <div>
+                <p class="dl-voices__who">Students say</p>
+                <blockquote>&ldquo;I liked knowing that a little extra effort would make a difference.&rdquo;</blockquote>
+                <blockquote>&ldquo;I saw that I was doing much better than I thought I was.&rdquo;</blockquote>
+              </div>
+              <div>
+                <p class="dl-voices__who">Teachers say</p>
+                <blockquote>&ldquo;Students feel they are getting constant personal attention and feedback&rdquo;</blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <article class="dl-prod dl-prod--flip" aria-labelledby="cb-heading">
           <div class="dl-reveal">
             <p class="dl-prod__tag dl-prod__tag--cb">Community Builder · Message Center</p>
-            <h3 id="cb-heading">Reach the right student at the right moment, without the manual email.</h3>
-            <p class="dl-prod__sub">Stop blasting the whole class. Target exactly the students who need to hear from you.</p>
+            <h3 id="cb-heading">Support students, effortlessly.</h3>
+            <p class="dl-prod__sub">Reach the right student at the right moment, without the manual email. Target exactly the students who need to hear from you.</p>
             <ul class="dl-list">
               <li>Templates and relative-date schedules that follow each teacher across sections and semesters</li>
               <li>Rules like &ldquo;only send if points are below 50&rdquo; reach at-risk students automatically</li>
@@ -1113,52 +1158,31 @@
             <div class="dl-prod__more">
               <a class="dl-link" href="https://stream.mux.com/CG9AfH1Ohcx4Tgz6juR4uFAUDFspppNF1kfrJCxWlk00/capped-1080p.mp4" data-mux="CG9AfH1Ohcx4Tgz6juR4uFAUDFspppNF1kfrJCxWlk00" data-title="Communication in Delphinium">
                 <span class="dl-link__icon" aria-hidden="true"></span>
-                Watch: Communication <small>6:18</small>
+                Watch: Communication
               </a>
             </div>
           </div>
           <figure class="dl-prod__media dl-tray dl-tray--sky dl-tray--has-float dl-reveal">
-            <img class="dl-tray__main" src="assets/from-prospectus-2026-09-24/message-center.png" width="1626" height="1137" alt="Message Center templates: Welcome to Class, Student Support Follow-Up, Weekly Progress Report, and Low Activity Warning, with default and disable settings." loading="lazy">
-            <img class="dl-tray__float" src="assets/from-prospectus-2026-09-24/community-builder-create-message.png" width="835" height="794" alt="Create Message window with a personalized message to struggling students and an option to include observers." loading="lazy">
+            <img class="dl-tray__main" src="assets/from-hied-hires-2026-09-24/message-center-schedule-hires.png" width="2194" height="1400" alt="Message Center templates: Welcome to Class, Student Support Follow-Up, Weekly Progress Report, and Low Activity Warning, with default and disable settings." loading="lazy">
+            <img class="dl-tray__float" src="assets/from-hied-hires-2026-09-24/community-builder-create-message-hires.png" width="2131" height="2021" alt="Create Message window with a personalized message to struggling students and an option to include observers." loading="lazy">
             <figcaption>School-wide Message Center templates and the message composer.</figcaption>
           </figure>
         </article>
       </div>
     </section>
 
-    <section class="dl-section dl-how" aria-labelledby="how-heading">
-      <div class="dl-wrap">
-        <p class="dl-eyebrow">How it works</p>
-        <h2 class="dl-h2" id="how-heading">Turn it on. Teachers keep teaching in Canvas.</h2>
-        <div class="dl-how__cards">
-          <div class="dl-how__card dl-reveal">
-            <span class="dl-how__icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"/><path d="M10 3v6L4.5 18.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3"/><path d="M7.5 15h9"/></svg>
-            </span>
-            <h3>Built on science</h3>
-            <p>14 years of published research in self-regulated learning, behavioral economics, and social presence, built into the design.</p>
-          </div>
-          <div class="dl-how__card dl-reveal">
-            <span class="dl-how__icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
-            </span>
-            <h3>Lightning fast setup</h3>
-            <p>About three minutes per course. No migration and nothing to rebuild. Your existing Canvas courses become Delphinium courses.</p>
-          </div>
-          <div class="dl-how__card dl-reveal">
-            <span class="dl-how__icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="m8 11 3 3 5-5"/><path d="M8 21h8"/></svg>
-            </span>
-            <h3>Zero learning curve</h3>
-            <p>Teachers keep using Canvas exactly as before. Edits in Canvas flow through automatically, so there are never two systems to maintain.</p>
-          </div>
+    <section class="dl-how" aria-labelledby="how-heading">
+      <div class="dl-wrap dl-how__inner">
+        <h2 id="how-heading">Turn it on. Teachers keep teaching in Canvas.</h2>
+        <div>
+          <p>Built on 14 years of published research in self-regulated learning, behavioral economics, and social presence. Edits in Canvas flow through automatically, so there are never two systems to maintain.</p>
+          <p class="dl-trust" aria-label="Platform notes">
+            <span>Canvas LTI 1.3</span>
+            <span>FERPA</span>
+            <span>Alias-based leaderboards</span>
+            <span>Chromebook-friendly</span>
+          </p>
         </div>
-        <p class="dl-trust" aria-label="Platform notes">
-          <span>Canvas LTI 1.3</span>
-          <span>FERPA</span>
-          <span>Alias-based leaderboards</span>
-          <span>Chromebook-friendly</span>
-        </p>
       </div>
     </section>
 
@@ -1168,24 +1192,21 @@
         <h2 class="dl-h2" id="videos-heading">Hear it from the directors and teachers who use it.</h2>
         <div class="dl-videos__grid">
           <figure class="dl-vid dl-vid--feature dl-reveal">
-            <a class="dl-play" href="https://stream.mux.com/LoTwl8xXgp9g14ewgXHaehN71e200PFdg5wKCE00TTJkI/capped-1080p.mp4" data-mux="LoTwl8xXgp9g14ewgXHaehN71e200PFdg5wKCE00TTJkI" data-title="Delphinium for K-12 online schools" aria-label="Play: Delphinium for K-12 online schools, 3 minutes 29 seconds">
+            <a class="dl-play" href="https://stream.mux.com/LoTwl8xXgp9g14ewgXHaehN71e200PFdg5wKCE00TTJkI/capped-1080p.mp4" data-mux="LoTwl8xXgp9g14ewgXHaehN71e200PFdg5wKCE00TTJkI" data-title="Delphinium for K-12 online schools" aria-label="Play: Delphinium for K-12 online schools">
               <img src="https://image.mux.com/LoTwl8xXgp9g14ewgXHaehN71e200PFdg5wKCE00TTJkI/thumbnail.jpg?time=3&amp;width=1280" width="1280" height="720" alt="" loading="lazy">
               <span class="dl-play__btn" aria-hidden="true"></span>
-              <span class="dl-play__dur" aria-hidden="true">3:29</span>
             </a>
             <figcaption><b>Delphinium for K-12 online schools</b><span>A quick look at Delphinium in K-12 online courses.</span></figcaption>
           </figure>
           <figure class="dl-vid dl-reveal">
-            <a class="dl-play" href="https://stream.mux.com/32SFE7z1kEHl4JU01lvaXzTMg01kxeKQt4TeHQEjh4Fb8/capped-1080p.mp4" data-mux="32SFE7z1kEHl4JU01lvaXzTMg01kxeKQt4TeHQEjh4Fb8" data-title="Digital Learning and Curriculum Directors" aria-label="Play: Digital Learning and Curriculum Directors, 5 minutes 42 seconds">
+            <a class="dl-play" href="https://stream.mux.com/32SFE7z1kEHl4JU01lvaXzTMg01kxeKQt4TeHQEjh4Fb8/capped-1080p.mp4" data-mux="32SFE7z1kEHl4JU01lvaXzTMg01kxeKQt4TeHQEjh4Fb8" data-title="Digital Learning and Curriculum Directors" aria-label="Play: Digital Learning and Curriculum Directors">
               <img src="https://delphi-me.com/hs-fs/hubfs/directorthumb.png?width=960&amp;name=directorthumb.png" width="960" height="540" alt="" loading="lazy">
-              <span class="dl-play__dur" aria-hidden="true">5:42</span>
             </a>
             <figcaption><b>For digital learning and curriculum directors</b><span>Dr. Ryan Hansen, Director of Digital Learning</span></figcaption>
           </figure>
           <figure class="dl-vid dl-reveal">
-            <a class="dl-play" href="https://stream.mux.com/qHMrqxfysc8NPiOTXwvqkbrZk7iEWdHpK00i36GbmBRo/capped-1080p.mp4" data-mux="qHMrqxfysc8NPiOTXwvqkbrZk7iEWdHpK00i36GbmBRo" data-title="Teachers and Instructional Coaches" aria-label="Play: Teachers and Instructional Coaches, 5 minutes 52 seconds">
+            <a class="dl-play" href="https://stream.mux.com/qHMrqxfysc8NPiOTXwvqkbrZk7iEWdHpK00i36GbmBRo/capped-1080p.mp4" data-mux="qHMrqxfysc8NPiOTXwvqkbrZk7iEWdHpK00i36GbmBRo" data-title="Teachers and Instructional Coaches" aria-label="Play: Teachers and Instructional Coaches">
               <img src="https://delphi-me.com/hs-fs/hubfs/teacherthumb.png?width=960&amp;name=teacherthumb.png" width="960" height="540" alt="" loading="lazy">
-              <span class="dl-play__dur" aria-hidden="true">5:52</span>
             </a>
             <figcaption><b>For teachers and instructional coaches</b><span>Natalie Niederhauser, Math Teacher</span></figcaption>
           </figure>
@@ -1197,7 +1218,7 @@
       <div class="dl-wrap">
         <h2 id="close-heading">See Delphinium on one of your Canvas courses.</h2>
         <p>Meet Jared, the person behind Delphinium. See how it could work in your Canvas courses and get your questions answered.</p>
-        <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014">Schedule a demo</a>
+        <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
         <p class="dl-close__small">No migration to plan. Nothing to install before the call. You stay in Canvas.</p>
       </div>
     </section>
@@ -1209,22 +1230,33 @@
           <h2 class="visually-hidden" id="he-heading">Higher Ed Online</h2>
           <p>Running online programs in Canvas at a college or university? In Higher Ed Online sections with Delphinium, we've seen <b>as much as 47% lower course failure</b> and <b>as much as 67% lower withdrawal</b>. Ask for the study context that matches your campus.</p>
         </div>
-        <a class="dl-link" href="https://jared-delphi-me.zohobookings.com/4937208000000036014">Schedule a demo &rarr;</a>
+        <a class="dl-link" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo &rarr;</a>
       </div>
     </section>
   </main>
 
   <footer class="dl-footer">
     <div class="dl-wrap dl-footer__inner">
-      <span class="dl-footer__logo"><img src="https://delphi-me.com/hubfs/Delphinium%20Logo.png" width="663" height="471" alt="Delphinium" loading="lazy"></span>
+      <span class="dl-footer__logo"><img src="assets/from-hied-hires-2026-09-24/delphinium-wordmark.svg" width="225" height="155" alt="Delphinium" loading="lazy"></span>
       <nav aria-label="Footer">
-        <a href="https://jared-delphi-me.zohobookings.com/4937208000000036014">Schedule a demo</a>
+        <a href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
         <a href="#highered">Higher Ed Online</a>
         <a href="https://www.youtube.com/@DelphiniumEngagement" target="_blank" rel="noopener noreferrer">YouTube</a>
         <a href="https://delphi-me.com/contact-us">Contact</a>
       </nav>
     </div>
   </footer>
+
+  <div class="dl-modal dl-modal--book" id="dl-book-modal" hidden>
+    <div class="dl-modal__backdrop" data-book-close></div>
+    <div class="dl-modal__box" role="dialog" aria-modal="true" aria-labelledby="dl-book-title">
+      <div class="dl-modal__bar">
+        <p class="dl-modal__title" id="dl-book-title">Schedule a demo</p>
+        <button type="button" class="dl-modal__close" data-book-close aria-label="Close scheduling">&times;</button>
+      </div>
+      <div class="dl-modal__frame" id="dl-book-frame"></div>
+    </div>
+  </div>
 
   <div class="dl-modal" id="dl-modal" hidden>
     <div class="dl-modal__backdrop" data-close></div>
@@ -1322,6 +1354,67 @@
         if (ev.key === "Escape" && !modal.hidden) closeVideo();
       });
     })();
-  </script>
+      /* Zoho Bookings: preload portal-embed iframe; Schedule CTAs open modal instantly */
+      (function () {
+        var BOOK_URL = "https://jared-delphi-me.zohobookings.com/portal-embed#/4937208000000036014";
+        var FALLBACK = "https://jared-delphi-me.zohobookings.com/4937208000000036014";
+        var bookModal = document.getElementById("dl-book-modal");
+        var bookFrame = document.getElementById("dl-book-frame");
+        if (!bookModal || !bookFrame) return;
+        var iframe = null;
+        var lastFocus = null;
+
+        function ensureIframe() {
+          if (iframe) return iframe;
+          iframe = document.createElement("iframe");
+          iframe.src = BOOK_URL;
+          iframe.title = "Schedule a demo";
+          iframe.setAttribute("allowfullscreen", "");
+          iframe.setAttribute("loading", "eager");
+          bookFrame.appendChild(iframe);
+          return iframe;
+        }
+
+        function openBook(e) {
+          if (e) e.preventDefault();
+          lastFocus = document.activeElement;
+          ensureIframe();
+          bookModal.hidden = false;
+          document.documentElement.style.overflow = "hidden";
+          var closeBtn = bookModal.querySelector(".dl-modal__close");
+          if (closeBtn) closeBtn.focus();
+        }
+
+        function closeBook() {
+          bookModal.hidden = true;
+          document.documentElement.style.overflow = "";
+          if (lastFocus && lastFocus.focus) lastFocus.focus();
+        }
+
+        document.querySelectorAll("[data-bookings-open]").forEach(function (el) {
+          el.addEventListener("click", openBook);
+        });
+
+        bookModal.querySelectorAll("[data-book-close]").forEach(function (el) {
+          el.addEventListener("click", closeBook);
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && !bookModal.hidden) closeBook();
+        });
+
+        function warm() { ensureIframe(); }
+        if ("requestIdleCallback" in window) {
+          requestIdleCallback(warm, { timeout: 2000 });
+        } else {
+          setTimeout(warm, 800);
+        }
+
+        // Official API still available if we ever want floating button:
+        // Bookings.buttonModal({ url: BOOK_URL, text: "Schedule a demo", color: "#c7007a", position: "bottom-right" });
+        window.dlOpenBookings = openBook;
+        window.dlBookingsFallback = FALLBACK;
+      })();
+
+</script>
 </body>
 </html>
