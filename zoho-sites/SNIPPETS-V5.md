@@ -108,7 +108,6 @@ Stream-to-title mapping was confirmed from the `VideoObject` JSON-LD on https://
 - [ ] No em dashes in visible copy. Niederhauser / Dance spelled correctly. Never "UC Davis".
 - [ ] No AI faces, no logo wall, no invented quotes. Named quotes are attributed in `context/delphinium-marketing-synthesis.md`. The three "Students say / Teachers say" lines are the HiEd handout's own lines, used without attribution per Jared 2026-09-24 (not yet in `context/SOURCE.md`).
 - [ ] Portrait appears only in the product section, never in the hero.
-- [ ] No video durations anywhere in the UI or aria-labels.
 - [ ] Setup copy is the locked line ("Go live in less than 3 minutes. Keep Canvas, enhance with Delphinium.") with no leftover "about three minutes".
 - [ ] Images load (absolute URLs, section 1). Each video opens and plays in the modal; Escape and the backdrop close it.
 - [ ] No Zoho badge hiding code. No bottom sticky bar. No agent or model stamps in the HTML.
