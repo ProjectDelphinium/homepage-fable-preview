@@ -271,11 +271,14 @@
     .dl-cover__upto {
       display: block;
       font-family: var(--font-display);
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 600;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
       color: var(--navy);
+      line-height: 1.25;
+      max-width: 14ch;
+      margin: 0 auto 0.35rem;
     }
     .dl-cover__num {
       display: block;
@@ -417,7 +420,7 @@
       margin-top: 2rem;
       display: grid;
       gap: 2rem;
-      align-items: end;
+      align-items: start;
     }
     .dl-mk__side { margin: 0; display: grid; justify-items: center; gap: 1rem; }
     .dl-mk__side img { width: 100%; border-radius: 18px; }
@@ -585,6 +588,8 @@
     .dl-prod__tag--cb { background: color-mix(in srgb, var(--blue) 12%, transparent); color: var(--blue); }
     .dl-prod h3 {
       margin: 0;
+      font-family: var(--font-display);
+      font-weight: 700;
       font-size: clamp(1.6rem, 3.2vw, 2.3rem);
       line-height: 1.1;
       letter-spacing: -0.01em;
@@ -945,10 +950,9 @@
         </div>
 
         <div class="dl-cover dl-reveal">
-          <div class="dl-cover__stat">
-            <span class="dl-cover__upto">Up to</span>
+          <div class="dl-cover__stat" aria-label="Cut failures by up to 31 percent">
+            <span class="dl-cover__upto">Cut failures by up to</span>
             <span class="dl-cover__num">31%</span>
-            <span class="dl-cover__label">fewer course failures</span>
           </div>
           <ul class="dl-cover__points">
             <li><span class="dl-tick" aria-hidden="true"></span><span><b>Go live in less than 3 minutes.</b> Keep Canvas, enhance with Delphinium.</span></li>
@@ -963,7 +967,7 @@
       <div class="dl-wrap">
         <p class="dl-mk__kicker dl-reveal">Education moved online. <em>Engagement</em> didn't.</p>
         <h2 class="dl-mk__title dl-reveal" id="mk-heading">Which class would <strong>YOU</strong> rather take?</h2>
-        <p class="dl-mk__sub dl-reveal">On the left, a Canvas module as students usually see it. On the right, Canvas with Delphinium turned on. No new content and no extra work for teachers.</p>
+        <p class="dl-mk__sub dl-reveal">In a classroom, teachers can read the room. Online, Canvas is the whole school day, and too often it looks like a gray wall of text. On the left, a Canvas module as students usually see it. On the right, Canvas with Delphinium turned on. No new content and no extra work for teachers.</p>
 
         <div class="dl-seg" role="group" aria-label="Compare Canvas and Canvas plus Delphinium">
           <div class="dl-seg__inner">
@@ -975,7 +979,7 @@
         <div class="dl-mk__stage" id="mk-stage" data-view="after">
           <figure class="dl-mk__side dl-mk__side--before">
             <span class="dl-pill dl-pill--canvas">Canvas</span>
-            <img src="assets/from-prospectus-2026-09-24/makeover-before-canvas.png" width="722" height="846" alt="A standard Canvas module: a gray list of pages, PDFs, and assignments for Unit 5, Nuclear Chemistry." loading="lazy">
+            <img src="assets/from-hied-hires-2026-09-24/makeover-before-canvas-hires.png" width="747" height="762" alt="A standard Canvas module: a gray list of pages, PDFs, and assignments for Unit 5, Nuclear Chemistry." loading="lazy">
           </figure>
           <figure class="dl-mk__side dl-mk__side--after">
             <span class="dl-pill dl-pill--dl">Canvas + <b>Delphinium!</b></span>
@@ -1322,6 +1326,25 @@
       var frame = modal.querySelector(".dl-modal__frame");
       var title = document.getElementById("dl-modal-title");
       var lastFocus = null;
+      function videoLabel(el) {
+        var clone = el.cloneNode(true);
+        clone.querySelectorAll("[aria-hidden=\"true\"]").forEach(function (n) { n.remove(); });
+        var fromBtn = (clone.textContent || "").replace(/\s+/g, " ").trim();
+        if (fromBtn) return fromBtn;
+        var fig = el.closest("figure");
+        if (fig) {
+          var cap = fig.querySelector("figcaption b");
+          if (cap) {
+            var fromCap = (cap.textContent || "").replace(/\s+/g, " ").trim();
+            if (fromCap) return fromCap;
+          }
+        }
+        var aria = el.getAttribute("aria-label") || "";
+        if (aria.indexOf("Play: ") === 0) aria = aria.slice(6);
+        aria = aria.replace(/\s+/g, " ").trim();
+        if (aria) return aria;
+        return el.getAttribute("data-title") || "Delphinium video";
+      }
       function openVideo(id, name) {
         lastFocus = document.activeElement;
         var src = "https://player.mux.com/" + id + "?autoplay=true&accent-color=%23c7007a&metadata-video-title=" + encodeURIComponent(name);
@@ -1346,7 +1369,7 @@
       document.querySelectorAll("[data-mux]").forEach(function (el) {
         el.addEventListener("click", function (ev) {
           ev.preventDefault();
-          openVideo(el.getAttribute("data-mux"), el.getAttribute("data-title") || "Delphinium video");
+          openVideo(el.getAttribute("data-mux"), videoLabel(el));
         });
       });
       modal.querySelectorAll("[data-close]").forEach(function (el) { el.addEventListener("click", closeVideo); });
