@@ -85,7 +85,9 @@ Stream-to-title mapping was confirmed from the `VideoObject` JSON-LD on https://
 3. **Proof:** Davis Connect **31%** with full study context, 72% motivating, "Fun.", Netflix quote, Tiffany Dance.
 4. **Mid-page ask:** "Ready to transform your Canvas?" + Schedule a demo (Bookings modal).
 5. **Do more, in less time:** Core ("Turn Canvas into an early-warning system", carries the data-rich / insight-poor line), Engagement Builder ("Transform Canvas into an engagement engine"), face + "take charge of their own learning" with unattributed handout quotes, Community Builder ("Support students, effortlessly") with the families callout.
-6. **How it works (trust strip):** one sentence + Canvas LTI 1.3 / FERPA / alias leaderboards / Chromebook chips. The hero already carries the three-minute / zero learning curve / science trio.
+6. **How it works (trust strip):** one sentence + Canvas LTI 1.3 / FERPA / alias leaderboards / Chromebook chips. The hero already carries the setup / zero learning curve / science trio.
+
+**Locked setup line (Jared 2026-09-24):** "Go live in less than 3 minutes. Keep Canvas, enhance with Delphinium." Used verbatim in the hero tick and as the Makeover foot heading. Do not reintroduce "about three minutes" wording anywhere on the page.
 7. **Videos:** K-12 sizzle, directors, teachers and coaches.
 8. **Close:** Schedule a demo. Then a quiet Higher Ed Online band.
 
@@ -103,5 +105,6 @@ Removed in the light revise: the standalone "Case for engagement" section (now t
 - [ ] No AI faces, no logo wall, no invented quotes. Named quotes are attributed in `context/delphinium-marketing-synthesis.md`. The three "Students say / Teachers say" lines are the HiEd handout's own lines, used without attribution per Jared 2026-09-24 (not yet in `context/SOURCE.md`).
 - [ ] Portrait appears only in the product section, never in the hero.
 - [ ] No video durations anywhere in the UI or aria-labels.
+- [ ] Setup copy is the locked line ("Go live in less than 3 minutes. Keep Canvas, enhance with Delphinium.") with no leftover "about three minutes".
 - [ ] Images load (absolute URLs, section 1). Each video opens and plays in the modal; Escape and the backdrop close it.
 - [ ] No Zoho badge hiding code. No bottom sticky bar. No agent or model stamps in the HTML.

@@ -31,6 +31,8 @@ Peak order holds: Makeover, Davis, motivation / Fun / Tiffany, families supporti
 - **Product:** H2 "Do more, in less time." Core H3 "Turn Canvas into an early-warning system." Engagement Builder H3 "Transform Canvas into an engagement engine." (sub keeps the single remaining "gray wall of text" line). Community Builder H3 "Support students, effortlessly." (comma, not the handout's em dash). Product names stay as tags. Lists, Natalie, Tiffany, stats, videos, and the families callout are unchanged.
 - **Face + quotes:** the handout's owned stock portrait (square crop, circular frame) sits after Engagement Builder next to "Empower students with clear signals, so they can take charge of their own learning." with "Students say" (2 lines) and "Teachers say" (1 line), exact handout wording and no attribution, per Jared. The optional Natalie one-on-one line was skipped: Natalie already appears twice. The portrait has empty alt text so it isn't read as the quoted person. No face in the hero.
 - **How it works:** the three cards repeated the hero trio. Now one row: heading, one sentence (14 years of research + edits flow through automatically), and trust chips.
+- **Nav hairline:** the full-width nav border cut through the wordmark. It is now a `.dl-nav::after` line that starts after the 128px logo plus the nav gap (Jared ask).
+- **Setup line (Jared locked):** "Go live in less than 3 minutes. Keep Canvas, enhance with Delphinium." replaces the hero tick ("About three minutes to turn on...") and the Makeover foot heading ("Nothing to rebuild. About three minutes later."). The "Lightning fast setup" card was already gone with the trust-strip shrink, and the strip has no minutes wording, so nothing conflicts.
 - **Videos:** all durations removed from text links, card overlays, and aria-labels (Jared ask). Mux poster `?time=` frame picks are kept.
 - **Housekeeping:** `width`/`height` attributes now match the refreshed hi-res PNGs (the zoho-ready values were from an older export). The Makeover "before" side uses the clean prospectus crop: the hi-res crop includes a "Which class would" fragment, a second Canvas pill, part of the handout photo, and cuts off the last module row. Fixed a pre-existing reduced-motion bug where both Makeover sides showed stacked on mobile.
 
@@ -40,7 +42,7 @@ Davis Connect 31% with study context, up to 31% in the hero, 72%, "Fun.", Netfli
 
 ## Open for Jared / Web Design
 
-- **SOURCE sync:** the three unattributed handout quotes are cleared by Jared in the GO brief but are not in `context/SOURCE.md` yet. Add a dated line there so future agents don't strip them.
+- **SOURCE sync:** the three unattributed handout quotes are cleared by Jared in the GO brief but are not in `context/SOURCE.md` yet. Add a dated line there so future agents don't strip them. Same for the locked setup line: SOURCE still says "in about three minutes".
 - **DRAFT strip:** removed per the zoho-ready staging convention. The workspace rule still says to keep a draft banner until Zoho staging. This page is the Zoho staging build, so that's consistent, but re-add the strip if it ships anywhere public first.
 - **Student photo:** no smiling-student crop exists in repo assets, so the instructor portrait is used. Swap in the student crop if one turns up.
 - **HE twin site:** later IA item (audience switch, HE videos/stats, no parents). Not built.
