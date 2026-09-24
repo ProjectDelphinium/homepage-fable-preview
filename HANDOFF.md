@@ -177,9 +177,9 @@ See `docs/CURSOR_AGENT_PROMPT.md`.
 Prospectus-story remake is on `main` (commit fc903b2). Sequence: bold+Davis 31% → silence problem → Makeover → 72%/Fun → research why → Tiffany/Natalie/Ryan → Core/CB/EB → supporting beats → CTA up to 31%. Framing still unlocked.
 
 ## Sites v5 (2026-09-24)
-Reset to Sites v2 and rebuilt on the prospectus arc: `zoho-sites/homepage-sites-v5.html` + `zoho-sites/SNIPPETS-V5.md` (brief: `design-loop/2026-09-24/BRIEF-V5.md`). Real Makeover and product UI from the prospectus in `zoho-sites/assets/from-prospectus-2026-09-24/`, live delphi-me Mux videos, all Schedule CTAs to the Zoho Bookings URL.
+Reset to Sites v2 and rebuilt on the prospectus arc: `zoho-sites/homepage-sites-v5.html` + `zoho-sites/SNIPPETS-V5.md` (brief: `design-loop/2026-09-24/BRIEF-V5.md`). Real Makeover and product UI from the prospectus / hires packs, live delphi-me Mux videos, all Schedule CTAs to the Zoho Bookings URL via Sites modal + portal-embed.
 
-- **Light revise (2026-09-24):** handout pacing applied to v5 (Case cut to a kicker, mid-page CTA after Proof, insight-poor folded into Control Tower, "Do more, in less time" product frame, face + handout quotes near Engagement Builder, no video durations). See `design-loop/2026-09-24/LIGHT-REVISE-NOTES.md`.
+- **zoho-ready pack on `main` (2026-09-24):** live-intended Sites HTML from Web Design. Case section **restored** (plain-weight "Education moved online," + "teachers can read the room"); cover "Cut failures by up to" / 31%; `videoLabel(el)` for modal titles; Makeover stages `align-items: start` + Canvas-only before crop (`module-only-20260924b`). Supersedes the light-revise kicker-only Case cut.
 - **HE twin site (later):** K-12 staging is the current path. A Higher Ed twin with an audience switch (like delphi-me.com's top choice), its own videos and stats, and no parents is a later IA item. Not built yet.
 
 ## Marketing 2026-09-06

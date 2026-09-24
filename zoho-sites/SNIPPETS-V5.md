@@ -1,7 +1,7 @@
 # Zoho Sites paste notes: Homepage Sites v5
 
 **Source file:** `zoho-sites/homepage-sites-v5.html` (one self-contained file: inline CSS, one small inline script, no external JS libraries)
-**Brief:** `design-loop/2026-09-24/BRIEF-V5.md` · **Light revise (current):** `design-loop/2026-09-24/LIGHT-REVISE-NOTES.md`
+**Brief:** `design-loop/2026-09-24/BRIEF-V5.md` · **Current pack:** zoho-ready Sites staging pack (case section restored; not the older light-revise kicker-only cut)
 **Baseline:** Sites v2 (`cursor/homepage-sites-v2-craft-ca52`). v3/v4 fan-cut experiments are not carried forward.
 **Claims ceiling:** `context/SOURCE.md`
 **Primary CTA (every Schedule link, 6 total, all open the Bookings modal):** https://jared-delphi-me.zohobookings.com/4937208000000036014
@@ -78,27 +78,31 @@ Stream-to-title mapping was confirmed from the `VideoObject` JSON-LD on https://
 
 **Before HubSpot cutover:** the two `delphi-me.com/hs-fs/hubfs/...` posters are served by HubSpot. Re-host them in the Zoho gallery before HubSpot is turned off. Mux URLs are independent of HubSpot.
 
-## 5. Page map (light revise, 2026-09-24)
+## 5. Page map (zoho-ready pack, 2026-09-24)
 
-1. **Hero:** Canvas delivers content. Delphinium delivers engagement. Promise uses **up to 31%**. Schedule a demo + K-12 video. Text only, no face.
-2. **Makeover peak:** one-line kicker "Education moved online. Engagement didn't." then "Which class would YOU rather take?" with the real before/after. Desktop shows both side by side (Delphinium side slides in once). Mobile shows a Canvas / Canvas + Delphinium toggle that flips to Delphinium once on first view.
-3. **Proof:** Davis Connect **31%** with full study context, 72% motivating, "Fun.", Netflix quote, Tiffany Dance.
-4. **Mid-page ask:** "Ready to transform your Canvas?" + Schedule a demo (Bookings modal).
-5. **Do more, in less time:** Core ("Turn Canvas into an early-warning system", carries the data-rich / insight-poor line), Engagement Builder ("Transform Canvas into an engagement engine"), face + "take charge of their own learning" with unattributed handout quotes, Community Builder ("Support students, effortlessly") with the families callout.
-6. **How it works (trust strip):** one sentence + Canvas LTI 1.3 / FERPA / alias leaderboards / Chromebook chips. The hero already carries the setup / zero learning curve / science trio.
+1. **Hero / cover:** Canvas delivers content. Delphinium delivers engagement. Cover line **"Cut failures by up to" / 31%**. Schedule a demo + K-12 video. Text only, no face.
+2. **Case for engagement (restored):** H2 uses plain weight on the first clause — `<span class="dl-h2__plain">Education moved online,</span>` (comma, not period) then *Engagement* didn't follow. Lede includes **"teachers can read the room"**.
+3. **Makeover peak:** "Which class would YOU rather take?" with before/after. Stages use `align-items: start`. Before image is Canvas-only hires crop (`module-only-20260924b` cache-bust). Desktop side by side; mobile Canvas / Canvas + Delphinium toggle.
+4. **Proof:** Davis Connect **31%** with full study context, 72% motivating, "Fun.", Netflix quote, Tiffany Dance.
+5. **Mid-page ask:** Schedule a demo (Sites Bookings modal + portal-embed — not Zoho Button/Link widgets).
+6. **Product:** Core / Engagement Builder / face + handout quotes / Community Builder with families callout.
+7. **How it works (trust strip):** Canvas LTI 1.3 / FERPA / alias leaderboards / Chromebook chips.
+8. **Videos:** modal titles via `videoLabel(el)` match the button labels. No durations in the UI.
+9. **Close:** Schedule a demo. Then a quiet Higher Ed Online band.
 
-**Locked setup line (Jared 2026-09-24):** "Go live in less than 3 minutes. Keep Canvas, enhance with Delphinium." Used verbatim in the hero tick and as the Makeover foot heading. Do not reintroduce "about three minutes" wording anywhere on the page.
-7. **Videos:** K-12 sizzle, directors, teachers and coaches.
-8. **Close:** Schedule a demo. Then a quiet Higher Ed Online band.
+**Locked setup line (Jared 2026-09-24):** "Go live in less than 3 minutes. Keep Canvas, enhance with Delphinium." Used verbatim where present. Do not reintroduce "about three minutes" wording.
 
-Removed in the light revise: the standalone "Case for engagement" section (now the kicker) and the standalone "insight-poor" section (now in Core copy).
+**Supersedes light-revise kicker-only story:** the standalone Case section is **back** (not collapsed to a Makeover kicker). Schedule stays Sites modal + portal-embed.
 
 **HE twin site (later, not built):** K-12 staging is the current path. A Higher Ed audience twin (an audience switch like delphi-me.com's top choice, different videos and stats, no parents on HE) is a later IA item.
 
 ## 6. Verify before Jared share
 
 - [ ] All 6 **Schedule a demo** links go to the Bookings URL above and open the modal. Escape and the backdrop close it.
-- [ ] Hero says **up to 31%**. Exact **31%** only in the Davis Connect card with 72 classes / 6,000 students / same courses, teachers, content.
+- [ ] Hero/cover says **Cut failures by up to** / **31%** (promise). Exact **31%** only in the Davis Connect card with 72 classes / 6,000 students / same courses, teachers, content.
+- [ ] Case section present: H2 plain clause "Education moved online," (comma) and lede "teachers can read the room".
+- [ ] Video modal titles come from `videoLabel(el)` matching the button labels; no durations in UI or aria-labels.
+- [ ] Schedule CTAs use Sites Bookings modal + portal-embed (`data-bookings-open`), not Zoho Button/Link widgets.
 - [ ] No "Cut failures by up to 47%" or "Reduce absenteeism" on this K-12 page. 47% appears only in the quiet HE band as "as much as 47%".
 - [ ] No BYU name, pricing, hold dates, go-live targets, or PDF-only numbers (attendance, NAEP, $229K, 26% vs 18%, 125,000 enrollments, 100 languages).
 - [ ] No em dashes in visible copy. Niederhauser / Dance spelled correctly. Never "UC Davis".
