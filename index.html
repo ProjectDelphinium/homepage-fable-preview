@@ -1,612 +1,1420 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Delphinium: Canvas delivers content. Delphinium delivers engagement.</title>
-<meta name="description" content="Delphinium is the Canvas engagement layer for virtual and online K-12 schools. Turn it on in about three minutes. Up to 31% fewer course failures.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,50..100&family=Nunito+Sans:opsz,wght@6..12,300..900&display=swap" rel="stylesheet">
-<style>
-:root{
-  --ink:#15132b; --ink2:#3a3757; --mute:#7a7790;
-  --paper:#fbf9f4; --paper2:#f1eee6;
-  --sun:#ffd23f; --blue:#2f5bea; --blue-ink:#1b2d6e;
-  --green:#22a06b; --amber:#f5a524; --red:#e5484d;
-  --display:"Fraunces",Georgia,"Times New Roman",serif;
-  --body:"Nunito Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-  --w:1120px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.5;font-size:18px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.015em;line-height:1.02;margin:0}
-p{margin:0}
-a{color:inherit}
-.wrap{width:min(var(--w),calc(100% - 48px));margin:0 auto}
-.screen{min-height:100vh;display:flex;align-items:center;padding:120px 0}
-.eyebrow{font-weight:800;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:22px;display:inline-flex;align-items:center;gap:10px}
-.eyebrow::before{content:"";width:22px;height:3px;background:currentColor;border-radius:2px}
-.big{font-size:clamp(44px,7vw,104px)}
-.mid{font-size:clamp(34px,4.6vw,64px)}
-.lede{font-size:clamp(19px,1.5vw,23px);max-width:34em;color:var(--ink2);line-height:1.45}
-.btn{display:inline-flex;align-items:center;gap:12px;background:var(--ink);color:#fff;text-decoration:none;font-weight:800;padding:18px 30px;border-radius:999px;font-size:17px;transition:transform .18s ease,box-shadow .18s ease;box-shadow:0 10px 28px rgba(21,19,43,.2)}
-.btn:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(21,19,43,.28)}
-.btn.sun{background:var(--sun);color:var(--ink)}
-.btn .arr{display:inline-block;transition:transform .18s ease}
-.btn:hover .arr{transform:translateX(4px)}
-.small{font-size:14px;color:var(--mute);font-weight:700;letter-spacing:.04em}
-
-/* reveal */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
-.rv.in{opacity:1;transform:none}
-.rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}.rv.d3{transition-delay:.36s}.rv.d4{transition-delay:.48s}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
-
-/* nav */
-.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);background:rgba(251,249,244,.82);border-bottom:1px solid rgba(21,19,43,.08)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:700;font-size:23px}
-.logo i{width:26px;height:26px;border-radius:50%;background:conic-gradient(var(--sun) 0 35%,var(--blue) 35% 70%,var(--green) 70% 100%);display:inline-block}
-.nav .btn{padding:11px 20px;font-size:15px;box-shadow:none}
-
-/* 1 hero */
-.hero{padding:90px 0 110px;position:relative;overflow:hidden}
-.hero .muted{color:var(--mute);font-weight:400}
-.hero h1{max-width:11em}
-.hero h1 .bang{display:inline-block;background:var(--sun);padding:0 .18em;border-radius:.16em;transform:rotate(-1.2deg)}
-.hero .cta{margin-top:40px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
-.proof{margin-top:70px;display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center;border-top:2px solid var(--ink);padding-top:34px}
-.proof .num{font-family:var(--display);font-weight:700;font-size:clamp(84px,12vw,170px);line-height:.85;letter-spacing:-.05em}
-.proof .num small{display:block;font-family:var(--body);font-size:14px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--mute);margin-top:10px}
-.proof .what{font-family:var(--display);font-size:clamp(22px,2.4vw,32px);font-weight:400;line-height:1.25;max-width:20em}
-.proof .ctx{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
-.pill{display:inline-block;padding:7px 13px;border-radius:999px;border:1.5px solid rgba(21,19,43,.18);font-size:13.5px;font-weight:800;letter-spacing:.02em;background:#fff}
-@media (max-width:760px){.proof{grid-template-columns:1fr}}
-
-/* 2 problem */
-.problem{background:var(--ink);color:#fff}
-.problem .lines{display:grid;gap:clamp(18px,3vw,34px);margin-top:50px}
-.problem .lines p{font-family:var(--display);font-weight:400;font-size:clamp(26px,3.6vw,50px);line-height:1.1;color:rgba(255,255,255,.55)}
-.problem .lines p strong{color:#fff;font-weight:600}
-.graywall{margin-top:70px;border-radius:14px;background:#e9e9ec;padding:22px;max-width:640px;position:relative}
-.graywall::after{content:"";position:absolute;inset:auto 0 0 0;height:60%;background:linear-gradient(180deg,rgba(233,233,236,0),var(--ink));border-radius:0 0 14px 14px}
-.gl{height:9px;border-radius:5px;background:#b8b8c2;margin-bottom:11px}
-.gl.t{height:14px;width:48%;background:#8f8f9c;margin-bottom:18px}
-.gl.s{width:78%}.gl.xs{width:60%}
-.problem .hold{margin-top:70px;font-family:var(--display);font-style:italic;font-weight:300;font-size:clamp(20px,2.2vw,28px);color:rgba(255,255,255,.45)}
-
-/* 3 makeover */
-.makeover{background:var(--paper2)}
-.makeover h2{max-width:9em}
-.makeover h2 em{font-style:normal;background:var(--sun);padding:0 .14em;border-radius:.14em}
-.stage{position:relative;margin-top:50px;border-radius:22px;overflow:hidden;box-shadow:0 34px 90px rgba(21,19,43,.22);background:#fff;aspect-ratio:16/9.6;min-height:420px;user-select:none}
-.layer{position:absolute;inset:0}
-.layer.before{background:#f4f4f6;z-index:2;clip-path:inset(0 50% 0 0)}
-.layer.after{background:#fff;z-index:1}
-.course{padding:26px 30px;height:100%;display:grid;grid-template-columns:1fr 290px;gap:26px}
-.course .topbar{grid-column:1/-1;display:flex;align-items:center;gap:14px;font-size:13px;color:#666;padding-bottom:12px;border-bottom:1px solid #e3e3e8}
-.course .topbar b{color:#333}
-.before .main h4{font-family:var(--body);margin:0 0 14px;font-size:16px;font-weight:700;color:#444}
-.before .gl{background:#cfcfd6}.before .gl.t{background:#9a9aa6}
-.before .side .gl{background:#dcdce2}
-.before .lnk{font-size:13.5px;color:#4a6fd0;text-decoration:underline;margin-bottom:8px}
-.divider{position:absolute;top:0;bottom:0;left:50%;width:3px;background:var(--ink);z-index:4;transform:translateX(-50%);pointer-events:none}
-.handle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:62px;height:62px;border-radius:50%;background:var(--ink);color:var(--sun);display:grid;place-items:center;font-size:20px;font-weight:900;letter-spacing:-2px;box-shadow:0 12px 30px rgba(0,0,0,.35);z-index:5;pointer-events:none}
-.stage input[type=range]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:6;margin:0}
-.lbl{position:absolute;top:16px;z-index:5;font-size:12.5px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;padding:8px 12px;border-radius:999px;pointer-events:none}
-.lbl.b{left:16px;background:#dcdce2;color:#555}
-.lbl.a{right:16px;background:var(--sun);color:var(--ink)}
-/* after mock */
-.after .band{grid-column:1/-1;height:74px;border-radius:14px;background:linear-gradient(100deg,var(--blue) 0,#6d8bff 55%,var(--sun) 100%);position:relative;overflow:hidden}
-.after .band b{position:absolute;left:18px;bottom:14px;color:#fff;font-family:var(--display);font-size:20px;font-weight:600}
-.after .band .pts{position:absolute;right:16px;top:14px;background:rgba(21,19,43,.85);color:var(--sun);font-weight:900;font-size:13px;padding:7px 12px;border-radius:999px}
-.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.tile{border-radius:12px;padding:12px 12px 10px;background:#fff;border:1.5px solid #e6e6ec;border-top:5px solid var(--green)}
-.tile.due{border-top-color:var(--amber)}.tile.miss{border-top-color:var(--red)}
-.tile b{display:block;font-size:12.5px;margin-bottom:3px}
-.tile span{font-size:11.5px;color:#777}
-.meter{margin-top:12px;height:12px;border-radius:8px;background:#ececf2;overflow:hidden}
-.meter i{display:block;height:100%;width:64%;background:linear-gradient(90deg,var(--green),#5dd39e);border-radius:8px}
-.mtxt{font-size:12px;color:#666;margin-top:6px;display:flex;justify-content:space-between}
-.after .side{display:grid;gap:12px;align-content:start}
-.student{display:flex;align-items:center;gap:12px;background:#fff;border:1.5px solid #e6e6ec;border-radius:14px;padding:10px 12px}
-.avatar{width:46px;height:46px;border-radius:50%;background:var(--sun);position:relative;flex:0 0 46px;box-shadow:inset 0 -8px 0 rgba(21,19,43,.08)}
-.avatar::before,.avatar::after{content:"";position:absolute;top:12px;width:13px;height:13px;background:#fff;border-radius:50%;box-shadow:inset -3.5px 2px 0 0 var(--ink)}
-.avatar::before{left:9px}.avatar::after{right:9px}
-.avatar i{position:absolute;bottom:9px;left:15px;width:14px;height:6px;border-bottom:2.5px solid var(--ink);border-radius:0 0 8px 8px}
-.student b{display:block;font-size:13.5px}.student span{font-size:12px;color:#777}
-.nextup{background:var(--ink);color:#fff;border-radius:12px;padding:11px 13px;font-size:12.5px;display:flex;justify-content:space-between;align-items:center}
-.nextup em{font-style:normal;color:var(--sun);font-weight:900}
-.near{background:#fff;border:1.5px solid #e6e6ec;border-radius:14px;padding:10px 12px;font-size:12px;color:#666}
-.near .dots{display:flex;gap:6px;margin-top:7px}
-.near .dots i{width:20px;height:20px;border-radius:50%;background:var(--blue)}
-.near .dots i:nth-child(2){background:var(--green)}.near .dots i:nth-child(3){background:var(--amber)}.near .dots i:nth-child(4){background:var(--red)}
-.mk-ctrl{margin-top:26px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.toggle{display:inline-flex;align-items:center;gap:14px;background:none;border:2px solid var(--ink);border-radius:999px;padding:10px 18px 10px 10px;font:inherit;font-weight:800;cursor:pointer;color:var(--ink)}
-.toggle .sw{width:56px;height:32px;border-radius:999px;background:#cfcfd6;position:relative;transition:background .3s}
-.toggle .sw::after{content:"";position:absolute;top:4px;left:4px;width:24px;height:24px;border-radius:50%;background:#fff;transition:transform .3s;box-shadow:0 2px 6px rgba(0,0,0,.2)}
-.toggle.on .sw{background:var(--green)}.toggle.on .sw::after{transform:translateX(24px)}
-.mk-note{font-size:15px;color:var(--mute);font-weight:700}
-@media (max-width:720px){.course{grid-template-columns:1fr}.course .side{display:none}.stage{aspect-ratio:auto;height:440px}.tiles{grid-template-columns:1fr 1fr}}
-
-/* 3b fun */
-.fun{background:var(--sun);overflow:hidden;position:relative}
-.fun .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
-.fun .stat{font-family:var(--display);font-size:clamp(96px,15vw,210px);font-weight:700;line-height:.86;letter-spacing:-.05em}
-.fun .stat small{display:block;font-family:var(--body);font-size:19px;letter-spacing:0;font-weight:700;line-height:1.35;max-width:20em;margin-top:22px}
-.word{display:inline-block;margin-top:34px;font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(30px,3.6vw,48px);background:var(--ink);color:var(--sun);padding:8px 28px 12px;border-radius:999px;transform:rotate(-2deg)}
-.word span{font-family:var(--body);font-style:normal;font-size:12.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6);display:block;margin-bottom:-4px}
-.card{background:#fff;border-radius:22px;padding:30px 32px;box-shadow:0 26px 60px rgba(21,19,43,.18)}
-.card.q{font-family:var(--display);font-size:clamp(21px,2.1vw,26px);font-weight:400;line-height:1.3;transform:rotate(1.2deg)}
-.card.q footer{font-family:var(--body);font-size:13px;font-weight:800;color:var(--mute);margin-top:18px;letter-spacing:.06em;text-transform:uppercase}
-.card.q + .card.q{margin-top:26px;transform:rotate(-1deg)}
-.googly{position:absolute;width:70px;height:70px;border-radius:50%;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.15)}
-.googly::before,.googly::after{content:"";position:absolute;top:18px;width:22px;height:22px;background:#fff;border:2px solid var(--ink);border-radius:50%;box-shadow:inset -7px 4px 0 0 var(--ink);animation:look 4s ease-in-out infinite}
-.googly::before{left:10px}.googly::after{right:10px}
-.googly i{position:absolute;bottom:14px;left:26px;width:18px;height:8px;border-bottom:3px solid var(--ink);border-radius:0 0 10px 10px}
-@keyframes look{0%,40%,100%{box-shadow:inset -7px 4px 0 0 var(--ink)}55%,85%{box-shadow:inset 7px 5px 0 0 var(--ink)}}
-.g1{right:6%;top:12%}.g2{left:4%;bottom:10%;width:52px;height:52px}
-@media (max-width:860px){.fun .grid{grid-template-columns:1fr}}
-
-/* 4 research */
-.why{background:var(--paper)}
-.why .pillars{margin-top:60px;display:grid;gap:22px;max-width:760px}
-.why .pillar{display:grid;grid-template-columns:70px 1fr;gap:18px;align-items:start}
-.why .pillar .n{font-family:var(--display);font-size:52px;line-height:.9;color:var(--blue);font-weight:300}
-.why .pillar p{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.4vw,30px);line-height:1.2}
-.why .pillar p span{display:block;font-family:var(--body);font-size:14px;color:var(--mute);font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-top:8px}
-.why .belong{margin-top:60px;padding:34px 38px;border-left:5px solid var(--sun);background:#fff;border-radius:0 18px 18px 0;max-width:720px;font-family:var(--display);font-size:clamp(20px,2vw,26px);font-weight:400;line-height:1.3}
-
-/* 5 voices */
-.voices{background:var(--ink);color:#fff}
-.voices .grid{margin-top:60px;display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.voice{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:30px 30px 26px;display:flex;flex-direction:column;gap:22px}
-.voice q{quotes:none;font-family:var(--display);font-weight:400;font-size:clamp(21px,1.9vw,25px);line-height:1.3;flex:1}
-.voice q b{color:var(--sun);font-weight:600}
-.who{display:flex;align-items:center;gap:14px}
-.ini{width:48px;height:48px;border-radius:50%;background:var(--sun);color:var(--ink);display:grid;place-items:center;font-weight:900;font-size:15px;flex:0 0 48px}
-.ini.b{background:var(--blue);color:#fff}.ini.g{background:var(--green);color:#fff}
-.who b{display:block;font-size:15px}.who span{font-size:13px;color:rgba(255,255,255,.6)}
-.voice .nums{display:flex;align-items:center;gap:14px;font-family:var(--display);font-size:30px;font-weight:600}
-.voice .nums small{display:block;font-family:var(--body);font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55)}
-.voice .nums .to{color:var(--sun)}
-@media (max-width:900px){.voices .grid{grid-template-columns:1fr}}
-
-/* 6 product story */
-.story{background:var(--paper)}
-.story .steps{margin-top:70px;display:grid;gap:0}
-.step{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding:70px 0;border-top:2px solid var(--ink)}
-.step .k{font-weight:800;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
-.step h3{font-size:clamp(32px,4vw,54px)}
-.step .lede{margin-top:18px;font-size:clamp(17px,1.35vw,20px)}
-.step ul{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:10px}
-.step li{padding-left:26px;position:relative;font-weight:700;color:var(--ink2)}
-.step li::before{content:"";position:absolute;left:0;top:9px;width:12px;height:12px;border-radius:50%;background:var(--sun)}
-.step.cb li::before{background:var(--green)}.step.eb li::before{background:var(--blue)}
-@media (max-width:860px){.step{grid-template-columns:1fr;gap:34px}}
-/* control tower mock */
-.ct{background:#fff;border-radius:22px;box-shadow:0 26px 60px rgba(21,19,43,.16);padding:22px;font-size:14px}
-.ct .hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
-.ct .hd b{font-family:var(--display);font-size:20px}
-.chips{display:flex;gap:8px;flex-wrap:wrap}
-.chip{border:1.5px solid rgba(21,19,43,.18);background:#fff;border-radius:999px;padding:7px 13px;font:inherit;font-weight:800;font-size:12.5px;cursor:pointer;display:inline-flex;align-items:center;gap:7px}
-.chip i{width:9px;height:9px;border-radius:50%;background:#aaa}
-.chip.r i{background:var(--red)}.chip.y i{background:var(--amber)}.chip.g i{background:var(--green)}
-.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
-.roster{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:7px}
-.roster li{display:grid;grid-template-columns:22px 12px 1fr auto;gap:12px;align-items:center;padding:9px 12px;border-radius:12px;background:#f7f7fa;transition:opacity .25s,transform .25s}
-.roster li.hide{opacity:.18;transform:scale(.985)}
-.roster .cb{width:18px;height:18px;border-radius:5px;border:2px solid #c9c9d2}
-.roster li.sel .cb{background:var(--ink);border-color:var(--ink);position:relative}
-.roster li.sel .cb::after{content:"";position:absolute;left:5px;top:1px;width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
-.roster .flag{width:12px;height:12px;border-radius:50%}
-.roster .r .flag{background:var(--red)}.roster .y .flag{background:var(--amber)}.roster .g .flag{background:var(--green)}
-.roster .pct{color:#777;font-weight:700}
-.ct .send{margin-top:14px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.ct .send .btn{padding:12px 18px;font-size:14px;box-shadow:none}
-.ct .send .cc{font-size:12.5px;color:#666;font-weight:700}
-/* family mock */
-.fam{background:#fff;border-radius:22px;box-shadow:0 26px 60px rgba(21,19,43,.16);padding:22px;display:grid;gap:12px}
-.fam .row{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:12px 14px;border-radius:14px;background:#f7f7fa}
-.fam .row b{font-size:14px}.fam .row span{display:block;font-size:12px;color:#777}
-.fam .dot{width:14px;height:14px;border-radius:50%}
-.fam .g .dot{background:var(--green)}.fam .y .dot{background:var(--amber)}
-.fam .tag{font-size:11.5px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border-radius:999px;background:var(--sun)}
-.fam .msg{border:1.5px dashed rgba(21,19,43,.25);border-radius:14px;padding:12px 14px;font-size:13px;color:#555}
-.fam .msg b{color:var(--ink)}
-/* eb mock */
-.ebm{background:#fff;border-radius:22px;box-shadow:0 26px 60px rgba(21,19,43,.16);padding:22px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.ebm .box{border-radius:16px;padding:16px;background:#f7f7fa;font-size:13px;font-weight:700;color:#555}
-.ebm .box b{display:block;font-family:var(--display);font-size:24px;color:var(--ink);font-weight:600;margin-bottom:4px}
-.ebm .box.pz{background:linear-gradient(135deg,var(--sun),#ffe58a)}
-.ebm .box.wn{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between}
-.ebm .dots{display:flex}
-.ebm .dots i{width:28px;height:28px;border-radius:50%;border:3px solid #fff;margin-left:-8px;background:var(--blue)}
-.ebm .dots i:nth-child(2){background:var(--green)}.ebm .dots i:nth-child(3){background:var(--amber)}.ebm .dots i:nth-child(4){background:var(--sun)}.ebm .dots i:nth-child(5){background:var(--red)}
-
-/* 7 beats */
-.beats{background:var(--paper2);padding:120px 0}
-.beat{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;padding:clamp(34px,5vw,60px) 0;border-top:2px solid rgba(21,19,43,.12)}
-.beat:first-of-type{border-top:0}
-.beat h3{font-size:clamp(28px,3.6vw,50px);font-weight:500;max-width:14em}
-.beat h3 b{font-weight:700;background:var(--sun);padding:0 .12em;border-radius:.12em}
-.beat p{margin-top:12px;color:var(--ink2);font-size:17px;max-width:30em}
-.beat .vis{width:min(260px,32vw);display:flex;justify-content:flex-end}
-.clock{width:120px;height:120px;border-radius:50%;border:5px solid var(--ink);position:relative;background:#fff}
-.clock::before{content:"";position:absolute;left:50%;top:50%;width:4px;height:44px;background:var(--ink);transform-origin:50% 100%;transform:translate(-50%,-100%) rotate(0deg);animation:tick 6s linear infinite;border-radius:2px}
-.clock::after{content:"3 min";position:absolute;inset:auto 0 -36px 0;text-align:center;font-weight:900;letter-spacing:.1em;font-size:12px;text-transform:uppercase}
-@keyframes tick{to{transform:translate(-50%,-100%) rotate(90deg)}}
-.rows{display:grid;gap:8px;width:200px}
-.rows i{display:block;height:34px;border-radius:9px;background:#fff;border:1.5px solid rgba(21,19,43,.12);border-left:8px solid var(--blue)}
-.rows i:nth-child(2){border-left-color:var(--green)}.rows i:nth-child(3){border-left-color:var(--amber)}
-.stack{display:grid;gap:0;width:220px}
-.stack i{display:block;height:26px;border-radius:8px;background:#fff;border:1.5px solid rgba(21,19,43,.14);margin-top:-6px;transform:translateX(0)}
-.stack i:nth-child(2){transform:translateX(10px);background:#fff8dc}.stack i:nth-child(3){transform:translateX(20px);background:var(--sun)}
-.tpl{width:220px;background:#fff;border-radius:14px;border:1.5px solid rgba(21,19,43,.14);padding:12px 14px;font-size:12.5px;color:#555;line-height:1.5}
-.tpl b{color:var(--ink)}.tpl mark{background:#fff3b8;padding:0 3px;border-radius:3px}
-.pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
-.pills .pill{background:#fff}
-.sup{display:grid;gap:6px;width:230px;font-size:13px;font-weight:800;color:#555}
-.sup span{padding:9px 12px;border-radius:10px;background:#fff;border:1.5px solid rgba(21,19,43,.12)}
-.books{display:flex;align-items:flex-end;gap:6px}
-.books i{display:block;width:26px;height:80px;border-radius:6px 6px 3px 3px;background:var(--blue)}
-.books i:nth-child(2){height:100px;background:var(--green)}.books i:nth-child(3){height:64px;background:var(--sun)}.books i:nth-child(4){height:90px;background:var(--ink)}
-@media (max-width:720px){.beat{grid-template-columns:1fr}.beat .vis{justify-content:flex-start;width:auto}}
-
-/* cta */
-.cta{background:var(--ink);color:#fff;text-align:center;padding:150px 0}
-.cta h2{font-size:clamp(40px,6.4vw,92px);max-width:12em;margin:0 auto}
-.cta h2 span{color:var(--sun)}
-.cta .lede{color:rgba(255,255,255,.7);margin:26px auto 0}
-.cta .btn{margin-top:44px}
-.cta .nothing{margin-top:40px;font-family:var(--display);font-style:italic;font-size:clamp(18px,1.9vw,24px);color:rgba(255,255,255,.55)}
-.trust{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:60px}
-.trust .pill{background:transparent;color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.25)}
-footer{background:#0f0d20;color:rgba(255,255,255,.55);font-size:14px;padding:30px 0}
-footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-footer a{text-decoration:none}
-</style>
-</head>
-<body>
-
-<nav class="nav">
-  <div class="wrap">
-    <a class="logo" href="#top"><i></i>Delphinium</a>
-    <a class="btn sun" href="https://delphi-me.com/schedule-jared">Book a demo</a>
-  </div>
-</nav>
-
-<!-- 1. BOLD + PROOF -->
-<header class="hero" id="top">
-  <div class="wrap">
-    <p class="eyebrow rv">For virtual and online K-12 schools on Canvas</p>
-    <h1 class="big rv d1"><span class="muted">Canvas delivers content.</span><br>Delphinium delivers <span class="bang">ENGAGEMENT!</span></h1>
-    <div class="cta rv d2">
-      <a class="btn" href="https://delphi-me.com/schedule-jared">Schedule a demo with Jared <span class="arr">&rarr;</span></a>
-      <span class="small">About three minutes to turn on. No migration.</span>
-    </div>
-
-    <div class="proof rv d3">
-      <div class="num">31%<small>fewer course failures</small></div>
-      <div>
-        <p class="what">Davis School District turned Delphinium on across Davis Connect. Same courses, same teachers, same content. Course failures dropped 31%.</p>
-        <div class="ctx">
-          <span class="pill">72 fully online classes</span>
-          <span class="pill">6,000 students</span>
-          <span class="pill">Year without vs. year with</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<!-- 2. PROBLEM -->
-<section class="screen problem">
-  <div class="wrap">
-    <p class="eyebrow rv" style="color:var(--sun)">The problem</p>
-    <h2 class="big rv d1">Online school has a silence problem.</h2>
-    <div class="lines">
-      <p class="rv d1">Canvas is a <strong>gray wall of text.</strong></p>
-      <p class="rv d2">The gradebook is <strong>quiet until it is too late.</strong></p>
-      <p class="rv d3">Parents <strong>find out late.</strong></p>
-      <p class="rv d4">Teachers <strong>chase.</strong></p>
-    </div>
-    <div class="graywall rv d2" aria-hidden="true">
-      <div class="gl t"></div><div class="gl"></div><div class="gl s"></div><div class="gl"></div><div class="gl xs"></div><div class="gl"></div><div class="gl s"></div><div class="gl"></div><div class="gl xs"></div>
-    </div>
-    <p class="hold rv d3">Nobody chose this. It is just what content delivery looks like without engagement.</p>
-  </div>
-</section>
-
-<!-- 3. PROOF WE CAN SOLVE IT: MAKEOVER -->
-<section class="screen makeover" id="makeover">
-  <div class="wrap">
-    <p class="eyebrow rv">The three-minute Makeover</p>
-    <h2 class="big rv d1">Which class would <em>YOU</em> rather take?</h2>
-    <p class="lede rv d2" style="margin-top:22px">Same Canvas course. Same teacher. Same content. Drag, or just turn it on.</p>
-
-    <div class="stage rv d2" id="stage">
-      <span class="lbl b">Standard Canvas</span>
-      <span class="lbl a">With Delphinium</span>
-
-      <div class="layer before" id="before" aria-hidden="true">
-        <div class="course">
-          <div class="topbar"><b>ENG 10 Online</b> Modules &middot; Assignments &middot; Grades &middot; People</div>
-          <div class="main">
-            <h4>Welcome to English 10</h4>
-            <div class="gl t"></div><div class="gl"></div><div class="gl s"></div><div class="gl"></div><div class="gl xs"></div><div class="gl"></div><div class="gl s"></div><div class="gl"></div><div class="gl xs"></div><div class="gl"></div><div class="gl s"></div>
-          </div>
-          <div class="side">
-            <div class="lnk">Syllabus.pdf</div><div class="lnk">Course expectations</div><div class="lnk">Week 1 reading</div><div class="lnk">Week 2 reading</div><div class="lnk">Discussion rubric</div>
-            <div class="gl"></div><div class="gl s"></div><div class="gl xs"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="layer after" aria-hidden="true">
-        <div class="course">
-          <div class="band"><b>English 10 &middot; Unit 3: Voice</b><span class="pts">1,240 pts</span></div>
-          <div class="main">
-            <div class="tiles">
-              <div class="tile"><b>Unit 1: Story</b><span>Complete</span></div>
-              <div class="tile"><b>Unit 2: Argument</b><span>Complete</span></div>
-              <div class="tile due"><b>Unit 3: Voice</b><span>Due Friday</span></div>
-              <div class="tile miss"><b>Quiz 2 redo</b><span>Open, +40 pts</span></div>
-              <div class="tile due"><b>Discussion 3</b><span>2 replies left</span></div>
-              <div class="tile"><b>Reading log</b><span>On track</span></div>
-            </div>
-            <div class="meter"><i></i></div>
-            <div class="mtxt"><span>Course progress</span><span>64% &middot; on pace</span></div>
-          </div>
-          <div class="side">
-            <div class="student"><div class="avatar"><i></i></div><div><b>Your avatar</b><span>Level 6 &middot; 3 prize boxes</span></div></div>
-            <div class="nextup"><span>Next up</span><em>Unit 3 quiz &middot; 2 days</em></div>
-            <div class="near">Who's near me<div class="dots"><i></i><i></i><i></i><i></i></div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="divider" id="divider"></div>
-      <div class="handle" id="handle">&lsaquo;&rsaquo;</div>
-      <input type="range" id="scrub" min="0" max="100" value="50" aria-label="Compare standard Canvas with Delphinium">
-    </div>
-
-    <div class="mk-ctrl rv d3">
-      <button class="toggle" id="toggle" type="button" aria-pressed="false"><span class="sw"></span>Turn Delphinium on</button>
-      <span class="mk-note">Color-coded modules, progress, points, a next step. No rebuild.</span>
-    </div>
-  </div>
-</section>
-
-<!-- 3b. STUDENTS FEEL IT -->
-<section class="screen fun">
-  <div class="googly g1" aria-hidden="true"><i></i></div>
-  <div class="googly g2" aria-hidden="true"><i></i></div>
-  <div class="wrap">
-    <div class="grid">
-      <div>
-        <p class="eyebrow rv" style="color:var(--ink)">Students feel it</p>
-        <div class="stat rv d1">72%<small>of students say Delphinium is more motivating, or much more motivating, than a traditional Canvas course.</small></div>
-        <div class="word rv d2"><span>Their most common word</span>Fun.</div>
-      </div>
-      <div>
-        <div class="card q rv d2">Students have redone a quiz they did poorly on just to earn more points for their avatar. Engagement and work completion went up.<footer>Tiffany Dance &middot; Instructional Coach, Davis Connect</footer></div>
-        <div class="card q rv d3">I was sitting on the couch watching Netflix and the thought popped into my head: I could be doing homework right now.<footer>Student survey response</footer></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 4. WHY IT WORKS -->
-<section class="screen why">
-  <div class="wrap">
-    <p class="eyebrow rv">Why it works</p>
-    <h2 class="mid rv d1">Fourteen years of published behavioral research, turned into a course students want to open.</h2>
-    <div class="pillars">
-      <div class="pillar rv d1"><div class="n">1</div><p>Students see where they have been, where they are, and where they are going.<span>Self-regulated learning</span></p></div>
-      <div class="pillar rv d2"><div class="n">2</div><p>Small nudges, progress meters, and celebrations pull them back in.<span>Behavioral economics</span></p></div>
-      <div class="pillar rv d3"><div class="n">3</div><p>Nobody learns alone. Avatars and Who's Near Me make an online class feel like a class.<span>Social presence</span></p></div>
-    </div>
-    <div class="belong rv d3">Most students are not motivated by competition. Delphinium is designed for the majority: progress, belonging, and goals they can see.</div>
-  </div>
-</section>
-
-<!-- 5. SOCIAL PROOF -->
-<section class="screen voices">
-  <div class="wrap">
-    <p class="eyebrow rv" style="color:var(--sun)">From Davis</p>
-    <h2 class="mid rv d1">The people who turned it on.</h2>
-    <div class="grid">
-      <div class="voice rv d1">
-        <q>Delphinium has been a <b>game changer</b> for our teachers and students.</q>
-        <div class="who"><div class="ini">TD</div><div><b>Tiffany Dance</b><span>Instructional Coach, Davis Connect</span></div></div>
-      </div>
-      <div class="voice rv d2">
-        <div class="nums"><div>12<small>emails a day</small></div><span class="to">&rarr;</span><div>6<small>messages a week</small></div></div>
-        <q>This has <b>saved most of my Saturday nights.</b></q>
-        <div class="who"><div class="ini b">NN</div><div><b>Natalie Niederhauser</b><span>HS Math Teacher, Davis Connect &middot; 100+ students</span></div></div>
-      </div>
-      <div class="voice rv d3">
-        <q>We can confidently say that we're seeing <b>better success</b> with Delphinium. We're in the process of going districtwide.</q>
-        <div class="who"><div class="ini g">RH</div><div><b>Ryan Hansen</b><span>Digital Learning Director, Davis School District</span></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 6. PRODUCT STORY -->
-<section class="screen story">
-  <div class="wrap">
-    <p class="eyebrow rv">How it fits together</p>
-    <h2 class="mid rv d1">One layer on Canvas. Three ways to build engagement.</h2>
-
-    <div class="steps">
-      <div class="step rv">
-        <div>
-          <div class="k">01 &middot; Delphinium</div>
-          <h3>The engagement layer on the Canvas you already have.</h3>
-          <p class="lede">Turn it on inside a course. Students get a visual home. Teachers get a Control Tower: every student, red, yellow, or green, and a Message Center to reach the right ones in about 40 seconds.</p>
-          <ul><li>Control Tower early-warning view</li><li>Message Center with templates and multi-channel send</li><li>Canvas LTI 1.3. No migration, no new tool to learn</li></ul>
-        </div>
-        <div class="ct" id="ct" aria-label="Control Tower demo">
-          <div class="hd"><b>Control Tower</b><span class="small">Algebra 1 &middot; Period 2</span></div>
-          <div class="chips">
-            <button class="chip on" data-f="all" type="button"><i></i>All</button>
-            <button class="chip r" data-f="r" type="button"><i></i>Needs help</button>
-            <button class="chip y" data-f="y" type="button"><i></i>Slipping</button>
-            <button class="chip g" data-f="g" type="button"><i></i>On track</button>
-          </div>
-          <ul class="roster" id="roster">
-            <li class="r"><span class="cb"></span><span class="flag"></span><span>Maya R.</span><span class="pct">41%</span></li>
-            <li class="g"><span class="cb"></span><span class="flag"></span><span>Jonah P.</span><span class="pct">92%</span></li>
-            <li class="y"><span class="cb"></span><span class="flag"></span><span>Priya S.</span><span class="pct">68%</span></li>
-            <li class="r"><span class="cb"></span><span class="flag"></span><span>Diego M.</span><span class="pct">38%</span></li>
-            <li class="g"><span class="cb"></span><span class="flag"></span><span>Ava L.</span><span class="pct">88%</span></li>
-            <li class="y"><span class="cb"></span><span class="flag"></span><span>Sam K.</span><span class="pct">71%</span></li>
-            <li class="r"><span class="cb"></span><span class="flag"></span><span>Leo T.</span><span class="pct">44%</span></li>
-          </ul>
-          <div class="send">
-            <span class="btn" id="sendbtn">Message 7 students</span>
-            <span class="cc">Include families &middot; CC counselor</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="step cb rv">
-        <div>
-          <div class="k" style="color:var(--green)">02 &middot; Community Builder</div>
-          <h3>Bring families into the loop, calmly and early.</h3>
-          <p class="lede">Parents should not need Canvas literacy to see how their kid is doing. They get the same live, color-coded picture as the student and teacher, and they are included when a student needs support.</p>
-          <ul><li>Color-coded parent and observer view</li><li>Weekly progress to families</li><li>Celebrate wins, not only rescues</li><li>Auto-translate into 160 languages</li></ul>
-        </div>
-        <div class="fam" aria-hidden="true">
-          <div class="row g"><span class="dot"></span><div><b>Algebra 1</b><span>On track &middot; 88%</span></div><span class="tag">Win</span></div>
-          <div class="row y"><span class="dot"></span><div><b>English 10</b><span>Slipping &middot; 2 late</span></div><span class="tag" style="background:#ffe1a8">Heads up</span></div>
-          <div class="msg"><b>Weekly progress</b> sent to 2 guardians &middot; translated to Spanish</div>
-        </div>
-      </div>
-
-      <div class="step eb rv">
-        <div>
-          <div class="k">03 &middot; Engagement Builder</div>
-          <h3>Drive engagement. Build champions. Transform Canvas.</h3>
-          <p class="lede">The full Makeover: avatars, points, prize boxes, goal tracking, and a polished look every course in the school shares.</p>
-          <ul><li>Avatars, points, prize boxes, achievements</li><li>Students set, track, and own their goals</li><li>Who's Near Me and shared celebrations</li><li>One school-wide look, set once</li></ul>
-        </div>
-        <div class="ebm" aria-hidden="true">
-          <div class="box"><b>1,240</b>points this term</div>
-          <div class="box pz"><b>3</b>prize boxes to open</div>
-          <div class="box"><b>Goal</b>finish Unit 3 by Friday</div>
-          <div class="box"><b>Level 6</b>avatar unlocked</div>
-          <div class="box wn"><span>Who's near me</span><div class="dots"><i></i><i></i><i></i><i></i><i></i></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 7. SUPPORTING BEATS -->
-<section class="beats">
-  <div class="wrap">
-    <p class="eyebrow rv">Good to know</p>
-
-    <div class="beat rv"><div><h3>Get <b>more</b> out of the Canvas you already pay for.</h3><p>Every course you have built, every teacher you have trained, finally working harder.</p></div><div class="vis"><div class="rows"><i></i><i></i><i></i></div></div></div>
-
-    <div class="beat rv"><div><h3>One polished look, <b>every class</b> in the school.</h3><p>School-wide layout templates, so students never wonder where to click.</p></div><div class="vis"><div class="stack"><i></i><i></i><i></i></div></div></div>
-
-    <div class="beat rv"><div><h3>Message templates that <b>write themselves</b> in.</h3><p>Relative dates, conditional sends, Canvas plus email plus banner plus to-do. Filter a struggling group and reach all of them in about 40 seconds.</p></div><div class="vis"><div class="tpl"><b>Hi <mark>{first name}</mark>,</b> your <mark>{assignment}</mark> is due <mark>{in 2 days}</mark>. You are closer than you think.</div></div></div>
-
-    <div class="beat rv"><div><h3>About <b>three minutes.</b> Just turn it on.</h3><p>No migration. No new tool for teachers. Light enough for Chromebooks and weak Wi-Fi.</p></div><div class="vis"><div class="clock" aria-hidden="true"></div></div></div>
-
-    <div class="beat rv"><div><h3><b>Compliant</b> and independently tested.</h3><p>Canvas LTI 1.3 plugin on AWS. Student data encrypted in transit and at rest, stored in the United States, never sold.</p><div class="pills"><span class="pill">FERPA</span><span class="pill">HECVAT available</span><span class="pill">US-hosted on AWS</span><span class="pill">Canvas LTI 1.3</span><span class="pill">WCAG 2.0 AA</span></div></div></div>
-
-    <div class="beat rv"><div><h3>Real people, <b>real training.</b></h3><p>Hands-on Zoom onboarding for your pilot teachers, self-paced lessons for everyone, and a support forum our team actually watches.</p></div><div class="vis"><div class="sup"><span>Zoom onboarding</span><span>Self-paced lessons</span><span>Monitored forum</span></div></div></div>
-
-    <div class="beat rv"><div><h3>Built on <b>research,</b> not hunches.</h3><p>Fourteen years of published work on motivation, nudges, and social presence, by an educator who still teaches.</p></div><div class="vis"><div class="books"><i></i><i></i><i></i><i></i></div></div></div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-  <div class="wrap">
-    <h2 class="rv">Fewer failures. <span>Up to 31%.</span><br>Same courses, same teachers.</h2>
-    <p class="lede rv d1">See your own Canvas course get the Makeover, live, in about three minutes.</p>
-    <a class="btn sun rv d2" href="https://delphi-me.com/schedule-jared">Schedule a demo with Jared <span class="arr">&rarr;</span></a>
-    <p class="nothing rv d3">Doing nothing is the most expensive option on the table.</p>
-    <div class="trust rv d3">
-      <span class="pill">FERPA</span><span class="pill">HECVAT available</span><span class="pill">US-hosted on AWS</span><span class="pill">Canvas LTI 1.3</span><span class="pill">WCAG 2.0 AA</span>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <span>&copy; 2026 Delphinium &middot; The Canvas engagement layer for virtual and online K-12</span>
-    <span><a href="https://delphi-me.com/schedule-jared">Book a demo</a> &middot; <a href="https://youtube.com/@DelphiniumEngage">YouTube</a></span>
-  </div>
-</footer>
-
-<script>
-(function(){
-  // reveal on scroll
-  var els=document.querySelectorAll('.rv');
-  if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(entries){
-      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-    },{threshold:.15});
-    els.forEach(function(el){ io.observe(el); });
-  } else { els.forEach(function(el){ el.classList.add('in'); }); }
-
-  // Makeover scrub + toggle
-  var scrub=document.getElementById('scrub'), before=document.getElementById('before'),
-      divider=document.getElementById('divider'), handle=document.getElementById('handle'),
-      toggle=document.getElementById('toggle'), raf=null;
-  function setPos(v){
-    v=Math.max(0,Math.min(100,v));
-    before.style.clipPath='inset(0 '+(100-v)+'% 0 0)';
-    divider.style.left=v+'%'; handle.style.left=v+'%';
-    scrub.value=v;
-    var on=v<25; toggle.classList.toggle('on',on); toggle.setAttribute('aria-pressed',on?'true':'false');
-    toggle.lastChild.nodeValue=on?'Delphinium is on':'Turn Delphinium on';
-  }
-  scrub.addEventListener('input',function(){ if(raf){cancelAnimationFrame(raf);raf=null;} setPos(+scrub.value); });
-  function animateTo(target){
-    var start=+scrub.value, t0=null, dur=900;
-    if(raf) cancelAnimationFrame(raf);
-    function step(ts){
-      if(!t0) t0=ts;
-      var p=Math.min(1,(ts-t0)/dur); p=1-Math.pow(1-p,3);
-      setPos(start+(target-start)*p);
-      if(p<1) raf=requestAnimationFrame(step); else raf=null;
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Delphinium · Canvas delivers content. Delphinium delivers engagement.</title>
+  <meta name="description" content="The Canvas engagement layer for K-12 online schools. Turn the Canvas courses you already run into engaging student experiences and an early-warning system for teachers. Up to 31% fewer course failures.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/from-hied-hires-2026-09-24/delphinium-wordmark.svg">
+  <style>
+    :root {
+      --paper: #fffdf6;
+      --paper-2: #f8f4e8;
+      --white: #ffffff;
+      --lav: #f5f4fa;
+      --mist: #eef4f4;
+      --sky: #edf6fb;
+      --butter: #fff6c7;
+      --ink: #23232a;
+      --ink-soft: #55555f;
+      --line: rgba(43, 47, 126, 0.12);
+      --navy: #2b2f7e;
+      --navy-deep: #1d2158;
+      --blue: #2461b8;
+      --accent: #c7007a;
+      --accent-hover: #a50064;
+      --mark: #f8f000;
+      --cyan: #00aeef;
+      --green: #00a651;
+      --green-ink: #0a7f40;
+      --max: 1160px;
+      --radius: 14px;
+      --shadow: 0 18px 50px rgba(43, 47, 126, 0.12);
+      --shadow-sm: 0 4px 16px rgba(43, 47, 126, 0.08);
+      --font-display: "Outfit", system-ui, sans-serif;
+      --font-text: "Source Sans 3", system-ui, sans-serif;
     }
-    raf=requestAnimationFrame(step);
-  }
-  toggle.addEventListener('click',function(){ animateTo(toggle.classList.contains('on')?100:0); });
-  setPos(50);
-  // first-view nudge: when the stage scrolls in, ease toward Delphinium once
-  var stage=document.getElementById('stage'), nudged=false;
-  if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-    new IntersectionObserver(function(en,o){ en.forEach(function(e){ if(e.isIntersecting && !nudged){ nudged=true; setTimeout(function(){ animateTo(0); },700); o.disconnect(); } }); },{threshold:.5}).observe(stage);
-  }
 
-  // Control Tower filter
-  var chips=document.querySelectorAll('#ct .chip'), rows=document.querySelectorAll('#roster li'), send=document.getElementById('sendbtn');
-  chips.forEach(function(c){
-    c.addEventListener('click',function(){
-      chips.forEach(function(x){ x.classList.remove('on'); }); c.classList.add('on');
-      var f=c.getAttribute('data-f'), n=0;
-      rows.forEach(function(r){
-        var match=(f==='all')||r.classList.contains(f);
-        r.classList.toggle('hide',!match); r.classList.toggle('sel',match && f!=='all');
-        if(match) n++;
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 6.5rem; }
+    body {
+      margin: 0;
+      font-family: var(--font-text);
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--paper);
+      text-wrap: pretty;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--navy); text-underline-offset: 0.18em; }
+    a:hover { color: var(--accent); }
+    h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; }
+    .visually-hidden {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+
+    .dl-top {
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+    }
+    .dl-nav {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      min-height: 3.75rem;
+      padding: 0.5rem clamp(1rem, 4vw, 2.25rem);
+      background: color-mix(in srgb, var(--paper) 94%, transparent);
+      border-bottom: 0;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .dl-nav::after {
+      content: "";
+      position: absolute;
+      left: calc(clamp(1rem, 4vw, 2.25rem) + 128px + 1.25rem);
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background: var(--line);
+      pointer-events: none;
+    }
+    .dl-nav__logo { display: flex; align-items: center; margin-right: auto; position: relative; z-index: 1; }
+    .dl-nav__logo img { width: 128px; height: auto; }
+    .dl-nav__links { display: none; gap: 1.5rem; }
+    .dl-nav__links a, .dl-nav__he {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--ink-soft);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .dl-nav__links a:hover, .dl-nav__he:hover { color: var(--accent); }
+    .dl-nav__he { display: none; }
+    @media (min-width: 980px) { .dl-nav__links { display: flex; } }
+    @media (min-width: 720px) { .dl-nav__he { display: inline; } }
+
+    .dl-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.8rem 1.4rem;
+      border-radius: 999px;
+      border: 0;
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.1;
+      text-decoration: none;
+      cursor: pointer;
+      white-space: nowrap;
+      box-shadow: 0 6px 18px rgba(199, 0, 122, 0.22);
+      transition: background 150ms ease, transform 150ms ease, box-shadow 150ms ease;
+    }
+    .dl-btn:hover { background: var(--accent-hover); color: #fff; transform: translateY(-1px); box-shadow: 0 10px 24px rgba(199, 0, 122, 0.28); }
+    .dl-btn:focus-visible, .dl-play:focus-visible, .dl-seg button:focus-visible, .dl-link:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+    .dl-nav .dl-btn { padding: 0.6rem 1.1rem; font-size: 0.9375rem; box-shadow: none; }
+
+    .dl-wrap { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
+    .dl-section { padding: clamp(4rem, 9vw, 7rem) 0; }
+
+    .dl-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin: 0 0 1rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+    .dl-eyebrow::before {
+      content: "";
+      width: 2.25rem;
+      height: 3px;
+      border-radius: 2px;
+      background: var(--accent);
+      flex: none;
+    }
+    .dl-h2 {
+      margin: 0;
+      font-size: clamp(1.9rem, 4.2vw, 3rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      max-width: 22ch;
+    }
+    .dl-h2 em { font-style: normal; color: var(--accent); }
+    .dl-lede {
+      margin: 1.1rem 0 0;
+      max-width: 60ch;
+      color: var(--ink-soft);
+      font-size: 1.1875rem;
+    }
+    .dl-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      color: var(--navy);
+      background: none;
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .dl-link:hover { color: var(--accent); }
+    .dl-link__icon {
+      display: inline-grid;
+      place-items: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      border: 2px solid currentColor;
+      flex: none;
+    }
+    .dl-link__icon::after {
+      content: "";
+      border-style: solid;
+      border-width: 5px 0 5px 8px;
+      border-color: transparent transparent transparent currentColor;
+      margin-left: 2px;
+    }
+
+    /* Hero */
+    .dl-hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(4.5rem, 9vw, 7.5rem) 0 clamp(3rem, 6vw, 4.5rem);
+    }
+    .dl-hero__petals {
+      position: absolute;
+      top: -6rem;
+      right: -8rem;
+      width: min(46vw, 560px);
+      aspect-ratio: 1;
+      opacity: 0.16;
+      pointer-events: none;
+      background:
+        linear-gradient(118deg, transparent 30%, var(--mark) 30%, var(--mark) 40%, transparent 40%),
+        linear-gradient(118deg, transparent 42%, var(--cyan) 42%, var(--cyan) 52%, transparent 52%),
+        linear-gradient(118deg, transparent 54%, var(--green) 54%, var(--green) 62%, transparent 62%),
+        linear-gradient(118deg, transparent 64%, var(--accent) 64%, var(--accent) 72%, transparent 72%);
+      border-radius: 50%;
+      filter: blur(1px);
+    }
+    .dl-hero__inner { position: relative; padding-top: 1.75rem; }
+    .dl-hero__h1 {
+      margin: 0;
+      font-weight: 300;
+      font-size: clamp(2.4rem, 6.4vw, 4.6rem);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      color: var(--ink-soft);
+      max-width: 16ch;
+    }
+    .dl-hero__h1 strong {
+      display: block;
+      margin-top: 0.3rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .dl-hero__h1 em { font-style: normal; color: var(--accent); }
+    .dl-hero__lead {
+      margin: 1.5rem 0 0;
+      max-width: 52ch;
+      font-size: clamp(1.15rem, 1.8vw, 1.3rem);
+      color: var(--ink-soft);
+    }
+    .dl-hero__lead b { color: var(--ink); font-weight: 600; }
+    .dl-hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem 1.75rem;
+      margin-top: 2rem;
+    }
+    .dl-cover {
+      margin-top: clamp(2.5rem, 5vw, 3.5rem);
+      display: grid;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+      max-width: 980px;
+    }
+    @media (min-width: 760px) { .dl-cover { grid-template-columns: minmax(240px, 0.8fr) 1.2fr; } }
+    .dl-cover__stat {
+      padding: 1.6rem 1.75rem;
+      background: var(--butter);
+      border-bottom: 4px solid var(--navy);
+      text-align: center;
+      display: grid;
+      align-content: center;
+    }
+    @media (min-width: 760px) { .dl-cover__stat { border-bottom: 0; border-right: 4px solid var(--navy); } }
+    .dl-cover__upto {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--navy);
+    }
+    .dl-cover__num {
+      display: block;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(3.4rem, 8vw, 4.6rem);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      color: var(--navy);
+      font-variant-numeric: tabular-nums;
+    }
+    .dl-cover__label {
+      display: block;
+      margin-top: 0.35rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    .dl-cover__points {
+      margin: 0;
+      padding: 1.4rem 1.75rem;
+      list-style: none;
+      display: grid;
+      gap: 0.85rem;
+      align-content: center;
+    }
+    .dl-cover__points li {
+      display: grid;
+      grid-template-columns: 1.6rem 1fr;
+      gap: 0.6rem;
+      font-size: 1.02rem;
+      line-height: 1.4;
+      color: var(--ink-soft);
+    }
+    .dl-cover__points b { color: var(--ink); font-weight: 600; }
+    .dl-tick {
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 50%;
+      background: color-mix(in srgb, var(--green) 14%, transparent);
+      display: grid;
+      place-items: center;
+    }
+    .dl-tick::after {
+      content: "";
+      width: 0.45rem;
+      height: 0.8rem;
+      border: solid var(--green-ink);
+      border-width: 0 2.5px 2.5px 0;
+      transform: rotate(45deg) translate(-1px, -1px);
+    }
+
+    .dl-pull {
+      margin: 0;
+      padding: 0.25rem 0 0.25rem 1.4rem;
+      border-left: 4px solid var(--accent);
+    }
+    .dl-pull p {
+      margin: 0;
+      font-family: var(--font-text);
+      font-style: italic;
+      font-size: clamp(1.15rem, 2vw, 1.35rem);
+      line-height: 1.5;
+      color: var(--ink);
+    }
+    .dl-pull cite {
+      display: block;
+      margin-top: 0.85rem;
+      font-style: normal;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .dl-pull cite span { display: block; font-weight: 400; color: var(--ink-soft); }
+
+    /* Makeover */
+    .dl-mk { background: var(--lav); }
+    .dl-mk__kicker {
+      margin: 0 auto 1rem;
+      text-align: center;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(1.05rem, 2vw, 1.3rem);
+      line-height: 1.3;
+      color: var(--navy);
+    }
+    .dl-mk__kicker em { font-style: normal; color: var(--accent); }
+    .dl-mk__title {
+      margin: 0 auto;
+      text-align: center;
+      font-weight: 400;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: var(--ink-soft);
+    }
+    .dl-mk__title strong {
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: underline;
+      text-decoration-thickness: 0.09em;
+      text-underline-offset: 0.12em;
+    }
+    .dl-mk__sub {
+      margin: 0.85rem auto 0;
+      max-width: 54ch;
+      text-align: center;
+      color: var(--ink-soft);
+    }
+    .dl-seg {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.75rem;
+    }
+    .dl-seg__inner {
+      display: inline-flex;
+      padding: 0.3rem;
+      border-radius: 999px;
+      background: var(--white);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--line);
+    }
+    .dl-seg button {
+      border: 0;
+      background: transparent;
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      font-family: var(--font-display);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--ink-soft);
+      cursor: pointer;
+      transition: background 200ms ease, color 200ms ease;
+    }
+    .dl-seg button[aria-pressed="true"] { background: var(--navy); color: #fff; }
+    .dl-mk__stage {
+      margin-top: 2rem;
+      display: grid;
+      gap: 2rem;
+      align-items: end;
+    }
+    .dl-mk__side { margin: 0; display: grid; justify-items: center; gap: 1rem; }
+    .dl-mk__side img { width: 100%; border-radius: 18px; }
+    .dl-pill {
+      display: inline-block;
+      padding: 0.4rem 1.1rem;
+      border-radius: 999px;
+      font-family: var(--font-display);
+      font-size: clamp(1rem, 1.8vw, 1.25rem);
+      font-weight: 400;
+      line-height: 1.2;
+      box-shadow: var(--shadow-sm);
+    }
+    .dl-pill--canvas { background: #4a4a4f; color: #fff; }
+    .dl-pill--dl { background: var(--butter); color: var(--ink); }
+    .dl-pill--dl b { color: var(--accent); font-weight: 600; }
+    .dl-mk__side--before img { max-width: 440px; }
+    @media (min-width: 860px) {
+      .dl-seg { display: none; }
+      .dl-mk__stage { grid-template-columns: 0.68fr 1fr; gap: clamp(2rem, 5vw, 4.5rem); }
+      .js .dl-mk__side { transition: opacity 700ms ease, transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1); }
+      .js .dl-mk__stage:not(.is-in) .dl-mk__side--after { opacity: 0; transform: translateX(28px); }
+    }
+    @media (max-width: 859px) {
+      .dl-mk__stage { grid-template-areas: "stack"; }
+      .dl-mk__side { grid-area: stack; transition: opacity 450ms ease; }
+      .dl-mk__stage[data-view="before"] .dl-mk__side--after,
+      .dl-mk__stage[data-view="after"] .dl-mk__side--before { opacity: 0; pointer-events: none; }
+    }
+    .dl-mk__foot {
+      margin-top: clamp(2.5rem, 5vw, 3.5rem);
+      display: grid;
+      gap: 1.5rem 3rem;
+      align-items: start;
+    }
+    @media (min-width: 860px) { .dl-mk__foot { grid-template-columns: 1fr 1fr; } }
+    .dl-mk__foot h3 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(1.4rem, 2.6vw, 1.85rem);
+      line-height: 1.15;
+      color: var(--navy);
+    }
+    .dl-mk__foot p { margin: 0 0 1rem; color: var(--ink-soft); }
+    .dl-mk__cap { font-size: 0.85rem; color: var(--ink-soft); }
+
+    /* Proof */
+    .dl-proof { background: var(--paper); }
+    .dl-proof__cards {
+      margin-top: 2.5rem;
+      display: grid;
+      gap: 1.25rem;
+    }
+    @media (min-width: 900px) { .dl-proof__cards { grid-template-columns: 1.25fr 1fr 1fr; } }
+    .dl-card {
+      padding: 1.6rem 1.6rem 1.5rem;
+      border-radius: var(--radius);
+      background: var(--white);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+    }
+    .dl-card__kicker {
+      margin: 0 0 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .dl-card__num {
+      margin: 0;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(3.4rem, 7vw, 4.75rem);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      font-variant-numeric: tabular-nums;
+    }
+    .dl-card__num--green { color: var(--green); }
+    .dl-card__num--navy { color: var(--navy); }
+    .dl-card__num--accent { color: var(--accent); }
+    .dl-card__txt { margin: 0.75rem 0 0; font-size: 1.05rem; line-height: 1.45; color: var(--ink); }
+    .dl-card__txt b { font-weight: 700; }
+    .dl-card__ctx {
+      margin: 1rem 0 0;
+      padding-top: 0.85rem;
+      border-top: 1px solid var(--line);
+      font-size: 0.875rem;
+      line-height: 1.5;
+      color: var(--ink-soft);
+    }
+    .dl-quotes {
+      margin-top: 2.75rem;
+      display: grid;
+      gap: 2rem 3rem;
+    }
+    @media (min-width: 900px) { .dl-quotes { grid-template-columns: 1.15fr 0.85fr; } }
+    .dl-quote-big {
+      margin: 0;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      line-height: 1.25;
+      color: var(--navy);
+    }
+    .dl-quote-big cite {
+      display: block;
+      margin-top: 0.9rem;
+      font-family: var(--font-text);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+    }
+
+    /* Mid-page ask */
+    .dl-midcta {
+      padding: clamp(2.5rem, 5vw, 3.5rem) 0;
+      background: var(--butter);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .dl-midcta__inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem 2.5rem;
+    }
+    .dl-midcta h2 {
+      margin: 0;
+      font-size: clamp(1.6rem, 3.6vw, 2.4rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--navy);
+    }
+    .dl-midcta .dl-btn { padding: 1rem 1.9rem; font-size: 1.1rem; }
+
+    /* Products */
+    .dl-products { background: var(--paper); }
+    .dl-prod {
+      display: grid;
+      gap: 2rem;
+      align-items: center;
+      padding-top: clamp(3rem, 7vw, 5.5rem);
+    }
+    @media (min-width: 960px) {
+      .dl-prod { grid-template-columns: 0.9fr 1.1fr; gap: clamp(2.5rem, 5vw, 4.5rem); }
+      .dl-prod--flip .dl-prod__media { order: -1; }
+      .dl-prod--wide { grid-template-columns: 1fr; }
+    }
+    .dl-prod__tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0 0 0.75rem;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .dl-prod__tag--core { background: color-mix(in srgb, var(--green) 12%, transparent); color: var(--green-ink); }
+    .dl-prod__tag--eb { background: color-mix(in srgb, var(--navy) 10%, transparent); color: var(--navy); }
+    .dl-prod__tag--cb { background: color-mix(in srgb, var(--blue) 12%, transparent); color: var(--blue); }
+    .dl-prod h3 {
+      margin: 0;
+      font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    .dl-prod__sub { margin: 0.75rem 0 0; font-size: 1.15rem; color: var(--ink-soft); max-width: 48ch; }
+    .dl-list { margin: 1.25rem 0 0; padding: 0; list-style: none; display: grid; gap: 0.6rem; }
+    .dl-list li {
+      position: relative;
+      padding-left: 1.4rem;
+      font-size: 1.02rem;
+      line-height: 1.5;
+      color: var(--ink);
+    }
+    .dl-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.6em;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .dl-prod .dl-pull { margin-top: 1.6rem; }
+    .dl-prod .dl-pull p { font-size: 1.08rem; }
+    .dl-prod__more { margin-top: 1.4rem; }
+    .dl-tray {
+      position: relative;
+      margin: 0;
+      padding: clamp(1rem, 3vw, 1.75rem);
+      border-radius: 20px;
+      border: 1px solid var(--line);
+    }
+    .dl-tray--mist { background: var(--mist); }
+    .dl-tray--sky { background: var(--sky); }
+    .dl-tray--white { background: #fcfdff; }
+    .dl-tray__main { width: 100%; border-radius: 10px; }
+    .dl-tray__float {
+      position: absolute;
+      width: 46%;
+      right: -1rem;
+      bottom: -2.25rem;
+      border-radius: 12px;
+      box-shadow: 0 22px 50px rgba(29, 33, 88, 0.22);
+    }
+    .dl-tray--has-float { margin-bottom: 2.5rem; }
+    @media (max-width: 599px) {
+      .dl-tray__float { position: static; width: 78%; margin: -1.5rem 0 0 auto; }
+      .dl-tray--has-float { margin-bottom: 0; }
+    }
+    .dl-tray figcaption {
+      margin-top: 0.85rem;
+      font-size: 0.8rem;
+      color: var(--ink-soft);
+    }
+    .dl-tray--has-float figcaption { max-width: 50%; }
+    @media (max-width: 599px) { .dl-tray--has-float figcaption { max-width: none; } }
+    .dl-widgets__sm { display: grid; gap: 0.75rem; }
+    .dl-widgets__lg { display: none; }
+    @media (min-width: 760px) {
+      .dl-widgets__sm { display: none; }
+      .dl-widgets__lg { display: block; }
+    }
+    .dl-eb-copy { display: grid; gap: 1.5rem 3.5rem; }
+    @media (min-width: 960px) { .dl-eb-copy { grid-template-columns: 0.9fr 1.1fr; align-items: start; } }
+    @media (min-width: 960px) { .dl-eb-copy--foot { align-items: center; } }
+    .dl-note {
+      margin-top: 1.5rem;
+      padding: 1.1rem 1.25rem;
+      border-radius: 12px;
+      background: var(--butter);
+      font-size: 1rem;
+      line-height: 1.5;
+      color: var(--ink);
+    }
+    .dl-note b { color: var(--navy); }
+    .dl-stat-inline {
+      margin-top: 1.6rem;
+      display: grid;
+      grid-template-columns: auto auto 1fr;
+      align-items: center;
+      gap: 0.75rem 1rem;
+      padding: 1.1rem 1.25rem;
+      border-radius: 12px;
+      background: var(--white);
+      border: 1px solid var(--line);
+    }
+    .dl-stat-inline__n { font-family: var(--font-display); font-weight: 700; font-size: 1.6rem; line-height: 1; color: var(--navy); white-space: nowrap; }
+    .dl-stat-inline__n small { display: block; margin-top: 0.2rem; font-family: var(--font-text); font-size: 0.75rem; font-weight: 600; color: var(--ink-soft); letter-spacing: 0.04em; }
+    .dl-stat-inline__arrow { color: var(--accent); font-weight: 700; font-size: 1.3rem; }
+    .dl-stat-inline p { grid-column: 1 / -1; margin: 0; font-size: 0.98rem; color: var(--ink-soft); }
+    .dl-stat-inline p b { color: var(--ink); }
+    .dl-voices {
+      margin-top: clamp(3rem, 7vw, 5.5rem);
+      display: grid;
+      gap: 2rem;
+      align-items: center;
+      padding: clamp(1.5rem, 4vw, 2.75rem);
+      border-radius: 20px;
+      background: var(--lav);
+      border: 1px solid var(--line);
+    }
+    @media (min-width: 860px) { .dl-voices { grid-template-columns: minmax(220px, 0.7fr) 1.3fr; gap: clamp(2.5rem, 5vw, 4rem); } }
+    .dl-voices__face { margin: 0 auto; width: min(100%, 320px); }
+    @media (max-width: 859px) { .dl-voices__face { width: min(62%, 240px); } }
+    .dl-voices__face img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid var(--white);
+      box-shadow: var(--shadow);
+    }
+    .dl-voices h3 {
+      margin: 0;
+      font-size: clamp(1.4rem, 2.8vw, 2rem);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      color: var(--navy);
+      max-width: 26ch;
+    }
+    .dl-voices__cols { margin-top: 1.6rem; display: grid; gap: 1.5rem 2.5rem; }
+    @media (min-width: 640px) { .dl-voices__cols { grid-template-columns: 1fr 1fr; } }
+    .dl-voices__who {
+      margin: 0 0 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .dl-voices blockquote {
+      margin: 0 0 1rem;
+      padding-left: 1rem;
+      border-left: 3px solid var(--accent);
+      font-style: italic;
+      font-size: 1.08rem;
+      line-height: 1.5;
+      color: var(--ink);
+    }
+    .dl-voices blockquote:last-child { margin-bottom: 0; }
+
+    /* How it works (trust strip) */
+    .dl-how { padding: clamp(2.75rem, 6vw, 4rem) 0; background: var(--white); border-top: 1px solid var(--line); }
+    .dl-how__inner { display: grid; gap: 1rem 3.5rem; align-items: center; }
+    @media (min-width: 900px) { .dl-how__inner { grid-template-columns: 0.9fr 1.1fr; } }
+    .dl-how h2 {
+      margin: 0;
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    .dl-how p { margin: 0; font-size: 1.05rem; color: var(--ink-soft); }
+    .dl-how .dl-trust { margin-top: 1.25rem; }
+    .dl-trust {
+      margin: 1.25rem 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .dl-trust span {
+      padding: 0.4rem 0.85rem;
+      border-radius: 999px;
+      background: var(--lav);
+      border: 1px solid var(--line);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    /* Videos */
+    .dl-videos { background: var(--paper-2); }
+    .dl-videos__grid { margin-top: 2.5rem; display: grid; gap: 1.5rem; }
+    @media (min-width: 900px) {
+      .dl-videos__grid { grid-template-columns: 1.35fr 1fr; grid-template-rows: auto auto; }
+      .dl-vid--feature { grid-row: span 2; }
+    }
+    .dl-vid { margin: 0; }
+    .dl-play {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #111;
+      cursor: pointer;
+      aspect-ratio: 16 / 9;
+      box-shadow: var(--shadow);
+      text-decoration: none;
+    }
+    .dl-play img { width: 100%; height: 100%; object-fit: cover; transition: transform 500ms ease; }
+    .dl-play:hover img { transform: scale(1.03); }
+    .dl-play__btn {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 76px;
+      height: 76px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      display: grid;
+      place-items: center;
+      transition: transform 200ms ease;
+    }
+    .dl-play:hover .dl-play__btn { transform: translate(-50%, -50%) scale(1.07); }
+    .dl-play__btn::after {
+      content: "";
+      border-style: solid;
+      border-width: 13px 0 13px 21px;
+      border-color: transparent transparent transparent #fff;
+      margin-left: 5px;
+    }
+    .dl-vid figcaption { margin-top: 0.85rem; }
+    .dl-vid figcaption b { display: block; font-family: var(--font-display); font-size: 1.15rem; color: var(--ink); }
+    .dl-vid figcaption span { font-size: 0.95rem; color: var(--ink-soft); }
+    .dl-vid--feature figcaption b { font-size: 1.4rem; }
+
+    /* Close */
+    .dl-close {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 60%, #23276a 100%);
+      color: #fff;
+      text-align: center;
+    }
+    .dl-close::before {
+      content: "";
+      position: absolute;
+      inset: -30% -20% auto;
+      height: 80%;
+      opacity: 0.22;
+      pointer-events: none;
+      background:
+        linear-gradient(125deg, transparent 40%, var(--mark) 40%, var(--mark) 45%, transparent 45%),
+        linear-gradient(125deg, transparent 47%, var(--cyan) 47%, var(--cyan) 52%, transparent 52%),
+        linear-gradient(125deg, transparent 54%, var(--green) 54%, var(--green) 59%, transparent 59%),
+        linear-gradient(125deg, transparent 61%, var(--accent) 61%, var(--accent) 66%, transparent 66%);
+    }
+    .dl-close .dl-wrap { position: relative; }
+    .dl-close h2 {
+      margin: 0 auto;
+      max-width: 20ch;
+      font-size: clamp(2rem, 4.6vw, 3.2rem);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+    .dl-close p { margin: 1.1rem auto 0; max-width: 46ch; color: rgba(255, 255, 255, 0.84); }
+    .dl-close .dl-btn { margin-top: 2rem; padding: 1rem 1.9rem; font-size: 1.1rem; }
+    .dl-close__small { font-size: 0.9rem; color: rgba(255, 255, 255, 0.7) !important; }
+
+    .dl-he { background: var(--paper); padding: clamp(2.5rem, 5vw, 3.5rem) 0; border-bottom: 1px solid var(--line); }
+    .dl-he__inner { display: grid; gap: 1rem 2.5rem; align-items: center; }
+    @media (min-width: 860px) { .dl-he__inner { grid-template-columns: 1fr auto; } }
+    .dl-he p { margin: 0; color: var(--ink-soft); font-size: 1rem; max-width: 70ch; }
+    .dl-he p b { color: var(--ink); }
+    .dl-he .dl-eyebrow { margin-bottom: 0.5rem; }
+
+    .dl-footer {
+      padding: 2.25rem 0 5.5rem;
+      background: var(--navy-deep);
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 0.9rem;
+    }
+    .dl-footer__inner { display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center; justify-content: space-between; }
+    .dl-footer__logo { background: #fff; border-radius: 10px; padding: 0.4rem 0.6rem; }
+    .dl-footer__logo img { width: 104px; }
+    .dl-footer a { color: #fff; text-decoration: none; }
+    .dl-footer a:hover { text-decoration: underline; color: #fff; }
+    .dl-footer nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; }
+
+    /* Video modal */
+    .dl-modal { position: fixed; inset: 0; z-index: 100000; display: grid; place-items: center; padding: 1rem; }
+    .dl-modal[hidden] { display: none; }
+    .dl-modal__backdrop { position: absolute; inset: 0; background: rgba(15, 17, 45, 0.82); }
+    .dl-modal__box { position: relative; width: min(100%, 1100px); }
+    .dl-modal__frame { position: relative; aspect-ratio: 16 / 9; background: #000; border-radius: 12px; overflow: hidden; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5); }
+    .dl-modal__frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .dl-modal__bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 0.6rem; color: #fff; }
+    .dl-modal__title { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; }
+    .dl-modal__close {
+      border: 0;
+      background: rgba(255, 255, 255, 0.14);
+      color: #fff;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .dl-modal__close:hover { background: rgba(255, 255, 255, 0.26); }
+
+    /* Reveal */
+    .js .dl-reveal { opacity: 0; transform: translateY(18px); transition: opacity 700ms ease, transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1); }
+    .js .dl-reveal.is-in { opacity: 1; transform: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .js .dl-reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+      .js .dl-mk__side { transform: none !important; transition: none !important; }
+      .dl-play img, .dl-play__btn, .dl-btn { transition: none; }
+    }
+
+    .dl-modal--book .dl-modal__frame {
+      aspect-ratio: auto;
+      height: min(80vh, 760px);
+      background: #fff;
+    }
+    .dl-modal--book .dl-modal__frame iframe {
+      background: #fff;
+    }
+  </style>
+  <link rel="preconnect" href="https://bookings.nimbuspop.com" crossorigin>
+  <link rel="preconnect" href="https://jared-delphi-me.zohobookings.com" crossorigin>
+  <link rel="dns-prefetch" href="https://bookings.nimbuspop.com">
+  <link rel="dns-prefetch" href="https://jared-delphi-me.zohobookings.com">
+  <script src="https://bookings.nimbuspop.com/assets/embed.js" defer></script>
+</head>
+<body class="dl-v5">
+  <div class="dl-top">
+    <header class="dl-nav">
+      <a class="dl-nav__logo" href="#top" aria-label="Delphinium home">
+        <img src="assets/from-hied-hires-2026-09-24/delphinium-wordmark.svg" width="225" height="155" alt="Delphinium">
+      </a>
+      <nav class="dl-nav__links" aria-label="Page sections">
+        <a href="#makeover">Makeover</a>
+        <a href="#proof">Proof</a>
+        <a href="#product">Product</a>
+        <a href="#videos">Videos</a>
+      </nav>
+      <a class="dl-nav__he" href="#highered">Higher Ed Online</a>
+      <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
+    </header>
+  </div>
+
+  <main id="top">
+    <section class="dl-hero" aria-labelledby="hero-heading">
+      <div class="dl-hero__petals" aria-hidden="true"></div>
+      <div class="dl-wrap dl-hero__inner">
+        <h1 class="dl-hero__h1" id="hero-heading">
+          Canvas delivers content.
+          <strong>Delphinium delivers <em>engagement</em>.</strong>
+        </h1>
+        <p class="dl-hero__lead">Delphinium turns the Canvas courses you already run into <b>engaging student experiences</b> and an <b>early-warning system</b> for teachers. No migration and no extra work. Just turn it on.</p>
+        <div class="dl-hero__actions">
+          <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
+          <a class="dl-link" href="https://stream.mux.com/LoTwl8xXgp9g14ewgXHaehN71e200PFdg5wKCE00TTJkI/capped-1080p.mp4" data-mux="LoTwl8xXgp9g14ewgXHaehN71e200PFdg5wKCE00TTJkI" data-title="Delphinium for K-12 online schools">
+            <span class="dl-link__icon" aria-hidden="true"></span>
+            Watch the K-12 overview
+          </a>
+        </div>
+
+        <div class="dl-cover dl-reveal">
+          <div class="dl-cover__stat">
+            <span class="dl-cover__upto">Up to</span>
+            <span class="dl-cover__num">31%</span>
+            <span class="dl-cover__label">fewer course failures</span>
+          </div>
+          <ul class="dl-cover__points">
+            <li><span class="dl-tick" aria-hidden="true"></span><span><b>Go live in less than 3 minutes.</b> Keep Canvas, enhance with Delphinium.</span></li>
+            <li><span class="dl-tick" aria-hidden="true"></span><span><b>Zero learning curve.</b> Teachers keep using Canvas exactly as before.</span></li>
+            <li><span class="dl-tick" aria-hidden="true"></span><span><b>Built on science.</b> 14 years of published behavioral research.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="dl-section dl-mk" id="makeover" aria-labelledby="mk-heading">
+      <div class="dl-wrap">
+        <p class="dl-mk__kicker dl-reveal">Education moved online. <em>Engagement</em> didn't.</p>
+        <h2 class="dl-mk__title dl-reveal" id="mk-heading">Which class would <strong>YOU</strong> rather take?</h2>
+        <p class="dl-mk__sub dl-reveal">On the left, a Canvas module as students usually see it. On the right, Canvas with Delphinium turned on. No new content and no extra work for teachers.</p>
+
+        <div class="dl-seg" role="group" aria-label="Compare Canvas and Canvas plus Delphinium">
+          <div class="dl-seg__inner">
+            <button type="button" data-view="before" aria-pressed="false">Canvas</button>
+            <button type="button" data-view="after" aria-pressed="true">Canvas + Delphinium</button>
+          </div>
+        </div>
+
+        <div class="dl-mk__stage" id="mk-stage" data-view="after">
+          <figure class="dl-mk__side dl-mk__side--before">
+            <span class="dl-pill dl-pill--canvas">Canvas</span>
+            <img src="assets/from-prospectus-2026-09-24/makeover-before-canvas.png" width="722" height="846" alt="A standard Canvas module: a gray list of pages, PDFs, and assignments for Unit 5, Nuclear Chemistry." loading="lazy">
+          </figure>
+          <figure class="dl-mk__side dl-mk__side--after">
+            <span class="dl-pill dl-pill--dl">Canvas + <b>Delphinium!</b></span>
+            <img src="assets/from-hied-hires-2026-09-24/makeover-after-delphinium-hires.png" width="1847" height="1575" alt="The same kind of Canvas course with Delphinium on: a course home with teacher photo, a countdown to the last day to submit, and color-coded weekly unit cards with progress bars." loading="lazy">
+          </figure>
+        </div>
+
+        <div class="dl-mk__foot">
+          <div class="dl-reveal">
+            <h3>Go live in less than 3 minutes. Keep Canvas, enhance with Delphinium.</h3>
+            <p>Delphinium reads the course you already have. Green is done, blue is in progress, white is not started. A countdown answers the question every online student asks: how much time do I have left? Edit anything in Canvas and it flows through automatically.</p>
+          </div>
+          <div class="dl-reveal">
+            <p>Teachers do not learn a new tool. Students get a course they want to open, and a clear view of where they stand and where they are headed.</p>
+            <a class="dl-link" href="https://stream.mux.com/tKbhHrk01Yk89aFYU02CJbJqa002qUZWyNLhuNcuyDUMyY/capped-1080p.mp4" data-mux="tKbhHrk01Yk89aFYU02CJbJqa002qUZWyNLhuNcuyDUMyY" data-title="Gamification in Delphinium">
+              <span class="dl-link__icon" aria-hidden="true"></span>
+              See the student experience
+            </a>
+            <p class="dl-mk__cap" style="margin-top:1rem;">Sample course shown. Screens from the Delphinium product.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dl-section dl-proof" id="proof" aria-labelledby="proof-heading">
+      <div class="dl-wrap">
+        <p class="dl-eyebrow">Proof it works</p>
+        <h2 class="dl-h2" id="proof-heading">The courses didn't change. The teachers didn't change. <em>Engagement did.</em></h2>
+
+        <div class="dl-proof__cards">
+          <article class="dl-card dl-reveal">
+            <p class="dl-card__kicker">Fewer failures</p>
+            <p class="dl-card__num dl-card__num--green">31%</p>
+            <p class="dl-card__txt"><b>decrease in course failure rates</b> in the Davis Connect study.</p>
+            <p class="dl-card__ctx">Davis School District, Utah. 72 fully online, asynchronous classes and 6,000 students. The year before Delphinium against the year with it. Same courses, same content, same teachers.</p>
+          </article>
+          <article class="dl-card dl-reveal">
+            <p class="dl-card__kicker">Motivation</p>
+            <p class="dl-card__num dl-card__num--navy">72%</p>
+            <p class="dl-card__txt">of students say a Delphinium course is <b>more or much more motivating</b> than a traditional Canvas course.</p>
+          </article>
+          <article class="dl-card dl-reveal">
+            <p class="dl-card__kicker">In their words</p>
+            <p class="dl-card__num dl-card__num--accent">&ldquo;Fun.&rdquo;</p>
+            <p class="dl-card__txt">The word students use most when we ask how a Delphinium course is different.</p>
+          </article>
+        </div>
+
+        <div class="dl-quotes">
+          <blockquote class="dl-quote-big dl-reveal">
+            &ldquo;I was sitting on the couch watching Netflix and the thought popped into my head: I could be doing homework right now.&rdquo;
+            <cite>Delphinium student survey response</cite>
+          </blockquote>
+          <blockquote class="dl-pull dl-reveal">
+            <p>&ldquo;We have had students redo a quiz that they did poorly on to earn more points so they could just earn googly eyes for their avatar.&rdquo;</p>
+            <cite>Tiffany Dance<span>Instructional Coach, Davis Connect</span></cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="dl-midcta" aria-labelledby="mid-cta-heading">
+      <div class="dl-wrap dl-midcta__inner">
+        <h2 id="mid-cta-heading">Ready to transform your Canvas?</h2>
+        <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
+      </div>
+    </section>
+
+    <section class="dl-section dl-products" id="product" aria-labelledby="product-heading">
+      <div class="dl-wrap">
+        <p class="dl-eyebrow">What your school gets</p>
+        <h2 class="dl-h2" id="product-heading">Do more, <em>in less time.</em></h2>
+        <p class="dl-lede">One layer over Canvas, so students, teachers, and families all see the same picture.</p>
+
+        <article class="dl-prod" aria-labelledby="core-heading">
+          <div class="dl-reveal">
+            <p class="dl-prod__tag dl-prod__tag--core">Delphinium Core · Control Tower</p>
+            <h3 id="core-heading">Turn Canvas into an early-warning system.</h3>
+            <p class="dl-prod__sub">Canvas is data-rich, but insight-poor. Control Tower turns that data into action, so teachers know where every student stands and can step in before a slipping grade becomes a failed course.</p>
+            <ul class="dl-list">
+              <li>Every student red, yellow, or green from live Canvas data</li>
+              <li>Click any student for grades, progress, engagement, and who is observing</li>
+              <li>Filter to struggling students and message all of them, families included, in about 40 seconds</li>
+              <li>Runs on the Canvas courses you already have, including in the Canvas parent app</li>
+            </ul>
+            <blockquote class="dl-pull">
+              <p>&ldquo;I can see with color my students' progress, see their points, their percentages&hellip; to tell me where a student is very quickly and with color.&rdquo;</p>
+              <cite>Natalie Niederhauser<span>High School Math Teacher, Davis Connect</span></cite>
+            </blockquote>
+            <div class="dl-prod__more">
+              <a class="dl-link" href="https://stream.mux.com/bVXbIyK200RWbCuLWzSFX102TIn4HekyW4XZfV01L01FyaA/capped-1080p.mp4" data-mux="bVXbIyK200RWbCuLWzSFX102TIn4HekyW4XZfV01L01FyaA" data-title="Data in Delphinium">
+                <span class="dl-link__icon" aria-hidden="true"></span>
+                Watch: Data
+              </a>
+            </div>
+          </div>
+          <figure class="dl-prod__media dl-tray dl-tray--mist dl-tray--has-float dl-reveal">
+            <img class="dl-tray__main" src="assets/from-hied-hires-2026-09-24/control-tower-roster-hires.png" width="2453" height="1619" alt="Control Tower roster: every student in a row with grade, points, and green, yellow, or red activity and status flags." loading="lazy">
+            <img class="dl-tray__float" src="assets/from-hied-hires-2026-09-24/control-tower-student-detail-hires.png" width="2305" height="2064" alt="Student detail panel showing grades, progress, observers, and engagement counts for past due, missing, and late work." loading="lazy">
+            <figcaption>Control Tower and student detail. Sample data.</figcaption>
+          </figure>
+        </article>
+
+        <article class="dl-prod dl-prod--wide" aria-labelledby="eb-heading">
+          <div class="dl-eb-copy dl-reveal">
+            <div>
+              <p class="dl-prod__tag dl-prod__tag--eb">Engagement Builder</p>
+              <h3 id="eb-heading">Transform Canvas into an engagement engine.</h3>
+              <p class="dl-prod__sub">Turn the gray wall of text into a class students want to open.</p>
+            </div>
+            <div>
+              <ul class="dl-list">
+                <li>Color-coded progress and work quality, visible at a glance</li>
+                <li>Nudges, celebrations, and progress trackers that reward momentum</li>
+                <li>Avatars, prize boxes, and achievements. Leaderboards use aliases and show students only who is near them, and you can switch them off.</li>
+                <li>School-wide layouts so every course starts on brand</li>
+              </ul>
+            </div>
+          </div>
+          <figure class="dl-prod__media dl-tray dl-tray--white dl-reveal">
+            <img class="dl-widgets__lg dl-tray__main" src="assets/from-hied-hires-2026-09-24/engagement-widgets-hires.png" width="3879" height="1265" alt="Engagement Builder widgets: Who's Near Me alias leaderboard, prize boxes, an avatar, a percent-complete gauge, a performance ring, and achievements." loading="lazy">
+            <div class="dl-widgets__sm">
+              <img class="dl-tray__main" src="assets/from-prospectus-2026-09-24/engagement-widgets-left.png" width="1176" height="639" alt="Who's Near Me alias leaderboard, prize boxes, and a student avatar." loading="lazy">
+              <img class="dl-tray__main" src="assets/from-prospectus-2026-09-24/engagement-widgets-right.png" width="1183" height="639" alt="Percent of assignments complete gauge, performance ring, and achievements." loading="lazy">
+            </div>
+            <figcaption>Engagement Builder widgets inside a Canvas course.</figcaption>
+          </figure>
+          <div class="dl-eb-copy dl-eb-copy--foot dl-reveal">
+            <blockquote class="dl-pull" style="margin-top:0;">
+              <p>&ldquo;Our students absolutely love the interactive elements where they earn points to enhance their avatars and unlock prize boxes.&rdquo;</p>
+              <cite>Tiffany Dance<span>Instructional Coach, Davis Connect</span></cite>
+            </blockquote>
+            <div class="dl-prod__more" style="margin-top:0;">
+              <a class="dl-link" href="https://stream.mux.com/tKbhHrk01Yk89aFYU02CJbJqa002qUZWyNLhuNcuyDUMyY/capped-1080p.mp4" data-mux="tKbhHrk01Yk89aFYU02CJbJqa002qUZWyNLhuNcuyDUMyY" data-title="Gamification in Delphinium">
+                <span class="dl-link__icon" aria-hidden="true"></span>
+                Watch: Gamification
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <div class="dl-voices dl-reveal" role="group" aria-labelledby="voices-heading">
+          <figure class="dl-voices__face">
+            <img src="assets/from-hied-handout-2026-09-24/portrait-instructor-square.jpg" width="900" height="900" alt="" loading="lazy">
+          </figure>
+          <div>
+            <h3 id="voices-heading">Empower students with clear signals, so they can take charge of their own learning.</h3>
+            <div class="dl-voices__cols">
+              <div>
+                <p class="dl-voices__who">Students say</p>
+                <blockquote>&ldquo;I liked knowing that a little extra effort would make a difference.&rdquo;</blockquote>
+                <blockquote>&ldquo;I saw that I was doing much better than I thought I was.&rdquo;</blockquote>
+              </div>
+              <div>
+                <p class="dl-voices__who">Teachers say</p>
+                <blockquote>&ldquo;Students feel they are getting constant personal attention and feedback&rdquo;</blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <article class="dl-prod dl-prod--flip" aria-labelledby="cb-heading">
+          <div class="dl-reveal">
+            <p class="dl-prod__tag dl-prod__tag--cb">Community Builder · Message Center</p>
+            <h3 id="cb-heading">Support students, effortlessly.</h3>
+            <p class="dl-prod__sub">Reach the right student at the right moment, without the manual email. Target exactly the students who need to hear from you.</p>
+            <ul class="dl-list">
+              <li>Templates and relative-date schedules that follow each teacher across sections and semesters</li>
+              <li>Rules like &ldquo;only send if points are below 50&rdquo; reach at-risk students automatically</li>
+              <li>One message lands as a Canvas message, announcement, to-do item, banner, and email</li>
+              <li>Celebrate students who are thriving, not just rescue the ones who aren't</li>
+            </ul>
+            <div class="dl-stat-inline">
+              <span class="dl-stat-inline__n">~12<small>emails a day</small></span>
+              <span class="dl-stat-inline__arrow" aria-hidden="true">&rarr;</span>
+              <span class="dl-stat-inline__n">~6<small>messages a week</small></span>
+              <p><b>Natalie Niederhauser</b>, high school math, 100+ students at Davis Connect: &ldquo;saved most of my Saturday nights.&rdquo;</p>
+            </div>
+            <p class="dl-note"><b>Families stay in the loop.</b> Parents and observers get the same color-coded picture teachers see, readable at a glance with no Canvas know-how required. Include them on messages, share the good news, and auto-translate so every family hears from you in their own language.</p>
+            <div class="dl-prod__more">
+              <a class="dl-link" href="https://stream.mux.com/CG9AfH1Ohcx4Tgz6juR4uFAUDFspppNF1kfrJCxWlk00/capped-1080p.mp4" data-mux="CG9AfH1Ohcx4Tgz6juR4uFAUDFspppNF1kfrJCxWlk00" data-title="Communication in Delphinium">
+                <span class="dl-link__icon" aria-hidden="true"></span>
+                Watch: Communication
+              </a>
+            </div>
+          </div>
+          <figure class="dl-prod__media dl-tray dl-tray--sky dl-tray--has-float dl-reveal">
+            <img class="dl-tray__main" src="assets/from-hied-hires-2026-09-24/message-center-schedule-hires.png" width="2194" height="1400" alt="Message Center templates: Welcome to Class, Student Support Follow-Up, Weekly Progress Report, and Low Activity Warning, with default and disable settings." loading="lazy">
+            <img class="dl-tray__float" src="assets/from-hied-hires-2026-09-24/community-builder-create-message-hires.png" width="2131" height="2021" alt="Create Message window with a personalized message to struggling students and an option to include observers." loading="lazy">
+            <figcaption>School-wide Message Center templates and the message composer.</figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section class="dl-how" aria-labelledby="how-heading">
+      <div class="dl-wrap dl-how__inner">
+        <h2 id="how-heading">Turn it on. Teachers keep teaching in Canvas.</h2>
+        <div>
+          <p>Built on 14 years of published research in self-regulated learning, behavioral economics, and social presence. Edits in Canvas flow through automatically, so there are never two systems to maintain.</p>
+          <p class="dl-trust" aria-label="Platform notes">
+            <span>Canvas LTI 1.3</span>
+            <span>FERPA</span>
+            <span>Alias-based leaderboards</span>
+            <span>Chromebook-friendly</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="dl-section dl-videos" id="videos" aria-labelledby="videos-heading">
+      <div class="dl-wrap">
+        <p class="dl-eyebrow">See it in action</p>
+        <h2 class="dl-h2" id="videos-heading">Hear it from the directors and teachers who use it.</h2>
+        <div class="dl-videos__grid">
+          <figure class="dl-vid dl-vid--feature dl-reveal">
+            <a class="dl-play" href="https://stream.mux.com/LoTwl8xXgp9g14ewgXHaehN71e200PFdg5wKCE00TTJkI/capped-1080p.mp4" data-mux="LoTwl8xXgp9g14ewgXHaehN71e200PFdg5wKCE00TTJkI" data-title="Delphinium for K-12 online schools" aria-label="Play: Delphinium for K-12 online schools">
+              <img src="https://image.mux.com/LoTwl8xXgp9g14ewgXHaehN71e200PFdg5wKCE00TTJkI/thumbnail.jpg?time=3&amp;width=1280" width="1280" height="720" alt="" loading="lazy">
+              <span class="dl-play__btn" aria-hidden="true"></span>
+            </a>
+            <figcaption><b>Delphinium for K-12 online schools</b><span>A quick look at Delphinium in K-12 online courses.</span></figcaption>
+          </figure>
+          <figure class="dl-vid dl-reveal">
+            <a class="dl-play" href="https://stream.mux.com/32SFE7z1kEHl4JU01lvaXzTMg01kxeKQt4TeHQEjh4Fb8/capped-1080p.mp4" data-mux="32SFE7z1kEHl4JU01lvaXzTMg01kxeKQt4TeHQEjh4Fb8" data-title="Digital Learning and Curriculum Directors" aria-label="Play: Digital Learning and Curriculum Directors">
+              <img src="https://delphi-me.com/hs-fs/hubfs/directorthumb.png?width=960&amp;name=directorthumb.png" width="960" height="540" alt="" loading="lazy">
+            </a>
+            <figcaption><b>For digital learning and curriculum directors</b><span>Dr. Ryan Hansen, Director of Digital Learning</span></figcaption>
+          </figure>
+          <figure class="dl-vid dl-reveal">
+            <a class="dl-play" href="https://stream.mux.com/qHMrqxfysc8NPiOTXwvqkbrZk7iEWdHpK00i36GbmBRo/capped-1080p.mp4" data-mux="qHMrqxfysc8NPiOTXwvqkbrZk7iEWdHpK00i36GbmBRo" data-title="Teachers and Instructional Coaches" aria-label="Play: Teachers and Instructional Coaches">
+              <img src="https://delphi-me.com/hs-fs/hubfs/teacherthumb.png?width=960&amp;name=teacherthumb.png" width="960" height="540" alt="" loading="lazy">
+            </a>
+            <figcaption><b>For teachers and instructional coaches</b><span>Natalie Niederhauser, Math Teacher</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="dl-section dl-close" aria-labelledby="close-heading">
+      <div class="dl-wrap">
+        <h2 id="close-heading">See Delphinium on one of your Canvas courses.</h2>
+        <p>Meet Jared, the person behind Delphinium. See how it could work in your Canvas courses and get your questions answered.</p>
+        <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
+        <p class="dl-close__small">No migration to plan. Nothing to install before the call. You stay in Canvas.</p>
+      </div>
+    </section>
+
+    <section class="dl-he" id="highered" aria-labelledby="he-heading">
+      <div class="dl-wrap dl-he__inner">
+        <div>
+          <p class="dl-eyebrow">Higher Ed Online</p>
+          <h2 class="visually-hidden" id="he-heading">Higher Ed Online</h2>
+          <p>Running online programs in Canvas at a college or university? In Higher Ed Online sections with Delphinium, we've seen <b>as much as 47% lower course failure</b> and <b>as much as 67% lower withdrawal</b>. Ask for the study context that matches your campus.</p>
+        </div>
+        <a class="dl-link" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo &rarr;</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="dl-footer">
+    <div class="dl-wrap dl-footer__inner">
+      <span class="dl-footer__logo"><img src="assets/from-hied-hires-2026-09-24/delphinium-wordmark.svg" width="225" height="155" alt="Delphinium" loading="lazy"></span>
+      <nav aria-label="Footer">
+        <a href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
+        <a href="#highered">Higher Ed Online</a>
+        <a href="https://www.youtube.com/@DelphiniumEngagement" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://delphi-me.com/contact-us">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="dl-modal dl-modal--book" id="dl-book-modal" hidden>
+    <div class="dl-modal__backdrop" data-book-close></div>
+    <div class="dl-modal__box" role="dialog" aria-modal="true" aria-labelledby="dl-book-title">
+      <div class="dl-modal__bar">
+        <p class="dl-modal__title" id="dl-book-title">Schedule a demo</p>
+        <button type="button" class="dl-modal__close" data-book-close aria-label="Close scheduling">&times;</button>
+      </div>
+      <div class="dl-modal__frame" id="dl-book-frame"></div>
+    </div>
+  </div>
+
+  <div class="dl-modal" id="dl-modal" hidden>
+    <div class="dl-modal__backdrop" data-close></div>
+    <div class="dl-modal__box" role="dialog" aria-modal="true" aria-labelledby="dl-modal-title">
+      <div class="dl-modal__bar">
+        <p class="dl-modal__title" id="dl-modal-title">Video</p>
+        <button type="button" class="dl-modal__close" data-close aria-label="Close video">&times;</button>
+      </div>
+      <div class="dl-modal__frame"></div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add("js");
+      var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var hasIO = "IntersectionObserver" in window;
+
+      var reveals = document.querySelectorAll(".dl-reveal");
+      if (reduced || !hasIO) {
+        reveals.forEach(function (el) { el.classList.add("is-in"); });
+      } else {
+        var rio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add("is-in"); rio.unobserve(e.target); }
+          });
+        }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+        reveals.forEach(function (el) { rio.observe(el); });
+      }
+
+      var stage = document.getElementById("mk-stage");
+      var segButtons = document.querySelectorAll(".dl-seg button");
+      var userPicked = false;
+      function setView(v) {
+        stage.setAttribute("data-view", v);
+        segButtons.forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-view") === v ? "true" : "false"); });
+      }
+      segButtons.forEach(function (b) {
+        b.addEventListener("click", function () { userPicked = true; setView(b.getAttribute("data-view")); });
       });
-      send.textContent='Message '+n+' student'+(n===1?'':'s')+(f==='all'?'':' + families');
-    });
-  });
-})();
+      if (stage) {
+        if (reduced || !hasIO) {
+          stage.classList.add("is-in");
+        } else {
+          var mobile = window.matchMedia("(max-width: 859px)").matches;
+          if (mobile) setView("before");
+          var sio = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+              if (!e.isIntersecting) return;
+              window.setTimeout(function () {
+                stage.classList.add("is-in");
+                if (!userPicked) setView("after");
+              }, mobile ? 1300 : 250);
+              sio.disconnect();
+            });
+          }, { threshold: 0.45 });
+          sio.observe(stage);
+        }
+      }
+
+      var modal = document.getElementById("dl-modal");
+      var frame = modal.querySelector(".dl-modal__frame");
+      var title = document.getElementById("dl-modal-title");
+      var lastFocus = null;
+      function openVideo(id, name) {
+        lastFocus = document.activeElement;
+        var src = "https://player.mux.com/" + id + "?autoplay=true&accent-color=%23c7007a&metadata-video-title=" + encodeURIComponent(name);
+        var iframe = document.createElement("iframe");
+        iframe.src = src;
+        iframe.title = name;
+        iframe.allow = "accelerometer; autoplay; encrypted-media; fullscreen; picture-in-picture";
+        iframe.allowFullscreen = true;
+        frame.innerHTML = "";
+        frame.appendChild(iframe);
+        title.textContent = name;
+        modal.hidden = false;
+        document.body.style.overflow = "hidden";
+        modal.querySelector(".dl-modal__close").focus();
+      }
+      function closeVideo() {
+        modal.hidden = true;
+        frame.innerHTML = "";
+        document.body.style.overflow = "";
+        if (lastFocus) lastFocus.focus();
+      }
+      document.querySelectorAll("[data-mux]").forEach(function (el) {
+        el.addEventListener("click", function (ev) {
+          ev.preventDefault();
+          openVideo(el.getAttribute("data-mux"), el.getAttribute("data-title") || "Delphinium video");
+        });
+      });
+      modal.querySelectorAll("[data-close]").forEach(function (el) { el.addEventListener("click", closeVideo); });
+      document.addEventListener("keydown", function (ev) {
+        if (ev.key === "Escape" && !modal.hidden) closeVideo();
+      });
+    })();
+      /* Zoho Bookings: preload portal-embed iframe; Schedule CTAs open modal instantly */
+      (function () {
+        var BOOK_URL = "https://jared-delphi-me.zohobookings.com/portal-embed#/4937208000000036014";
+        var FALLBACK = "https://jared-delphi-me.zohobookings.com/4937208000000036014";
+        var bookModal = document.getElementById("dl-book-modal");
+        var bookFrame = document.getElementById("dl-book-frame");
+        if (!bookModal || !bookFrame) return;
+        var iframe = null;
+        var lastFocus = null;
+
+        function ensureIframe() {
+          if (iframe) return iframe;
+          iframe = document.createElement("iframe");
+          iframe.src = BOOK_URL;
+          iframe.title = "Schedule a demo";
+          iframe.setAttribute("allowfullscreen", "");
+          iframe.setAttribute("loading", "eager");
+          bookFrame.appendChild(iframe);
+          return iframe;
+        }
+
+        function openBook(e) {
+          if (e) e.preventDefault();
+          lastFocus = document.activeElement;
+          ensureIframe();
+          bookModal.hidden = false;
+          document.documentElement.style.overflow = "hidden";
+          var closeBtn = bookModal.querySelector(".dl-modal__close");
+          if (closeBtn) closeBtn.focus();
+        }
+
+        function closeBook() {
+          bookModal.hidden = true;
+          document.documentElement.style.overflow = "";
+          if (lastFocus && lastFocus.focus) lastFocus.focus();
+        }
+
+        document.querySelectorAll("[data-bookings-open]").forEach(function (el) {
+          el.addEventListener("click", openBook);
+        });
+
+        bookModal.querySelectorAll("[data-book-close]").forEach(function (el) {
+          el.addEventListener("click", closeBook);
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && !bookModal.hidden) closeBook();
+        });
+
+        function warm() { ensureIframe(); }
+        if ("requestIdleCallback" in window) {
+          requestIdleCallback(warm, { timeout: 2000 });
+        } else {
+          setTimeout(warm, 800);
+        }
+
+        // Official API still available if we ever want floating button:
+        // Bookings.buttonModal({ url: BOOK_URL, text: "Schedule a demo", color: "#c7007a", position: "bottom-right" });
+        window.dlOpenBookings = openBook;
+        window.dlBookingsFallback = FALLBACK;
+      })();
+
 </script>
-<!-- Rails: Davis named with 72 classes / 6,000 students / same courses, teachers, content = exact 31% (hero). Forward-looking = "up to 31%" (CTA). 72% + Fun; Niederhauser / Dance / Hansen (synthesis-attributed quotes only). No pricing, no $229K, no UC Davis, no em dashes, no AI faces, no feature-card grid. CTA = https://delphi-me.com/schedule-jared -->
 </body>
 </html>
