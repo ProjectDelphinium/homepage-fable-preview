@@ -22,7 +22,7 @@ Only match `"assets/` with the leading quote. The Bookings script URL (`bookings
 | File | Used for | Size (px) |
 |---|---|---|
 | `from-hied-hires-2026-09-24/delphinium-wordmark.svg` | Nav + footer logo (no subtitle) and the `<head>` preload | 225×155 viewBox |
-| `from-prospectus-2026-09-24/makeover-before-canvas.png` | Makeover left side: Canvas module list. The hi-res crop picks up handout layout (heading fragment, extra pill, cut-off list), so the clean prospectus crop stays. | 722×846 |
+| `from-hied-hires-2026-09-24/makeover-before-canvas-hires.png` | Makeover left side: Canvas module list only (cropped; no nested pill/chrome from the handout). | 747×762 |
 | `from-hied-hires-2026-09-24/makeover-after-delphinium-hires.png` | Makeover right side: Canvas + Delphinium course home | 1847×1575 |
 | `from-hied-hires-2026-09-24/control-tower-roster-hires.png` | Core / Control Tower main shot | 2453×1619 |
 | `from-hied-hires-2026-09-24/control-tower-student-detail-hires.png` | Core floating card: student detail | 2305×2064 |
