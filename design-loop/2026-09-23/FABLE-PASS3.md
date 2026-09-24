@@ -1,8 +1,8 @@
 # Fable pass 3: Open on
 
-**Date:** 2026-09-23 · **Author:** Fable (design + conversion) · **For:** Jared Chapman, Web Design desk
-**Reviewed:** `zoho-sites/homepage-sites-v3.html` on the Sites v3 branch (PR 10), plus the four craft shots (desktop and phone, rest and after the click). Measured in Chrome at 1440×900, 1280×800, and 1280×720.
-**Staging:** https://delphinium-marketing-staging.zohosites.com was still the v2 page at review time (drag line, "illustrated scenario" caption, the two how stills). This pass judges the v3 file, which is the page craft just shipped.
+**Date:** 2026-09-23, finished against live staging 2026-09-24 · **Author:** Fable (design + conversion) · **For:** Jared Chapman, Web Design desk
+**Reviewed:** https://delphinium-marketing-staging.zohosites.com, captured in Chrome at 1440×900, 1280×720, and 390×844, at rest and after the click. The served page is the v3 fan-cut. No drag line. No moon line. **Turn it on**, **Avatar points**, and **Schedule a demo** (Bookings URL, four anchors) are in the first screen.
+**File checked against the capture:** `zoho-sites/homepage-sites-v3.html`. The snippet matches. The live page adds Zoho section padding and the fixed "This site was created using" badge. Those two change where the caption sits.
 **Goal:** a Director of Online Learning clicks **Schedule a demo** → https://jared-delphi-me.zohobookings.com/4937208000000036014
 **Claims ceiling:** `context/SOURCE.md`. Nothing below strengthens it.
 **Ship surface:** Zoho Sites. Custom HTML, Custom CSS, Header Code, one Code Snippet. No scrollcraft.js, no pin, no scrub, no second host.
@@ -15,7 +15,7 @@ Pass 2 asked for the course in the first viewport, with one switch, default on. 
 
 v3 is the first draft where a course shares the first screen with the headline and the magenta button. The draft bar is real, the nav sits at `top: 0`, teacher chips are gone, the how-stills are gone, Davis is exact 31% with the study context, and the promise line stays "up to." Keep all of that.
 
-The peak still loses the click. At rest the page is a comparison, so the course is the right-hand half of a diagram. The navy pill that says **Turn it on** sits on the logo blades, in the same view as **Schedule a demo**. On a 1280×720 laptop the diagram is 225px tall, the on-side type drops to 16.8px, and the pill shares its row with "Start here." On the phone, the click dims the gray list to 45% opacity and leaves it on screen. The label changes to **Show the Canvas list** while the list is still there.
+The peak still loses the click. At rest the page is a comparison, so the course is the right-hand half of a diagram, inset about 50px from the viewport by Zoho's section. The navy pill that says **Turn it on** sits on the logo blades, in the same view as **Schedule a demo**. On a 1280×720 laptop the diagram is 225px tall, the on-side type drops to 16.8px, and the pill shares its row with "Start here." On the phone, the click leaves the gray list at full size (360×134) and changes the label to **Show the Canvas list**. On every viewport the badge covers **See a Makeover start to finish**. At 1440×900 that link is y=869, and the element under the cursor is the badge.
 
 What converts is a first viewport whose course is already on, at a size you can read, with Schedule as the only pill.
 
@@ -25,23 +25,25 @@ What converts is a first viewport whose course is already on, at a size you can 
 
 ### 1.1 The headline was shrunk to make room for a widget
 
-The hero is locked to `100dvh - 26px - 52px - 72px`. Inside that box, desktop, the copy block is about 230px and the caption block is 118px. Whatever is left is the fan-cut.
+The hero is locked to `100dvh - 26px - 52px - 72px`. That formula assumes the draft bar starts at y=0. On staging it does not. `.zpsection` has `padding: 50px 0`, and the draft bar starts at y=70. The hero is then 750px tall and ends at y=898, two pixels above the bottom of a 900px window. The 72px of clearance the formula tried to save is used up by the padding above the draft.
 
-| Viewport | Hero height | Fan-cut height | H1 size | On-side module size |
-|---|---:|---:|---:|---:|
-| 1440×900 | 750px | 399px | 37.6px (the clamp cap, 2.35rem) | 28px |
-| 1280×800 | 650px | 305px | 34.6px | 16.8px |
-| 1280×720 | 570px | 225px | 34.6px | 16.8px |
+Inside the hero, desktop, the copy block is about 230px and the caption block is 118px. Whatever is left is the fan-cut. These are live measurements.
 
-The 16.8px collapse is a container query: `@container (max-height: 280px)` hides "Introduction to Biology" and sets module names to 1.05rem. The pane clears 280px on the 1440×900 shot and misses it on both laptops. The craft desktop shot is the tall case. A director on a 720px-tall window gets both lists at 16.8px, plus a pill.
+| Viewport | Draft y | Fan-cut | H1 | On-side type | Badge | Caption vs badge |
+|---|---:|---:|---:|---:|---:|---|
+| 1440×900 | 70 | 399×1325, split 663/663 | 37.6px | 28px | y=840, h=60 | Link y=869, under the badge |
+| 1280×720 | 70 | 225×1165 | 34.6px | 16.8px | y=660, h=60 | Note runs to y=718, badge starts at 660 |
+| 390×844 | 70 | 343×360, stacked | 22.7px | 16px | y=784, h=60 | Note runs to y=842, badge starts at 784 |
+
+The 16.8px collapse is a container query: `@container (max-height: 280px)` hides "Introduction to Biology" and sets module names to 1.05rem. The pane clears 280px on the 1440×900 capture and misses it at 1280×720. A director on that laptop gets both lists at 16.8px, plus a pill. All four names are still inside the cut. The failure at 720 is size and the pill on the Start here row (pill y=463 to 511, that row y=472), plus the caption under the badge.
 
 Pass 2 set the H1 at `clamp(2.4rem, 4.6vw, 4.4rem)`. v3 capped it at 2.35rem so the diagram would fit. The eyebrow "Canvas engagement layer" is back on desktop (10.9px, tracked uppercase). The page's own thesis is that a gray wall of small text is the problem. The first screen opens with one.
 
 ### 1.2 Turn it on is the second button, and it sits on the product
 
-**Schedule a demo** is in the nav and again under the headline (y=241, 44px tall, clear of the badge at all three desktop sizes). **Turn it on** is a second pill: navy outline, 48px tall, `position: absolute` at the center of the blades.
+**Schedule a demo** is in the nav and again under the headline. On the live 1440×900 capture the hero button is y=311 to 355, clear of the badge. **Turn it on** is a second pill: navy outline, 48px tall, `position: absolute` at the center of the blades (y=557 to 605).
 
-At 1440×900 the pill runs from y=487 to y=535. The "Start here" row is y=479. They share a horizontal band. The blades are the most saturated object on the screen, and the pill is parked on them. The eye lands on the toy. The booking button is a magenta lozenge in the text column above.
+The "Start here" row is y=549. They share a horizontal band. The blades are the most saturated object on the screen, and the pill is parked on them. The blades also hang out of the cut (`top: -14%`, `bottom: -14%`): on this capture they run from y=326 to y=835, across the proof line and across "Which class would YOU rather take?" (y=786). The eye lands on the toy. The booking button is a magenta lozenge in the text column above.
 
 After the click, wide layout, `.dl-cut.is-on` collapses the gray half to `max-width: 0` and moves the pill to `left: 0.85rem`. The on-pane's left padding becomes 13.5rem (216px) to clear the pill and the blades. The course text starts after a blank cream field. The label becomes **Show the Canvas list**, which is the undo. The buyer who did the thing the page asked for is then invited to reverse it.
 
@@ -61,19 +63,31 @@ Under the cut:
 
 > Illustrated. Left is a typical Canvas module list. Right is the same course with Delphinium on.
 
-"Illustrated." is the apology pass 2 removed, shortened. The left/right sentence matches the resting wide layout (gray at x=0, course at x=720 on a 1440 screen). After the click, the left side is blades and a button. Under 800px the layout stacks, so there is no left and no right. The sentence is in the DOM for every state.
+"Illustrated." is the apology pass 2 removed, shortened. The left/right sentence matches the resting wide layout (gray at x=50, course at x=713 on the live 1440 screen). After the click, the left side is blades and a button. Under 800px the layout stacks, so there is no left and no right. The sentence is in the DOM for every state.
 
 ### 1.5 The phone does not turn on
 
 Under 800px the band stacks: gray list, a 14px horizontal five-color rule, the pill, the color list. The rule reads as a divider. The logo fan is a set of vertical blades. A horizontal stripe between two lists is a template seam.
 
-The collapse to `max-width: 0` lives inside `@media (min-width: 800px)`. The only on-state rule that applies on a phone is `.dl-cut.is-on .dl-cut__off { opacity: 0.45 }`. The craft shot after the tap still shows all four gray names, then the rule, then **Show the Canvas list**, then the color course that was already on screen. The verb and the picture disagree.
+The collapse to `max-width: 0` lives inside `@media (min-width: 800px)`. The only on-state rule that applies on a phone is `.dl-cut.is-on .dl-cut__off { opacity: 0.45 }`. After the tap on the live 390×844 page, the gray list is still 360×134, the label is **Show the Canvas list**, and the color course is the list that was already underneath. The verb and the picture disagree.
 
-Phone type is set in CSS, independent of the tall desktop shot: H1 is 1.42rem (22.7px), lead is 0.92rem, module meta is `display: none`. The first viewport also spends a full-width Schedule button, a wrapped "Watch the overview" line, the proof line, both lists, and the caption. The Davis figure is `clamp(4rem, 12vw, 7.5rem)`. On a phone the proof band's top padding is 3.25rem (52px), and the badge reserve is 72px, so the cap of "31%" sits in the gutter. The craft shot shows that slice as a cut-off "71%." On staging the badge covers it. In the HTML preview it looks like a broken number. Push the proof padding to at least 72px so the gutter is paper either way.
+Phone type on the live 390×844 capture: H1 is 1.42rem (22.7px, the row is 71px tall because it wraps), lead is 0.92rem, module meta is `display: none`. The first viewport spends a full-width Schedule button (y=292, clear of the badge), a wrapped "Watch the overview" line, the proof line, both lists, and the caption. The gray list is 134px. The color list is 134px. Genetics on the color side is y=710, above the badge at y=784. The caption is the piece that falls under the badge.
 
 The band does scroll. `touch-action: none` is gone. That part of pass 2 landed.
 
-### 1.6 What v3 got right, so this pass does not reopen it
+### 1.6 The live page is inset, and the badge owns the caption link
+
+The theme header is `display: none` (the "Delphinium | Canvas engagement layer" site name does not paint). The badge is not hidden, which is the right call. It is an empty-class `div`, `position: fixed`, `z-index: 1000000`, 60px tall, text "This site was created using". It sits at the bottom of every viewport above.
+
+What the hero formula missed:
+
+- `.zpsection` padding-top is 50px. The draft bar, which the formula treats as the top of the page, starts at y=70.
+- `.zpcontainer` adds side padding, and the column adds more. At 1440 the fan-cut is 1325px wide and starts at x=50. At 390 it is 360px wide and starts at x=15. The fan is a boxed diagram, not a full-bleed blade.
+- Hero bottom on a 900px window is y=898. The badge starts at y=840. "Which class would YOU rather take?" (y=786) clears it. **See a Makeover start to finish** (y=869) does not. `elementFromPoint` on that link returns the badge, so the link is visible in the DOM and not clickable.
+
+Schedule in the nav and in the hero clears the badge at all three sizes. The control that does not is the one under the diagram. Zero the section padding in Custom CSS. That is page padding, not a badge-hide rule. Then re-check the link on the staging URL. A 72px pad inside a hero that has already been pushed down by 70px does not clear the badge.
+
+### 1.7 What v3 got right, so this pass does not reopen it
 
 Claims on the v3 copy stay inside SOURCE. The hero promise is "up to a 31%." Exact 31% appears in the Davis block with Davis School District, 72 classes, 6,000 students, and same courses, content, and teachers. Higher Ed stays "as much as" 47 / 67 / 65, after the close, with a text link. Niederhauser and Dance are spelled correctly. The family line is one paragraph, with Community Builder and 160 languages, which the synthesis already allows. No parent percentage. No em dashes in the public strings.
 
@@ -91,7 +105,7 @@ This keeps one course, the same four module names, and the words "Turn it on." I
 
 ### 2.1 What the buyer sees
 
-Desktop and phone use the same stack. The hero is as tall as its content. It is not locked to `100dvh`. Badge clearance is `padding-bottom: 72px` on the hero, so the last control clears a 60px credit. If that makes a 720px laptop scroll, it scrolls. A clipped module is a worse trade.
+Desktop and phone use the same stack. The hero is as tall as its content. It is not locked to `100dvh`. Before that height is computed, Custom CSS sets `.zpsection` padding to 0 and the column side padding to 0, so the draft bar starts at y=0 and the course can run edge to edge. Badge clearance is `padding-bottom: 72px` on the hero, so the last control clears a 60px credit. If that makes a 720px laptop scroll, it scrolls. A clipped module is a worse trade. Confirm on the staging URL, with `elementFromPoint`, that the last link in the hero is not the badge.
 
 1. H1 at display size. No eyebrow.
 2. The lead from section 4, then the magenta **Schedule a demo**, with "Watch the overview" as a text link.
@@ -171,7 +185,7 @@ Nav stays short: logo 40px, bar 52px, sticky `top: 0`. The draft bar stays in fl
 
 The bands below the hero stay in the v3 order. The hero stops pretending to be exactly one viewport.
 
-1. **Hero (paper).** H1, lead, Schedule, proof line, the on course, one caption line. Padding-bottom 72px. No fixed height. Proof section padding-top at least 72px so the Davis figure starts below the badge reserve on a phone.
+1. **Hero (paper).** H1, lead, Schedule, proof line, the on course, one caption line. Padding-bottom 72px. No fixed height. Zoho section padding at 0, so this pad is actually below the content. The caption link has to clear the badge on the staging URL.
 2. **Proof.** Unchanged Davis block.
 3. **Students (butter).** Unchanged.
 4. **Teachers.** Unchanged prose, dots, family paragraph, two YouTube links.
@@ -234,7 +248,7 @@ One snippet and Custom CSS, same paste path as v3. The peak adds no script. The 
 
 | # | Move | Where it lives | JS |
 |---|---|---|---|
-| 5.1 | Delete the fixed hero height. Padding-bottom 72px. Proof padding-top at least 72px | **Custom CSS** | 0 |
+| 5.1 | Delete the fixed hero height. Padding-bottom 72px. `.zpsection { padding: 0 }`. `.zpcontainer, .zpelem-col { padding-left: 0; padding-right: 0 }` | **Custom CSS** | 0 |
 | 5.2 | H1 scale, no eyebrow, lead measure | **Custom CSS** plus deleting the eyebrow node | 0 |
 | 5.3 | One card, two faces in one grid cell, spine absolute at the left | **Code Snippet** HTML, **Custom CSS** | 0 |
 | 5.4 | Checkbox default `checked`. Yellow slab via `.dl-hero:has(#dl-on:not(:checked)) .hl` | **Custom CSS** | 0 |
@@ -242,7 +256,7 @@ One snippet and Custom CSS, same paste path as v3. The peak adds no script. The 
 | 5.6 | Phone and desktop share the swap. Delete the 45% opacity fallback and the `max-width: 0` collapse | **Custom CSS** | 0 |
 | 5.7 | Video facade | Keep the existing click-to-iframe | ~15, already written |
 | 5.8 | Bookings | Every Schedule anchor stays https://jared-delphi-me.zohobookings.com/4937208000000036014 | 0 |
-| 5.9 | Badge | Do not hide it. The 72px pad is the clearance | 0 |
+| 5.9 | Badge | Do not hide it. After 5.1, hit-test the hero's last link on the staging URL. It must not return the empty-class fixed div | 0 |
 
 **JS removed:** the `is-on` class toggle and the label rewrite. The checkbox does that work.
 
@@ -299,14 +313,14 @@ The bar, the faces, and the spine have to follow the checkbox in the DOM so `~` 
 
 ## 6. Ranked craft checklist for Cursor
 
-Do them in this order. 1 through 5 are the conversion pass. 6 and 7 are the same PR if they fit.
+Do them in this order. 1 through 6 are the conversion pass. 7 is the same PR if it fits. Check 1 through 6 on https://delphinium-marketing-staging.zohosites.com, not only in the raw HTML file.
 
-1. **Default the course to on.** Replace `#turn-on` with the one-card sketch in section 5. Checkbox checked in HTML. Delete the half/half flex, the centered `.dl-turn` pill, the horizontal blade, and the `is-on` script. Phone and desktop use the same swap.
-2. **Stop clipping the course.** Remove the fixed `height` on `.dl-hero`. Keep `padding-bottom: 72px`. All four module names visible at 1280×720 and at 390×844, at 16px or larger. The text control is in the card's top bar, clear of the names.
-3. **Make color mean something.** Green on Getting Started only. Cyan and a 16px Avatar points chip on Cells and Structure. Ink stripes on the last two modules. Fan colors only in the spine. Delete the four-color 8px bar.
-4. **Restore the headline.** H1 clamp from section 3. Delete the eyebrow. Lead and proof line from section 4. Yellow slab follows the checkbox.
-5. **Caption truth.** One line from section 4. Delete the left/right sentence and the word "Illustrated."
-6. **Gutter.** Proof padding-top at least 72px so the Davis figure does not show its cap in the badge reserve on a phone.
+1. **Zero the Zoho inset, then check the badge on the staging URL.** `.zpsection` padding to 0. Column and container side padding to 0. Do not add a badge-hide rule. After the paste, at 1440×900 and 390×844, `elementFromPoint` on Schedule, on the course control, and on the Makeover link must return those controls. Today the Makeover link returns the badge.
+2. **Default the course to on.** Replace `#turn-on` with the one-card sketch in section 5. Checkbox checked in HTML. Delete the half/half flex, the centered `.dl-turn` pill, the horizontal blade, and the `is-on` script. Phone and desktop use the same swap.
+3. **Stop clipping the course.** Remove the fixed `height` on `.dl-hero`. Keep `padding-bottom: 72px`. All four module names visible at 1280×720 and at 390×844, at 16px or larger. The text control is in the card's top bar, clear of the names.
+4. **Make color mean something.** Green on Getting Started only. Cyan and a 16px Avatar points chip on Cells and Structure. Ink stripes on the last two modules. Fan colors only in the spine. Delete the four-color 8px bar.
+5. **Restore the headline.** H1 clamp from section 3. Delete the eyebrow. Lead and proof line from section 4. Yellow slab follows the checkbox.
+6. **Caption truth.** One line from section 4. Delete the left/right sentence and the word "Illustrated."
 7. **Later, not this peak.** Full-color logo row. Real course stills in the on face when Jared sends them. Splitting the snippet into native sections. Dropping Poppins and PT Sans when the theme fonts can be Outfit and Source Sans 3.
 
 **Do not undo:** warm paper, the short nav, the in-flow draft bar, butter student band, magenta-only Schedule buttons, yellow on "engagement," Outfit / Source Sans 3, Fraunces on the quote and on Fun., the locked H1, the Bookings URL, the Netflix line, 72% and Fun., Tiffany Dance, Natalie Niederhauser, the Davis context on the exact 31%, "up to 31%" on the promise, Higher Ed after the close, family as one paragraph, no teacher chips, no how-stills, no parent percentage, no em dashes.
