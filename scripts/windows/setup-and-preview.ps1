@@ -2,8 +2,6 @@
 # the Sites polish branch, start local preview, open the browser.
 #
 # Run in PowerShell (no admin needed):
-#   irm https://raw.githubusercontent.com/ProjectDelphinium/homepage-fable-preview/cursor/hero-h1-first-line-25b0/scripts/windows/setup-and-preview.ps1 | iex
-# Or after clone:
 #   powershell -ExecutionPolicy Bypass -File .\scripts\windows\setup-and-preview.ps1
 
 param(
@@ -32,7 +30,6 @@ if (-not $TargetDir) {
   $TargetDir = Join-Path $HOME "Documents\homepage-fable-preview"
 }
 
-$repoName = "homepage-fable-preview"
 $parent = Split-Path -Parent $TargetDir
 if (-not (Test-Path $parent)) { New-Item -ItemType Directory -Path $parent | Out-Null }
 
@@ -40,7 +37,7 @@ if (-not (Test-Path (Join-Path $TargetDir ".git"))) {
   Write-Host "[setup] cloning $RepoUrl -> $TargetDir"
   git clone $RepoUrl $TargetDir
 } else {
-  Write-Host "[setup] repo already at $TargetDir — fetching"
+  Write-Host "[setup] repo already at $TargetDir - fetching"
 }
 
 Set-Location $TargetDir
@@ -48,14 +45,14 @@ git fetch origin $Branch
 git checkout $Branch
 git pull --ff-only origin $Branch
 
-Write-Host "[setup] branch: $(git branch --show-current)"
-Write-Host "[setup] starting Sites v5 preview on :$Port"
+Write-Host ("[setup] branch: " + (git branch --show-current))
+Write-Host ("[setup] starting Sites v5 preview on port " + $Port)
 
 & (Join-Path $TargetDir "scripts\windows\sites-v5-preview.ps1") -Port $Port
 
 Write-Host ""
 Write-Host "[setup] Next in Cursor Desktop:"
-Write-Host "  File -> Open Folder -> $TargetDir"
-Write-Host "  Open Simple Browser / Design Mode on http://127.0.0.1:${Port}/homepage-sites-v5.html"
+Write-Host ("  File -> Open Folder -> " + $TargetDir)
+Write-Host ("  Open Simple Browser / Design Mode on http://127.0.0.1:" + $Port + "/homepage-sites-v5.html")
 Write-Host "  Drop real .svg files into zoho-sites\assets\ (chat uploads flatten SVG to PNG)"
 Write-Host "  Multitask Mode: OFF for rapid Design Mode"
