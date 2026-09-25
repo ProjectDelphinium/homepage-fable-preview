@@ -12,6 +12,29 @@
 
 **Mirror:** `japomani/delphinium-homepage-fable-preview` (GitHub Pages preview). Prefer pushing / PRing against `ProjectDelphinium/homepage-fable-preview`.
 
+### Windows PC (one-shot)
+
+Needs [Git for Windows](https://git-scm.com/download/win) + [Python](https://www.python.org/downloads/) (check **Add to PATH**).
+
+In **PowerShell**:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\windows\setup-and-preview.ps1
+```
+
+If you do not have the repo yet, clone first then run that script, or paste:
+
+```powershell
+git clone https://github.com/ProjectDelphinium/homepage-fable-preview.git $HOME\Documents\homepage-fable-preview
+cd $HOME\Documents\homepage-fable-preview
+git checkout cursor/hero-h1-first-line-25b0
+powershell -ExecutionPolicy Bypass -File .\scripts\windows\setup-and-preview.ps1
+```
+
+Then in Cursor: **File → Open Folder** → `Documents\homepage-fable-preview`, and Design Mode on `http://127.0.0.1:8766/homepage-sites-v5.html`.
+
+Preview-only later: `powershell -ExecutionPolicy Bypass -File .\scripts\windows\sites-v5-preview.ps1`
+
 ## What is in the tree
 
 | Area | Purpose |
