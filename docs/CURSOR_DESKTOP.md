@@ -36,6 +36,22 @@
 
 Grok Web Design watches PRs on this repo, reviews craft/claims, and handles Zoho staging after Jared says the draft is ready. See `docs/ZOHO_SITES_PUBLISH.md`.
 
+## Sites v5 rapid design (live preview)
+
+Working file: `zoho-sites/homepage-sites-v5.html` (not root `index.html`).
+
+```bash
+# One-shot durable preview + ~1s file sync + Cloudflare URL for Design Mode
+bash scripts/sites-v5-preview-boot.sh
+# Then open the printed CF URL, or http://127.0.0.1:8766/homepage-sites-v5.html
+```
+
+Tips for speed:
+- Stay on one Sites branch (current polish: `cursor/hero-h1-first-line-25b0`; shipped pack: `main`). Avoid craft-polish for Sites HTML.
+- Keep **Multitask Mode off** for rapid-fire Design Mode prompts.
+- Cloud Agent env: **delphinium-bizops** (not Product/serverless).
+- If Simple Browser localhost fails, use the Cloudflare URL from `/tmp/sites-v5-cf-url.txt`.
+
 ## Suggested start
 
 Paste `docs/CURSOR_AGENT_PROMPT.md` when launching an Agent session.
