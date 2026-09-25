@@ -246,7 +246,10 @@
     .dl-hero__h1 strong {
       display: block;
       margin-top: 0.35rem;
-      font-weight: 700;
+      font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", serif;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.06;
       color: var(--ink);
     }
     /* Magazine B: yellow highlighter under oversized magenta engagement */
@@ -258,8 +261,8 @@
       margin-top: 0.2rem;
       padding: 0.08em 0.06em 0.12em;
       font-size: 1.14em;
-      line-height: 0.95;
-      letter-spacing: -0.035em;
+      line-height: 1;
+      letter-spacing: -0.01em;
       isolation: isolate;
     }
     .dl-hero__engage::before {
@@ -281,9 +284,11 @@
       transform: rotate(-0.6deg);
     }
     .dl-hero__h1 em {
-      font-style: normal;
+      font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", serif;
+      font-style: italic;
       color: var(--accent);
-      font-weight: 800;
+      font-weight: 600;
+      letter-spacing: -0.01em;
     }
     @media (prefers-reduced-motion: reduce) {
       .dl-hero__engage::before { transform: none; }
