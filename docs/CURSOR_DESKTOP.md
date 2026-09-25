@@ -12,6 +12,29 @@
 
 **Mirror:** `japomani/delphinium-homepage-fable-preview` (GitHub Pages preview). Prefer pushing / PRing against `ProjectDelphinium/homepage-fable-preview`.
 
+### Windows PC (one-shot)
+
+Needs [Git for Windows](https://git-scm.com/download/win) + [Python](https://www.python.org/downloads/) (check **Add to PATH**).
+
+In **PowerShell**:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\windows\setup-and-preview.ps1
+```
+
+If you do not have the repo yet, clone first then run that script, or paste:
+
+```powershell
+git clone https://github.com/ProjectDelphinium/homepage-fable-preview.git $HOME\Documents\homepage-fable-preview
+cd $HOME\Documents\homepage-fable-preview
+git checkout cursor/hero-h1-first-line-25b0
+powershell -ExecutionPolicy Bypass -File .\scripts\windows\setup-and-preview.ps1
+```
+
+Then in Cursor: **File → Open Folder** → `Documents\homepage-fable-preview`, and Design Mode on `http://127.0.0.1:8766/homepage-sites-v5.html`.
+
+Preview-only later: `powershell -ExecutionPolicy Bypass -File .\scripts\windows\sites-v5-preview.ps1`
+
 ## What is in the tree
 
 | Area | Purpose |
@@ -35,6 +58,22 @@
 ## Web Design desk
 
 Grok Web Design watches PRs on this repo, reviews craft/claims, and handles Zoho staging after Jared says the draft is ready. See `docs/ZOHO_SITES_PUBLISH.md`.
+
+## Sites v5 rapid design (live preview)
+
+Working file: `zoho-sites/homepage-sites-v5.html` (not root `index.html`).
+
+```bash
+# One-shot durable preview + ~1s file sync + Cloudflare URL for Design Mode
+bash scripts/sites-v5-preview-boot.sh
+# Then open the printed CF URL, or http://127.0.0.1:8766/homepage-sites-v5.html
+```
+
+Tips for speed:
+- Stay on one Sites branch (current polish: `cursor/hero-h1-first-line-25b0`; shipped pack: `main`). Avoid craft-polish for Sites HTML.
+- Keep **Multitask Mode off** for rapid-fire Design Mode prompts.
+- Cloud Agent env: **delphinium-bizops** (not Product/serverless).
+- If Simple Browser localhost fails, use the Cloudflare URL from `/tmp/sites-v5-cf-url.txt`.
 
 ## Suggested start
 
