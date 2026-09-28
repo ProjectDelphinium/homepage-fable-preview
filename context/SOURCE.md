@@ -35,6 +35,7 @@ Lives in the gap between content delivery and student motivation. Founder: tools
 - Student survey: *“I was sitting on the couch watching Netflix and the thought popped into my head: I could be doing homework right now.”*
 - **Natalie Niederhauser** (HS Math, Davis Connect, 100+ students): ~12 emails/day → ~6 manual messages/week; *“saved most of my Saturday nights.”*
 - **Tiffany Dance** (Instructional Coach, Davis Connect): game changer; students redoing quizzes for avatar points / googly eyes.
+- **Sites v5 claims (Jared 2026-09-28, approving Zoho staging):** “I approve” / “all claims are accurate.” Confirmed for public pages: Community Builder **auto-translate into 240 languages** (supersedes older “160-language” notes); research proof **10 peer-reviewed studies & book chapters** and **230+ citations by other researchers**; **Mewa** customer logo in the “Trusted by schools like yours” strip. Page of record: `zoho-sites/homepage-sites-v5.html` at `962c89f` (its “14 yrs of published research” stat is covered by the same “all claims are accurate”).
 
 ## Internal wedge (public pages: prefer demonstrable language)
 Competitors detect or notify; Delphinium changes what the student does. Option with a measured outcome. **Public LinkedIn/site:** prefer “turn Canvas data into action” / engagement layer language unless Jared OKs the stronger wedge on that surface.

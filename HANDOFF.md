@@ -3,9 +3,10 @@
 **Owner desk:** Web Design (Grok Bot) · **User:** Jared Chapman · **Timezone:** America/Denver  
 **Biz ops:** Cursor Environment `delphinium-bizops` · never Product/serverless.  
 **Status:** Continue development of the Fable 5.1 draft; HubSpot live site untouched  
-**Share URL:** https://japomani.github.io/delphinium-homepage-fable-preview/  
+**Share URL:** https://projectdelphinium.github.io/homepage-fable-preview/ (GitHub Pages from `main`)  
+**Sites v5 preview:** https://projectdelphinium.github.io/homepage-fable-preview/zoho-sites/homepage-sites-v5.html  
 **Repo:** https://github.com/ProjectDelphinium/homepage-fable-preview  
-**Mirror:** https://github.com/japomani/delphinium-homepage-fable-preview  
+**Mirror (legacy, not the Pages source):** https://github.com/japomani/delphinium-homepage-fable-preview  
 
 ---
 
@@ -107,7 +108,7 @@ personal, fun, a little quirky, approachable, yet cutting-edge · playful-premiu
 ## Soft / preferred wording
 
 - Parent pain: “When a parent finds out late…” / “Parents shouldn’t need Canvas literacy…” — Overview’s “I don’t know, Dad” OK as optional aside
-- Capability: color-coded parent/observer view; include observers/families on sends; celebrate wins with parents; Community Builder + 160-language translate
+- Capability: color-coded parent/observer view; include observers/families on sends; celebrate wins with parents; Community Builder + 240-language translate (Jared 2026-09-28)
 - Early calm outreach → support before failure; fewer surprise complaints — not invented happiness %
 
 ---
@@ -181,6 +182,32 @@ Reset to Sites v2 and rebuilt on the prospectus arc: `zoho-sites/homepage-sites-
 
 - **zoho-ready pack on `main` (2026-09-24):** live-intended Sites HTML from Web Design. Case section **restored** (plain-weight "Education moved online," + "teachers can read the room"); cover "Cut failures by up to" / 31%; `videoLabel(el)` for modal titles; Makeover stages `align-items: start` + Canvas-only before crop (`module-only-20260924b`). Supersedes the light-revise kicker-only Case cut.
 - **HE twin site (later):** K-12 staging is the current path. A Higher Ed twin with an audience switch (like delphi-me.com's top choice), its own videos and stats, and no parents is a later IA item. Not built yet.
+
+## Hand-off to Web Design: Sites v5 for Zoho staging (2026-09-28)
+
+**Approval (Jared, Mon 2026-09-28 5:35 PM MT, verbatim):** "I approve" / "all claims are accurate". Later the same day: "make all of the accessibility and responsive fixes, then push to git and grok." Both are done at the SHA below.
+
+- **File to stage:** `zoho-sites/homepage-sites-v5.html`. One self-contained page (inline CSS and JS) for a Zoho Sites custom HTML / Code Snippet block.
+- **Approved SHA on `main`:** `962c89f7c79c31f25dceb89fedecec8a51446dd8` (`962c89f`)
+- **Preview:** https://projectdelphinium.github.io/homepage-fable-preview/zoho-sites/homepage-sites-v5.html
+- **Relative assets (upload to Zoho, or swap to absolute URLs):** `assets/logo-new.svg` (header logo + preload), `assets/message.png` (Message Center detail), `mewalogo.gif` (logo strip, twice). All live under `zoho-sites/`. Everything else is already absolute (delphi-me.com HubSpot files, Mux, YouTube, Google Fonts).
+- **Integrations to verify on staging:**
+  - **Bookings modal:** every "Schedule a demo" opens `https://jared-delphi-me.zohobookings.com/portal-embed#/4937208000000036014` in a modal; plain link fallback is `https://jared-delphi-me.zohobookings.com/4937208000000036014`.
+  - **Contact modal:** posts to Zoho CRM Web-to-Case, the same "HS Form Support Form" as `forms/support-form/` (creates **Cases**). Hidden form `#dl-contact-zoho` posts to `https://crm.zoho.com/crm/WebToCaseForm` into a hidden iframe; `CASECF2` (course URL) is sent as "N/A" when left blank. Honeypot field is `hp_website`.
+  - **Video modal:** YouTube (and Mux) videos play in a modal and stop on close.
+- **noindex:** `<meta name="robots" content="noindex, nofollow">` stays on staging. Remove it only at the production cutover.
+- **Zoho CRM to-dos (Web Design / Jared, in Zoho; not done from this repo):**
+  1. Case assignment rule plus an email notification to support@delphi-me.com for new web Cases.
+  2. Web-to-Case domain allowlist: the Zoho Sites staging domain and delphi-me.com.
+  3. Send one clearly labeled test case from staging, confirm it lands and notifies, then delete it.
+- **Claims:** confirmed by Jared 2026-09-28 and recorded in `context/SOURCE.md`: auto-translate into **240 languages** (older docs said 160), **10 peer-reviewed studies & book chapters**, **230+ citations by other researchers**, and the **Mewa** logo in "Trusted by schools like yours."
+- **No DNS or HubSpot changes** without Jared's separate cutover approval. HubSpot stays live.
+
+**Accessibility and responsive fixes in `962c89f`:** skip link and focusable `main`; visible focus ring on every control (navy on light, white on dark surfaces); Solutions dropdown as a plain disclosure (no menu roles, Escape closes and returns focus); new mobile menu below 980px (hamburger disclosure with Escape, scrim, outside-click and link-tap close, scroll lock, 44px targets, CTA inside the menu at 320); one shared dialog helper for the video, bookings, contact, and research modals (focus trap including cross-origin iframes, Escape, focus return to the trigger); logo marquee pause/play button (hidden under reduced motion); hero "Engagement!" fits phones and the H1 clears the hanging logo at 720px and up; Community Builder image and CTA aligned on mobile; case source text raised to 13px. Verified with no horizontal overflow at 320 / 360 / 390 / 768 / 1024 / 1440, no console errors, no duplicate ids.
+
+**Open for Jared:** the logo strip image `weblogo-e1668897946927.png` (from delphi-me.com) keeps alt text "Partner school logo" because the file does not identify the school. Tell Web Design the school name for the alt text.
+
+**Heads-up for Web Design:** branch `cursor/zoho-proof-sites-v5-2026-09-28` (not merged) has a generated Zoho pack under `zoho-sites/dist/` plus `tools/zoho/build_zoho_pack.py`, built from the page *before* `962c89f`, and a one-line close-punch copy change ("Your school already runs on Canvas,"). If you stage from that pack, rebuild it from `962c89f` first so the fixes above are included; the comma is Jared's call.
 
 ## Marketing 2026-09-06
 Fold #social-media-marketing feedback: cut repetition; Makeover centerpiece; one question/section + Learn more YT; one-page takeaway; CTA subline about meeting Jared. See context/BRIEF.md and position-and-value §7.

@@ -1,6 +1,7 @@
 # Delphinium homepage — Fable 5.1 draft (Cursor handoff)
 
-**Public draft (not live):** https://japomani.github.io/delphinium-homepage-fable-preview/  
+**Public draft (not live):** https://projectdelphinium.github.io/homepage-fable-preview/  
+**Sites v5 (Zoho staging candidate):** https://projectdelphinium.github.io/homepage-fable-preview/zoho-sites/homepage-sites-v5.html  
 **Live marketing site (do not edit):** https://delphi-me.com/ (HubSpot — stays live until Jared OKs cutover)
 
 This repo is the **working draft** of the public marketing homepage redesign. Iterate here in Cursor. When Jared says “stage this,” Web Design ports to **Zoho Sites/CMS staging only**.

@@ -7,9 +7,9 @@ Copy this when launching a Cursor cloud agent or starting an Agent session on th
 You are continuing the Delphinium public marketing homepage redesign.
 
 ## Repo & preview
-- Repo: ProjectDelphinium/homepage-fable-preview (mirror japomani/delphinium-homepage-fable-preview)
+- Repo: ProjectDelphinium/homepage-fable-preview
 - Branch: main
-- Public draft: https://japomani.github.io/delphinium-homepage-fable-preview/
+- Public draft: https://projectdelphinium.github.io/homepage-fable-preview/ (Sites v5: https://projectdelphinium.github.io/homepage-fable-preview/zoho-sites/homepage-sites-v5.html)
 - Live site https://delphi-me.com/ is HubSpot — DO NOT edit HubSpot, DNS, or production. This repo is draft-only. Zoho staging is handled later by Web Design after Jared says "stage this."
 
 ## Read first (in order)
