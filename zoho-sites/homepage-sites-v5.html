@@ -834,6 +834,7 @@
     }
     .dl-proof__intro .dl-lede { max-width: 62ch; line-height: 1.65; }
     .dl-proof__intro .dl-lede b { color: var(--ink); }
+    .dl-proof__intro .dl-link--research { justify-self: start; align-self: start; margin-top: 1.5rem; }
 
     .dl-proof__record { display: grid; justify-items: start; gap: 1.75rem; }
     .dl-proof__stats {
@@ -842,47 +843,48 @@
       padding: 0;
       width: 100%;
       display: grid;
-      grid-template-columns: max-content minmax(0, 1fr);
-      column-gap: 1.5rem;
     }
+    /* Dividers sit between items only, so the first label stays level with the h2 */
     .dl-proof__stat {
-      grid-column: 1 / -1;
       display: grid;
-      grid-template-columns: subgrid;
-      align-items: center;
-      row-gap: 0.3rem;
-      padding: 1.1rem 0;
-      border-top: 1px solid color-mix(in srgb, var(--navy) 18%, transparent);
+      align-content: start;
+      justify-items: start;
+      padding: 1.25rem 0;
+      border-top: 1px solid color-mix(in srgb, var(--navy) 16%, transparent);
     }
-    .dl-proof__stat:last-child { border-bottom: 1px solid color-mix(in srgb, var(--navy) 18%, transparent); }
+    .dl-proof__stat:first-child { padding-top: 0; border-top: 0; }
+    .dl-proof__stat:last-child { padding-bottom: 0; }
     .dl-proof__stat-k {
-      grid-column: 2;
-      grid-row: 1;
-      align-self: end;
-      font-size: 0.74rem;
+      font-size: 0.75rem;
       font-weight: 700;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--blue);
     }
     .dl-proof__stat-n {
-      grid-column: 1;
-      grid-row: 1 / span 2;
-      min-width: 4.25rem;
+      margin-top: 0.55rem;
       font-family: var(--font-display);
-      font-size: clamp(1.9rem, 3.2vw, 2.4rem);
+      font-size: clamp(2.25rem, 3.2vw, 2.75rem);
       font-weight: 700;
       line-height: 1;
       letter-spacing: -0.02em;
       color: var(--navy);
       white-space: nowrap;
     }
-    .dl-proof__stat-t { grid-column: 2; grid-row: 2; align-self: start; font-size: 1rem; line-height: 1.45; color: var(--ink-soft); }
+    .dl-proof__stat-t { margin-top: 0.5rem; font-size: 1.05rem; line-height: 1.45; color: var(--ink-soft); }
     @media (min-width: 600px) and (max-width: 959px) {
-      .dl-proof__stats { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 2rem; }
-      .dl-proof__stat { grid-column: auto; display: flex; flex-direction: column; align-items: flex-start; gap: 0.55rem; padding: 1.2rem 0 0; }
-      .dl-proof__stat > * { align-self: auto; }
-      .dl-proof__stat:last-child { border-bottom: 0; }
+      /* Subgrid rows keep labels, numbers, and descriptions level across columns when a label wraps */
+      .dl-proof__stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .dl-proof__stat {
+        grid-row: span 3;
+        grid-template-rows: subgrid;
+        padding: 0 1.5rem;
+        border-top: 0;
+        border-left: 1px solid color-mix(in srgb, var(--navy) 16%, transparent);
+      }
+      .dl-proof__stat:first-child { padding-left: 0; border-left: 0; }
+      .dl-proof__stat:last-child { padding-right: 0; }
+      .dl-proof__stat-k { align-self: end; }
     }
 
     .dl-proof__results {
@@ -938,7 +940,7 @@
       height: 5px;
       background: var(--green);
     }
-    .dl-proof__result--davis .dl-card__kicker { margin-bottom: 1.5rem; font-size: 0.8rem; color: var(--green-ink); }
+    .dl-proof__result--davis .dl-card__kicker { margin-bottom: 1.5rem; color: var(--green-ink); }
     .dl-proof__davis {
       display: grid;
       grid-template-columns: auto minmax(0, 1fr);
@@ -2405,44 +2407,6 @@
     @media (prefers-reduced-motion: reduce) {
       .dl-contact__input { transition: none; }
     }
-
-    /* DRAFT BANNER: remove this block and the .dl-draft-banner element before Zoho staging */
-    :root { --dl-draft-h: 1.875rem; }
-    html { scroll-padding-top: calc(7.5rem + var(--dl-draft-h)); }
-    .dl-draft-banner {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.6rem;
-      height: var(--dl-draft-h);
-      padding: 0 1rem;
-      background: var(--navy-deep);
-      color: var(--paper);
-      font-family: var(--font-text);
-      font-size: 0.8125rem;
-      line-height: 1;
-      letter-spacing: 0.01em;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-    .dl-draft-banner__tag {
-      flex: none;
-      padding: 0.2rem 0.5rem;
-      border-radius: 999px;
-      background: var(--mark);
-      color: var(--navy-deep);
-      font-family: var(--font-display);
-      font-size: 0.6875rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-    }
-    .dl-draft-banner__text { overflow: hidden; text-overflow: ellipsis; }
-    .dl-top .dl-nav__logo { top: calc(var(--dl-logo-top) + var(--dl-draft-h)); }
-    @media (max-width: 479px) {
-      .dl-draft-banner { gap: 0.45rem; padding: 0 0.6rem; font-size: 0.75rem; }
-      .dl-draft-banner__extra { display: none; }
-    }
-    /* END DRAFT BANNER */
   </style>
   <link rel="preconnect" href="https://bookings.nimbuspop.com" crossorigin>
   <link rel="preconnect" href="https://jared-delphi-me.zohobookings.com" crossorigin>
@@ -2456,12 +2420,6 @@
 </head>
 <body class="dl-v5">
   <div class="dl-top">
-    <!-- DRAFT BANNER: remove before Zoho staging (see matching CSS block) -->
-    <div class="dl-draft-banner" id="dl-draft-banner" role="note" aria-label="Draft notice">
-      <span class="dl-draft-banner__tag">DRAFT</span>
-      <span class="dl-draft-banner__text"><span class="dl-draft-banner__extra">For internal feedback. </span>Not the live Delphinium site.</span>
-    </div>
-    <!-- END DRAFT BANNER -->
     <a class="dl-nav__logo" href="#top" aria-label="Delphinium home">
       <img src="assets/logo-new.svg" width="211" height="150" alt="Delphinium">
     </a>
@@ -2592,7 +2550,7 @@
               <li>Turn Canvas into an early-warning powerhouse</li>
               <li>Red, yellow, and green reveals who needs help first</li>
               <li>One click gives the full picture: grades, progress, missing and late work, and more!</li>
-              <li>Send mass messages to parents</li>
+              <li>Send mass-messages to parents</li>
             </ul>
           </div>
           <div class="dl-prod__media dl-reveal">
@@ -2605,7 +2563,7 @@
           </div>
           <div class="dl-prod__quote dl-reveal">
             <blockquote class="dl-pull">
-              <p>&ldquo;I can see, with color, my students' progress, see their points, their percentages&hellip; to tell me where a student is very quickly. This has saved most of my Saturday nights!&rdquo;</p>
+              <p>&ldquo;I can see, with color, my students' progress &ndash; see their points, their percentages&hellip; to tell me where a student is very quickly. This has saved most of my Saturday nights!&rdquo;</p>
               <cite>Natalie Niederhauser<span>High School Math Teacher, Davis Connect</span></cite>
             </blockquote>
             <div class="dl-prod__more">
@@ -2645,7 +2603,7 @@
             </ul>
             <div class="dl-cb-quotes">
               <blockquote class="dl-pull">
-                <p>&ldquo;You just saved me hours of mail merging! This saves teachers so much time and really brings that part of personalized learning that we all strive to reach for.&rdquo;</p>
+                <p>&ldquo;You just saved me hours of mail merging! This saves teachers so much time and really brings that part of personalized learning that we all strive to reach.&rdquo;</p>
                 <cite>Sarah Ruiz<span>Curriculum Director</span></cite>
               </blockquote>
               <blockquote class="dl-pull">
@@ -2799,7 +2757,7 @@
               <ul class="dl-list">
                 <li><b>Progress they can feel</b> – Color-coded trackers count every point earned</li>
                 <li><b>Always a next step</b> – Students know what's done, what's due, and where to go</li>
-                <li><b>Encouraging success signals</b> – Avatars, prize boxes, achievements, and celebrations</li>
+                <li><b>Encouraging success signals</b> – Avatars, prize boxes, achievements, celebrations, and more</li>
                 <li><b>Learning WITH others</b> – Anonymous and optional comparison and competition build community</li>
                 <li><b>Urgency students can see</b> – Nudges keep "I'll do it later" from turning into "I forgot"</li>
               </ul>
@@ -2886,6 +2844,10 @@
             <p class="dl-eyebrow" id="proof-eyebrow">Proof</p>
             <h2 class="dl-h2" id="proof-heading"><span class="dl-h2__plain">Years of research</span> <em>behind every design decision.</em></h2>
             <p class="dl-lede">Long before Delphinium was a product, its founders were researchers, studying what actually drives students to engage, and publishing what they found. <b>Every engagement principle in the platform is grounded in peer-reviewed research</b>, built on decades of work by the field's leading scholars.</p>
+            <button type="button" class="dl-link dl-link--research" id="dl-research-open" data-research-open aria-haspopup="dialog" aria-controls="dl-research-modal">
+              <span class="dl-link__icon dl-link__icon--doc" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span>
+              Read the research
+            </button>
           </div>
           <div class="dl-proof__record dl-reveal">
             <ul class="dl-proof__stats">
@@ -2893,10 +2855,6 @@
               <li class="dl-proof__stat"><span class="dl-proof__stat-k">Publications</span><b class="dl-proof__stat-n">10</b><span class="dl-proof__stat-t">peer-reviewed studies &amp; book chapters</span></li>
               <li class="dl-proof__stat"><span class="dl-proof__stat-k">Cited by the field</span><b class="dl-proof__stat-n">230+</b><span class="dl-proof__stat-t">citations by other researchers</span></li>
             </ul>
-            <button type="button" class="dl-link dl-link--research" id="dl-research-open" data-research-open aria-haspopup="dialog" aria-controls="dl-research-modal">
-              <span class="dl-link__icon dl-link__icon--doc" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span>
-              Read the research
-            </button>
           </div>
         </div>
 
@@ -2906,7 +2864,7 @@
             <div class="dl-proof__davis">
               <p class="dl-card__num dl-card__num--green">31%</p>
               <p class="dl-card__txt"><b>decrease in course failure rates</b>.</p>
-              <p class="dl-card__ctx">Davis School District, Utah. 72 online classes and 6,000 students.</p>
+              <p class="dl-card__ctx">Davis School District, Utah. <b>72 online classes and 6,000 students.</b></p>
             </div>
             <p class="dl-proof__study-punch">The courses didn't change. The teachers didn't change. <b>Engagement did, and so did the outcomes.</b></p>
           </article>
