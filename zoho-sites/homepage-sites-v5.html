@@ -2384,6 +2384,7 @@
     .dl-contact__input:focus { outline: 3px solid var(--cyan); outline-offset: 1px; border-color: var(--navy); }
     .dl-contact__input[aria-invalid="true"] { border-color: #b3261e; }
     .dl-contact__error { margin: 0; font-size: 0.9rem; font-weight: 600; color: #b3261e; }
+    .dl-contact__hint { margin: 0; font-size: 0.9rem; line-height: 1.4; color: var(--ink-soft); }
     .dl-contact__hp { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
     .dl-contact__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.85rem 1.25rem; margin-top: 0.3rem; }
     .dl-contact__actions .dl-btn[disabled] { opacity: 0.7; cursor: progress; transform: none; }
@@ -3122,13 +3123,18 @@
               <input class="dl-contact__input" id="dl-contact-org" name="organization" type="text" autocomplete="organization" maxlength="200">
             </div>
             <div class="dl-contact__field">
+              <label class="dl-contact__label" for="dl-contact-course">Canvas course URL <span class="dl-contact__opt">(optional)</span></label>
+              <input class="dl-contact__input" id="dl-contact-course" name="course" type="url" inputmode="url" autocomplete="off" maxlength="255" aria-describedby="dl-contact-course-hint">
+              <p class="dl-contact__hint" id="dl-contact-course-hint">Only if your note is about a specific course.</p>
+            </div>
+            <div class="dl-contact__field">
               <label class="dl-contact__label" for="dl-contact-message">Message</label>
               <textarea class="dl-contact__input" id="dl-contact-message" name="message" rows="5" required maxlength="5000" aria-describedby="dl-contact-message-err"></textarea>
               <p class="dl-contact__error" id="dl-contact-message-err" hidden></p>
             </div>
             <div class="dl-contact__hp" aria-hidden="true">
               <label for="dl-contact-hp">Leave this field empty</label>
-              <input id="dl-contact-hp" name="_honey" type="text" tabindex="-1" autocomplete="off">
+              <input id="dl-contact-hp" name="hp_website" type="text" tabindex="-1" autocomplete="off">
             </div>
             <p class="dl-contact__status" id="dl-contact-status" hidden></p>
             <div class="dl-contact__actions">
@@ -3141,6 +3147,20 @@
           <p class="dl-contact__intro">Your message was sent. We'll get back to you.</p>
           <button type="button" class="dl-btn" data-contact-close>Close</button>
         </div>
+        <!-- Zoho CRM Web-to-Case (HS Form Support Form, forms/support-form). Hidden values and field names must match Zoho's embed exactly. -->
+        <form id="dl-contact-zoho" action="https://crm.zoho.com/crm/WebToCaseForm" method="POST" enctype="multipart/form-data" accept-charset="UTF-8" target="dl-contact-sink" hidden>
+          <input type="hidden" name="xnQsjsdp" value="1f8d7fcca18df25fc546fad9c8f735dce6ccf43b83ec2c6b94c272c8b23d867c">
+          <input type="hidden" name="zc_gad" value="">
+          <input type="hidden" name="xmIwtLD" value="285411853c4f93d22801176ef3bc1315f4d05aa82dc24dae8c7b7527d9f6d9580368a477081438e5fd0ec995ea12341d">
+          <input type="hidden" name="actionType" value="Q2FzZXM=">
+          <input type="hidden" name="returnURL" value="null">
+          <input type="hidden" name="Email" value="">
+          <input type="hidden" name="Subject" value="">
+          <input type="hidden" name="CASECF2" value="">
+          <input type="hidden" name="Description" value="">
+          <input type="hidden" name="aG9uZXlwb3Q" value="">
+        </form>
+        <iframe name="dl-contact-sink" id="dl-contact-sink" title="Contact form submission" src="about:blank" tabindex="-1" aria-hidden="true" hidden></iframe>
         <p class="visually-hidden" id="dl-contact-live" aria-live="polite" role="status"></p>
       </div>
     </div>
@@ -3742,17 +3762,19 @@
         window.dlOpenResearch = dialog.open;
       })();
 
-      /* Contact modal: [data-contact-open] links, email form */
+      /* Contact modal: [data-contact-open] links, form creates a Zoho CRM Case */
       (function () {
-        /* FormSubmit AJAX endpoint (static site, no backend). The first real
-           submission sends a one-time activation email to this address; nothing
-           is delivered until someone clicks it. Swap for a Zoho Forms endpoint
-           when staging on Zoho. */
-        var CONTACT_ENDPOINT = "https://formsubmit.co/ajax/support@delphi-me.com";
+        /* Zoho's WebToCaseForm has no CORS, so the hidden #dl-contact-zoho form
+           posts into a hidden iframe and its load event means the POST finished.
+           The cross-origin response can't be read, so a Zoho-side rejection
+           still looks like success here. */
         var CONTACT_EMAIL = "support@delphi-me.com";
+        var SEND_TIMEOUT_MS = 20000;
         var modal = document.getElementById("dl-contact-modal");
         var form = document.getElementById("dl-contact-form");
-        if (!modal || !form) return;
+        var zoho = document.getElementById("dl-contact-zoho");
+        var sink = document.getElementById("dl-contact-sink");
+        if (!modal || !form || !zoho || !sink) return;
         var formView = modal.querySelector('[data-contact-view="form"]');
         var doneView = modal.querySelector('[data-contact-view="done"]');
         var doneClose = doneView.querySelector("[data-contact-close]");
@@ -3762,17 +3784,20 @@
         var nameEl = document.getElementById("dl-contact-name");
         var emailEl = document.getElementById("dl-contact-email");
         var orgEl = document.getElementById("dl-contact-org");
+        var courseEl = document.getElementById("dl-contact-course");
         var messageEl = document.getElementById("dl-contact-message");
         var honeyEl = document.getElementById("dl-contact-hp");
         var required = [nameEl, emailEl, messageEl];
         var sending = false;
+        var sendTimer = 0;
 
         function problem(el) {
           var v = el.value.trim();
           if (el === nameEl) return v ? "" : "Please enter your name.";
           if (el === emailEl) {
             if (!v) return "Please enter your email.";
-            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? "" : "Please enter a valid email address.";
+            /* Zoho's own check needs a 2+ character ending after the last dot */
+            return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v) ? "" : "Please enter a valid email address.";
           }
           return v ? "" : "Please enter a message.";
         }
@@ -3822,18 +3847,49 @@
             name: nameEl.value.trim(),
             email: emailEl.value.trim(),
             organization: orgEl.value.trim(),
+            course: courseEl.value.trim(),
             message: messageEl.value.trim()
           };
+        }
+
+        function subjectFor(d) {
+          return ("Website contact: " + d.name).slice(0, 300);
+        }
+
+        /* The Web-to-Case form has no name or organization field, so they lead the Description */
+        function descriptionFor(d) {
+          var lines = ["Name: " + d.name, "Email: " + d.email];
+          if (d.organization) lines.push("School or organization: " + d.organization);
+          lines.push("Sent from: " + window.location.href.split(/[?#]/)[0], "", d.message);
+          return lines.join("\r\n");
+        }
+
+        function setZoho(name, value) {
+          zoho.querySelector('input[name="' + name + '"]').value = value;
+        }
+
+        function fillZoho(d) {
+          setZoho("Email", d.email);
+          setZoho("Subject", subjectFor(d));
+          /* CASECF2 (course URL) is mandatory in Zoho; its own label says to type N/A */
+          setZoho("CASECF2", (d.course || "N/A").slice(0, 255));
+          setZoho("Description", descriptionFor(d));
+          setZoho("aG9uZXlwb3Q", "");
+        }
+
+        function clearZoho() {
+          ["Email", "Subject", "CASECF2", "Description"].forEach(function (n) { setZoho(n, ""); });
         }
 
         function mailtoHref(d) {
           var lines = [d.message.replace(/\r?\n/g, "\r\n"), "", d.name, d.email];
           if (d.organization) lines.push(d.organization);
+          if (d.course) lines.push(d.course);
           var body = lines.join("\r\n");
           /* Some mail clients cap mailto URLs near 2,000 characters */
           if (body.length > 1500) body = body.slice(0, 1500) + "...";
           return "mailto:" + CONTACT_EMAIL +
-            "?subject=" + encodeURIComponent("Website contact: " + d.name) +
+            "?subject=" + encodeURIComponent(subjectFor(d)) +
             "&body=" + encodeURIComponent(body);
         }
 
@@ -3893,31 +3949,27 @@
             return;
           }
           hideStatus();
-          setSending(true);
-          fetch(CONTACT_ENDPOINT, {
-            method: "POST",
-            headers: { "Content-Type": "application/json", Accept: "application/json" },
-            body: JSON.stringify({
-              name: d.name,
-              email: d.email,
-              organization: d.organization,
-              message: d.message,
-              _subject: "Website contact: " + d.name,
-              _template: "table",
-              _captcha: "false",
-              _honey: honeyEl.value
-            })
-          }).then(function (res) {
-            if (!res.ok) throw new Error("HTTP " + res.status);
-            return res.json();
-          }).then(function (json) {
-            if (!json || String(json.success) !== "true") throw new Error("Not sent");
-            setSending(false);
-            showDone();
-          }).catch(function () {
-            setSending(false);
+          if (navigator.onLine === false) {
             showError(d);
-          });
+            return;
+          }
+          setSending(true);
+          fillZoho(d);
+          sendTimer = window.setTimeout(function () {
+            if (!sending) return;
+            setSending(false);
+            clearZoho();
+            showError(d);
+          }, SEND_TIMEOUT_MS);
+          zoho.submit();
+        });
+
+        sink.addEventListener("load", function () {
+          if (!sending) return;
+          window.clearTimeout(sendTimer);
+          setSending(false);
+          clearZoho();
+          showDone();
         });
 
         document.querySelectorAll("[data-contact-open]").forEach(function (el) {
