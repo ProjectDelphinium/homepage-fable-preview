@@ -36,6 +36,8 @@
       --shadow-sm: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
       --font-display: "Outfit", system-ui, sans-serif;
       --font-text: "Source Sans 3", system-ui, sans-serif;
+      /* Focus ring: navy on light surfaces; dark surfaces reset it to white */
+      --dl-focus: var(--navy);
     }
 
     *, *::before, *::after { box-sizing: border-box; }
@@ -53,7 +55,31 @@
     img { max-width: 100%; height: auto; display: block; }
     a { color: var(--navy); text-underline-offset: 0.18em; }
     a:hover { color: var(--accent); }
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible,
+    [tabindex]:not([tabindex="-1"]):focus-visible { outline: 3px solid var(--dl-focus); outline-offset: 3px; }
+    main:focus { outline: none; }
     h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; }
+    .dl-skip {
+      position: fixed;
+      top: 0.75rem;
+      left: 0.75rem;
+      z-index: 100001;
+      padding: 0.75rem 1.1rem;
+      border-radius: 999px;
+      background: var(--navy);
+      color: #fff;
+      font-family: var(--font-display);
+      font-weight: 600;
+      text-decoration: none;
+      transform: translateY(calc(-100% - 1.5rem));
+    }
+    .dl-skip:focus,
+    .dl-skip:focus-visible { transform: none; color: #fff; outline: 3px solid var(--navy); outline-offset: 3px; }
+    @media (prefers-reduced-motion: no-preference) {
+      .dl-skip { transition: transform 150ms ease; }
+    }
     .visually-hidden {
       position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
       overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
@@ -175,17 +201,12 @@
     .dl-nav__drop-panel a:focus-visible { color: var(--accent); background: color-mix(in srgb, var(--accent) 6%, transparent); }
     @media (min-width: 980px) {
       .dl-nav__links { display: flex; }
-      /* Hover / keyboard: show panel even while [hidden] until JS clears it */
-      .dl-nav__drop:hover .dl-nav__drop-panel,
-      .dl-nav__drop:focus-within .dl-nav__drop-panel {
+      /* No-JS fallback only; with JS, aria-expanded drives the [hidden] panel so Escape can close it */
+      html:not(.js) .dl-nav__drop:hover .dl-nav__drop-panel,
+      html:not(.js) .dl-nav__drop:focus-within .dl-nav__drop-panel {
         display: block;
       }
-      .dl-nav__drop:hover .dl-nav__drop-btn,
-      .dl-nav__drop:focus-within .dl-nav__drop-btn { color: var(--accent); }
-      .dl-nav__drop:hover .dl-nav__drop-btn::after,
-      .dl-nav__drop:focus-within .dl-nav__drop-btn::after {
-        transform: translateY(0.1rem) rotate(225deg);
-      }
+      .dl-nav__drop:hover .dl-nav__drop-btn { color: var(--accent); }
       /* Bridge the gap between button and panel so hover does not flicker */
       .dl-nav__drop-panel::before {
         content: "";
@@ -205,12 +226,127 @@
         border-radius: 6px;
       }
     }
+
+    /* Mobile menu: hamburger + slide-down panel below the desktop nav breakpoint */
+    .dl-nav { z-index: 1; }
+    .dl-nav__menu-btn {
+      display: none;
+      flex: none;
+      align-items: center;
+      justify-content: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      margin: 0 -0.35rem 0 0;
+      padding: 0;
+      border: 0;
+      border-radius: 50%;
+      background: transparent;
+      color: var(--navy);
+      cursor: pointer;
+    }
+    .dl-nav__menu-btn:hover { background: color-mix(in srgb, var(--navy) 8%, transparent); }
+    .dl-nav__menu-icon,
+    .dl-nav__menu-icon::before,
+    .dl-nav__menu-icon::after {
+      display: block;
+      width: 1.35rem;
+      height: 2px;
+      border-radius: 1px;
+      background: currentColor;
+    }
+    .dl-nav__menu-icon { position: relative; }
+    .dl-nav__menu-icon::before,
+    .dl-nav__menu-icon::after {
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+    .dl-nav__menu-icon::before { top: -0.42rem; }
+    .dl-nav__menu-icon::after { top: 0.42rem; }
+    .dl-nav__menu-btn[aria-expanded="true"] .dl-nav__menu-icon { background: transparent; }
+    .dl-nav__menu-btn[aria-expanded="true"] .dl-nav__menu-icon::before { top: 0; transform: rotate(45deg); }
+    .dl-nav__menu-btn[aria-expanded="true"] .dl-nav__menu-icon::after { top: 0; transform: rotate(-45deg); }
+    .dl-mnav {
+      position: absolute;
+      top: var(--dl-nav-h);
+      left: 0;
+      right: 0;
+      z-index: 0;
+      max-height: calc(100vh - var(--dl-nav-h));
+      max-height: calc(100dvh - var(--dl-nav-h));
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      /* Clear the hanging logo (211:150 artwork) before the first link */
+      padding: max(0.75rem, calc(var(--dl-logo-top) + var(--dl-logo-w) * 0.711 - var(--dl-nav-h) + 0.75rem)) var(--dl-nav-pad-x) 1.25rem;
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 18px 30px -18px rgba(29, 33, 88, 0.45);
+    }
+    .dl-mnav[hidden] { display: none; }
+    .dl-mnav__label {
+      margin: 0 0 0.25rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+    .dl-mnav__list { list-style: none; margin: 0; padding: 0; }
+    .dl-mnav__list + .dl-mnav__list { margin-top: 0.35rem; border-top: 1px solid var(--line); padding-top: 0.35rem; }
+    .dl-mnav__list a:not(.dl-btn) {
+      display: flex;
+      align-items: center;
+      min-height: 2.75rem;
+      padding: 0.35rem 0.25rem;
+      font-family: var(--font-display);
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--navy);
+      text-decoration: none;
+    }
+    .dl-mnav__list a:not(.dl-btn):hover { color: var(--accent); }
+    .dl-mnav__cta { display: none; padding-top: 0.75rem; }
+    .dl-mnav__cta .dl-btn { width: 100%; min-height: 2.75rem; }
+    .dl-mnav__scrim {
+      position: fixed;
+      inset: 0;
+      z-index: 9998;
+      background: rgba(15, 17, 45, 0.35);
+    }
+    .dl-mnav__scrim[hidden] { display: none; }
+    @media (max-width: 979px) {
+      .dl-nav { gap: 0.75rem; }
+      .dl-nav__menu-btn { display: inline-flex; }
+    }
+    @media (max-width: 419px) {
+      .dl-nav > .dl-btn { padding: 0.65rem 1rem; font-size: 0.95rem; }
+    }
+    /* Too narrow for logo + CTA + menu button: the CTA moves into the menu */
+    @media (max-width: 359px) {
+      .dl-nav > .dl-btn { display: none; }
+      .dl-mnav__cta { display: block; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .dl-mnav:not([hidden]) { animation: dl-mnav-in 200ms cubic-bezier(0.2, 0.7, 0.2, 1); }
+      .dl-mnav__scrim:not([hidden]) { animation: dl-mnav-fade 200ms ease; }
+      .dl-nav__menu-icon, .dl-nav__menu-icon::before, .dl-nav__menu-icon::after { transition: transform 150ms ease, top 150ms ease, background-color 150ms ease; }
+    }
+    @keyframes dl-mnav-in {
+      from { opacity: 0; transform: translateY(-0.75rem); }
+      to { opacity: 1; transform: none; }
+    }
+    @keyframes dl-mnav-fade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
     @media (max-width: 719px) {
       .dl-top {
         --dl-logo-w: 90px;
         --dl-logo-top: 0.6rem;
         --dl-nav-h: 3.5rem; /* 56px */
       }
+      /* 1.5in indent pushes "Engagement!" past the right edge on phones */
+      .dl-hero__h1 .dl-hero__engage { margin-left: min(1.5in, 10vw); }
     }
 
     .dl-btn {
@@ -250,7 +386,7 @@
       color: #fff;
       border-color: var(--navy);
     }
-    .dl-btn:focus-visible, .dl-play:focus-visible, .dl-seg button:focus-visible, .dl-link:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+    .dl-btn:focus-visible, .dl-play:focus-visible, .dl-seg button:focus-visible, .dl-link:focus-visible { outline: 3px solid var(--dl-focus); outline-offset: 3px; }
     .dl-wrap { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
     .dl-section { padding: clamp(4rem, 9vw, 7rem) 0; }
 
@@ -357,6 +493,9 @@
       filter: blur(1px);
     }
     .dl-hero__inner { position: relative; padding-top: 0.35rem; }
+    /* The 140px hanging logo reaches ~112px down; start the H1 below it */
+    @media (min-width: 720px) { .dl-hero__inner { padding-top: 2rem; } }
+    @media (min-width: 980px) { .dl-hero__inner { padding-top: 1.5rem; } }
     .dl-hero__h1 {
       margin: 0;
       padding-top: 0.75rem;
@@ -558,7 +697,7 @@
     .dl-case__stats .dl-card__txt { margin-top: 0.55rem; font-size: 0.98rem; }
     .dl-case__src {
       margin: 0.75rem 0 0;
-      font-size: 0.72rem;
+      font-size: 0.8125rem;
       line-height: 1.35;
       color: var(--ink-soft);
     }
@@ -1594,19 +1733,19 @@
       }
       /* CT detail scale(1.111) overhang is transparent PNG padding, but it still widens the page past the gutter */
       #product .dl-prod__detail-wrap { overflow-x: clip; }
-      /* MC detail: +25px lower, margin-right 17px (left shift), +10px taller */
+      /* MC detail: +25px lower, +10px taller; no right inset on phones so it stays inside the gutters */
       #community .dl-prod__detail-wrap,
       section[aria-labelledby="cb-heading"] .dl-prod__detail-wrap {
         width: min(100%, 44rem);
         height: auto;
         max-height: none;
         overflow: visible;
-        margin: calc(0.85rem + 25px) 17px 0 0;
+        margin: calc(0.85rem + 25px) 0 0;
         padding: 0 0 10px;
         justify-self: auto;
         align-self: flex-end;
       }
-      .dl-cb-cta { width: min(100%, 44rem); }
+      .dl-cb-cta { width: min(100%, 44rem); margin-right: 0; }
     }
     .dl-widgets__sm { display: grid; gap: 0.75rem; }
     .dl-widgets__lg { display: none; }
@@ -1813,10 +1952,53 @@
       gap: 3rem;
       animation: dl-logos-marquee 45s linear infinite;
     }
-    .dl-logos:hover .dl-logos__track,
-    .dl-logos:focus-within .dl-logos__track {
+    .dl-logos__viewport:hover .dl-logos__track,
+    .dl-logos__viewport:focus-within .dl-logos__track,
+    .dl-logos.is-paused .dl-logos__track {
       animation-play-state: paused;
     }
+    .dl-logos__toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      min-height: 2.75rem;
+      margin-top: 1rem;
+      padding: 0.45rem 1rem 0.45rem 0.8rem;
+      border: 1.5px solid var(--navy);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--navy);
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.1;
+      cursor: pointer;
+    }
+    .dl-logos__toggle:hover { background: var(--navy); color: #fff; }
+    html:not(.js) .dl-logos__toggle { display: none; }
+    .dl-logos__toggle-icon { position: relative; width: 0.75rem; height: 0.8rem; flex: none; }
+    .dl-logos__toggle-icon::before,
+    .dl-logos__toggle-icon::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 0.25rem;
+      border-radius: 1px;
+      background: currentColor;
+    }
+    .dl-logos__toggle-icon::before { left: 0; }
+    .dl-logos__toggle-icon::after { right: 0; }
+    .dl-logos.is-paused .dl-logos__toggle-icon::before {
+      width: 0;
+      height: 0;
+      border-radius: 0;
+      border-style: solid;
+      border-width: 0.4rem 0 0.4rem 0.7rem;
+      border-color: transparent transparent transparent currentColor;
+      background: none;
+    }
+    .dl-logos.is-paused .dl-logos__toggle-icon::after { display: none; }
     .dl-logos__list {
       display: flex;
       flex-wrap: nowrap;
@@ -1856,6 +2038,7 @@
         gap: 2rem 2.5rem;
       }
       .dl-logos__list--clone { display: none; }
+      .dl-logos__toggle { display: none; }
       .dl-logos__viewport {
         mask-image: none;
         -webkit-mask-image: none;
@@ -2112,7 +2295,7 @@
       transition: color 150ms ease;
     }
     .dl-footer__links a:hover { color: #fff; text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; }
-    .dl-footer__links a:focus-visible, .dl-footer__logo:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; border-radius: 4px; }
+    .dl-footer__links a:focus-visible, .dl-footer__logo:focus-visible { outline: 3px solid var(--dl-focus); outline-offset: 3px; border-radius: 4px; }
     .dl-footer__cta .dl-btn { margin-bottom: 1.1rem; }
     .dl-footer__social { list-style: none; margin: 1.25rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
     .dl-footer__social li { margin: 0; padding: 0; }
@@ -2132,7 +2315,7 @@
     }
     .dl-footer__social svg { width: 19px; height: 19px; display: block; fill: currentColor; }
     .dl-footer__social a:hover { background: var(--accent); border-color: var(--accent); color: #fff; transform: translateY(-2px); }
-    .dl-footer__social a:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; color: #fff; }
+    .dl-footer__social a:focus-visible { outline: 3px solid var(--dl-focus); outline-offset: 3px; color: #fff; }
     .dl-footer__social-badge {
       position: absolute;
       right: -3px;
@@ -2171,6 +2354,9 @@
       .dl-footer__grid { grid-template-columns: 1fr; gap: 2rem; }
       .dl-footer__logo svg { width: 104px; }
     }
+
+    /* Dark surfaces: white focus ring (navy on navy would vanish) */
+    .dl-close__stage, .dl-footer, .dl-modal__bar { --dl-focus: #fff; }
 
     /* Video modal */
     .dl-modal { position: fixed; inset: 0; z-index: 100000; display: grid; place-items: center; padding: 1rem; }
@@ -2254,7 +2440,7 @@
       background: var(--navy-deep);
       color: #fff;
     }
-    .dl-btn:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+    .dl-btn:focus-visible { outline: 3px solid var(--dl-focus); outline-offset: 3px; }
     .dl-modal--book .dl-modal__frame iframe { background: #fff; }
 
     /* Research modal: prospectus research foundation page */
@@ -2287,7 +2473,7 @@
       box-shadow: var(--shadow-sm);
     }
     .dl-modal--research .dl-modal__panel:focus { outline: none; }
-    .dl-modal--research .dl-modal__panel:focus-visible { outline: 3px solid var(--cyan); outline-offset: -3px; }
+    .dl-modal--research .dl-modal__panel:focus-visible { outline: 3px solid var(--dl-focus); outline-offset: -3px; }
     .dl-research__eyebrow {
       display: flex;
       align-items: center;
@@ -2339,7 +2525,7 @@
       text-decoration-line: underline;
       text-decoration-color: var(--cyan);
     }
-    .dl-research__refs cite a:focus-visible { outline: 3px solid var(--cyan); outline-offset: 2px; border-radius: 2px; }
+    .dl-research__refs cite a:focus-visible { outline: 3px solid var(--dl-focus); outline-offset: 2px; border-radius: 2px; }
     .dl-research__foot {
       display: flex;
       flex-wrap: wrap;
@@ -2381,9 +2567,10 @@
     }
     textarea.dl-contact__input { min-height: 8.5rem; resize: vertical; }
     .dl-contact__input:hover { border-color: rgba(43, 47, 126, 0.55); }
-    .dl-contact__input:focus { outline: 3px solid var(--cyan); outline-offset: 1px; border-color: var(--navy); }
+    .dl-contact__input:focus { outline: 3px solid var(--dl-focus); outline-offset: 1px; border-color: var(--navy); }
     .dl-contact__input[aria-invalid="true"] { border-color: #b3261e; }
     .dl-contact__error { margin: 0; font-size: 0.9rem; font-weight: 600; color: #b3261e; }
+    .dl-contact__hint { margin: 0; font-size: 0.9rem; line-height: 1.4; color: var(--ink-soft); }
     .dl-contact__hp { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
     .dl-contact__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.85rem 1.25rem; margin-top: 0.3rem; }
     .dl-contact__actions .dl-btn[disabled] { opacity: 0.7; cursor: progress; transform: none; }
@@ -2398,7 +2585,7 @@
       line-height: 1.5;
     }
     .dl-contact__status a { color: inherit; font-weight: 700; text-decoration-thickness: 2px; text-underline-offset: 0.2em; }
-    .dl-contact__status a:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; border-radius: 4px; }
+    .dl-contact__status a:focus-visible { outline: 3px solid var(--dl-focus); outline-offset: 3px; border-radius: 4px; }
     .dl-contact__done .dl-contact__intro { margin-bottom: 1.5rem; }
     @media (max-width: 559px) {
       .dl-contact__row { grid-template-columns: 1fr; }
@@ -2419,6 +2606,7 @@
   <script src="https://bookings.nimbuspop.com/assets/embed.js" defer></script>
 </head>
 <body class="dl-v5">
+  <a class="dl-skip" href="#top">Skip to main content</a>
   <div class="dl-top">
     <a class="dl-nav__logo" href="#top" aria-label="Delphinium home">
       <img src="assets/logo-new.svg" width="211" height="150" alt="Delphinium">
@@ -2426,21 +2614,38 @@
     <header class="dl-nav">
       <nav class="dl-nav__links" aria-label="Page sections">
         <div class="dl-nav__drop">
-          <button type="button" class="dl-nav__drop-btn" aria-expanded="false" aria-haspopup="true" aria-controls="dl-nav-solutions" id="dl-nav-solutions-btn">Solutions</button>
-          <ul class="dl-nav__drop-panel" id="dl-nav-solutions" role="menu" aria-labelledby="dl-nav-solutions-btn" hidden>
-            <li role="none"><a role="menuitem" href="#control-tower">Control Tower</a></li>
-            <li role="none"><a role="menuitem" href="#community-builder">Community Builder</a></li>
-            <li role="none"><a role="menuitem" href="#engagement-builder">Engagement Builder</a></li>
+          <button type="button" class="dl-nav__drop-btn" aria-expanded="false" aria-controls="dl-nav-solutions" id="dl-nav-solutions-btn">Solutions</button>
+          <ul class="dl-nav__drop-panel" id="dl-nav-solutions" hidden>
+            <li><a href="#control-tower">Control Tower</a></li>
+            <li><a href="#community-builder">Community Builder</a></li>
+            <li><a href="#engagement-builder">Engagement Builder</a></li>
           </ul>
         </div>
         <a href="#customers">In Their Own Words</a>
         <a href="#proof-eyebrow">Proof</a>
       </nav>
       <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
+      <button type="button" class="dl-nav__menu-btn" id="dl-mnav-btn" aria-expanded="false" aria-controls="dl-mnav" aria-label="Menu">
+        <span class="dl-nav__menu-icon" aria-hidden="true"></span>
+      </button>
     </header>
+    <nav class="dl-mnav" id="dl-mnav" aria-label="Menu" hidden>
+      <p class="dl-mnav__label" id="dl-mnav-solutions">Solutions</p>
+      <ul class="dl-mnav__list" aria-labelledby="dl-mnav-solutions">
+        <li><a href="#control-tower">Control Tower</a></li>
+        <li><a href="#community-builder">Community Builder</a></li>
+        <li><a href="#engagement-builder">Engagement Builder</a></li>
+      </ul>
+      <ul class="dl-mnav__list">
+        <li><a href="#customers">In Their Own Words</a></li>
+        <li><a href="#proof-eyebrow">Proof</a></li>
+        <li class="dl-mnav__cta"><a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a></li>
+      </ul>
+    </nav>
   </div>
+  <div class="dl-mnav__scrim" id="dl-mnav-scrim" hidden></div>
 
-  <main id="top">
+  <main id="top" tabindex="-1">
     <section class="dl-hero" aria-labelledby="hero-heading">
       <div class="dl-hero__petals" aria-hidden="true"></div>
       <div class="dl-wrap dl-hero__inner">
@@ -2783,7 +2988,7 @@
 
     <section class="dl-section dl-logos-section" id="customers" aria-labelledby="logos-heading">
       <div class="dl-wrap">
-        <div class="dl-logos" role="region" aria-labelledby="logos-heading">
+        <div class="dl-logos">
           <p class="dl-eyebrow" id="logos-heading">See who's using Delphinium</p>
           <p class="dl-logos__lede">Trusted by schools like yours.</p>
           <div class="dl-logos__viewport">
@@ -2812,6 +3017,7 @@
               </ul>
             </div>
           </div>
+          <button type="button" class="dl-logos__toggle" id="dl-logos-toggle"><span class="dl-logos__toggle-icon" aria-hidden="true"></span><span class="dl-logos__toggle-label">Pause logos</span></button>
         </div>
       </div>
     </section>
@@ -3122,13 +3328,18 @@
               <input class="dl-contact__input" id="dl-contact-org" name="organization" type="text" autocomplete="organization" maxlength="200">
             </div>
             <div class="dl-contact__field">
+              <label class="dl-contact__label" for="dl-contact-course">Canvas course URL <span class="dl-contact__opt">(optional)</span></label>
+              <input class="dl-contact__input" id="dl-contact-course" name="course" type="url" inputmode="url" autocomplete="off" maxlength="255" aria-describedby="dl-contact-course-hint">
+              <p class="dl-contact__hint" id="dl-contact-course-hint">Only if your note is about a specific course.</p>
+            </div>
+            <div class="dl-contact__field">
               <label class="dl-contact__label" for="dl-contact-message">Message</label>
               <textarea class="dl-contact__input" id="dl-contact-message" name="message" rows="5" required maxlength="5000" aria-describedby="dl-contact-message-err"></textarea>
               <p class="dl-contact__error" id="dl-contact-message-err" hidden></p>
             </div>
             <div class="dl-contact__hp" aria-hidden="true">
               <label for="dl-contact-hp">Leave this field empty</label>
-              <input id="dl-contact-hp" name="_honey" type="text" tabindex="-1" autocomplete="off">
+              <input id="dl-contact-hp" name="hp_website" type="text" tabindex="-1" autocomplete="off">
             </div>
             <p class="dl-contact__status" id="dl-contact-status" hidden></p>
             <div class="dl-contact__actions">
@@ -3141,6 +3352,20 @@
           <p class="dl-contact__intro">Your message was sent. We'll get back to you.</p>
           <button type="button" class="dl-btn" data-contact-close>Close</button>
         </div>
+        <!-- Zoho CRM Web-to-Case (HS Form Support Form, forms/support-form). Hidden values and field names must match Zoho's embed exactly. -->
+        <form id="dl-contact-zoho" action="https://crm.zoho.com/crm/WebToCaseForm" method="POST" enctype="multipart/form-data" accept-charset="UTF-8" target="dl-contact-sink" hidden>
+          <input type="hidden" name="xnQsjsdp" value="1f8d7fcca18df25fc546fad9c8f735dce6ccf43b83ec2c6b94c272c8b23d867c">
+          <input type="hidden" name="zc_gad" value="">
+          <input type="hidden" name="xmIwtLD" value="285411853c4f93d22801176ef3bc1315f4d05aa82dc24dae8c7b7527d9f6d9580368a477081438e5fd0ec995ea12341d">
+          <input type="hidden" name="actionType" value="Q2FzZXM=">
+          <input type="hidden" name="returnURL" value="null">
+          <input type="hidden" name="Email" value="">
+          <input type="hidden" name="Subject" value="">
+          <input type="hidden" name="CASECF2" value="">
+          <input type="hidden" name="Description" value="">
+          <input type="hidden" name="aG9uZXlwb3Q" value="">
+        </form>
+        <iframe name="dl-contact-sink" id="dl-contact-sink" title="Contact form submission" src="about:blank" tabindex="-1" aria-hidden="true" hidden></iframe>
         <p class="visually-hidden" id="dl-contact-live" aria-live="polite" role="status"></p>
       </div>
     </div>
@@ -3211,17 +3436,64 @@
         panel.querySelectorAll("a").forEach(function (a) {
           a.addEventListener("click", function () { setOpen(false); });
         });
-        drop.addEventListener("keydown", function (e) {
-          if (e.key === "Escape" && isOpen()) {
-            setOpen(false);
-            btn.focus();
-          }
+        document.addEventListener("keydown", function (e) {
+          if (e.key !== "Escape" || !isOpen()) return;
+          var hadFocus = drop.contains(document.activeElement);
+          clearCloseTimer();
+          setOpen(false);
+          if (hadFocus) btn.focus();
         });
         document.addEventListener("click", function (e) {
           if (!drop.contains(e.target) && isOpen()) setOpen(false);
         });
         drop.addEventListener("focusout", function (e) {
           if (!drop.contains(e.relatedTarget) && isOpen()) setOpen(false);
+        });
+      })();
+
+      (function mobileMenu() {
+        var btn = document.getElementById("dl-mnav-btn");
+        var panel = document.getElementById("dl-mnav");
+        var scrim = document.getElementById("dl-mnav-scrim");
+        if (!btn || !panel || !scrim) return;
+        var desktopMq = window.matchMedia("(min-width: 980px)");
+        function isOpen() { return btn.getAttribute("aria-expanded") === "true"; }
+        function setOpen(open, returnFocus) {
+          btn.setAttribute("aria-expanded", open ? "true" : "false");
+          btn.setAttribute("aria-label", open ? "Close menu" : "Menu");
+          panel.hidden = !open;
+          scrim.hidden = !open;
+          document.documentElement.style.overflow = open ? "hidden" : "";
+          if (!open && returnFocus) btn.focus();
+        }
+        btn.addEventListener("click", function () { setOpen(!isOpen()); });
+        scrim.addEventListener("click", function () { setOpen(false); });
+        panel.querySelectorAll("a").forEach(function (a) {
+          a.addEventListener("click", function () {
+            /* Bookings opens a dialog; park focus on the button so the dialog can return it there */
+            if (a.hasAttribute("data-bookings-open")) btn.focus();
+            setOpen(false);
+          });
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && isOpen()) setOpen(false, true);
+        });
+        document.addEventListener("click", function (e) {
+          if (isOpen() && !panel.contains(e.target) && !btn.contains(e.target)) setOpen(false);
+        });
+        function onBreakpoint() { if (desktopMq.matches && isOpen()) setOpen(false); }
+        if (desktopMq.addEventListener) desktopMq.addEventListener("change", onBreakpoint);
+        else if (desktopMq.addListener) desktopMq.addListener(onBreakpoint);
+      })();
+
+      (function logoMarquee() {
+        var logos = document.querySelector(".dl-logos");
+        var toggle = document.getElementById("dl-logos-toggle");
+        if (!logos || !toggle) return;
+        var label = toggle.querySelector(".dl-logos__toggle-label");
+        toggle.addEventListener("click", function () {
+          var paused = logos.classList.toggle("is-paused");
+          label.textContent = paused ? "Play logos" : "Pause logos";
         });
       })();
 
@@ -3270,7 +3542,6 @@
       var modal = document.getElementById("dl-modal");
       var frame = modal.querySelector(".dl-modal__frame");
       var title = document.getElementById("dl-modal-title");
-      var lastFocus = null;
       /* YouTube + Mux: warm off-screen so click can play instantly */
       var ytWarmById = {};
       var muxWarmById = {};
@@ -3479,8 +3750,7 @@
           setTimeout(warm, 0);
         }
       }
-      function openYouTube(id, name) {
-        lastFocus = document.activeElement;
+      function openYouTube(id, name, trigger) {
         var iframe = ensureYtWarm(id);
         frame.innerHTML = "";
         frame.appendChild(iframe);
@@ -3490,8 +3760,7 @@
         iframe.id = "dl-yt-" + id;
         iframe.title = name;
         title.textContent = name;
-        modal.hidden = false;
-        document.body.style.overflow = "hidden";
+        videoDialog.open(null, trigger);
         ytListen(iframe);
         /* Click is a user gesture: try unmuted play like Mux <video autoplay> */
         ytCommand(iframe, "playVideo");
@@ -3509,10 +3778,8 @@
             ytDisableCaptions(iframe);
           }
         }, 400);
-        modal.querySelector(".dl-modal__close").focus();
       }
-      function openVideo(id, name, poster, mp4) {
-        lastFocus = document.activeElement;
+      function openVideo(id, name, poster, mp4, trigger) {
         var src = muxSrc(id, mp4);
         var cover = muxPoster(id, poster);
         var entry = muxWarmById[id];
@@ -3545,13 +3812,12 @@
         frame.innerHTML = "";
         frame.appendChild(video);
         title.textContent = name;
-        modal.hidden = false;
-        document.body.style.overflow = "hidden";
+        videoDialog.open(null, trigger);
         var playPromise = video.play();
         if (playPromise && playPromise.catch) playPromise.catch(function () {});
-        modal.querySelector(".dl-modal__close").focus();
       }
-      function closeVideo() {
+      /* Runs after dlDialog hides the modal and returns focus */
+      function stopVideo() {
         clearYtCaptionTimers();
         ytActiveIframe = null;
         var iframe = frame.querySelector("iframe");
@@ -3563,15 +3829,13 @@
         if (playing) {
           try { playing.pause(); } catch (e) {}
         }
-        modal.hidden = true;
         frame.innerHTML = "";
-        document.body.style.overflow = "";
-        if (lastFocus) lastFocus.focus();
         scheduleVideoWarm();
       }
-      modal.querySelectorAll("[data-close]").forEach(function (el) { el.addEventListener("click", closeVideo); });
-      document.addEventListener("keydown", function (ev) {
-        if (ev.key === "Escape" && !modal.hidden) closeVideo();
+      var videoDialog = dlDialog(modal, {
+        closeSelector: "[data-close]",
+        initialFocus: function () { return modal.querySelector(".dl-modal__close"); },
+        onClose: stopVideo
       });
       /* Capture-phase click beats legacy theme codeSnippet that still embeds player.mux.com */
       document.addEventListener("click", function (ev) {
@@ -3583,7 +3847,7 @@
         if (ev.stopImmediatePropagation) ev.stopImmediatePropagation();
         var ytId = el.getAttribute("data-youtube");
         if (ytId) {
-          openYouTube(ytId, videoLabel(el));
+          openYouTube(ytId, videoLabel(el), el);
           return;
         }
         var img = el.querySelector("img");
@@ -3595,7 +3859,8 @@
           el.getAttribute("data-mux"),
           videoLabel(el),
           poster,
-          el.getAttribute("href")
+          el.getAttribute("href"),
+          el
         );
       }, true);
       scheduleVideoWarm();
@@ -3608,7 +3873,6 @@
         var bookFrame = document.getElementById("dl-book-frame");
         if (!bookModal || !bookFrame) return;
         var iframe = null;
-        var lastFocus = null;
 
         function ensureIframe() {
           if (iframe) return iframe;
@@ -3621,31 +3885,15 @@
           return iframe;
         }
 
-        function openBook(e) {
-          if (e) e.preventDefault();
-          lastFocus = document.activeElement;
-          ensureIframe();
-          bookModal.hidden = false;
-          document.documentElement.style.overflow = "hidden";
-          var closeBtn = bookModal.querySelector(".dl-modal__close");
-          if (closeBtn) closeBtn.focus();
-        }
-
-        function closeBook() {
-          bookModal.hidden = true;
-          document.documentElement.style.overflow = "";
-          if (lastFocus && lastFocus.focus) lastFocus.focus();
-        }
+        var dialog = dlDialog(bookModal, {
+          closeSelector: "[data-book-close]",
+          onOpen: ensureIframe,
+          initialFocus: function () { return bookModal.querySelector(".dl-modal__close"); }
+        });
+        var openBook = dialog.open;
 
         document.querySelectorAll("[data-bookings-open]").forEach(function (el) {
           el.addEventListener("click", openBook);
-        });
-
-        bookModal.querySelectorAll("[data-book-close]").forEach(function (el) {
-          el.addEventListener("click", closeBook);
-        });
-        document.addEventListener("keydown", function (e) {
-          if (e.key === "Escape" && !bookModal.hidden) closeBook();
         });
 
         function warm() { ensureIframe(); }
@@ -3661,11 +3909,11 @@
         window.dlBookingsFallback = FALLBACK;
       })();
 
-      /* Panel dialogs (research, contact): scroll lock, Escape, Tab trap, focus return */
+      /* Dialogs (research, contact, bookings, video): scroll lock, Escape, Tab trap, focus return */
       function dlDialog(modal, opts) {
         var panel = modal.querySelector(".dl-modal__panel");
         var lastFocus = null;
-        var FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]):not([tabindex="-1"]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+        var FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]):not([tabindex="-1"]), select:not([disabled]), textarea:not([disabled]), iframe:not([tabindex="-1"]), video[controls], [tabindex]:not([tabindex="-1"])';
 
         function focusables() {
           return Array.prototype.filter.call(modal.querySelectorAll(FOCUSABLE), function (el) {
@@ -3673,9 +3921,13 @@
           });
         }
 
-        function open(e) {
-          if (e) e.preventDefault();
-          lastFocus = (e && e.currentTarget) || document.activeElement;
+        /* trigger: the element focus returns to. Falls back to the focused element when the
+           clicked control sits in something already hidden (menu link, a dialog that just closed). */
+        function open(e, trigger) {
+          if (e && e.preventDefault) e.preventDefault();
+          var t = trigger || (e && e.currentTarget);
+          if (!t || t.nodeType !== 1 || t.closest("[hidden]")) t = document.activeElement;
+          lastFocus = t;
           if (opts.onOpen) opts.onOpen();
           modal.hidden = false;
           document.documentElement.style.overflow = "hidden";
@@ -3691,10 +3943,18 @@
           document.documentElement.style.overflow = "";
           document.body.style.overflow = "";
           if (lastFocus && lastFocus.focus) lastFocus.focus();
+          if (opts.onClose) opts.onClose();
         }
 
         modal.querySelectorAll(opts.closeSelector).forEach(function (el) {
           el.addEventListener("click", close);
+        });
+
+        /* Tab out of a cross-origin iframe skips the keydown trap below; pull focus back in */
+        document.addEventListener("focusin", function (e) {
+          if (modal.hidden || modal.contains(e.target)) return;
+          var items = focusables();
+          (items[0] || panel || modal).focus({ preventScroll: true });
         });
 
         document.addEventListener("keydown", function (e) {
@@ -3742,17 +4002,19 @@
         window.dlOpenResearch = dialog.open;
       })();
 
-      /* Contact modal: [data-contact-open] links, email form */
+      /* Contact modal: [data-contact-open] links, form creates a Zoho CRM Case */
       (function () {
-        /* FormSubmit AJAX endpoint (static site, no backend). The first real
-           submission sends a one-time activation email to this address; nothing
-           is delivered until someone clicks it. Swap for a Zoho Forms endpoint
-           when staging on Zoho. */
-        var CONTACT_ENDPOINT = "https://formsubmit.co/ajax/support@delphi-me.com";
+        /* Zoho's WebToCaseForm has no CORS, so the hidden #dl-contact-zoho form
+           posts into a hidden iframe and its load event means the POST finished.
+           The cross-origin response can't be read, so a Zoho-side rejection
+           still looks like success here. */
         var CONTACT_EMAIL = "support@delphi-me.com";
+        var SEND_TIMEOUT_MS = 20000;
         var modal = document.getElementById("dl-contact-modal");
         var form = document.getElementById("dl-contact-form");
-        if (!modal || !form) return;
+        var zoho = document.getElementById("dl-contact-zoho");
+        var sink = document.getElementById("dl-contact-sink");
+        if (!modal || !form || !zoho || !sink) return;
         var formView = modal.querySelector('[data-contact-view="form"]');
         var doneView = modal.querySelector('[data-contact-view="done"]');
         var doneClose = doneView.querySelector("[data-contact-close]");
@@ -3762,17 +4024,20 @@
         var nameEl = document.getElementById("dl-contact-name");
         var emailEl = document.getElementById("dl-contact-email");
         var orgEl = document.getElementById("dl-contact-org");
+        var courseEl = document.getElementById("dl-contact-course");
         var messageEl = document.getElementById("dl-contact-message");
         var honeyEl = document.getElementById("dl-contact-hp");
         var required = [nameEl, emailEl, messageEl];
         var sending = false;
+        var sendTimer = 0;
 
         function problem(el) {
           var v = el.value.trim();
           if (el === nameEl) return v ? "" : "Please enter your name.";
           if (el === emailEl) {
             if (!v) return "Please enter your email.";
-            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? "" : "Please enter a valid email address.";
+            /* Zoho's own check needs a 2+ character ending after the last dot */
+            return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v) ? "" : "Please enter a valid email address.";
           }
           return v ? "" : "Please enter a message.";
         }
@@ -3822,18 +4087,49 @@
             name: nameEl.value.trim(),
             email: emailEl.value.trim(),
             organization: orgEl.value.trim(),
+            course: courseEl.value.trim(),
             message: messageEl.value.trim()
           };
+        }
+
+        function subjectFor(d) {
+          return ("Website contact: " + d.name).slice(0, 300);
+        }
+
+        /* The Web-to-Case form has no name or organization field, so they lead the Description */
+        function descriptionFor(d) {
+          var lines = ["Name: " + d.name, "Email: " + d.email];
+          if (d.organization) lines.push("School or organization: " + d.organization);
+          lines.push("Sent from: " + window.location.href.split(/[?#]/)[0], "", d.message);
+          return lines.join("\r\n");
+        }
+
+        function setZoho(name, value) {
+          zoho.querySelector('input[name="' + name + '"]').value = value;
+        }
+
+        function fillZoho(d) {
+          setZoho("Email", d.email);
+          setZoho("Subject", subjectFor(d));
+          /* CASECF2 (course URL) is mandatory in Zoho; its own label says to type N/A */
+          setZoho("CASECF2", (d.course || "N/A").slice(0, 255));
+          setZoho("Description", descriptionFor(d));
+          setZoho("aG9uZXlwb3Q", "");
+        }
+
+        function clearZoho() {
+          ["Email", "Subject", "CASECF2", "Description"].forEach(function (n) { setZoho(n, ""); });
         }
 
         function mailtoHref(d) {
           var lines = [d.message.replace(/\r?\n/g, "\r\n"), "", d.name, d.email];
           if (d.organization) lines.push(d.organization);
+          if (d.course) lines.push(d.course);
           var body = lines.join("\r\n");
           /* Some mail clients cap mailto URLs near 2,000 characters */
           if (body.length > 1500) body = body.slice(0, 1500) + "...";
           return "mailto:" + CONTACT_EMAIL +
-            "?subject=" + encodeURIComponent("Website contact: " + d.name) +
+            "?subject=" + encodeURIComponent(subjectFor(d)) +
             "&body=" + encodeURIComponent(body);
         }
 
@@ -3893,31 +4189,27 @@
             return;
           }
           hideStatus();
-          setSending(true);
-          fetch(CONTACT_ENDPOINT, {
-            method: "POST",
-            headers: { "Content-Type": "application/json", Accept: "application/json" },
-            body: JSON.stringify({
-              name: d.name,
-              email: d.email,
-              organization: d.organization,
-              message: d.message,
-              _subject: "Website contact: " + d.name,
-              _template: "table",
-              _captcha: "false",
-              _honey: honeyEl.value
-            })
-          }).then(function (res) {
-            if (!res.ok) throw new Error("HTTP " + res.status);
-            return res.json();
-          }).then(function (json) {
-            if (!json || String(json.success) !== "true") throw new Error("Not sent");
-            setSending(false);
-            showDone();
-          }).catch(function () {
-            setSending(false);
+          if (navigator.onLine === false) {
             showError(d);
-          });
+            return;
+          }
+          setSending(true);
+          fillZoho(d);
+          sendTimer = window.setTimeout(function () {
+            if (!sending) return;
+            setSending(false);
+            clearZoho();
+            showError(d);
+          }, SEND_TIMEOUT_MS);
+          zoho.submit();
+        });
+
+        sink.addEventListener("load", function () {
+          if (!sending) return;
+          window.clearTimeout(sendTimer);
+          setSending(false);
+          clearZoho();
+          showDone();
         });
 
         document.querySelectorAll("[data-contact-open]").forEach(function (el) {
