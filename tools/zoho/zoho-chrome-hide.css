@@ -1,0 +1,90 @@
+
+/* publish_sites_v2 soft chrome — moon/zpsection safety + zoho badge */
+.theme-skip-to-needed-content { display: none !important; }
+.theme-content-area .zpsection { display: none !important; }
+.theme-footer-area .zpsection { display: none !important; }
+.zs-poweredby, .theme-poweredby, .zpfooter-poweredby,
+a[href*="zoho.com/sites"], a[href*="www.zoho.com/sites"],
+[class*="zoho-sites"], [class*="zohosites"],
+[class*="poweredby" i] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+}
+/* zsad free badge: fixed bottom ~z-index 1e6 */
+div[style*="z-index: 1000000"],
+div[style*="z-index:1000000"],
+div[style*="z-index: 999999"],
+div[style*="z-index:999999"],
+body > div:has(a[href*="zoho.com/sites"]),
+body > div:has(a[href*="www.zoho.com/sites"]) {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  max-height: 0 !important;
+}
+
+/* Zoho Sites chrome hide — Delphinium main is injected via Header Code.
+   Hide theme sections (moon / Endless Security) until manual purge sticks. */
+.theme-skip-to-needed-content { display: none !important; }
+.theme-header-topbar,
+[data-headercontainer],
+.theme-header,
+.theme-responsive-menu-area,
+.theme-navigation-and-icons { display: none !important; }
+
+/* Safety net: blank-theme sections under content area (moon / Responsive Design / Endless Security) */
+.theme-content-area .zpsection { display: none !important; }
+.theme-footer-area .zpsection { display: none !important; }
+.theme-content-area:empty { display: none !important; }
+body { margin: 0; }
+
+/* Zoho Sites attribution / badge — stack selectors until one wins */
+.zs-poweredby,
+.theme-poweredby,
+.zpfooter-poweredby,
+[class*="poweredby" i],
+[class*="zoho-sites" i],
+[class*="zohosites" i],
+a[href*="zoho.com/sites"],
+a[href*="www.zoho.com/sites"],
+div:has(> a[href*="zoho.com/sites"]),
+footer a[href*="zoho.com/sites"],
+.theme-footer-area a[href*="zoho.com/sites"] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Zoho free-plan badge (zsad.js) — fixed bottom, z-index ~1e6 */
+div[style*="z-index: 1000000"],
+div[style*="z-index:1000000"],
+div[style*="z-index: 999999"],
+div[style*="z-index:999999"],
+body > div:has(> a[href*="zoho.com/sites"]),
+body > div:has(a[href*="www.zoho.com/sites"]),
+iframe[src*="zohostatic.com/sites"],
+iframe[src*="zsad"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Legacy homepage codeSnippet still in theme DOM — hide duplicate video modal */
+.theme-content-area .dl-modal,
+.theme-content-area #dl-modal { display: none !important; }
+
+

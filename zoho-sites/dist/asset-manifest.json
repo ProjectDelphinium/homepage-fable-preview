@@ -1,0 +1,94 @@
+[
+ {
+  "old": "assets/logo-new.svg",
+  "new": "/dl28-logo-new.svg"
+ },
+ {
+  "old": "assets/message.png",
+  "new": "/dl28-message.png"
+ },
+ {
+  "old": "mewalogo.gif",
+  "new": "/dl28-mewalogo.gif"
+ },
+ {
+  "old": "https://delphi-me.com/hs-fs/hubfs/Davis%20School%20District.png?width=536&amp;height=100&amp;name=Davis%20School%20District.png",
+  "new": "/dl28-hubfs-Davis-School-District.png"
+ },
+ {
+  "old": "https://delphi-me.com/hs-fs/hubfs/cropped-utva_pbk12_logo_rgb-1.webp?width=363&amp;height=100&amp;name=cropped-utva_pbk12_logo_rgb-1.webp",
+  "new": "/dl28-hubfs-cropped-utva_pbk12_logo_rgb-1.webp"
+ },
+ {
+  "old": "https://delphi-me.com/hs-fs/hubfs/bakerwebacademylogo.webp?width=100&amp;height=100&amp;name=bakerwebacademylogo.webp",
+  "new": "/dl28-hubfs-bakerwebacademylogo.webp"
+ },
+ {
+  "old": "https://delphi-me.com/hs-fs/hubfs/weblogo-e1668897946927.png?width=300&amp;height=100&amp;name=weblogo-e1668897946927.png",
+  "new": "/dl28-hubfs-weblogo-e1668897946927.png"
+ },
+ {
+  "old": "https://delphi-me.com/hs-fs/hubfs/web_kelseypeak_logo.png?width=300&amp;height=100&amp;name=web_kelseypeak_logo.png",
+  "new": "/dl28-hubfs-web_kelseypeak_logo.png"
+ },
+ {
+  "old": "https://delphi-me.com/hs-fs/hubfs/web_rockypeak_logo.png?width=300&amp;height=100&amp;name=web_rockypeak_logo.png",
+  "new": "/dl28-hubfs-web_rockypeak_logo.png"
+ },
+ {
+  "old": "https://delphi-me.com/hs-fs/hubfs/AHS.webp?width=182&amp;height=100&amp;name=AHS.webp",
+  "new": "/dl28-hubfs-AHS.webp"
+ },
+ {
+  "old": "https://delphi-me.com/hs-fs/hubfs/vpw_logo_no_motto.webp?width=159&amp;height=100&amp;name=vpw_logo_no_motto.webp",
+  "new": "/dl28-hubfs-vpw_logo_no_motto.webp"
+ },
+ {
+  "old": "https://delphi-me.com/hs-fs/hubfs/directorthumb.png?width=960&amp;name=directorthumb.png",
+  "new": "/dl28-hubfs-directorthumb.png"
+ },
+ {
+  "old": "https://delphi-me.com/hs-fs/hubfs/teacherthumb.png?width=960&amp;name=teacherthumb.png",
+  "new": "/dl28-hubfs-teacherthumb.png"
+ },
+ {
+  "old": "https://raw.githubusercontent.com/ProjectDelphinium/homepage-fable-preview/cursor/sites-v5-hires-2026-09-24/zoho-sites/assets/from-hied-hires-2026-09-24/control-tower-roster-hires.png",
+  "new": "/dl28-control-tower-roster-hires.png"
+ },
+ {
+  "old": "https://raw.githubusercontent.com/ProjectDelphinium/homepage-fable-preview/cursor/sites-v5-hires-2026-09-24/zoho-sites/assets/from-hied-hires-2026-09-24/control-tower-student-detail-hires.png",
+  "new": "/dl28-control-tower-student-detail-hires.png"
+ },
+ {
+  "old": "https://raw.githubusercontent.com/ProjectDelphinium/homepage-fable-preview/cursor/sites-v5-hires-2026-09-24/zoho-sites/assets/from-hied-hires-2026-09-24/message-center-schedule-hires.png",
+  "new": "/dl28-message-center-schedule-hires.png"
+ },
+ {
+  "old": "https://raw.githubusercontent.com/ProjectDelphinium/homepage-fable-preview/cursor/sites-v5-hires-2026-09-24/zoho-sites/assets/from-hied-hires-2026-09-24/makeover-after-delphinium-hires.png",
+  "new": "/dl28-makeover-after-delphinium-hires.png"
+ },
+ {
+  "old": "https://raw.githubusercontent.com/ProjectDelphinium/homepage-fable-preview/cursor/sites-v5-hires-2026-09-24/zoho-sites/assets/from-hied-hires-2026-09-24/engagement-widgets-hires.png",
+  "new": "/dl28-engagement-widgets-hires.png"
+ },
+ {
+  "old": "https://raw.githubusercontent.com/ProjectDelphinium/homepage-fable-preview/cursor/sites-v5-prospectus-5c51/zoho-sites/assets/from-prospectus-2026-09-24/engagement-widgets-left.png",
+  "new": "/dl28-engagement-widgets-left.png"
+ },
+ {
+  "old": "https://raw.githubusercontent.com/ProjectDelphinium/homepage-fable-preview/cursor/sites-v5-prospectus-5c51/zoho-sites/assets/from-prospectus-2026-09-24/engagement-widgets-right.png",
+  "new": "/dl28-engagement-widgets-right.png"
+ },
+ {
+  "old": "fonts.gstatic.com (Google Fonts css2)",
+  "new": "/dl28-font-fraunces-italic-560.woff2"
+ },
+ {
+  "old": "serverless@8daf637 stacks/theme/assets/images/favicon.svg",
+  "new": "/dl28-favicon.svg"
+ },
+ {
+  "old": "serverless@8daf637 stacks/react-admin/public/favicon.png",
+  "new": "/dl28-favicon.png"
+ }
+]

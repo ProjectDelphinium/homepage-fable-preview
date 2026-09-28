@@ -7,6 +7,51 @@
 **Primary CTA (every Schedule link, 6 total, all open the Bookings modal):** https://jared-delphi-me.zohobookings.com/4937208000000036014
 **Staging target:** https://delphinium-marketing-staging.zohosites.com (Web Design publishes after Jared OKs the PR; HubSpot, DNS, production untouched)
 
+## 0. Zoho procedure (2026-09-28 verified pack)
+
+Build from source. Do not publish from this repo. HubSpot, DNS, and production Zoho stay untouched.
+
+```bash
+python3 tools/zoho/build_zoho_pack.py
+```
+
+| Output | Paste into | Cap |
+|---|---|---|
+| `zoho-sites/dist/homepage-sites-v5.zoho-ready.html` | Not pasted. This is the zoho-ready document the split is built from. It matches the pack verified on staging (2026-09-28). | |
+| `zoho-sites/dist/homepage-sites-v5.zoho-header.html` | **Header Code** | 44,900 chars |
+| `zoho-sites/dist/homepage-sites-v5.zoho-footer.html` | **Footer Code** | 44,900 chars |
+| `zoho-sites/dist/homepage-sites-v5.zoho-custom.css` | **Custom CSS** | Save once |
+| `zoho-sites/dist/asset-manifest.json` | Reference. Old URL to `/dl28-…` on the Zoho document root. | |
+
+**Header Code** is `<title>` and the meta description, the head links (logo preload, Bookings, YouTube, `embed.js`), a small script that resets the title and description after Zoho's theme, favicon links, the neutralizer script, then markup from `.dl-top` through `</main>`, plus the `#dl-modal` video modal. The legacy Home snippet also has `id=dl-modal`, so ours has to come first in the DOM. Research, contact, and book modals stay in the footer.
+
+**Footer Code** is `footer.dl-footer`, the research / contact / book modals, and the inline script minified with `terser -c -m`. Bookings stays on portal-embed (`…/portal-embed#/4937208000000036014`). There is no Bookings URL parameter that hides the service card.
+
+**Custom CSS**, saved once: `tools/zoho/zoho-chrome-hide.css` (soft-chrome hide already on staging), then `tools/zoho/safety-reset.css` (low-specificity `vertical-align: baseline` on our images, buttons, and links; no `!important`, so page rules still win), then the self-hosted `@font-face` block, then the page `<style>`, including the Bookings clip. The box saw the CSS doubled when CodeMirror `setValue` and the textarea sync both fired. Paste with one write.
+
+**`&#32;`:** after comments are removed and markup is dedented, every whitespace-only run between tags (outside `script`, `style`, `textarea`, and `pre`) is replaced with `&#32;`. Zoho strips inter-tag whitespace, which turned "would YOU rather" into "wouldYOUrather". `&#32;` survives Zoho.
+
+**Neutralizer** (in Header Code, before `.dl-top`): the legacy Home snippet's inline `<style>` loads after `zs-customcss.css` and was the root of the layout bugs (2-column Hidden costs, lost section backgrounds, 12.5px eyebrows, Watch pills with no border, and the rest of the 2026-09-28 diff). The script disables theme stylesheets (`/template/`, `zsite-core`, `webfonts.zoho`, `fonts.googleapis`) and, with a MutationObserver plus a DOMContentLoaded sweep, neuters `style` / `script` / `img` / `source` / `video` / `iframe` / `link` nodes inside `.theme-content-area`, `.zpcontent-container`, and `[data-element-type]`.
+
+**Assets:** every `assets/…`, `mewalogo.gif`, `raw.githubusercontent.com`, and `delphi-me.com/hs-fs/hubfs` URL is rewritten to a root-relative `/dl28-<basename>`. Google Fonts `<link>`s are removed. The font files are the `/dl28-font-*.woff2` faces already on Zoho. Favicon links: `/dl28-favicon.svg` (svg icon), `/dl28-favicon.png` (32×32 icon and apple touch icon). Source copies live in `zoho-sites/assets/favicon/` (from serverless `8daf637`: `stacks/theme/assets/images/favicon.svg` and `stacks/react-admin/public/favicon.png`).
+
+**Bookings clip** (in the page CSS, pack only): the cross-origin portal-embed shows a service card (SC tile / jared_delphi-me / 1 hr) from y=30 to y=214. "Select date and time" starts at 238, same at 1440, 1024, and 390. The clip hides that card:
+
+```css
+.dl-modal--book #dl-book-frame { overflow: hidden; }
+.dl-modal--book #dl-book-frame iframe { top: -222px; bottom: auto; height: calc(100% + 222px); }
+```
+
+**Watch pills:** local `.dl-link:hover` stays cyan fill, navy-deep text, cyan border. The pack strips the native `title` attribute on `a[data-youtube]` and `a[data-mux]` so the browser tooltip does not repeat the visible label. `data-title` stays (the modal uses it). That strip is pack-only until Jared asks for it in source.
+
+**Close punch:** source now reads `Your school already runs on Canvas,` (trailing comma). Jared, 2026-09-28.
+
+**Flag, do not edit:** the hero lead still says "courses you already teach in into". That typo is intentional until Jared changes the copy. The build script prints the flag and leaves the words alone.
+
+**Flag, Mewa:** `mewalogo.gif` is rewritten to `/dl28-mewalogo.gif` so the image loads, and it is still not in the approved source list (`context/SOURCE.md`). Keep it as Jared has it. Do not add a new customer claim around it.
+
+Section 2 below is the older single-snippet paste. Use this section for the current staging pack.
+
 ## 1. Before you paste: make the images absolute
 
 The HTML uses relative paths (`assets/...`) so the GitHub Pages preview works. Zoho cannot resolve those. On a copy of the file, find `"assets/` and replace with one of:
@@ -36,6 +81,8 @@ Only match `"assets/` with the leading quote. The Bookings script URL (`bookings
 `from-hied-handout-2026-09-24/hero-portrait-instructor-original.png` is the uncropped source (2501×929) and is not referenced by the page.
 
 ## 2. Recommended port
+
+The 2026-09-28 staging pack uses section 0 (Header Code, Footer Code, Custom CSS), not the single snippet below. The steps here are the older fallback.
 
 1. Create a blank homepage (or one full-width **Code Snippet / Custom HTML** section). Set the section to **full width** and **zero padding**.
 2. Paste the edited file contents (the `<style>` block, then `<div class="dl-top">` through the closing `</script>`) into that snippet. Pasting the full document also works; Zoho strips the outer `<html>/<head>/<body>`.
@@ -80,7 +127,7 @@ Stream-to-title mapping was confirmed from the `VideoObject` JSON-LD on https://
 
 ## 5. Page map (zoho-ready pack, 2026-09-24)
 
-1. **Hero / cover:** Canvas delivers content. Delphinium delivers engagement. Cover line **"Cut failures by up to" / 31%**. Schedule a demo + K-12 video. Text only, no face.
+1. **Hero / cover:** Canvas delivers content. Delphinium delivers engagement. Cover line **"Cut failures, up to" / 31%**. Schedule a demo + K-12 video. Text only, no face. Close punch: "Your school already runs on Canvas," (comma).
 2. **Case for engagement (restored):** H2 uses plain weight on the first clause — `<span class="dl-h2__plain">Education moved online,</span>` (comma, not period) then *Engagement* didn't follow. Lede includes **"teachers can read the room"**.
 3. **Makeover peak:** "Which class would YOU rather take?" with before/after. Stages use `align-items: start`. Before image is Canvas-only hires crop (`module-only-20260924b` cache-bust). Desktop side by side; mobile Canvas / Canvas + Delphinium toggle.
 4. **Proof:** Davis Connect **31%** with full study context, 72% motivating, "Fun.", Netflix quote, Tiffany Dance.
@@ -99,7 +146,7 @@ Stream-to-title mapping was confirmed from the `VideoObject` JSON-LD on https://
 ## 6. Verify before Jared share
 
 - [ ] All 6 **Schedule a demo** links go to the Bookings URL above and open the modal. Escape and the backdrop close it.
-- [ ] Hero/cover says **Cut failures by up to** / **31%** (promise). Exact **31%** only in the Davis Connect card with 72 classes / 6,000 students / same courses, teachers, content.
+- [ ] Hero/cover says **Cut failures, up to** / **31%** (promise). Exact **31%** only in the Davis Connect card with 72 classes / 6,000 students / same courses, teachers, content.
 - [ ] Case section present: H2 plain clause "Education moved online," (comma) and lede "teachers can read the room".
 - [ ] Video modal titles come from `videoLabel(el)` matching the button labels; no durations in UI or aria-labels.
 - [ ] Schedule CTAs use Sites Bookings modal + portal-embed (`data-bookings-open`), not Zoho Button/Link widgets.
