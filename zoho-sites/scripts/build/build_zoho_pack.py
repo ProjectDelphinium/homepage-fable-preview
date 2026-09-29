@@ -47,12 +47,6 @@ NEUTRALIZE = (
     "mo.observe(d.documentElement,{childList:true,subtree:true});d.addEventListener('DOMContentLoaded',function(){sweep();setTimeout(function(){sweep();mo.disconnect();},4000);});})();</script>"
 )
 
-BOOKINGS_CLIP = """
-/* dl28 bookings clip (Zoho pack) */
-.dl-modal--book #dl-book-frame { overflow: hidden; }
-.dl-modal--book #dl-book-frame iframe { top: -222px; bottom: auto; height: calc(100% + 222px); }
-"""
-
 FONT_COMMENT = "/* self-hosted fonts (Zoho Files) 2026-09-28 */\n"
 
 
@@ -101,7 +95,6 @@ def transform_document(src: str) -> tuple[str, list[dict]]:
     src = src.replace("<style>", "<style>\n" + FONT_COMMENT + faces + "\n", 1)
     for url in re.findall(r"url\((/dl28-font-[^)]+)\)", faces):
         man.append({"old": "fonts.gstatic.com (Google Fonts css2)", "new": url})
-    src = src.replace("</style>", BOOKINGS_CLIP + "</style>", 1)
     seen: set[str] = set()
     deduped = []
     for item in man:
