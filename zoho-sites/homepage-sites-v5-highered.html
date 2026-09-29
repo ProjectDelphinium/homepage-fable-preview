@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="robots" content="noindex, nofollow">
-  <title>Delphinium · Canvas delivers content. Delphinium delivers engagement.</title>
-  <meta name="description" content="The Canvas engagement layer for K-12 online schools. Turn the Canvas courses you already run into engaging student experiences and an early-warning system for teachers. Up to 31% fewer course failures.">
+  <title>Delphinium for Higher Ed · Canvas delivers content. Delphinium delivers engagement.</title>
+  <meta name="description" content="The Canvas engagement layer for higher ed online programs. Turn the Canvas courses you already run into engaging student experiences and an early-warning system for faculty. Up to 47% fewer course failures.">
   <script>
     /* K-12 | Higher Ed switch: the only place its URLs live. On Zoho, set both to the published page URLs. */
     window.DL_AUDIENCE_URLS = {
@@ -784,7 +784,7 @@
       color: var(--ink);
     }
     .dl-case__stats { display: grid; gap: 0.85rem; }
-    @media (min-width: 720px) { .dl-case__stats { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 720px) { .dl-case__stats { grid-template-columns: repeat(2, 1fr); } }
     .dl-case__stats .dl-card { padding: 1.15rem 1.15rem 1rem; }
     .dl-case__stats .dl-card__kicker { margin-bottom: 0.4rem; }
     .dl-case__stats .dl-card__num {
@@ -884,7 +884,7 @@
     }
     .dl-pull cite span { display: block; font-weight: 400; color: var(--ink-soft); }
 
-    /* Cost to teachers */
+    /* Cost to faculty */
     .dl-teach { background: var(--paper); }
     #teach-heading { line-height: 1.15; }
     #teach-heading .dl-h2__plain { display: block; margin-bottom: 0.22em; }
@@ -897,7 +897,9 @@
       grid-template-columns: 1fr;
     }
     @media (min-width: 640px) { .dl-teach__cards { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 1000px) { .dl-teach__cards { grid-template-columns: repeat(4, 1fr); } }
+    /* Three cards: the last one spans the row in the two-column range */
+    @media (min-width: 640px) and (max-width: 939px) { .dl-teach__cards .dl-card:nth-child(3) { grid-column: 1 / -1; } }
+    @media (min-width: 940px) { .dl-teach__cards { grid-template-columns: repeat(3, 1fr); } }
     .dl-teach__cards .dl-card {
       padding: 1.3rem 1.2rem 1.2rem;
       border-top: 3px solid var(--navy);
@@ -932,12 +934,6 @@
       color: var(--navy);
     }
     .dl-teach__cards .dl-card__txt { grid-column: 1 / -1; margin-top: 0.85rem; font-size: 0.98rem; color: var(--ink-soft); }
-    .dl-teach__cards .dl-teach__family {
-      background: var(--lav);
-      border-top-color: color-mix(in srgb, var(--navy) 40%, transparent);
-    }
-    .dl-teach__cards .dl-teach__family .dl-teach__icon { background: color-mix(in srgb, var(--navy) 7%, transparent); }
-    .dl-teach__cards .dl-teach__family .dl-card__txt b { font-weight: 600; color: var(--navy); }
     /* Makeover */
     .dl-mk { background: var(--lav); overflow-x: clip; }
     #makeover .dl-eyebrow { justify-content: flex-start; }
@@ -1039,7 +1035,7 @@
       margin: 0;
       max-width: none;
     }
-    /* Ryan Hansen quote: breathe above + more space before Netflix/survey quote */
+    /* First quote: breathe above + more space before the survey quote */
     .dl-mk__quotes > .dl-pull:first-child {
       margin-top: 0.85rem;
       margin-bottom: 0.75rem;
@@ -1130,13 +1126,13 @@
     }
     @media (min-width: 640px) {
       .dl-proof__results { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
-      .dl-proof__result--davis { grid-column: 1 / -1; }
+      .dl-proof__result--study { grid-column: 1 / -1; }
     }
     @media (min-width: 960px) {
       .dl-proof__results { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 1.5rem clamp(1.75rem, 3vw, 2.5rem); }
-      .dl-proof__result--davis { grid-column: 1; grid-row: span 2; }
+      .dl-proof__result--study { grid-column: 1; grid-row: span 2; }
     }
-    /* Supporting results stay flat so the Davis card is the only raised surface */
+    /* Supporting results stay flat so the study card is the only raised surface */
     .dl-proof .dl-proof__result {
       padding: clamp(1.4rem, 3vw, 2.1rem);
       box-shadow: none;
@@ -1159,39 +1155,39 @@
       .dl-proof__result--fun .dl-card__txt { margin-top: 0; font-size: 1rem; line-height: 1.5; }
     }
 
-    .dl-proof .dl-proof__result--davis {
-      --davis-pad: clamp(1.5rem, 4vw, 2.75rem);
+    .dl-proof .dl-proof__result--study {
+      --study-pad: clamp(1.5rem, 4vw, 2.75rem);
       position: relative;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      padding: var(--davis-pad) var(--davis-pad) 0;
+      padding: var(--study-pad) var(--study-pad) 0;
       background: var(--white);
       box-shadow: var(--shadow-sm);
     }
-    .dl-proof__result--davis::before {
+    .dl-proof__result--study::before {
       content: "";
       position: absolute;
       inset: 0 0 auto 0;
       height: 5px;
       background: var(--green);
     }
-    .dl-proof__result--davis .dl-card__kicker { margin-bottom: 1.5rem; color: var(--green-ink); }
-    .dl-proof__davis {
+    .dl-proof__result--study .dl-card__kicker { margin-bottom: 1.5rem; color: var(--green-ink); }
+    .dl-proof__study {
       display: grid;
       grid-template-columns: auto minmax(0, 1fr);
       align-items: center;
       column-gap: clamp(1.25rem, 3.5vw, 2.5rem);
       padding-bottom: clamp(1.75rem, 3.5vw, 2.5rem);
     }
-    .dl-proof__davis .dl-card__num {
+    .dl-proof__study .dl-card__num {
       grid-row: 1 / span 2;
       font-size: clamp(5.25rem, 12vw, 9.75rem);
       font-weight: 800;
       line-height: 0.82;
       letter-spacing: -0.05em;
     }
-    .dl-proof__davis .dl-card__txt {
+    .dl-proof__study .dl-card__txt {
       align-self: end;
       margin: 0;
       font-family: var(--font-display);
@@ -1199,21 +1195,21 @@
       line-height: 1.2;
       letter-spacing: -0.01em;
     }
-    .dl-proof__davis .dl-card__ctx { align-self: start; margin: 1.1rem 0 0; padding-top: 1rem; font-size: 1rem; line-height: 1.5; }
+    .dl-proof__study .dl-card__ctx { align-self: start; margin: 1.1rem 0 0; padding-top: 1rem; font-size: 1rem; line-height: 1.5; }
     @media (min-width: 960px) {
-      .dl-proof__davis { grid-template-columns: minmax(0, 1fr); }
-      .dl-proof__davis .dl-card__num { grid-row: auto; margin-bottom: 1.35rem; }
-      .dl-proof__davis .dl-card__txt { align-self: start; }
-      .dl-proof__davis .dl-card__ctx { margin-top: 1.35rem; padding-top: 1.15rem; }
+      .dl-proof__study { grid-template-columns: minmax(0, 1fr); }
+      .dl-proof__study .dl-card__num { grid-row: auto; margin-bottom: 1.35rem; }
+      .dl-proof__study .dl-card__txt { align-self: start; }
+      .dl-proof__study .dl-card__ctx { margin-top: 1.35rem; padding-top: 1.15rem; }
     }
     @media (max-width: 559px) {
-      .dl-proof__davis .dl-card__num { grid-row: 1; }
-      .dl-proof__davis .dl-card__txt { align-self: center; }
-      .dl-proof__davis .dl-card__ctx { grid-column: 1 / -1; margin-top: 1.35rem; }
+      .dl-proof__study .dl-card__num { grid-row: 1; }
+      .dl-proof__study .dl-card__txt { align-self: center; }
+      .dl-proof__study .dl-card__ctx { grid-column: 1 / -1; margin-top: 1.35rem; }
     }
     .dl-proof__study-punch {
-      margin: auto calc(-1 * var(--davis-pad)) 0;
-      padding: clamp(1.25rem, 2.5vw, 1.65rem) var(--davis-pad) clamp(1.35rem, 2.8vw, 1.85rem);
+      margin: auto calc(-1 * var(--study-pad)) 0;
+      padding: clamp(1.25rem, 2.5vw, 1.65rem) var(--study-pad) clamp(1.35rem, 2.8vw, 1.85rem);
       background: color-mix(in srgb, var(--green) 8%, var(--white));
       border-top: 1px solid color-mix(in srgb, var(--green) 24%, transparent);
       font-family: var(--font-display);
@@ -1223,6 +1219,43 @@
       text-wrap: balance;
     }
     .dl-proof__study-punch b { color: var(--ink); }
+    .dl-proof__outcomes-label {
+      margin: 0 0 0.7rem;
+      font-family: var(--font-text);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--green-ink);
+    }
+    .dl-proof__outcomes-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .dl-proof__outcomes-list li {
+      display: grid;
+      grid-template-columns: 4.1rem minmax(0, 1fr);
+      align-items: baseline;
+      column-gap: 0.85rem;
+      font-size: clamp(1.02rem, 1.5vw, 1.15rem);
+      line-height: 1.3;
+      text-wrap: pretty;
+    }
+    .dl-nowrap { white-space: nowrap; }
+    .dl-proof__outcomes-list b {
+      font-size: clamp(1.6rem, 2.6vw, 2rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      color: var(--green-ink);
+    }
+    @media (min-width: 560px) and (max-width: 959px) {
+      .dl-proof__outcomes-list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+      .dl-proof__outcomes-list li { grid-template-columns: 1fr; row-gap: 0.35rem; }
+    }
 
     .dl-proof__research { margin-top: clamp(3.5rem, 7vw, 5.5rem); }
     .dl-proof__research-title {
@@ -1474,7 +1507,6 @@
     #cb-heading .dl-h2__plain,
     #eb-heading .dl-h2__plain,
     #proof-heading .dl-h2__plain,
-    #videos-heading .dl-h2__plain,
     #close-heading .dl-h2__plain { display: block; margin-bottom: 0.22em; }
     #eb-heading .dl-h2__line2 { display: block; }
     #core-heading + .dl-prod__sub,
@@ -2120,6 +2152,18 @@
       .dl-logos__list img { height: 36px; }
       .dl-logos__list, .dl-logos__track { gap: 2rem; }
     }
+    /* Four logos: a static row instead of the marquee (too few to loop well) */
+    .dl-logos__list--static {
+      flex-wrap: wrap;
+      gap: 1.75rem 3.5rem;
+    }
+    .dl-logos__list--static img { height: 52px; max-width: 100%; }
+    .dl-logos__list--static .dl-logos__mark { height: 76px; }
+    @media (max-width: 599px) {
+      .dl-logos__list--static { gap: 1.5rem 2.25rem; }
+      .dl-logos__list--static img { height: 40px; }
+      .dl-logos__list--static .dl-logos__mark { height: 60px; }
+    }
     @media (prefers-reduced-motion: reduce) {
       .dl-logos__track {
         animation: none;
@@ -2518,7 +2562,7 @@
       .dl-play img, .dl-play__btn, .dl-btn { transition: none; }
     }
 
-    /* Bookings: cross-origin iframe, so parent CSS cannot style inside it.
+    /* Bookings: cross-origin iframe, so this page's CSS cannot style inside it.
        Do not offset or clip the iframe: Zoho's scrollbar and its Back /
        selected-time header (details step) sit at the top edge. 1020px fits
        Zoho's full date/time step; shorter viewports scroll inside Zoho.
@@ -2707,8 +2751,8 @@
   <nav class="dl-aud" aria-label="K-12 or Higher Ed">
     <p class="dl-aud__label">My institution is</p>
     <ul class="dl-aud__seg">
-      <li><a class="dl-aud__opt" href="homepage-sites-v5.html" data-aud="k12" aria-current="page">K-12</a></li>
-      <li><a class="dl-aud__opt" href="homepage-sites-v5-highered.html" data-aud="he">Higher Ed</a></li>
+      <li><a class="dl-aud__opt" href="homepage-sites-v5.html" data-aud="k12">K-12</a></li>
+      <li><a class="dl-aud__opt" href="homepage-sites-v5-highered.html" data-aud="he" aria-current="page">Higher Ed</a></li>
     </ul>
   </nav>
   <div class="dl-top">
@@ -2725,7 +2769,6 @@
             <li><a href="#engagement-builder">Engagement Builder</a></li>
           </ul>
         </div>
-        <a href="#customers">In Their Own Words</a>
         <a href="#proof-eyebrow">Proof</a>
       </nav>
       <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
@@ -2741,15 +2784,14 @@
         <li><a href="#engagement-builder">Engagement Builder</a></li>
       </ul>
       <ul class="dl-mnav__list">
-        <li><a href="#customers">In Their Own Words</a></li>
         <li><a href="#proof-eyebrow">Proof</a></li>
         <li class="dl-mnav__cta"><a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a></li>
       </ul>
       <div class="dl-mnav__aud">
         <p class="dl-mnav__label" id="dl-mnav-aud">My institution is</p>
         <ul class="dl-aud__seg dl-aud__seg--light" aria-labelledby="dl-mnav-aud">
-          <li><a class="dl-aud__opt" href="homepage-sites-v5.html" data-aud="k12" aria-current="page">K-12</a></li>
-          <li><a class="dl-aud__opt" href="homepage-sites-v5-highered.html" data-aud="he">Higher Ed</a></li>
+          <li><a class="dl-aud__opt" href="homepage-sites-v5.html" data-aud="k12">K-12</a></li>
+          <li><a class="dl-aud__opt" href="homepage-sites-v5-highered.html" data-aud="he" aria-current="page">Higher Ed</a></li>
         </ul>
       </div>
     </nav>
@@ -2766,23 +2808,23 @@
             <span class="dl-hero__engage"><em>Engagement!</em></span>
           </strong>
         </h1>
-        <p class="dl-hero__lead">Delphinium transforms the Canvas courses you already teach in into <b>engaging student experiences</b> and an <b>early-warning system</b> for parents and teachers. No migration. No extra work. <em>Just turn it on.</em></p>
+        <p class="dl-hero__lead">Delphinium transforms the Canvas courses your online programs already run into <b>engaging student experiences</b> and an <b>early-warning system</b> for faculty. No migration. No extra work. <em>Just turn it on.</em></p>
         <div class="dl-hero__actions">
           <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
-          <a class="dl-link" href="https://www.youtube.com/watch?v=id9dqfNZsf4" data-youtube="id9dqfNZsf4" data-title="Watch: Online learning, elevated" title="Watch: Online learning, elevated">
+          <a class="dl-link" href="https://www.youtube.com/watch?v=9mfMC9jC6lU" data-youtube="9mfMC9jC6lU" data-title="Watch: Elevate and amplify learning" title="Watch: Elevate and amplify learning">
             <span class="dl-link__icon" aria-hidden="true"></span>
-            Watch: Online learning, elevated
+            Watch: Elevate and amplify learning
           </a>
         </div>
 
         <div class="dl-cover dl-reveal">
           <div class="dl-cover__stat">
             <span class="dl-cover__upto">Cut failures, up to</span>
-            <span class="dl-cover__num">31%!</span>
+            <span class="dl-cover__num">47%!</span>
           </div>
           <ul class="dl-cover__points">
             <li><span class="dl-tick" aria-hidden="true"></span><span><b>Go live in less than 3 minutes.</b> Keep Canvas, enhance with Delphinium.</span></li>
-            <li><span class="dl-tick" aria-hidden="true"></span><span><b>Zero learning curve.</b> Teachers keep using Canvas exactly as before.</span></li>
+            <li><span class="dl-tick" aria-hidden="true"></span><span><b>Zero learning curve.</b> Faculty keep using Canvas exactly as before.</span></li>
             <li><span class="dl-tick" aria-hidden="true"></span><span><b>Built on science.</b> 14 years of published behavioral research.</span></li>
           </ul>
         </div>
@@ -2794,31 +2836,25 @@
         <div class="dl-reveal dl-case__copy">
           <p class="dl-eyebrow">The hidden costs</p>
           <h2 class="dl-h2" id="case-heading"><span class="dl-h2__plain">Education moved online,</span> <em>Engagement</em> didn't follow.</h2>
-          <p class="dl-lede">In a classroom, teachers can read the room, catch a glance, and stand by the student who is drifting. <em>None of that survives the move to a screen.</em></p>
+          <p class="dl-lede">In a classroom, faculty can read the room, catch a glance, and stand by the student who is drifting. <em>None of that survives the move to a screen.</em></p>
         </div>
         <div class="dl-case__break dl-reveal">
           <h3>When engagement breaks down...</h3>
           <div class="dl-case__stats">
             <article class="dl-card">
-              <p class="dl-card__kicker">Attendance</p>
-              <p class="dl-card__num dl-card__num--navy">1 in 4</p>
-              <p class="dl-card__txt">students are chronically absent, still elevated years after the shift online.</p>
-              <p class="dl-case__src">RAND / Return to Learn Tracker, 2024-25</p>
+              <p class="dl-card__kicker">Retention</p>
+              <p class="dl-card__num dl-card__num--navy">~1 in 3</p>
+              <p class="dl-card__txt">first-year students don't return for year two. Seats and tuition that never come back.</p>
+              <p class="dl-case__src">NCES / IPEDS retention</p>
             </article>
             <article class="dl-card">
-              <p class="dl-card__kicker">Achievement</p>
-              <p class="dl-card__num dl-card__num--navy">1 in 3</p>
-              <p class="dl-card__txt">students score below grade level. The lowest performers keep losing ground.</p>
-              <p class="dl-case__src">The Nation's Report Card (NAEP), 2024</p>
-            </article>
-            <article class="dl-card">
-              <p class="dl-card__kicker">Cost</p>
-              <p class="dl-card__num dl-card__num--navy">$229K</p>
-              <p class="dl-card__txt">the cost of a K-12 education and lost potential when students don't finish.</p>
-              <p class="dl-case__src">U.S. Census Bureau, FY2024</p>
+              <p class="dl-card__kicker">Completion</p>
+              <p class="dl-card__num dl-card__num--navy">~40%</p>
+              <p class="dl-card__txt">of students finish a bachelor's in 4 years (about 60% in 6). Time-to-degree keeps stretching.</p>
+              <p class="dl-case__src">NCES graduation rates</p>
             </article>
           </div>
-          <p class="dl-punch"><span class="dl-punch__setup">Three crises, one cause: <em class="dl-punch__ital">disengagement</em>.</span> <span class="dl-punch__payoff">Doing nothing is the most <em class="dl-punch__key">expensive</em> option you have.</span></p>
+          <p class="dl-punch"><span class="dl-punch__setup">Two crises, one cause: <em class="dl-punch__ital">disengagement</em>.</span> <span class="dl-punch__payoff">Doing nothing is the most <em class="dl-punch__key">expensive</em> option you have.</span></p>
         </div>
       </div>
     </section>
@@ -2845,11 +2881,6 @@
             <h3>Detective work, not teaching</h3>
             <p class="dl-card__txt">You get hours of digging through gradebooks and reports, paid for with nights and weekends instead of time with students.</p>
           </li>
-          <li class="dl-card dl-teach__family">
-            <span class="dl-teach__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><path d="M3 20v-1a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5v1"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14a4 4 0 0 1 4 4v2"/></svg></span>
-            <h3>Parents in the dark</h3>
-            <p class="dl-card__txt">Parents want to be the coach in their kid's corner, but most find out they're struggling after it's too late.</p>
-          </li>
         </ul>
         <p class="dl-punch dl-reveal"><span class="dl-punch__setup">Stop hunting for struggling students,</span> <span class="dl-punch__payoff"><em class="dl-punch__key">Delphinium</em> brings them to you.</span></p>
       </div>
@@ -2861,12 +2892,12 @@
           <div class="dl-prod__copy dl-reveal">
             <p class="dl-eyebrow" id="control-tower">Control Tower</p>
             <h2 class="dl-h2" id="core-heading"><span class="dl-h2__plain">See everything,</span> <em>Act in seconds.</em></h2>
-            <p class="dl-prod__sub">Delphinium pulls all of Canvas's scattered data into one clear view, so teachers see who needs support at a glance, and can reach out in seconds.</p>
+            <p class="dl-prod__sub">Delphinium pulls all of Canvas's scattered data into one clear view, so faculty see who needs support at a glance, and can reach out in seconds.</p>
             <ul class="dl-list">
               <li>Turn Canvas into an early-warning powerhouse</li>
               <li>Red, yellow, and green reveals who needs help first</li>
               <li>One click gives the full picture: grades, progress, missing and late work, and more!</li>
-              <li>Send mass-messages to parents</li>
+              <li>Message every struggling student at once</li>
             </ul>
           </div>
           <div class="dl-prod__media dl-reveal">
@@ -2875,16 +2906,16 @@
             </div>
           </div>
           <div class="dl-prod__detail-wrap">
-            <img class="dl-prod__detail" src="https://raw.githubusercontent.com/ProjectDelphinium/homepage-fable-preview/cursor/sites-v5-hires-2026-09-24/zoho-sites/assets/from-hied-hires-2026-09-24/control-tower-student-detail-hires.png" width="2028" height="1783" alt="Student detail panel showing grades, progress, observers, and engagement counts for past due, missing, and late work." loading="lazy">
+            <img class="dl-prod__detail" src="assets/he/control-tower-student-detail-he.png" width="2305" height="2064" alt="Student detail panel showing grades, progress, and engagement counts for past due, missing, and late work." loading="lazy">
           </div>
           <div class="dl-prod__quote dl-reveal">
             <blockquote class="dl-pull">
-              <p>&ldquo;I can see, with color, my students' progress &ndash; see their points, their percentages&hellip; to tell me where a student is very quickly. This has saved most of my Saturday nights!&rdquo;</p>
-              <cite>Natalie Niederhauser<span>High School Math Teacher, Davis Connect</span></cite>
+              <p>&ldquo;The ease of Delphinium [gives] me much more opportunity to work one-on-one with my students.&rdquo;</p>
+              <cite>Teacher</cite>
             </blockquote>
             <div class="dl-prod__more">
               <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
-              <a class="dl-link" href="https://www.youtube.com/watch?v=xC1b-9bZW4w" data-youtube="xC1b-9bZW4w" data-title="Watch: Insightful data" title="Watch: Insightful data">
+              <a class="dl-link" href="https://www.youtube.com/watch?v=MBYmCCeZqxo" data-youtube="MBYmCCeZqxo" data-title="Watch: Insightful data" title="Watch: Insightful data">
                 <span class="dl-link__icon" aria-hidden="true"></span>
                 Watch: Insightful data
               </a>
@@ -2900,13 +2931,12 @@
           <div class="dl-reveal">
             <p class="dl-eyebrow" id="community-builder">Community Builder</p>
             <h2 class="dl-h2" id="cb-heading"><span class="dl-h2__plain">The right nudge,</span> <em>Right on time.</em></h2>
-            <p class="dl-prod__sub">Stop blasting the whole class. Target exactly the students who need to hear from you, with exactly the right information – automatically. And include their parents too!</p>
+            <p class="dl-prod__sub">Stop blasting the whole class. Target exactly the students who need to hear from you, with exactly the right information, automatically.</p>
             <h3 class="dl-list__lead">Right message, right person</h3>
             <ul class="dl-list">
               <li>Message one student, a group, or the whole class</li>
               <li>Trigger outreach automatically from performance data</li>
               <li>Automatically personalize with students' data</li>
-              <li>Keep parents in the loop with a single click</li>
               <li>Auto-translate into 240 languages</li>
             </ul>
             <h3 class="dl-list__lead">Less work, wider reach</h3>
@@ -2919,12 +2949,12 @@
             </ul>
             <div class="dl-cb-quotes">
               <blockquote class="dl-pull">
-                <p>&ldquo;You just saved me hours of mail merging! This saves teachers so much time and really brings that part of personalized learning that we all strive to reach.&rdquo;</p>
-                <cite>Sarah Ruiz<span>Curriculum Director</span></cite>
+                <p>&ldquo;Students feel they are getting constant personal attention and feedback.&rdquo;</p>
+                <cite>Teacher</cite>
               </blockquote>
               <blockquote class="dl-pull">
-                <p>&ldquo;We can send targeted communication to specific groups of kids – and the data shows us exactly who those kids are.&rdquo;</p>
-                <cite>Ryan Hansen<span>Digital Learning Director</span></cite>
+                <p>&ldquo;You just saved me hours of mail merging! This saves teachers so much time and really brings that part of personalized learning that we all strive to reach.&rdquo;</p>
+                <cite>Administrator</cite>
               </blockquote>
             </div>
           </div>
@@ -2933,11 +2963,11 @@
               <img class="dl-tray__main" src="https://raw.githubusercontent.com/ProjectDelphinium/homepage-fable-preview/cursor/sites-v5-hires-2026-09-24/zoho-sites/assets/from-hied-hires-2026-09-24/message-center-schedule-hires.png" width="1995" height="1200" alt="Message Center templates: Welcome to Class, Student Support Follow-Up, Weekly Progress Report, and Low Activity Warning, with default and disable settings." loading="lazy">
             </div>
             <div class="dl-prod__detail-wrap">
-              <img class="dl-prod__detail" src="assets/message.png" width="1682" height="1730" alt="Create Message window for personalized outreach, with a supportive note to students and an option to include observers." loading="lazy">
+              <img class="dl-prod__detail" src="assets/he/message-he.png" width="1682" height="1730" alt="Create Message window for personalized outreach, with a supportive note to students." loading="lazy">
             </div>
             <div class="dl-prod__more dl-cb-cta">
               <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
-              <a class="dl-link" href="https://www.youtube.com/watch?v=acjbTVs8IUM" data-youtube="acjbTVs8IUM" data-title="Watch: Communication that works!" title="Watch: Communication that works!">
+              <a class="dl-link" href="https://www.youtube.com/watch?v=4vzDJ1poyvU" data-youtube="4vzDJ1poyvU" data-title="Watch: Communication that works!" title="Watch: Communication that works!">
                 <span class="dl-link__icon" aria-hidden="true"></span>
                 Watch: Communication that works!
               </a>
@@ -2952,7 +2982,7 @@
       <div class="dl-wrap">
         <p class="dl-eyebrow" id="engagement-builder">Engagement Builder</p>
         <h2 class="dl-h2 dl-reveal" id="mk-heading"><span class="dl-h2__plain">Which class would</span> <em>YOU</em> <span class="dl-h2__plain">rather finish?</span></h2>
-        <p class="dl-lede">For online students, Canvas <em>is</em> school, and too often it looks like a <b>gray wall of text</b>.</p>
+        <p class="dl-lede">For online students, Canvas <em>is</em> the classroom, and too often it looks like a <b>gray wall of text</b>.</p>
 
         <div class="dl-seg" role="group" aria-label="Compare Canvas and Canvas plus Delphinium">
           <div class="dl-seg__inner">
@@ -3022,7 +3052,7 @@
           </figure>
           <figure class="dl-mk__side dl-mk__side--after">
             <span class="dl-pill dl-pill--dl">Canvas + <b>Delphinium!</b></span>
-            <img src="https://raw.githubusercontent.com/ProjectDelphinium/homepage-fable-preview/cursor/sites-v5-hires-2026-09-24/zoho-sites/assets/from-hied-hires-2026-09-24/makeover-after-delphinium-hires.png" width="1155" height="1282" alt="The same kind of Canvas course with Delphinium on: a course home with teacher photo, a countdown to the last day to submit, and color-coded weekly unit cards with progress bars." loading="lazy">
+            <img src="https://raw.githubusercontent.com/ProjectDelphinium/homepage-fable-preview/cursor/sites-v5-hires-2026-09-24/zoho-sites/assets/from-hied-hires-2026-09-24/makeover-after-delphinium-hires.png" width="1155" height="1282" alt="The same kind of Canvas course with Delphinium on: a course home with an instructor photo, a countdown to the last day to submit, and color-coded weekly unit cards with progress bars." loading="lazy">
           </figure>
         </div>
 
@@ -3030,10 +3060,10 @@
           <div class="dl-mk__help dl-reveal">
             <h3>Clear progress. Real wins.</h3>
             <p>When it's hard to see progress and what's next, students fall behind without realizing it. One missed assignment becomes three, grades start to slip, and by the time a student realizes they're behind, catching up feels out of reach.</p>
-            <p>With Delphinium, students can see at a glance what's done, what's in-progress, and what comes next, so they own the journey. And parents get the same view! Turn parents from frustrated bystanders into the support system every student needs.</p>
+            <p>With Delphinium, students can see at a glance what's done, what's in-progress, and what comes next, so they own the journey. And faculty see the same view, so they can step in at the right moment.</p>
             <div class="dl-prod__more">
               <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
-              <a class="dl-link" href="https://www.youtube.com/watch?v=Ek-BBS8rP_0" data-youtube="Ek-BBS8rP_0" data-title="Watch: Meaningful engagement" title="Watch: Meaningful engagement">
+              <a class="dl-link" href="https://www.youtube.com/watch?v=63Iu4Xxg_tg" data-youtube="63Iu4Xxg_tg" data-title="Watch: Meaningful engagement" title="Watch: Meaningful engagement">
                 <span class="dl-link__icon" aria-hidden="true"></span>
                 Watch: Meaningful engagement
               </a>
@@ -3041,8 +3071,8 @@
           </div>
           <div class="dl-mk__quotes">
             <blockquote class="dl-pull dl-reveal">
-              <p>&ldquo;If you ask kids, they don't like Canvas. It's basic&hellip; it needs something else to engage&hellip;&rdquo;</p>
-              <cite>Ryan Hansen<span>Digital Learning Director</span></cite>
+              <p>&ldquo;I saw that I was doing much better than I thought I was.&rdquo;</p>
+              <cite>Student</cite>
             </blockquote>
             <blockquote class="dl-pull dl-reveal">
               <p>&ldquo;I was sitting on the couch watching Netflix and the thought popped into my head: I could be doing homework right now<em>, and I did!</em>&rdquo;</p>
@@ -3069,7 +3099,7 @@
           </figure>
           <div class="dl-eb-foot dl-reveal">
             <div>
-              <p class="dl-prod__sub">Delphinium automatically creates success signals and milestones from the course you've already built. And teachers can always customize every piece.</p>
+              <p class="dl-prod__sub">Delphinium automatically creates success signals and milestones from the course you've already built. And faculty can always customize every piece.</p>
               <ul class="dl-list">
                 <li><b>Progress they can feel</b> – Color-coded trackers count every point earned</li>
                 <li><b>Always a next step</b> – Students know what's done, what's due, and where to go</li>
@@ -3079,7 +3109,7 @@
               </ul>
               <div class="dl-prod__more">
                 <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
-                <a class="dl-link" href="https://www.youtube.com/watch?v=ejtU7miZWD4" data-youtube="ejtU7miZWD4" data-title="Watch: Effortless gamification" title="Watch: Effortless gamification">
+                <a class="dl-link" href="https://www.youtube.com/watch?v=xbdP6GSjPgY" data-youtube="xbdP6GSjPgY" data-title="Watch: Effortless gamification" title="Watch: Effortless gamification">
                   <span class="dl-link__icon" aria-hidden="true"></span>
                   Watch: Effortless gamification
                 </a>
@@ -3087,9 +3117,8 @@
             </div>
             <div class="dl-eb-quotes">
               <blockquote class="dl-pull">
-                <p>&ldquo;Our students absolutely love the interactive elements where they earn points to enhance their avatars and unlock prize boxes.&rdquo;</p>
-                <p>&ldquo;We have had students redo a quiz that they did poorly on to earn more points so they could just earn googly eyes for their avatar!&rdquo;</p>
-                <cite>Tiffany Dance<span>Instructional Coach</span></cite>
+                <p>&ldquo;I liked knowing that a little extra effort would make a difference.&rdquo;</p>
+                <cite>Student</cite>
               </blockquote>
             </div>
           </div>
@@ -3101,55 +3130,13 @@
       <div class="dl-wrap">
         <div class="dl-logos">
           <p class="dl-eyebrow" id="logos-heading">See who's using Delphinium</p>
-          <p class="dl-logos__lede">Trusted by schools like yours.</p>
-          <div class="dl-logos__viewport">
-            <div class="dl-logos__track">
-              <ul class="dl-logos__list">
-                <li><img src="https://delphi-me.com/hs-fs/hubfs/Davis%20School%20District.png?width=536&amp;height=100&amp;name=Davis%20School%20District.png" width="536" height="100" alt="Davis School District" loading="lazy"></li>
-                <li><img src="https://delphi-me.com/hs-fs/hubfs/cropped-utva_pbk12_logo_rgb-1.webp?width=363&amp;height=100&amp;name=cropped-utva_pbk12_logo_rgb-1.webp" width="363" height="100" alt="Utah Virtual Academy" loading="lazy"></li>
-                <li><img src="https://delphi-me.com/hs-fs/hubfs/bakerwebacademylogo.webp?width=100&amp;height=100&amp;name=bakerwebacademylogo.webp" width="100" height="100" alt="Baker Web Academy" loading="lazy"></li>
-                <li><img src="https://delphi-me.com/hs-fs/hubfs/weblogo-e1668897946927.png?width=300&amp;height=100&amp;name=weblogo-e1668897946927.png" width="300" height="100" alt="Partner school logo" loading="lazy"></li>
-                <li><img src="https://delphi-me.com/hs-fs/hubfs/web_kelseypeak_logo.png?width=300&amp;height=100&amp;name=web_kelseypeak_logo.png" width="300" height="100" alt="Kelsey Peak" loading="lazy"></li>
-                <li><img src="https://delphi-me.com/hs-fs/hubfs/web_rockypeak_logo.png?width=300&amp;height=100&amp;name=web_rockypeak_logo.png" width="300" height="100" alt="Rocky Peak" loading="lazy"></li>
-                <li><img src="https://delphi-me.com/hs-fs/hubfs/AHS.webp?width=182&amp;height=100&amp;name=AHS.webp" width="182" height="100" alt="AHS" loading="lazy"></li>
-                <li><img src="mewalogo.gif" width="160" height="65" alt="Mewa" loading="lazy"></li>
-                <li><img src="https://delphi-me.com/hs-fs/hubfs/vpw_logo_no_motto.webp?width=159&amp;height=100&amp;name=vpw_logo_no_motto.webp" width="159" height="100" alt="VPW" loading="lazy"></li>
-              </ul>
-              <ul class="dl-logos__list dl-logos__list--clone" aria-hidden="true">
-                <li><img src="https://delphi-me.com/hs-fs/hubfs/Davis%20School%20District.png?width=536&amp;height=100&amp;name=Davis%20School%20District.png" width="536" height="100" alt="" loading="lazy"></li>
-                <li><img src="https://delphi-me.com/hs-fs/hubfs/cropped-utva_pbk12_logo_rgb-1.webp?width=363&amp;height=100&amp;name=cropped-utva_pbk12_logo_rgb-1.webp" width="363" height="100" alt="" loading="lazy"></li>
-                <li><img src="https://delphi-me.com/hs-fs/hubfs/bakerwebacademylogo.webp?width=100&amp;height=100&amp;name=bakerwebacademylogo.webp" width="100" height="100" alt="" loading="lazy"></li>
-                <li><img src="https://delphi-me.com/hs-fs/hubfs/weblogo-e1668897946927.png?width=300&amp;height=100&amp;name=weblogo-e1668897946927.png" width="300" height="100" alt="" loading="lazy"></li>
-                <li><img src="https://delphi-me.com/hs-fs/hubfs/web_kelseypeak_logo.png?width=300&amp;height=100&amp;name=web_kelseypeak_logo.png" width="300" height="100" alt="" loading="lazy"></li>
-                <li><img src="https://delphi-me.com/hs-fs/hubfs/web_rockypeak_logo.png?width=300&amp;height=100&amp;name=web_rockypeak_logo.png" width="300" height="100" alt="" loading="lazy"></li>
-                <li><img src="https://delphi-me.com/hs-fs/hubfs/AHS.webp?width=182&amp;height=100&amp;name=AHS.webp" width="182" height="100" alt="" loading="lazy"></li>
-                <li><img src="mewalogo.gif" width="160" height="65" alt="" loading="lazy"></li>
-                <li><img src="https://delphi-me.com/hs-fs/hubfs/vpw_logo_no_motto.webp?width=159&amp;height=100&amp;name=vpw_logo_no_motto.webp" width="159" height="100" alt="" loading="lazy"></li>
-              </ul>
-            </div>
-          </div>
-          <button type="button" class="dl-logos__toggle" id="dl-logos-toggle"><span class="dl-logos__toggle-icon" aria-hidden="true"></span><span class="dl-logos__toggle-label">Pause logos</span></button>
-        </div>
-      </div>
-    </section>
-
-    <section class="dl-section dl-videos" id="videos" aria-labelledby="videos-heading">
-      <div class="dl-wrap">
-        <p class="dl-eyebrow">The full story</p>
-        <h2 class="dl-h2" id="videos-heading"><span class="dl-h2__plain">Hear it from educators</span> <em>Who use Delphinium every day.</em></h2>
-        <div class="dl-videos__grid">
-          <figure class="dl-vid dl-reveal">
-            <a class="dl-play" href="https://www.youtube.com/watch?v=Tp3IO0TzvM0" data-youtube="Tp3IO0TzvM0" data-title="Digital Learning and Curriculum Directors" aria-label="Play: Digital Learning and Curriculum Directors">
-              <img src="https://delphi-me.com/hs-fs/hubfs/directorthumb.png?width=960&amp;name=directorthumb.png" width="960" height="540" alt="" loading="lazy">
-            </a>
-            <figcaption><b>Digital Learning and Curriculum Directors</b></figcaption>
-          </figure>
-          <figure class="dl-vid dl-reveal">
-            <a class="dl-play" href="https://www.youtube.com/watch?v=3N0SXpFT36w" data-youtube="3N0SXpFT36w" data-title="Teachers and Instructional Coaches" aria-label="Play: Teachers and Instructional Coaches">
-              <img src="https://delphi-me.com/hs-fs/hubfs/teacherthumb.png?width=960&amp;name=teacherthumb.png" width="960" height="540" alt="" loading="lazy">
-            </a>
-            <figcaption><b>Teachers and Instructional Coaches</b></figcaption>
-          </figure>
+          <p class="dl-logos__lede">Trusted by institutions like yours.</p>
+          <ul class="dl-logos__list dl-logos__list--static">
+            <li><img src="assets/he/utah-state-university-logo.png" width="540" height="160" alt="Utah State University" loading="lazy"></li>
+            <li><img src="assets/he/university-of-tampa-logo.png" width="953" height="336" alt="The University of Tampa" loading="lazy"></li>
+            <li><img class="dl-logos__mark" src="assets/he/utah-valley-university.svg" width="511" height="444" alt="Utah Valley University" loading="lazy"></li>
+            <li><img src="https://delphi-me.com/hs-fs/hubfs/Rutgers_University_Newark_logotype.svg.png?width=1280&amp;height=405&amp;name=Rutgers_University_Newark_logotype.svg.png" width="1280" height="405" alt="Rutgers University-Newark" loading="lazy"></li>
+          </ul>
         </div>
       </div>
     </section>
@@ -3176,14 +3163,21 @@
         </div>
 
         <div class="dl-proof__results">
-          <article class="dl-card dl-proof__result dl-proof__result--davis dl-reveal" aria-labelledby="proof-study-heading">
-            <p class="dl-card__kicker" id="proof-study-heading">The Davis Connect study</p>
-            <div class="dl-proof__davis">
-              <p class="dl-card__num dl-card__num--green">31%</p>
-              <p class="dl-card__txt"><b>decrease in course failure rates</b>.</p>
-              <p class="dl-card__ctx">Davis School District, Utah. <b>72 online classes and 6,000 students.</b></p>
+          <article class="dl-card dl-proof__result dl-proof__result--study dl-reveal" aria-labelledby="proof-study-heading">
+            <p class="dl-card__kicker" id="proof-study-heading">The Utah Valley University study</p>
+            <div class="dl-proof__study">
+              <p class="dl-card__num dl-card__num--green">47%</p>
+              <p class="dl-card__txt"><b>fewer failures overall</b>.</p>
+              <p class="dl-card__ctx">Utah Valley University. <b>14 sections, about 420 students.</b></p>
             </div>
-            <p class="dl-proof__study-punch">The courses didn't change. The teachers didn't change. <b>Engagement did, and so did the outcomes.</b></p>
+            <div class="dl-proof__study-punch dl-proof__outcomes">
+              <p class="dl-proof__outcomes-label">In the study</p>
+              <ul class="dl-proof__outcomes-list">
+                <li><b>65%</b> <span>fewer failures for <span class="dl-nowrap">part-time</span> faculty</span></li>
+                <li><b>68%</b> <span>fewer withdrawals</span></li>
+                <li><b>66%</b> <span>fewer dropouts</span></li>
+              </ul>
+            </div>
           </article>
           <article class="dl-card dl-proof__result dl-proof__result--motivation dl-reveal">
             <p class="dl-card__kicker">More motivation</p>
@@ -3232,7 +3226,7 @@
                 <ul>
                   <li>Personalized outreach helps students feel seen and valued</li>
                   <li>Students feel the class moving around them and know they're not alone</li>
-                  <li>Teachers reach the right student at the right moment, before silence turns into withdrawal</li>
+                  <li>Faculty reach the right student at the right moment, before silence turns into withdrawal</li>
                 </ul>
               </div>
             </li>
@@ -3254,7 +3248,7 @@
     <section class="dl-section dl-how" aria-labelledby="how-heading">
       <div class="dl-wrap">
         <p class="dl-eyebrow" id="easy-to-deploy">Easy to deploy</p>
-        <h2 class="dl-h2" id="how-heading"><span class="dl-h2__plain">Teachers and content don't change,</span> <em>Engagement does.</em></h2>
+        <h2 class="dl-h2" id="how-heading"><span class="dl-h2__plain">Faculty and content don't change,</span> <em>Engagement does.</em></h2>
         <div class="dl-how__cards">
           <div class="dl-card dl-reveal">
             <span class="dl-how__icon" aria-hidden="true">
@@ -3268,7 +3262,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="m8 11 3 3 5-5"/><path d="M8 21h8"/></svg>
             </span>
             <h3>Zero learning curve</h3>
-            <p class="dl-card__txt">Teachers keep using Canvas exactly as before. Edits in Canvas flow through automatically. Teachers do not learn a new tool. And because every course shares the same layout, students can navigate all their classes with ease.</p>
+            <p class="dl-card__txt">Faculty keep using Canvas exactly as before. Edits in Canvas flow through automatically. Faculty do not learn a new tool. And because every course shares the same layout, students can navigate all their classes with ease.</p>
           </div>
         </div>
         <p class="dl-trust" aria-label="Platform notes">
@@ -3280,12 +3274,12 @@
         </p>
         <div class="dl-prod__more">
           <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
-          <a class="dl-link" href="https://www.youtube.com/watch?v=L90IoF6LGAE" data-youtube="L90IoF6LGAE" data-title="Watch: Integration is easy!" title="Watch: Integration is easy!">
+          <a class="dl-link" href="https://www.youtube.com/watch?v=U615qsZh8bc" data-youtube="U615qsZh8bc" data-title="Watch: Integration is easy!" title="Watch: Integration is easy!">
             <span class="dl-link__icon" aria-hidden="true"></span>
             Watch: Integration is easy!
           </a>
         </div>
-        <p class="dl-punch dl-reveal"><span class="dl-punch__setup">Your school already runs on Canvas</span> <span class="dl-punch__payoff">Make it work <em class="dl-punch__key">harder</em> for you</span></p>
+        <p class="dl-punch dl-reveal"><span class="dl-punch__setup">Your institution already runs on Canvas</span> <span class="dl-punch__payoff">Make it work <em class="dl-punch__key">harder</em> for you</span></p>
       </div>
     </section>
 
@@ -3350,8 +3344,8 @@
           <div class="dl-footer__aud">
             <p class="dl-footer__h" id="dl-footer-aud">My institution is</p>
             <ul class="dl-aud__seg" aria-labelledby="dl-footer-aud">
-              <li><a class="dl-aud__opt" href="homepage-sites-v5.html" data-aud="k12" aria-current="page">K-12</a></li>
-              <li><a class="dl-aud__opt" href="homepage-sites-v5-highered.html" data-aud="he">Higher Ed</a></li>
+              <li><a class="dl-aud__opt" href="homepage-sites-v5.html" data-aud="k12">K-12</a></li>
+              <li><a class="dl-aud__opt" href="homepage-sites-v5-highered.html" data-aud="he" aria-current="page">Higher Ed</a></li>
             </ul>
           </div>
         </div>
@@ -3361,7 +3355,6 @@
             <li><a href="#control-tower">Control Tower</a></li>
             <li><a href="#community-builder">Community Builder</a></li>
             <li><a href="#engagement-builder">Engagement Builder</a></li>
-            <li><a href="#customers">In Their Own Words</a></li>
             <li><a href="#proof-eyebrow">Proof</a></li>
             <li><a href="#easy-to-deploy">Easy to Deploy</a></li>
           </ul>
@@ -3406,9 +3399,7 @@
           <li>Chapman, J. R., &amp; Rich, P. J. (2018). <cite><a href="https://www.tandfonline.com/doi/full/10.1080/08832323.2018.1490687" target="_blank" rel="noopener noreferrer">Does educational gamification improve students' motivation? If so, which game elements work best?</a></cite> Journal of Education for Business, 93(7), 315&ndash;322.</li>
           <li>Chapman, J. R., &amp; Rich, P. J. (2017). <cite><a href="https://doi.org/10.24251/HICSS.2017.157" target="_blank" rel="noopener noreferrer">Identifying motivational styles in educational gamification.</a></cite> In Proceedings of the 50th Hawaii International Conference on System Sciences (pp. 1318&ndash;1327).</li>
           <li>Barrus, A., Chapman, J., Bodily, R., &amp; Rich, P. (2016). <cite>Using educational technologies to scaffold high school and college students' skill &amp; will to plan, practice, and produce.</cite> In L. Lin &amp; R. Atkinson (Eds.), Educational technologies: Challenges, applications and learning outcomes. Nova Science Publishers.</li>
-          <li>Cieslewicz, J., Helquist, J., Chapman, J. R., &amp; Baily, J. (submitted). <cite>Impact on student performance of automated messages used to increase student perception of instructor presence.</cite> Advances in Accounting Education.</li>
-          <li>Chapman, J. R., Odongo, G., Jacob, J., &amp; Hansen, R. (in preparation). <cite>Delphinium's impact on academic outcomes for students with Individualized Education Programs (IEPs).</cite> Manuscript in process.</li>
-        </ol>
+          <li>Cieslewicz, J., Helquist, J., Chapman, J. R., &amp; Baily, J. (submitted). <cite>Impact on student performance of automated messages used to increase student perception of instructor presence.</cite> Advances in Accounting Education.</li>        </ol>
         <div class="dl-research__foot">
           <p>See the research at work in your own Canvas courses.</p>
           <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-research-book>Schedule a demo</a>
@@ -3442,7 +3433,7 @@
               </div>
             </div>
             <div class="dl-contact__field">
-              <label class="dl-contact__label" for="dl-contact-org">School or organization <span class="dl-contact__opt">(optional)</span></label>
+              <label class="dl-contact__label" for="dl-contact-org">Institution or organization <span class="dl-contact__opt">(optional)</span></label>
               <input class="dl-contact__input" id="dl-contact-org" name="organization" type="text" autocomplete="organization" maxlength="200">
             </div>
             <div class="dl-contact__field">
@@ -4227,7 +4218,7 @@
         /* The Web-to-Case form has no name or organization field, so they lead the Description */
         function descriptionFor(d) {
           var lines = ["Name: " + d.name, "Email: " + d.email];
-          if (d.organization) lines.push("School or organization: " + d.organization);
+          if (d.organization) lines.push("Institution or organization: " + d.organization);
           lines.push("Sent from: " + window.location.href.split(/[?#]/)[0], "", d.message);
           return lines.join("\r\n");
         }
