@@ -2356,8 +2356,8 @@
       .dl-research__foot .dl-btn { width: 100%; }
     }
 
-    /* Contact modal: footer Contact link, email form */
-    .dl-modal--contact .dl-modal__box { width: min(100%, 600px); }
+    /* Contact modal: footer Contact link, Zoho Web-to-Contact form */
+    .dl-modal--contact .dl-modal__box { width: min(100%, 640px); }
     .dl-modal--contact .dl-modal__panel:focus { outline: none; }
     .dl-contact__intro { margin: 0.7rem 0 0; font-size: 1.05rem; line-height: 1.5; color: var(--ink-soft); }
     .dl-contact__form { display: grid; gap: 1.1rem; margin-top: 1.5rem; }
@@ -2401,6 +2401,29 @@
     .dl-contact__status a { color: inherit; font-weight: 700; text-decoration-thickness: 2px; text-underline-offset: 0.2em; }
     .dl-contact__status a:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; border-radius: 4px; }
     .dl-contact__done .dl-contact__intro { margin-bottom: 1.5rem; }
+    .dl-contact__captcha { display: flex; align-items: center; gap: 0.75rem 1rem; flex-wrap: wrap; }
+    .dl-contact__captcha img {
+      display: block;
+      height: 52px;
+      width: auto;
+      border-radius: 8px;
+      border: 1.5px solid rgba(43, 47, 126, 0.3);
+      background: var(--white);
+    }
+    .dl-contact__reload {
+      border: 0;
+      background: none;
+      padding: 0;
+      font-family: var(--font-text);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy);
+      text-decoration: underline;
+      text-underline-offset: 0.18em;
+      cursor: pointer;
+    }
+    .dl-contact__reload:hover { color: var(--accent); }
+    .dl-contact__reload:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; border-radius: 4px; }
     @media (max-width: 559px) {
       .dl-contact__row { grid-template-columns: 1fr; }
       .dl-contact__actions .dl-btn { width: 100%; }
@@ -3105,41 +3128,70 @@
         <div data-contact-view="form">
           <h2 class="dl-research__h" id="dl-contact-title">Get in <em>touch.</em></h2>
           <p class="dl-contact__intro">Send us a note and we'll get back to you.</p>
-          <form class="dl-contact__form" id="dl-contact-form" novalidate>
+          <!-- Production cutover: change the returnURL host to https://delphi-me.com (same path, ?contact=thanks). Update CONTACTCF3 if CRM issues a production source value. Zoho drops submissions whose return URL is not an allowed location for this webform. -->
+          <form class="dl-contact__form" id="webform3131408000003206001" name="WebToContacts3131408000003206001" action="https://crm.zoho.com/crm/WebToContactForm" method="POST" accept-charset="UTF-8" novalidate>
+            <input type="text" style="display:none;" name="xnQsjsdp" value="33c9e1be8d9da155f5e9aa42757034c32feaef519e3e812621a1ae4ea74a84b8">
+            <input type="hidden" name="zc_gad" id="zc_gad" value="">
+            <input type="text" style="display:none;" name="xmIwtLD" value="c80403ceb24b11a2e4bd4f20d1c093d25333ef1e65522ccadab1971163e8426b70642c2da599fc0b8b48822ba96d2c61">
+            <input type="text" style="display:none;" name="actionType" value="Q29udGFjdHM=">
+            <input type="text" style="display:none;" name="returnURL" id="dl-contact-return" value="https://delphinium-marketing-staging.zohosites.com/?contact=thanks">
+            <input type="text" style="display:none;" id="CONTACTCF3" name="CONTACTCF3" maxlength="100" value="Website Contact Us (staging)" autocomplete="off">
+            <input type="text" style="display:none;" name="aG9uZXlwb3Q" value="" autocomplete="off" tabindex="-1">
             <div class="dl-contact__row">
               <div class="dl-contact__field">
-                <label class="dl-contact__label" for="dl-contact-name">Name</label>
-                <input class="dl-contact__input" id="dl-contact-name" name="name" type="text" autocomplete="name" required maxlength="120" aria-describedby="dl-contact-name-err">
-                <p class="dl-contact__error" id="dl-contact-name-err" hidden></p>
+                <label class="dl-contact__label" for="First_Name">First Name</label>
+                <input class="dl-contact__input" id="First_Name" name="First Name" type="text" autocomplete="given-name" maxlength="40">
               </div>
               <div class="dl-contact__field">
-                <label class="dl-contact__label" for="dl-contact-email">Email</label>
-                <input class="dl-contact__input" id="dl-contact-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="200" aria-describedby="dl-contact-email-err">
+                <label class="dl-contact__label" for="Last_Name">Last Name</label>
+                <input class="dl-contact__input" id="Last_Name" name="Last Name" type="text" autocomplete="family-name" required maxlength="80" aria-required="true" aria-describedby="dl-contact-last-err">
+                <p class="dl-contact__error" id="dl-contact-last-err" hidden></p>
+              </div>
+            </div>
+            <div class="dl-contact__row">
+              <div class="dl-contact__field">
+                <label class="dl-contact__label" for="Email">Email</label>
+                <input class="dl-contact__input" id="Email" name="Email" type="email" ftype="email" autocomplete="email" inputmode="email" required maxlength="100" aria-required="true" aria-describedby="dl-contact-email-err">
                 <p class="dl-contact__error" id="dl-contact-email-err" hidden></p>
+              </div>
+              <div class="dl-contact__field">
+                <label class="dl-contact__label" for="Phone">Phone</label>
+                <input class="dl-contact__input" id="Phone" name="Phone" type="tel" autocomplete="tel" maxlength="50">
+              </div>
+            </div>
+            <div class="dl-contact__row">
+              <div class="dl-contact__field">
+                <label class="dl-contact__label" for="Account_Name">School or District</label>
+                <input class="dl-contact__input" id="Account_Name" name="Account Name" type="text" autocomplete="organization" required maxlength="100" aria-required="true" aria-describedby="dl-contact-account-err">
+                <p class="dl-contact__error" id="dl-contact-account-err" hidden></p>
+              </div>
+              <div class="dl-contact__field">
+                <label class="dl-contact__label" for="Title">Role</label>
+                <input class="dl-contact__input" id="Title" name="Title" type="text" autocomplete="organization-title" maxlength="100">
               </div>
             </div>
             <div class="dl-contact__field">
-              <label class="dl-contact__label" for="dl-contact-org">School or organization <span class="dl-contact__opt">(optional)</span></label>
-              <input class="dl-contact__input" id="dl-contact-org" name="organization" type="text" autocomplete="organization" maxlength="200">
+              <label class="dl-contact__label" for="Description">Message</label>
+              <textarea class="dl-contact__input" id="Description" name="Description" rows="5"></textarea>
             </div>
             <div class="dl-contact__field">
-              <label class="dl-contact__label" for="dl-contact-course">Canvas course URL <span class="dl-contact__opt">(optional)</span></label>
-              <input class="dl-contact__input" id="dl-contact-course" name="course" type="url" inputmode="url" autocomplete="off" maxlength="255" aria-describedby="dl-contact-course-hint">
+              <label class="dl-contact__label" for="CONTACTCF9">Canvas course URL <span class="dl-contact__opt">(optional)</span></label>
+              <input class="dl-contact__input" id="CONTACTCF9" name="CONTACTCF9" type="url" inputmode="url" autocomplete="off" maxlength="450" aria-describedby="dl-contact-course-hint">
               <p class="dl-contact__hint" id="dl-contact-course-hint">Only if your note is about a specific course.</p>
             </div>
             <div class="dl-contact__field">
-              <label class="dl-contact__label" for="dl-contact-message">Message</label>
-              <textarea class="dl-contact__input" id="dl-contact-message" name="message" rows="5" required maxlength="5000" aria-describedby="dl-contact-message-err"></textarea>
-              <p class="dl-contact__error" id="dl-contact-message-err" hidden></p>
+              <label class="dl-contact__label" id="reCaptchaField" for="captchaField3131408000003206001">Enter the Captcha</label>
+              <div class="dl-contact__captcha">
+                <img id="imgid3131408000003206001" alt="" width="150" height="52" src="https://crm.zoho.com/crm/CaptchaServlet?formId=c80403ceb24b11a2e4bd4f20d1c093d25333ef1e65522ccadab1971163e8426b70642c2da599fc0b8b48822ba96d2c61&amp;grpid=33c9e1be8d9da155f5e9aa42757034c32feaef519e3e812621a1ae4ea74a84b8">
+                <button type="button" class="dl-contact__reload" id="dl-contact-captcha-reload">Reload</button>
+              </div>
+              <input class="dl-contact__input" id="captchaField3131408000003206001" name="enterdigest" type="text" autocomplete="off" required maxlength="10" aria-required="true" aria-labelledby="reCaptchaField" aria-describedby="dl-contact-captcha-err">
+              <p class="dl-contact__error" id="dl-contact-captcha-err" hidden></p>
             </div>
-            <div class="dl-contact__hp" aria-hidden="true">
-              <label for="dl-contact-hp">Leave this field empty</label>
-              <input id="dl-contact-hp" name="hp_website" type="text" tabindex="-1" autocomplete="off">
-            </div>
-            <p class="dl-contact__status" id="dl-contact-status" hidden></p>
             <div class="dl-contact__actions">
               <button type="submit" class="dl-btn" id="dl-contact-submit">Send message</button>
             </div>
+            <script id="wf_anal" src="https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=e6cf426a1b37da6354c99ac270002ba34285a0482ac10e8190274419e2f2c06e1d9eed8c24d28f8bed53958d6c81ef67gid13736561e77b08558068e35f376b7d6cdef8533949b84b9344245212e3f4b42dgid8aa93383bb12627216370717c26654ee54f0cf44bd714cffb2819e5e65b23172gidb011005cc3334105e2b36274222ae8d69d0c1dfdc59f14ac96013c700d5b488e&amp;tw=ab483b9a89e964889c8c523422f1786b09aa5550dd387ecb2cdbf189f4fcd33b&amp;version=v2"></script>
           </form>
         </div>
         <div class="dl-contact__done" data-contact-view="done" hidden>
@@ -3147,20 +3199,6 @@
           <p class="dl-contact__intro">Your message was sent. We'll get back to you.</p>
           <button type="button" class="dl-btn" data-contact-close>Close</button>
         </div>
-        <!-- Zoho CRM Web-to-Case (HS Form Support Form, forms/support-form). Hidden values and field names must match Zoho's embed exactly. -->
-        <form id="dl-contact-zoho" action="https://crm.zoho.com/crm/WebToCaseForm" method="POST" enctype="multipart/form-data" accept-charset="UTF-8" target="dl-contact-sink" hidden>
-          <input type="hidden" name="xnQsjsdp" value="1f8d7fcca18df25fc546fad9c8f735dce6ccf43b83ec2c6b94c272c8b23d867c">
-          <input type="hidden" name="zc_gad" value="">
-          <input type="hidden" name="xmIwtLD" value="285411853c4f93d22801176ef3bc1315f4d05aa82dc24dae8c7b7527d9f6d9580368a477081438e5fd0ec995ea12341d">
-          <input type="hidden" name="actionType" value="Q2FzZXM=">
-          <input type="hidden" name="returnURL" value="null">
-          <input type="hidden" name="Email" value="">
-          <input type="hidden" name="Subject" value="">
-          <input type="hidden" name="CASECF2" value="">
-          <input type="hidden" name="Description" value="">
-          <input type="hidden" name="aG9uZXlwb3Q" value="">
-        </form>
-        <iframe name="dl-contact-sink" id="dl-contact-sink" title="Contact form submission" src="about:blank" tabindex="-1" aria-hidden="true" hidden></iframe>
         <p class="visually-hidden" id="dl-contact-live" aria-live="polite" role="status"></p>
       </div>
     </div>
@@ -3762,57 +3800,57 @@
         window.dlOpenResearch = dialog.open;
       })();
 
-      /* Contact modal: [data-contact-open] links, form creates a Zoho CRM Case */
+      /* Contact modal: real POST to Zoho CRM Web-to-Contact (captcha needs Zoho cookies; no CORS). */
       (function () {
-        /* Zoho's WebToCaseForm has no CORS, so the hidden #dl-contact-zoho form
-           posts into a hidden iframe and its load event means the POST finished.
-           The cross-origin response can't be read, so a Zoho-side rejection
-           still looks like success here. */
-        var CONTACT_EMAIL = "support@delphi-me.com";
-        var SEND_TIMEOUT_MS = 20000;
+        /* Production cutover: set this to "https://delphi-me.com".
+           The hidden returnURL in the form is the same origin plus /?contact=thanks.
+           CONTACTCF3 stays "Website Contact Us (staging)" until CRM changes that source value. */
+        var CONTACT_SITE_ORIGIN = "https://delphinium-marketing-staging.zohosites.com";
         var modal = document.getElementById("dl-contact-modal");
-        var form = document.getElementById("dl-contact-form");
-        var zoho = document.getElementById("dl-contact-zoho");
-        var sink = document.getElementById("dl-contact-sink");
-        if (!modal || !form || !zoho || !sink) return;
+        var form = document.getElementById("webform3131408000003206001");
+        if (!modal || !form) return;
         var formView = modal.querySelector('[data-contact-view="form"]');
         var doneView = modal.querySelector('[data-contact-view="done"]');
         var doneClose = doneView.querySelector("[data-contact-close]");
         var submitBtn = document.getElementById("dl-contact-submit");
-        var status = document.getElementById("dl-contact-status");
         var live = document.getElementById("dl-contact-live");
-        var nameEl = document.getElementById("dl-contact-name");
-        var emailEl = document.getElementById("dl-contact-email");
-        var orgEl = document.getElementById("dl-contact-org");
-        var courseEl = document.getElementById("dl-contact-course");
-        var messageEl = document.getElementById("dl-contact-message");
-        var honeyEl = document.getElementById("dl-contact-hp");
-        var required = [nameEl, emailEl, messageEl];
-        var sending = false;
-        var sendTimer = 0;
+        var returnEl = document.getElementById("dl-contact-return");
+        var captchaImg = document.getElementById("imgid3131408000003206001");
+        var lastEl = document.getElementById("Last_Name");
+        var emailEl = document.getElementById("Email");
+        var accountEl = document.getElementById("Account_Name");
+        var captchaEl = document.getElementById("captchaField3131408000003206001");
+        var checks = [
+          { el: lastEl, err: "dl-contact-last-err", empty: "Please enter your last name." },
+          { el: emailEl, err: "dl-contact-email-err", empty: "Please enter your email." },
+          { el: accountEl, err: "dl-contact-account-err", empty: "Please enter your school or district." },
+          { el: captchaEl, err: "dl-contact-captcha-err", empty: "Please enter the captcha." }
+        ];
+        var pendingThanks = false;
 
-        function problem(el) {
-          var v = el.value.trim();
-          if (el === nameEl) return v ? "" : "Please enter your name.";
-          if (el === emailEl) {
-            if (!v) return "Please enter your email.";
-            /* Zoho's own check needs a 2+ character ending after the last dot */
-            return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v) ? "" : "Please enter a valid email address.";
-          }
-          return v ? "" : "Please enter a message.";
+        returnEl.value = CONTACT_SITE_ORIGIN.replace(/\/$/, "") + "/?contact=thanks";
+
+        function problem(item) {
+          var v = item.el.value.trim();
+          if (!v) return item.empty;
+          if (item.el !== emailEl) return "";
+          var at = v.indexOf("@");
+          var dot = v.lastIndexOf(".");
+          if (at < 1 || dot < at + 2 || dot + 2 >= v.length) return "Please enter a valid email address.";
+          return "";
         }
 
-        function setError(el, text) {
-          var err = document.getElementById(el.id + "-err");
+        function setError(item, text) {
+          var err = document.getElementById(item.err);
           err.textContent = text;
           err.hidden = !text;
-          if (text) el.setAttribute("aria-invalid", "true");
-          else el.removeAttribute("aria-invalid");
+          if (text) item.el.setAttribute("aria-invalid", "true");
+          else item.el.removeAttribute("aria-invalid");
         }
 
-        function validate(el) {
-          var text = problem(el);
-          setError(el, text);
+        function validate(item) {
+          var text = problem(item);
+          setError(item, text);
           return !text;
         }
 
@@ -3821,160 +3859,80 @@
           window.setTimeout(function () { live.textContent = text; }, 60);
         }
 
-        function setSending(on) {
-          sending = on;
-          submitBtn.disabled = on;
-          submitBtn.textContent = on ? "Sending..." : "Send message";
-          form.setAttribute("aria-busy", on ? "true" : "false");
-        }
-
-        function hideStatus() {
-          status.hidden = true;
-          status.textContent = "";
-        }
-
-        function reset() {
-          form.reset();
-          required.forEach(function (el) { setError(el, ""); });
-          hideStatus();
-          live.textContent = "";
+        function showForm() {
           formView.hidden = false;
           doneView.hidden = true;
-        }
-
-        function values() {
-          return {
-            name: nameEl.value.trim(),
-            email: emailEl.value.trim(),
-            organization: orgEl.value.trim(),
-            course: courseEl.value.trim(),
-            message: messageEl.value.trim()
-          };
-        }
-
-        function subjectFor(d) {
-          return ("Website contact: " + d.name).slice(0, 300);
-        }
-
-        /* The Web-to-Case form has no name or organization field, so they lead the Description */
-        function descriptionFor(d) {
-          var lines = ["Name: " + d.name, "Email: " + d.email];
-          if (d.organization) lines.push("School or organization: " + d.organization);
-          lines.push("Sent from: " + window.location.href.split(/[?#]/)[0], "", d.message);
-          return lines.join("\r\n");
-        }
-
-        function setZoho(name, value) {
-          zoho.querySelector('input[name="' + name + '"]').value = value;
-        }
-
-        function fillZoho(d) {
-          setZoho("Email", d.email);
-          setZoho("Subject", subjectFor(d));
-          /* CASECF2 (course URL) is mandatory in Zoho; its own label says to type N/A */
-          setZoho("CASECF2", (d.course || "N/A").slice(0, 255));
-          setZoho("Description", descriptionFor(d));
-          setZoho("aG9uZXlwb3Q", "");
-        }
-
-        function clearZoho() {
-          ["Email", "Subject", "CASECF2", "Description"].forEach(function (n) { setZoho(n, ""); });
-        }
-
-        function mailtoHref(d) {
-          var lines = [d.message.replace(/\r?\n/g, "\r\n"), "", d.name, d.email];
-          if (d.organization) lines.push(d.organization);
-          if (d.course) lines.push(d.course);
-          var body = lines.join("\r\n");
-          /* Some mail clients cap mailto URLs near 2,000 characters */
-          if (body.length > 1500) body = body.slice(0, 1500) + "...";
-          return "mailto:" + CONTACT_EMAIL +
-            "?subject=" + encodeURIComponent(subjectFor(d)) +
-            "&body=" + encodeURIComponent(body);
         }
 
         function showDone() {
           formView.hidden = true;
           doneView.hidden = false;
           announce("Thanks for reaching out. Your message was sent.");
-          doneClose.focus();
         }
 
-        function showError(d) {
-          var msg = "Sorry, your message didn't send. Please try again, or ";
-          var link = document.createElement("a");
-          link.href = mailtoHref(d);
-          link.textContent = "email " + CONTACT_EMAIL + " directly";
-          status.textContent = msg;
-          status.appendChild(link);
-          status.appendChild(document.createTextNode("."));
-          status.hidden = false;
-          announce(msg + "email " + CONTACT_EMAIL + " directly.");
-          submitBtn.focus();
+        /* Same cache-bust as Zoho's reloadImg: a fresh CaptchaServlet image also refreshes the cookie. */
+        function reloadCaptcha() {
+          if (!captchaImg) return;
+          var src = captchaImg.src;
+          if (src.indexOf("&d") !== -1) captchaImg.src = src.substring(0, src.indexOf("&d")) + "&d" + new Date().getTime();
+          else captchaImg.src = src + "&d" + new Date().getTime();
+          captchaEl.value = "";
+          setError(checks[3], "");
         }
 
         var dialog = dlDialog(modal, {
           closeSelector: "[data-contact-close]",
           onOpen: function () {
-            if (!doneView.hidden) reset();
-            else hideStatus();
-            live.textContent = "";
+            if (pendingThanks) {
+              pendingThanks = false;
+              showDone();
+              return;
+            }
+            showForm();
+            reloadCaptcha();
           },
-          initialFocus: function () { return nameEl; }
+          initialFocus: function () { return doneView.hidden ? lastEl : doneClose; }
         });
 
-        required.forEach(function (el) {
-          el.addEventListener("blur", function () {
-            if (el.value.trim() || el.hasAttribute("aria-invalid")) validate(el);
+        checks.forEach(function (item) {
+          item.el.addEventListener("blur", function () {
+            if (item.el.value.trim() || item.el.hasAttribute("aria-invalid")) validate(item);
           });
-          el.addEventListener("input", function () {
-            if (el.hasAttribute("aria-invalid")) validate(el);
+          item.el.addEventListener("input", function () {
+            if (item.el.hasAttribute("aria-invalid")) validate(item);
           });
         });
+
+        document.getElementById("dl-contact-captcha-reload").addEventListener("click", reloadCaptcha);
 
         form.addEventListener("submit", function (e) {
-          e.preventDefault();
-          if (sending) return;
           var firstBad = null;
-          required.forEach(function (el) {
-            if (!validate(el) && !firstBad) firstBad = el;
+          checks.forEach(function (item) {
+            if (!validate(item) && !firstBad) firstBad = item.el;
           });
           if (firstBad) {
+            e.preventDefault();
             firstBad.focus();
             return;
           }
-          var d = values();
-          if (honeyEl.value) {
-            showDone();
-            return;
-          }
-          hideStatus();
-          if (navigator.onLine === false) {
-            showError(d);
-            return;
-          }
-          setSending(true);
-          fillZoho(d);
-          sendTimer = window.setTimeout(function () {
-            if (!sending) return;
-            setSending(false);
-            clearZoho();
-            showError(d);
-          }, SEND_TIMEOUT_MS);
-          zoho.submit();
-        });
-
-        sink.addEventListener("load", function () {
-          if (!sending) return;
-          window.clearTimeout(sendTimer);
-          setSending(false);
-          clearZoho();
-          showDone();
+          /* Valid fields: let the browser POST the form. Zoho redirects to returnURL on success.
+             A wrong captcha stays on Zoho's page, which an iframe cannot tell apart from success. */
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Sending...";
         });
 
         document.querySelectorAll("[data-contact-open]").forEach(function (el) {
           el.addEventListener("click", dialog.open);
         });
+
+        if (new URLSearchParams(window.location.search).get("contact") === "thanks") {
+          pendingThanks = true;
+          dialog.open();
+          var params = new URLSearchParams(window.location.search);
+          params.delete("contact");
+          var next = window.location.pathname + (params.toString() ? "?" + params.toString() : "") + window.location.hash;
+          history.replaceState(null, "", next);
+        }
 
         window.dlOpenContact = dialog.open;
       })();

@@ -2556,8 +2556,8 @@ main a,
       .dl-research__foot .dl-btn { width: 100%; }
     }
 
-    /* Contact modal: footer Contact link, email form */
-    .dl-modal--contact .dl-modal__box { width: min(100%, 600px); }
+    /* Contact modal: footer Contact link, Zoho Web-to-Contact form */
+    .dl-modal--contact .dl-modal__box { width: min(100%, 640px); }
     .dl-modal--contact .dl-modal__panel:focus { outline: none; }
     .dl-contact__intro { margin: 0.7rem 0 0; font-size: 1.05rem; line-height: 1.5; color: var(--ink-soft); }
     .dl-contact__form { display: grid; gap: 1.1rem; margin-top: 1.5rem; }
@@ -2601,6 +2601,29 @@ main a,
     .dl-contact__status a { color: inherit; font-weight: 700; text-decoration-thickness: 2px; text-underline-offset: 0.2em; }
     .dl-contact__status a:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; border-radius: 4px; }
     .dl-contact__done .dl-contact__intro { margin-bottom: 1.5rem; }
+    .dl-contact__captcha { display: flex; align-items: center; gap: 0.75rem 1rem; flex-wrap: wrap; }
+    .dl-contact__captcha img {
+      display: block;
+      height: 52px;
+      width: auto;
+      border-radius: 8px;
+      border: 1.5px solid rgba(43, 47, 126, 0.3);
+      background: var(--white);
+    }
+    .dl-contact__reload {
+      border: 0;
+      background: none;
+      padding: 0;
+      font-family: var(--font-text);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy);
+      text-decoration: underline;
+      text-underline-offset: 0.18em;
+      cursor: pointer;
+    }
+    .dl-contact__reload:hover { color: var(--accent); }
+    .dl-contact__reload:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; border-radius: 4px; }
     @media (max-width: 559px) {
       .dl-contact__row { grid-template-columns: 1fr; }
       .dl-contact__actions .dl-btn { width: 100%; }

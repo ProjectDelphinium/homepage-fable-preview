@@ -42,6 +42,8 @@ python3 tools/zoho/build_zoho_pack.py
 .dl-modal--book #dl-book-frame iframe { top: -222px; bottom: auto; height: calc(100% + 222px); }
 ```
 
+**Contact modal:** a real `<form method="POST">` to `https://crm.zoho.com/crm/WebToContactForm` (not fetch, not Web-to-Case). Hidden fields stay `xnQsjsdp`, `zc_gad`, `xmIwtLD`, `actionType`, `returnURL`, `CONTACTCF3` (`Website Contact Us (staging)`), and honeypot `aG9uZXlwb3Q` (empty). The captcha image is Zoho's CaptchaServlet, with Reload and `enterdigest`. A valid submit navigates the page. Zoho sends people back to `returnURL`, and `?contact=thanks` opens the thank-you state. An iframe cannot tell a captcha failure from success, so the form does not post into one. Production cutover: in `zoho-sites/homepage-sites-v5.html`, change `CONTACT_SITE_ORIGIN` and the `returnURL` host from `https://delphinium-marketing-staging.zohosites.com` to `https://delphi-me.com`, and update `CONTACTCF3` if CRM issues a production source value. Then rebuild.
+
 **Watch pills:** local `.dl-link:hover` stays cyan fill, navy-deep text, cyan border. The pack strips the native `title` attribute on `a[data-youtube]` and `a[data-mux]` so the browser tooltip does not repeat the visible label. `data-title` stays (the modal uses it). That strip is pack-only until Jared asks for it in source.
 
 **Close punch:** source now reads `Your school already runs on Canvas,` (trailing comma). Jared, 2026-09-28.
