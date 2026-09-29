@@ -52,6 +52,7 @@ Preview-only later: `powershell -ExecutionPolicy Bypass -File .\scripts\windows\
 
 - Point Cloud Agents at **ProjectDelphinium/homepage-fable-preview**.
 - Read `HANDOFF.md` first, then `context/BRIEF.md` and `context/SOURCE.md`.
+- Public site SEO/AEO/GEO: `docs/GEO-AEO-SEO.md`. Claims ceiling stays `context/SOURCE.md`. No fake reviews or schema.
 - Do **not** edit HubSpot, DNS, or production Zoho.
 - Full scroll-craft engine (if needed for tooling) lives on the agent box at `/workspace/scroll-craft/` — not vendored here.
 

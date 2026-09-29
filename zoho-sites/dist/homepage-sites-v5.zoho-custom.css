@@ -890,6 +890,24 @@ main a,
       color: var(--ink-soft);
     }
     .dl-hero__lead b { color: var(--ink); font-weight: 600; }
+    .dl-define {
+      margin: 1rem 0 0;
+      max-width: 46rem;
+      font-size: 1.05rem;
+      line-height: 1.5;
+      color: var(--ink);
+    }
+    .dl-define strong { font-weight: 700; }
+    .dl-faq h3 {
+      margin: 1.35rem 0 0.35rem;
+      font-size: 1.2rem;
+      line-height: 1.25;
+      color: var(--ink);
+    }
+    .dl-faq p { margin: 0; max-width: 42rem; color: var(--ink-soft); line-height: 1.5; }
+    .dl-faq p.dh { display: none; }
+    html.dl-path-he .dl-faq p.dk { display: none; }
+    html.dl-path-he .dl-faq p.dh { display: block; }
     .dl-hero__actions {
       display: flex;
       flex-wrap: wrap;

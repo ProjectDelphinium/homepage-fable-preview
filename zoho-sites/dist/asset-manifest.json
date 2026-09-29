@@ -8,6 +8,10 @@
   "new": "/dl28-message.png"
  },
  {
+  "old": "assets/canvas-module-before.svg",
+  "new": "/dl28-canvas-module-before.svg"
+ },
+ {
   "old": "mewalogo.gif",
   "new": "/dl28-mewalogo.gif"
  },
@@ -90,5 +94,9 @@
  {
   "old": "serverless@8daf637 stacks/react-admin/public/favicon.png",
   "new": "/dl28-favicon.png"
+ },
+ {
+  "old": "zoho-sites/assets/og-default.jpg",
+  "new": "/dl28-og-default.jpg"
  }
 ]
