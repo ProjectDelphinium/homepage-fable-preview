@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-29 — GEO / AEO / SEO pack
+- Header Code now emits Organization, WebSite, and SoftwareApplication JSON-LD, plus a Zoho-hosted Open Graph image. No SearchAction, ratings, or invented price.
+- Path script sets title and description per path. `/highered` no longer inherits the K-12 description. Home promises stay "up to 31%".
+- Visible "Delphinium is..." definition on the homepage (Higher Ed wording swaps with the existing path classes), plus a short SOURCE-only Q&A.
+- Rules live in `docs/GEO-AEO-SEO.md`. Not published to Zoho.
+
 ## 2026-09-05 — Fable 5.1 initial dump
 - Single-file homepage generated via Product Claude (`claude-fable-5-1`) from locked BRIEF/SOURCE packet
 - Hosted on GitHub Pages for sharing

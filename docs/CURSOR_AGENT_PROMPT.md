@@ -16,9 +16,10 @@ You are continuing the Delphinium public marketing homepage redesign.
 1. HANDOFF.md
 2. context/BRIEF.md
 3. context/SOURCE.md
-4. context/position-and-value-statements.md (if present)
-5. Current index.html
-6. docs/CHANGELOG.md
+4. docs/GEO-AEO-SEO.md (public site SEO / AEO / GEO; do not invent claims or reviews)
+5. context/position-and-value-statements.md (if present)
+6. Current index.html
+7. docs/CHANGELOG.md
 
 ## Story sequence (keep; framing NOT locked)
 Persuasive, not text-heavy. One idea per screen.
@@ -44,7 +45,7 @@ Prioritize:
 7. CTA → https://delphi-me.com/schedule-jared
 
 ## Constraints
-- Claims ceiling = context/SOURCE.md only
+- Claims ceiling = context/SOURCE.md only. Public SEO/AEO/GEO: `docs/GEO-AEO-SEO.md` (no fake reviews, no SearchAction, promises stay "up to 31%")
 - No "UC Davis"; spell Niederhauser / Dance correctly
 - No em dashes; no AI faces; no feature-card-grid / clay / 01-06 / gradient-text tells
 - Never publish quote pricing / SMS fees / quote dollars

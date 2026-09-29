@@ -25,6 +25,12 @@ CHROME = Path(__file__).resolve().parent / "zoho-chrome-hide.css"
 SAFETY = Path(__file__).resolve().parent / "safety-reset.css"
 CHAR_CAP = 44900
 LEAD_TYPO = "courses you already teach in into"
+SITE = "https://www.delphi-me.com"
+ORG_ID = SITE + "#organization"
+WEB_ID = SITE + "#website"
+APP_ID = SITE + "#delphinium"
+OG_IMAGE = SITE + "/dl28-og-default.jpg"
+OG_ALT = "Delphinium, the Canvas engagement layer from Delphi M.E. LLC."
 
 # Favicons copied from the Zoho-hosted files (serverless@8daf637
 # stacks/theme/assets/images/favicon.svg and
@@ -122,26 +128,117 @@ def style_inner(doc: str) -> str:
     return doc[start + len("<style>") : end]
 
 
+def seo_head() -> str:
+    """Sitewide JSON-LD and social image tags. Path titles live in the page script.
+
+    No SearchAction (no on-site search). No aggregateRating. No price (licensing
+    is a demo conversation, not a free app). No email until Jared publishes one.
+    Organization @ids match Zoho's #schemagenerator so the graphs can merge.
+    The path script removes that skeletal tag after it runs.
+    """
+    graph = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": ORG_ID,
+                "name": "Delphi M.E. LLC",
+                "legalName": "Delphi M.E. LLC",
+                "alternateName": ["Delphinium", "Delphi M.E."],
+                "url": SITE + "/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": SITE + "/dl28-logo-new.svg",
+                    "contentUrl": SITE + "/dl28-logo-new.svg",
+                },
+                "description": (
+                    "Delphi M.E. LLC builds Delphinium, the Canvas LMS engagement layer "
+                    "for online K-12 and Higher Ed Online programs."
+                ),
+                "sameAs": [
+                    "https://www.youtube.com/@DelphiniumEngage",
+                    "https://www.linkedin.com/company/78437190",
+                    "https://www.facebook.com/1502817329972174",
+                    "https://x.com/ProjDelphinium",
+                ],
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "sales",
+                    "url": SITE + "/contact-us",
+                },
+            },
+            {
+                "@type": "WebSite",
+                "@id": WEB_ID,
+                "name": "Delphinium",
+                "url": SITE + "/",
+                "description": "Canvas delivers content. Delphinium delivers engagement.",
+                "publisher": {"@id": ORG_ID},
+                "inLanguage": "en-US",
+            },
+            {
+                "@type": "SoftwareApplication",
+                "@id": APP_ID,
+                "name": "Delphinium",
+                "applicationCategory": "EducationalApplication",
+                "operatingSystem": "Web; Canvas LMS",
+                "url": SITE + "/",
+                "description": (
+                    "Delphinium is the Canvas engagement layer that turns existing Canvas "
+                    "courses into motivating student experiences and an early-warning system "
+                    "for teachers, typically in about three minutes, with no course migration."
+                ),
+                "brand": {"@id": ORG_ID},
+                "provider": {"@id": ORG_ID},
+                "offers": {
+                    "@type": "Offer",
+                    "url": "https://delphi-me.com/schedule-jared",
+                    "description": "Institutional licensing. Schedule a demo for pricing.",
+                },
+            },
+        ],
+    }
+    blob = json.dumps(graph, separators=(",", ":"), ensure_ascii=False)
+    if "SearchAction" in blob or "aggregateRating" in blob or '"price"' in blob or '"email"' in blob:
+        raise SystemExit("SEO graph includes a disallowed property")
+    return (
+        "<!--dl-seo-->"
+        f'<script type="application/ld+json" id="dl-seo">{blob}</script>'
+        '<meta property="og:site_name" content="Delphinium">'
+        f'<meta property="og:image" content="{OG_IMAGE}">'
+        '<meta property="og:image:width" content="1200">'
+        '<meta property="og:image:height" content="630">'
+        f'<meta property="og:image:alt" content="{OG_ALT}">'
+        '<meta name="twitter:card" content="summary_large_image">'
+        f'<meta name="twitter:image" content="{OG_IMAGE}">'
+        f'<meta name="twitter:image:alt" content="{OG_ALT}">'
+        "<!--/dl-seo-->"
+    )
+
+
+def inject_seo(doc: str) -> str:
+    if "id=\"dl-seo\"" in doc or "id='dl-seo'" in doc:
+        return doc
+    meta = re.search(r'<meta name="description"[^>]*>', doc)
+    if not meta:
+        raise SystemExit("description meta missing from source")
+    return doc[: meta.end()] + "\n" + seo_head() + doc[meta.end() :]
+
+
 def header_code(doc: str) -> str:
     title = re.search(r"<title>.*?</title>", doc, re.S)
-    meta = re.search(r'<meta name="description"[^>]*>', doc)
     preload = re.search(r'<link rel="preload"[^>]*>', doc)
-    if not (title and meta and preload):
-        raise SystemExit("title, description, or logo preload missing")
+    seo = re.search(r"<!--dl-seo-->.*?<!--/dl-seo-->", doc, re.S)
+    if not (title and preload and seo):
+        raise SystemExit("title, logo preload, or SEO block missing")
+    # Shared Header Code is pasted on every path. A static description here is
+    # what forced the K-12 string onto /highered. The path script sets one
+    # description per path and deletes duplicates. Zoho page SEO fields are the
+    # static copy crawlers see before JS (see zoho-sites/SEO.md).
     head_tail = doc.split("</style>", 1)[1].split("</head>", 1)[0]
     links = re.findall(r"<link\b[^>]*>|<script\b[^>]*>\s*</script>", head_tail)
     if not links:
         raise SystemExit("head links after the style block were not found")
-    desc = re.search(r'content="([^"]*)"', meta.group(0)).group(1)
-    title_text = re.search(r"<title>(.*?)</title>", title.group(0), re.S).group(1)
-    # \u00b7 keeps the middle dot as an ASCII escape, matching the staging header script.
-    title_js = title_text.replace("·", r"\u00b7")
-    setter = (
-        "<script>try{document.title=\"" + title_js + "\";"
-        "var m=document.querySelector('meta[name=\"description\"]');"
-        "if(!m){m=document.createElement('meta');m.name='description';document.head.appendChild(m);}"
-        "m.setAttribute('content',\"" + desc + "\");}catch(e){}</script>"
-    )
     body_start = doc.find('<a class="dl-skip"')
     if body_start < 0:
         body_start = doc.find('<div class="dl-top">')
@@ -149,7 +246,7 @@ def header_code(doc: str) -> str:
     if body_start < 0 or body_end < body_start:
         raise SystemExit("page body markers missing")
     body = doc[body_start : body_end + len("</script>")]
-    return "\n".join([title.group(0), meta.group(0), preload.group(0), *links]) + setter + body
+    return "\n".join([title.group(0), seo.group(0), preload.group(0), *links]) + body
 
 
 def keep_ws(src: str) -> str:
@@ -275,6 +372,41 @@ def assert_split(header: str, footer: str) -> None:
         raise SystemExit("contact or support form missing from Footer Code")
 
 
+def assert_seo(header: str, footer: str) -> None:
+    if 'id="dl-seo"' not in header:
+        raise SystemExit("JSON-LD missing from Header Code")
+    for banned in ("SearchAction", "aggregateRating", '"price"', '"email"'):
+        if banned in header[header.find("dl-seo") : header.find("</script>", header.find("dl-seo")) + 9]:
+            raise SystemExit("disallowed schema property in JSON-LD: " + banned)
+    if "EducationalApplication" not in header or "Delphi M.E. LLC" not in header:
+        raise SystemExit("Organization or SoftwareApplication schema incomplete")
+    if OG_IMAGE not in header or "summary_large_image" not in header:
+        raise SystemExit("og:image or twitter card missing from Header Code")
+    if re.search(r'<meta name="description"', header):
+        raise SystemExit("sitewide description meta is back in Header Code")
+    if "noindex" in header:
+        raise SystemExit("noindex leaked into Header Code")
+    he = "Delphinium is the Canvas engagement layer for Higher Ed Online programs."
+    if he not in header:
+        raise SystemExit("Higher Ed description missing from the path script")
+    if "Up to 31%" not in header:
+        raise SystemExit("K-12 promise line missing from the home description")
+    # The HE sentence must not carry the K-12 promise or an exact failure percent.
+    he_desc = header.split(he, 1)[1].split('"]', 1)[0]
+    if "31%" in he_desc or "K-12" in he_desc or "47%" in he_desc:
+        raise SystemExit("Higher Ed meta description inherited a K-12 or HE percent")
+    if 'id="dl-define"' not in header:
+        raise SystemExit("definition block missing from Header Code")
+    if "/dl28-canvas-module-before.svg" not in header:
+        raise SystemExit("Canvas before asset was not rewritten to /dl28-")
+    if header.count("<h1") != 1:
+        raise SystemExit("homepage Header Code should expose one h1; found %s" % header.count("<h1"))
+    if footer.count("<h1") != 2:
+        raise SystemExit("Footer Code should have the contact and support h1 only; found %s" % footer.count("<h1"))
+    if "raw.githubusercontent.com" in header or "raw.githubusercontent.com" in footer:
+        raise SystemExit("hotlinked asset still in the pack")
+
+
 def assert_cap(name: str, text: str) -> None:
     n = len(text)
     print(f"{name}: {n} chars")
@@ -285,13 +417,17 @@ def assert_cap(name: str, text: str) -> None:
 def main() -> int:
     src = SRC.read_text(encoding="utf-8")
     doc, manifest = transform_document(src)
+    doc = inject_seo(doc)
+    manifest.append({"old": "zoho-sites/assets/og-default.jpg", "new": "/dl28-og-default.jpg"})
     flag_copy(doc)
     css = custom_css(doc)
     header, footer = split_parts(header_code(doc))
     assert_split(header, footer)
+    assert_seo(header, footer)
     assert_cap("header", header)
     assert_cap("footer", footer)
     left = sorted(set(re.findall(r"https?://[^\"\s)']+\.(?:png|jpe?g|gif|svg|webp|woff2?)\b", doc)))
+    left = [u for u in left if not u.startswith(SITE + "/dl28-")]
     if left:
         print("external image urls still in the pack:", left, file=sys.stderr)
     DIST.mkdir(parents=True, exist_ok=True)
