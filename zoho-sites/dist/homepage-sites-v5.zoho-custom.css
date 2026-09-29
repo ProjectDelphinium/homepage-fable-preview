@@ -401,6 +401,66 @@ main a,
       overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
     }
 
+    /* K-12 | Higher Ed switch: label + pill just right of the logo in the header bar (720px+), full width at the top of the mobile menu below that. Real links to / and /highered; the script after .dl-top sets aria-current. */
+    .dl-aud { display: flex; flex: none; align-items: center; gap: 0.6rem; }
+    .dl-aud__label {
+      margin: 0;
+      font-family: var(--font-text);
+      font-size: 0.85rem;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--ink-soft);
+      white-space: nowrap;
+    }
+    .dl-aud__seg {
+      display: inline-flex;
+      gap: 2px;
+      margin: 0;
+      padding: 3px;
+      list-style: none;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--navy) 4%, transparent);
+      box-shadow: inset 0 0 0 1px var(--line);
+    }
+    .dl-aud__seg li { display: flex; flex: 1 1 0; }
+    .dl-aud__opt {
+      flex: 1 1 auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2rem;
+      padding: 0.2rem 0.85rem;
+      border-radius: 999px;
+      font-family: var(--font-text);
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.1;
+      color: var(--ink-soft);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .dl-aud__opt:hover { color: var(--navy); background: color-mix(in srgb, var(--navy) 8%, transparent); }
+    .dl-aud__opt[aria-current="page"],
+    .dl-aud__opt[aria-current="page"]:hover {
+      color: #fff;
+      background: var(--navy);
+      font-weight: 700;
+      cursor: default;
+    }
+    .dl-aud__opt:focus-visible { outline: 3px solid var(--dl-focus); outline-offset: 2px; }
+    @media (prefers-reduced-motion: no-preference) {
+      .dl-aud__opt { transition: background-color 150ms ease, color 150ms ease; }
+    }
+    /* Header: the group sits at the left of the bar; the section links and CTA stay right */
+    .dl-nav > .dl-aud { margin-right: auto; }
+    /* Too tight for the label beside the full nav (980-1079) or beside the CTA and menu button (720-799): the header shows the pill alone */
+    @media (max-width: 799.98px), (min-width: 980px) and (max-width: 1079.98px) {
+      .dl-nav > .dl-aud .dl-aud__label { display: none; }
+    }
+    @media (max-width: 719.98px) {
+      .dl-nav > .dl-aud { display: none; }
+    }
+
     .dl-top {
       --dl-logo-w: 140px;
       --dl-logo-top: 0.75rem;
@@ -623,6 +683,12 @@ main a,
     .dl-mnav__list a:not(.dl-btn):hover { color: var(--accent); }
     .dl-mnav__cta { display: none; padding-top: 0.75rem; }
     .dl-mnav__cta .dl-btn { width: 100%; min-height: 2.75rem; }
+    .dl-mnav__aud { flex-direction: column; align-items: stretch; gap: 0.45rem; margin: 0 0 0.6rem; padding-bottom: 0.9rem; border-bottom: 1px solid var(--line); }
+    .dl-mnav__aud .dl-aud__seg { display: flex; width: 100%; }
+    .dl-mnav__aud .dl-aud__opt { min-height: 2.75rem; font-family: var(--font-display); font-size: 1.05rem; }
+    @media (min-width: 720px) {
+      .dl-mnav__aud { display: none; }
+    }
     .dl-mnav__scrim {
       position: fixed;
       inset: 0;
@@ -891,6 +957,24 @@ main a,
       color: var(--ink-soft);
     }
     .dl-hero__lead b { color: var(--ink); font-weight: 600; }
+    .dl-define {
+      margin: 1rem 0 0;
+      max-width: 46rem;
+      font-size: 1.05rem;
+      line-height: 1.5;
+      color: var(--ink);
+    }
+    .dl-define strong { font-weight: 700; }
+    .dl-faq h3 {
+      margin: 1.35rem 0 0.35rem;
+      font-size: 1.2rem;
+      line-height: 1.25;
+      color: var(--ink);
+    }
+    .dl-faq p { margin: 0; max-width: 42rem; color: var(--ink-soft); line-height: 1.5; }
+    .dl-faq p.dh { display: none; }
+    html.dl-path-he .dl-faq p.dk { display: none; }
+    html.dl-path-he .dl-faq p.dh { display: block; }
     .dl-hero__actions {
       display: flex;
       flex-wrap: wrap;

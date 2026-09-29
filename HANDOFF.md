@@ -54,6 +54,7 @@ Improve craft, motion, mobile, uniqueness, and fidelity to BRIEF — do not rest
 |------|------|
 | `context/BRIEF.md` | Scroll journey, peak stack, vibe, grammar notes, parent beats, hard nos |
 | `context/SOURCE.md` | **Claims ceiling** — do not strengthen |
+| `docs/GEO-AEO-SEO.md` | Public-site SEO / AEO / GEO. Claims still stop at SOURCE. No fake reviews or schema. |
 | `context/position-and-value-statements.md` | Position + ranked value statements |
 | `context/delphinium-marketing-synthesis.md` | Full marketing reference |
 | `context/marketing-positioning-grounding.md` | Grounding index |
@@ -93,6 +94,7 @@ personal, fun, a little quirky, approachable, yet cutting-edge · playful-premiu
 
 - “It’s the site where…” framing Delphinium as the marketing website
 - Inventing stats, customers, dollars, testimonials, parent NPS / “parents are happy” as a measured %
+- Fake reviews, star ratings, or SearchAction schema. Public SEO/AEO/GEO follows `docs/GEO-AEO-SEO.md`.
 - “UC Davis”; “up to 31%” used wrong; name typos Neuser/Dan (use **Niederhauser** / **Dance**)
 - Public “Delphinium changes what the student does” unless Jared OKs
 - Unnamed competitor wedge / attacking Canvas
