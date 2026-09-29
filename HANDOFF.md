@@ -186,3 +186,6 @@ Reset to Sites v2 and rebuilt on the prospectus arc: `zoho-sites/homepage-sites-
 
 ## Marketing 2026-09-06
 Fold #social-media-marketing feedback: cut repetition; Makeover centerpiece; one question/section + Learn more YT; one-page takeaway; CTA subline about meeting Jared. See context/BRIEF.md and position-and-value §7.
+
+## Body copy 2026-09-29
+Jared: keep the technical GEO/AEO/SEO pack (path titles, JSON-LD, Open Graph). Do not rewrite the visible hero or story. No "Delphinium is..." line in the hero. Davis proof context stays the pre-SEO line. A compact SOURCE-only Q&A may sit after the close CTA, above the footer. No FAQPage schema.

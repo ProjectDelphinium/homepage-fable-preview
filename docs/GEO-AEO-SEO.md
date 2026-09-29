@@ -40,10 +40,10 @@ Built by `python3 tools/zoho/build_zoho_pack.py`. Header Code gets the JSON-LD a
 | Path title + description | Path script | Home and `/home` keep the K-12 description with **up to 31%**. `/highered` uses the Higher Ed percents with **as much as** (47% / 67% / 65%) and the dropout definition. It does not use the Davis 31%. Contact, support, EULA, and purchase agreement get short titles and descriptions. The script also updates `og:title`, `og:description`, `og:url`, and the matching Twitter fields, deletes extra description tags, and removes a `keywords` meta. |
 | No sitewide description meta in Header Code | Build | A static K-12 `<meta name="description">` in the shared header is what crawlers saw on `/highered`. Do not put it back. |
 | `og:image` + `twitter:card=summary_large_image` | Header Code, static | `https://www.delphi-me.com/dl28-og-default.jpg` (1200×630). Source file: `zoho-sites/assets/og-default.jpg`. Absolute Zoho URL. Not a GitHub hotlink. |
-| Definition | Homepage hero, `#dl-define` | “Delphinium is…” with K-12 / Higher Ed wording via the existing `.dk` / `.dh` swap. |
-| One visible H1 | `dl-path-*` | Hero H1 on `/`, `/home`, and `/highered`. Contact and support each have one H1. Thank-you lines are paragraphs, not a second H1. |
-| Visible Q&A | `#dl-faq` | Three SOURCE-only answers. No FAQPage schema (rich results are retired; markup must match visible text and costs header budget). |
-| Davis proof line | K-12 proof card | Exact **31%** stays next to Davis Connect, 72 classes, 6,000 students, same courses, teachers, and content. |
+| Hero and story body | Homepage | Pre-#25 wording. No “Delphinium is…” line under the hero (Jared, 2026-09-29). Do not rewrite the Makeover, case, or proof story to add a definition. |
+| One visible H1 | `dl-path-*` | Hero H1 on `/`, `/home`, and `/highered`. Contact and support each have one H1. Thank-you lines are paragraphs, not a second H1. Q&A uses h2 and h3. |
+| Visible Q&A | `#dl-faq`, last block inside the homepage main | After the close CTA, above the footer. Three SOURCE-only answers. K-12 answer cites Davis and exact 31% with study context. `/highered` swaps to as much as 47% / 67% / 65% plus the dropout definition. No FAQPage schema. |
+| Davis proof line | K-12 proof card | Restored pre-#25 line: Davis School District, Utah; 72 online classes and 6,000 students. The kicker is still “The Davis Connect study” and the figure is still exact **31%**. The fuller study sentence (same courses, teachers, and content) lives in the K-12 Q&A, not in the proof card. |
 
 ---
 
@@ -82,10 +82,10 @@ Do not add FAQPage until a visible FAQ is approved to match character for charac
 
 | Claim | Allowed framing | Where |
 | --- | --- | --- |
-| K-12 course failure | Exact **31%** only with Davis Connect named and the study context (72 classes, 6,000 students, same courses, teachers, and content). Promises, CTAs, and meta: **up to 31%**. | Proof card and the K-12 Q&A use the exact study sentence. Hero and home meta use “up to 31%”. |
+| K-12 course failure | Exact **31%** only with Davis Connect named and the study context (72 classes, 6,000 students, same courses, teachers, and content). Promises, CTAs, and meta: **up to 31%**. | Proof card keeps the pre-#25 context line under the Davis Connect kicker and exact 31%. The K-12 Q&A carries the full study sentence. Hero and home meta use “up to 31%”. |
 | Motivation | **72%** more / much more motivating; open word **Fun**. | Existing proof cards. Tiffany Dance and Natalie Niederhauser stay spelled that way. |
 | HE failure / withdrawal / dropout | **as much as 47% / 67% / 65%**, only on Higher Ed surfaces, with the dropout definition (finished with less than about a third of the points). | HE proof, the HE Q&A answer, and the `/highered` meta description. |
-| Names | Product = **Delphinium**. Legal publisher = **Delphi M.E. LLC**. Short company = **Delphi M.E.** Never treat “Delphi” alone as the product. Canvas is Instructure’s LMS. | Definition block opens with “Delphinium is…” |
+| Names | Product = **Delphinium**. Legal publisher = **Delphi M.E. LLC**. Short company = **Delphi M.E.** Never treat “Delphi” alone as the product. Canvas is Instructure’s LMS. | Schema and meta. Do not add a visible “Delphinium is…” line to the hero. |
 
 Never: UC Davis; Davis as the homepage logo or primary brand face; “Results like a 31%”; fake stars; invented customers, dollars, or security badges.
 
@@ -96,6 +96,7 @@ Never: UC Davis; Davis as the homepage logo or primary brand face; “Results li
 - Public contact email is `support@delphi-me.com`. It is on Organization and on `contactPoint`.
 - YouTube `sameAs` stays `https://www.youtube.com/@DelphiniumEngage`. `@DelphiniumEngagement` is not the channel.
 - `/highered` meta description includes as much as 47% / 67% / 65% and the dropout definition. Home meta stays “up to 31%”.
+- Later the same day: keep this technical pack. Do not rewrite the visible hero or story body. The “Delphinium is…” line stays off the page. The Davis proof card stays on the pre-#25 wording. A compact SOURCE-only Q&A sits after the close CTA, above the footer. No FAQPage schema.
 
 ## 7. Still open (optional)
 
@@ -127,7 +128,7 @@ Never: UC Davis; Davis as the homepage logo or primary brand face; “Results li
 | --- | --- |
 | `docs/GEO-AEO-SEO.md` | This file. Agents follow it. |
 | `zoho-sites/SEO.md` | Publish checklist: char budget, files to upload, Zoho page SEO strings. |
-| `zoho-sites/homepage-sites-v5.html` | Definition, Q&A, path script, single-H1 markup. |
+| `zoho-sites/homepage-sites-v5.html` | Pre-#25 story body, Q&A above the footer, path script, single-H1 markup. |
 | `tools/zoho/build_zoho_pack.py` | Emits JSON-LD and OG/Twitter image tags. Asserts the char cap and the HE description. |
 | `zoho-sites/dist/` | Built header, footer, CSS. Rebuild; do not hand-edit. |
 | `zoho-sites/assets/og-default.jpg` | 1200×630 image. Upload as `/dl28-og-default.jpg` before a Zoho publish. |

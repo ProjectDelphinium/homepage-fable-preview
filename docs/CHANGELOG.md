@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-09-29 — Restore pre-SEO body copy
+- Jared: keep the GEO/AEO/SEO technical pack. Remove the hero "Delphinium is..." line. Restore the Davis proof context line to the pre-#25 wording (Davis School District, Utah; 72 online classes and 6,000 students).
+- SOURCE-only Q&A moved to the end of the homepage, after the close CTA and above the footer. K-12 cites Davis and exact 31%. `/highered` uses as much as 47% / 67% / 65% and the dropout definition. No FAQPage schema. Q&A headings are not H1.
+
 ## 2026-09-29 — Jared's SEO answers
 - Organization JSON-LD email is support@delphi-me.com.
 - YouTube sameAs stays https://www.youtube.com/@DelphiniumEngage.
