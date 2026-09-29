@@ -409,8 +409,9 @@
       background: var(--accent);
       flex: none;
     }
-    /* Nav links target eyebrows directly; 4rem on top of the html scroll-padding matches where section-level anchors like #customers land their eyebrow */
+    /* Nav links target eyebrows directly, 4rem below the html scroll-padding; #customers is a section anchor, so offset its padding to land its eyebrow at the same 4rem */
     .dl-eyebrow[id] { scroll-margin-top: 4rem; }
+    #customers { scroll-margin-top: calc(4rem - clamp(4rem, 9vw, 7rem)); }
     .dl-h2 {
       margin: 0;
       font-size: clamp(1.9rem, 4.2vw, 3rem);
@@ -1337,7 +1338,6 @@
       display: grid;
       gap: 2rem;
       align-items: center;
-      padding-top: clamp(3rem, 7vw, 5.5rem);
     }
     @media (min-width: 960px) {
       .dl-prod { grid-template-columns: 0.9fr 1.1fr; gap: clamp(2.5rem, 5vw, 4.5rem); }
@@ -1695,6 +1695,8 @@
         margin-top: calc(-0.25rem - 20px - 3.5in);
         margin-bottom: calc(-2.25in);
       }
+      /* The pulled-up quote leaves row 3 empty; drop its leading row gap so the section ends at the detail card */
+      #product .dl-prod { margin-bottom: calc(-1 * clamp(2.5rem, 5vw, 4.5rem)); }
     }
     @media (max-width: 959px) {
       /* Stacked CT: a fixed quote width sizes the single grid track past the viewport; pull-up margins assume the desktop rows */
@@ -1919,7 +1921,6 @@
     .dl-vid figcaption span { font-size: 0.95rem; color: var(--ink-soft); }
     /* Logo bar (carousel) */
     .dl-logos-section {
-      padding-block: clamp(2.5rem, 5vw, 4rem);
       background: var(--lav);
       border-block: 1px solid var(--line);
     }
@@ -1957,44 +1958,44 @@
     .dl-logos.is-paused .dl-logos__track {
       animation-play-state: paused;
     }
+    /* Room for the 3px + 3px focus ring inside .dl-logos overflow */
     .dl-logos__toggle {
-      display: inline-flex;
+      display: flex;
       align-items: center;
-      gap: 0.5rem;
-      min-height: 2.75rem;
-      margin-top: 1rem;
-      padding: 0.45rem 1rem 0.45rem 0.8rem;
-      border: 1.5px solid var(--navy);
-      border-radius: 999px;
+      justify-content: center;
+      width: 1.75rem;
+      height: 1.75rem;
+      margin: 0.75rem 0.375rem 0.375rem auto;
+      padding: 0;
+      border: 1px solid color-mix(in srgb, var(--navy) 55%, transparent);
+      border-radius: 50%;
       background: transparent;
-      color: var(--navy);
-      font-family: inherit;
-      font-size: 0.95rem;
-      font-weight: 600;
-      line-height: 1.1;
+      color: var(--ink-soft);
       cursor: pointer;
     }
-    .dl-logos__toggle:hover { background: var(--navy); color: #fff; }
+    .dl-logos__toggle:hover,
+    .dl-logos__toggle:focus-visible { border-color: var(--navy); background: #fff; color: var(--navy); }
     html:not(.js) .dl-logos__toggle { display: none; }
-    .dl-logos__toggle-icon { position: relative; width: 0.75rem; height: 0.8rem; flex: none; }
+    .dl-logos__toggle-icon { position: relative; width: 0.625rem; height: 0.6875rem; flex: none; }
     .dl-logos__toggle-icon::before,
     .dl-logos__toggle-icon::after {
       content: "";
       position: absolute;
       top: 0;
       bottom: 0;
-      width: 0.25rem;
+      width: 0.1875rem;
       border-radius: 1px;
       background: currentColor;
     }
     .dl-logos__toggle-icon::before { left: 0; }
     .dl-logos__toggle-icon::after { right: 0; }
     .dl-logos.is-paused .dl-logos__toggle-icon::before {
+      left: 0.125rem;
       width: 0;
       height: 0;
       border-radius: 0;
       border-style: solid;
-      border-width: 0.4rem 0 0.4rem 0.7rem;
+      border-width: 0.34375rem 0 0.34375rem 0.5625rem;
       border-color: transparent transparent transparent currentColor;
       background: none;
     }
@@ -2047,7 +2048,7 @@
 
     /* Close */
     .dl-close {
-      padding: 0 0 clamp(3.5rem, 7vw, 5.5rem);
+      padding-top: 0;
       background: var(--paper);
     }
     .dl-close__stage {
@@ -2634,6 +2635,8 @@
     html.dl-path-he .dl-k12,
     html.dl-path-he a[href="#customers"],
     html.dl-path-he li:has(> a[href="#customers"]) { display: none; }
+    /* With the logo strip gone, Engagement and Videos share the paper background: one section gap between them, as with How and Close */
+    html.dl-path-he .dl-videos { padding-top: 0; }
     .dh { display: none; }
     html.dl-path-he .dk { display: none; }
     html.dl-path-he .dh { display: inline; }
@@ -2832,9 +2835,9 @@
       </div>
     </section>
 
-    <section class="dl-section dl-products dl-products--ct" id="product" aria-labelledby="core-heading" style="padding-block:clamp(3rem,6vw,5rem);">
+    <section class="dl-section dl-products dl-products--ct" id="product" aria-labelledby="core-heading">
       <div class="dl-wrap">
-        <article class="dl-prod" aria-labelledby="core-heading" style="padding-top:0;">
+        <article class="dl-prod" aria-labelledby="core-heading">
           <div class="dl-prod__copy dl-reveal">
             <p class="dl-eyebrow" id="control-tower">Control Tower</p>
             <h2 class="dl-h2" id="core-heading"><span class="dl-h2__plain">See everything,</span> <em>Act in seconds.</em></h2>
@@ -2871,7 +2874,7 @@
       </div>
     </section>
 
-    <section class="dl-section dl-products" id="community" aria-labelledby="cb-heading" style="padding-block:clamp(3rem,6vw,5rem);">
+    <section class="dl-section dl-products" id="community" aria-labelledby="cb-heading">
       <div class="dl-wrap">
         <article class="dl-prod" aria-labelledby="cb-heading">
           <div class="dl-reveal">
@@ -3030,9 +3033,9 @@
       </div>
     </section>
 
-    <section class="dl-section dl-products dl-products--eb" id="engagement" aria-labelledby="eb-heading" style="padding-block:clamp(3rem,6vw,5rem);">
+    <section class="dl-section dl-products dl-products--eb" id="engagement" aria-labelledby="eb-heading">
       <div class="dl-wrap">
-        <article class="dl-prod dl-prod--wide" aria-labelledby="eb-heading" style="padding-top:0;">
+        <article class="dl-prod dl-prod--wide" aria-labelledby="eb-heading">
           <div class="dl-eb-copy dl-reveal">
             <h2 class="dl-h2" id="eb-heading"><span class="dl-h2__plain">Nobody quits</span> <span class="dl-h2__line2">when <em>they're winning.</em></span></h2>
             <p class="dl-prod__sub">Every app on a student's phone is designed to capture their attention. Delphinium brings that same science of engagement into Canvas, so students build toward mastery instead of watching their grade slip away. Those apps took years to build. <b>Adding Delphinium only takes minutes.</b></p>
@@ -3105,7 +3108,7 @@
               </ul>
             </div>
           </div>
-          <button type="button" class="dl-logos__toggle" id="dl-logos-toggle"><span class="dl-logos__toggle-icon" aria-hidden="true"></span><span class="dl-logos__toggle-label">Pause logos</span></button>
+          <button type="button" class="dl-logos__toggle" id="dl-logos-toggle" aria-label="Pause logos" title="Pause logos"><span class="dl-logos__toggle-icon" aria-hidden="true"></span></button>
         </div>
       </div>
     </section>
@@ -3755,10 +3758,10 @@
         var logos = document.querySelector(".dl-logos");
         var toggle = document.getElementById("dl-logos-toggle");
         if (!logos || !toggle) return;
-        var label = toggle.querySelector(".dl-logos__toggle-label");
         toggle.addEventListener("click", function () {
-          var paused = logos.classList.toggle("is-paused");
-          label.textContent = paused ? "Play logos" : "Pause logos";
+          var label = logos.classList.toggle("is-paused") ? "Play logos" : "Pause logos";
+          toggle.setAttribute("aria-label", label);
+          toggle.title = label;
         });
       })();
 
