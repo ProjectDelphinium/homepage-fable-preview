@@ -132,7 +132,7 @@ def seo_head() -> str:
     """Sitewide JSON-LD and social image tags. Path titles live in the page script.
 
     No SearchAction (no on-site search). No aggregateRating. No price (licensing
-    is a demo conversation, not a free app). No email until Jared publishes one.
+    is a demo conversation, not a free app). Public email is support@delphi-me.com.
     Organization @ids match Zoho's #schemagenerator so the graphs can merge.
     The path script removes that skeletal tag after it runs.
     """
@@ -155,6 +155,7 @@ def seo_head() -> str:
                     "Delphi M.E. LLC builds Delphinium, the Canvas LMS engagement layer "
                     "for online K-12 and Higher Ed Online programs."
                 ),
+                "email": "support@delphi-me.com",
                 "sameAs": [
                     "https://www.youtube.com/@DelphiniumEngage",
                     "https://www.linkedin.com/company/78437190",
@@ -164,6 +165,7 @@ def seo_head() -> str:
                 "contactPoint": {
                     "@type": "ContactPoint",
                     "contactType": "sales",
+                    "email": "support@delphi-me.com",
                     "url": SITE + "/contact-us",
                 },
             },
@@ -199,8 +201,12 @@ def seo_head() -> str:
         ],
     }
     blob = json.dumps(graph, separators=(",", ":"), ensure_ascii=False)
-    if "SearchAction" in blob or "aggregateRating" in blob or '"price"' in blob or '"email"' in blob:
+    if "SearchAction" in blob or "aggregateRating" in blob or '"price"' in blob:
         raise SystemExit("SEO graph includes a disallowed property")
+    if blob.count("support@delphi-me.com") < 2:
+        raise SystemExit("public contact email missing from Organization schema")
+    if "youtube.com/@DelphiniumEngagement" in blob:
+        raise SystemExit("YouTube sameAs must stay @DelphiniumEngage")
     return (
         "<!--dl-seo-->"
         f'<script type="application/ld+json" id="dl-seo">{blob}</script>'
@@ -375,9 +381,14 @@ def assert_split(header: str, footer: str) -> None:
 def assert_seo(header: str, footer: str) -> None:
     if 'id="dl-seo"' not in header:
         raise SystemExit("JSON-LD missing from Header Code")
-    for banned in ("SearchAction", "aggregateRating", '"price"', '"email"'):
-        if banned in header[header.find("dl-seo") : header.find("</script>", header.find("dl-seo")) + 9]:
+    ld = header[header.find("dl-seo") : header.find("</script>", header.find("dl-seo")) + 9]
+    for banned in ("SearchAction", "aggregateRating", '"price"'):
+        if banned in ld:
             raise SystemExit("disallowed schema property in JSON-LD: " + banned)
+    if ld.count("support@delphi-me.com") < 2:
+        raise SystemExit("support@delphi-me.com missing from Organization JSON-LD")
+    if "@DelphiniumEngagement" in ld:
+        raise SystemExit("YouTube sameAs must stay @DelphiniumEngage")
     if "EducationalApplication" not in header or "Delphi M.E. LLC" not in header:
         raise SystemExit("Organization or SoftwareApplication schema incomplete")
     if OG_IMAGE not in header or "summary_large_image" not in header:
@@ -391,10 +402,13 @@ def assert_seo(header: str, footer: str) -> None:
         raise SystemExit("Higher Ed description missing from the path script")
     if "Up to 31%" not in header:
         raise SystemExit("K-12 promise line missing from the home description")
-    # The HE sentence must not carry the K-12 promise or an exact failure percent.
+    # HE meta may cite the SOURCE percents. It must not cite the K-12 Davis 31%.
     he_desc = header.split(he, 1)[1].split('"]', 1)[0]
-    if "31%" in he_desc or "K-12" in he_desc or "47%" in he_desc:
-        raise SystemExit("Higher Ed meta description inherited a K-12 or HE percent")
+    if "31%" in he_desc or "K-12" in he_desc:
+        raise SystemExit("Higher Ed meta description inherited the K-12 promise")
+    for bit in ("as much as 47%", "as much as 67%", "as much as 65%"):
+        if bit not in he_desc:
+            raise SystemExit("Higher Ed meta description missing " + bit)
     if 'id="dl-define"' not in header:
         raise SystemExit("definition block missing from Header Code")
     if "/dl28-canvas-module-before.svg" not in header:

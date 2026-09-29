@@ -35,9 +35,9 @@ Built by `python3 tools/zoho/build_zoho_pack.py`. Header Code gets the JSON-LD a
 | No SearchAction | JSON-LD | No site search. |
 | No `aggregateRating` / `review` | JSON-LD | No real reviews on the site. Software App rich results need a price and a rating. We skip both rather than invent them. |
 | No `price: 0` | Offer | Delphinium is institutional licensing, not a free consumer app. Offer is contact-only: schedule a demo for pricing (`https://delphi-me.com/schedule-jared`). |
-| No `email` | Organization | `NEED_JARED` for a public contact address. `contactPoint` is sales + `https://www.delphi-me.com/contact-us` only. |
-| `sameAs` | Organization | Only profiles already linked in the footer: YouTube `@DelphiniumEngage`, LinkedIn company `78437190`, Facebook `1502817329972174`, X `@ProjDelphinium`. Not Jared’s personal LinkedIn. |
-| Path title + description | Path script | Home and `/home` keep the K-12 description with **up to 31%**. `/highered` gets a Higher Ed description with **no percent**. Contact, support, EULA, and purchase agreement get short titles and descriptions. The script also updates `og:title`, `og:description`, `og:url`, and the matching Twitter fields, deletes extra description tags, and removes a `keywords` meta. |
+| Public email | Organization | `support@delphi-me.com` on Organization and on the sales `contactPoint` (Jared, 2026-09-29). |
+| `sameAs` | Organization | Only profiles already linked in the footer. YouTube is `https://www.youtube.com/@DelphiniumEngage` (Jared confirmed; not `@DelphiniumEngagement`). Also LinkedIn company `78437190`, Facebook `1502817329972174`, X `@ProjDelphinium`. Not Jared’s personal LinkedIn. |
+| Path title + description | Path script | Home and `/home` keep the K-12 description with **up to 31%**. `/highered` uses the Higher Ed percents with **as much as** (47% / 67% / 65%) and the dropout definition. It does not use the Davis 31%. Contact, support, EULA, and purchase agreement get short titles and descriptions. The script also updates `og:title`, `og:description`, `og:url`, and the matching Twitter fields, deletes extra description tags, and removes a `keywords` meta. |
 | No sitewide description meta in Header Code | Build | A static K-12 `<meta name="description">` in the shared header is what crawlers saw on `/highered`. Do not put it back. |
 | `og:image` + `twitter:card=summary_large_image` | Header Code, static | `https://www.delphi-me.com/dl28-og-default.jpg` (1200×630). Source file: `zoho-sites/assets/og-default.jpg`. Absolute Zoho URL. Not a GitHub hotlink. |
 | Definition | Homepage hero, `#dl-define` | “Delphinium is…” with K-12 / Higher Ed wording via the existing `.dk` / `.dh` swap. |
@@ -54,13 +54,13 @@ The path script is the runtime copy. Zoho’s own page SEO fields are what non-J
 | Path | Title | Description |
 | --- | --- | --- |
 | `/`, `/home` | Delphinium · Canvas delivers content. Delphinium delivers engagement. | The Canvas engagement layer for K-12 online schools. Turn the Canvas courses you already run into engaging student experiences and an early-warning system for teachers. Up to 31% fewer course failures. |
-| `/highered` | Higher Ed Online · Delphinium | Delphinium is the Canvas engagement layer for Higher Ed Online programs. Faculty keep teaching in Canvas. It adds motivation and early-warning visibility, with no course migration. |
+| `/highered` | Higher Ed Online · Delphinium | Delphinium is the Canvas engagement layer for Higher Ed Online programs. In Higher Ed Online sections, course failure is as much as 47% lower, withdrawal as much as 67% lower, and dropout as much as 65% lower. Dropout means finishing with less than about a third of the points. |
 | `/contact-us` | Contact · Delphinium | Contact Delphi M.E. about Delphinium for K-12 online schools and Higher Ed Online programs on Canvas. |
 | `/support` | Support · Delphinium | Get support for Delphinium on Canvas. Send a ticket and Delphi M.E. will get back to you. |
 | `/eula` | EULA · Delphinium | End user license agreement for Delphinium (Delphi M.E. LLC). |
 | `/purchase-agreement` | Purchase agreement · Delphinium | Purchase agreement for Delphinium (Delphi M.E. LLC). |
 
-Higher Ed percents (as much as 47% / 67% / 65%) stay in the on-page Higher Ed copy, including the Q&A `.dh` answer. They are **not** in the meta description. Promoting them in meta is `NEED_JARED`.
+Higher Ed percents (as much as 47% / 67% / 65%, with the dropout definition) are in the `/highered` meta description and in the on-page Higher Ed copy. Jared approved that on 2026-09-29. Do not put the K-12 “up to 31%” line on `/highered`.
 
 ---
 
@@ -68,7 +68,7 @@ Higher Ed percents (as much as 47% / 67% / 65%) stay in the on-page Higher Ed co
 
 Validate at https://validator.schema.org/ . Google’s Software App rich-result test will not pass without a real price and a real rating. That is acceptable.
 
-Organization `name` / `legalName`: Delphi M.E. LLC. `alternateName`: Delphinium, Delphi M.E. Logo: `https://www.delphi-me.com/dl28-logo-new.svg`. Description from the SOURCE position line (company builds Delphinium, the Canvas LMS engagement layer for online K-12 and Higher Ed Online).
+Organization `name` / `legalName`: Delphi M.E. LLC. `alternateName`: Delphinium, Delphi M.E. `email`: `support@delphi-me.com` (also on `contactPoint`). Logo: `https://www.delphi-me.com/dl28-logo-new.svg`. Description from the SOURCE position line (company builds Delphinium, the Canvas LMS engagement layer for online K-12 and Higher Ed Online). YouTube `sameAs`: `https://www.youtube.com/@DelphiniumEngage`.
 
 WebSite `name`: Delphinium. `publisher` points at the Organization `@id`. `inLanguage`: en-US. Description: “Canvas delivers content. Delphinium delivers engagement.”
 
@@ -84,27 +84,30 @@ Do not add FAQPage until a visible FAQ is approved to match character for charac
 | --- | --- | --- |
 | K-12 course failure | Exact **31%** only with Davis Connect named and the study context (72 classes, 6,000 students, same courses, teachers, and content). Promises, CTAs, and meta: **up to 31%**. | Proof card and the K-12 Q&A use the exact study sentence. Hero and home meta use “up to 31%”. |
 | Motivation | **72%** more / much more motivating; open word **Fun**. | Existing proof cards. Tiffany Dance and Natalie Niederhauser stay spelled that way. |
-| HE failure / withdrawal / dropout | **as much as 47% / 67% / 65%**, only on Higher Ed surfaces, with the on-page definition of dropout (finished with less than about a third of the points). | Already swapped into the HE proof. Also the HE Q&A answer. Not in meta. |
+| HE failure / withdrawal / dropout | **as much as 47% / 67% / 65%**, only on Higher Ed surfaces, with the dropout definition (finished with less than about a third of the points). | HE proof, the HE Q&A answer, and the `/highered` meta description. |
 | Names | Product = **Delphinium**. Legal publisher = **Delphi M.E. LLC**. Short company = **Delphi M.E.** Never treat “Delphi” alone as the product. Canvas is Instructure’s LMS. | Definition block opens with “Delphinium is…” |
 
 Never: UC Davis; Davis as the homepage logo or primary brand face; “Results like a 31%”; fake stars; invented customers, dollars, or security badges.
 
 ---
 
-## 6. NEED_JARED
+## 6. Resolved with Jared (2026-09-29)
 
-- Public contact email. Omitted from Organization and `contactPoint` on purpose.
-- Confirm the YouTube handle. The footer and `sameAs` use `https://www.youtube.com/@DelphiniumEngage`. The research brief also mentioned `@DelphiniumEngagement`.
+- Public contact email is `support@delphi-me.com`. It is on Organization and on `contactPoint`.
+- YouTube `sameAs` stays `https://www.youtube.com/@DelphiniumEngage`. `@DelphiniumEngagement` is not the channel.
+- `/highered` meta description includes as much as 47% / 67% / 65% and the dropout definition. Home meta stays “up to 31%”.
+
+## 7. Still open (optional)
+
 - Vanity URLs for LinkedIn and Facebook, if the numeric ids in the footer should not be the canonical `sameAs`.
-- Whether Higher Ed percents may appear in the `/highered` meta description. They do not today.
 - A raster Organization logo (`/dl28-logo-org.png`, at least 112×112) if Google’s logo guidelines treat the SVG as weak. Schema currently uses the live SVG `/dl28-logo-new.svg`.
-- Extra profiles (Crunchbase, Wikidata, a LinkedIn showcase page) before they are added to `sameAs`.
+- Extra profiles (Crunchbase, Wikidata) before they are added to `sameAs`.
 - Any block of AI crawlers in `robots.txt`. Leave allow-all until Jared decides.
 - Dropping the stale `/index` URL from the Zoho sitemap, if it is still a duplicate.
 
 ---
 
-## 7. Non-goals
+## 8. Non-goals
 
 - No DNS, HubSpot, or production Zoho edits. This repo does not publish the live site.
 - No invented privacy, terms, or cookie pages beyond the existing EULA and purchase agreement.
@@ -118,7 +121,7 @@ Never: UC Davis; Davis as the homepage logo or primary brand face; “Results li
 
 ---
 
-## 8. Where it lives
+## 9. Where it lives
 
 | Path | Role |
 | --- | --- |

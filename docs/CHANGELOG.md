@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-09-29 — Jared's SEO answers
+- Organization JSON-LD email is support@delphi-me.com.
+- YouTube sameAs stays https://www.youtube.com/@DelphiniumEngage.
+- /highered meta description includes as much as 47% / 67% / 65% and the dropout definition. Home meta stays "up to 31%".
+
 ## 2026-09-29 — GEO / AEO / SEO pack
 - Header Code now emits Organization, WebSite, and SoftwareApplication JSON-LD, plus a Zoho-hosted Open Graph image. No SearchAction, ratings, or invented price.
 - Path script sets title and description per path. `/highered` no longer inherits the K-12 description. Home promises stay "up to 31%".
