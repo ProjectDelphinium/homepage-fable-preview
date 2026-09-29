@@ -2718,15 +2718,13 @@
       .dl-contact__actions .dl-btn { width: 100%; }
     }
     @media (prefers-reduced-motion: reduce) {
-      .dl-contact__input { transition: none; }
+      .dl-contact__input, .si { transition: none; }
     }
 
     /* Subpages share this chrome. Hidden until the path script sets html.dl-path-* . */
     .dl-sub { display: none; background: var(--paper); padding: 4.5rem 0 clamp(3rem, 6vw, 4.75rem); }
     html.dl-path-contact [data-dl-page="contact"],
-    html.dl-path-support [data-dl-page="support"],
-    html.dl-path-eula [data-dl-page="eula"],
-    html.dl-path-agree [data-dl-page="agree"] { display: block; }
+    html.dl-path-support [data-dl-page="support"] { display: block; }
     html.dl-path-contact main.dl-home,
     html.dl-path-support main.dl-home,
     html.dl-path-eula main.dl-home,
@@ -2744,17 +2742,6 @@
     }
     .dl-sub__h em { font-style: normal; color: var(--accent); }
     .dl-sub__lede { margin: 0.85rem 0 0; max-width: 40rem; color: var(--ink-soft); font-size: 1.15rem; line-height: 1.5; }
-    .dl-sub__todo {
-      margin: 1.25rem 0 0;
-      max-width: 40rem;
-      padding: 0.95rem 1.05rem;
-      border: 1.5px dashed var(--navy);
-      border-radius: 10px;
-      background: var(--butter);
-      color: var(--navy-deep);
-      font-weight: 700;
-      line-height: 1.45;
-    }
     .dl-sub .dl-contact__form { max-width: 46rem; }
     .dl-sub__files { display: grid; gap: 0.5rem; }
     .dl-file { font-family: var(--font-text); font-size: 0.95rem; color: var(--ink); max-width: 100%; }
@@ -3582,20 +3569,6 @@
     </script>
   </main>
 
-  <main class="dl-sub" data-dl-page="eula" tabindex="-1">
-    <div class="dl-wrap">
-      <h1 class="dl-sub__h" id="dl-eula-h">End user license agreement</h1>
-      <p class="dl-sub__todo">TODO: Replace this placeholder with the EULA text.</p>
-    </div>
-  </main>
-
-  <main class="dl-sub" data-dl-page="agree" tabindex="-1">
-    <div class="dl-wrap">
-      <h1 class="dl-sub__h" id="dl-agree-h">Purchase agreement</h1>
-      <p class="dl-sub__todo">TODO: Replace this placeholder with the purchase agreement text.</p>
-    </div>
-  </main>
-
   <footer class="dl-footer">
     <div class="dl-wrap">
       <div class="dl-footer__grid">
@@ -3756,6 +3729,12 @@
           el.setAttribute("href", hash === "#top" ? homeBase : homeBase + hash);
         });
         var homeMain = document.querySelector("main.dl-home");
+        if (pathClass === "eula" || pathClass === "agree") {
+          var legal = document.querySelector(".theme-content-area") || document.querySelector(".dl-nav");
+          if (homeMain) homeMain.removeAttribute("id");
+          if (legal) { legal.id = "top"; legal.tabIndex = -1; }
+          return;
+        }
         if (pathClass === "other") {
           var nav = document.querySelector(".dl-nav");
           if (homeMain) homeMain.removeAttribute("id");

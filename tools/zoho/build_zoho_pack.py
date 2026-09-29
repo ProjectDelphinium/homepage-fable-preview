@@ -38,8 +38,8 @@ FAVICON_LINKS = (
 
 NEUTRALIZE = (
     "<script>/* dl28: page is standalone; switch off Zoho theme CSS + legacy Home-snippet inline styles so only zs-customcss (ours) applies */\n"
-    "(function(){var d=document;function off(n){try{if(n.tagName==='LINK'&&/stylesheet/i.test(n.rel||'')&&/\\/template\\/|zsite-core|webfonts\\.zoho|fonts\\.googleapis/.test(n.href||'')){n.disabled=true;n.media='not all';n.setAttribute('data-dl-off','1');}\n"
-    "else if(n.closest&&n.closest('.theme-content-area,.zpcontent-container,[data-element-type]')){var t=n.tagName;n.setAttribute('data-dl-off','1');\n"
+    "(function(){var d=document;var legal=/\\/(?:eula|purchase-agreement)$/.test((location.pathname||\"/\").replace(/\\/+$/,\"\")||\"/\");function off(n){try{if(n.tagName==='LINK'&&/stylesheet/i.test(n.rel||'')&&/\\/template\\/|zsite-core|webfonts\\.zoho|fonts\\.googleapis/.test(n.href||'')){n.disabled=true;n.media='not all';n.setAttribute('data-dl-off','1');}\n"
+    "else if(!legal&&n.closest&&n.closest('.theme-content-area,.zpcontent-container,[data-element-type]')){var t=n.tagName;n.setAttribute('data-dl-off','1');\n"
     "if(t==='STYLE'){n.media='not all';}else if(t==='SCRIPT'){n.type='text/plain';}else if(t==='LINK'){n.removeAttribute('href');}\n"
     "else if(t==='IMG'||t==='SOURCE'){n.removeAttribute('srcset');n.removeAttribute('src');}else if(t==='VIDEO'){n.removeAttribute('poster');n.removeAttribute('src');n.preload='none';}else if(t==='IFRAME'){n.removeAttribute('src');}}}catch(e){}}\n"
     "function sweep(){d.querySelectorAll('link,style,script,img,source,video,iframe').forEach(off);}sweep();\n"
@@ -257,11 +257,16 @@ def assert_split(header: str, footer: str) -> None:
         raise SystemExit("homepage main missing from Header Code")
     if "<footer class=\"dl-footer\">" not in footer:
         raise SystemExit("footer chrome missing from Footer Code")
-    for marker in ('data-dl-page="contact"', 'data-dl-page="support"', 'data-dl-page="eula"', 'data-dl-page="agree"'):
+    for marker in ('data-dl-page="contact"', 'data-dl-page="support"'):
         if marker not in footer:
             raise SystemExit(marker + " missing from Footer Code")
         if marker in header:
             raise SystemExit(marker + " landed in Header Code")
+    for marker in ('data-dl-page="eula"', 'data-dl-page="agree"'):
+        if marker in header or marker in footer:
+            raise SystemExit(marker + " placeholder still in the pack")
+    if "purchase-agreement" not in header:
+        raise SystemExit("legal-page neutralizer exception missing from Header Code")
     if "WebToContactForm" not in footer or "WebToCase" not in footer:
         raise SystemExit("contact or support form missing from Footer Code")
 
