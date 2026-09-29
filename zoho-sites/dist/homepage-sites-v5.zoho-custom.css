@@ -2747,11 +2747,11 @@ main a,
     .dl-modal--contact .dl-modal__panel:focus { outline: none; }
     .dl-contact__intro { margin: 0.7rem 0 0; font-size: 1.05rem; line-height: 1.5; color: var(--ink-soft); }
     .dl-contact__form { display: grid; gap: 1.1rem; margin-top: 1.5rem; }
-    .dl-contact__row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
-    .dl-contact__field { display: grid; gap: 0.4rem; min-width: 0; }
-    .dl-contact__label { font-family: var(--font-display); font-weight: 600; font-size: 0.95rem; color: var(--navy); }
+    .dl-contact__row, .sr { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+    .dl-contact__field, .sf { display: grid; gap: 0.4rem; min-width: 0; }
+    .dl-contact__label, .sl { font-family: var(--font-display); font-weight: 600; font-size: 0.95rem; color: var(--navy); }
     .dl-contact__opt { font-family: var(--font-text); font-weight: 400; color: var(--ink-soft); }
-    .dl-contact__input {
+    .dl-contact__input, .si {
       box-sizing: border-box;
       width: 100%;
       margin: 0;
@@ -2765,12 +2765,12 @@ main a,
       line-height: 1.4;
       transition: border-color 150ms ease;
     }
-    textarea.dl-contact__input { min-height: 8.5rem; resize: vertical; }
-    .dl-contact__input:hover { border-color: rgba(43, 47, 126, 0.55); }
-    .dl-contact__input:focus { outline: 3px solid var(--dl-focus); outline-offset: 1px; border-color: var(--navy); }
-    .dl-contact__input[aria-invalid="true"] { border-color: #b3261e; }
-    .dl-contact__error { margin: 0; font-size: 0.9rem; font-weight: 600; color: #b3261e; }
-    .dl-contact__hint { margin: 0; font-size: 0.9rem; line-height: 1.4; color: var(--ink-soft); }
+    textarea.dl-contact__input, textarea.si { min-height: 8.5rem; resize: vertical; }
+    .dl-contact__input:hover, .si:hover { border-color: rgba(43, 47, 126, 0.55); }
+    .dl-contact__input:focus, .si:focus { outline: 3px solid var(--dl-focus); outline-offset: 1px; border-color: var(--navy); }
+    .dl-contact__input[aria-invalid="true"], .si[aria-invalid="true"] { border-color: #b3261e; }
+    .dl-contact__error, .se { margin: 0; font-size: 0.9rem; font-weight: 600; color: #b3261e; }
+    .dl-contact__hint, .sh { margin: 0; font-size: 0.9rem; line-height: 1.4; color: var(--ink-soft); }
     .dl-contact__hp { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
     .dl-contact__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.85rem 1.25rem; margin-top: 0.3rem; }
     .dl-contact__actions .dl-btn[disabled] { opacity: 0.7; cursor: progress; transform: none; }
@@ -2787,8 +2787,8 @@ main a,
     .dl-contact__status a { color: inherit; font-weight: 700; text-decoration-thickness: 2px; text-underline-offset: 0.2em; }
     .dl-contact__status a:focus-visible { outline: 3px solid var(--dl-focus); outline-offset: 3px; border-radius: 4px; }
     .dl-contact__done .dl-contact__intro { margin-bottom: 1.5rem; }
-    .dl-contact__captcha { display: flex; align-items: center; gap: 0.75rem 1rem; flex-wrap: wrap; }
-    .dl-contact__captcha img {
+    .dl-contact__captcha, .sc { display: flex; align-items: center; gap: 0.75rem 1rem; flex-wrap: wrap; }
+    .dl-contact__captcha img, .sc img {
       display: block;
       height: 52px;
       width: auto;
@@ -2796,7 +2796,7 @@ main a,
       border: 1.5px solid rgba(43, 47, 126, 0.3);
       background: var(--white);
     }
-    .dl-contact__reload {
+    .dl-contact__reload, .srel {
       border: 0;
       background: none;
       padding: 0;
@@ -2808,15 +2808,57 @@ main a,
       text-underline-offset: 0.18em;
       cursor: pointer;
     }
-    .dl-contact__reload:hover { color: var(--accent); }
-    .dl-contact__reload:focus-visible { outline: 3px solid var(--dl-focus); outline-offset: 3px; border-radius: 4px; }
+    .dl-contact__reload:hover, .srel:hover { color: var(--accent); }
+    .dl-contact__reload:focus-visible, .srel:focus-visible { outline: 3px solid var(--dl-focus); outline-offset: 3px; border-radius: 4px; }
     @media (max-width: 559px) {
-      .dl-contact__row { grid-template-columns: 1fr; }
+      .dl-contact__row, .sr { grid-template-columns: 1fr; }
       .dl-contact__actions .dl-btn { width: 100%; }
     }
     @media (prefers-reduced-motion: reduce) {
       .dl-contact__input { transition: none; }
     }
+
+    /* Subpages share this chrome. Hidden until the path script sets html.dl-path-* . */
+    .dl-sub { display: none; background: var(--paper); padding: 4.5rem 0 clamp(3rem, 6vw, 4.75rem); }
+    html.dl-path-contact [data-dl-page="contact"],
+    html.dl-path-support [data-dl-page="support"],
+    html.dl-path-eula [data-dl-page="eula"],
+    html.dl-path-agree [data-dl-page="agree"] { display: block; }
+    html.dl-path-contact main.dl-home,
+    html.dl-path-support main.dl-home,
+    html.dl-path-eula main.dl-home,
+    html.dl-path-agree main.dl-home,
+    html.dl-path-other main.dl-home { display: none; }
+    .dl-sub__h {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(1.9rem, 4.2vw, 3rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      max-width: 18ch;
+    }
+    .dl-sub__h em { font-style: normal; color: var(--accent); }
+    .dl-sub__lede { margin: 0.85rem 0 0; max-width: 40rem; color: var(--ink-soft); font-size: 1.15rem; line-height: 1.5; }
+    .dl-sub__todo {
+      margin: 1.25rem 0 0;
+      max-width: 40rem;
+      padding: 0.95rem 1.05rem;
+      border: 1.5px dashed var(--navy);
+      border-radius: 10px;
+      background: var(--butter);
+      color: var(--navy-deep);
+      font-weight: 700;
+      line-height: 1.45;
+    }
+    .dl-sub .dl-contact__form { max-width: 46rem; }
+    .dl-sub__files { display: grid; gap: 0.5rem; }
+    .dl-file { font-family: var(--font-text); font-size: 0.95rem; color: var(--ink); max-width: 100%; }
+    .dl-footer__legal { margin: 0.45rem 0 0; }
+    .dl-footer__legal a { color: inherit; font-weight: 600; text-decoration: none; }
+    .dl-footer__legal a:hover { color: #fff; text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; }
+    .dl-footer__legal a:focus-visible { outline: 3px solid var(--dl-focus); outline-offset: 3px; border-radius: 4px; }
   
 /* dl28 bookings clip (Zoho pack) */
 .dl-modal--book #dl-book-frame { overflow: hidden; }

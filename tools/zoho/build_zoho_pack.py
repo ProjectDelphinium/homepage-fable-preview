@@ -194,19 +194,32 @@ def minify_js(js: str) -> str:
 
 
 def split_parts(full_header: str) -> tuple[str, str]:
-    footer_at = full_header.find('<footer class="dl-footer">')
-    if footer_at < 0:
-        raise SystemExit("footer.dl-footer not found")
-    header, footer = full_header[:footer_at], full_header[footer_at:]
+    """Header Code is the homepage through </main>, plus the video modal.
+
+    Subpages sit between </main> and the footer in the source so they read in
+    order, but they have to ship in Footer Code. Header Code is already against
+    Zoho's 44,900 cap.
+    """
+    split_at = full_header.find("</main>")
+    if split_at < 0:
+        raise SystemExit("</main> not found")
+    split_at += len("</main>")
+    header, footer = full_header[:split_at], full_header[split_at:]
     modal = re.search(r'\s*<div class="dl-modal" id="dl-modal" hidden>.*?(?=\s*<script>)', footer, re.S)
     if not modal:
         raise SystemExit("video modal #dl-modal not found in the footer part")
     header = header + "\n" + modal.group(0).strip() + "\n"
     footer = footer[: modal.start()] + footer[modal.end() :]
-    script = re.search(r"<script>(.*?)</script>", footer, re.S)
-    if not script:
+
+    def repl_script(m: re.Match) -> str:
+        body = m.group(1).strip()
+        if not body:
+            return m.group(0)
+        return "<script>" + minify_js(body) + "</script>"
+
+    if "<script>" not in footer:
         raise SystemExit("footer inline script not found")
-    footer = footer[: script.start()] + "<script>" + minify_js(script.group(1)) + "</script>" + footer[script.end() :]
+    footer = re.sub(r"<script>(.*?)</script>", repl_script, footer, flags=re.S)
     header, footer = dedent_markup(header), dedent_markup(footer)
     top = header.find('<a class="dl-skip"')
     if top < 0:
@@ -235,6 +248,22 @@ def flag_copy(doc: str) -> None:
             'FLAG: hero still says "courses you already teach in into". That extra "in" is a grammar error.',
             file=sys.stderr,
         )
+    if re.search(r"referrer-policy|name=[\"']referrer[\"']", doc, re.I):
+        raise SystemExit("pack sets a Referrer-Policy. Do not set no-referrer.")
+
+
+def assert_split(header: str, footer: str) -> None:
+    if 'class="dl-home"' not in header:
+        raise SystemExit("homepage main missing from Header Code")
+    if "<footer class=\"dl-footer\">" not in footer:
+        raise SystemExit("footer chrome missing from Footer Code")
+    for marker in ('data-dl-page="contact"', 'data-dl-page="support"', 'data-dl-page="eula"', 'data-dl-page="agree"'):
+        if marker not in footer:
+            raise SystemExit(marker + " missing from Footer Code")
+        if marker in header:
+            raise SystemExit(marker + " landed in Header Code")
+    if "WebToContactForm" not in footer or "WebToCase" not in footer:
+        raise SystemExit("contact or support form missing from Footer Code")
 
 
 def assert_cap(name: str, text: str) -> None:
@@ -250,6 +279,7 @@ def main() -> int:
     flag_copy(doc)
     css = custom_css(doc)
     header, footer = split_parts(header_code(doc))
+    assert_split(header, footer)
     assert_cap("header", header)
     assert_cap("footer", footer)
     left = sorted(set(re.findall(r"https?://[^\"\s)']+\.(?:png|jpe?g|gif|svg|webp|woff2?)\b", doc)))

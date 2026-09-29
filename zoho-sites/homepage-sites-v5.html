@@ -2547,11 +2547,11 @@
     .dl-modal--contact .dl-modal__panel:focus { outline: none; }
     .dl-contact__intro { margin: 0.7rem 0 0; font-size: 1.05rem; line-height: 1.5; color: var(--ink-soft); }
     .dl-contact__form { display: grid; gap: 1.1rem; margin-top: 1.5rem; }
-    .dl-contact__row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
-    .dl-contact__field { display: grid; gap: 0.4rem; min-width: 0; }
-    .dl-contact__label { font-family: var(--font-display); font-weight: 600; font-size: 0.95rem; color: var(--navy); }
+    .dl-contact__row, .sr { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+    .dl-contact__field, .sf { display: grid; gap: 0.4rem; min-width: 0; }
+    .dl-contact__label, .sl { font-family: var(--font-display); font-weight: 600; font-size: 0.95rem; color: var(--navy); }
     .dl-contact__opt { font-family: var(--font-text); font-weight: 400; color: var(--ink-soft); }
-    .dl-contact__input {
+    .dl-contact__input, .si {
       box-sizing: border-box;
       width: 100%;
       margin: 0;
@@ -2565,12 +2565,12 @@
       line-height: 1.4;
       transition: border-color 150ms ease;
     }
-    textarea.dl-contact__input { min-height: 8.5rem; resize: vertical; }
-    .dl-contact__input:hover { border-color: rgba(43, 47, 126, 0.55); }
-    .dl-contact__input:focus { outline: 3px solid var(--dl-focus); outline-offset: 1px; border-color: var(--navy); }
-    .dl-contact__input[aria-invalid="true"] { border-color: #b3261e; }
-    .dl-contact__error { margin: 0; font-size: 0.9rem; font-weight: 600; color: #b3261e; }
-    .dl-contact__hint { margin: 0; font-size: 0.9rem; line-height: 1.4; color: var(--ink-soft); }
+    textarea.dl-contact__input, textarea.si { min-height: 8.5rem; resize: vertical; }
+    .dl-contact__input:hover, .si:hover { border-color: rgba(43, 47, 126, 0.55); }
+    .dl-contact__input:focus, .si:focus { outline: 3px solid var(--dl-focus); outline-offset: 1px; border-color: var(--navy); }
+    .dl-contact__input[aria-invalid="true"], .si[aria-invalid="true"] { border-color: #b3261e; }
+    .dl-contact__error, .se { margin: 0; font-size: 0.9rem; font-weight: 600; color: #b3261e; }
+    .dl-contact__hint, .sh { margin: 0; font-size: 0.9rem; line-height: 1.4; color: var(--ink-soft); }
     .dl-contact__hp { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
     .dl-contact__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.85rem 1.25rem; margin-top: 0.3rem; }
     .dl-contact__actions .dl-btn[disabled] { opacity: 0.7; cursor: progress; transform: none; }
@@ -2587,8 +2587,8 @@
     .dl-contact__status a { color: inherit; font-weight: 700; text-decoration-thickness: 2px; text-underline-offset: 0.2em; }
     .dl-contact__status a:focus-visible { outline: 3px solid var(--dl-focus); outline-offset: 3px; border-radius: 4px; }
     .dl-contact__done .dl-contact__intro { margin-bottom: 1.5rem; }
-    .dl-contact__captcha { display: flex; align-items: center; gap: 0.75rem 1rem; flex-wrap: wrap; }
-    .dl-contact__captcha img {
+    .dl-contact__captcha, .sc { display: flex; align-items: center; gap: 0.75rem 1rem; flex-wrap: wrap; }
+    .dl-contact__captcha img, .sc img {
       display: block;
       height: 52px;
       width: auto;
@@ -2596,7 +2596,7 @@
       border: 1.5px solid rgba(43, 47, 126, 0.3);
       background: var(--white);
     }
-    .dl-contact__reload {
+    .dl-contact__reload, .srel {
       border: 0;
       background: none;
       padding: 0;
@@ -2608,15 +2608,57 @@
       text-underline-offset: 0.18em;
       cursor: pointer;
     }
-    .dl-contact__reload:hover { color: var(--accent); }
-    .dl-contact__reload:focus-visible { outline: 3px solid var(--dl-focus); outline-offset: 3px; border-radius: 4px; }
+    .dl-contact__reload:hover, .srel:hover { color: var(--accent); }
+    .dl-contact__reload:focus-visible, .srel:focus-visible { outline: 3px solid var(--dl-focus); outline-offset: 3px; border-radius: 4px; }
     @media (max-width: 559px) {
-      .dl-contact__row { grid-template-columns: 1fr; }
+      .dl-contact__row, .sr { grid-template-columns: 1fr; }
       .dl-contact__actions .dl-btn { width: 100%; }
     }
     @media (prefers-reduced-motion: reduce) {
-      .dl-contact__input { transition: none; }
+      .dl-contact__input, .si { transition: none; }
     }
+
+    /* Subpages share this chrome. Hidden until the path script sets html.dl-path-* . */
+    .dl-sub { display: none; background: var(--paper); padding: 4.5rem 0 clamp(3rem, 6vw, 4.75rem); }
+    html.dl-path-contact [data-dl-page="contact"],
+    html.dl-path-support [data-dl-page="support"],
+    html.dl-path-eula [data-dl-page="eula"],
+    html.dl-path-agree [data-dl-page="agree"] { display: block; }
+    html.dl-path-contact main.dl-home,
+    html.dl-path-support main.dl-home,
+    html.dl-path-eula main.dl-home,
+    html.dl-path-agree main.dl-home,
+    html.dl-path-other main.dl-home { display: none; }
+    .dl-sub__h {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(1.9rem, 4.2vw, 3rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      max-width: 18ch;
+    }
+    .dl-sub__h em { font-style: normal; color: var(--accent); }
+    .dl-sub__lede { margin: 0.85rem 0 0; max-width: 40rem; color: var(--ink-soft); font-size: 1.15rem; line-height: 1.5; }
+    .dl-sub__todo {
+      margin: 1.25rem 0 0;
+      max-width: 40rem;
+      padding: 0.95rem 1.05rem;
+      border: 1.5px dashed var(--navy);
+      border-radius: 10px;
+      background: var(--butter);
+      color: var(--navy-deep);
+      font-weight: 700;
+      line-height: 1.45;
+    }
+    .dl-sub .dl-contact__form { max-width: 46rem; }
+    .dl-sub__files { display: grid; gap: 0.5rem; }
+    .dl-file { font-family: var(--font-text); font-size: 0.95rem; color: var(--ink); max-width: 100%; }
+    .dl-footer__legal { margin: 0.45rem 0 0; }
+    .dl-footer__legal a { color: inherit; font-weight: 600; text-decoration: none; }
+    .dl-footer__legal a:hover { color: #fff; text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; }
+    .dl-footer__legal a:focus-visible { outline: 3px solid var(--dl-focus); outline-offset: 3px; border-radius: 4px; }
   </style>
   <link rel="preconnect" href="https://bookings.nimbuspop.com" crossorigin>
   <link rel="preconnect" href="https://jared-delphi-me.zohobookings.com" crossorigin>
@@ -2630,7 +2672,22 @@
 </head>
 <body class="dl-v5">
   <a class="dl-skip" href="#top">Skip to main content</a>
-  <!-- Production cutover: set data-site-origin to data-site-origin-production (https://www.delphi-me.com). That switches the footer Contact link and the CRM return URL. -->
+  <script>
+  !function(){
+    var p=(location.pathname||"/").replace(/\/+$/,"")||"/";
+    var b=p.split("/").pop();
+    var k="other";
+    if(p==="/"||p==="/home"||b==="homepage-sites-v5.html"||b==="homepage-sites-v5.zoho-ready.html")k="home";
+    else if(/\/contact-us$/.test(p))k="contact";
+    else if(/\/support$/.test(p))k="support";
+    else if(/\/eula$/.test(p))k="eula";
+    else if(/\/purchase-agreement$/.test(p))k="agree";
+    document.documentElement.classList.add("dl-path-"+k);
+    var titles={contact:"Contact",support:"Support",eula:"EULA",agree:"Purchase agreement"};
+    if(titles[k])document.title=titles[k]+" \u00b7 Delphinium";
+  }();
+  </script>
+  <!-- Production cutover: set data-site-origin to data-site-origin-production (https://www.delphi-me.com). That switches site links, and the contact modal, to the prod CRM form. -->
   <div class="dl-top" data-site-origin="https://delphinium-marketing-staging.zohosites.com" data-site-origin-production="https://www.delphi-me.com">
     <a class="dl-nav__logo" href="#top" aria-label="Delphinium home">
       <img src="assets/logo-new.svg" width="211" height="150" alt="Delphinium">
@@ -2669,7 +2726,7 @@
   </div>
   <div class="dl-mnav__scrim" id="dl-mnav-scrim" hidden></div>
 
-  <main id="top" tabindex="-1">
+  <main class="dl-home" id="top" tabindex="-1">
     <section class="dl-hero" aria-labelledby="hero-heading">
       <div class="dl-hero__petals" aria-hidden="true"></div>
       <div class="dl-wrap dl-hero__inner">
@@ -3233,114 +3290,18 @@
     </section>
   </main>
 
-  <footer class="dl-footer">
+  <main class="dl-sub" data-dl-page="contact" tabindex="-1">
     <div class="dl-wrap">
-      <div class="dl-footer__grid">
-        <div class="dl-footer__brand">
-          <a class="dl-footer__logo" href="#top" aria-label="Delphinium home">
-            <svg viewBox="0 0 318.07 225.8" width="118" height="84" aria-hidden="true" focusable="false">
-              <polygon fill="#fef200" points="221.94 0 131.34 36.46 88.61 146.95 190.8 75.07 221.94 0"/>
-              <polygon fill="#00adef" points="252.07 47.95 173.1 64.2 111.65 130.74 215.69 101.56 252.07 47.95"/>
-              <polygon fill="#ed008c" points="238.09 106.88 197.38 92.76 111.65 130.74 206.84 130.36 238.09 106.88"/>
-              <polygon fill="#00a652" points="197.38 59.21 173.15 64.01 111.65 130.74 190.8 75.07 197.38 59.21"/>
-              <polygon fill="#2e3192" points="217.05 99.56 197.43 92.65 111.65 130.74 215.76 101.56 217.05 99.56"/>
-              <g fill="#fff">
-                <path d="M28.56,191.23l-.72-3.84c-2.67,3.2-6.48,4.8-11.44,4.8s-9.25-2-12.4-6c-2.67-3.47-4-7.76-4-12.88,0-6.19,1.81-11.09,5.44-14.72,3.04-3.09,6.88-4.64,11.52-4.64s8,1.55,10.56,4.64v-16.88l3.76-2.08v51.6h-2.72ZM27.52,183.31v-20.24c-.85-1.71-2.23-3.08-4.12-4.12-1.89-1.04-3.93-1.56-6.12-1.56-3.84,0-7.01,1.52-9.52,4.56-2.35,2.88-3.52,6.56-3.52,11.04,0,5.17,1.39,9.23,4.16,12.16,2.35,2.4,5.28,3.6,8.8,3.6,4.91,0,8.35-1.81,10.32-5.44Z"/>
-                <path d="M68.08,174.43h-26.24c.11,4.43,1.65,8,4.64,10.72,2.77,2.4,6.27,3.6,10.48,3.6,3.57,0,6.69-.96,9.36-2.88l1.52,2.48c-3.2,2.56-7.25,3.84-12.16,3.84-5.6,0-10.11-1.92-13.52-5.76-3.04-3.47-4.56-7.87-4.56-13.2,0-5.65,1.63-10.37,4.88-14.16,2.99-3.41,6.64-5.12,10.96-5.12,5.17,0,9.07,2.27,11.68,6.8,1.97,3.41,2.96,7.6,2.96,12.56v1.12ZM41.92,171.23h22.16c-.11-4.43-1.09-7.85-2.96-10.28-1.87-2.43-4.45-3.64-7.76-3.64-3.09,0-5.71,1.29-7.84,3.88-2.13,2.59-3.33,5.93-3.6,10.04Z"/>
-                <path d="M78.16,117.63v73.39h-3.76s0-70.44,0-70.44l3.76-2.96Z"/>
-                <path d="M125.44,141.63l3.76-2v19.04c3.57-3.15,7.52-4.72,11.84-4.72,4.59,0,8.08,1.36,10.48,4.08,2.35,2.67,3.52,6.48,3.52,11.44v21.76h-3.76v-21.36c0-8.32-3.71-12.48-11.12-12.48-2.03,0-4.08.53-6.16,1.6-2.08,1.07-3.68,2.38-4.8,3.92v28.32h-3.76v-49.6Z"/>
-                <path d="M162.96,142.51c0-.8.28-1.48.84-2.04.56-.56,1.24-.84,2.04-.84s1.48.28,2.04.84c.56.56.84,1.24.84,2.04s-.28,1.48-.84,2.04c-.56.56-1.24.84-2.04.84s-1.48-.28-2.04-.84-.84-1.24-.84-2.04ZM167.68,154.91v36.32h-3.76v-36.32h3.76Z"/>
-                <path d="M180.48,158.99c3.68-3.36,7.84-5.04,12.48-5.04,4.37,0,7.76,1.41,10.16,4.24,2.35,2.67,3.52,6.43,3.52,11.28v21.76h-3.76v-21.36c0-8.32-3.63-12.48-10.88-12.48-4.69,0-8.43,1.84-11.2,5.52v28.32h-3.76v-36.32h3.12l.32,4.08Z"/>
-                <path d="M214.56,142.51c0-.8.28-1.48.84-2.04.56-.56,1.24-.84,2.04-.84s1.48.28,2.04.84c.56.56.84,1.24.84,2.04s-.28,1.48-.84,2.04c-.56.56-1.24.84-2.04.84s-1.48-.28-2.04-.84-.84-1.24-.84-2.04ZM219.28,154.91v36.32h-3.76v-36.32h3.76Z"/>
-                <path d="M253.52,187.15c-3.68,3.36-7.84,5.04-12.48,5.04-3.79,0-6.85-1.57-9.2-4.72-2.13-2.83-3.2-6.43-3.2-10.8v-21.76h3.76v21.36c0,8.32,3.2,12.48,9.6,12.48,4.64,0,8.37-1.89,11.2-5.68v-28.16h3.76v36.32h-3.12l-.32-4.08Z"/>
-                <path d="M269.11,158.83c4.11-3.25,8.11-4.88,12-4.88,4.37,0,7.76,1.76,10.16,5.28,4.05-3.52,8.48-5.28,13.28-5.28,4.32,0,7.68,1.44,10.08,4.32,2.29,2.72,3.44,6.45,3.44,11.2v21.76h-3.76v-21.36c0-8.32-3.57-12.48-10.72-12.48-3.73,0-7.33,1.6-10.8,4.8.8,2.13,1.2,4.56,1.2,7.28v21.76h-3.76v-21.36c0-8.32-3.33-12.48-10-12.48-4.27,0-7.87,1.89-10.8,5.68v28.16h-3.76v-36.32h3.12l.32,3.92Z"/>
-                <path d="M90,154.91l.64,4.16c2.88-3.41,7.07-5.12,12.56-5.12,5.12,0,9.17,2,12.16,6,2.51,3.36,3.76,7.49,3.76,12.4,0,6.51-1.81,11.6-5.44,15.28-2.99,3.04-6.61,4.56-10.88,4.56-5.12,0-9.17-1.6-12.16-4.8v18.64h-3.76v-51.12h3.12ZM90.64,163.39v19.84c1.01,1.6,2.53,2.92,4.56,3.96,2.03,1.04,4.11,1.56,6.24,1.56,4.11,0,7.41-1.47,9.92-4.4,2.35-2.77,3.52-6.51,3.52-11.2,0-5.33-1.33-9.39-4-12.16-2.24-2.4-5.2-3.6-8.88-3.6-2.24,0-4.41.56-6.52,1.68-2.11,1.12-3.72,2.56-4.84,4.32Z"/>
-                <rect x="86.88" y="204.95" width="3.76" height="20.85"/>
-              </g>
-            </svg>
-          </a>
-          <p class="dl-footer__tag">Canvas delivers content. <strong>Delphinium delivers engagement.</strong></p>
-        </div>
-        <nav class="dl-footer__col" aria-label="Footer page sections">
-          <p class="dl-footer__h">On this page</p>
-          <ul class="dl-footer__links">
-            <li><a href="#control-tower">Control Tower</a></li>
-            <li><a href="#community-builder">Community Builder</a></li>
-            <li><a href="#engagement-builder">Engagement Builder</a></li>
-            <li><a href="#customers">In Their Own Words</a></li>
-            <li><a href="#proof-eyebrow">Proof</a></li>
-            <li><a href="#easy-to-deploy">Easy to Deploy</a></li>
-          </ul>
-        </nav>
-        <div class="dl-footer__col dl-footer__cta">
-          <p class="dl-footer__h">Talk with us</p>
-          <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
-          <ul class="dl-footer__links">
-            <li><a href="/contact-us" data-site-path="/contact-us">Contact</a></li>
-          </ul>
-          <ul class="dl-footer__social" aria-label="Delphinium on social media">
-            <li><a href="https://www.youtube.com/@DelphiniumEngage" target="_blank" rel="noopener noreferrer" aria-label="Delphinium on YouTube" title="Delphinium on YouTube"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true" focusable="false"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></li>
-            <li><a href="https://www.linkedin.com/company/78437190" target="_blank" rel="noopener noreferrer" aria-label="Delphinium on LinkedIn" title="Delphinium on LinkedIn"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
-            <li><a href="https://www.linkedin.com/in/jared-chapman-90823213" target="_blank" rel="noopener noreferrer" aria-label="Jared Chapman on LinkedIn" title="Jared Chapman on LinkedIn"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><span class="dl-footer__social-badge" aria-hidden="true">J</span></a></li>
-            <li><a href="https://www.facebook.com/1502817329972174" target="_blank" rel="noopener noreferrer" aria-label="Delphinium on Facebook" title="Delphinium on Facebook"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a></li>
-            <li><a href="https://x.com/ProjDelphinium" target="_blank" rel="noopener noreferrer" aria-label="Delphinium on X" title="Delphinium on X"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="dl-footer__bottom">
-        <p>&copy; 2026 Delphinium</p>
-      </div>
-    </div>
-  </footer>
-
-  <div class="dl-modal dl-modal--research" id="dl-research-modal" role="dialog" aria-modal="true" aria-labelledby="dl-research-title" hidden>
-    <div class="dl-modal__backdrop" data-research-close></div>
-    <div class="dl-modal__box">
-      <div class="dl-modal__bar">
-        <p class="dl-modal__title">Research citations</p>
-        <button type="button" class="dl-modal__close" data-research-close aria-label="Close research"><span class="dl-modal__close-x" aria-hidden="true"></span></button>
-      </div>
-      <div class="dl-modal__panel" tabindex="-1">
-        <p class="dl-research__eyebrow">Research foundation</p>
-        <h2 class="dl-research__h" id="dl-research-title">Validated by research, <em>Demonstrated in classrooms.</em></h2>
-        <ol class="dl-research__refs">
-          <li>Chapman, J. R., &amp; Andrade, M. (2024). <cite><a href="https://link.springer.com/article/10.1007/s11423-024-10352-2" target="_blank" rel="noopener noreferrer">Improving part-time instructors' student failure rate with an educational engagement information system.</a></cite> Educational Technology Research and Development.</li>
-          <li>Chapman, J. R., Kohler, T. B., Rich, P. J., &amp; Trego, A. (2023). <cite><a href="https://www.tandfonline.com/doi/full/10.1080/15391523.2023.2242981" target="_blank" rel="noopener noreferrer">Maybe we've got it wrong: An experimental evaluation of self-determination and flow theory in gamification.</a></cite> Journal of Research on Technology in Education, 57(2), 417&ndash;436.</li>
-          <li>Chapman, J. R., Kohler, T. B., &amp; Gedeborg, S. (2023). <cite><a href="https://doi.org/10.1177/07356331221127635" target="_blank" rel="noopener noreferrer">So, why do students perform better in gamified courses? Understanding motivational styles in educational gamification.</a></cite> Journal of Educational Computing Research, 61(5), 927&ndash;950.</li>
-          <li>Nadolny, L., Malone, L., Chapman, J., &amp; Alam, M. (2022). <cite><a href="https://www.learntechlib.org/primary/p/221337/" target="_blank" rel="noopener noreferrer">Participatory gamification design: Navigating diverse perspectives.</a></cite> In Proceedings of EdMedia + Innovate Learning (pp. 534&ndash;540). AACE.</li>
-          <li>Brown, M. G., Lamm, M. H., &amp; Nadolny, L. (2021). <cite><a href="https://dr.lib.iastate.edu/bitstreams/a83f981b-fad6-4732-a879-02494cd65813/download" target="_blank" rel="noopener noreferrer">Gamification of chemical engineering pathways: Evidence from introductory courses.</a></cite> 2021 ASEE Virtual Annual Conference.</li>
-          <li>Chapman, J. R., &amp; Rich, P. J. (2018). <cite><a href="https://www.tandfonline.com/doi/full/10.1080/08832323.2018.1490687" target="_blank" rel="noopener noreferrer">Does educational gamification improve students' motivation? If so, which game elements work best?</a></cite> Journal of Education for Business, 93(7), 315&ndash;322.</li>
-          <li>Chapman, J. R., &amp; Rich, P. J. (2017). <cite><a href="https://doi.org/10.24251/HICSS.2017.157" target="_blank" rel="noopener noreferrer">Identifying motivational styles in educational gamification.</a></cite> In Proceedings of the 50th Hawaii International Conference on System Sciences (pp. 1318&ndash;1327).</li>
-          <li>Barrus, A., Chapman, J., Bodily, R., &amp; Rich, P. (2016). <cite>Using educational technologies to scaffold high school and college students' skill &amp; will to plan, practice, and produce.</cite> In L. Lin &amp; R. Atkinson (Eds.), Educational technologies: Challenges, applications and learning outcomes. Nova Science Publishers.</li>
-          <li>Cieslewicz, J., Helquist, J., Chapman, J. R., &amp; Baily, J. (submitted). <cite>Impact on student performance of automated messages used to increase student perception of instructor presence.</cite> Advances in Accounting Education.</li>
-          <li>Chapman, J. R., Odongo, G., Jacob, J., &amp; Hansen, R. (in preparation). <cite>Delphinium's impact on academic outcomes for students with Individualized Education Programs (IEPs).</cite> Manuscript in process.</li>
-        </ol>
-        <div class="dl-research__foot">
-          <p>See the research at work in your own Canvas courses.</p>
-          <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-research-book>Schedule a demo</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="dl-modal dl-modal--contact" id="dl-contact-modal" role="dialog" aria-modal="true" aria-labelledby="dl-contact-title" hidden>
-    <div class="dl-modal__backdrop" data-contact-close></div>
-    <div class="dl-modal__box">
-      <div class="dl-modal__bar">
-        <p class="dl-modal__title">Contact</p>
-        <button type="button" class="dl-modal__close" data-contact-close aria-label="Close contact form"><span class="dl-modal__close-x" aria-hidden="true"></span></button>
-      </div>
-      <div class="dl-modal__panel" tabindex="-1">
-        <div data-contact-view="form">
-          <h2 class="dl-research__h" id="dl-contact-title">Get in <em>touch.</em></h2>
-          <p class="dl-contact__intro">Send us a note and we'll get back to you.</p>
+      <div data-cu-view="form">
+        <h1 class="dl-sub__h" id="dl-cu-h">Get in <em>touch.</em></h1>
+        <p class="dl-sub__lede">Send us a note and we'll get back to you.</p>
           <form class="dl-contact__form" id="webform3131408000003206001" name="WebToContacts3131408000003206001" action="https://crm.zoho.com/crm/WebToContactForm" method="POST" accept-charset="UTF-8" novalidate>
-            <input type="text" style="display:none;" name="xnQsjsdp" value="33c9e1be8d9da155f5e9aa42757034c32feaef519e3e812621a1ae4ea74a84b8">
+            <input type="text" style="display:none;" name="xnQsjsdp" value="bc4e45a0b137feef26eb42c2cc5c61705aaa909168b76d2dca36e445f83c7b1c">
             <input type="hidden" name="zc_gad" id="zc_gad" value="">
-            <input type="text" style="display:none;" name="xmIwtLD" value="c80403ceb24b11a2e4bd4f20d1c093d25333ef1e65522ccadab1971163e8426b70642c2da599fc0b8b48822ba96d2c61">
+            <input type="text" style="display:none;" name="xmIwtLD" value="81a68c833fac6c6528816e6bf9a3e73e7d04469082ce2586e6f669697acede2f32ab0fd04402050c0c676bc65227e2c9">
             <input type="text" style="display:none;" name="actionType" value="Q29udGFjdHM=">
-            <input type="text" style="display:none;" name="returnURL" id="dl-contact-return" value="https://delphinium-marketing-staging.zohosites.com/?contact=thanks">
-            <input type="text" style="display:none;" id="CONTACTCF3" name="CONTACTCF3" maxlength="100" value="Website Contact Us (staging)" autocomplete="off">
+            <input type="text" style="display:none;" name="returnURL" id="dl-contact-return" value="https://www.delphi-me.com/contact-us?contact=thanks">
+            <input type="text" style="display:none;" id="CONTACTCF3" name="CONTACTCF3" maxlength="100" value="Website Contact Us" autocomplete="off">
             <input type="text" style="display:none;" name="aG9uZXlwb3Q" value="" autocomplete="off" tabindex="-1">
             <div class="dl-contact__row">
               <div class="dl-contact__field">
@@ -3387,7 +3348,7 @@
             <div class="dl-contact__field">
               <label class="dl-contact__label" id="reCaptchaField" for="captchaField3131408000003206001">Enter the Captcha</label>
               <div class="dl-contact__captcha">
-                <img id="imgid3131408000003206001" alt="" width="150" height="52" src="https://crm.zoho.com/crm/CaptchaServlet?formId=c80403ceb24b11a2e4bd4f20d1c093d25333ef1e65522ccadab1971163e8426b70642c2da599fc0b8b48822ba96d2c61&amp;grpid=33c9e1be8d9da155f5e9aa42757034c32feaef519e3e812621a1ae4ea74a84b8">
+                <img id="imgid3131408000003206001" alt="" width="150" height="52" src="https://crm.zoho.com/crm/CaptchaServlet?formId=81a68c833fac6c6528816e6bf9a3e73e7d04469082ce2586e6f669697acede2f32ab0fd04402050c0c676bc65227e2c9&amp;grpid=bc4e45a0b137feef26eb42c2cc5c61705aaa909168b76d2dca36e445f83c7b1c">
                 <button type="button" class="dl-contact__reload" id="dl-contact-captcha-reload">Reload</button>
               </div>
               <input class="dl-contact__input" id="captchaField3131408000003206001" name="enterdigest" type="text" autocomplete="off" required maxlength="10" aria-required="true" aria-labelledby="reCaptchaField" aria-describedby="dl-contact-captcha-err">
@@ -3398,6 +3359,239 @@
             </div>
             <script id="wf_anal" src="https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=e6cf426a1b37da6354c99ac270002ba34285a0482ac10e8190274419e2f2c06e1d9eed8c24d28f8bed53958d6c81ef67gid13736561e77b08558068e35f376b7d6cdef8533949b84b9344245212e3f4b42dgid8aa93383bb12627216370717c26654ee54f0cf44bd714cffb2819e5e65b23172gidb011005cc3334105e2b36274222ae8d69d0c1dfdc59f14ac96013c700d5b488e&amp;tw=ab483b9a89e964889c8c523422f1786b09aa5550dd387ecb2cdbf189f4fcd33b&amp;version=v2"></script>
           </form>
+      </div>
+      <div data-cu-view="done" hidden>
+        <h1 class="dl-sub__h">Thanks for <em>reaching out.</em></h1>
+        <p class="dl-sub__lede">Your message was sent. We'll get back to you.</p>
+      </div>
+    </div>
+  </main>
+
+  <main class="dl-sub" data-dl-page="support" tabindex="-1">
+    <div class="dl-wrap">
+      <div data-su-view="form">
+        <h1 class="dl-sub__h" id="dl-su-h">Support</h1>
+        <p class="dl-sub__lede">Send a ticket and we'll get back to you.</p>
+        <form class="dl-contact__form" id="dl-su-form" action="https://desk.zoho.com/support/WebToCase" method="POST" enctype="multipart/form-data" novalidate>
+          <input type="hidden" name="xnQsjsdp" value="edbsnd59c603a21cb9a686e70b29d1f759eb6">
+          <input type="hidden" name="xmIwtLD" value="edbsn9b4dd777b2c64d4edda94dd889b90b992928bb012fd1e45acb2a2c2a8710fd06">
+          <input type="hidden" name="xJdfEaS" id="xJdfEaS" value="">
+          <input type="hidden" name="actionType" value="Q2FzZXM=">
+          <input type="hidden" name="returnURL" value="https://www.delphi-me.com/support?ticket=thanks">
+          <div class="sr">
+            <div class="sf">
+              <label class="sl" for="dl-su-first">First Name</label>
+              <input class="si" id="dl-su-first" name="First Name" type="text" maxlength="120">
+            </div>
+            <div class="sf">
+              <label class="sl" for="dl-su-last">Last Name</label>
+              <input class="si" id="dl-su-last" name="Contact Name" type="text" required maxlength="120" aria-describedby="dl-su-last-err">
+              <p class="se" id="dl-su-last-err" hidden></p>
+            </div>
+          </div>
+          <div class="sr">
+            <div class="sf">
+              <label class="sl" for="dl-su-school">School Name</label>
+              <input class="si" id="dl-su-school" name="School Name" type="text" maxlength="200">
+            </div>
+            <div class="sf">
+              <label class="sl" for="dl-su-email">Email</label>
+              <input class="si" id="dl-su-email" name="Email" type="email" required maxlength="200" aria-describedby="dl-su-email-err">
+              <p class="se" id="dl-su-email-err" hidden></p>
+            </div>
+          </div>
+          <div class="sf">
+            <label class="sl" for="dl-su-subject">Ticket short name</label>
+            <input class="si" id="dl-su-subject" name="Subject" type="text" required maxlength="255" aria-describedby="dl-su-subject-err">
+            <p class="se" id="dl-su-subject-err" hidden></p>
+          </div>
+          <div class="sf">
+            <label class="sl" for="dl-su-course">Course URL</label>
+            <input class="si" id="dl-su-course" name="Course URL" type="text" required maxlength="450" aria-describedby="dl-su-course-hint dl-su-course-err">
+            <p class="sh" id="dl-su-course-hint">Required. N/A is allowed.</p>
+            <p class="se" id="dl-su-course-err" hidden></p>
+          </div>
+          <div class="sf">
+            <label class="sl" for="dl-su-desc">Description</label>
+            <textarea class="si" id="dl-su-desc" name="Description" rows="5" required aria-describedby="dl-su-desc-err"></textarea>
+            <p class="se" id="dl-su-desc-err" hidden></p>
+          </div>
+          <div class="sf">
+            <label class="sl" for="dl-su-captcha">Enter the Captcha</label>
+            <div class="sc">
+              <img id="zsCaptchaSrc" alt="">
+              <button type="button" class="srel" id="dl-su-captcha-reload">Reload</button>
+            </div>
+            <input class="si" id="dl-su-captcha" name="zsWebFormCaptchaWord" type="text" autocomplete="off" required maxlength="10" aria-describedby="dl-su-captcha-err">
+            <p class="se" id="dl-su-captcha-err" hidden></p>
+          </div>
+          <div class="sf">
+            <span class="sl" id="dl-su-files-label">Attachments</span>
+            <p class="sh" id="dl-su-files-hint">Up to 5 files, 20 MB each.</p>
+            <div class="dl-sub__files">
+              <input class="dl-file" type="file" name="attachment_1" aria-label="Attachment 1">
+              <input class="dl-file" type="file" name="attachment_2" aria-label="Attachment 2">
+              <input class="dl-file" type="file" name="attachment_3" aria-label="Attachment 3">
+              <input class="dl-file" type="file" name="attachment_4" aria-label="Attachment 4">
+              <input class="dl-file" type="file" name="attachment_5" aria-label="Attachment 5">
+            </div>
+            <p class="se" id="dl-su-file-err" hidden></p>
+          </div>
+          <div class="dl-contact__actions">
+            <button type="submit" class="dl-btn" id="dl-su-submit">Send ticket</button>
+          </div>
+        </form>
+      </div>
+      <div data-su-view="done" hidden>
+        <h1 class="dl-sub__h">Thanks. <em>Your ticket was sent.</em></h1>
+        <p class="dl-sub__lede">We'll get back to you.</p>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    (function () {
+      if (!window.jQuery) return;
+      var zs$ = window.jQuery.noConflict(true);
+      window.zsRegenerateCaptcha = function () {
+        var img = document.getElementById("zsCaptchaSrc");
+        var digest = document.getElementById("xJdfEaS");
+        if (!img || !digest) return;
+        zs$.ajax({
+          url: "https://desk.zoho.com/support/GenerateCaptcha?action=getNewCaptcha&_=" + new Date().getTime(),
+          type: "GET",
+          dataType: "json",
+          cache: false,
+          success: function (res) {
+            if (!res) return;
+            digest.value = res.captchaDigest || "";
+            if (res.captchaUrl) img.src = res.captchaUrl;
+          }
+        });
+      };
+      var reload = document.getElementById("dl-su-captcha-reload");
+      if (reload) reload.addEventListener("click", window.zsRegenerateCaptcha);
+      if (document.documentElement.classList.contains("dl-path-support")) window.zsRegenerateCaptcha();
+    })();
+    </script>
+  </main>
+
+  <main class="dl-sub" data-dl-page="eula" tabindex="-1">
+    <div class="dl-wrap">
+      <h1 class="dl-sub__h" id="dl-eula-h">End user license agreement</h1>
+      <p class="dl-sub__todo">TODO: Replace this placeholder with the EULA text.</p>
+    </div>
+  </main>
+
+  <main class="dl-sub" data-dl-page="agree" tabindex="-1">
+    <div class="dl-wrap">
+      <h1 class="dl-sub__h" id="dl-agree-h">Purchase agreement</h1>
+      <p class="dl-sub__todo">TODO: Replace this placeholder with the purchase agreement text.</p>
+    </div>
+  </main>
+
+  <footer class="dl-footer">
+    <div class="dl-wrap">
+      <div class="dl-footer__grid">
+        <div class="dl-footer__brand">
+          <a class="dl-footer__logo" href="#top" aria-label="Delphinium home">
+            <svg viewBox="0 0 318.07 225.8" width="118" height="84" aria-hidden="true" focusable="false">
+              <polygon fill="#fef200" points="221.94 0 131.34 36.46 88.61 146.95 190.8 75.07 221.94 0"/>
+              <polygon fill="#00adef" points="252.07 47.95 173.1 64.2 111.65 130.74 215.69 101.56 252.07 47.95"/>
+              <polygon fill="#ed008c" points="238.09 106.88 197.38 92.76 111.65 130.74 206.84 130.36 238.09 106.88"/>
+              <polygon fill="#00a652" points="197.38 59.21 173.15 64.01 111.65 130.74 190.8 75.07 197.38 59.21"/>
+              <polygon fill="#2e3192" points="217.05 99.56 197.43 92.65 111.65 130.74 215.76 101.56 217.05 99.56"/>
+              <g fill="#fff">
+                <path d="M28.56,191.23l-.72-3.84c-2.67,3.2-6.48,4.8-11.44,4.8s-9.25-2-12.4-6c-2.67-3.47-4-7.76-4-12.88,0-6.19,1.81-11.09,5.44-14.72,3.04-3.09,6.88-4.64,11.52-4.64s8,1.55,10.56,4.64v-16.88l3.76-2.08v51.6h-2.72ZM27.52,183.31v-20.24c-.85-1.71-2.23-3.08-4.12-4.12-1.89-1.04-3.93-1.56-6.12-1.56-3.84,0-7.01,1.52-9.52,4.56-2.35,2.88-3.52,6.56-3.52,11.04,0,5.17,1.39,9.23,4.16,12.16,2.35,2.4,5.28,3.6,8.8,3.6,4.91,0,8.35-1.81,10.32-5.44Z"/>
+                <path d="M68.08,174.43h-26.24c.11,4.43,1.65,8,4.64,10.72,2.77,2.4,6.27,3.6,10.48,3.6,3.57,0,6.69-.96,9.36-2.88l1.52,2.48c-3.2,2.56-7.25,3.84-12.16,3.84-5.6,0-10.11-1.92-13.52-5.76-3.04-3.47-4.56-7.87-4.56-13.2,0-5.65,1.63-10.37,4.88-14.16,2.99-3.41,6.64-5.12,10.96-5.12,5.17,0,9.07,2.27,11.68,6.8,1.97,3.41,2.96,7.6,2.96,12.56v1.12ZM41.92,171.23h22.16c-.11-4.43-1.09-7.85-2.96-10.28-1.87-2.43-4.45-3.64-7.76-3.64-3.09,0-5.71,1.29-7.84,3.88-2.13,2.59-3.33,5.93-3.6,10.04Z"/>
+                <path d="M78.16,117.63v73.39h-3.76s0-70.44,0-70.44l3.76-2.96Z"/>
+                <path d="M125.44,141.63l3.76-2v19.04c3.57-3.15,7.52-4.72,11.84-4.72,4.59,0,8.08,1.36,10.48,4.08,2.35,2.67,3.52,6.48,3.52,11.44v21.76h-3.76v-21.36c0-8.32-3.71-12.48-11.12-12.48-2.03,0-4.08.53-6.16,1.6-2.08,1.07-3.68,2.38-4.8,3.92v28.32h-3.76v-49.6Z"/>
+                <path d="M162.96,142.51c0-.8.28-1.48.84-2.04.56-.56,1.24-.84,2.04-.84s1.48.28,2.04.84c.56.56.84,1.24.84,2.04s-.28,1.48-.84,2.04c-.56.56-1.24.84-2.04.84s-1.48-.28-2.04-.84-.84-1.24-.84-2.04ZM167.68,154.91v36.32h-3.76v-36.32h3.76Z"/>
+                <path d="M180.48,158.99c3.68-3.36,7.84-5.04,12.48-5.04,4.37,0,7.76,1.41,10.16,4.24,2.35,2.67,3.52,6.43,3.52,11.28v21.76h-3.76v-21.36c0-8.32-3.63-12.48-10.88-12.48-4.69,0-8.43,1.84-11.2,5.52v28.32h-3.76v-36.32h3.12l.32,4.08Z"/>
+                <path d="M214.56,142.51c0-.8.28-1.48.84-2.04.56-.56,1.24-.84,2.04-.84s1.48.28,2.04.84c.56.56.84,1.24.84,2.04s-.28,1.48-.84,2.04c-.56.56-1.24.84-2.04.84s-1.48-.28-2.04-.84-.84-1.24-.84-2.04ZM219.28,154.91v36.32h-3.76v-36.32h3.76Z"/>
+                <path d="M253.52,187.15c-3.68,3.36-7.84,5.04-12.48,5.04-3.79,0-6.85-1.57-9.2-4.72-2.13-2.83-3.2-6.43-3.2-10.8v-21.76h3.76v21.36c0,8.32,3.2,12.48,9.6,12.48,4.64,0,8.37-1.89,11.2-5.68v-28.16h3.76v36.32h-3.12l-.32-4.08Z"/>
+                <path d="M269.11,158.83c4.11-3.25,8.11-4.88,12-4.88,4.37,0,7.76,1.76,10.16,5.28,4.05-3.52,8.48-5.28,13.28-5.28,4.32,0,7.68,1.44,10.08,4.32,2.29,2.72,3.44,6.45,3.44,11.2v21.76h-3.76v-21.36c0-8.32-3.57-12.48-10.72-12.48-3.73,0-7.33,1.6-10.8,4.8.8,2.13,1.2,4.56,1.2,7.28v21.76h-3.76v-21.36c0-8.32-3.33-12.48-10-12.48-4.27,0-7.87,1.89-10.8,5.68v28.16h-3.76v-36.32h3.12l.32,3.92Z"/>
+                <path d="M90,154.91l.64,4.16c2.88-3.41,7.07-5.12,12.56-5.12,5.12,0,9.17,2,12.16,6,2.51,3.36,3.76,7.49,3.76,12.4,0,6.51-1.81,11.6-5.44,15.28-2.99,3.04-6.61,4.56-10.88,4.56-5.12,0-9.17-1.6-12.16-4.8v18.64h-3.76v-51.12h3.12ZM90.64,163.39v19.84c1.01,1.6,2.53,2.92,4.56,3.96,2.03,1.04,4.11,1.56,6.24,1.56,4.11,0,7.41-1.47,9.92-4.4,2.35-2.77,3.52-6.51,3.52-11.2,0-5.33-1.33-9.39-4-12.16-2.24-2.4-5.2-3.6-8.88-3.6-2.24,0-4.41.56-6.52,1.68-2.11,1.12-3.72,2.56-4.84,4.32Z"/>
+                <rect x="86.88" y="204.95" width="3.76" height="20.85"/>
+              </g>
+            </svg>
+          </a>
+          <p class="dl-footer__tag">Canvas delivers content. <strong>Delphinium delivers engagement.</strong></p>
+        </div>
+        <nav class="dl-footer__col" aria-label="Footer page sections">
+          <p class="dl-footer__h">On this page</p>
+          <ul class="dl-footer__links">
+            <li><a href="#control-tower">Control Tower</a></li>
+            <li><a href="#community-builder">Community Builder</a></li>
+            <li><a href="#engagement-builder">Engagement Builder</a></li>
+            <li><a href="#customers">In Their Own Words</a></li>
+            <li><a href="#proof-eyebrow">Proof</a></li>
+            <li><a href="#easy-to-deploy">Easy to Deploy</a></li>
+          </ul>
+        </nav>
+        <div class="dl-footer__col dl-footer__cta">
+          <p class="dl-footer__h">Talk with us</p>
+          <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
+          <ul class="dl-footer__links">
+            <li><a href="/contact-us" data-site-path="/contact-us">Contact</a></li>
+            <li><a href="/support" data-site-path="/support">Support</a></li>
+          </ul>
+          <ul class="dl-footer__social" aria-label="Delphinium on social media">
+            <li><a href="https://www.youtube.com/@DelphiniumEngage" target="_blank" rel="noopener noreferrer" aria-label="Delphinium on YouTube" title="Delphinium on YouTube"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true" focusable="false"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/company/78437190" target="_blank" rel="noopener noreferrer" aria-label="Delphinium on LinkedIn" title="Delphinium on LinkedIn"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/jared-chapman-90823213" target="_blank" rel="noopener noreferrer" aria-label="Jared Chapman on LinkedIn" title="Jared Chapman on LinkedIn"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><span class="dl-footer__social-badge" aria-hidden="true">J</span></a></li>
+            <li><a href="https://www.facebook.com/1502817329972174" target="_blank" rel="noopener noreferrer" aria-label="Delphinium on Facebook" title="Delphinium on Facebook"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a></li>
+            <li><a href="https://x.com/ProjDelphinium" target="_blank" rel="noopener noreferrer" aria-label="Delphinium on X" title="Delphinium on X"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="dl-footer__bottom">
+        <p>&copy; 2026 Delphinium</p>
+        <p class="dl-footer__legal"><a href="/eula" data-site-path="/eula">EULA</a> · <a href="/purchase-agreement" data-site-path="/purchase-agreement">Purchase agreement</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="dl-modal dl-modal--research" id="dl-research-modal" role="dialog" aria-modal="true" aria-labelledby="dl-research-title" hidden>
+    <div class="dl-modal__backdrop" data-research-close></div>
+    <div class="dl-modal__box">
+      <div class="dl-modal__bar">
+        <p class="dl-modal__title">Research citations</p>
+        <button type="button" class="dl-modal__close" data-research-close aria-label="Close research"><span class="dl-modal__close-x" aria-hidden="true"></span></button>
+      </div>
+      <div class="dl-modal__panel" tabindex="-1">
+        <p class="dl-research__eyebrow">Research foundation</p>
+        <h2 class="dl-research__h" id="dl-research-title">Validated by research, <em>Demonstrated in classrooms.</em></h2>
+        <ol class="dl-research__refs">
+          <li>Chapman, J. R., &amp; Andrade, M. (2024). <cite><a href="https://link.springer.com/article/10.1007/s11423-024-10352-2" target="_blank" rel="noopener noreferrer">Improving part-time instructors' student failure rate with an educational engagement information system.</a></cite> Educational Technology Research and Development.</li>
+          <li>Chapman, J. R., Kohler, T. B., Rich, P. J., &amp; Trego, A. (2023). <cite><a href="https://www.tandfonline.com/doi/full/10.1080/15391523.2023.2242981" target="_blank" rel="noopener noreferrer">Maybe we've got it wrong: An experimental evaluation of self-determination and flow theory in gamification.</a></cite> Journal of Research on Technology in Education, 57(2), 417&ndash;436.</li>
+          <li>Chapman, J. R., Kohler, T. B., &amp; Gedeborg, S. (2023). <cite><a href="https://doi.org/10.1177/07356331221127635" target="_blank" rel="noopener noreferrer">So, why do students perform better in gamified courses? Understanding motivational styles in educational gamification.</a></cite> Journal of Educational Computing Research, 61(5), 927&ndash;950.</li>
+          <li>Nadolny, L., Malone, L., Chapman, J., &amp; Alam, M. (2022). <cite><a href="https://www.learntechlib.org/primary/p/221337/" target="_blank" rel="noopener noreferrer">Participatory gamification design: Navigating diverse perspectives.</a></cite> In Proceedings of EdMedia + Innovate Learning (pp. 534&ndash;540). AACE.</li>
+          <li>Brown, M. G., Lamm, M. H., &amp; Nadolny, L. (2021). <cite><a href="https://dr.lib.iastate.edu/bitstreams/a83f981b-fad6-4732-a879-02494cd65813/download" target="_blank" rel="noopener noreferrer">Gamification of chemical engineering pathways: Evidence from introductory courses.</a></cite> 2021 ASEE Virtual Annual Conference.</li>
+          <li>Chapman, J. R., &amp; Rich, P. J. (2018). <cite><a href="https://www.tandfonline.com/doi/full/10.1080/08832323.2018.1490687" target="_blank" rel="noopener noreferrer">Does educational gamification improve students' motivation? If so, which game elements work best?</a></cite> Journal of Education for Business, 93(7), 315&ndash;322.</li>
+          <li>Chapman, J. R., &amp; Rich, P. J. (2017). <cite><a href="https://doi.org/10.24251/HICSS.2017.157" target="_blank" rel="noopener noreferrer">Identifying motivational styles in educational gamification.</a></cite> In Proceedings of the 50th Hawaii International Conference on System Sciences (pp. 1318&ndash;1327).</li>
+          <li>Barrus, A., Chapman, J., Bodily, R., &amp; Rich, P. (2016). <cite>Using educational technologies to scaffold high school and college students' skill &amp; will to plan, practice, and produce.</cite> In L. Lin &amp; R. Atkinson (Eds.), Educational technologies: Challenges, applications and learning outcomes. Nova Science Publishers.</li>
+          <li>Cieslewicz, J., Helquist, J., Chapman, J. R., &amp; Baily, J. (submitted). <cite>Impact on student performance of automated messages used to increase student perception of instructor presence.</cite> Advances in Accounting Education.</li>
+          <li>Chapman, J. R., Odongo, G., Jacob, J., &amp; Hansen, R. (in preparation). <cite>Delphinium's impact on academic outcomes for students with Individualized Education Programs (IEPs).</cite> Manuscript in process.</li>
+        </ol>
+        <div class="dl-research__foot">
+          <p>See the research at work in your own Canvas courses.</p>
+          <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-research-book>Schedule a demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dl-modal dl-modal--contact" id="dl-contact-modal" role="dialog" aria-modal="true" aria-labelledby="dl-contact-title" hidden>
+    <div class="dl-modal__backdrop" data-contact-close></div>
+    <div class="dl-modal__box">
+      <div class="dl-modal__bar">
+        <p class="dl-modal__title">Contact</p>
+        <button type="button" class="dl-modal__close" data-contact-close aria-label="Close contact form"><span class="dl-modal__close-x" aria-hidden="true"></span></button>
+      </div>
+      <div class="dl-modal__panel" tabindex="-1">
+        <div data-contact-view="form">
+          <h2 class="dl-research__h" id="dl-contact-title">Get in <em>touch.</em></h2>
+          <p class="dl-contact__intro">Send us a note and we'll get back to you.</p>
         </div>
         <div class="dl-contact__done" data-contact-view="done" hidden>
           <h2 class="dl-research__h">Thanks for <em>reaching out.</em></h2>
@@ -3444,6 +3638,29 @@
         });
       }
       window.dlSiteOrigin = siteOrigin;
+      (function pathChrome() {
+        var match = (document.documentElement.className.match(/dl-path-(home|contact|support|eula|agree|other)/) || []);
+        var pathClass = match[1] || "home";
+        if (pathClass === "home") return;
+        var homeBase = (siteOrigin || "") + "/";
+        document.querySelectorAll('a[href^="#"]').forEach(function (el) {
+          if (el.classList.contains("dl-skip")) return;
+          var hash = el.getAttribute("href");
+          el.setAttribute("href", hash === "#top" ? homeBase : homeBase + hash);
+        });
+        var homeMain = document.querySelector("main.dl-home");
+        if (pathClass === "other") {
+          var nav = document.querySelector(".dl-nav");
+          if (homeMain) homeMain.removeAttribute("id");
+          if (nav) { nav.id = "top"; nav.tabIndex = -1; }
+          return;
+        }
+        var page = document.querySelector('[data-dl-page="' + pathClass + '"]');
+        if (homeMain && page) {
+          homeMain.removeAttribute("id");
+          page.id = "top";
+        }
+      })();
       var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       var hasIO = "IntersectionObserver" in window;
 
@@ -4073,7 +4290,22 @@
         ];
         var pendingThanks = false;
         var origin = window.dlSiteOrigin || "";
-        if (origin && returnEl) returnEl.value = origin + "/?contact=thanks";
+        var prodOrigin = "https://www.delphi-me.com";
+        var stagingXn = "33c9e1be8d9da155f5e9aa42757034c32feaef519e3e812621a1ae4ea74a84b8";
+        var stagingXm = "c80403ceb24b11a2e4bd4f20d1c093d25333ef1e65522ccadab1971163e8426b70642c2da599fc0b8b48822ba96d2c61";
+        function applyStagingContact() {
+          var xnEl = form.querySelector('[name="xnQsjsdp"]');
+          var xmEl = form.querySelector('[name="xmIwtLD"]');
+          var srcEl = form.querySelector('[name="CONTACTCF3"]');
+          if (xnEl) xnEl.value = stagingXn;
+          if (xmEl) xmEl.value = stagingXm;
+          if (srcEl) srcEl.value = "Website Contact Us (staging)";
+          if (returnEl) returnEl.value = (origin || "") + "/?contact=thanks";
+          if (captchaImg) captchaImg.src = "https://crm.zoho.com/crm/CaptchaServlet?formId=" + stagingXm + "&grpid=" + stagingXn;
+        }
+        var onContactPage = document.documentElement.classList.contains("dl-path-contact");
+        if (!onContactPage && formView) formView.appendChild(form);
+        if (!onContactPage && origin !== prodOrigin) applyStagingContact();
 
         function problem(item) {
           var v = item.el.value.trim();
@@ -4167,7 +4399,7 @@
           el.addEventListener("click", dialog.open);
         });
 
-        if (new URLSearchParams(window.location.search).get("contact") === "thanks") {
+        if (document.documentElement.classList.contains("dl-path-home") && new URLSearchParams(window.location.search).get("contact") === "thanks") {
           pendingThanks = true;
           dialog.open();
           var params = new URLSearchParams(window.location.search);
@@ -4176,7 +4408,113 @@
           history.replaceState(null, "", next);
         }
 
+        if (onContactPage) {
+          var page = document.querySelector('[data-dl-page="contact"]');
+          if (page && new URLSearchParams(window.location.search).get("contact") === "thanks") {
+            page.querySelector('[data-cu-view="form"]').hidden = true;
+            page.querySelector('[data-cu-view="done"]').hidden = false;
+            var thanksParams = new URLSearchParams(window.location.search);
+            thanksParams.delete("contact");
+            history.replaceState(null, "", window.location.pathname + (thanksParams.toString() ? "?" + thanksParams.toString() : "") + window.location.hash);
+          } else {
+            reloadCaptcha();
+          }
+        }
+
         window.dlOpenContact = dialog.open;
+      })();
+
+      function dlEmailProblem(value) {
+        var at = value.indexOf("@");
+        var dot = value.lastIndexOf(".");
+        if (at < 1 || dot < at + 2 || dot + 2 >= value.length) return "Please enter a valid email address.";
+        return "";
+      }
+
+      function dlStripQuery(key) {
+        var params = new URLSearchParams(window.location.search);
+        if (params.get(key) == null) return;
+        params.delete(key);
+        var next = window.location.pathname + (params.toString() ? "?" + params.toString() : "") + window.location.hash;
+        history.replaceState(null, "", next);
+      }
+
+      /* /support is a real multipart POST to Zoho Desk. Captcha image comes from Desk's script. */
+      (function () {
+        var page = document.querySelector('[data-dl-page="support"]');
+        var form = document.getElementById("dl-su-form");
+        if (!page || !form) return;
+        var formView = page.querySelector('[data-su-view="form"]');
+        var doneView = page.querySelector('[data-su-view="done"]');
+        var submitBtn = document.getElementById("dl-su-submit");
+        var emailEl = document.getElementById("dl-su-email");
+        var fileErr = document.getElementById("dl-su-file-err");
+        var maxBytes = 20 * 1024 * 1024;
+        var checks = [
+          { el: document.getElementById("dl-su-last"), err: "dl-su-last-err", empty: "Please enter your last name." },
+          { el: emailEl, err: "dl-su-email-err", empty: "Please enter your email.", email: true },
+          { el: document.getElementById("dl-su-subject"), err: "dl-su-subject-err", empty: "Please enter a ticket short name." },
+          { el: document.getElementById("dl-su-course"), err: "dl-su-course-err", empty: "Please enter a course URL, or N/A." },
+          { el: document.getElementById("dl-su-desc"), err: "dl-su-desc-err", empty: "Please describe the issue." },
+          { el: document.getElementById("dl-su-captcha"), err: "dl-su-captcha-err", empty: "Please enter the captcha." }
+        ];
+
+        function problem(item) {
+          var v = item.el.value.trim();
+          if (!v) return item.empty;
+          if (item.email) return dlEmailProblem(v);
+          return "";
+        }
+        function setError(item, text) {
+          var err = document.getElementById(item.err);
+          err.textContent = text;
+          err.hidden = !text;
+          if (text) item.el.setAttribute("aria-invalid", "true");
+          else item.el.removeAttribute("aria-invalid");
+        }
+        function validate(item) {
+          var text = problem(item);
+          setError(item, text);
+          return !text;
+        }
+        function fileProblem() {
+          var inputs = form.querySelectorAll('input[type="file"]');
+          var i, file;
+          for (i = 0; i < inputs.length; i++) {
+            file = inputs[i].files && inputs[i].files[0];
+            if (file && file.size > maxBytes) return "Each attachment must be 20 MB or smaller.";
+          }
+          return "";
+        }
+        checks.forEach(function (item) {
+          item.el.addEventListener("blur", function () {
+            if (item.el.value.trim() || item.el.hasAttribute("aria-invalid")) validate(item);
+          });
+          item.el.addEventListener("input", function () {
+            if (item.el.hasAttribute("aria-invalid")) validate(item);
+          });
+        });
+        form.addEventListener("submit", function (e) {
+          var firstBad = null;
+          checks.forEach(function (item) {
+            if (!validate(item) && !firstBad) firstBad = item.el;
+          });
+          var filesMsg = fileProblem();
+          fileErr.textContent = filesMsg;
+          fileErr.hidden = !filesMsg;
+          if (firstBad || filesMsg) {
+            e.preventDefault();
+            if (firstBad) firstBad.focus();
+            return;
+          }
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Sending...";
+        });
+        if (document.documentElement.classList.contains("dl-path-support") && new URLSearchParams(window.location.search).get("ticket") === "thanks") {
+          formView.hidden = true;
+          doneView.hidden = false;
+          dlStripQuery("ticket");
+        }
       })();
 
 </script>
