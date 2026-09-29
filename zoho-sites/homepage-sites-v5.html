@@ -92,8 +92,17 @@
       overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
     }
 
-    /* K-12 | Higher Ed switch: compact pill in the header bar (720px+), full width at the top of the mobile menu below that, repeated in the footer */
-    .dl-aud { display: flex; flex: none; }
+    /* K-12 | Higher Ed switch: label + pill just right of the logo in the header bar (720px+), full width at the top of the mobile menu below that, repeated in the footer */
+    .dl-aud { display: flex; flex: none; align-items: center; gap: 0.6rem; }
+    .dl-aud__label {
+      margin: 0;
+      font-family: var(--font-text);
+      font-size: 0.85rem;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--ink-soft);
+      white-space: nowrap;
+    }
     .dl-aud__seg {
       display: inline-flex;
       gap: 2px;
@@ -133,13 +142,20 @@
     @media (prefers-reduced-motion: no-preference) {
       .dl-aud__opt { transition: background-color 150ms ease, color 150ms ease; }
     }
+    /* Header: the group sits at the left of the bar; the section links and CTA stay right */
+    .dl-nav > .dl-aud { margin-right: auto; }
+    /* Too tight for the label beside the full nav (980-1079) or beside the CTA and menu button (720-799): the header shows the pill alone */
+    @media (max-width: 799.98px), (min-width: 980px) and (max-width: 1079.98px) {
+      .dl-nav > .dl-aud .dl-aud__label { display: none; }
+    }
     /* Footer (dark surface) */
-    .dl-footer__aud { margin-top: 1.4rem; }
+    .dl-footer__aud { margin-top: 1.4rem; flex-direction: column; align-items: flex-start; }
+    .dl-footer__aud .dl-aud__label { color: rgba(255, 255, 255, 0.62); }
     .dl-footer__aud .dl-aud__seg { background: rgba(255, 255, 255, 0.06); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.24); }
     .dl-footer__aud .dl-aud__opt { color: rgba(255, 255, 255, 0.82); }
     .dl-footer__aud .dl-aud__opt:hover { color: #fff; background: rgba(255, 255, 255, 0.12); }
     .dl-footer__aud .dl-aud__opt[aria-current="page"] { color: var(--navy-deep); background: #fff; }
-    @media (max-width: 719px) {
+    @media (max-width: 719.98px) {
       .dl-nav > .dl-aud { display: none; }
       .dl-footer__aud .dl-aud__opt { min-height: 2.75rem; }
     }
@@ -366,7 +382,7 @@
     .dl-mnav__list a:not(.dl-btn):hover { color: var(--accent); }
     .dl-mnav__cta { display: none; padding-top: 0.75rem; }
     .dl-mnav__cta .dl-btn { width: 100%; min-height: 2.75rem; }
-    .dl-mnav__aud { margin: 0 0 0.6rem; padding-bottom: 0.9rem; border-bottom: 1px solid var(--line); }
+    .dl-mnav__aud { flex-direction: column; align-items: stretch; gap: 0.45rem; margin: 0 0 0.6rem; padding-bottom: 0.9rem; border-bottom: 1px solid var(--line); }
     .dl-mnav__aud .dl-aud__seg { display: flex; width: 100%; }
     .dl-mnav__aud .dl-aud__opt { min-height: 2.75rem; font-family: var(--font-display); font-size: 1.05rem; }
     @media (min-width: 720px) {
@@ -2677,6 +2693,13 @@
       <img src="assets/logo-new.svg" width="211" height="150" alt="Delphinium">
     </a>
     <header class="dl-nav">
+      <nav class="dl-aud" aria-label="Choose version">
+        <p class="dl-aud__label">My institution is</p>
+        <ul class="dl-aud__seg">
+          <li><a class="dl-aud__opt" href="homepage-sites-v5.html" data-aud="k12" aria-current="page">K-12</a></li>
+          <li><a class="dl-aud__opt" href="homepage-sites-v5-highered.html" data-aud="he">Higher Ed</a></li>
+        </ul>
+      </nav>
       <nav class="dl-nav__links" aria-label="Page sections">
         <div class="dl-nav__drop">
           <button type="button" class="dl-nav__drop-btn" aria-expanded="false" aria-controls="dl-nav-solutions" id="dl-nav-solutions-btn">Solutions</button>
@@ -2689,12 +2712,6 @@
         <a href="#customers">In Their Own Words</a>
         <a href="#proof-eyebrow">Proof</a>
       </nav>
-      <nav class="dl-aud" aria-label="Choose version">
-        <ul class="dl-aud__seg">
-          <li><a class="dl-aud__opt" href="homepage-sites-v5.html" data-aud="k12" aria-current="page">K-12</a></li>
-          <li><a class="dl-aud__opt" href="homepage-sites-v5-highered.html" data-aud="he">Higher Ed</a></li>
-        </ul>
-      </nav>
       <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
       <button type="button" class="dl-nav__menu-btn" id="dl-mnav-btn" aria-expanded="false" aria-controls="dl-mnav" aria-label="Menu">
         <span class="dl-nav__menu-icon" aria-hidden="true"></span>
@@ -2702,6 +2719,7 @@
     </header>
     <nav class="dl-mnav" id="dl-mnav" aria-label="Menu" hidden>
       <div class="dl-aud dl-mnav__aud" role="group" aria-label="Choose version">
+        <p class="dl-aud__label">My institution is</p>
         <ul class="dl-aud__seg">
           <li><a class="dl-aud__opt" href="homepage-sites-v5.html" data-aud="k12" aria-current="page">K-12</a></li>
           <li><a class="dl-aud__opt" href="homepage-sites-v5-highered.html" data-aud="he">Higher Ed</a></li>
@@ -3314,6 +3332,7 @@
           </a>
           <p class="dl-footer__tag">Canvas delivers content. <strong>Delphinium delivers engagement.</strong></p>
           <div class="dl-aud dl-footer__aud" role="group" aria-label="Choose version">
+            <p class="dl-aud__label">My institution is</p>
             <ul class="dl-aud__seg">
               <li><a class="dl-aud__opt" href="homepage-sites-v5.html" data-aud="k12" aria-current="page">K-12</a></li>
               <li><a class="dl-aud__opt" href="homepage-sites-v5-highered.html" data-aud="he">Higher Ed</a></li>
