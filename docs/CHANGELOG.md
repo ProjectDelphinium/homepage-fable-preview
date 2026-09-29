@@ -5,6 +5,11 @@
 - Header Code no longer carries the static K-12 `<title>`. The path script and Zoho page SEO fields set the title per path. The build fails if a `<title>` returns.
 - Logo strip pause control and one section spacing (`clamp(4rem, 9vw, 7rem)`) kept through the SEO merge. Not published to Zoho.
 
+## 2026-09-29 — Jared's SEO answers
+- Organization JSON-LD email is support@delphi-me.com.
+- YouTube sameAs stays https://www.youtube.com/@DelphiniumEngage.
+- /highered meta description includes as much as 47% / 67% / 65% and the dropout definition. Home meta stays "up to 31%".
+
 ## 2026-09-29 — GEO / AEO / SEO pack
 - Header Code now emits Organization, WebSite, and SoftwareApplication JSON-LD, plus a Zoho-hosted Open Graph image. No SearchAction, ratings, or invented price.
 - Path script sets title and description per path. `/highered` no longer inherits the K-12 description. Home promises stay "up to 31%".

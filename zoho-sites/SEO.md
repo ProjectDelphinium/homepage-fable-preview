@@ -28,7 +28,7 @@ Header Code is shared, so it does **not** include a sitewide meta description or
 | Page | Title | Description |
 | --- | --- | --- |
 | `/` and `/home` | Delphinium · Canvas delivers content. Delphinium delivers engagement. | The Canvas engagement layer for K-12 online schools. Turn the Canvas courses you already run into engaging student experiences and an early-warning system for teachers. Up to 31% fewer course failures. |
-| `/highered` | Higher Ed Online · Delphinium | Delphinium is the Canvas engagement layer for Higher Ed Online programs. Faculty keep teaching in Canvas. It adds motivation and early-warning visibility, with no course migration. |
+| `/highered` | Higher Ed Online · Delphinium | Delphinium is the Canvas engagement layer for Higher Ed Online programs. In Higher Ed Online sections, course failure is as much as 47% lower, withdrawal as much as 67% lower, and dropout as much as 65% lower. Dropout means finishing with less than about a third of the points. |
 | `/contact-us` | Contact · Delphinium | Contact Delphi M.E. about Delphinium for K-12 online schools and Higher Ed Online programs on Canvas. |
 | `/support` | Support · Delphinium | Get support for Delphinium on Canvas. Send a ticket and Delphi M.E. will get back to you. |
 | `/eula` | EULA · Delphinium | End user license agreement for Delphinium (Delphi M.E. LLC). |
@@ -41,7 +41,7 @@ On each of those pages, also set:
 - Canonical: the `https://www.delphi-me.com/...` URL for that path
 - Do not set keywords equal to the title
 
-Do not put 47%, 67%, or 65% in the Higher Ed meta description unless Jared asks.
+`/highered` uses those Higher Ed percents. Do not put the K-12 “Up to 31%” line on that page. Home stays “up to 31%”.
 
 ## After publish, check
 
@@ -51,6 +51,12 @@ Do not put 47%, 67%, or 65% in the Higher Ed meta description unless Jared asks.
 - One visible H1 on home, Higher Ed, contact, and support.
 - https://validator.schema.org/ on the homepage JSON-LD.
 
-## Still NEED_JARED
+## Resolved (Jared, 2026-09-29)
 
-Public contact email, YouTube handle confirmation (`@DelphiniumEngage` vs `@DelphiniumEngagement`), vanity social URLs, Higher Ed percents in meta, a PNG logo if SVG is too weak for Google, and any AI-crawler blocks.
+- Public contact email in Organization JSON-LD: `support@delphi-me.com`
+- YouTube `sameAs`: `https://www.youtube.com/@DelphiniumEngage`
+- `/highered` meta includes as much as 47% / 67% / 65% and the dropout definition
+
+## Still open (optional)
+
+Vanity social URLs, a PNG logo if the SVG is too weak for Google, and any AI-crawler blocks.
