@@ -25,7 +25,6 @@ CHROME = Path(__file__).resolve().parent / "zoho-chrome-hide.css"
 SAFETY = Path(__file__).resolve().parent / "safety-reset.css"
 CHAR_CAP = 44900
 LEAD_TYPO = "courses you already teach in into"
-CANVAS_COMMA = "Your school already runs on Canvas,"
 
 # Favicons copied from the Zoho-hosted files (serverless@8daf637
 # stacks/theme/assets/images/favicon.svg and
@@ -92,17 +91,6 @@ def rewrite_assets(src: str) -> tuple[str, list[dict]]:
     return src, man
 
 
-def strip_watch_titles(src: str) -> str:
-    """Pack-only. Native title tooltips on Watch links duplicated the visible label."""
-
-    def strip_title(m: re.Match) -> str:
-        tag = m.group(0)
-        title = re.search(r' title="[^"]*"', tag)
-        return tag.replace(title.group(0), "") if title else tag
-
-    return re.sub(r'<a [^>]*data-(?:youtube|mux)="[^"]*"[^>]*>', strip_title, src)
-
-
 def transform_document(src: str) -> tuple[str, list[dict]]:
     src = src.replace("\r", "")
     src, man = rewrite_assets(src)
@@ -113,7 +101,6 @@ def transform_document(src: str) -> tuple[str, list[dict]]:
     src = src.replace("<style>", "<style>\n" + FONT_COMMENT + faces + "\n", 1)
     for url in re.findall(r"url\((/dl28-font-[^)]+)\)", faces):
         man.append({"old": "fonts.gstatic.com (Google Fonts css2)", "new": url})
-    src = strip_watch_titles(src)
     src = src.replace("</style>", BOOKINGS_CLIP + "</style>", 1)
     seen: set[str] = set()
     deduped = []
@@ -243,15 +230,11 @@ def custom_css(doc: str) -> str:
 
 
 def flag_copy(doc: str) -> None:
-    if LEAD_TYPO not in doc:
-        print("WARNING: expected lead typo was not found. Copy was not changed by this script.", file=sys.stderr)
-    else:
+    if LEAD_TYPO in doc:
         print(
-            'FLAG: lead typo left unchanged: "courses you already teach in into"',
+            'FLAG: hero still says "courses you already teach in into". That extra "in" is a grammar error.',
             file=sys.stderr,
         )
-    if CANVAS_COMMA not in doc:
-        raise SystemExit('missing source comma: "Your school already runs on Canvas,"')
 
 
 def assert_cap(name: str, text: str) -> None:

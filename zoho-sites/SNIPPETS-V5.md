@@ -44,11 +44,11 @@ python3 tools/zoho/build_zoho_pack.py
 
 **Contact:** the footer Contact link is `/contact-us` (a separate Zoho page). With JS it becomes `data-site-origin` plus `/contact-us`. The homepage modal stays for any `[data-contact-open]` control and `dlOpenContact`. The modal is a real `<form method="POST">` to `https://crm.zoho.com/crm/WebToContactForm`. Hidden fields stay `xnQsjsdp`, `zc_gad`, `xmIwtLD`, `actionType`, `returnURL`, `CONTACTCF3` (`Website Contact Us (staging)`), and honeypot `aG9uZXlwb3Q` (empty). The captcha image is Zoho's CaptchaServlet, with Reload and `enterdigest`. A valid submit navigates the page. Zoho sends people back to `returnURL`, and `?contact=thanks` opens the thank-you state. Production cutover: on `<body>`, set `data-site-origin` to `data-site-origin-production` (`https://www.delphi-me.com`). That switches the footer Contact link and the CRM return URL. Update `CONTACTCF3` if CRM issues a production source value. Then rebuild.
 
-**Watch pills:** local `.dl-link:hover` stays cyan fill, navy-deep text, cyan border. The pack strips the native `title` attribute on `a[data-youtube]` and `a[data-mux]` so the browser tooltip does not repeat the visible label. `data-title` stays (the modal uses it). That strip is pack-only until Jared asks for it in source.
+**Watch pills:** local `.dl-link:hover` stays cyan fill, navy-deep text, cyan border. `title` and `data-title` stay as on `962c89f`. The pack does not strip them.
 
-**Close punch:** source reads `Your school already runs on Canvas,` (trailing comma). The comma was absent on `962c89f` and is reapplied here.
+**Close punch:** source keeps `962c89f`: `Your school already runs on Canvas` with no trailing comma. The older pack's comma does not override that page.
 
-**Flag, do not edit:** the hero lead still says "courses you already teach in into". That typo is intentional until Jared changes the copy. The build script prints the flag and leaves the words alone.
+**Grammar:** the hero lead is `courses you already teach into` (the extra "in" in "teach in into" was a clear error). The build prints a flag if that extra "in" comes back.
 
 **Flag, Mewa:** `mewalogo.gif` is rewritten to `/dl28-mewalogo.gif` so the image loads, and it is still not in the approved source list (`context/SOURCE.md`). Keep it as Jared has it. Do not add a new customer claim around it.
 

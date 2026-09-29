@@ -2743,7 +2743,7 @@ main a,
     }
 
     /* Contact modal: kept for [data-contact-open]. Footer Contact goes to /contact-us. */
-    .dl-modal--contact .dl-modal__box { width: min(100%, 640px); }
+    .dl-modal--contact .dl-modal__box { width: min(100%, 600px); }
     .dl-modal--contact .dl-modal__panel:focus { outline: none; }
     .dl-contact__intro { margin: 0.7rem 0 0; font-size: 1.05rem; line-height: 1.5; color: var(--ink-soft); }
     .dl-contact__form { display: grid; gap: 1.1rem; margin-top: 1.5rem; }
