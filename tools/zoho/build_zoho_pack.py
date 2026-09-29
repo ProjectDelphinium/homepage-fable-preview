@@ -411,8 +411,20 @@ def assert_seo(header: str, footer: str) -> None:
     for bit in ("as much as 47%", "as much as 67%", "as much as 65%"):
         if bit not in he_desc:
             raise SystemExit("Higher Ed meta description missing " + bit)
-    if 'id="dl-define"' not in header:
-        raise SystemExit("definition block missing from Header Code")
+    if 'id="dl-define"' in header or "dl-define" in header:
+        raise SystemExit("hero definition line is back in the visible page")
+    if 'id="dl-faq"' not in header:
+        raise SystemExit("Q&A block missing from the homepage")
+    close_at = header.find('id="close-heading"')
+    faq_at = header.find('id="dl-faq"')
+    if close_at < 0 or faq_at < close_at:
+        raise SystemExit("Q&A must sit after the close section, above the footer")
+    if "FAQPage" in header or "FAQPage" in footer:
+        raise SystemExit("FAQPage schema is not allowed")
+    if "Davis School District, Utah. <b>72 online classes and 6,000 students.</b>" not in header:
+        raise SystemExit("Davis proof context line was not restored")
+    if "Davis Connect, Davis School District, Utah." in header:
+        raise SystemExit("Davis proof context line was rewritten again")
     if "/dl28-canvas-module-before.svg" not in header:
         raise SystemExit("Canvas before asset was not rewritten to /dl28-")
     if header.count("<h1") != 1:

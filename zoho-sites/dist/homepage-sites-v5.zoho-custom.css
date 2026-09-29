@@ -957,17 +957,13 @@ main a,
       color: var(--ink-soft);
     }
     .dl-hero__lead b { color: var(--ink); font-weight: 600; }
-    .dl-define {
-      margin: 1rem 0 0;
-      max-width: 46rem;
-      font-size: 1.05rem;
-      line-height: 1.5;
-      color: var(--ink);
+    .dl-faq {
+      padding: 0 0 clamp(3.5rem, 7vw, 5.5rem);
     }
-    .dl-define strong { font-weight: 700; }
+    .dl-faq .dl-h2 { font-size: clamp(1.55rem, 2.6vw, 2rem); max-width: 24ch; }
     .dl-faq h3 {
-      margin: 1.35rem 0 0.35rem;
-      font-size: 1.2rem;
+      margin: 1.15rem 0 0.3rem;
+      font-size: 1.15rem;
       line-height: 1.25;
       color: var(--ink);
     }
