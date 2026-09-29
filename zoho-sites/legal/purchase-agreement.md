@@ -1,8 +1,8 @@
-<!-- Source: https://delphi-me.com/purchase-agreement | fetched 2026-09-28 18:14 MDT | HTTP 200 | title: Purchase Agreement. Text follows that fetch (zero-width spaces removed); headings added from numbered sections. Opening entity corrected 2026-09-29 from "Delphinium, Inc." to "Delphi M.E. LLC". The live Zoho page still needs that opening line pasted. -->
+<!-- Source: https://delphi-me.com/purchase-agreement | fetched 2026-09-28 18:14 MDT read-only | HTTP 200 | title: Purchase Agreement. Text is verbatim (zero-width spaces removed); headings added from numbered sections. -->
 
 # DELPHINIUM PURCHASE AGREEMENT
 
-This Purchase Agreement is between Delphi M.E. LLC and Purchaser identified in invoice.
+This Purchase Agreement is between Delphinium, Inc. and Purchaser identified in invoice.
 
 ## Definitions
 
