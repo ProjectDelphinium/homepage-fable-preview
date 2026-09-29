@@ -155,7 +155,9 @@ def header_code(doc: str) -> str:
         "if(!m){m=document.createElement('meta');m.name='description';document.head.appendChild(m);}"
         "m.setAttribute('content',\"" + desc + "\");}catch(e){}</script>"
     )
-    body_start = doc.find('<div class="dl-top">')
+    body_start = doc.find('<a class="dl-skip"')
+    if body_start < 0:
+        body_start = doc.find('<div class="dl-top">')
     body_end = doc.rfind("</script>")
     if body_start < 0 or body_end < body_start:
         raise SystemExit("page body markers missing")
@@ -164,14 +166,23 @@ def header_code(doc: str) -> str:
 
 
 def keep_ws(src: str) -> str:
-    """Zoho strips whitespace-only text between tags. Encode it as &#32; outside script/style/textarea/pre."""
+    """Zoho strips whitespace-only text between tags.
+
+    Same-line gaps separate inline words ("would YOU rather"), so they become &#32;.
+    Newline gaps are block or flex boundaries. Encoding those pushed Header Code over
+    Zoho's 44,900 cap, and dropping them does not join the inline words.
+    """
     parts = re.split(r"(<(script|style|textarea|pre)\b.*?</\2>)", src, flags=re.S | re.I)
     out = []
     i = 0
     while i < len(parts):
         seg = parts[i]
         if i % 3 == 0:
-            seg = re.sub(r">[ \t\n\r]+<", ">&#32;<", seg)
+            def repl(m: re.Match) -> str:
+                if "\n" in m.group(1) or "\r" in m.group(1):
+                    return "><"
+                return ">&#32;<"
+            seg = re.sub(r">([ \t\n\r]+)<", repl, seg)
             out.append(seg)
             i += 1
         else:
@@ -210,7 +221,9 @@ def split_parts(full_header: str) -> tuple[str, str]:
         raise SystemExit("footer inline script not found")
     footer = footer[: script.start()] + "<script>" + minify_js(script.group(1)) + "</script>" + footer[script.end() :]
     header, footer = dedent_markup(header), dedent_markup(footer)
-    top = header.find('<div class="dl-top"')
+    top = header.find('<a class="dl-skip"')
+    if top < 0:
+        top = header.find('<div class="dl-top"')
     if top < 0:
         raise SystemExit(".dl-top not found")
     header = header[:top] + FAVICON_LINKS + NEUTRALIZE + header[top:]

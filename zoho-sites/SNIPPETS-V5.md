@@ -17,19 +17,19 @@ python3 tools/zoho/build_zoho_pack.py
 
 | Output | Paste into | Cap |
 |---|---|---|
-| `zoho-sites/dist/homepage-sites-v5.zoho-ready.html` | Not pasted. This is the zoho-ready document the split is built from. It matches the pack verified on staging (2026-09-28). | |
+| `zoho-sites/dist/homepage-sites-v5.zoho-ready.html` | Not pasted. This is the zoho-ready document the split is built from. Rebuild it from `homepage-sites-v5.html` after `962c89f`. It is not the older 2026-09-28 byte pack. | |
 | `zoho-sites/dist/homepage-sites-v5.zoho-header.html` | **Header Code** | 44,900 chars |
 | `zoho-sites/dist/homepage-sites-v5.zoho-footer.html` | **Footer Code** | 44,900 chars |
 | `zoho-sites/dist/homepage-sites-v5.zoho-custom.css` | **Custom CSS** | Save once |
 | `zoho-sites/dist/asset-manifest.json` | Reference. Old URL to `/dl28-…` on the Zoho document root. | |
 
-**Header Code** is `<title>` and the meta description, the head links (logo preload, Bookings, YouTube, `embed.js`), a small script that resets the title and description after Zoho's theme, favicon links, the neutralizer script, then markup from `.dl-top` through `</main>`, plus the `#dl-modal` video modal. The legacy Home snippet also has `id=dl-modal`, so ours has to come first in the DOM. Research, contact, and book modals stay in the footer.
+**Header Code** is `<title>` and the meta description, the head links (logo preload, Bookings, YouTube, `embed.js`), a small script that resets the title and description after Zoho's theme, favicon links, the neutralizer script, then the skip link and markup from `.dl-top` through `</main>`, plus the `#dl-modal` video modal. The legacy Home snippet also has `id=dl-modal`, so ours has to come first in the DOM. Research, contact, and book modals stay in the footer. The skip link stays the first focusable control.
 
 **Footer Code** is `footer.dl-footer`, the research / contact / book modals, and the inline script minified with `terser -c -m`. Bookings stays on portal-embed (`…/portal-embed#/4937208000000036014`). There is no Bookings URL parameter that hides the service card.
 
 **Custom CSS**, saved once: `tools/zoho/zoho-chrome-hide.css` (soft-chrome hide already on staging), then `tools/zoho/safety-reset.css` (low-specificity `vertical-align: baseline` on our images, buttons, and links; no `!important`, so page rules still win), then the self-hosted `@font-face` block, then the page `<style>`, including the Bookings clip. The box saw the CSS doubled when CodeMirror `setValue` and the textarea sync both fired. Paste with one write.
 
-**`&#32;`:** after comments are removed and markup is dedented, every whitespace-only run between tags (outside `script`, `style`, `textarea`, and `pre`) is replaced with `&#32;`. Zoho strips inter-tag whitespace, which turned "would YOU rather" into "wouldYOUrather". `&#32;` survives Zoho.
+**`&#32;`:** after comments are removed and markup is dedented, same-line whitespace between tags (outside `script`, `style`, `textarea`, and `pre`) is replaced with `&#32;`. Newline gaps between tags are removed so Header Code stays under 44,900. Zoho strips inter-tag whitespace, which turned "would YOU rather" into "wouldYOUrather". That phrase is same-line, so `&#32;` keeps it.
 
 **Neutralizer** (in Header Code, before `.dl-top`): the legacy Home snippet's inline `<style>` loads after `zs-customcss.css` and was the root of the layout bugs (2-column Hidden costs, lost section backgrounds, 12.5px eyebrows, Watch pills with no border, and the rest of the 2026-09-28 diff). The script disables theme stylesheets (`/template/`, `zsite-core`, `webfonts.zoho`, `fonts.googleapis`) and, with a MutationObserver plus a DOMContentLoaded sweep, neuters `style` / `script` / `img` / `source` / `video` / `iframe` / `link` nodes inside `.theme-content-area`, `.zpcontent-container`, and `[data-element-type]`.
 
@@ -42,11 +42,11 @@ python3 tools/zoho/build_zoho_pack.py
 .dl-modal--book #dl-book-frame iframe { top: -222px; bottom: auto; height: calc(100% + 222px); }
 ```
 
-**Contact modal:** a real `<form method="POST">` to `https://crm.zoho.com/crm/WebToContactForm` (not fetch, not Web-to-Case). Hidden fields stay `xnQsjsdp`, `zc_gad`, `xmIwtLD`, `actionType`, `returnURL`, `CONTACTCF3` (`Website Contact Us (staging)`), and honeypot `aG9uZXlwb3Q` (empty). The captcha image is Zoho's CaptchaServlet, with Reload and `enterdigest`. A valid submit navigates the page. Zoho sends people back to `returnURL`, and `?contact=thanks` opens the thank-you state. An iframe cannot tell a captcha failure from success, so the form does not post into one. Production cutover: in `zoho-sites/homepage-sites-v5.html`, change `CONTACT_SITE_ORIGIN` and the `returnURL` host from `https://delphinium-marketing-staging.zohosites.com` to `https://delphi-me.com`, and update `CONTACTCF3` if CRM issues a production source value. Then rebuild.
+**Contact:** the footer Contact link is `/contact-us` (a separate Zoho page). With JS it becomes `data-site-origin` plus `/contact-us`. The homepage modal stays for any `[data-contact-open]` control and `dlOpenContact`. The modal is a real `<form method="POST">` to `https://crm.zoho.com/crm/WebToContactForm`. Hidden fields stay `xnQsjsdp`, `zc_gad`, `xmIwtLD`, `actionType`, `returnURL`, `CONTACTCF3` (`Website Contact Us (staging)`), and honeypot `aG9uZXlwb3Q` (empty). The captcha image is Zoho's CaptchaServlet, with Reload and `enterdigest`. A valid submit navigates the page. Zoho sends people back to `returnURL`, and `?contact=thanks` opens the thank-you state. Production cutover: on `<body>`, set `data-site-origin` to `data-site-origin-production` (`https://www.delphi-me.com`). That switches the footer Contact link and the CRM return URL. Update `CONTACTCF3` if CRM issues a production source value. Then rebuild.
 
 **Watch pills:** local `.dl-link:hover` stays cyan fill, navy-deep text, cyan border. The pack strips the native `title` attribute on `a[data-youtube]` and `a[data-mux]` so the browser tooltip does not repeat the visible label. `data-title` stays (the modal uses it). That strip is pack-only until Jared asks for it in source.
 
-**Close punch:** source now reads `Your school already runs on Canvas,` (trailing comma). Jared, 2026-09-28.
+**Close punch:** source reads `Your school already runs on Canvas,` (trailing comma). The comma was absent on `962c89f` and is reapplied here.
 
 **Flag, do not edit:** the hero lead still says "courses you already teach in into". That typo is intentional until Jared changes the copy. The build script prints the flag and leaves the words alone.
 
