@@ -3,7 +3,7 @@
 ## Pipeline
 
 1. **Draft** in this repo (`ProjectDelphinium/homepage-fable-preview`) — HTML/CSS/JS under root and/or `builds/`.
-2. **Preview** on GitHub Pages (mirror: https://japomani.github.io/delphinium-homepage-fable-preview/).
+2. **Preview** on GitHub Pages (deploys from `main`): https://projectdelphinium.github.io/homepage-fable-preview/ (Sites v5: https://projectdelphinium.github.io/homepage-fable-preview/zoho-sites/homepage-sites-v5.html).
 3. **Stage** on Zoho Sites using **Code Snippet / custom HTML/CSS** (Zoho Sites Pro). Port section-shaped HTML + CSS tokens; keep JS light.
 4. **Jared OK required** before any Zoho publish or further promotion.
 5. **Never** cut DNS, unpublish HubSpot, or point production domains at Zoho until Jared explicitly approves cutover.
