@@ -1,0 +1,206 @@
+
+/* publish_sites_v2 soft chrome — moon/zpsection safety + zoho badge */
+.theme-skip-to-needed-content { display: none !important; }
+html:not(.dl-path-eula):not(.dl-path-agree) .theme-content-area .zpsection { display: none !important; }
+.theme-footer-area .zpsection { display: none !important; }
+.zs-poweredby, .theme-poweredby, .zpfooter-poweredby,
+a[href*="zoho.com/sites"], a[href*="www.zoho.com/sites"],
+[class*="zoho-sites"], [class*="zohosites"],
+[class*="poweredby" i] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+}
+/* zsad free badge: fixed bottom ~z-index 1e6 */
+div[style*="z-index: 1000000"],
+div[style*="z-index:1000000"],
+div[style*="z-index: 999999"],
+div[style*="z-index:999999"],
+body > div:has(a[href*="zoho.com/sites"]),
+body > div:has(a[href*="www.zoho.com/sites"]) {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  max-height: 0 !important;
+}
+
+/* Zoho Sites chrome hide — Delphinium main is injected via Header Code.
+   Hide theme sections (moon / Endless Security) until manual purge sticks. */
+.theme-skip-to-needed-content { display: none !important; }
+.theme-header-topbar,
+[data-headercontainer],
+.theme-header,
+.theme-responsive-menu-area,
+.theme-navigation-and-icons { display: none !important; }
+
+/* Safety net: blank-theme sections under content area (moon / Responsive Design / Endless Security).
+   /eula and /purchase-agreement keep the native page body; see the legal-document block below. */
+html:not(.dl-path-eula):not(.dl-path-agree) .theme-content-area .zpsection { display: none !important; }
+.theme-footer-area .zpsection { display: none !important; }
+.theme-content-area:empty { display: none !important; }
+body { margin: 0; }
+
+/* Zoho Sites attribution / badge — stack selectors until one wins */
+.zs-poweredby,
+.theme-poweredby,
+.zpfooter-poweredby,
+[class*="poweredby" i],
+[class*="zoho-sites" i],
+[class*="zohosites" i],
+a[href*="zoho.com/sites"],
+a[href*="www.zoho.com/sites"],
+div:has(> a[href*="zoho.com/sites"]),
+footer a[href*="zoho.com/sites"],
+.theme-footer-area a[href*="zoho.com/sites"] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Zoho free-plan badge (zsad.js) — fixed bottom, z-index ~1e6 */
+div[style*="z-index: 1000000"],
+div[style*="z-index:1000000"],
+div[style*="z-index: 999999"],
+div[style*="z-index:999999"],
+body > div:has(> a[href*="zoho.com/sites"]),
+body > div:has(a[href*="www.zoho.com/sites"]),
+iframe[src*="zohostatic.com/sites"],
+iframe[src*="zsad"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Legacy homepage codeSnippet still in theme DOM — hide duplicate video modal */
+.theme-content-area .dl-modal,
+.theme-content-area #dl-modal { display: none !important; }
+
+/* /eula and /purchase-agreement: native Zoho page content is the legal document.
+   Header Code does not strip it on those paths. This block shows it inside the site chrome. */
+html.dl-path-eula .theme-content-area,
+html.dl-path-agree .theme-content-area {
+  display: block !important;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 4.5rem 1.25rem clamp(3rem, 6vw, 4.75rem);
+  background: var(--paper) !important;
+  color: var(--ink) !important;
+  font-family: var(--font-text) !important;
+  font-size: 1.125rem !important;
+  line-height: 1.6 !important;
+  text-wrap: pretty;
+}
+html.dl-path-eula .theme-content-area .zpsection,
+html.dl-path-agree .theme-content-area .zpsection,
+html.dl-path-eula .theme-content-area .zpcontent-container,
+html.dl-path-agree .theme-content-area .zpcontent-container {
+  display: block !important;
+  visibility: visible !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  opacity: 1 !important;
+  float: none !important;
+  width: 100% !important;
+  max-width: 760px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+html.dl-path-eula .theme-content-area *,
+html.dl-path-agree .theme-content-area * {
+  font-family: var(--font-text) !important;
+  box-sizing: border-box;
+}
+html.dl-path-eula .theme-content-area h1,
+html.dl-path-eula .theme-content-area h1 *,
+html.dl-path-eula .theme-content-area h2,
+html.dl-path-eula .theme-content-area h2 *,
+html.dl-path-eula .theme-content-area h3,
+html.dl-path-eula .theme-content-area h3 *,
+html.dl-path-eula .theme-content-area h4,
+html.dl-path-eula .theme-content-area h4 *,
+html.dl-path-agree .theme-content-area h1,
+html.dl-path-agree .theme-content-area h1 *,
+html.dl-path-agree .theme-content-area h2,
+html.dl-path-agree .theme-content-area h2 *,
+html.dl-path-agree .theme-content-area h3,
+html.dl-path-agree .theme-content-area h3 *,
+html.dl-path-agree .theme-content-area h4,
+html.dl-path-agree .theme-content-area h4 * {
+  font-family: var(--font-display) !important;
+  font-weight: 700 !important;
+  color: var(--ink) !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.15 !important;
+  text-wrap: balance;
+  max-width: none !important;
+}
+html.dl-path-eula .theme-content-area h1,
+html.dl-path-agree .theme-content-area h1 {
+  margin: 0 0 1rem !important;
+  font-size: clamp(1.9rem, 4.2vw, 3rem) !important;
+}
+html.dl-path-eula .theme-content-area h2,
+html.dl-path-agree .theme-content-area h2 {
+  margin: 2rem 0 0.65rem !important;
+  font-size: clamp(1.45rem, 2.6vw, 1.85rem) !important;
+}
+html.dl-path-eula .theme-content-area h3,
+html.dl-path-eula .theme-content-area h4,
+html.dl-path-agree .theme-content-area h3,
+html.dl-path-agree .theme-content-area h4 {
+  margin: 1.5rem 0 0.5rem !important;
+  font-size: clamp(1.15rem, 2vw, 1.35rem) !important;
+}
+html.dl-path-eula .theme-content-area p,
+html.dl-path-agree .theme-content-area p {
+  margin: 0 0 0.9rem !important;
+  color: var(--ink) !important;
+  font-size: 1.125rem !important;
+  line-height: 1.6 !important;
+}
+html.dl-path-eula .theme-content-area ul,
+html.dl-path-eula .theme-content-area ol,
+html.dl-path-agree .theme-content-area ul,
+html.dl-path-agree .theme-content-area ol {
+  margin: 0 0 1rem !important;
+  padding-left: 1.35rem !important;
+  color: var(--ink) !important;
+}
+html.dl-path-eula .theme-content-area li,
+html.dl-path-agree .theme-content-area li {
+  margin: 0.35rem 0 !important;
+  line-height: 1.6 !important;
+  color: var(--ink) !important;
+}
+html.dl-path-eula .theme-content-area a,
+html.dl-path-agree .theme-content-area a {
+  color: var(--navy) !important;
+  text-underline-offset: 0.18em;
+}
+html.dl-path-eula .theme-content-area a:hover,
+html.dl-path-agree .theme-content-area a:hover { color: var(--accent) !important; }
+html.dl-path-eula .theme-content-area img,
+html.dl-path-agree .theme-content-area img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+
