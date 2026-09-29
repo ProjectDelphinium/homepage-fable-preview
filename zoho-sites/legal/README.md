@@ -17,5 +17,4 @@ Notes for recreating these pages:
 - The Purchase Agreement links to `https://delphi-me.com/eula` (in Definitions A and elsewhere). After cutover the apex 301s to `https://www.delphi-me.com/eula`, so the Zoho pages should use the same slugs: `/eula` and `/purchase-agreement`.
 - Invoices and past agreements reference these URLs, so keep the text verbatim unless Jared or legal edits it.
 - Content flags for Jared, left as they are in the snapshot:
-  - The Purchase Agreement names both "Delphinium, Inc." (in the opening line) and "Delphi M.E. LLC" (everywhere else).
   - EULA clause 7 cites "clause 6(c)", but the list isn't numbered on the page.

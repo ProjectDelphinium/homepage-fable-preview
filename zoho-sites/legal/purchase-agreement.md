@@ -2,7 +2,7 @@
 
 # DELPHINIUM PURCHASE AGREEMENT
 
-This Purchase Agreement is between Delphinium, Inc. and Purchaser identified in invoice.
+This Purchase Agreement is between Delphi M.E. LLC and Purchaser identified in invoice.
 
 ## Definitions
 
