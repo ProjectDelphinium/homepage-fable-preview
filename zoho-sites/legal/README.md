@@ -1,5 +1,8 @@
-# HubSpot legal pages: public text snapshot (read-only, 2026-09-28, 6:14 PM MT)
-Source: the delphi-me.com HubSpot site (portal 44351218). Purpose: recreate these pages on Zoho Sites before the apex leaves HubSpot. The Zoho pages have NOT been created.
+# Legal page snapshots
+
+Repo copies of the live Zoho pages `/eula` and `/purchase-agreement`. Those pages already exist. Do not recreate them.
+
+First captured from the public HubSpot site on 2026-09-28, 6:14 PM MT (portal 44351218), then pasted into Zoho. HubSpot page ids below are historical.
 
 | Page | URL | HubSpot page id | HTTP | Words | Files |
 |---|---|---|---|---|---|
@@ -13,9 +16,9 @@ Coverage:
 - I probed privacy, privacy-policy, terms, terms-of-service, terms-of-use, terms-and-conditions, legal, dpa, data-privacy, accessibility, cookie-policy, student-data-privacy, ferpa, coppa, refund-policy, sla and security. All return 404.
 - The crawled pages link only to /eula and /purchase-agreement. **There is no privacy policy or terms page on the HubSpot site.**
 
-Notes for recreating these pages:
-- The Purchase Agreement links to `https://delphi-me.com/eula` (in Definitions A and elsewhere). After cutover the apex 301s to `https://www.delphi-me.com/eula`, so the Zoho pages should use the same slugs: `/eula` and `/purchase-agreement`.
-- Invoices and past agreements reference these URLs, so keep the text verbatim unless Jared or legal edits it.
-- Content flags for Jared, left as they are in the snapshot:
-  - The Purchase Agreement names both "Delphinium, Inc." (in the opening line) and "Delphi M.E. LLC" (everywhere else).
-  - EULA clause 7 cites "clause 6(c)", but the list isn't numbered on the page.
+Notes:
+- The Purchase Agreement links to `https://delphi-me.com/eula`. The apex 301s to `https://www.delphi-me.com/eula`. Keep the slugs `/eula` and `/purchase-agreement`.
+- Invoices and past agreements reference these URLs. Cursor does not paste into Zoho. When this snapshot changes, Web Design (Grok Bot) updates the native Zoho body after Jared says to ship.
+- Purchase Agreement opening line in this snapshot is Delphi M.E. LLC. It previously said "Delphinium, Inc." The rest of the agreement already named Delphi M.E. LLC. The live Zoho page still has the old opening line until this change is pasted.
+- EULA: `eula.md` does not name a legal entity. The `eula.txt` preamble names "Delphi M.E., LLC". Left unchanged for Jared or counsel.
+- EULA clause 7 cites "clause 6(c)", but the list is not numbered on the page. Left as captured.

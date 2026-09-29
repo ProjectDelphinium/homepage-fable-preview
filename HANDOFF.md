@@ -2,7 +2,7 @@
 
 **Owner desk:** Web Design (Grok Bot) · **User:** Jared Chapman · **Timezone:** America/Denver  
 **Biz ops:** Cursor Environment `delphinium-bizops` · never Product/serverless.  
-**Status:** Continue development of the Fable 5.1 draft; HubSpot live site untouched  
+**Status:** Live site is https://www.delphi-me.com (Zoho). `main` should equal live. See `zoho-sites/LIVE.md`.  
 **Share URL:** https://japomani.github.io/delphinium-homepage-fable-preview/  
 **Repo:** https://github.com/ProjectDelphinium/homepage-fable-preview  
 **Mirror:** https://github.com/japomani/delphinium-homepage-fable-preview  
@@ -14,7 +14,7 @@ Jared is **not convinced** we have the right homepage framing yet. Treat current
 
 ## Mission
 
-Build a better public marketing homepage for Delphinium (Canvas engagement layer for virtual/online K-12). This is **not** a pixel clone of the current HubSpot site. When Jared locks a version, Web Design stages it on **Zoho** (staging/preview). **Do not** cut DNS or unpublish HubSpot.
+Build a better public marketing homepage for Delphinium (Canvas engagement layer for virtual/online K-12). The live site is Zoho at https://www.delphi-me.com. New work follows the release workflow in `zoho-sites/LIVE.md`. **Do not** change DNS, HubSpot, or Zoho from Cursor.
 
 Primary CTA: book a conversation → `https://delphi-me.com/schedule-jared`
 
@@ -84,8 +84,8 @@ personal, fun, a little quirky, approachable, yet cutting-edge · playful-premiu
 
 ### Site structure
 - One site; homepage = K-12 online default
-- Higher Ed = secondary path (`/highered` later) — link OK, not homepage hero
-- Zoho staging later; HubSpot stays live until cutover OK
+- Higher Ed = secondary path (`/highered`, already live). Link OK, not homepage hero
+- Release workflow: `zoho-sites/LIVE.md`. Cursor does not publish.
 
 ---
 
@@ -120,7 +120,7 @@ personal, fun, a little quirky, approachable, yet cutting-edge · playful-premiu
 4. Prefer authentic brand assets / CSS product UI mocks over invented photography.
 5. Keep claims SOURCE-exact; when in doubt, remove a claim rather than invent.
 6. Single clear CTA to schedule-jared; secondary HE path only.
-7. Add a visible **DRAFT — not the live site** banner until Zoho staging.
+7. GitHub Pages and local previews stay marked **DRAFT / not the live site**. The public Zoho site at www.delphi-me.com is live.
 
 Optional later: expand from one `index.html` into a small static structure (`/`, `/highered`, assets/) still deployable to GitHub Pages.
 
@@ -129,8 +129,8 @@ Optional later: expand from one `index.html` into a small static structure (`/`,
 ## What Cursor should NOT do
 
 - Edit HubSpot, DNS, production Zoho, or CRM
-- Open PRs against `ProjectDelphinium/serverless` (product app — wrong repo)
-- Claim Zoho cutover is done
+- Run publish or cutover scripts that write to Zoho (`zoho-sites/scripts/publish/`, `zoho-sites/scripts/cutover/`)
+- Open PRs against `ProjectDelphinium/serverless` (product app, wrong repo)
 - Borrow Marketing/Product Claude pools unless Jared/Constructor says so for a new generate
 
 ---
@@ -152,20 +152,23 @@ This repo is the **single Cursor workspace** for Delphinium homepage design. Ope
 | `ops/inventory/hubspot-live.md` | HubSpot live inventory (reference only — do not edit HubSpot) |
 | `refs/scroll-craft/` | Taste / skill notes only — full engine stays on agent box at `/workspace/scroll-craft/` |
 
-**Zoho Sites publish:** staging-only via Code Snippet / custom HTML/CSS (Pro). There is **no Zoho Sites REST API** for this workflow. Never cut DNS or HubSpot. Jared OK required before any Zoho publish. See `docs/ZOHO_SITES_PUBLISH.md`.
+**Zoho Sites:** live at https://www.delphi-me.com. Cursor does not publish. Grok Bot (Web Design) ships when Jared says so. See `zoho-sites/LIVE.md`. Never change DNS or HubSpot.
 
 **Cursor desktop:** see `docs/CURSOR_DESKTOP.md`.
 
 ---
 
-## Hand-back when “ready”
+## Release workflow
 
-When Jared (or Web Design) says the draft is good enough:
+Biz ops · Cursor Environment `delphinium-bizops` · never Product/serverless.
 
-1. Tag or note the commit SHA on `main`
-2. Confirm claims still match `context/SOURCE.md`
-3. Web Design ports to **Zoho Sites/CMS staging/preview only**
-4. Jared reviews Zoho preview → only then discuss HubSpot cutover
+Full steps, guardrails, and the live page list are in `zoho-sites/LIVE.md`. Short version:
+
+1. Branch from `main` (it contains live pack `51620fc`).
+2. Edit `zoho-sites/homepage-sites-v5.html`, rebuild with `python3 tools/zoho/build_zoho_pack.py`.
+3. Open a PR into `main` and leave it open.
+4. Tell Web Design (Grok Bot) to ship, for example `ship PR #N`.
+5. After Jared approves the live result, merge the PR so `main` again equals live.
 
 ---
 

@@ -1,4 +1,6 @@
-# Zoho Sites scripts (as used for the live cutover, 2026-09-28)
+# Zoho Sites scripts (historical snapshot of the 2026-09-28 cutover)
+
+What is live now is `zoho-sites/LIVE.md` (pack SHA `51620fc`). Do not run `publish/` or `cutover/` from Cursor. Those scripts write to Zoho. Grok Bot (Web Design) publishes when Jared says to ship.
 
 Copied from the working copies on the agent box (`delphinium-os/web-design/zoho-sites/` and `.../cutover/`) so the repo has a record of how the live site was built and published. These are **snapshots** that still hold box-specific absolute paths (`/workspace/...`). They are not wired up as a runnable toolchain in this repo yet.
 
