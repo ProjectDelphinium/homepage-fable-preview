@@ -109,7 +109,7 @@ personal, fun, a little quirky, approachable, yet cutting-edge · playful-premiu
 ## Soft / preferred wording
 
 - Parent pain: “When a parent finds out late…” / “Parents shouldn’t need Canvas literacy…” — Overview’s “I don’t know, Dad” OK as optional aside
-- Capability: color-coded parent/observer view; include observers/families on sends; celebrate wins with parents; Community Builder + 160-language translate
+- Capability: color-coded parent/observer view; include observers/families on sends; celebrate wins with parents; Community Builder + 240-language translate (Jared, 2026-09-29; supersedes 160)
 - Early calm outreach → support before failure; fewer surprise complaints — not invented happiness %
 
 ---
@@ -122,7 +122,7 @@ personal, fun, a little quirky, approachable, yet cutting-edge · playful-premiu
 4. Prefer authentic brand assets / CSS product UI mocks over invented photography.
 5. Keep claims SOURCE-exact; when in doubt, remove a claim rather than invent.
 6. Single clear CTA to schedule-jared; secondary HE path only.
-7. Add a visible **DRAFT — not the live site** banner until Zoho staging.
+7. **No DRAFT / not-live banner.** Removed for the live launch on 2026-09-29 by Jared's approval. Do not re-add it.
 
 Optional later: expand from one `index.html` into a small static structure (`/`, `/highered`, assets/) still deployable to GitHub Pages.
 
@@ -183,9 +183,10 @@ Reset to Sites v2 and rebuilt on the prospectus arc: `zoho-sites/homepage-sites-
 
 - **zoho-ready pack on `main` (2026-09-24):** live-intended Sites HTML from Web Design. Case section **restored** (plain-weight "Education moved online," + "teachers can read the room"); cover "Cut failures by up to" / 31%; `videoLabel(el)` for modal titles; Makeover stages `align-items: start` + Canvas-only before crop (`module-only-20260924b`). Supersedes the light-revise kicker-only Case cut.
 - **HE twin site (later):** K-12 staging is the current path. A Higher Ed twin with an audience switch (like delphi-me.com's top choice), its own videos and stats, and no parents is a later IA item. Not built yet.
+- **`/highered` path swap (2026-09-29):** `/highered` reuses the homepage. The K-12 case, logos, videos section, and family blocks are hidden there. The Higher Ed proof card uses the Utah Valley University study (cleared to name; 14 sections, about 420 students): as much as 47% lower course failure, with three stat-led bullets (64% fewer failures for part-time faculty, 67% fewer withdrawals, 65% fewer dropouts). Withdrawal is 67% (Jared, 2026-09-29: "67, not 68"); the prospectus 68% is superseded, do not use it. Part-time faculty is 64% (Jared, 2026-09-29: "64 not 65"); the prospectus 65% for part-time faculty is superseded. The 65% on the card is dropouts only (Jared, 2026-09-29: "65, not 66"; the prospectus 66% dropout figure is superseded). `/highered` meta: as much as 47% lower course failure and 67% lower withdrawals.
 
 ## Marketing 2026-09-06
 Fold #social-media-marketing feedback: cut repetition; Makeover centerpiece; one question/section + Learn more YT; one-page takeaway; CTA subline about meeting Jared. See context/BRIEF.md and position-and-value §7.
 
 ## Body copy 2026-09-29
-Jared: keep the technical GEO/AEO/SEO pack (path titles, JSON-LD, Open Graph). Do not rewrite the visible hero or story. No "Delphinium is..." line in the hero. Davis proof context stays the pre-SEO line. A compact SOURCE-only Q&A may sit after the close CTA, above the footer. No FAQPage schema.
+Jared: keep the technical GEO/AEO/SEO pack (path titles, JSON-LD, Open Graph). Do not rewrite the visible hero or story. No "Delphinium is..." line in the hero. Davis proof context stays the pre-SEO line. The Q&A section was removed (Jared, 2026-09-29: the content is already on the page); the close CTA is the last section. No FAQPage schema (the build fails if it appears).

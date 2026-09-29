@@ -480,6 +480,12 @@ main a,
       display: block;
       line-height: 0;
       background: transparent;
+      /* Dense paper-coloured halo so scrolled content never shows through the part of the logo below the bar.
+         On the link, not the img, so the halo sits under the focus outline instead of over it. */
+      filter:
+        drop-shadow(0 0 1px var(--paper)) drop-shadow(0 0 1px var(--paper)) drop-shadow(0 0 1px var(--paper))
+        drop-shadow(0 0 2px var(--paper)) drop-shadow(0 0 2px var(--paper)) drop-shadow(0 0 2px var(--paper))
+        drop-shadow(0 0 3px var(--paper)) drop-shadow(0 0 3px var(--paper)) drop-shadow(0 0 6px var(--paper));
     }
     .dl-nav__logo img {
       width: var(--dl-logo-w);
@@ -771,6 +777,19 @@ main a,
     .dl-btn:focus-visible, .dl-play:focus-visible, .dl-seg button:focus-visible, .dl-link:focus-visible { outline: 3px solid var(--dl-focus); outline-offset: 3px; }
     .dl-wrap { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
     .dl-section { padding: clamp(4rem, 9vw, 7rem) 0; }
+    /* Section padding runs to the cap height of the first line and the baseline of the last, not to their
+       line boxes, so the space either side of a background change matches. Eyebrows are flex (no text-box),
+       so they lift by their own half-leading + ascender: (1.6 × 1.125rem line - cap) / 2. */
+    :root { --dl-eyebrow-lift: 0.4375rem; }
+    .dl-section .dl-eyebrow:first-child:not(.dl-close__eyebrow) { margin-top: calc(-1 * var(--dl-eyebrow-lift)); }
+    @supports (text-box: trim-both cap alphabetic) {
+      .dl-section .dl-h2:first-child { text-box: trim-start cap alphabetic; }
+      .dl-punch:last-child,
+      .dl-vid:last-child figcaption b { text-box: trim-end cap alphabetic; }
+      @media (min-width: 700px) { .dl-vid figcaption b { text-box: trim-end cap alphabetic; } }
+      /* The highlighter under a closing punch line's key word hangs 0.18em below the baseline */
+      .dl-punch:last-child { padding-bottom: 0.18em; }
+    }
 
     .dl-eyebrow {
       display: flex;
@@ -793,7 +812,7 @@ main a,
     }
     /* Nav links target eyebrows directly, 4rem below the html scroll-padding; #customers is a section anchor, so offset its padding to land its eyebrow at the same 4rem */
     .dl-eyebrow[id] { scroll-margin-top: 4rem; }
-    #customers { scroll-margin-top: calc(4rem - clamp(4rem, 9vw, 7rem)); }
+    #customers { scroll-margin-top: calc(4rem - clamp(4rem, 9vw, 7rem) + var(--dl-eyebrow-lift)); }
     .dl-h2 {
       margin: 0;
       font-size: clamp(1.9rem, 4.2vw, 3rem);
@@ -857,7 +876,7 @@ main a,
     .dl-hero {
       position: relative;
       overflow: hidden;
-      padding: clamp(1.25rem, 3vw, 2.25rem) 0 clamp(3rem, 6vw, 4.5rem);
+      padding: clamp(1.25rem, 3vw, 2.25rem) 0 clamp(4rem, 9vw, 7rem);
     }
     .dl-hero__petals {
       position: absolute;
@@ -957,20 +976,6 @@ main a,
       color: var(--ink-soft);
     }
     .dl-hero__lead b { color: var(--ink); font-weight: 600; }
-    .dl-faq {
-      padding: 0 0 clamp(3.5rem, 7vw, 5.5rem);
-    }
-    .dl-faq .dl-h2 { font-size: clamp(1.55rem, 2.6vw, 2rem); max-width: 24ch; }
-    .dl-faq h3 {
-      margin: 1.15rem 0 0.3rem;
-      font-size: 1.15rem;
-      line-height: 1.25;
-      color: var(--ink);
-    }
-    .dl-faq p { margin: 0; max-width: 42rem; color: var(--ink-soft); line-height: 1.5; }
-    .dl-faq p.dh { display: none; }
-    html.dl-path-he .dl-faq p.dk { display: none; }
-    html.dl-path-he .dl-faq p.dh { display: block; }
     .dl-hero__actions {
       display: flex;
       flex-wrap: wrap;
@@ -1086,17 +1091,36 @@ main a,
     .dl-case__stats { display: grid; gap: 0.85rem; }
     @media (min-width: 720px) { .dl-case__stats { grid-template-columns: repeat(3, 1fr); } }
     .dl-case__stats .dl-card { padding: 1.15rem 1.15rem 1rem; }
-    .dl-case__stats .dl-card__kicker { margin-bottom: 0.4rem; }
-    .dl-case__stats .dl-card__num {
+    .dl-case__stats .dl-card__kicker,
+    .dl-case__stats .dl-he > p:first-child { margin-bottom: 0.4rem; }
+    .dl-case__stats .dl-card__num,
+    .dl-case__stats .dl-he > p:nth-child(even):not(:last-child) {
       font-size: clamp(1.85rem, 3vw, 2.55rem);
       white-space: nowrap;
     }
-    .dl-case__stats .dl-card__txt { margin-top: 0.55rem; font-size: 0.98rem; }
-    .dl-case__src {
+    .dl-case__stats .dl-card__txt,
+    .dl-case__stats .dl-he > p:nth-child(odd):not(:first-child) { margin-top: 0.55rem; font-size: 0.98rem; }
+    .dl-case__src,
+    .dl-he > p:last-child {
       margin: 0.75rem 0 0;
       font-size: 0.8125rem;
       line-height: 1.35;
       color: var(--ink-soft);
+    }
+    /* The HE-only card is bare <p>s (kicker, three number/text pairs, source) to keep Zoho Header Code under its cap */
+    .dl-case .dl-he { display: none; }
+    .dl-case__stats .dl-he > p:nth-child(2n+4):not(:last-child) { margin-top: 1.6rem; }
+    /* HE: the tall NCES card sits left, Columbia and Pew stack on its right, sources pinned to card bottoms */
+    html.dl-path-he .dl-case__stats > :not(.dk) { display: flex; flex-direction: column; }
+    html.dl-path-he .dl-case__src,
+    html.dl-path-he .dl-he > p:last-child { margin-top: auto; padding-top: 0.75rem; }
+    @media (min-width: 720px) {
+      html.dl-path-he .dl-case__stats { grid-template-columns: 1fr 1fr; }
+      html.dl-path-he .dl-case .dl-he { grid-column: 1 / -1; }
+    }
+    @media (min-width: 960px) {
+      html.dl-path-he .dl-case__stats { grid-auto-rows: 1fr; }
+      html.dl-path-he .dl-case .dl-he { grid-column: auto; grid-row: span 2; }
     }
     /* Section punch line: light setup, bold payoff, marker under the key word */
     .dl-punch {
@@ -1192,12 +1216,17 @@ main a,
       margin: 2.5rem 0 0;
       padding: 0;
       list-style: none;
-      display: grid;
+      display: flex;
+      flex-wrap: wrap;
       gap: 0.85rem;
-      grid-template-columns: 1fr;
     }
-    @media (min-width: 640px) { .dl-teach__cards { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 1000px) { .dl-teach__cards { grid-template-columns: repeat(4, 1fr); } }
+    /* Growing flex items, not fixed tracks: /highered hides the family card and the rest must still fill the row */
+    .dl-teach__cards > li { flex: 1 1 100%; min-width: 0; }
+    @media (min-width: 640px) { .dl-teach__cards > li { flex-basis: calc(50% - 0.5rem); } }
+    @media (min-width: 1000px) {
+      .dl-teach__cards { flex-wrap: nowrap; }
+      .dl-teach__cards > li { flex-basis: 0; }
+    }
     .dl-teach__cards .dl-card {
       padding: 1.3rem 1.2rem 1.2rem;
       border-top: 3px solid var(--navy);
@@ -1430,11 +1459,16 @@ main a,
     }
     @media (min-width: 640px) {
       .dl-proof__results { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
-      .dl-proof__result--davis { grid-column: 1 / -1; }
+      .dl-proof__result--davis,
+      .dl-proof__result--outcomes { grid-column: 1 / -1; }
     }
     @media (min-width: 960px) {
       .dl-proof__results { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 1.5rem clamp(1.75rem, 3vw, 2.5rem); }
       .dl-proof__result--davis { grid-column: 1; grid-row: span 2; }
+      html.dl-path-he .dl-proof__result--outcomes { grid-column: 1 / -1; grid-row: 3; }
+      html.dl-path-he .dl-proof__result--motivation,
+      html.dl-path-he .dl-proof__result--fun { display: grid; align-content: center; }
+      html.dl-path-he.js .dl-proof__result--outcomes.dl-reveal { transition-delay: 270ms; }
     }
     /* Supporting results stay flat so the Davis card is the only raised surface */
     .dl-proof .dl-proof__result {
@@ -1448,6 +1482,7 @@ main a,
     .dl-proof .dl-proof__result--fun { background: color-mix(in srgb, var(--accent) 5%, var(--white)); }
     .js .dl-proof__result--motivation.dl-reveal { transition-delay: 90ms; }
     .js .dl-proof__result--fun.dl-reveal { transition-delay: 180ms; }
+    .js .dl-proof__result--outcomes.dl-reveal { transition-delay: 90ms; }
     @media (max-width: 639px) {
       .dl-proof__result--motivation,
       .dl-proof__result--fun { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 1.25rem; align-items: center; }
@@ -1505,6 +1540,7 @@ main a,
       .dl-proof__davis .dl-card__num { grid-row: auto; margin-bottom: 1.35rem; }
       .dl-proof__davis .dl-card__txt { align-self: start; }
       .dl-proof__davis .dl-card__ctx { margin-top: 1.35rem; padding-top: 1.15rem; }
+      html.dl-path-he .dl-proof__davis { flex: 1 0 auto; align-content: center; }
     }
     @media (max-width: 559px) {
       .dl-proof__davis .dl-card__num { grid-row: 1; }
@@ -1523,6 +1559,55 @@ main a,
       text-wrap: balance;
     }
     .dl-proof__study-punch b { color: var(--ink); }
+    .dl-proof__result--outcomes,
+    .dl-proof__he-ctx { display: none; }
+    html.dl-path-he .dl-proof__davis .dl-card__ctx:not(.dl-proof__he-ctx) { display: none; }
+    html.dl-path-he .dl-proof__he-ctx { display: block; }
+    .dl-card__ctx-list { margin: 0; padding-left: 1.25rem; }
+    .dl-card__ctx-list li + li { margin-top: 0.3rem; }
+    .dl-card__ctx-list li::marker { color: var(--green, currentColor); }
+    html.dl-path-he .dl-proof__result--outcomes { display: block; }
+    .dl-proof .dl-proof__result--outcomes { background: color-mix(in srgb, var(--green) 7%, var(--white)); border-color: color-mix(in srgb, var(--green) 22%, transparent); }
+    .dl-proof__result--outcomes .dl-card__kicker { color: var(--green-ink); }
+    .dl-proof__outcomes-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .dl-proof__outcomes-list li {
+      display: grid;
+      grid-template-columns: 4.1rem minmax(0, 1fr);
+      align-items: baseline;
+      column-gap: 0.85rem;
+      font-family: var(--font-display);
+      font-size: clamp(1.02rem, 1.5vw, 1.15rem);
+      line-height: 1.3;
+      color: var(--ink-soft);
+      text-wrap: pretty;
+    }
+    .dl-proof__outcomes-list li + li { padding-top: 0.75rem; border-top: 1px solid color-mix(in srgb, var(--green) 20%, transparent); }
+    .dl-nowrap { white-space: nowrap; }
+    .dl-proof__outcomes-list b {
+      font-size: 1.85rem;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      color: var(--green-ink);
+    }
+    @media (min-width: 560px) {
+      .dl-proof__outcomes-list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+      .dl-proof__outcomes-list li { grid-template-columns: 1fr; align-content: start; row-gap: 0.35rem; }
+      .dl-proof__outcomes-list li + li { padding: 0 0 0 1.25rem; border-top: 0; border-left: 1px solid color-mix(in srgb, var(--green) 20%, transparent); }
+      .dl-proof__outcomes-list b { font-size: 2.25rem; }
+    }
+    @media (min-width: 960px) {
+      .dl-proof__outcomes-list { gap: 2rem; }
+      .dl-proof__outcomes-list li { row-gap: 0.45rem; }
+      .dl-proof__outcomes-list li + li { padding-left: 2rem; }
+      .dl-proof__outcomes-list b { font-size: clamp(2.5rem, 3.7vw, 3.25rem); }
+    }
 
     .dl-proof__research { margin-top: clamp(3.5rem, 7vw, 5.5rem); }
     .dl-proof__research-title {
@@ -1647,7 +1732,8 @@ main a,
       border: 1px solid var(--line);
       box-shadow: var(--shadow-sm);
     }
-    .dl-card__kicker {
+    .dl-card__kicker,
+    .dl-he > p:nth-child(1) {
       margin: 0 0 0.75rem;
       font-size: 0.75rem;
       font-weight: 700;
@@ -1655,7 +1741,8 @@ main a,
       text-transform: uppercase;
       color: var(--ink-soft);
     }
-    .dl-card__num {
+    .dl-card__num,
+    .dl-he > p:nth-child(even):not(:last-child) {
       margin: 0;
       font-family: var(--font-display);
       font-weight: 700;
@@ -1665,9 +1752,9 @@ main a,
       font-variant-numeric: tabular-nums;
     }
     .dl-card__num--green { color: var(--green); }
-    .dl-card__num--navy { color: var(--navy); }
+    .dl-card__num--navy, .dl-he > p:nth-child(even):not(:last-child) { color: var(--navy); }
     .dl-card__num--accent { color: var(--accent); }
-    .dl-card__txt { margin: 0.75rem 0 0; font-size: 1.05rem; line-height: 1.45; color: var(--ink); }
+    .dl-card__txt, .dl-he > p:nth-child(odd):not(:first-child) { margin: 0.75rem 0 0; font-size: 1.05rem; line-height: 1.45; color: var(--ink); }
     .dl-card__txt b { font-weight: 700; }
     .dl-card__ctx {
       margin: 1rem 0 0;
@@ -1739,7 +1826,6 @@ main a,
       .dl-prod { grid-template-columns: 0.9fr 1.1fr; gap: clamp(2.5rem, 5vw, 4.5rem); }
       .dl-prod--wide { grid-template-columns: 1fr; }
       /* Control Tower + Message Center: more media column width (closer to makeover stage weight) */
-      /* CT: quote lives full-width under the grid, so media can take the wider column */
       #product .dl-prod { grid-template-columns: 0.7fr 1.3fr; }
       section[aria-labelledby="cb-heading"] .dl-prod { grid-template-columns: 0.7fr 1.3fr; }
     }
@@ -1819,14 +1905,12 @@ main a,
     }
     /* Same width + right inset as the MC detail wrap so the row starts at the card's left edge */
     .dl-cb-cta { align-self: flex-end; width: min(90%, 680px); margin: clamp(1.75rem, 3vw, 2.25rem) 17px 0 0; gap: 1rem; }
-    /* CT: pull quote + Watch under copy/media; bottom offset collapses layout gap left by the top pull */
+    /* CT: pull quote + Watch close out the copy column, after the bullets */
     #product .dl-prod__quote {
       display: grid;
       gap: 1.1rem;
-      width: 500px;
       max-width: 500px;
-      margin-top: calc(0 - 20px - 3.5in);
-      margin-bottom: calc(-2.25in);
+      margin-top: 2.5rem;
     }
     #product .dl-prod__quote .dl-pull { margin-top: 0; }
     #product .dl-prod__quote .dl-prod__more { margin-top: 0; }
@@ -2056,7 +2140,9 @@ main a,
       box-shadow: none;
     }
     @media (min-width: 960px) {
-      /* MC: copy + shots are the two grid children. CT: copy stops before quote row so media isn't capped by quote height. */
+      /* MC: copy + shots are the two grid children. CT: copy (with quote) spans into a flexible row 2,
+         so a tall copy column grows row 2 instead of the roster row the detail card overlaps. */
+      #product .dl-prod { grid-template-rows: auto 1fr; }
       section[aria-labelledby="cb-heading"] .dl-prod > .dl-reveal:first-child {
         grid-column: 1;
         grid-row: 1;
@@ -2065,7 +2151,7 @@ main a,
         grid-column: 2;
         grid-row: 1;
         /* Offset by eyebrow height so schedule top aligns with h2 (cb-heading) */
-        margin-top: calc(1.125rem * 1.6 + 1rem); /* = .dl-eyebrow font-size × line-height + margin-bottom */
+        margin-top: calc(1.125rem * 1.6 + 1rem - var(--dl-eyebrow-lift)); /* = .dl-eyebrow font-size × line-height + margin-bottom - lift */
       }
       #product .dl-prod__copy {
         grid-column: 1;
@@ -2077,27 +2163,18 @@ main a,
       }
       /* CT: offset by eyebrow height so media top aligns with h2 (core-heading) */
       #product .dl-prod__media {
-        margin-top: calc(1.125rem * 1.6 + 1rem); /* = .dl-eyebrow font-size × line-height + margin-bottom */
+        margin-top: calc(1.125rem * 1.6 + 1rem - var(--dl-eyebrow-lift)); /* = .dl-eyebrow font-size × line-height + margin-bottom - lift */
       }
       #product .dl-prod__detail-wrap {
         grid-column: 2;
         grid-row: 2;
       }
+      /* Reach past the copy column into the gap, but stop 4rem into the media column,
+         well short of the detail card's left edge (~0.19 × media column + 38px) */
       #product .dl-prod__quote {
-        grid-column: 1 / -1;
-        grid-row: 3;
-        margin-top: calc(-0.25rem - 20px - 3.5in);
-        margin-bottom: calc(-2.25in);
-      }
-      /* The pulled-up quote leaves row 3 empty; drop its leading row gap so the section ends at the detail card */
-      #product .dl-prod { margin-bottom: calc(-1 * clamp(2.5rem, 5vw, 4.5rem)); }
-    }
-    @media (max-width: 959px) {
-      /* Stacked CT: a fixed quote width sizes the single grid track past the viewport; pull-up margins assume the desktop rows */
-      #product .dl-prod__quote {
-        width: auto;
-        margin-top: 0;
-        margin-bottom: 0;
+        width: min(500px, 100% + clamp(2.5rem, 5vw, 4.5rem) + 4rem);
+        max-width: none;
+        margin-top: 4rem;
       }
     }
     @media (max-width: 760px) {
@@ -2326,9 +2403,17 @@ main a,
       justify-content: flex-start;
       margin-bottom: 0.75rem;
     }
+    .dl-logos__head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem 1rem;
+      margin-bottom: 1.5rem;
+    }
     /* Beat 60ch lede constraint; size to one line on desktop (same pattern as #makeover p.dl-lede) */
     .dl-logos__lede {
-      margin: 0 0 1.5rem;
+      margin: 0;
       width: max-content;
       max-width: 100%;
       color: var(--ink-soft);
@@ -2358,8 +2443,9 @@ main a,
       align-items: center;
       justify-content: center;
       width: 1.75rem;
+      flex: none;
       height: 1.75rem;
-      margin: 0.75rem 0.375rem 0.375rem auto;
+      margin: 0 0.375rem 0 auto;
       padding: 0;
       border: 1px solid color-mix(in srgb, var(--navy) 55%, transparent);
       border-radius: 50%;
@@ -2530,7 +2616,7 @@ main a,
       position: relative;
       padding: 1.9rem 1.6rem 1.6rem;
       border-radius: 18px;
-      background: #fff;
+      background: linear-gradient(90deg, var(--mark) 0 25%, var(--cyan) 25% 50%, var(--green) 50% 75%, var(--accent) 75%) top / 100% 10px no-repeat, #fff;
       color: var(--ink);
       box-shadow: 0 26px 50px -20px rgba(0, 0, 0, 0.55);
       --tilt: 2.5deg;
@@ -2538,14 +2624,6 @@ main a,
       transition: transform 450ms cubic-bezier(0.2, 0.7, 0.2, 1);
     }
     .dl-close__invite:hover { transform: rotate(calc(var(--tilt) - 2deg)) translateY(-4px); }
-    .dl-close__invite::before {
-      content: "";
-      position: absolute;
-      inset: 0 0 auto;
-      height: 10px;
-      border-radius: 18px 18px 0 0;
-      background: linear-gradient(90deg, var(--mark) 0 25%, var(--cyan) 25% 50%, var(--green) 50% 75%, var(--accent) 75%);
-    }
     .dl-close__kicker {
       margin: 0;
       font-size: 0.8rem;
@@ -2648,7 +2726,7 @@ main a,
     }
 
     .dl-footer {
-      padding: clamp(2.75rem, 5vw, 3.75rem) 0 1.5rem;
+      padding: clamp(3rem, 5vw, 4rem) 0 1.5rem;
       background: var(--navy-deep);
       color: rgba(255, 255, 255, 0.72);
       font-family: var(--font-text);
@@ -2661,7 +2739,7 @@ main a,
       gap: 2.5rem clamp(2rem, 5vw, 4rem);
       align-items: start;
     }
-    .dl-footer__logo { display: inline-block; line-height: 0; }
+    .dl-footer__logo { display: inline-block; line-height: 0; margin-left: 0.5in; }
     .dl-footer__logo svg { width: 118px; height: auto; display: block; }
     .dl-footer__tag {
       margin: 1rem 0 0;
@@ -2749,6 +2827,9 @@ main a,
       .dl-footer__grid { grid-template-columns: 1fr; gap: 2rem; }
       .dl-footer__logo svg { width: 104px; }
     }
+    @supports (text-box: trim-both cap alphabetic) {
+      .dl-footer__h { text-box: trim-start cap alphabetic; }
+    }
 
     /* Dark surfaces: white focus ring (navy on navy would vanish) */
     .dl-close__stage, .dl-footer, .dl-modal__bar { --dl-focus: #fff; }
@@ -2816,17 +2897,42 @@ main a,
       .dl-play img, .dl-play__btn, .dl-btn { transition: none; }
     }
 
-    /* Bookings: cross-origin iframe, so parent CSS cannot style inside it.
-       Do not offset or clip the iframe: Zoho's scrollbar and its Back /
-       selected-time header (details step) sit at the top edge. 1020px fits
-       Zoho's full date/time step; shorter viewports scroll inside Zoho.
-       Header fields can be hidden in Zoho Bookings settings instead. */
+    /* Bookings: cross-origin iframe, so parent CSS cannot display:none Zoho's
+       header card, and Zoho sends no step or resize messages. Zoho's card is
+       taller on each step (bottom at y 214 date, 246 times, 317 details).
+       Narrow: Zoho stacks the card on top; 264px is the deepest crop that
+       keeps the month arrows (283) and the times heading (270), so the date
+       and times steps are clean and details keeps its timezone row. Zoho
+       scrolls itself (its scroller ends 55px above its bottom), so there is
+       no blank tail. Wide: at 1316px Zoho puts the card in a left column
+       (text ends x 271, divider x 400) and the step in a right column
+       (x 401-1285, y 31 to height - 71) with its own scrollbars. Its
+       confirmation drops both columns and centers on the full width
+       (heading x 407-909), so the frame shows x 307-1285: no card text on
+       any step, the whole confirmation, and ::after hides the divider.
+       Below 1010px (box 978 + padding) that view is scaled to 806px.
+       Zoho's Back link lives in the card.
+       overflow: clip, since focus() inside Zoho can scroll a hidden box. */
     .dl-modal--book .dl-modal__frame {
       aspect-ratio: auto;
       height: min(1020px, calc(100vh - 6rem));
       height: min(1020px, calc(100dvh - 6rem));
       background: #fff;
+      border-top: 12px solid #fff;
       overflow: hidden;
+      overflow: clip;
+    }
+    .dl-modal--book .dl-modal__frame iframe { top: -264px; height: calc(100% + 300px); background: #fff; }
+    @media (min-width: 840px) {
+      .dl-modal--book .dl-modal__box { width: min(100%, 806px); }
+      .dl-modal--book .dl-modal__frame { border-top: 0; }
+      .dl-modal--book .dl-modal__frame iframe { top: -25.5px; left: -253px; width: 1316px; height: calc(121.34% + 102px); transform: scale(0.8241); transform-origin: 0 0; }
+      .dl-modal--book .dl-modal__frame::after { content: ""; position: absolute; top: 0; bottom: 0; left: 75.5px; width: 3px; background: #fff; pointer-events: none; }
+    }
+    @media (min-width: 1010px) {
+      .dl-modal--book .dl-modal__box { width: min(100%, 978px); }
+      .dl-modal--book .dl-modal__frame iframe { top: -31px; left: -307px; height: calc(100% + 102px); transform: none; }
+      .dl-modal--book .dl-modal__frame::after { left: 92px; }
     }
     .dl-btn--navy {
       background: var(--navy);
@@ -2836,7 +2942,6 @@ main a,
       color: #fff;
     }
     .dl-btn:focus-visible { outline: 3px solid var(--dl-focus); outline-offset: 3px; }
-    .dl-modal--book .dl-modal__frame iframe { background: #fff; }
 
     /* Research modal: prospectus research foundation page */
     .dl-modal--research,
@@ -3022,15 +3127,13 @@ main a,
     html.dl-path-eula main.dl-home,
     html.dl-path-agree main.dl-home,
     html.dl-path-other main.dl-home { display: none; }
-    /* /highered reuses this homepage. K-12-only blocks stay out. Copy swaps live in --dl-he. */
-    html.dl-path-he .dl-case,
+    /* /highered reuses this homepage. K-12-only blocks stay out. Copy swaps live in --dl-he. Its last segment is "K-12 video ID, HE video ID" pairs. */
     html.dl-path-he .dl-logos-section,
+    html.dl-path-he .dl-videos,
     html.dl-path-he .dl-teach__family,
     html.dl-path-he .dl-k12,
     html.dl-path-he a[href="#customers"],
     html.dl-path-he li:has(> a[href="#customers"]) { display: none; }
-    /* With the logo strip gone, Engagement and Videos share the paper background: one section gap between them, as with How and Close */
-    html.dl-path-he .dl-videos { padding-top: 0; }
     .dh { display: none; }
     html.dl-path-he .dk { display: none; }
     html.dl-path-he .dh { display: inline; }
@@ -3040,7 +3143,7 @@ main a,
     html.dl-path-he.dl-he-ready .dl-hero__lead,
     html.dl-path-he.dl-he-ready .dl-cover__stat,
     html.dl-path-he.dl-he-ready .dl-proof__result--davis { visibility: visible; }
-    html { --dl-he: "Delphinium turns the Canvas courses online programs already have into <b>engaging experiences</b> for students and an <b>early-warning system</b> for teachers/faculty, with no extra work for instructors. <em>Just turn it on.</em>||<b>lower course failure</b>, as much as.||As much as <b>67%</b> lower withdrawal. As much as <b>65%</b> lower dropout: finished with less than about a third of the points.||Lower course failure, as much as||47%||Higher Ed Online||47%||In Higher Ed Online sections with Delphinium.|| From Davis Connect students, a K-12 online school. The word Fun is from that same survey."; }
+    html { --dl-he: "Delphinium transforms the Canvas courses you already teach into <b>engaging student experiences</b> and an <b>early-warning system</b> for teachers. No migration. No extra work. <em>Just turn it on.</em>||<b>lower course failures</b>||||Lower course failures, as much as||47%!||Utah Valley University studies||47%||The courses didn't change. The teachers didn't change. <b>Engagement did, and so did the outcomes.</b>||id9dqfNZsf4 9mfMC9jC6lU xC1b-9bZW4w MBYmCCeZqxo acjbTVs8IUM 4vzDJ1poyvU Ek-BBS8rP_0 63Iu4Xxg_tg ejtU7miZWD4 xbdP6GSjPgY L90IoF6LGAE U615qsZh8bc"; }
     .dl-sub__h {
       margin: 0;
       font-family: var(--font-display);
@@ -3056,11 +3159,4 @@ main a,
     .dl-sub .dl-contact__form { max-width: 46rem; }
     .dl-sub__files { display: grid; gap: 0.5rem; }
     .dl-file { font-family: var(--font-text); font-size: 0.95rem; color: var(--ink); max-width: 100%; }
-    .dl-footer__legal { margin: 0.45rem 0 0; }
-    .dl-footer__legal a { color: inherit; font-weight: 600; text-decoration: none; }
-    .dl-footer__legal a:hover { color: #fff; text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; }
-    .dl-footer__legal a:focus-visible { outline: 3px solid var(--dl-focus); outline-offset: 3px; border-radius: 4px; }
   
-/* dl28 bookings clip (Zoho pack) */
-.dl-modal--book #dl-book-frame { overflow: hidden; }
-.dl-modal--book #dl-book-frame iframe { top: -222px; bottom: auto; height: calc(100% + 222px); }

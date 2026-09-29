@@ -53,12 +53,6 @@ NEUTRALIZE = (
     "mo.observe(d.documentElement,{childList:true,subtree:true});d.addEventListener('DOMContentLoaded',function(){sweep();setTimeout(function(){sweep();mo.disconnect();},4000);});})();</script>"
 )
 
-BOOKINGS_CLIP = """
-/* dl28 bookings clip (Zoho pack) */
-.dl-modal--book #dl-book-frame { overflow: hidden; }
-.dl-modal--book #dl-book-frame iframe { top: -222px; bottom: auto; height: calc(100% + 222px); }
-"""
-
 FONT_COMMENT = "/* self-hosted fonts (Zoho Files) 2026-09-28 */\n"
 
 
@@ -107,7 +101,6 @@ def transform_document(src: str) -> tuple[str, list[dict]]:
     src = src.replace("<style>", "<style>\n" + FONT_COMMENT + faces + "\n", 1)
     for url in re.findall(r"url\((/dl28-font-[^)]+)\)", faces):
         man.append({"old": "fonts.gstatic.com (Google Fonts css2)", "new": url})
-    src = src.replace("</style>", BOOKINGS_CLIP + "</style>", 1)
     seen: set[str] = set()
     deduped = []
     for item in man:
@@ -188,7 +181,8 @@ def seo_head() -> str:
                 "description": (
                     "Delphinium is the Canvas engagement layer that turns existing Canvas "
                     "courses into motivating student experiences and an early-warning system "
-                    "for teachers, typically in about three minutes, with no course migration."
+                    "for teachers, typically in about three minutes, with no course migration. "
+                    "It is not an LMS and does not replace Canvas."
                 ),
                 "brand": {"@id": ORG_ID},
                 "provider": {"@id": ORG_ID},
@@ -288,7 +282,13 @@ def dedent_markup(src: str) -> str:
 
 def minify_js(js: str) -> str:
     binary = shutil.which("terser")
-    argv = [binary] if binary else ["npx", "--yes", "terser"]
+    npx = shutil.which("npx")
+    if binary:
+        argv = [binary]
+    elif npx:
+        argv = [npx, "--yes", "terser"]
+    else:
+        raise SystemExit("terser failed: neither terser nor npx is on PATH")
     argv += ["-c", "-m", "--ecma", "2015"]
     proc = subprocess.run(argv, input=js, capture_output=True, text=True, check=False)
     if proc.returncode != 0:
@@ -399,26 +399,41 @@ def assert_seo(header: str, footer: str) -> None:
         raise SystemExit("sitewide <title> is back in Header Code")
     if "noindex" in header:
         raise SystemExit("noindex leaked into Header Code")
-    he = "Delphinium is the Canvas engagement layer for Higher Ed Online programs."
-    if he not in header:
-        raise SystemExit("Higher Ed description missing from the path script")
-    if "Up to 31%" not in header:
+    rows = dict(
+        (k, (t, d)) for k, t, d in re.findall(r'(home|he):\["([^"]*)","([^"]*)"\]', header)
+    )
+    if set(rows) != {"home", "he"}:
+        raise SystemExit("home or Higher Ed title/description missing from the path script")
+    for k, (title, desc) in rows.items():
+        # Must match the Zoho page SEO strings in zoho-sites/SEO.md.
+        t = title.replace("\\u00b7", "\u00b7")
+        if len(t) > 60 or len(desc) > 160:
+            raise SystemExit(f"{k} title/description too long: {len(t)} / {len(desc)}")
+    if "Up to 31%" not in rows["home"][1]:
         raise SystemExit("K-12 promise line missing from the home description")
     # HE meta may cite the SOURCE percents. It must not cite the K-12 Davis 31%.
-    he_desc = header.split(he, 1)[1].split('"]', 1)[0]
-    if "31%" in he_desc or "K-12" in he_desc:
+    he_title, he_desc = rows["he"]
+    if "31%" in he_desc or "K-12" in he_desc or "K-12" in he_title:
         raise SystemExit("Higher Ed meta description inherited the K-12 promise")
-    for bit in ("as much as 47%", "as much as 67%", "as much as 65%"):
+    for bit in ("as much as 47%", "67%", "Utah Valley University"):
         if bit not in he_desc:
             raise SystemExit("Higher Ed meta description missing " + bit)
+    for stale in ("68%", "66%"):
+        if stale in he_desc:
+            raise SystemExit("Higher Ed meta description uses superseded " + stale)
+    # keep_ws writes the space between the number and its label as &#32;.
+    card = header.replace("&#32;", " ")
+    if "<b>67%</b> <span>fewer withdrawals</span>" not in card or "<b>68%</b>" in card:
+        raise SystemExit("HE outcomes card must show 67% fewer withdrawals (68% superseded)")
+    if "<b>65%</b> <span>fewer dropouts</span>" not in card or "<b>66%</b>" in card:
+        raise SystemExit("HE outcomes card must show 65% fewer dropouts (66% superseded)")
+    part_time = '<span>fewer failures for <span class="dl-nowrap">part-time</span> faculty</span>'
+    if "<b>64%</b> " + part_time not in card or "<b>65%</b> " + part_time in card:
+        raise SystemExit("HE outcomes card must show 64% fewer failures for part-time faculty (65% superseded)")
+    if re.search(r"6[5-9]%[^.;|\"]{0,40}part-time", he_desc):
+        raise SystemExit("Higher Ed meta description uses a superseded part-time faculty figure")
     if 'id="dl-define"' in header or "dl-define" in header:
         raise SystemExit("hero definition line is back in the visible page")
-    if 'id="dl-faq"' not in header:
-        raise SystemExit("Q&A block missing from the homepage")
-    close_at = header.find('id="close-heading"')
-    faq_at = header.find('id="dl-faq"')
-    if close_at < 0 or faq_at < close_at:
-        raise SystemExit("Q&A must sit after the close section, above the footer")
     if "FAQPage" in header or "FAQPage" in footer:
         raise SystemExit("FAQPage schema is not allowed")
     if "Davis School District, Utah. <b>72 online classes and 6,000 students.</b>" not in header:

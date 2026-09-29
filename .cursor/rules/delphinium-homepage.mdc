@@ -14,4 +14,4 @@ alwaysApply: true
 - CTA: https://delphi-me.com/schedule-jared
 - Do not touch HubSpot, DNS, or production Zoho. This repo is draft only.
 - No em dashes in user-facing copy. Prefer Niederhauser / Dance spellings.
-- Keep a DRAFT / not-live banner until Zoho staging.
+- DRAFT / not-live banner: removed for the live launch on 2026-09-29 by owner (Jared) approval. Do not re-add it.
