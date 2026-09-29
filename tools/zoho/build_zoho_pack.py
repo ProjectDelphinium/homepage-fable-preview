@@ -267,6 +267,10 @@ def assert_split(header: str, footer: str) -> None:
             raise SystemExit(marker + " placeholder still in the pack")
     if "purchase-agreement" not in header:
         raise SystemExit("legal-page neutralizer exception missing from Header Code")
+    if "/highered" not in header or 'k="he"' not in header:
+        raise SystemExit("higher ed path missing from Header Code")
+    if "dl-path-he" not in footer:
+        raise SystemExit("higher ed swap missing from Footer Code")
     if "WebToContactForm" not in footer or "WebToCase" not in footer:
         raise SystemExit("contact or support form missing from Footer Code")
 

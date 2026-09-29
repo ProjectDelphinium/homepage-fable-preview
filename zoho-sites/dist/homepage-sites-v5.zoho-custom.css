@@ -2943,6 +2943,23 @@ main a,
     html.dl-path-eula main.dl-home,
     html.dl-path-agree main.dl-home,
     html.dl-path-other main.dl-home { display: none; }
+    /* /highered reuses this homepage. K-12-only blocks stay out. Copy swaps live in --dl-he. */
+    html.dl-path-he .dl-case,
+    html.dl-path-he .dl-logos-section,
+    html.dl-path-he .dl-teach__family,
+    html.dl-path-he .dl-k12,
+    html.dl-path-he a[href="#customers"],
+    html.dl-path-he li:has(> a[href="#customers"]) { display: none; }
+    .dh { display: none; }
+    html.dl-path-he .dk { display: none; }
+    html.dl-path-he .dh { display: inline; }
+    html.dl-path-he .dl-hero__lead,
+    html.dl-path-he .dl-cover__stat,
+    html.dl-path-he .dl-proof__result--davis { visibility: hidden; }
+    html.dl-path-he.dl-he-ready .dl-hero__lead,
+    html.dl-path-he.dl-he-ready .dl-cover__stat,
+    html.dl-path-he.dl-he-ready .dl-proof__result--davis { visibility: visible; }
+    html { --dl-he: "Delphinium turns the Canvas courses online programs already have into <b>engaging experiences</b> for students and an <b>early-warning system</b> for teachers/faculty, with no extra work for instructors. <em>Just turn it on.</em>||<b>lower course failure</b>, as much as.||As much as <b>67%</b> lower withdrawal. As much as <b>65%</b> lower dropout: finished with less than about a third of the points.||Lower course failure, as much as||47%||Higher Ed Online||47%||In Higher Ed Online sections with Delphinium.|| From Davis Connect students, a K-12 online school. The word Fun is from that same survey."; }
     .dl-sub__h {
       margin: 0;
       font-family: var(--font-display);

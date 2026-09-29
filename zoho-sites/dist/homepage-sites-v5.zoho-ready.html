@@ -2730,6 +2730,23 @@
     html.dl-path-eula main.dl-home,
     html.dl-path-agree main.dl-home,
     html.dl-path-other main.dl-home { display: none; }
+    /* /highered reuses this homepage. K-12-only blocks stay out. Copy swaps live in --dl-he. */
+    html.dl-path-he .dl-case,
+    html.dl-path-he .dl-logos-section,
+    html.dl-path-he .dl-teach__family,
+    html.dl-path-he .dl-k12,
+    html.dl-path-he a[href="#customers"],
+    html.dl-path-he li:has(> a[href="#customers"]) { display: none; }
+    .dh { display: none; }
+    html.dl-path-he .dk { display: none; }
+    html.dl-path-he .dh { display: inline; }
+    html.dl-path-he .dl-hero__lead,
+    html.dl-path-he .dl-cover__stat,
+    html.dl-path-he .dl-proof__result--davis { visibility: hidden; }
+    html.dl-path-he.dl-he-ready .dl-hero__lead,
+    html.dl-path-he.dl-he-ready .dl-cover__stat,
+    html.dl-path-he.dl-he-ready .dl-proof__result--davis { visibility: visible; }
+    html { --dl-he: "Delphinium turns the Canvas courses online programs already have into <b>engaging experiences</b> for students and an <b>early-warning system</b> for teachers/faculty, with no extra work for instructors. <em>Just turn it on.</em>||<b>lower course failure</b>, as much as.||As much as <b>67%</b> lower withdrawal. As much as <b>65%</b> lower dropout: finished with less than about a third of the points.||Lower course failure, as much as||47%||Higher Ed Online||47%||In Higher Ed Online sections with Delphinium.|| From Davis Connect students, a K-12 online school. The word Fun is from that same survey."; }
     .dl-sub__h {
       margin: 0;
       font-family: var(--font-display);
@@ -2776,8 +2793,9 @@
     else if(/\/support$/.test(p))k="support";
     else if(/\/eula$/.test(p))k="eula";
     else if(/\/purchase-agreement$/.test(p))k="agree";
+    else if(/\/highered$/.test(p))k="he";
     document.documentElement.classList.add("dl-path-"+k);
-    var titles={contact:"Contact",support:"Support",eula:"EULA",agree:"Purchase agreement"};
+    var titles={contact:"Contact",support:"Support",eula:"EULA",agree:"Purchase agreement",he:"Higher ed"};
     if(titles[k])document.title=titles[k]+" \u00b7 Delphinium";
   }();
   </script>
@@ -2798,6 +2816,7 @@
         </div>
         <a href="#customers">In Their Own Words</a>
         <a href="#proof-eyebrow">Proof</a>
+        <a href="/highered" data-site-path="/highered">Higher ed</a>
       </nav>
       <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
       <button type="button" class="dl-nav__menu-btn" id="dl-mnav-btn" aria-expanded="false" aria-controls="dl-mnav" aria-label="Menu">
@@ -2814,6 +2833,7 @@
       <ul class="dl-mnav__list">
         <li><a href="#customers">In Their Own Words</a></li>
         <li><a href="#proof-eyebrow">Proof</a></li>
+        <li><a href="/highered" data-site-path="/highered">Higher ed</a></li>
         <li class="dl-mnav__cta"><a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a></li>
       </ul>
     </nav>
@@ -2930,7 +2950,7 @@
               <li>Turn Canvas into an early-warning powerhouse</li>
               <li>Red, yellow, and green reveal who needs help first</li>
               <li>One click gives the full picture: grades, progress, missing and late work, and more!</li>
-              <li>Send mass messages to parents</li>
+              <li class="dl-k12">Send mass messages to parents</li>
             </ul>
           </div>
           <div class="dl-prod__media dl-reveal">
@@ -2942,7 +2962,7 @@
             <img class="dl-prod__detail" src="/dl28-control-tower-student-detail-hires.png" width="2028" height="1783" alt="Student detail panel showing grades, progress, observers, and engagement counts for past due, missing, and late work." loading="lazy">
           </div>
           <div class="dl-prod__quote dl-reveal">
-            <blockquote class="dl-pull">
+            <blockquote class="dl-pull dl-k12">
               <p>&ldquo;I can see, with color, my students' progress &ndash; see their points, their percentages&hellip; to tell me where a student is very quickly. This has saved most of my Saturday nights!&rdquo;</p>
               <cite>Natalie Niederhauser<span>High School Math Teacher, Davis Connect</span></cite>
             </blockquote>
@@ -2964,14 +2984,14 @@
           <div class="dl-reveal">
             <p class="dl-eyebrow" id="community-builder">Community Builder</p>
             <h2 class="dl-h2" id="cb-heading"><span class="dl-h2__plain">The right nudge,</span> <em>Right on time.</em></h2>
-            <p class="dl-prod__sub">Stop blasting the whole class. Target exactly the students who need to hear from you, with exactly the right information – automatically. And include their parents too!</p>
+            <p class="dl-prod__sub">Stop blasting the whole class. Target exactly the students who need to hear from you, with exactly the right information – automatically.<span class="dl-k12"> And include their parents too!</span></p>
             <h3 class="dl-list__lead">Right message, right person</h3>
             <ul class="dl-list">
               <li>Message one student, a group, or the whole class</li>
               <li>Trigger outreach automatically from performance data</li>
               <li>Automatically personalize with students' data</li>
-              <li>Keep parents in the loop with a single click</li>
-              <li>Auto-translate into 240 languages</li>
+              <li class="dl-k12">Keep parents in the loop with a single click</li>
+              <li>Auto-translate into <span class="dk">240</span><span class="dh">160</span> languages</li>
             </ul>
             <h3 class="dl-list__lead">Less work, wider reach</h3>
             <ul class="dl-list">
@@ -3016,7 +3036,7 @@
       <div class="dl-wrap">
         <p class="dl-eyebrow" id="engagement-builder">Engagement Builder</p>
         <h2 class="dl-h2 dl-reveal" id="mk-heading"><span class="dl-h2__plain">Which class would</span> <em>YOU</em> <span class="dl-h2__plain">rather finish?</span></h2>
-        <p class="dl-lede">For online students, Canvas <em>is</em> school, and too often it looks like a <b>gray wall of text</b>.</p>
+        <p class="dl-lede">For online students, Canvas<span class="dk"> <em>is</em> school, and too often it looks</span><span class="dh"> too often looks</span> like a <b>gray wall of text</b>.</p>
 
         <div class="dl-seg" role="group" aria-label="Compare Canvas and Canvas plus Delphinium">
           <div class="dl-seg__inner">
@@ -3252,7 +3272,7 @@
           <article class="dl-card dl-proof__result dl-proof__result--motivation dl-reveal">
             <p class="dl-card__kicker">More motivation</p>
             <p class="dl-card__num dl-card__num--navy">72%</p>
-            <p class="dl-card__txt">of students say a Delphinium course is <b>more or much more motivating</b> than a traditional Canvas course.</p>
+            <p class="dl-card__txt" id="dl-mot">of students say a Delphinium course is <b>more or much more motivating</b> than a traditional Canvas course.</p>
           </article>
           <article class="dl-card dl-proof__result dl-proof__result--fun dl-reveal">
             <p class="dl-card__kicker">In their words</p>
@@ -3349,7 +3369,7 @@
             Watch: Integration is easy!
           </a>
         </div>
-        <p class="dl-punch dl-reveal"><span class="dl-punch__setup">Your school already runs on Canvas</span> <span class="dl-punch__payoff">Make it work <em class="dl-punch__key">harder</em> for you</span></p>
+        <p class="dl-punch dl-reveal"><span class="dl-punch__setup">Your <span class="dk">school</span><span class="dh">program</span> already runs on Canvas</span> <span class="dl-punch__payoff">Make it work <em class="dl-punch__key">harder</em> for you</span></p>
       </div>
     </section>
 
@@ -3721,6 +3741,7 @@
       (function pathChrome() {
         var match = (document.documentElement.className.match(/dl-path-(home|contact|support|eula|agree|other)/) || []);
         var pathClass = match[1] || "home";
+        /* /highered sets dl-path-he, which this regex skips, so section links stay on the page. */
         if (pathClass === "home") return;
         var homeBase = (siteOrigin || "") + "/";
         document.querySelectorAll('a[href^="#"]').forEach(function (el) {
@@ -3747,6 +3768,7 @@
           page.id = "top";
         }
       })();
+      !function(){if(!document.documentElement.classList.contains("dl-path-he"))return;var a=getComputedStyle(document.documentElement).getPropertyValue("--dl-he").trim().replace(/^"|"$/g,"").split("||"),q=document.querySelector.bind(document),n=0;[".dl-hero__lead",".dl-proof__davis .dl-card__txt",".dl-proof__davis .dl-card__ctx"].forEach(function(s){q(s).innerHTML=a[n++]});[".dl-cover__upto",".dl-cover__num","#proof-study-heading",".dl-proof__davis .dl-card__num",".dl-proof__study-punch"].forEach(function(s){q(s).textContent=a[n++]});q("#dl-mot").insertAdjacentText("beforeend",a[n]);document.documentElement.classList.add("dl-he-ready")}();
       var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       var hasIO = "IntersectionObserver" in window;
 
