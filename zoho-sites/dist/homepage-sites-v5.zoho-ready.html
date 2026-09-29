@@ -135,6 +135,8 @@
       --green: #00a651;
       --green-ink: #0a7f40;
       --max: 1160px;
+      --dl-nav-h: 3.75rem; /* sticky bar, 60px; 3.5rem below 720px */
+      --dl-anchor-gap: 0.75rem; /* breathing room under the bar for in-page anchors */
       --radius: 14px;
       --shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
       --shadow-sm: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
@@ -145,7 +147,7 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 7.5rem; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--dl-nav-h) + var(--dl-anchor-gap)); }
     body {
       margin: 0;
       font-family: var(--font-text);
@@ -195,7 +197,7 @@
       margin: 0;
       font-family: var(--font-text);
       font-size: 0.85rem;
-      font-weight: 400;
+      font-weight: 700;
       line-height: 1.2;
       color: var(--ink-soft);
       white-space: nowrap;
@@ -252,7 +254,6 @@
     .dl-top {
       --dl-logo-w: 140px;
       --dl-logo-top: 0.75rem;
-      --dl-nav-h: 3.75rem; /* 60px */
       --dl-nav-pad-x: clamp(1rem, 4vw, 2.25rem);
       position: sticky;
       top: 0;
@@ -516,10 +517,10 @@
       to { opacity: 1; }
     }
     @media (max-width: 719px) {
+      :root { --dl-nav-h: 3.5rem; } /* 56px */
       .dl-top {
         --dl-logo-w: 90px;
         --dl-logo-top: 0.6rem;
-        --dl-nav-h: 3.5rem; /* 56px */
       }
       /* 1.5in indent pushes "Engagement!" past the right edge on phones */
       .dl-hero__h1 .dl-hero__engage { margin-left: min(1.5in, 10vw); }
@@ -598,9 +599,8 @@
       background: var(--accent);
       flex: none;
     }
-    /* Nav links target eyebrows directly, 4rem below the html scroll-padding; #customers is a section anchor, so offset its padding to land its eyebrow at the same 4rem */
-    .dl-eyebrow[id] { scroll-margin-top: 4rem; }
-    #customers { scroll-margin-top: calc(4rem - clamp(4rem, 9vw, 7rem) + var(--dl-eyebrow-lift)); }
+    /* Sticky bar is cleared by scroll-padding. #customers is the section, so pull it up by its padding and the eyebrow lift to land that eyebrow with the others. */
+    #customers { scroll-margin-top: calc(var(--dl-eyebrow-lift) - clamp(4rem, 9vw, 7rem)); }
     .dl-h2 {
       margin: 0;
       font-size: clamp(1.9rem, 4.2vw, 3rem);
@@ -3125,7 +3125,7 @@
               <p class="dl-case__src"><span class="dk">U.S. Census Bureau, FY2024</span><span class="dh">Pew Research Center</span></p>
             </article>
           </div>
-          <p class="dl-punch"><span class="dl-punch__setup"><span class="dk">Three</span><span class="dh">These are the stats that <em class="dl-punch__ital">keep us up at night</em>, and the reason we made Delphinium.</span><span class="dk"> crises, one cause: <em class="dl-punch__ital">disengagement</em>.</span></span> <span class="dl-punch__payoff">Doing nothing is the most <em class="dl-punch__key">expensive</em> option you have.</span></p>
+          <p class="dl-punch"><span class="dl-punch__setup"><span class="dk">Three</span><span class="dh">These are the <em class="dl-punch__ital">stats that keep us up at night</em>, and the reason we made Delphinium.</span><span class="dk"> crises, one cause: <em class="dl-punch__ital">disengagement</em>.</span></span> <span class="dl-punch__payoff">Doing nothing is the most <em class="dl-punch__key">expensive</em> option you have.</span></p>
         </div>
       </div>
     </section>
