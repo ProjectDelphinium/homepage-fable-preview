@@ -1,0 +1,16 @@
+/* Scoped safety reset (2026-09-28).
+   Low specificity, no !important. This block is placed before the page
+   stylesheet, so every page rule still wins. vertical-align is not inherited
+   and the page CSS never sets it. Pinning baseline only bumps the Zoho theme
+   default (middle) back to the browser value the local preview uses. */
+.dl-top img,
+main img,
+.dl-footer img,
+.dl-top button,
+main button,
+.dl-footer button,
+.dl-top a,
+main a,
+.dl-footer a {
+  vertical-align: baseline;
+}

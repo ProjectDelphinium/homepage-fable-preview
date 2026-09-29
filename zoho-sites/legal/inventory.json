@@ -1,0 +1,27 @@
+{
+ "eula": {
+  "url": "https://delphi-me.com/eula",
+  "status": 200,
+  "title": "EULA",
+  "description": "",
+  "canonical": "https://delphi-me.com/eula",
+  "h1": [],
+  "words": 1210,
+  "links": []
+ },
+ "purchase-agreement": {
+  "url": "https://delphi-me.com/purchase-agreement",
+  "status": 200,
+  "title": "Purchase Agreement",
+  "description": "",
+  "canonical": "https://delphi-me.com/purchase-agreement",
+  "h1": [],
+  "words": 1209,
+  "links": [
+   [
+    "https://delphi-me.com/eula",
+    "https://delphi-me.com/eula?hsLang=en"
+   ]
+  ]
+ }
+}
