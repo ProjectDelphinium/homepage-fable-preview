@@ -2581,42 +2581,50 @@
       .dl-play img, .dl-play__btn, .dl-btn { transition: none; }
     }
 
-    /* Bookings: cross-origin iframe, so parent CSS cannot display:none Zoho's
-       header card, and Zoho sends no step or resize messages. Zoho's card is
-       taller on each step (bottom at y 214 date, 246 times, 317 details).
-       Narrow: Zoho stacks the card on top; 264px is the deepest crop that
-       keeps the month arrows (283) and the times heading (270), so the date
-       and times steps are clean and details keeps its timezone row. Zoho
-       scrolls itself (its scroller ends 55px above its bottom), so there is
-       no blank tail. Wide: at 1316px Zoho puts the card in a left column
-       (text ends x 271, divider x 400) and the step in a right column
-       (x 401-1285, y 31 to height - 71) with its own scrollbars. Its
-       confirmation drops both columns and centers on the full width
-       (heading x 407-909), so the frame shows x 307-1285: no card text on
-       any step, the whole confirmation, and ::after hides the divider.
-       Below 1010px (box 978 + padding) that view is scaled to 806px.
-       Zoho's Back link lives in the card.
-       overflow: clip, since focus() inside Zoho can scroll a hidden box. */
+    /* Bookings modal. portal-embed is cross-origin, so parent CSS cannot
+       restyle the steps. Zoho Bookings V9 does not post a content-height
+       message (the web-app bundle only posts zb_payment_result; zb-chatbot-resize
+       belongs to the isAiBot embed, not this URL). Do not offset, scale, or
+       clip the iframe: the details-step header sits on the top edge.
+       The SC tile and jared_delphi-me line are Bookings settings (CRM
+       Migration), not a CSS crop. See zoho-sites/BOOKINGS-MODAL.md.
+       The box is a flex column capped near the viewport. The frame scrolls.
+       820px is enough for the calendar and shorter than the old 1020px frame,
+       so a short confirmation page is not a tall empty void. */
+    .dl-modal--book .dl-modal__box {
+      display: flex;
+      flex-direction: column;
+      width: min(100%, 1040px);
+      max-height: calc(100vh - 2rem);
+      max-height: calc(100dvh - 2rem);
+    }
+    .dl-modal--book .dl-modal__bar { flex: 0 0 auto; }
     .dl-modal--book .dl-modal__frame {
+      --dl-book-h: 820px;
       aspect-ratio: auto;
-      height: min(1020px, calc(100vh - 6rem));
-      height: min(1020px, calc(100dvh - 6rem));
+      flex: 0 1 auto;
+      min-height: 0;
+      height: min(var(--dl-book-h), calc(100vh - 6.5rem));
+      height: min(var(--dl-book-h), calc(100dvh - 6.5rem));
+      max-height: calc(100vh - 5.5rem);
+      max-height: calc(100dvh - 5.5rem);
       background: #fff;
-      border-top: 12px solid #fff;
-      overflow: hidden;
-      overflow: clip;
+      border-top: 0;
+      overflow: auto;
+      overscroll-behavior: contain;
+      -webkit-overflow-scrolling: touch;
     }
-    .dl-modal--book .dl-modal__frame iframe { top: -264px; height: calc(100% + 300px); background: #fff; }
-    @media (min-width: 840px) {
-      .dl-modal--book .dl-modal__box { width: min(100%, 806px); }
-      .dl-modal--book .dl-modal__frame { border-top: 0; }
-      .dl-modal--book .dl-modal__frame iframe { top: -25.5px; left: -253px; width: 1316px; height: calc(121.34% + 102px); transform: scale(0.8241); transform-origin: 0 0; }
-      .dl-modal--book .dl-modal__frame::after { content: ""; position: absolute; top: 0; bottom: 0; left: 75.5px; width: 3px; background: #fff; pointer-events: none; }
-    }
-    @media (min-width: 1010px) {
-      .dl-modal--book .dl-modal__box { width: min(100%, 978px); }
-      .dl-modal--book .dl-modal__frame iframe { top: -31px; left: -307px; height: calc(100% + 102px); transform: none; }
-      .dl-modal--book .dl-modal__frame::after { left: 92px; }
+    .dl-modal--book .dl-modal__frame iframe {
+      position: relative;
+      inset: auto;
+      top: auto;
+      left: auto;
+      display: block;
+      width: 100%;
+      height: var(--dl-book-h);
+      max-width: none;
+      transform: none;
+      background: #fff;
     }
     .dl-btn--navy {
       background: var(--navy);
@@ -4110,7 +4118,7 @@
         discardYtWarm(id);
         var host = document.createElement("div");
         host.setAttribute("aria-hidden", "true");
-        host.style.cssText = "position:fixed;left:-9999px;top:0;width:480px;height:270px;overflow:hidden;pointer-events:none;opacity:0;";
+        host.style.cssText = "position:fixed;left:-9999px;top:0;width:480px;height:270px;overflow:hidden;pointer-events:none;opacity:0";
         var iframe = document.createElement("iframe");
         iframe.src = ytEmbedUrl(id);
         iframe.title = "YouTube preload";
@@ -4158,7 +4166,7 @@
         video.setAttribute("controlslist", "nodownload");
         video.poster = cover;
         video.src = src;
-        video.style.cssText = "position:fixed;left:-9999px;top:0;width:1px;height:1px;overflow:hidden;pointer-events:none;opacity:0;";
+        video.style.cssText = "position:fixed;left:-9999px;top:0;width:1px;height:1px;overflow:hidden;pointer-events:none;opacity:0";
         document.body.appendChild(video);
         try { video.load(); } catch (e) {}
         muxWarmById[id] = { video: video, src: src, poster: cover };
@@ -4320,48 +4328,46 @@
       }, true);
       scheduleVideoWarm();
     })();
-      /* Zoho Bookings: preload portal-embed iframe; Schedule CTAs open modal instantly */
+      /* Zoho Bookings: preload portal-embed; reload to BOOK_URL only after close. */
       (function () {
         var BOOK_URL = "https://jared-delphi-me.zohobookings.com/portal-embed#/4937208000000036014";
-        var FALLBACK = "https://jared-delphi-me.zohobookings.com/4937208000000036014";
         var bookModal = document.getElementById("dl-book-modal");
         var bookFrame = document.getElementById("dl-book-frame");
         if (!bookModal || !bookFrame) return;
         var iframe = null;
-
+        function pinBookTop() {
+          bookFrame.scrollTop = 0;
+          try { iframe.contentWindow.scrollTo(0, 0); } catch (e) {}
+        }
         function ensureIframe() {
-          if (iframe) return iframe;
-          iframe = document.createElement("iframe");
-          iframe.src = BOOK_URL;
-          iframe.title = "Schedule a demo";
-          iframe.setAttribute("allowfullscreen", "");
-          iframe.setAttribute("loading", "eager");
-          bookFrame.appendChild(iframe);
+          if (!iframe) {
+            iframe = document.createElement("iframe");
+            iframe.title = "Schedule a demo";
+            iframe.allowFullscreen = true;
+            iframe.loading = "eager";
+            iframe.addEventListener("load", pinBookTop);
+            bookFrame.appendChild(iframe);
+          }
+          var src = iframe.getAttribute("src");
+          if (!src || src === "about:blank") iframe.src = BOOK_URL;
           return iframe;
         }
-
-        var dialog = dlDialog(bookModal, {
+        var openBook = dlDialog(bookModal, {
           closeSelector: "[data-book-close]",
-          onOpen: ensureIframe,
+          onOpen: function () { ensureIframe(); pinBookTop(); },
+          onClose: function () {
+            if (!iframe) return;
+            iframe.src = "about:blank";
+            setTimeout(function () { if (bookModal.hidden) iframe.src = BOOK_URL; }, 0);
+          },
           initialFocus: function () { return bookModal.querySelector(".dl-modal__close"); }
-        });
-        var openBook = dialog.open;
-
+        }).open;
         document.querySelectorAll("[data-bookings-open]").forEach(function (el) {
           el.addEventListener("click", openBook);
         });
-
-        function warm() { ensureIframe(); }
-        if ("requestIdleCallback" in window) {
-          requestIdleCallback(warm, { timeout: 2000 });
-        } else {
-          setTimeout(warm, 800);
-        }
-
-        // Official API still available if we ever want floating button:
-        // Bookings.buttonModal({ url: BOOK_URL, text: "Schedule a demo", color: "#c7007a", position: "bottom-right" });
+        if ("requestIdleCallback" in window) requestIdleCallback(ensureIframe, { timeout: 2000 });
+        else setTimeout(ensureIframe, 800);
         window.dlOpenBookings = openBook;
-        window.dlBookingsFallback = FALLBACK;
       })();
 
       /* Dialogs (research, contact, bookings, video): scroll lock, Escape, Tab trap, focus return */
@@ -4501,24 +4507,13 @@
         function problem(item) {
           var v = item.el.value.trim();
           if (!v) return item.empty;
-          if (item.el !== emailEl) return "";
-          var at = v.indexOf("@");
-          var dot = v.lastIndexOf(".");
-          if (at < 1 || dot < at + 2 || dot + 2 >= v.length) return "Please enter a valid email address.";
+          if (item.el === emailEl) return dlEmailProblem(v);
           return "";
-        }
-
-        function setError(item, text) {
-          var err = document.getElementById(item.err);
-          err.textContent = text;
-          err.hidden = !text;
-          if (text) item.el.setAttribute("aria-invalid", "true");
-          else item.el.removeAttribute("aria-invalid");
         }
 
         function validate(item) {
           var text = problem(item);
-          setError(item, text);
+          dlFieldError(item, text);
           return !text;
         }
 
@@ -4544,7 +4539,7 @@
           if (src.indexOf("&d") !== -1) captchaImg.src = src.substring(0, src.indexOf("&d")) + "&d" + new Date().getTime();
           else captchaImg.src = src + "&d" + new Date().getTime();
           captchaEl.value = "";
-          setError(checks[3], "");
+          dlFieldError(checks[3], "");
         }
 
         var dialog = dlDialog(modal, {
@@ -4561,14 +4556,7 @@
           initialFocus: function () { return doneView.hidden ? lastEl : doneClose; }
         });
 
-        checks.forEach(function (item) {
-          item.el.addEventListener("blur", function () {
-            if (item.el.value.trim() || item.el.hasAttribute("aria-invalid")) validate(item);
-          });
-          item.el.addEventListener("input", function () {
-            if (item.el.hasAttribute("aria-invalid")) validate(item);
-          });
-        });
+        dlWatchFields(checks, problem);
 
         document.getElementById("dl-contact-captcha-reload").addEventListener("click", reloadCaptcha);
 
@@ -4593,10 +4581,7 @@
         if (document.documentElement.classList.contains("dl-path-home") && new URLSearchParams(window.location.search).get("contact") === "thanks") {
           pendingThanks = true;
           dialog.open();
-          var params = new URLSearchParams(window.location.search);
-          params.delete("contact");
-          var next = window.location.pathname + (params.toString() ? "?" + params.toString() : "") + window.location.hash;
-          history.replaceState(null, "", next);
+          dlStripQuery("contact");
         }
 
         if (onContactPage) {
@@ -4604,9 +4589,7 @@
           if (page && new URLSearchParams(window.location.search).get("contact") === "thanks") {
             page.querySelector('[data-cu-view="form"]').hidden = true;
             page.querySelector('[data-cu-view="done"]').hidden = false;
-            var thanksParams = new URLSearchParams(window.location.search);
-            thanksParams.delete("contact");
-            history.replaceState(null, "", window.location.pathname + (thanksParams.toString() ? "?" + thanksParams.toString() : "") + window.location.hash);
+            dlStripQuery("contact");
           } else {
             reloadCaptcha();
           }
@@ -4620,6 +4603,25 @@
         var dot = value.lastIndexOf(".");
         if (at < 1 || dot < at + 2 || dot + 2 >= value.length) return "Please enter a valid email address.";
         return "";
+      }
+
+      function dlFieldError(item, text) {
+        var err = document.getElementById(item.err);
+        err.textContent = text;
+        err.hidden = !text;
+        if (text) item.el.setAttribute("aria-invalid", "true");
+        else item.el.removeAttribute("aria-invalid");
+      }
+
+      function dlWatchFields(checks, problem) {
+        checks.forEach(function (item) {
+          item.el.addEventListener("blur", function () {
+            if (item.el.value.trim() || item.el.hasAttribute("aria-invalid")) dlFieldError(item, problem(item));
+          });
+          item.el.addEventListener("input", function () {
+            if (item.el.hasAttribute("aria-invalid")) dlFieldError(item, problem(item));
+          });
+        });
       }
 
       function dlStripQuery(key) {
@@ -4656,16 +4658,9 @@
           if (item.email) return dlEmailProblem(v);
           return "";
         }
-        function setError(item, text) {
-          var err = document.getElementById(item.err);
-          err.textContent = text;
-          err.hidden = !text;
-          if (text) item.el.setAttribute("aria-invalid", "true");
-          else item.el.removeAttribute("aria-invalid");
-        }
         function validate(item) {
           var text = problem(item);
-          setError(item, text);
+          dlFieldError(item, text);
           return !text;
         }
         function fileProblem() {
@@ -4677,14 +4672,7 @@
           }
           return "";
         }
-        checks.forEach(function (item) {
-          item.el.addEventListener("blur", function () {
-            if (item.el.value.trim() || item.el.hasAttribute("aria-invalid")) validate(item);
-          });
-          item.el.addEventListener("input", function () {
-            if (item.el.hasAttribute("aria-invalid")) validate(item);
-          });
-        });
+        dlWatchFields(checks, problem);
         form.addEventListener("submit", function (e) {
           var firstBad = null;
           checks.forEach(function (item) {
