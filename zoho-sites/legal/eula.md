@@ -1,23 +1,118 @@
-<!-- Source: https://delphi-me.com/eula | fetched 2026-09-28 18:14 MDT read-only | HTTP 200 | title: EULA -->
+# Delphinium End User License Agreement (EULA)
 
-# DELPHINIUM END USER LICENSE AGREEMENT (EULA)
+**Delphi M.E., LLC**  
+Effective / Last Reviewed: September 30, 2026
 
-- License Grant: Licensor hereby grants Licensee access to a Personal, Non-assignable & Non-transferable, Non-commercial copy of Delphinium products as outlined in the current invoice; Non-exclusive license, all in accordance with the terms set forth and other legal restrictions set forth in 3rd party software used while running Software. Limited: Licensee may use Software for the purpose of: Publishing Software’s output to Licensee and 3rd Parties for service of the Licensee; Non-Assignable & Non-Transferable: Licensee may not assign nor transfer rights and duties under this license. Non-Commercial: Licensee may not use Software for commercial purposes. For the purpose of this license, commercial purposes means not part of Licensee’s curriculum.
+---
 
-- Term & Termination: The Term of this license shall be until the end dates defined in an invoice paid by Licensee, or the end of a mutually agreed upon demonstration period. Licensor may terminate this Agreement, including Licensee’s license in the case where Licensee: Became insolvent or otherwise entered into any liquidation process; or Exported the Software to any jurisdiction where licensor may not enforce his rights under this agreement in; or Licensee was in breach of any of this license's terms and conditions and such breach was not cured, immediately upon notification; or Licensee in breach of any of the terms of clause 2 to this license; or Licensee otherwise entered into any arrangement which caused Licensor to be unable to enforce his rights under this License. Upon termination of this license, Licensor shall immediately cease providing the SaaS Services unless a new license or agreement is made. Upon termination of this license and upon subsequent written request by the disclosing party, the receiving party of tangible Confidential Information shall immediately return such information or destroy such information and provide written certification of such destruction, provided that the receiving party may permit its legal counsel to retain one archival copy of such information in the event of a subsequent dispute between the parties.
+## License Summary
+*(Non-binding overview — the full terms below control.)*
 
-- Upgrades, Updates and Fixes: Licensor may provide Licensee, from time to time, with Upgrades, Updates or Fixes, as detailed herein and according to Licensor’s sole discretion. Licensor shall provide any update or fix free of charge; however, nothing in this Agreement shall require Licensor to provide updates or fixes Upgrades: for the purpose of this license, an Upgrade shall be a material amendment in The Software, which contains new features and or major performance improvements Updates: for the purpose of this license, an update shall be a minor amendment in The Software, which may contain new features or minor improvements. Fix: for the purpose of this license, a fix shall be a minor amendment in The Software, intended to remove bugs or alter minor features which impair The Software's functionality.
+- Term follows the dates on your Order Form / invoice / Statement of Work (or agreed demo period).
+- You receive hosted access for educational use by your institution and Authorized Users — not a transferable software ownership sale.
+- You may not resell or re-license Delphinium as a product; using it inside tuition-bearing courses is allowed per your Order Form.
+- Student and institutional data are addressed in our Privacy Policy and any signed DPA — not transferred to Delphi as a sale of education records.
+- This Summary does not modify the binding terms below.
 
-- Support: Software is provided under an AS-IS basis and is supported only to the extent detailed in this agreement. Bug Notification: Licensee may provide Licensor of details regarding any bug, defect or failure in The Software promptly and with no delay from such event; Licensee shall comply with Licensor's request for information regarding bugs, defects or failures and furnish them with information, screenshots and try to reproduce such bugs, defects or failures. Feature Request: Licensee may request additional features in Software, provided, however, that (i) Licensee shall waive any claim or right in such feature should feature be developed by Licensor; (ii) Licensee shall be prohibited from developing the feature, or disclose such feature request, or feature, to any 3rd party directly competing with Licensor or any 3rd party which may be, following the development of such feature, in direct competition with Licensor; (iii) Licensee warrants that feature does not infringe any 3rd party patent, trademark, trade-secret or any other intellectual property right; and (iv) Licensee developed, envisioned or created the feature solely by themselves.
+---
 
-- Liability: To the extent permitted under Law, The Software is provided under an AS-IS basis. Licensor shall never, and without any limit, be liable for any damage, cost, expense or any other payment incurred by Licensee as a result of Software’s actions, failure, bugs and/or any other interaction between The Software and Licensee’s end-equipment, computers, other software or any 3rd party, end-equipment, computer or services. Moreover, Licensor shall never be liable for any defect in source code written by Licensee when relying on The Software or using The Software’s source code.
+## Preamble
 
-- Warranty: Intellectual Property: Licensor hereby warrants that The Software does not violate or infringe any 3rd party claims in regards to intellectual property, patents and/or trademarks and that to the best of its knowledge no legal action has been taken against it for any infringement or violation of any 3rd party intellectual property rights. No-Warranty: The Software is provided without any warranty; Licensor hereby disclaims any warranty that The Software shall be error free, without defects or code which may cause damage to Licensee’s computers or to Licensee, and that Software shall be functional. Licensee shall be solely liable to any damage, defect or loss incurred as a result of operating software and undertake the risks contained in running The Software on License’s Server[s] and Website[s]. Prior Inspection: Licensee hereby states that they inspected The Software thoroughly and found it satisfactory and adequate to their needs, that it does not interfere with their regular operation and that it does meet the standards and scope of their computer systems and architecture. Licensee found that The Software interacts with their development, website and server environment and that it does not infringe any of End User License Agreement of any software Licensee may use in performing his services. Licensee hereby waives any claims regarding The Software's incompatibility, performance, results and features, and warrants that he inspected The Software.
+This Agreement governs the relationship between the institutional purchaser identified on the applicable Order Form, invoice, or Statement of Work, and its Authorized Users (collectively, "Licensee"), and Delphi M.E., LLC, whose principal place of business is 1754 E 260 N, Spanish Fork, UT (hereinafter "Licensor"). This Agreement sets the terms, rights, restrictions, and obligations on accessing and using the Delphinium software and related SaaS services (hereinafter "The Software") created and owned by Licensor.
 
-- No Refunds: Licensee warrants that they inspected The Software according to clause 6(c) and that it is adequate to their needs. Accordingly, as The Software is intangible goods, Licensee shall not be, ever, entitled to any refund, rebate, compensation or restitution for any reason whatsoever, even if The Software contains material flaws.
+## License Grant
 
-- Indemnification: Licensee hereby warrants to hold Licensor harmless and indemnify Licensor for any lawsuit brought against it regarding Licensee’s use of The Software in means that violate, breach or otherwise circumvent this license, Licensor's intellectual property rights or Licensor's title in The Software. Licensor shall promptly notify Licensee in case of such legal action and request Licensee’s consent prior to any settlement in relation to such lawsuit or claim.
+Subject to this Agreement and timely payment of fees under the applicable Purchase Agreement / Order Form / invoice, Licensor grants Licensee a limited, non-exclusive, non-transferable, non-sublicensable (except to Authorized Users), revocable right to access and use The Software as a hosted SaaS service during the subscription Term, solely for Licensee's internal educational and administrative purposes (including delivery of courses to Licensee's enrolled students), in accordance with seat, course, and campus limits stated in the Order Form / invoice / Statement of Work.
 
-- Governing Law, Jurisdiction: Licensee hereby agrees not to initiate class-action lawsuits against Licensor in relation to this license and to compensate Licensor for any legal fees, cost or attorney fees should any claim brought by Licensee against Licensor be denied, in part or in full.
+"Authorized Users" means Licensee's employees, faculty, and staff (and, where the Order Form contemplates parent/guardian messaging features, parents/guardians contacted only as directed by Licensee), consistent with the Purchase Agreement. Students access The Software only through Licensee's LMS (e.g., Canvas/LTI) as enabled by Licensee; students are not independent licensees under this EULA.
 
-- Communications: Licensee consents to receive communications from Licensor by email and in-product notification relating to Licensee's use of The Software, including onboarding, training, professional development, product education, service notices, and support.
+Licensee may not resell, rent, or provide The Software as a standalone commercial product to third parties. Charging tuition or course fees for educational programs that use The Software as part of Licensee's curriculum is permitted and is not a prohibited resale of The Software.
+
+**Non-Assignable & Non-Transferable.** Licensee may not assign or transfer rights and duties under this license except as the Purchase Agreement expressly permits (for example, to a successor educational entity).
+
+## Term
+
+The Term of this license begins on the start date in the applicable Order Form, invoice, or Statement of Work (or the start of a mutually agreed demonstration period) and continues until the end date stated therein, unless earlier terminated under this Agreement or the Purchase Agreement.
+
+## Termination
+
+Licensor may terminate this Agreement, including Licensee's license, if Licensee:
+
+1. becomes insolvent or otherwise enters into any liquidation process; or
+2. uses The Software in violation of applicable export-control laws; or
+3. is in material breach of this Agreement's terms and conditions and fails to cure within 30 days after written notice (or immediately if the breach is not reasonably curable); or
+4. is in material breach of the License Grant restrictions (including non-assignability / non-transfer and prohibited resale) and fails to cure within 30 days after written notice (or immediately if the breach is not reasonably curable); or
+5. otherwise enters into any arrangement that causes Licensor to be unable to enforce its rights under this License.
+
+Licensor may suspend access immediately for material Acceptable Use violations that threaten security or other customers, with notice when practicable.
+
+Upon termination of this license, Licensor shall cease providing the SaaS Services unless a new license or agreement is signed.
+
+Upon termination of this license and upon subsequent written request by the disclosing party, the receiving party of tangible Confidential Information shall return or destroy such information and provide written certification of such destruction, provided that the receiving party may permit its legal counsel to retain one archival copy in the event of a subsequent dispute. Customer Data is handled under the Customer Data section and the Privacy Policy / DPA, not solely under this Confidential Information paragraph.
+
+## Upgrades
+
+Updates and Fixes: Licensor may provide Licensee, from time to time, with Upgrades, Updates or Fixes, as detailed herein and according to Licensor's sole discretion. Licensor shall provide any update or Fix free of charge; however, nothing in this Agreement shall require Licensor to provide Updates or Fixes.
+
+- **Upgrades:** a material amendment in The Software which contains new features and/or major performance improvements.
+- **Updates:** a minor amendment in The Software which may contain new features or minor improvements.
+- **Fix:** a minor amendment in The Software intended to remove bugs or alter minor features which impair The Software's functionality.
+
+## Support
+
+Software is provided on an AS-IS basis and is supported only to the extent detailed in this agreement.
+
+- **Bug Notification:** Licensee may provide Licensor details regarding any bug, defect or failure in The Software promptly; Licensee shall comply with Licensor's request for information regarding bugs, defects or failures and furnish information, screenshots, and try to reproduce such bugs, defects or failures.
+- **Feature Request:** Licensee may request additional features in Software, provided, however, that (i) Licensee shall waive any claim or right in such feature should feature be developed by Licensor; (ii) Licensee shall be prohibited from developing the feature, or disclose such feature request, or feature, to any 3rd party directly competing with Licensor or any 3rd party which may be, following the development of such feature, in direct competition with Licensor; (iii) Licensee warrants that feature does not infringe any 3rd party patent, trademark, trade-secret or any other intellectual property right; and (iv) Licensee developed, envisioned or created the feature solely by himself.
+
+## Customer Data
+
+As between the parties, Licensee (or Licensee's students/parents as applicable under law) retains all right, title, and interest in data submitted to or collected through The Software in connection with Licensee's courses ("Customer Data"), including education records. Licensor receives only a limited license to host, process, and display Customer Data solely to provide The Software and related support, as described in the Privacy Policy and any signed Student Data Privacy Agreement / DPA / Utah NDPA. Licensor does not sell Customer Data. On termination or Licensee's written request, Licensor will delete or return Customer Data in accordance with the Privacy Policy and applicable DPA (backup residual copies overwritten on normal rotation). If there is a conflict regarding student personal information, the DPA controls over this EULA.
+
+## Acceptable Use
+
+Licensee and Authorized Users will not: (a) reverse engineer, decompile, or attempt to derive source code from The Software except to the extent permitted by law; (b) copy, modify, or create derivative works of The Software except as the SaaS interface allows; (c) rent, sell, or provide The Software as a service bureau to unaffiliated third parties; (d) interfere with or disrupt the integrity or performance of The Software; (e) attempt unauthorized access to systems or data; (f) use The Software to transmit unlawful, harassing, or infringing content; or (g) use The Software in violation of applicable student-privacy or education laws. Licensor may suspend access for material AUP violations that threaten security or other customers, with notice when practicable.
+
+## Communications
+
+Licensee consents to receive operational communications from Licensor by email and in-product notification relating to use of The Software (onboarding, training, professional development, product education, service notices, and support). SMS/text and phone communications, if any, are governed by the Purchase Agreement (including Authorized User / parent channels and the prohibition on marketing SMS to students) and the Privacy Policy SMS section. Consent to operational email does not waive SMS opt-out rights.
+
+## Limitation of Liability
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, NEITHER PARTY WILL BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, REVENUE, DATA, OR GOODWILL, ARISING OUT OF OR RELATED TO THIS AGREEMENT, REGARDLESS OF THEORY OF LIABILITY.
+
+EXCEPT FOR A PARTY'S INDEMNIFICATION OBLIGATIONS; BREACH OF CONFIDENTIALITY; INFRINGEMENT OF THE OTHER PARTY'S IP; WILLFUL MISCONDUCT OR FRAUD, EACH PARTY'S TOTAL AGGREGATE LIABILITY UNDER THIS AGREEMENT WILL NOT EXCEED THE FEES ACTUALLY PAID BY LICENSEE TO LICENSOR FOR THE SOFTWARE IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM.
+
+The Software is provided on an AS-IS basis except for any express limited warranty stated in this Agreement or the Purchase Agreement.
+
+## Intellectual Property
+
+Licensor warrants that, to Licensor's knowledge, The Software does not infringe any third-party U.S. patent, copyright, or trademark, and that to the best of its knowledge no legal action has been taken against it for any infringement or violation of any third-party intellectual property rights. Intellectual property risk for authorized use is further addressed in the Licensor Indemnity below.
+
+## No-Warranty
+
+Except as expressly stated in this Agreement or the Purchase Agreement, The Software is provided without warranty; Licensor disclaims any warranty that The Software shall be error free, without defects, or continuously available. Licensee is responsible for evaluating fitness for its LMS environment, systems, and networks. Licensor does not warrant compatibility with every third-party configuration.
+
+## Prior Inspection / Fitness
+
+Licensee is responsible for evaluating whether The Software is adequate for Licensee's needs and LMS environment (including via any mutually agreed demonstration period). Licensor does not warrant compatibility with every third-party configuration. This section does not waive rights that cannot be waived under applicable law or express remedies in the Purchase Agreement.
+
+## No Refunds
+
+Licensee warrants that they inspected The Software according to the Prior Inspection / Fitness provisions under Warranty above and that it is adequate to their needs. Accordingly, as The Software is intangible goods, except as required by law or expressly stated in the Purchase Agreement / Order Form, Licensee is not entitled to any refund, rebate, compensation, or restitution solely because The Software contains defects, including material flaws. Refund rights for non-delivery or service credits, if any, are solely as stated in the Purchase Agreement.
+
+## Licensee Indemnity
+
+Licensee will defend and indemnify Licensor against third-party claims arising from Licensee's or Authorized Users' misuse of The Software, Customer Data Licensee provides, or Licensee's violation of law or this Agreement.
+
+## Licensor Indemnity
+
+Licensor will defend and indemnify Licensee against third-party claims that Licensee's authorized use of The Software as provided by Licensor infringes a U.S. patent, copyright, or trademark, provided Licensee gives prompt notice and reasonable cooperation; Licensor may procure rights, modify the Software, or terminate the affected service with a refund of prepaid unused fees for that portion. Licensor has no obligation for claims arising from combinations not provided by Licensor, modifications by Licensee, or use after notice to stop.
+
+## Governing Law; Venue; Class Actions
+
+This Agreement is governed by the laws of the State of Utah, excluding conflict-of-law rules. Exclusive venue for disputes is the state or federal courts located in Utah, and each party consents to personal jurisdiction there, unless a signed DPA or Purchase Agreement specifies otherwise. Licensee agrees not to initiate class-action lawsuits against Licensor in relation to this license.
+
+## Order of Precedence; Entire Agreement
+
+If there is a conflict: (1) a signed Student DPA / NDPA controls for student personal information; (2) then the Purchase Agreement / Order Form; (3) then this EULA; (4) then the Privacy Policy (public description). Product marketing pages are not contract terms.
