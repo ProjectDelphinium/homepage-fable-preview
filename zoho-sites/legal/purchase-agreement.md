@@ -1,16 +1,21 @@
-<!-- Source: https://delphi-me.com/purchase-agreement | fetched 2026-09-28 18:14 MDT read-only | HTTP 200 | title: Purchase Agreement. Text is verbatim (zero-width spaces removed); headings added from numbered sections. -->
+<!-- Source of truth: /workspace/delphinium-os/compliance/reviews/2026-09-30-purchase-agreement-public-page-source.md | adapted 2026-09-30 for Zoho /purchase-agreement native page | comment stripped before public HTML -->
 
-# DELPHINIUM PURCHASE AGREEMENT
+# Delphinium Purchase Agreement
 
-This Purchase Agreement is between Delphinium, Inc. and Purchaser identified in invoice.
+**Delphi M.E., LLC**  
+Effective / Last Reviewed: September 30, 2026
+
+---
+
+This Purchase Agreement is between Delphi M.E. LLC and Purchaser identified in invoice.
 
 ## Definitions
 
 As used in this Agreement, the following terms have the meaning set forth below:
 
-A. Agreement. This document (Purchase Agreement) and the Delphinium End User License Agreement (“EULA”) found at https://delphi-me.com/eula, shall be the only terms and conditions applicable to the purchase of the Delphinium License/subscriptions.
+**A. Agreement; Order of Precedence.** This Purchase Agreement, the Delphinium End User License Agreement ("EULA") at https://www.delphi-me.com/eula, the applicable invoice / proposal / Order Form, and any signed Student Data Privacy Agreement / NDPA / state DPA (each a "DPA"), together constitute the agreement for Purchaser's purchase of Delphinium License/subscriptions. If there is a conflict: (1) a signed DPA controls for student personal information and education records; (2) then this Purchase Agreement and the applicable invoice / Order Form; (3) then the EULA; (4) then the public Privacy Policy (descriptive only). Product marketing pages are not contract terms.
 
-B. Delphinium Product(s). Subscriptions, support services, professional development products, materials and services that may acquire pursuant to this Agreement from Delphi M.E. LLC for its own use (as listed in the above terms of service).
+**B. Delphinium Product(s).** Subscriptions, support services, professional development products, materials, and services that Purchaser may acquire pursuant to this Agreement from Delphi M.E. LLC for Purchaser's own institutional use, as listed on the applicable invoice, proposal, or Order Form (and not by reference to any separate "terms of service" page).
 
 ## 1. Purchase Authorizations
 
@@ -18,7 +23,7 @@ Purchaser identified in invoice represents and warrants that it has complied wit
 
 ## 2. Support
 
-Delphi M.E. LLC shall provide user support for Delphinium Products acquired hereunder as set forth in the attached invoice and the Delphinium EULA.
+Delphi M.E. LLC shall provide user support for Delphinium Products acquired hereunder as set forth in the attached invoice and the Delphinium EULA. Unless an invoice or Order Form expressly includes a service level schedule, Delphi M.E. LLC does not commit to specific uptime percentages or service credits under this Agreement. Marketing materials are not SLAs.
 
 ## 3. Purchase/Price/Delivery/Payment
 
@@ -26,7 +31,7 @@ a. This Agreement is entered into by and between the Purchaser identified in inv
 
 b. The Purchaser identified in invoice hereunder shall pay all applicable local sales and use taxes and/or duties due on purchases. Proof of sales tax exempt status must be on file with Delphi M.E. LLC for any order to be treated as a sales tax exempt transaction.
 
-c. Payment terms under this Agreement are thirty (30) days from the date of this Agreement.
+c. Payment terms under this Agreement are thirty (30) days from the date of the applicable invoice, unless the invoice states different terms.
 
 ## 4. Limited Warranty
 
@@ -38,15 +43,17 @@ Delphinium Products are considered Delphinium Confidential Information, may cont
 
 ## 6. Indemnification
 
-The Purchaser identified in invoice agrees to indemnify, defend, and hold harmless Delphi M.E. LLC, its subsidiaries, affiliates, directors, officers and employees from any cause of action, damage, costs, liabilities or expenses that arise solely from improper use and operation of the Delphinium Products.
+(a) Purchaser. Purchaser will defend and indemnify Delphi M.E. LLC and its officers, directors, and employees against third-party claims arising from Purchaser's or Authorized Users' misuse of Delphinium Products, Customer Data Purchaser provides, or Purchaser's violation of law or this Agreement.
 
-## 7. Non-assignment of Agreement
+(b) Delphi. Delphi M.E. LLC will defend and indemnify Purchaser against third-party claims that Purchaser's authorized use of the Delphinium Products, as provided by Delphi, infringes a U.S. patent, copyright, or trademark, provided Purchaser gives prompt notice and reasonable cooperation. Delphi may modify the Products, procure a license, or terminate the affected subscription with a pro-rata refund of prepaid unused fees for the infringing portion.
 
-The Purchaser identified in invoice shall not assign or otherwise transfer its rights or delegate its obligations hereunder without Delphi M.E.'s prior written consent. Any attempted assignment, transfer, or delegation without such consent shall be void.
+## 7. Non-assignment.
+
+Purchaser shall not assign or otherwise transfer its rights or delegate its obligations under this Agreement without Delphi M.E. LLC's prior written consent (not to be unreasonably withheld for an affiliate under common control that assumes this Agreement in writing). Delphi M.E. LLC may assign this Agreement in connection with a merger, acquisition, corporate reorganization, or sale of substantially all assets or the Delphinium product line, provided the successor assumes Delphi's obligations hereunder. Any attempted assignment in violation of this Section is void.
 
 ## 8. Limitation of Liability
 
-In no event shall Delphi M.E. LLC be liable for incidental, consequential, indirect, or special damages including, without limitation, lost profits, or revenue.
+Except for Purchaser's payment obligations; a party's willful misconduct or fraud; and infringement indemnity obligations under Section 6, each party's total aggregate liability arising out of or relating to this Agreement will not exceed the fees paid or payable by Purchaser to Delphi M.E. LLC under this Agreement in the twelve (12) months preceding the claim. In no event will either party be liable for incidental, consequential, indirect, special, exemplary, or punitive damages, including without limitation lost profits, lost revenue, or lost data, whether or not advised of the possibility of such damages. The foregoing limitations apply to the maximum extent permitted by law and form an essential basis of the bargain.
 
 ## 9. Term of Agreement
 
@@ -54,15 +61,19 @@ The Delphinium EULA and the Delphinium Proposal will govern the term of this Agr
 
 ## 10. Entire Agreement
 
-This Agreement, including other agreements and documents incorporated herein by reference, constitute the entire understanding and agreement between Delphi M.E. LLC and the Purchaser identified in invoice. Any modifications or amendments to this Agreement must be in writing signed by a duly authorized agent or representative of Delphi M.E. LLC and the Purchaser identified in invoice. Specifically, any contrary, inconsistent, or additional terms incorporated in any other documents will be of no force or affect whatsoever.
+This Agreement, including other agreements and documents incorporated herein by reference, constitute the entire understanding and agreement between Delphi M.E. LLC and the Purchaser identified in invoice. Any modifications or amendments to this Agreement must be in writing signed by a duly authorized agent or representative of Delphi M.E. LLC and the Purchaser identified in invoice. Specifically, any contrary, inconsistent, or additional terms incorporated in any other documents will be of no force or effect whatsoever. Nothing in this Section limits a signed DPA.
 
 ## 11. Termination of Agreement
 
-Either party may terminate this Agreement for material breach. To terminate the agreement, the non-breaching party shall provide written notice of breach to the breaching party. The breaching party shall have thirty (30) days from receipt of the notification to cure said breach. In the event the breach is not cured, the non-breaching party shall give the breaching party formal notification of termination of this Agreement. Upon said notice the due date of all Delphi M.E. LLC invoices shall be accelerated such that they become due and payable as of the date of termination. The obligations of Sections 8, 9, 12 – 14 shall survive termination of this agreement.
+Either party may terminate this Agreement for material breach. To terminate the agreement, the non-breaching party shall provide written notice of breach to the breaching party. The breaching party shall have thirty (30) days from receipt of the notification to cure said breach. In the event the breach is not cured, the non-breaching party shall give the breaching party formal notification of termination of this Agreement. Upon said notice the due date of all Delphi M.E. LLC invoices shall be accelerated such that they become due and payable as of the date of termination.
 
-## 12. Governing Law
+**Effect of Termination — Customer Data.** Upon termination or expiration, Purchaser may request export of Customer Data then available in the Products within thirty (30) days. Delphi M.E. LLC will delete or return Customer Data in accordance with the Privacy Policy and any signed DPA (backup residual copies overwritten on normal rotation), unless law or the DPA requires longer retention.
 
-This Agreement shall be construed and enforced in accordance with the laws of the State of Utah, without regard to its conflicts of laws provisions. Any action or proceeding brought by either party against the other arising out of or relating to this Agreement shall be brought only in a State or Federal court of competent jurisdiction in laws of the State of Utah.
+The obligations of Sections 6 (Indemnification), 8 (Limitation of Liability), 12 (Governing Law), 14, 15 (Authorized Users and Product Communications), and Customer Data / Privacy / DPA, and any accrued payment obligations, shall survive termination or expiration of this Agreement.
+
+## 12. Governing Law; Venue.
+
+This Agreement is governed by the laws of the State of Utah, excluding conflict-of-law rules. Exclusive venue for disputes arising out of or relating to this Agreement is the state or federal courts located in Utah, and each party consents to personal jurisdiction there, unless a signed DPA specifies otherwise.
 
 ## 13. Miscellaneous
 
@@ -84,4 +95,8 @@ c. Purchaser Authority. Purchaser represents and warrants that it has the author
 
 d. Opt-Out. Delphi M.E. LLC will provide a means to opt out of non-essential communications and will honor "STOP" replies to text messages. Delphi M.E. LLC may continue to send messages necessary to deliver or support the Delphinium Products. An Authorized User's opt-out does not modify Purchaser's obligations under this Agreement.
 
-e. Limits on Use. Delphi M.E. LLC will not sell, rent, or disclose Authorized User contact information to third parties, and will not use Authorized User contact information to communicate directly with students.
+e. Limits on Use. Delphi M.E. LLC will not sell, rent, or disclose Authorized User contact information to third parties, and will not use Authorized User contact information to communicate directly with students. Contact-data handling and parent/guardian SMS (if offered) are further described in the Privacy Policy. This Section does not authorize Delphi M.E. LLC to market to students by SMS.
+
+## 16. Customer Data; Privacy; DPA.
+
+As between the parties, Purchaser (and Purchaser's students/parents as applicable under law) retains all right, title, and interest in data submitted to or collected through Delphinium Products in connection with Purchaser's courses ("Customer Data"), including education records. Delphi M.E. LLC processes Customer Data solely to provide the Products and related support, as described in the Privacy Policy and any signed DPA. Delphi M.E. LLC does not sell Customer Data. Upon written request, Delphi M.E. LLC will enter into its then-current Student DPA / Utah NDPA (or a mutually agreed equivalent) for institutional Purchasers. The Privacy Policy is available upon request at support@delphi-me.com.
