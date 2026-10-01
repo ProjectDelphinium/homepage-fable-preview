@@ -26,8 +26,10 @@ Site-wide code: Custom CSS, Header Code and Footer Code come from the pack (`dis
 ## Forms
 | Form | ID | Notes |
 |---|---|---|
-| Zoho CRM Web-to-Contact | `3131408000003185015` | returns to `?contact=thanks` |
-| Zoho Desk WebToCase | `1470822000000482143` | allowed domain `https://www.delphi-me.com`, returns to `?ticket=thanks` |
+| Zoho CRM Web-to-Contact (Website Contact Us) | `3131408000003185015` | returns to `?contact=thanks`; **Google reCAPTCHA v2** site key `6LcnUtkt…` (live 2026-10-01); honeypot `aG9uZXlwb3Q` retained; image CaptchaServlet removed |
+| Zoho Desk WebToCase | `1470822000000482143` | allowed domain `https://www.delphi-me.com`, returns to `?ticket=thanks` (unchanged) |
+
+Contact form HTML lives in the site-wide Header/Footer pack (`homepage-sites-v5.html` → `dist/`), not the native `/contact-us` page body. Pack sizes after reCAPTCHA paste (2026-10-01 MT): Header 44,425 / Footer 44,230 (under 44,900).
 
 ## Favicon
 `/dl28-favicon.png` (hosted on Zoho)
