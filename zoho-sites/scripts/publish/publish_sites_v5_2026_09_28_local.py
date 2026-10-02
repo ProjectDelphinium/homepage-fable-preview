@@ -22,7 +22,7 @@ def verify_public(out):
     c.update({
         "hero_muted_first_line": 'dl-hero__muted">Canvas delivers content.' in html,
         "lead_just_turn_it_on_em": "<em>Just turn it on.</em>" in html,
-        "cover_cut_failures_up_to": "Cut failures, up to" in html,
+        "cover_cut_fail_rate_up_to": "Cut fail-rate up to" in html,
         "logo_new_svg_pinned": LOGO in html,
         "contact_modal": "dl-contact-modal" in html,
         "contact_web_to_case": "crm.zoho.com/crm/WebToCaseForm" in html,
@@ -30,9 +30,9 @@ def verify_public(out):
     })
     need = ["canvas_delivers", "data_bookings_open", "dl_book_modal", "portal_embed",
             "cta_href", "education_moved_online_comma", "teachers_can_read_the_room", "dl_h2_plain",
-            "hero_muted_first_line", "lead_just_turn_it_on_em", "cover_cut_failures_up_to", "logo_new_svg_pinned", "contact_modal"]
+            "hero_muted_first_line", "lead_just_turn_it_on_em", "cover_cut_fail_rate_up_to", "logo_new_svg_pinned", "contact_modal"]
     r["ok"] = all(c.get(k) for k in need)
-    r["note"] = "cut_failures_by_up_to superseded by 'Cut failures, up to' (Jared PR #19 copy)"
+    r["note"] = "cover line is 'Cut fail-rate up to'"
     return r
 
 def capture_verify_pack(out, result):

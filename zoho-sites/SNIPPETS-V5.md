@@ -136,7 +136,7 @@ Stream-to-title mapping was confirmed from the `VideoObject` JSON-LD on https://
 
 ## 5. Page map (zoho-ready pack, 2026-09-24)
 
-1. **Hero / cover:** Canvas delivers content. Delphinium delivers engagement. Cover line **"Cut failures, up to" / 31%**. Schedule a demo + K-12 video. Text only, no face. Close punch: "Your school already runs on Canvas," (comma).
+1. **Hero / cover:** Canvas delivers content. Delphinium delivers engagement. Cover line **"Cut fail-rate up to" / 31%** (Higher Ed uses the same line with **47%**). Schedule a demo + K-12 video. Text only, no face. Close punch: "Your school already runs on Canvas," (comma).
 2. **Case for engagement (restored):** H2 uses plain weight on the first clause — `<span class="dl-h2__plain">Education moved online,</span>` (comma, not period) then *Engagement* didn't follow. Lede includes **"teachers can read the room"**.
 3. **Makeover peak:** "Which class would YOU rather take?" with before/after. Stages use `align-items: start`. Before image is Canvas-only hires crop (`module-only-20260924b` cache-bust). Desktop side by side; mobile Canvas / Canvas + Delphinium toggle.
 4. **Proof:** Davis Connect **31%** with full study context, 72% motivating, "Fun.", Netflix quote, Tiffany Dance.
@@ -155,7 +155,7 @@ Stream-to-title mapping was confirmed from the `VideoObject` JSON-LD on https://
 ## 6. Verify before Jared share
 
 - [ ] All 6 **Schedule a demo** links go to the Bookings URL above and open the modal. Escape and the backdrop close it.
-- [ ] Hero/cover says **Cut failures, up to** / **31%** (promise). Exact **31%** only in the Davis Connect card with 72 classes / 6,000 students / same courses, teachers, content.
+- [ ] Hero/cover says **Cut fail-rate up to** / **31%** on K-12 and **Cut fail-rate up to** / **47%** on `/highered` (promise). Exact **31%** only in the Davis Connect card with 72 classes / 6,000 students / same courses, teachers, content.
 - [ ] Case section present: H2 plain clause "Education moved online," (comma) and lede "teachers can read the room".
 - [ ] Video modal titles come from `videoLabel(el)` matching the button labels; no durations in UI or aria-labels.
 - [ ] Schedule CTAs use Sites Bookings modal + portal-embed (`data-bookings-open`), not Zoho Button/Link widgets.
