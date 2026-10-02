@@ -6,6 +6,7 @@
   <meta name="robots" content="noindex, nofollow">
   <title>Canvas engagement for online K-12 schools · Delphinium</title>
   <meta name="description" content="Delphinium makes Canvas courses engaging for online and virtual K-12 students and gives teachers an early-warning system. Up to 31% fewer course failures.">
+<!--dl-seo--><script type="application/ld+json" id="dl-seo">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.delphi-me.com#organization","name":"Delphi M.E. LLC","legalName":"Delphi M.E. LLC","alternateName":["Delphinium","Delphi M.E."],"url":"https://www.delphi-me.com/","logo":{"@type":"ImageObject","url":"https://www.delphi-me.com/dl28-logo-new.svg","contentUrl":"https://www.delphi-me.com/dl28-logo-new.svg"},"description":"Delphi M.E. LLC builds Delphinium, the Canvas LMS engagement layer for online K-12 and Higher Ed Online programs.","email":"support@delphi-me.com","sameAs":["https://www.youtube.com/@DelphiniumEngage","https://www.linkedin.com/company/78437190","https://www.facebook.com/1502817329972174","https://x.com/ProjDelphinium"],"contactPoint":{"@type":"ContactPoint","contactType":"sales","email":"support@delphi-me.com","url":"https://www.delphi-me.com/contact-us"}},{"@type":"WebSite","@id":"https://www.delphi-me.com#website","name":"Delphinium","url":"https://www.delphi-me.com/","description":"Canvas delivers content. Delphinium delivers engagement.","publisher":{"@id":"https://www.delphi-me.com#organization"},"inLanguage":"en-US"},{"@type":"SoftwareApplication","@id":"https://www.delphi-me.com#delphinium","name":"Delphinium","applicationCategory":"EducationalApplication","operatingSystem":"Web; Canvas LMS","url":"https://www.delphi-me.com/","description":"Delphinium is the Canvas engagement layer that turns existing Canvas courses into motivating student experiences and an early-warning system for teachers, typically in about three minutes, with no course migration. It is not an LMS and does not replace Canvas.","brand":{"@id":"https://www.delphi-me.com#organization"},"provider":{"@id":"https://www.delphi-me.com#organization"},"offers":{"@type":"Offer","url":"https://delphi-me.com/schedule-jared","description":"Institutional licensing. Schedule a demo for pricing."}}]}</script><meta property="og:site_name" content="Delphinium"><meta property="og:image" content="https://www.delphi-me.com/dl28-og-default.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Delphinium, the Canvas engagement layer from Delphi M.E. LLC."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://www.delphi-me.com/dl28-og-default.jpg"><meta name="twitter:image:alt" content="Delphinium, the Canvas engagement layer from Delphi M.E. LLC."><!--/dl-seo-->
   <link rel="preload" as="image" href="/dl28-logo-new.svg">
   <style>
 /* self-hosted fonts (Zoho Files) 2026-09-28 */
@@ -2675,7 +2676,7 @@
     /* Reveal */
     .js .dl-reveal { opacity: 0; transform: translateY(18px); transition: opacity 700ms ease, transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1); }
     .js .dl-reveal.is-in { opacity: 1; transform: none; }
-    /* The browser computes an anchor jump from the element's current transform, so a targeted eyebrow's block must already be at rest */
+    /* Anchor math includes a reveal's translateY. A targeted block has to be at rest, or the landing shifts by that offset. */
     .js .dl-reveal:has(:target) { opacity: 1; transform: none; transition: none; }
 
     @media (prefers-reduced-motion: reduce) {
@@ -2946,11 +2947,7 @@
     .dl-sub .dl-contact__form { max-width: 46rem; }
     .dl-sub__files { display: grid; gap: 0.5rem; }
     .dl-file { font-family: var(--font-text); font-size: 0.95rem; color: var(--ink); max-width: 100%; }
-  
-/* dl28 bookings clip (Zoho pack) */
-.dl-modal--book #dl-book-frame { overflow: hidden; }
-.dl-modal--book #dl-book-frame iframe { top: -222px; bottom: auto; height: calc(100% + 222px); }
-</style>
+  </style>
   <link rel="preconnect" href="https://bookings.nimbuspop.com" crossorigin>
   <link rel="preconnect" href="https://jared-delphi-me.zohobookings.com" crossorigin>
   <link rel="dns-prefetch" href="https://bookings.nimbuspop.com">
@@ -4040,6 +4037,40 @@
         function onBreakpoint() { if (desktopMq.matches && isOpen()) setOpen(false); }
         if (desktopMq.addEventListener) desktopMq.addEventListener("change", onBreakpoint);
         else if (desktopMq.addListener) desktopMq.addListener(onBreakpoint);
+      })();
+
+      /* Same-page hashes. Native smooth fragment scrolling misses while a scroll
+         is in flight, and a second click on the current hash does not scroll.
+         Rest the reveal (its translate shifts the anchor), then scrollIntoView,
+         which honors scroll-padding (sticky bar) and scroll-margin (#customers). */
+      (function anchorScroll() {
+        root.style.scrollBehavior = "auto";
+        function pin(el) {
+          if (!el) return;
+          var reveal = el.closest(".dl-reveal");
+          if (reveal) {
+            reveal.style.transition = "none";
+            reveal.classList.add("is-in");
+          }
+          el.scrollIntoView();
+        }
+        function pinHash() {
+          var id = location.hash.slice(1);
+          if (id) pin(document.getElementById(id));
+        }
+        document.addEventListener("click", function (e) {
+          if (e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+          var a = e.target.closest && e.target.closest('a[href^="#"]');
+          if (!a) return;
+          var el = document.getElementById(a.hash.slice(1));
+          if (!el) return;
+          e.preventDefault();
+          if (location.hash !== a.hash) history.pushState(null, "", a.hash);
+          pin(el);
+        });
+        addEventListener("popstate", pinHash);
+        addEventListener("load", pinHash);
+        pinHash();
       })();
 
       (function logoMarquee() {

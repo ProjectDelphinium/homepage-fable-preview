@@ -2572,7 +2572,7 @@
     /* Reveal */
     .js .dl-reveal { opacity: 0; transform: translateY(18px); transition: opacity 700ms ease, transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1); }
     .js .dl-reveal.is-in { opacity: 1; transform: none; }
-    /* The browser computes an anchor jump from the element's current transform, so a targeted eyebrow's block must already be at rest */
+    /* Anchor math includes a reveal's translateY. A targeted block has to be at rest, or the landing shifts by that offset. */
     .js .dl-reveal:has(:target) { opacity: 1; transform: none; transition: none; }
 
     @media (prefers-reduced-motion: reduce) {
@@ -3933,6 +3933,40 @@
         function onBreakpoint() { if (desktopMq.matches && isOpen()) setOpen(false); }
         if (desktopMq.addEventListener) desktopMq.addEventListener("change", onBreakpoint);
         else if (desktopMq.addListener) desktopMq.addListener(onBreakpoint);
+      })();
+
+      /* Same-page hashes. Native smooth fragment scrolling misses while a scroll
+         is in flight, and a second click on the current hash does not scroll.
+         Rest the reveal (its translate shifts the anchor), then scrollIntoView,
+         which honors scroll-padding (sticky bar) and scroll-margin (#customers). */
+      (function anchorScroll() {
+        root.style.scrollBehavior = "auto";
+        function pin(el) {
+          if (!el) return;
+          var reveal = el.closest(".dl-reveal");
+          if (reveal) {
+            reveal.style.transition = "none";
+            reveal.classList.add("is-in");
+          }
+          el.scrollIntoView();
+        }
+        function pinHash() {
+          var id = location.hash.slice(1);
+          if (id) pin(document.getElementById(id));
+        }
+        document.addEventListener("click", function (e) {
+          if (e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+          var a = e.target.closest && e.target.closest('a[href^="#"]');
+          if (!a) return;
+          var el = document.getElementById(a.hash.slice(1));
+          if (!el) return;
+          e.preventDefault();
+          if (location.hash !== a.hash) history.pushState(null, "", a.hash);
+          pin(el);
+        });
+        addEventListener("popstate", pinHash);
+        addEventListener("load", pinHash);
+        pinHash();
       })();
 
       (function logoMarquee() {
