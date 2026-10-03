@@ -2575,6 +2575,7 @@
       transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease, transform 150ms ease;
     }
     .dl-footer__social svg { width: 19px; height: 19px; display: block; fill: currentColor; }
+    .dl-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
     .dl-footer__social a:hover { background: var(--accent); border-color: var(--accent); color: #fff; transform: translateY(-2px); }
     .dl-footer__social a:focus-visible { outline: 3px solid var(--dl-focus); outline-offset: 3px; color: #fff; }
     .dl-footer__social-badge {
@@ -2698,29 +2699,161 @@
        confirmation drops both columns and centers on the full width
        (heading x 407-909), so the frame shows x 307-1285: no card text on
        any step, the whole confirmation, and ::after hides the divider.
-       Below 1010px (box 978 + padding) that view is scaled to 806px.
+       That wide view is 978px. The same view scaled to 806px (scale 0.8241)
+       is the fallback that used to apply under 1010px, when the frame was
+       the whole dialog. The dialog now adds a left rail, so the 978px frame
+       applies once the rail plus that frame fit, and the 806px scale applies
+       once that smaller frame fits. Offsets are unchanged.
        Zoho's Back link lives in the card.
        overflow: clip, since focus() inside Zoho can scroll a hidden box. */
+    .dl-modal--book { padding: clamp(0.75rem, 2vw, 1.5rem); }
+    .dl-modal--book .dl-modal__box {
+      display: grid;
+      grid-template-columns: 1fr;
+      width: min(100%, 860px);
+      max-height: min(94vh, 980px);
+      max-height: min(94dvh, 980px);
+      overflow: auto;
+      background: linear-gradient(165deg, #342870 0%, #2a1f5c 45%, #1e1648 100%);
+      border-radius: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+    }
+    .dl-modal--book .dl-modal__close {
+      position: absolute;
+      top: 0.85rem;
+      right: 0.85rem;
+      z-index: 5;
+      background: rgba(255, 255, 255, 0.92);
+      color: #1e1648;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+    }
+    .dl-modal--book .dl-modal__close:hover { background: #fff; }
+    .dl-rail {
+      --dl-focus: #fff;
+      padding: clamp(1.5rem, 3vw, 2.35rem);
+      padding-right: 3.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      overflow: auto;
+      color: #f4f2fb;
+    }
+    .dl-rail .dl-eyebrow {
+      margin: 0;
+      font-family: var(--font-text);
+      color: #fff;
+    }
+    .dl-bh {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(1.45rem, 2.1vw, 1.9rem);
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+    .dl-bh em {
+      display: block;
+      margin-top: 0.15rem;
+      /* Fraunces italic is already on the page. Caveat is not. */
+      font-family: Fraunces, Georgia, serif;
+      font-style: italic;
+      font-weight: 560;
+      font-size: 1.35em;
+      color: var(--accent);
+      line-height: 1;
+      letter-spacing: 0;
+      transform: rotate(-2deg);
+      transform-origin: left center;
+    }
+    .dl-rail > p:not(.dl-eyebrow):not(.dl-bh) {
+      margin: 0;
+      color: rgba(244, 242, 251, 0.86);
+      font-size: 1rem;
+    }
+    .dl-rail ul {
+      list-style: none;
+      margin: 0.15rem 0 0;
+      padding: 0;
+      display: grid;
+      gap: 0.6rem;
+    }
+    .dl-rail li {
+      display: grid;
+      grid-template-columns: 1.35rem 1fr;
+      gap: 0.6rem;
+      align-items: start;
+      color: rgba(255, 255, 255, 0.95);
+      font-size: 0.95rem;
+      line-height: 1.35;
+    }
+    .dl-rail li::before {
+      content: "";
+      width: 1.25rem;
+      height: 1.25rem;
+      margin-top: 0.1rem;
+      border-radius: 50%;
+      background-color: #22c55e;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3.5 8.2 6.4 11.2 12.5 4.8' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 0.78rem 0.78rem;
+      box-shadow: 0 2px 8px rgba(22, 163, 74, 0.35);
+    }
+    .dl-cal {
+      margin: 0.75rem;
+      margin-top: 0;
+      background: linear-gradient(165deg, #c8ebd9 0%, #b5e2cc 100%);
+      padding: clamp(0.75rem, 1.5vw, 1rem);
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      border-radius: 16px;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+    }
     .dl-modal--book .dl-modal__frame {
       aspect-ratio: auto;
+      width: 100%;
+      flex: none;
       height: min(1020px, calc(100vh - 6rem));
       height: min(1020px, calc(100dvh - 6rem));
       background: #fff;
       border-top: 12px solid #fff;
+      border-radius: 12px;
       overflow: hidden;
       overflow: clip;
     }
     .dl-modal--book .dl-modal__frame iframe { top: -264px; height: calc(100% + 300px); background: #fff; }
-    @media (min-width: 840px) {
-      .dl-modal--book .dl-modal__box { width: min(100%, 806px); }
-      .dl-modal--book .dl-modal__frame { border-top: 0; }
+    @media (min-width: 960px) {
+      .dl-modal--book .dl-modal__box { width: max-content; max-width: calc(100vw - 1.5rem); }
+      .dl-modal--book .dl-modal__frame { width: 806px; max-width: none; border-top: 0; }
       .dl-modal--book .dl-modal__frame iframe { top: -25.5px; left: -253px; width: 1316px; height: calc(121.34% + 102px); transform: scale(0.8241); transform-origin: 0 0; }
       .dl-modal--book .dl-modal__frame::after { content: ""; position: absolute; top: 0; bottom: 0; left: 75.5px; width: 3px; background: #fff; pointer-events: none; }
     }
-    @media (min-width: 1010px) {
-      .dl-modal--book .dl-modal__box { width: min(100%, 978px); }
+    @media (min-width: 1220px) {
+      .dl-modal--book .dl-modal__box {
+        grid-template-columns: minmax(220px, 300px) max-content;
+        width: max-content;
+        max-width: calc(100vw - 1rem);
+        max-height: min(94vh, 1040px);
+        max-height: min(94dvh, 1040px);
+        overflow: hidden;
+      }
+      .dl-rail { padding-right: clamp(1.5rem, 3vw, 2.35rem); }
+      .dl-cal { margin: clamp(0.75rem, 1.6vw, 1.05rem); margin-left: 0; padding-top: 2.75rem; }
+    }
+    @media (min-width: 1440px) {
+      .dl-modal--book .dl-modal__box {
+        grid-template-columns: minmax(240px, 340px) max-content;
+        max-width: min(1480px, calc(100vw - 1.5rem));
+      }
+      .dl-modal--book .dl-modal__frame { width: 978px; max-width: none; }
       .dl-modal--book .dl-modal__frame iframe { top: -31px; left: -307px; height: calc(100% + 102px); transform: none; }
       .dl-modal--book .dl-modal__frame::after { left: 92px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .dl-bh em { transform: none; }
     }
     .dl-btn--navy {
       background: var(--navy);
@@ -3817,10 +3950,11 @@
             <li><a href="/contact-us" data-site-path="/contact-us" target="_blank" rel="noopener" aria-label="Contact (opens in new tab)">Contact</a></li>
             <li><a href="/support" data-site-path="/support" target="_blank" rel="noopener" aria-label="Support (opens in new tab)">Support</a></li>
           </ul>
+          <svg class="dl-sprite" aria-hidden="true"><symbol id="dl-in" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol></svg>
           <ul class="dl-footer__social" aria-label="Delphinium on social media">
             <li><a href="https://www.youtube.com/@DelphiniumEngage" target="_blank" rel="noreferrer" aria-label="Delphinium on YouTube" title="Delphinium on YouTube"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true" focusable="false"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></li>
-            <li><a href="https://www.linkedin.com/company/78437190" target="_blank" rel="noreferrer" aria-label="Delphinium on LinkedIn" title="Delphinium on LinkedIn"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
-            <li><a href="https://www.linkedin.com/in/jared-chapman-90823213" target="_blank" rel="noreferrer" aria-label="Jared Chapman on LinkedIn" title="Jared Chapman on LinkedIn"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><span class="dl-footer__social-badge" aria-hidden="true">J</span></a></li>
+            <li><a href="https://www.linkedin.com/company/78437190" target="_blank" rel="noreferrer" aria-label="Delphinium on LinkedIn" title="Delphinium on LinkedIn"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true" focusable="false"><use href="#dl-in"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/jared-chapman-90823213" target="_blank" rel="noreferrer" aria-label="Jared Chapman on LinkedIn" title="Jared Chapman on LinkedIn"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true" focusable="false"><use href="#dl-in"/></svg><span class="dl-footer__social-badge" aria-hidden="true">J</span></a></li>
             <li><a href="https://www.facebook.com/1502817329972174" target="_blank" rel="noreferrer" aria-label="Delphinium on Facebook" title="Delphinium on Facebook"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a></li>
             <li><a href="https://x.com/ProjDelphinium" target="_blank" rel="noreferrer" aria-label="Delphinium on X" title="Delphinium on X"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a></li>
           </ul>
@@ -3886,12 +4020,21 @@
 
   <div class="dl-modal dl-modal--book" id="dl-book-modal" hidden>
     <div class="dl-modal__backdrop" data-book-close></div>
-    <div class="dl-modal__box" role="dialog" aria-modal="true" aria-labelledby="dl-book-title">
-      <div class="dl-modal__bar">
-        <p class="dl-modal__title" id="dl-book-title">Schedule a demo</p>
-        <button type="button" class="dl-modal__close" data-book-close aria-label="Close scheduling"><span class="dl-modal__close-x" aria-hidden="true"></span></button>
-      </div>
-      <div class="dl-modal__frame" id="dl-book-frame"></div>
+    <div class="dl-modal__box" role="dialog" aria-modal="true" aria-labelledby="dl-bt">
+      <button type="button" class="dl-modal__close" data-book-close aria-label="Close scheduling"><span class="dl-modal__close-x"></span></button>
+      <aside class="dl-rail">
+        <p class="dl-eyebrow">Book a demo</p>
+        <p class="dl-bh" id="dl-bt">See what your Canvas courses <em>can become.</em></p>
+        <p>We’ll walk you through Delphinium live, tailored to your school's needs.</p>
+        <ul>
+          <li>Transform your Canvas courses in 3 minutes</li>
+          <li>Spot at-risk students at a glance</li>
+          <li>Message them in seconds</li>
+          <li>Personalized messages, sent automagically</li>
+          <li>Motivation built in: timers, trackers, prizes</li>
+        </ul>
+      </aside>
+      <div class="dl-cal"><div class="dl-modal__frame" id="dl-book-frame"></div></div>
     </div>
   </div>
 
