@@ -2582,26 +2582,19 @@
       .dl-play img, .dl-play__btn, .dl-btn { transition: none; }
     }
 
-    /* Bookings: cross-origin iframe, so parent CSS cannot display:none Zoho's
-       header card, and Zoho sends no step or resize messages. Zoho's card is
-       taller on each step (bottom at y 214 date, 246 times, 317 details).
-       Narrow: Zoho stacks the card on top; 264px is the deepest crop that
-       keeps the month arrows (283) and the times heading (270), so the date
-       and times steps are clean and details keeps its timezone row. Zoho
-       scrolls itself (its scroller ends 55px above its bottom), so there is
-       no blank tail. Wide: at 1316px Zoho puts the card in a left column
-       (text ends x 271, divider x 400) and the step in a right column
-       (x 401-1285, y 31 to height - 71) with its own scrollbars. Its
-       confirmation drops both columns and centers on the full width
-       (heading x 407-909), so the frame shows x 307-1285: no card text on
-       any step, the whole confirmation, and ::after hides the divider.
-       That wide view is 978px. The same view scaled to 806px (scale 0.8241)
-       is the fallback that used to apply under 1010px, when the frame was
-       the whole dialog. The dialog now adds a left rail, so the 978px frame
-       applies once the rail plus that frame fit, and the 806px scale applies
-       once that smaller frame fits. Offsets are unchanged.
-       Zoho's Back link lives in the card.
-       overflow: clip, since focus() inside Zoho can scroll a hidden box. */
+    /* Bookings: cross-origin iframe, so the Back control has to fall inside
+       the crop. Parent CSS cannot click it. At 1316px Zoho puts the card in
+       a left column (x 31-401) and the step in a right column (x 401-1285).
+       Back is a button at x 51, y 51, at the top of that card, on the time
+       and details steps. The service title, staff name, and chosen time sit
+       in the same card, so they are on screen with Back. The frame shows
+       x 31-1009 and y 31 on: Back, the card, the date column (about x 441-781),
+       and the times column (x 719-969) side by side. The details form is
+       x 441-841. Narrow stacks that same card on top, so the top crop matches
+       (y 31) and Back stays in frame there too.
+       The 978px window scales to 806px (scale 0.8241) when the rail plus the
+       full window do not fit. overflow: clip, since focus() inside Zoho can
+       scroll a hidden box. */
     .dl-modal--book { padding: clamp(0.75rem, 2vw, 1.5rem); }
     .dl-modal--book .dl-modal__box {
       display: grid;
@@ -2722,12 +2715,11 @@
       overflow: hidden;
       overflow: clip;
     }
-    .dl-modal--book .dl-modal__frame iframe { top: -264px; height: calc(100% + 300px); background: #fff; }
+    .dl-modal--book .dl-modal__frame iframe { top: -31px; height: calc(100% + 80px); background: #fff; }
     @media (min-width: 960px) {
       .dl-modal--book .dl-modal__box { width: max-content; max-width: calc(100vw - 1.5rem); }
       .dl-modal--book .dl-modal__frame { width: 806px; max-width: none; border-top: 0; }
-      .dl-modal--book .dl-modal__frame iframe { top: -25.5px; left: -253px; width: 1316px; height: calc(121.34% + 102px); transform: scale(0.8241); transform-origin: 0 0; }
-      .dl-modal--book .dl-modal__frame::after { content: ""; position: absolute; top: 0; bottom: 0; left: 75.5px; width: 3px; background: #fff; pointer-events: none; }
+      .dl-modal--book .dl-modal__frame iframe { top: -25.5px; left: -25.5px; width: 1316px; height: calc(121.34% + 102px); transform: scale(0.8241); transform-origin: 0 0; }
     }
     @media (min-width: 1220px) {
       .dl-modal--book .dl-modal__box {
@@ -2742,9 +2734,8 @@
       /* Wide: mint mat stays. The same gap is margin (card in the purple shell)
          and padding (white booking surface inside the mint), so the gutter is
          even on every side. The frame height leaves room for that gap inside
-         the box, or the bottom mint gets clipped. Crop offsets stay put so
-         the staff card and Back link stay off-frame. The close control sits
-         on the white surface, inset from the mint edge. */
+         the box, or the bottom mint is clipped. The close control sits on the
+         white surface, inset from the mint edge. */
       .dl-modal--book { --dl-book-gap: clamp(0.85rem, 1.45vw, 1.05rem); }
       .dl-cal {
         margin: var(--dl-book-gap);
@@ -2770,8 +2761,7 @@
         max-width: min(1480px, calc(100vw - 1.5rem));
       }
       .dl-modal--book .dl-modal__frame { width: 978px; max-width: none; }
-      .dl-modal--book .dl-modal__frame iframe { top: -31px; left: -307px; height: calc(100% + 102px); transform: none; }
-      .dl-modal--book .dl-modal__frame::after { left: 92px; }
+      .dl-modal--book .dl-modal__frame iframe { top: -31px; left: -31px; height: calc(100% + 102px); transform: none; }
     }
     /* Closed dialog must not be display:none. A display:none iframe has a
        0x0 viewport, so Zoho Bookings lays out blank and stays blank.
