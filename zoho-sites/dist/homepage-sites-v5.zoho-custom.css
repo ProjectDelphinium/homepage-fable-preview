@@ -2986,7 +2986,9 @@ main a,
     }
     .dl-rail ul {
       list-style: none;
-      margin: 0.15rem 0 0;
+      /* Extra top margin stacks with the rail's flex gap so the lede and the
+         checklist read as two blocks. */
+      margin: 1.35rem 0 0;
       padding: 0;
       display: grid;
       gap: 0.6rem;
@@ -3053,21 +3055,25 @@ main a,
         overflow: hidden;
       }
       .dl-rail { padding-right: clamp(1.5rem, 3vw, 2.35rem); }
-      /* Wide: the booking surface is the pane. The old mint mat (padding +
-         #c8ebd9) read as a second frame, with a gutter on the left against
-         the rail, and the close control sat on that corner. Crop offsets
-         stay put so the staff card and Back link stay off-frame. */
+      /* Wide: mint mat stays. The same gap is margin (card in the purple shell)
+         and padding (white booking surface inside the mint), so the gutter is
+         even on every side. The frame height leaves room for that gap inside
+         the box, or the bottom mint gets clipped. Crop offsets stay put so
+         the staff card and Back link stay off-frame. The close control sits
+         on the white surface, inset from the mint edge. */
+      .dl-modal--book { --dl-book-gap: clamp(0.85rem, 1.45vw, 1.05rem); }
       .dl-cal {
-        margin: 0;
-        padding: 3.75rem 0 0;
-        background: #fff;
-        border-radius: 0;
-        box-shadow: none;
+        margin: var(--dl-book-gap);
+        padding: var(--dl-book-gap);
       }
-      .dl-modal--book .dl-modal__frame { border-radius: 0; }
+      .dl-modal--book .dl-modal__frame {
+        /* 2px is the dialog border. max-height includes it (border-box), so
+           the frame has to give it back or the bottom mint is clipped. */
+        height: min(980px, calc(min(94dvh, 1040px) - 4 * var(--dl-book-gap) - 2px));
+      }
       .dl-modal--book .dl-modal__close {
-        top: 0.65rem;
-        right: 0.75rem;
+        top: calc(2 * var(--dl-book-gap) + 0.65rem);
+        right: calc(2 * var(--dl-book-gap) + 0.7rem);
         background: #fff;
         color: #1e1648;
         border: 1px solid rgba(30, 22, 72, 0.16);
@@ -3084,13 +3090,26 @@ main a,
       .dl-modal--book .dl-modal__frame::after { left: 92px; }
     }
     /* Closed dialog must not be display:none. A display:none iframe has a
-       0×0 viewport, so Zoho Bookings does not paint until the first open.
-       visibility:hidden keeps the real crop size, skips tab order, and
-       stays off the page. pointer-events so it cannot catch clicks. */
+       0x0 viewport, so Zoho Bookings lays out blank and stays blank.
+       visibility:hidden has the same trap: Chromium skips painting the
+       cross-origin frame, and Zoho does not recover when the dialog opens.
+       opacity:0 keeps the real crop size and still paints. The inert
+       attribute (on the dialog) keeps it out of tab order. pointer-events
+       so the invisible layer cannot catch clicks. */
     #dl-book-modal[hidden] {
       display: grid !important;
-      visibility: hidden;
+      visibility: visible;
+      opacity: 0;
       pointer-events: none;
+    }
+    /* Opening lifts opacity. This one-shot opacity tick forces Chromium to
+       paint the cross-origin frame; it does not move the crop. */
+    @keyframes dl-book-wake {
+      from { opacity: 0.99; }
+      to { opacity: 1; }
+    }
+    #dl-book-modal:not([hidden]) .dl-modal__frame iframe {
+      animation: dl-book-wake 0.05s linear 1;
     }
     @media (prefers-reduced-motion: reduce) {
       .dl-bh em { transform: none; }
