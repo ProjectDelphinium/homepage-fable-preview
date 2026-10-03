@@ -2737,7 +2737,26 @@
         overflow: hidden;
       }
       .dl-rail { padding-right: clamp(1.5rem, 3vw, 2.35rem); }
-      .dl-cal { margin: clamp(0.75rem, 1.6vw, 1.05rem); margin-left: 0; padding-top: 2.75rem; }
+      /* Wide: the booking surface is the pane. The old mint mat (padding +
+         #c8ebd9) read as a second frame, with a gutter on the left against
+         the rail, and the close control sat on that corner. Crop offsets
+         stay put so the staff card and Back link stay off-frame. */
+      .dl-cal {
+        margin: 0;
+        padding: 3.75rem 0 0;
+        background: #fff;
+        border-radius: 0;
+        box-shadow: none;
+      }
+      .dl-modal--book .dl-modal__frame { border-radius: 0; }
+      .dl-modal--book .dl-modal__close {
+        top: 0.65rem;
+        right: 0.75rem;
+        background: #fff;
+        color: #1e1648;
+        border: 1px solid rgba(30, 22, 72, 0.16);
+        box-shadow: 0 1px 2px rgba(30, 22, 72, 0.06), 0 6px 16px rgba(30, 22, 72, 0.14);
+      }
     }
     @media (min-width: 1440px) {
       .dl-modal--book .dl-modal__box {
@@ -2747,6 +2766,15 @@
       .dl-modal--book .dl-modal__frame { width: 978px; max-width: none; }
       .dl-modal--book .dl-modal__frame iframe { top: -31px; left: -307px; height: calc(100% + 102px); transform: none; }
       .dl-modal--book .dl-modal__frame::after { left: 92px; }
+    }
+    /* Closed dialog must not be display:none. A display:none iframe has a
+       0×0 viewport, so Zoho Bookings does not paint until the first open.
+       visibility:hidden keeps the real crop size, skips tab order, and
+       stays off the page. pointer-events so it cannot catch clicks. */
+    #dl-book-modal[hidden] {
+      display: grid !important;
+      visibility: hidden;
+      pointer-events: none;
     }
     @media (prefers-reduced-motion: reduce) {
       .dl-bh em { transform: none; }
@@ -4493,7 +4521,9 @@
       }, true);
       scheduleVideoWarm();
     })();
-      /* Zoho Bookings: preload portal-embed iframe; Schedule CTAs open modal instantly */
+      /* Zoho Bookings: one portal-embed iframe, created at parse so it paints
+         in the still-closed modal (see #dl-book-modal[hidden]). Schedule
+         controls open that same modal. */
       (function () {
         var BOOK_URL = "https://jared-delphi-me.zohobookings.com/portal-embed#/4937208000000036014";
         var FALLBACK = "https://jared-delphi-me.zohobookings.com/4937208000000036014";
@@ -4509,6 +4539,7 @@
           iframe.title = "Schedule a demo";
           iframe.setAttribute("allowfullscreen", "");
           iframe.setAttribute("loading", "eager");
+          iframe.setAttribute("fetchpriority", "high");
           bookFrame.appendChild(iframe);
           return iframe;
         }
@@ -4524,15 +4555,7 @@
           el.addEventListener("click", openBook);
         });
 
-        function warm() { ensureIframe(); }
-        if ("requestIdleCallback" in window) {
-          requestIdleCallback(warm, { timeout: 2000 });
-        } else {
-          setTimeout(warm, 800);
-        }
-
-        // Official API still available if we ever want floating button:
-        // Bookings.buttonModal({ url: BOOK_URL, text: "Schedule a demo", color: "#c7007a", position: "bottom-right" });
+        ensureIframe();
         window.dlOpenBookings = openBook;
         window.dlBookingsFallback = FALLBACK;
       })();
