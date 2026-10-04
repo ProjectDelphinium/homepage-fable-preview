@@ -2582,19 +2582,15 @@
       .dl-play img, .dl-play__btn, .dl-btn { transition: none; }
     }
 
-    /* Bookings: cross-origin iframe, so the Back control has to fall inside
-       the crop. Parent CSS cannot click it. At 1316px Zoho puts the card in
-       a left column (x 31-401) and the step in a right column (x 401-1285).
-       Back is a button at x 51, y 51, at the top of that card, on the time
-       and details steps. The service title, staff name, and chosen time sit
-       in the same card, so they are on screen with Back. The frame shows
-       x 31-1009 and y 31 on: Back, the card, the date column (about x 441-781),
-       and the times column (x 719-969) side by side. The details form is
-       x 441-841. Narrow stacks that same card on top, so the top crop matches
-       (y 31) and Back stays in frame there too.
-       The 978px window scales to 806px (scale 0.8241) when the rail plus the
-       full window do not fit. overflow: clip, since focus() inside Zoho can
-       scroll a hidden box. */
+    /* Bookings: cross-origin iframe. At 1316px Zoho puts the staff card in a
+       left column (text ends x 271, divider x 400, Back at x 51) and the step
+       in a right column (x 401-1285). The frame shows x 307-1285: the card and
+       Back stay off-frame, the date column (about x 441-781) and the time
+       column (buttons x 719-967) are both inside, with room past the slots.
+       ::after covers the divider. Narrow stacks that card on top; 264px is
+       the crop that keeps the month arrows. The 978px window scales to 806px
+       (scale 0.8241) below 1440. overflow: clip, since focus() inside Zoho
+       can scroll a hidden box. */
     .dl-modal--book { padding: clamp(0.75rem, 2vw, 1.5rem); }
     .dl-modal--book .dl-modal__box {
       display: grid;
@@ -2716,11 +2712,12 @@
       overflow: hidden;
       overflow: clip;
     }
-    .dl-modal--book .dl-modal__frame iframe { top: -31px; height: calc(100% + 80px); background: #fff; }
+    .dl-modal--book .dl-modal__frame iframe { top: -264px; height: calc(100% + 300px); background: #fff; }
     @media (min-width: 960px) {
       .dl-modal--book .dl-modal__box { width: max-content; max-width: calc(100vw - 1.5rem); }
       .dl-modal--book .dl-modal__frame { width: 806px; max-width: none; border-top: 0; }
-      .dl-modal--book .dl-modal__frame iframe { top: -25.5px; left: -25.5px; width: 1316px; height: calc(121.34% + 102px); transform: scale(0.8241); transform-origin: 0 0; }
+      .dl-modal--book .dl-modal__frame iframe { top: -25.5px; left: -253px; width: 1316px; height: calc(121.34% + 102px); transform: scale(0.8241); transform-origin: 0 0; }
+      .dl-modal--book .dl-modal__frame::after { content: ""; position: absolute; top: 0; bottom: 0; left: 75.5px; width: 3px; background: #fff; pointer-events: none; }
     }
     @media (min-width: 1220px) {
       .dl-modal--book .dl-modal__box {
@@ -2762,7 +2759,8 @@
         max-width: min(1480px, calc(100vw - 1.5rem));
       }
       .dl-modal--book .dl-modal__frame { width: 978px; max-width: none; }
-      .dl-modal--book .dl-modal__frame iframe { top: -31px; left: -31px; height: calc(100% + 102px); transform: none; }
+      .dl-modal--book .dl-modal__frame iframe { top: -31px; left: -307px; height: calc(100% + 102px); transform: none; }
+      .dl-modal--book .dl-modal__frame::after { left: 92px; }
     }
     /* Closed dialog must not be display:none or opacity:0. Both keep this
        cross-origin iframe from painting, so the first open is a blank pane.
