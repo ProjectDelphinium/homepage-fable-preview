@@ -2936,6 +2936,7 @@ main a,
     .dl-modal--book .dl-modal__close:hover { background: #fff; }
     .dl-rail {
       --dl-focus: #fff;
+      position: relative;
       padding: clamp(1.5rem, 3vw, 2.35rem);
       padding-right: 3.4rem;
       display: flex;
@@ -3046,12 +3047,12 @@ main a,
         max-height: min(94dvh, 1040px);
         overflow: hidden;
       }
-      .dl-rail { padding-right: clamp(1.5rem, 3vw, 2.35rem); }
+      .dl-rail { padding-right: 3.4rem; }
       /* Wide: mint mat stays. The same gap is margin (card in the purple shell)
          and padding (white booking surface inside the mint), so the gutter is
          even on every side. The frame height leaves room for that gap inside
-         the box, or the bottom mint is clipped. The close control sits on the
-         white surface, inset from the mint edge. */
+         the box, or the bottom mint is clipped. The close control stays on the
+         purple rail so it cannot cover a time slot. */
       .dl-modal--book { --dl-book-gap: clamp(0.85rem, 1.45vw, 1.05rem); }
       .dl-cal {
         margin: var(--dl-book-gap);
@@ -3063,8 +3064,8 @@ main a,
         height: min(980px, calc(min(94dvh, 1040px) - 4 * var(--dl-book-gap) - 2px));
       }
       .dl-modal--book .dl-modal__close {
-        top: calc(2 * var(--dl-book-gap) + 0.65rem);
-        right: calc(2 * var(--dl-book-gap) + 0.7rem);
+        top: 0.7rem;
+        right: 0.7rem;
         background: #fff;
         color: #1e1648;
         border: 1px solid rgba(30, 22, 72, 0.16);
@@ -3079,26 +3080,27 @@ main a,
       .dl-modal--book .dl-modal__frame { width: 978px; max-width: none; }
       .dl-modal--book .dl-modal__frame iframe { top: -31px; left: -31px; height: calc(100% + 102px); transform: none; }
     }
-    /* Closed dialog must not be display:none. A display:none iframe has a
-       0x0 viewport, so Zoho Bookings lays out blank and stays blank.
-       visibility:hidden has the same trap: Chromium skips painting the
-       cross-origin frame, and Zoho does not recover when the dialog opens.
-       opacity:0 keeps the real crop size and still paints. The inert
-       attribute (on the dialog) keeps it out of tab order. pointer-events
-       so the invisible layer cannot catch clicks. */
-    #dl-book-modal[hidden] {
+    /* Closed dialog must not be display:none or opacity:0. Both keep this
+       cross-origin iframe from painting, so the first open is a blank pane.
+       Park it as a 6px strip behind the page: full iframe size, actually
+       visible to Chromium, clipped so the page covers it. inert keeps it
+       out of tab order. */
+    #dl-book-modal.p {
       display: grid !important;
       visibility: visible;
-      opacity: 0;
+      opacity: 1;
       pointer-events: none;
+      height: 6px;
+      overflow: hidden;
+      z-index: -1;
+      padding: 0;
+      place-items: start;
     }
-    /* Opening lifts opacity. This one-shot opacity tick forces Chromium to
-       paint the cross-origin frame; it does not move the crop. */
     @keyframes dl-book-wake {
       from { opacity: 0.99; }
       to { opacity: 1; }
     }
-    #dl-book-modal:not([hidden]) .dl-modal__frame iframe {
+    #dl-book-modal:not(.p) .dl-modal__frame iframe {
       animation: dl-book-wake 0.05s linear 1;
     }
     @media (prefers-reduced-motion: reduce) {
