@@ -2898,12 +2898,16 @@ main a,
       .dl-play img, .dl-play__btn, .dl-btn { transition: none; }
     }
 
-    /* Bookings: cross-origin iframe. The pane shows the portal-embed the way
-       Zoho paints it. No negative offset, no scale, no white mask, no
-       clip-path hole, no SVG filter. overflow: clip, since focus() inside
-       Zoho can scroll a hidden box. The close control sits on the booking
-       pane, above the iframe. */
-    .dl-modal--book { padding: clamp(0.75rem, 2vw, 1.5rem); }
+    /* Bookings: cross-origin iframe at left 0, top 0. No offset, scale, mask,
+       clip-path, or SVG filter. Zoho hides the staff column, so the frame is
+       the calendar column (340px) plus the time column (250px): 440px fills
+       with those and does not keep the old wide staff frame. overflow: clip,
+       since focus() inside Zoho can scroll a hidden box. The close control
+       sits on the booking pane, above the iframe. */
+    .dl-modal--book {
+      padding: clamp(0.75rem, 2vw, 1.5rem);
+      --dl-book-gap: 0.85rem;
+    }
     .dl-modal--book .dl-modal__box {
       display: grid;
       grid-template-columns: 1fr;
@@ -2919,9 +2923,9 @@ main a,
     .dl-modal--book .dl-modal__close {
       position: absolute;
       z-index: 6;
-      /* A little in from the mint's outer corner, over the white pane. */
-      top: 0.55rem;
-      right: 0.55rem;
+      /* Tight to the mint's outer corner so it stays on the pane, above the iframe. */
+      top: 0.2rem;
+      right: 0.2rem;
       background: rgba(255, 255, 255, 0.92);
       color: #1e1648;
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
@@ -3005,11 +3009,12 @@ main a,
     }
     .dl-cal {
       position: relative;
-      margin: 0.75rem;
-      margin-top: 0;
+      margin: var(--dl-book-gap);
       background: linear-gradient(165deg, #c8ebd9 0%, #b5e2cc 100%);
-      padding: clamp(0.75rem, 1.5vw, 1rem);
+      padding: var(--dl-book-gap);
       min-width: 0;
+      width: max-content;
+      max-width: 100%;
       display: flex;
       flex-direction: column;
       border-radius: 16px;
@@ -3017,7 +3022,8 @@ main a,
     }
     .dl-modal--book .dl-modal__frame {
       aspect-ratio: auto;
-      width: 100%;
+      width: 440px;
+      max-width: calc(100vw - 3rem);
       flex: none;
       height: min(1020px, calc(100vh - 6rem));
       height: min(1020px, calc(100dvh - 6rem));
@@ -3029,6 +3035,8 @@ main a,
     .dl-modal--book .dl-modal__frame iframe {
       top: 0;
       left: 0;
+      right: auto;
+      bottom: auto;
       width: 100%;
       height: 100%;
       transform: none;
@@ -3036,13 +3044,12 @@ main a,
       background: #fff;
     }
     @media (min-width: 960px) {
-      .dl-modal--book .dl-modal__box { width: min(1080px, calc(100vw - 1.5rem)); max-width: calc(100vw - 1.5rem); }
-      .dl-modal--book .dl-modal__frame { width: 100%; max-width: none; }
+      .dl-modal--book .dl-modal__box { width: max-content; max-width: calc(100vw - 1.5rem); }
     }
     @media (min-width: 1220px) {
       .dl-modal--book .dl-modal__box {
-        grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
-        width: min(100%, calc(100vw - 1rem));
+        grid-template-columns: minmax(220px, 300px) max-content;
+        width: max-content;
         max-width: calc(100vw - 1rem);
         max-height: min(94vh, 1040px);
         max-height: min(94dvh, 1040px);
@@ -3072,8 +3079,8 @@ main a,
     }
     @media (min-width: 1440px) {
       .dl-modal--book .dl-modal__box {
-        grid-template-columns: minmax(240px, 340px) minmax(0, 1fr);
-        max-width: min(1600px, calc(100vw - 1.5rem));
+        grid-template-columns: minmax(240px, 340px) max-content;
+        max-width: calc(100vw - 1.5rem);
       }
     }
     /* Closed dialog must not be display:none or opacity:0. Both keep this
