@@ -2686,15 +2686,16 @@
       .dl-play img, .dl-play__btn, .dl-btn { transition: none; }
     }
 
-    /* Bookings: cross-origin iframe, 1316px wide. The right panel runs to
-       about x 1285, which is where the date-step time column sits, so the
-       frame shows iframe x 36-1316. Back is a button at x 51-101, y 51-67
-       on the time and details steps. A white mask covers the staff column
-       except a hole over Back. A filter turns the light avatar in that hole
-       white, and leaves the darker Back label. Narrow stacks the card and
-       crops it with the top offset. overflow: clip, since focus() inside
-       Zoho can scroll a hidden box. */
-    .dl-modal--book { padding: clamp(0.75rem, 2vw, 1.5rem); }
+    /* Bookings: cross-origin iframe at left 0, top 0. No offset, scale, mask,
+       clip-path, or SVG filter. Zoho hides the staff column, so the frame is
+       the calendar column (340px) plus the time column (250px): 440px fills
+       with those and does not keep the old wide staff frame. overflow: clip,
+       since focus() inside Zoho can scroll a hidden box. The close control
+       sits on the booking pane, above the iframe. */
+    .dl-modal--book {
+      padding: clamp(0.75rem, 2vw, 1.5rem);
+      --dl-book-gap: 0.85rem;
+    }
     .dl-modal--book .dl-modal__box {
       display: grid;
       grid-template-columns: 1fr;
@@ -2709,9 +2710,10 @@
     }
     .dl-modal--book .dl-modal__close {
       position: absolute;
-      top: 0.85rem;
-      right: 0.85rem;
-      z-index: 5;
+      z-index: 6;
+      /* Tight to the mint's outer corner so it stays on the pane, above the iframe. */
+      top: 0.2rem;
+      right: 0.2rem;
       background: rgba(255, 255, 255, 0.92);
       color: #1e1648;
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
@@ -2721,7 +2723,6 @@
       --dl-focus: #fff;
       position: relative;
       padding: clamp(1.5rem, 3vw, 2.35rem);
-      padding-right: 3.4rem;
       display: flex;
       flex-direction: column;
       gap: 1rem;
@@ -2758,6 +2759,8 @@
     }
     .dl-rail > p:not(.dl-eyebrow):not(.dl-bh) {
       margin: 0;
+      /* Rail gap is 1rem. This makes the space under the script line 0.5in. */
+      margin-top: calc(0.5in - 1rem);
       color: rgba(244, 242, 251, 0.86);
       font-size: 1rem;
     }
@@ -2793,11 +2796,13 @@
       box-shadow: 0 2px 8px rgba(22, 163, 74, 0.35);
     }
     .dl-cal {
-      margin: 0.75rem;
-      margin-top: 0;
+      position: relative;
+      margin: var(--dl-book-gap);
       background: linear-gradient(165deg, #c8ebd9 0%, #b5e2cc 100%);
-      padding: clamp(0.75rem, 1.5vw, 1rem);
+      padding: var(--dl-book-gap);
       min-width: 0;
+      width: max-content;
+      max-width: 100%;
       display: flex;
       flex-direction: column;
       border-radius: 16px;
@@ -2805,53 +2810,29 @@
     }
     .dl-modal--book .dl-modal__frame {
       aspect-ratio: auto;
-      width: 100%;
+      width: 440px;
+      max-width: calc(100vw - 3rem);
       flex: none;
       height: min(1020px, calc(100vh - 6rem));
       height: min(1020px, calc(100dvh - 6rem));
       background: #fff;
-      border-top: 12px solid #fff;
       border-radius: 12px;
       overflow: hidden;
       overflow: clip;
     }
-    .dl-modal--book .dl-modal__frame iframe { top: -264px; height: calc(100% + 300px); background: #fff; }
+    .dl-modal--book .dl-modal__frame iframe {
+      top: 0;
+      left: 0;
+      right: auto;
+      bottom: auto;
+      width: 100%;
+      height: 100%;
+      transform: none;
+      filter: none;
+      background: #fff;
+    }
     @media (min-width: 960px) {
-      .dl-modal--book { --dl-fw: min(1280px, calc(100vw - 3rem)); }
       .dl-modal--book .dl-modal__box { width: max-content; max-width: calc(100vw - 1.5rem); }
-      .dl-modal--book .dl-modal__frame { width: var(--dl-fw); max-width: none; border-top: 0; }
-      .dl-modal--book .dl-modal__frame iframe {
-        top: calc(-31px * (var(--dl-fw) / 1280px));
-        left: calc(-36px * (var(--dl-fw) / 1280px));
-        width: 1316px;
-        height: calc(100% * (1280px / var(--dl-fw)) + 120px);
-        transform: scale(calc(var(--dl-fw) / 1280px));
-        transform-origin: 0 0;
-        /* Hole is iframe x 42-114, y 44-76. Light pixels there (the avatar)
-           become white. Darker pixels (the Back label) stay. */
-        filter: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cfilter%20id%3D%22dl-cap%22%20color-interpolation-filters%3D%22sRGB%22%20filterUnits%3D%22userSpaceOnUse%22%20primitiveUnits%3D%22userSpaceOnUse%22%20x%3D%220%22%20y%3D%220%22%20width%3D%221400%22%20height%3D%222000%22%3E%3CfeFlood%20flood-color%3D%22%23fff%22%20x%3D%2242%22%20y%3D%2244%22%20width%3D%2272%22%20height%3D%2232%22%20result%3D%22w%22%2F%3E%3CfeColorMatrix%20in%3D%22SourceGraphic%22%20result%3D%22l%22%20values%3D%220.2126%200.7152%200.0722%200%200%200%200%200%200%200%200%200%200%200%200%200.2126%200.7152%200.0722%200%200%22%2F%3E%3CfeComponentTransfer%20in%3D%22l%22%20result%3D%22m%22%3E%3CfeFuncA%20type%3D%22discrete%22%20tableValues%3D%220%200%200%200%201%201%201%201%22%2F%3E%3C%2FfeComponentTransfer%3E%3CfeComposite%20in%3D%22w%22%20in2%3D%22m%22%20operator%3D%22in%22%20result%3D%22c%22%2F%3E%3CfeMerge%3E%3CfeMergeNode%20in%3D%22SourceGraphic%22%2F%3E%3CfeMergeNode%20in%3D%22c%22%2F%3E%3C%2FfeMerge%3E%3C%2Ffilter%3E%3C%2Fsvg%3E#dl-cap");
-      }
-      /* White mask over the staff column (iframe x 36-408). The hole is Back
-         (iframe x 51-101, y 51-67), mapped into the frame that starts at
-         iframe x 36, y 31. */
-      .dl-modal--book .dl-modal__frame::before {
-        content: "";
-        position: absolute;
-        z-index: 2;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        width: calc(372px * (var(--dl-fw) / 1280px));
-        background: #fff;
-        clip-path: polygon(evenodd,
-          0 0, 100% 0, 100% 100%, 0 100%, 0 0,
-          calc(12px * (var(--dl-fw) / 1280px)) calc(17px * (var(--dl-fw) / 1280px)),
-          calc(12px * (var(--dl-fw) / 1280px)) calc(39px * (var(--dl-fw) / 1280px)),
-          calc(68px * (var(--dl-fw) / 1280px)) calc(39px * (var(--dl-fw) / 1280px)),
-          calc(68px * (var(--dl-fw) / 1280px)) calc(17px * (var(--dl-fw) / 1280px)),
-          calc(12px * (var(--dl-fw) / 1280px)) calc(17px * (var(--dl-fw) / 1280px))
-        );
-      }
     }
     @media (min-width: 1220px) {
       .dl-modal--book .dl-modal__box {
@@ -2862,13 +2843,12 @@
         max-height: min(94dvh, 1040px);
         overflow: hidden;
       }
-      .dl-rail { padding-right: 3.4rem; }
       /* Wide: mint mat stays. The same gap is margin (card in the purple shell)
          and padding (white booking surface inside the mint), so the gutter is
          even on every side. The frame height leaves room for that gap inside
-         the box, or the bottom mint is clipped. The close control stays on the
-         purple rail so it cannot cover a time slot. */
-      .dl-modal--book { --dl-book-gap: clamp(0.85rem, 1.45vw, 1.05rem); --dl-fw: min(1280px, calc(100vw - 28rem)); }
+         the box, or the bottom mint is clipped. The close control stays on
+         the booking pane, above the iframe. */
+      .dl-modal--book { --dl-book-gap: clamp(0.85rem, 1.45vw, 1.05rem); }
       .dl-cal {
         margin: var(--dl-book-gap);
         padding: var(--dl-book-gap);
@@ -2879,8 +2859,6 @@
         height: min(980px, calc(min(94dvh, 1040px) - 4 * var(--dl-book-gap) - 2px));
       }
       .dl-modal--book .dl-modal__close {
-        top: 0.7rem;
-        right: 0.7rem;
         background: #fff;
         color: #1e1648;
         border: 1px solid rgba(30, 22, 72, 0.16);
@@ -2890,9 +2868,8 @@
     @media (min-width: 1440px) {
       .dl-modal--book .dl-modal__box {
         grid-template-columns: minmax(240px, 340px) max-content;
-        max-width: min(1800px, calc(100vw - 1.5rem));
+        max-width: calc(100vw - 1.5rem);
       }
-      .dl-modal--book { --dl-fw: min(1280px, calc(100vw - 32rem)); }
     }
     /* Closed dialog must not be display:none or opacity:0. Both keep this
        cross-origin iframe from painting, so the first open is a blank pane.
@@ -4087,9 +4064,8 @@
     <div class="dl-modal__backdrop" data-book-close></div>
     <div class="dl-modal__box" role="dialog" aria-modal="true" aria-labelledby="dl-bt">
       <aside class="dl-rail">
-        <button type="button" class="dl-modal__close" data-book-close aria-label="Close scheduling"><span class="dl-modal__close-x"></span></button>
         <p class="dl-eyebrow">Book a demo</p>
-        <p class="dl-bh" id="dl-bt">See what your Canvas courses <em>can become.</em></p>
+        <p class="dl-bh" id="dl-bt">See what your Canvas courses <em>can become!</em></p>
         <p>We’ll walk you through Delphinium live, tailored to your school's needs.</p>
         <ul>
           <li>Transform your Canvas courses in 3 minutes</li>
@@ -4099,7 +4075,7 @@
           <li>Motivation built in: timers, trackers, prizes</li>
         </ul>
       </aside>
-      <div class="dl-cal"><div class="dl-modal__frame" id="dl-book-frame"></div></div>
+      <div class="dl-cal"><button type="button" class="dl-modal__close" data-book-close aria-label="Close scheduling"><span class="dl-modal__close-x"></span></button><div class="dl-modal__frame" id="dl-book-frame"></div></div>
     </div>
   </div>
 
