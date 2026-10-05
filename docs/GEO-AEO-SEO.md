@@ -120,7 +120,7 @@ Never: UC Davis; Davis as the homepage logo or primary brand face; “Results li
 Read-only checks against www.delphi-me.com:
 
 - `/`, `/home`, and `/index` all return the homepage (200), each with its own canonical, and all three are in `sitemap-cms.xml`. Nothing in the pack links to `/home`.
-- `https://delphi-me.com/schedule-jared` redirects to `https://www.delphi-me.com/schedule-jared`, which is a 404. The page buttons go straight to Zoho Bookings. The JSON-LD Offer uses `/schedule-jared`.
+- `https://delphi-me.com/schedule-jared` redirects to `https://www.delphi-me.com/schedule-jared`. As of 2026-10-05 that www path is a hidden page that instant-redirects to Schedule Jared 60 min. See `zoho-sites/pages/schedule-jared/REDIRECT.md`. The JSON-LD Offer uses `/schedule-jared`.
 - `/dl28-og-default.jpg` and `/dl28-canvas-module-before.svg` are 404 (not uploaded yet).
 - `robots.txt` is `User-agent: *` with no rules and no `Sitemap:` line. That allows everything. `llms.txt` is 404, which is fine.
 - Zoho writes `twitter:card=summary`, its own og:title (“Higher Ed - Delphinium | Canvas engagement layer”), and a `#schemagenerator` WebSite named “Delphinium | Canvas engagement layer”. Only the path script corrects these, and only for crawlers that run JavaScript.
@@ -139,7 +139,7 @@ Zoho (not done by agents):
 
 - Page SEO fields on `/` and `/highered`: the titles and descriptions in section 3, the same strings in the social fields, social image `https://www.delphi-me.com/dl28-og-default.jpg`, and robots boxes unchecked.
 - 301 `/home` and `/index` to `/` (Configuration > SEO > 301 Redirect). If Zoho will not redirect a live page, unpublish that page or turn off its Sitemap XML toggle.
-- Add a 301 from `/schedule-jared` to Jared’s Zoho Bookings page before that link goes in any email or ad.
+- `/schedule-jared` is live (2026-10-05) as a page-level instant redirect to Schedule Jared 60 min (`zoho-sites/pages/schedule-jared/REDIRECT.md`). Zoho's 301 tool only accepts an internal destination, so the Bookings hop is the page Header/Footer Code.
 - Upload `/dl28-og-default.jpg` and `/dl28-canvas-module-before.svg`.
 - Set the Zoho site name to “Delphinium” so `#schemagenerator` matches the WebSite JSON-LD.
 - Add `Sitemap: https://www.delphi-me.com/sitemap.xml` to robots.txt. Keep allow-all.
