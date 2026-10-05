@@ -2583,9 +2583,11 @@
     }
 
     /* Bookings: cross-origin iframe at left 0, top 0. No offset, scale, mask,
-       clip-path, or SVG filter. Zoho hides the staff column, so the frame is
-       the calendar column (340px) plus the time column (250px): 440px fills
-       with those and does not keep the old wide staff frame. overflow: clip,
+       clip-path, or SVG filter. Zoho's compact theme stacks the calendar and
+       the time column at max-width 830px and lays them in a row from 831px.
+       Narrow viewports keep a 440px frame so that stack stays. From 1280px
+       the frame is 860px, past 831 with room for a scrollbar, and the story
+       rail is 320px so the eyebrow and headline keep their lines. overflow: clip,
        since focus() inside Zoho can scroll a hidden box. The close control
        sits on the booking pane, above the iframe. */
     .dl-modal--book {
@@ -2730,11 +2732,14 @@
     @media (min-width: 960px) {
       .dl-modal--book .dl-modal__box { width: max-content; max-width: calc(100vw - 1.5rem); }
     }
-    @media (min-width: 1220px) {
+    @media (min-width: 1280px) {
       .dl-modal--book .dl-modal__box {
-        grid-template-columns: minmax(220px, 300px) max-content;
+        /* 320px rail: "Book a demo" stays one line, and the headline breaks as
+           See what your / Canvas courses / can become! The 860px pane stays.
+           A 1240px cap and a 0.9rem mint gap let both columns fit 1280px. */
+        grid-template-columns: minmax(300px, 320px) max-content;
         width: max-content;
-        max-width: calc(100vw - 1rem);
+        max-width: min(1240px, calc(100vw - 32px));
         max-height: min(94vh, 1040px);
         max-height: min(94dvh, 1040px);
         overflow: hidden;
@@ -2743,15 +2748,23 @@
          and padding (white booking surface inside the mint), so the gutter is
          even on every side. The frame height leaves room for that gap inside
          the box, or the bottom mint is clipped. The close control stays on
-         the booking pane, above the iframe. */
-      .dl-modal--book { --dl-book-gap: clamp(0.85rem, 1.45vw, 1.05rem); }
+         the booking pane, above the iframe. Page padding is 16px so the box
+         can use the width the rail needs. */
+      .dl-modal--book {
+        padding: 16px;
+        --dl-book-gap: 0.9rem;
+      }
       .dl-cal {
         margin: var(--dl-book-gap);
         padding: var(--dl-book-gap);
       }
       .dl-modal--book .dl-modal__frame {
         /* 2px is the dialog border. max-height includes it (border-box), so
-           the frame has to give it back or the bottom mint is clipped. */
+           the frame has to give it back or the bottom mint is clipped.
+           860px is the measured side-by-side width: Zoho's row layout starts
+           at 831px, and the extra 29px keeps a scrollbar from dropping the
+           iframe back under the 830px stack. */
+        width: 860px;
         height: min(980px, calc(min(94dvh, 1040px) - 4 * var(--dl-book-gap) - 2px));
       }
       .dl-modal--book .dl-modal__close {
@@ -2763,8 +2776,8 @@
     }
     @media (min-width: 1440px) {
       .dl-modal--book .dl-modal__box {
-        grid-template-columns: minmax(240px, 340px) max-content;
-        max-width: calc(100vw - 1.5rem);
+        grid-template-columns: minmax(300px, 320px) max-content;
+        max-width: min(1240px, calc(100vw - 48px));
       }
     }
     /* Closed dialog must not be display:none or opacity:0. Both keep this
