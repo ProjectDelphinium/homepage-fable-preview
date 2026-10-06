@@ -24,6 +24,15 @@ This is the source of truth for what is live. **`main` should always equal live.
 
 Site-wide code: Custom CSS, Header Code and Footer Code come from the pack (`dist/`). The live pack was built from `c3ea350`; see `scripts/README.md`.
 
+## SalesIQ
+Jared approved the Delphi SalesIQ chat for go-live on 2026-10-06. Widget embed (do not swap the widget code):
+
+```html
+<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq43657238767afe5a3238ca4de01feca14e1d65dc4607454dc9beb3e80e4c5351" defer></script>
+```
+
+Schedule a demo buttons in the bot should use `https://www.delphi-me.com/#schedule-demo`. The homepage script opens `#dl-book-modal` through `window.dlOpenBookings()` (Demo Bookings embed `4937208000000036014`) and then removes the hash. It does not navigate to Bookings, and it does not use `bookings.delphi-me.com`.
+
 ## Forms
 | Form | ID | Notes |
 |---|---|---|

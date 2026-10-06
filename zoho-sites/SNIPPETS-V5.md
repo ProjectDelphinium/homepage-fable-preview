@@ -27,6 +27,14 @@ python3 tools/zoho/build_zoho_pack.py
 
 **Footer Code** is the `/contact-us` and `/support` bodies, then `footer.dl-footer`, the research / contact / book modals, and the inline scripts (Desk captcha, then the page script), minified with `terser -c -m`. Subpages sit in Footer Code because Header Code is already against the 44,900 cap. Bookings stays on portal-embed (`…/portal-embed#/4937208000000036014`). There is no Bookings URL parameter that hides the service card.
 
+**`#schedule-demo`:** on load and on `hashchange`, if the hash is exactly `#schedule-demo` and `window.dlOpenBookings` is a function, the page script calls it. That is the same open path as `data-bookings-open`: `#dl-book-modal` and the Demo Bookings embed `4937208000000036014`. The script then `replaceState`s the hash away and stays on the current path and query. It does not send the visitor to the Bookings site. SalesIQ (and any other) Schedule a demo link should use `https://www.delphi-me.com/#schedule-demo` when the click should open this modal. Do not use `bookings.delphi-me.com`.
+
+**SalesIQ widget (Jared go-live 2026-10-06):** paste this embed where the chat widget should load (Sites Connect or Header). Do not invent a different widget code.
+
+```html
+<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq43657238767afe5a3238ca4de01feca14e1d65dc4607454dc9beb3e80e4c5351" defer></script>
+```
+
 **Where to paste:** the three files stay **site-wide** (Header Code, Footer Code, Custom CSS). Do not paste a different copy per page. The path script shows the homepage body on `/`, `/home`, and the local preview filenames. Zoho has no `/home` page yet, so create one. The pack already treats `/home` as the homepage. `/contact-us` and `/support` show that page's body plus the shared nav and footer. `/eula` and `/purchase-agreement` show the shared nav and footer around Zoho's native page content. `/highered` shows the same homepage sections, with higher-ed copy swapped in. Any other path shows the nav and footer only. Zoho still needs pages at `/contact-us`, `/support`, `/eula`, `/purchase-agreement`, `/highered`, and `/home`. Leave theme content empty on `/contact-us`, `/support`, and `/highered`. The neutralizer strips scripts and images inside the theme content area on every path except `/eula` and `/purchase-agreement`, so the forms have to live in this pack, not in a page snippet.
 
 **`/schedule-jared` (live 2026-10-05):** hidden page `2187225000000053002`, page Header/Footer only (not this site-wide pack). Instant redirect to Schedule Jared 60 min. Snippets: `pages/schedule-jared/`.
@@ -109,7 +117,7 @@ The 2026-09-28 staging pack uses section 0 (Header Code, Footer Code, Custom CSS
 | **Code Snippet body** | From `<div class="dl-top">` through both modals (`#dl-book-modal`, `#dl-modal`) and the `<script>` at the bottom. |
 | **Native header (future)** | If Web Design ships a native Zoho header, delete the `.dl-top` block from the snippet and point one **Schedule a demo** button in the native header at the Bookings URL. |
 
-**Bookings modal:** every Schedule link has `data-bookings-open`. The script preloads the Bookings portal-embed iframe on idle and opens it in `#dl-book-modal` on click. Without JS, the links go straight to the Bookings page.
+**Bookings modal:** every Schedule link has `data-bookings-open`. The script preloads the Bookings portal-embed iframe on idle and opens it in `#dl-book-modal` on click. Without JS, the links go straight to the Bookings page. A URL hash of `#schedule-demo` calls `window.dlOpenBookings()` on load and on `hashchange` (same modal, embed `4937208000000036014`), then clears the hash. SalesIQ Schedule a demo links should use `https://www.delphi-me.com/#schedule-demo`.
 
 **Chrome:** no yellow DRAFT strip and no hero eyebrow. This follows the Zoho staging convention Jared accepted on the zoho-ready pack.
 
@@ -157,6 +165,7 @@ Stream-to-title mapping was confirmed from the `VideoObject` JSON-LD on https://
 ## 6. Verify before Jared share
 
 - [ ] All 6 **Schedule a demo** links go to the Bookings URL above and open the modal. Escape and the backdrop close it.
+- [ ] `#schedule-demo` on load and on hash change calls `dlOpenBookings` (same `#dl-book-modal`, embed `4937208000000036014`) and then clears the hash. SalesIQ uses `https://www.delphi-me.com/#schedule-demo`.
 - [ ] Hero/cover says **Cut fail-rate up to** / **31%** on K-12 and **Cut fail-rate up to** / **47%** on `/highered` (promise). Exact **31%** only in the Davis Connect card with 72 classes / 6,000 students / same courses, teachers, content.
 - [ ] Case section present: H2 plain clause "Education moved online," (comma) and lede "teachers can read the room".
 - [ ] Video modal titles come from `videoLabel(el)` matching the button labels; no durations in UI or aria-labels.

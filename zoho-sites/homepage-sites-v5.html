@@ -4583,6 +4583,15 @@
         ensureIframe();
         window.dlOpenBookings = openBook;
         window.dlBookingsFallback = FALLBACK;
+        /* #schedule-demo (SalesIQ and any link) opens this same modal.
+           replaceState drops the hash so the bar stays quiet and a later click can open it again. */
+        function openIfScheduleHash() {
+          if (location.hash !== "#schedule-demo") return;
+          if (typeof window.dlOpenBookings === "function") window.dlOpenBookings();
+          history.replaceState(null, "", location.pathname + location.search);
+        }
+        openIfScheduleHash();
+        window.addEventListener("hashchange", openIfScheduleHash);
       })();
 
       /* Dialogs (research, contact, bookings, video): scroll lock, Escape, Tab trap, focus return */
@@ -4683,19 +4692,21 @@
 
       /* Contact modal: real POST to Zoho CRM Web-to-Contact. Google reCAPTCHA v2 (PROD form 3131408000003185015). Footer Contact is /contact-us. */
       (function () {
-        var modal = document.getElementById("dl-contact-modal");
-        var form = document.getElementById("webform3131408000003185015");
+        /* Local lookup so the #schedule-demo listener still fits Footer Code's 44,900 cap. */
+        function byId(id) { return document.getElementById(id); }
+        var modal = byId("dl-contact-modal");
+        var form = byId("webform3131408000003185015");
         if (!modal || !form) return;
         var formView = modal.querySelector('[data-contact-view="form"]');
         var doneView = modal.querySelector('[data-contact-view="done"]');
         var doneClose = doneView.querySelector("[data-contact-close]");
-        var submitBtn = document.getElementById("dl-contact-submit");
-        var live = document.getElementById("dl-contact-live");
-        var returnEl = document.getElementById("dl-contact-return");
-        var lastEl = document.getElementById("Last_Name");
-        var emailEl = document.getElementById("Email");
-        var accountEl = document.getElementById("Account_Name");
-        var recapEl = document.getElementById("recap3131408000003185015");
+        var submitBtn = byId("dl-contact-submit");
+        var live = byId("dl-contact-live");
+        var returnEl = byId("dl-contact-return");
+        var lastEl = byId("Last_Name");
+        var emailEl = byId("Email");
+        var accountEl = byId("Account_Name");
+        var recapEl = byId("recap3131408000003185015");
         var checks = [
           { el: lastEl, err: "dl-contact-last-err", empty: "Please enter your last name." },
           { el: emailEl, err: "dl-contact-email-err", empty: "Please enter your email." },
@@ -4708,7 +4719,7 @@
         var stagingXm = "c80403ceb24b11a2e4bd4f20d1c093d25333ef1e65522ccadab1971163e8426b70642c2da599fc0b8b48822ba96d2c61";
         window.dlRecaptchaOk = function () {
           if (recapEl) recapEl.setAttribute("captcha-verified", "true");
-          var err = document.getElementById("dl-contact-captcha-err");
+          var err = byId("dl-contact-captcha-err");
           if (err) err.hidden = true;
         };
         function applyStagingContact() {
@@ -4735,7 +4746,7 @@
         }
 
         function setError(item, text) {
-          var err = document.getElementById(item.err);
+          var err = byId(item.err);
           err.textContent = text;
           err.hidden = !text;
           if (text) item.el.setAttribute("aria-invalid", "true");
@@ -4804,7 +4815,7 @@
           }
           if (!recaptchaOk()) {
             e.preventDefault();
-            var err = document.getElementById("dl-contact-captcha-err");
+            var err = byId("dl-contact-captcha-err");
             if (err) { err.hidden = false; err.textContent = "Please confirm you are not a robot."; }
             return;
           }
