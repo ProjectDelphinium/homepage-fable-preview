@@ -73,6 +73,12 @@ NEUTRALIZE = (
 #   visitor.info({audience}); the bot reads %visitor.custominfo.audience% and
 #   routes 'he' (or a /highered URL) to the Higher Ed menu. localStorage access is
 #   in try/catch so blocked storage falls back to a plain object.
+#   The bot's router doesn't see %visitor.custominfo.audience% when it starts
+#   (tested live: the value reaches the visitor record but the rule never matches).
+#   So for dlA=='he' the script also sets SalesIQ's tracked page URL to
+#   location+'#highered' via visitor.cpage(). The bot's "Current page URL contains
+#   highered" rule then routes those visitors to the Higher Ed menu. The address bar
+#   is untouched; only SalesIQ's tracked "current page" carries the marker.
 # - Direct chat: a returning visitor whose last chat ended lands on the messenger
 #   Home tab (no Brand setting skips it; at least one Home widget must stay on). On
 #   floatwindow open we click the Home "Chat with Delphi" card (.home-option-wrap
@@ -84,7 +90,7 @@ SALESIQ = (
     # Hide the SalesIQ launcher teaser (#zs-fl-tip) while the Schedule a demo modal is open
     # (inert is removed on open, set on close); it comes back when the modal closes.
     '<style>html:has(#dl-book-modal:not([inert])) #zs-fl-tip{display:none!important}</style>'
-    "<script>{let z=window.$zoho=window.$zoho||{},s='#schedule-demo',l={},q=location.hash==s,x=()=>self['dl-book-modal']?.inert===!1&&z.salesiq.floatwindow?.visible('hide'),y=()=>[0,1,2,4,7,10].map(t=>setTimeout(x,t*1e3)),h=(e,o=e.target.closest?.('.dl-aud__opt'))=>{o&&(l.dlA=/highered/.test(o)?'he':'k12');(e.type<'d'?e.target.closest?.('[data-bookings-open],[data-research-book]'):location.hash==s)&&y()};try{l=localStorage}catch(e){}/highered/.test(location)&&(l.dlA='he');(z.salesiq=z.salesiq||{}).ready=()=>{let S=z.salesiq;S.floatwindow.open(()=>[3,6,10,15,20,30,45,60].map(t=>setTimeout(()=>document.getElementById('siq_chatwindow')?.contentDocument?.querySelector('.home-option-wrap [data-zsqa=chat]')?.click(),t*100)));q&&y();S.chat.agentMessage((v,d)=>/^Opening our sch/.test(d.message)&&(self.dlOpenBookings?.(),y()));S.visitor.info({audience:l.dlA||'k12'})};addEventListener('hashchange',h);addEventListener('click',h,!0)}</script>"
+    "<script>{let z=window.$zoho=window.$zoho||{},s='#schedule-demo',l={},q=location.hash==s,x=()=>self['dl-book-modal']?.inert===!1&&z.salesiq.floatwindow?.visible('hide'),y=()=>[0,1,2,4,7,10].map(t=>setTimeout(x,t*1e3)),h=(e,o=e.target.closest?.('.dl-aud__opt'))=>{o&&(l.dlA=/highered/.test(o)?'he':'k12');(e.type<'d'?e.target.closest?.('[data-bookings-open],[data-research-book]'):location.hash==s)&&y()};try{l=localStorage}catch(e){}/highered/.test(location)&&(l.dlA='he');(z.salesiq=z.salesiq||{}).ready=()=>{let S=z.salesiq;S.floatwindow.open(()=>[3,6,10,15,20,30,45,60].map(t=>setTimeout(()=>document.getElementById('siq_chatwindow')?.contentDocument?.querySelector('.home-option-wrap [data-zsqa=chat]')?.click(),t*100)));q&&y();S.chat.agentMessage((v,d)=>/^Opening our sch/.test(d.message)&&(self.dlOpenBookings?.(),y()));S.visitor.info({audience:l.dlA||'k12'});l.dlA=='he'&&S.visitor.cpage(location+'#highered')};addEventListener('hashchange',h);addEventListener('click',h,!0)}</script>"
     '<script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq43657238767afe5a3238ca4de01feca14e1d65dc4607454dc9beb3e80e4c5351" defer></script>'
 )
 
