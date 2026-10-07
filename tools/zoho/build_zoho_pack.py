@@ -63,6 +63,9 @@ NEUTRALIZE = (
 # hides while #dl-book-modal is open (inert === false), retrying for ~10 s because
 # SalesIQ restores an open window a few seconds after load. Do not swap the widget code.
 SALESIQ = (
+    # Hide the SalesIQ launcher teaser (#zs-fl-tip) while the Schedule a demo modal is open
+    # (inert is removed on open, set on close); it comes back when the modal closes.
+    '<style>html:has(#dl-book-modal:not([inert])) #zs-fl-tip{display:none!important}</style>'
     "<script>{let z=window.$zoho=window.$zoho||{},s='#schedule-demo',q=location.hash==s,x=()=>self['dl-book-modal']?.inert===!1&&z.salesiq.floatwindow?.visible('hide'),y=()=>[0,1,2,4,7,10].map(t=>setTimeout(x,t*1e3)),h=e=>(e.type<'d'?e.target.closest?.('[data-bookings-open],[data-research-book]'):location.hash==s)&&y();(z.salesiq=z.salesiq||{}).ready=()=>q&&y();addEventListener('hashchange',h);addEventListener('click',h,!0)}</script>"
     '<script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq43657238767afe5a3238ca4de01feca14e1d65dc4607454dc9beb3e80e4c5351" defer></script>'
 )
