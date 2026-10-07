@@ -250,7 +250,8 @@ def header_code(doc: str) -> str:
     # deletes duplicates. Zoho page SEO fields are the static copy crawlers see
     # before JS (see zoho-sites/SEO.md).
     head_tail = doc.split("</style>", 1)[1].split("</head>", 1)[0]
-    links = re.findall(r"<link\b[^>]*>|<script\b[^>]*>\s*</script>", head_tail)
+    # Inline head scripts are kept when they hold no "<" (the reCAPTCHA-after-load loader).
+    links = re.findall(r"<link\b[^>]*>|<script\b[^>]*>[^<]*</script>", head_tail)
     if not links:
         raise SystemExit("head links after the style block were not found")
     body_start = doc.find('<a class="dl-skip"')
