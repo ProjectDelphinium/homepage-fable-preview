@@ -8,17 +8,14 @@ function sweep(){d.querySelectorAll('link,style,script,img,source,video,iframe')
 var mo=new MutationObserver(function(ms){ms.forEach(function(m){m.addedNodes.forEach(function(n){if(n.nodeType===1){off(n);if(n.querySelectorAll)n.querySelectorAll('link,style,script,img,source,video,iframe').forEach(off);}});});});
 mo.observe(d.documentElement,{childList:true,subtree:true});d.addEventListener('DOMContentLoaded',function(){sweep();setTimeout(function(){sweep();mo.disconnect();},4000);});})();</script><a class="dl-skip" href="#top">Skip to main content</a>
 <script>
-!function(){
-var p=(location.pathname||"/").replace(/\/+$/,"")||"/";
-var b=p.split("/").pop();
-var k="other";
+!function(){var d=document,p=(location.pathname||"/").replace(/\/+$/,"")||"/",b=p.split("/").pop(),k="other";
 if(p==="/"||p==="/home"||b==="homepage-sites-v5.html"||b==="homepage-sites-v5.zoho-ready.html")k="home";
 else if(/\/contact-us$/.test(p))k="contact";
 else if(/\/support$/.test(p))k="support";
 else if(/\/eula$/.test(p))k="eula";
 else if(/\/purchase-agreement$/.test(p))k="agree";
 else if(/\/highered$/.test(p))k="he";
-document.documentElement.classList.add("dl-path-"+k);
+d.documentElement.classList.add("dl-path-"+k);
 var M={
 home:["Canvas engagement for online K-12 schools \u00b7 Delphinium","Delphinium makes Canvas courses engaging for online and virtual K-12 students and gives teachers an early-warning system. Up to 31% fewer course failures."],
 he:["Canvas engagement for colleges and universities \u00b7 Delphinium","Canvas engagement for online college and university courses. In a Utah Valley University study, course failure fell as much as 47% and withdrawals 67%."],
@@ -27,31 +24,15 @@ support:["Support \u00b7 Delphinium","Get support for Delphinium on Canvas. Send
 eula:["EULA \u00b7 Delphinium","End user license agreement for Delphinium (Delphi M.E. LLC)."],
 agree:["Purchase agreement \u00b7 Delphinium","Purchase agreement for Delphinium (Delphi M.E. LLC)."]
 };
-var row=M[k]||M.home;
-var origin="https://www.delphi-me.com";
-var path=k==="he"?"/highered":k==="contact"?"/contact-us":k==="support"?"/support":k==="eula"?"/eula":k==="agree"?"/purchase-agreement":"/";
-document.title=row[0];
-var desc=document.querySelectorAll('meta[name="description"]');
-var m=desc[0];
-if(!m){m=document.createElement("meta");m.setAttribute("name","description");document.head.appendChild(m);}
+var row=M[k]||M.home,url="https://www.delphi-me.com"+({he:"/highered",contact:"/contact-us",support:"/support",eula:"/eula",agree:"/purchase-agreement"}[k]||"/"),desc=d.querySelectorAll('meta[name="description"]'),m=desc[0],i;
+d.title=row[0];
+if(!m){m=d.createElement("meta");m.setAttribute("name","description");d.head.appendChild(m);}
 m.setAttribute("content",row[1]);
-for(var i=desc.length-1;i>=1;i--)desc[i].parentNode.removeChild(desc[i]);
-function up(sel,attr,name,val){
-var el=document.querySelector(sel);
-if(!el){el=document.createElement("meta");el.setAttribute(attr,name);document.head.appendChild(el);}
-el.setAttribute("content",val);
-}
-up('meta[property="og:title"]',"property","og:title",row[0]);
-up('meta[property="og:description"]',"property","og:description",row[1]);
-up('meta[property="og:url"]',"property","og:url",origin+path);
-up('meta[name="twitter:title"]',"name","twitter:title",row[0]);
-up('meta[name="twitter:description"]',"name","twitter:description",row[1]);
-up('meta[name="twitter:url"]',"name","twitter:url",origin+path);
-up('meta[name="twitter:card"]',"name","twitter:card","summary_large_image");
-var kw=document.querySelector('meta[name="keywords"]');
-if(kw&&kw.parentNode)kw.parentNode.removeChild(kw);
-var old=document.getElementById("schemagenerator");
-if(old&&old.parentNode)old.parentNode.removeChild(old);
+for(i=desc.length-1;i>=1;i--)desc[i].remove();
+function up(a,n,v){var e=d.querySelector("meta["+a+'="'+n+'"]');if(!e){e=d.createElement("meta");e.setAttribute(a,n);d.head.appendChild(e);}e.setAttribute("content",v);}
+up("property","og:title",row[0]);up("property","og:description",row[1]);up("property","og:url",url);
+up("name","twitter:title",row[0]);up("name","twitter:description",row[1]);up("name","twitter:url",url);up("name","twitter:card","summary_large_image");
+d.querySelector('meta[name="keywords"]')?.remove();d.getElementById("schemagenerator")?.remove();
 }();
 </script>
 
@@ -75,4 +56,4 @@ Watch: Evidence, research, and theory
 </a></div></div></div></section><section class="dl-section dl-how" aria-labelledby="how-heading"><div class="dl-wrap"><p class="dl-eyebrow" id="easy-to-deploy">Easy to deploy</p><h2 class="dl-h2" id="how-heading"><span class="dl-h2__plain">Teachers and content don't change,</span>&#32;<em>Engagement does.</em></h2><div class="dl-how__cards"><div class="dl-card dl-reveal"><span class="dl-how__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span><h3>Lightning fast setup</h3><p class="dl-card__txt">Go live in less than three minutes. Delphinium adds a layer over the Canvas courses you already have and builds itself from your existing content. You get Delphinium-enhanced Canvas, with no migration, no rebuild, and no new platform.</p></div><div class="dl-card dl-reveal"><span class="dl-how__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="m8 11 3 3 5-5"/><path d="M8 21h8"/></svg></span><h3>Zero learning curve</h3><p class="dl-card__txt">Teachers keep using Canvas exactly as before. Edits in Canvas flow through automatically. Teachers do not learn a new tool. And because every course shares the same layout, students can navigate all their classes with ease.</p></div></div><p class="dl-trust" aria-label="Platform notes"><span>FERPA</span><span>HECVAT</span><span>WCAG 2.1 Level AA</span><span>LTI 1.3</span><span>US-hosted on AWS</span></p><div class="dl-prod__more"><a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo</a><a class="dl-link" href="https://www.youtube.com/watch?v=L90IoF6LGAE" data-youtube="L90IoF6LGAE" data-title="Watch: Integration is easy!" title="Watch: Integration is easy!"><span class="dl-link__icon" aria-hidden="true"></span>
 Watch: Integration is easy!
 </a></div><p class="dl-punch dl-reveal"><span class="dl-punch__setup">Your <span class="dk">school</span><span class="dh">program</span> already runs on Canvas,</span>&#32;<span class="dl-punch__payoff">Make it work <em class="dl-punch__key">harder</em> for you</span></p></div></section><section class="dl-section dl-close" aria-labelledby="close-heading"><div class="dl-wrap"><div class="dl-close__stage"><div class="dl-close__copy dl-reveal"><p class="dl-eyebrow dl-close__eyebrow">Your turn</p><h2 class="dl-h2" id="close-heading"><span class="dl-h2__plain">See Delphinium on</span>&#32;<em>one of <span class="dl-close__key">your</span> Canvas courses.</em></h2><p class="dl-close__lede"><b>Meet Dr. Jared R. Chapman</b>, the researcher behind Delphinium. See how it will work in your Canvas courses and get your questions answered.</p><a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014" data-bookings-open>Schedule a demo with Jared <span class="dl-close__arrow" aria-hidden="true">&rarr;</span></a></div><div class="dl-close__aside dl-reveal"><div class="dl-close__invite" role="group" aria-label="What to expect"><p class="dl-close__kicker">You're invited</p><p class="dl-close__title">Delphinium <span class="dl-close__x">+</span> your Canvas courses</p><div class="dl-close__host"><span class="dl-close__avatar" aria-hidden="true">J</span><span><b>Dr. Jared R. Chapman</b><small>The researcher behind Delphinium</small></span></div><p class="dl-close__label">Good to know</p><ul class="dl-close__checks"><li>No migration to plan</li><li>Nothing to install before the call</li><li>You stay in Canvas</li></ul><span class="dl-close__sticker">Bring your questions!</span></div></div></div></div></section></main><div class="dl-modal" id="dl-modal" hidden><div class="dl-modal__backdrop" data-close></div><div class="dl-modal__box" role="dialog" aria-modal="true" aria-labelledby="dl-modal-title"><div class="dl-modal__bar"><p class="dl-modal__title" id="dl-modal-title">Video</p><button type="button" class="dl-modal__close" data-close aria-label="Close video"><span class="dl-modal__close-x" aria-hidden="true"></span></button></div><div class="dl-modal__frame"></div></div></div>
-<style>html:has(#dl-book-modal:not([inert])) #zs-fl-tip{display:none!important}</style><script>{let z=window.$zoho=window.$zoho||{},s='#schedule-demo',q=location.hash==s,x=()=>self['dl-book-modal']?.inert===!1&&z.salesiq.floatwindow?.visible('hide'),y=()=>[0,1,2,4,7,10].map(t=>setTimeout(x,t*1e3)),h=e=>(e.type<'d'?e.target.closest?.('[data-bookings-open],[data-research-book]'):location.hash==s)&&y();(z.salesiq=z.salesiq||{}).ready=()=>q&&y();addEventListener('hashchange',h);addEventListener('click',h,!0)}</script><script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq43657238767afe5a3238ca4de01feca14e1d65dc4607454dc9beb3e80e4c5351" defer></script>
+<style>html:has(#dl-book-modal:not([inert])) #zs-fl-tip{display:none!important}</style><script>{let z=window.$zoho=window.$zoho||{},s='#schedule-demo',l={},q=location.hash==s,x=()=>self['dl-book-modal']?.inert===!1&&z.salesiq.floatwindow?.visible('hide'),y=()=>[0,1,2,4,7,10].map(t=>setTimeout(x,t*1e3)),h=(e,o=e.target.closest?.('.dl-aud__opt'))=>{o&&(l.dlA=/highered/.test(o)?'he':'k12');(e.type<'d'?e.target.closest?.('[data-bookings-open],[data-research-book]'):location.hash==s)&&y()};try{l=localStorage}catch(e){}/highered/.test(location)&&(l.dlA='he');(z.salesiq=z.salesiq||{}).ready=()=>{let S=z.salesiq;q&&y();S.chat.agentMessage((v,d)=>/^Opening our sch/.test(d.message)&&(self.dlOpenBookings?.(),y()));S.visitor.info({audience:l.dlA||'k12'})};addEventListener('hashchange',h);addEventListener('click',h,!0)}</script><script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq43657238767afe5a3238ca4de01feca14e1d65dc4607454dc9beb3e80e4c5351" defer></script>

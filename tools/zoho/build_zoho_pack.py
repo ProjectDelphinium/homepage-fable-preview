@@ -62,11 +62,22 @@ NEUTRALIZE = (
 # and (via $zoho.salesiq.ready) when a page loads with #schedule-demo. It only
 # hides while #dl-book-modal is open (inert === false), retrying for ~10 s because
 # SalesIQ restores an open window a few seconds after load. Do not swap the widget code.
+# Fix 350 (2026-10-07):
+# - One-tap demo: chat.agentMessage watches for the Delphi bot reply that starts
+#   "Opening our sch..." (sent when a visitor taps the Schedule a demo chip) and
+#   calls dlOpenBookings() (Footer), then hides the chat like above. Keep the bot
+#   text and this regex in sync.
+# - Audience: localStorage.dlA is set to 'he' on any /highered load and to
+#   'he'/'k12' when a .dl-aud__opt toggle is clicked, so a later homepage visit stays
+#   Higher Ed until the visitor switches back. On ready it is sent as
+#   visitor.info({audience}); the bot reads %visitor.custominfo.audience% and
+#   routes 'he' (or a /highered URL) to the Higher Ed menu. localStorage access is
+#   in try/catch so blocked storage falls back to a plain object.
 SALESIQ = (
     # Hide the SalesIQ launcher teaser (#zs-fl-tip) while the Schedule a demo modal is open
     # (inert is removed on open, set on close); it comes back when the modal closes.
     '<style>html:has(#dl-book-modal:not([inert])) #zs-fl-tip{display:none!important}</style>'
-    "<script>{let z=window.$zoho=window.$zoho||{},s='#schedule-demo',q=location.hash==s,x=()=>self['dl-book-modal']?.inert===!1&&z.salesiq.floatwindow?.visible('hide'),y=()=>[0,1,2,4,7,10].map(t=>setTimeout(x,t*1e3)),h=e=>(e.type<'d'?e.target.closest?.('[data-bookings-open],[data-research-book]'):location.hash==s)&&y();(z.salesiq=z.salesiq||{}).ready=()=>q&&y();addEventListener('hashchange',h);addEventListener('click',h,!0)}</script>"
+    "<script>{let z=window.$zoho=window.$zoho||{},s='#schedule-demo',l={},q=location.hash==s,x=()=>self['dl-book-modal']?.inert===!1&&z.salesiq.floatwindow?.visible('hide'),y=()=>[0,1,2,4,7,10].map(t=>setTimeout(x,t*1e3)),h=(e,o=e.target.closest?.('.dl-aud__opt'))=>{o&&(l.dlA=/highered/.test(o)?'he':'k12');(e.type<'d'?e.target.closest?.('[data-bookings-open],[data-research-book]'):location.hash==s)&&y()};try{l=localStorage}catch(e){}/highered/.test(location)&&(l.dlA='he');(z.salesiq=z.salesiq||{}).ready=()=>{let S=z.salesiq;q&&y();S.chat.agentMessage((v,d)=>/^Opening our sch/.test(d.message)&&(self.dlOpenBookings?.(),y()));S.visitor.info({audience:l.dlA||'k12'})};addEventListener('hashchange',h);addEventListener('click',h,!0)}</script>"
     '<script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq43657238767afe5a3238ca4de01feca14e1d65dc4607454dc9beb3e80e4c5351" defer></script>'
 )
 
