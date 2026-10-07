@@ -3043,17 +3043,14 @@
 <body class="dl-v5">
   <a class="dl-skip" href="#top">Skip to main content</a>
   <script>
-  !function(){
-    var p=(location.pathname||"/").replace(/\/+$/,"")||"/";
-    var b=p.split("/").pop();
-    var k="other";
+  !function(){var d=document,p=(location.pathname||"/").replace(/\/+$/,"")||"/",b=p.split("/").pop(),k="other";
     if(p==="/"||p==="/home"||b==="homepage-sites-v5.html"||b==="homepage-sites-v5.zoho-ready.html")k="home";
     else if(/\/contact-us$/.test(p))k="contact";
     else if(/\/support$/.test(p))k="support";
     else if(/\/eula$/.test(p))k="eula";
     else if(/\/purchase-agreement$/.test(p))k="agree";
     else if(/\/highered$/.test(p))k="he";
-    document.documentElement.classList.add("dl-path-"+k);
+    d.documentElement.classList.add("dl-path-"+k);
     var M={
       home:["Canvas engagement for online K-12 schools \u00b7 Delphinium","Delphinium makes Canvas courses engaging for online and virtual K-12 students and gives teachers an early-warning system. Up to 31% fewer course failures."],
       he:["Canvas engagement for colleges and universities \u00b7 Delphinium","Canvas engagement for online college and university courses. In a Utah Valley University study, course failure fell as much as 47% and withdrawals 67%."],
@@ -3062,31 +3059,15 @@
       eula:["EULA \u00b7 Delphinium","End user license agreement for Delphinium (Delphi M.E. LLC)."],
       agree:["Purchase agreement \u00b7 Delphinium","Purchase agreement for Delphinium (Delphi M.E. LLC)."]
     };
-    var row=M[k]||M.home;
-    var origin="https://www.delphi-me.com";
-    var path=k==="he"?"/highered":k==="contact"?"/contact-us":k==="support"?"/support":k==="eula"?"/eula":k==="agree"?"/purchase-agreement":"/";
-    document.title=row[0];
-    var desc=document.querySelectorAll('meta[name="description"]');
-    var m=desc[0];
-    if(!m){m=document.createElement("meta");m.setAttribute("name","description");document.head.appendChild(m);}
+    var row=M[k]||M.home,url="https://www.delphi-me.com"+({he:"/highered",contact:"/contact-us",support:"/support",eula:"/eula",agree:"/purchase-agreement"}[k]||"/"),desc=d.querySelectorAll('meta[name="description"]'),m=desc[0],i;
+    d.title=row[0];
+    if(!m){m=d.createElement("meta");m.setAttribute("name","description");d.head.appendChild(m);}
     m.setAttribute("content",row[1]);
-    for(var i=desc.length-1;i>=1;i--)desc[i].parentNode.removeChild(desc[i]);
-    function up(sel,attr,name,val){
-      var el=document.querySelector(sel);
-      if(!el){el=document.createElement("meta");el.setAttribute(attr,name);document.head.appendChild(el);}
-      el.setAttribute("content",val);
-    }
-    up('meta[property="og:title"]',"property","og:title",row[0]);
-    up('meta[property="og:description"]',"property","og:description",row[1]);
-    up('meta[property="og:url"]',"property","og:url",origin+path);
-    up('meta[name="twitter:title"]',"name","twitter:title",row[0]);
-    up('meta[name="twitter:description"]',"name","twitter:description",row[1]);
-    up('meta[name="twitter:url"]',"name","twitter:url",origin+path);
-    up('meta[name="twitter:card"]',"name","twitter:card","summary_large_image");
-    var kw=document.querySelector('meta[name="keywords"]');
-    if(kw&&kw.parentNode)kw.parentNode.removeChild(kw);
-    var old=document.getElementById("schemagenerator");
-    if(old&&old.parentNode)old.parentNode.removeChild(old);
+    for(i=desc.length-1;i>=1;i--)desc[i].remove();
+    function up(a,n,v){var e=d.querySelector("meta["+a+'="'+n+'"]');if(!e){e=d.createElement("meta");e.setAttribute(a,n);d.head.appendChild(e);}e.setAttribute("content",v);}
+    up("property","og:title",row[0]);up("property","og:description",row[1]);up("property","og:url",url);
+    up("name","twitter:title",row[0]);up("name","twitter:description",row[1]);up("name","twitter:url",url);up("name","twitter:card","summary_large_image");
+    d.querySelector('meta[name="keywords"]')?.remove();d.getElementById("schemagenerator")?.remove();
   }();
   </script>
   <!-- Production cutover: set data-site-origin to data-site-origin-production (https://www.delphi-me.com). That switches site links, and the contact modal, to the prod CRM form. -->
