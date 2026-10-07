@@ -112,12 +112,14 @@ The 2026-09-28 staging pack uses section 0 (Header Code, Footer Code, Custom CSS
 
 | Destination | What to paste |
 |---|---|
-| **Header Code** | The Google Fonts `preconnect` + stylesheet links, the logo `preload`, and the Bookings `preconnect` / `dns-prefetch` links + `embed.js` script from `<head>`. |
+| **Header Code** | The Google Fonts `preconnect` + stylesheet links, the logo `preload`, and the Bookings and YouTube `preconnect` links, the `embed.js` script, and the reCAPTCHA-after-load loader from `<head>`. |
 | **Custom CSS** | Everything inside the `<style>` block. |
 | **Code Snippet body** | From `<div class="dl-top">` through both modals (`#dl-book-modal`, `#dl-modal`) and the `<script>` at the bottom. |
 | **Native header (future)** | If Web Design ships a native Zoho header, delete the `.dl-top` block from the snippet and point one **Schedule a demo** button in the native header at the Bookings URL. |
 
-**Bookings modal:** every Schedule link has `data-bookings-open`. The script preloads the Bookings portal-embed iframe on idle and opens it in `#dl-book-modal` on click. Without JS, the links go straight to the Bookings page. A URL hash of `#schedule-demo` calls `window.dlOpenBookings()` on load and on `hashchange` (same modal, embed `4937208000000036014`), then clears the hash. SalesIQ Schedule a demo links should use `https://www.delphi-me.com/#schedule-demo`.
+**Bookings modal:** every Schedule link has `data-bookings-open`. The script preloads the Bookings portal-embed iframe at window `load` (or on first open, if sooner) and opens it in `#dl-book-modal` on click. Without JS, the links go straight to the Bookings page. A URL hash of `#schedule-demo` calls `window.dlOpenBookings()` on load and on `hashchange` (same modal, embed `4937208000000036014`), then clears the hash. SalesIQ Schedule a demo links should use `https://www.delphi-me.com/#schedule-demo`.
+
+**Load order (SalesIQ):** SalesIQ draws its chat bubble only after window `load`. Anything inserted before `load` delays the bubble: the hidden YouTube/Mux warm-ups, the Bookings iframe, and reCAPTCHA. So all three now start at `load` (2026-10-07). Keep new iframes and heavy third-party scripts behind `load` too.
 
 **Chrome:** no yellow DRAFT strip and no hero eyebrow. This follows the Zoho staging convention Jared accepted on the zoho-ready pack.
 

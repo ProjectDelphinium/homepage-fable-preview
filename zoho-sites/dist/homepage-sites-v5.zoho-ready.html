@@ -3138,14 +3138,11 @@
   </style>
   <link rel="preconnect" href="https://bookings.nimbuspop.com" crossorigin>
   <link rel="preconnect" href="https://jared-delphi-me.zohobookings.com" crossorigin>
-  <link rel="dns-prefetch" href="https://bookings.nimbuspop.com">
-  <link rel="dns-prefetch" href="https://jared-delphi-me.zohobookings.com">
   <link rel="preconnect" href="https://www.youtube.com">
   <link rel="preconnect" href="https://i.ytimg.com">
-  <link rel="dns-prefetch" href="https://www.youtube.com">
-  <link rel="dns-prefetch" href="https://i.ytimg.com">
   <script src="https://bookings.nimbuspop.com/assets/embed.js" defer></script>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <!-- reCAPTCHA after window load: SalesIQ draws its bubble only after load -->
+  <script>addEventListener("load",()=>document.head.append(Object.assign(document.createElement("script"),{src:"https://www.google.com/recaptcha/api.js"})))</script>
 </head>
 <body class="dl-v5">
   <a class="dl-skip" href="#top">Skip to main content</a>
@@ -4529,12 +4526,9 @@
             ensureMuxWarm(muxItems[n].id, muxItems[n].mp4, muxItems[n].poster);
           }
         }
-        /* Start ASAP so embeds/MP4s are ready before first click */
-        if ("requestIdleCallback" in window) {
-          requestIdleCallback(warm, { timeout: 400 });
-        } else {
-          setTimeout(warm, 0);
-        }
+        /* Warm after window load: SalesIQ draws its bubble only after load,
+           and these hidden embeds would hold load for seconds. */
+        addEventListener("load", warm);
       }
       function openYouTube(id, name, trigger) {
         var iframe = ensureYtWarm(id);
@@ -4651,8 +4645,10 @@
       }, true);
       scheduleVideoWarm();
     })();
-      /* Zoho Bookings: one portal-embed iframe, created at parse. Class p parks
-         the dialog without the hidden attribute, so Bookings can paint first. */
+      /* Zoho Bookings: one portal-embed iframe, created at window load (or on
+         open, if sooner). Created at parse it held load, and SalesIQ draws its
+         bubble only after load. Class p parks the dialog without the hidden
+         attribute, so Bookings can paint first. */
       (function () {
         var BOOK_URL = "https://jared-delphi-me.zohobookings.com/portal-embed#/4937208000000036014";
         var FALLBACK = "https://jared-delphi-me.zohobookings.com/4937208000000036014";
@@ -4684,7 +4680,7 @@
           el.addEventListener("click", openBook);
         });
 
-        ensureIframe();
+        addEventListener("load", ensureIframe);
         window.dlOpenBookings = openBook;
         window.dlBookingsFallback = FALLBACK;
         /* #schedule-demo (SalesIQ and any link) opens this same modal.
