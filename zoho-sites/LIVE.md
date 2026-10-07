@@ -34,7 +34,10 @@ Jared approved the Delphi SalesIQ chat for go-live on 2026-10-06. Live Header Co
   - The Audience router sends `audience = he` or a URL containing `highered` to the Higher Ed menu. Everything else gets the K-12 menu with the "I'm in Higher Ed" chip.
   - If storage is blocked, the `localStorage` access is caught and a plain object is used instead.
 - *Header space.* To make room, the SEO head script in `homepage-sites-v5.html` was compacted (3,062 → 2,491 chars). It produces the same titles, meta, canonical and html classes on all paths.
-- Header is now 44,631.
+- *Direct chat (fix 350, 2:27 PM request).* `ready` also calls `$zoho.salesiq.chat.mode('click')`. A launcher click then starts a new Delphi chat whenever there's no ongoing one. Before this, a returning visitor whose last chat had ended landed on the messenger Home tab ("Chat with us now / Will reply in few minutes"). An ongoing chat still reopens as it is, and nothing opens on page load.
+  - There's no Brand setting that skips Home, and at least one Home widget must stay enabled.
+  - The Home chat card was renamed in Brand → Messenger → Homepage widgets → Chat to "Chat with Delphi / Ask me anything about Delphinium".
+- Header is now 44,652.
 
 **Load speed (2026-10-07):** SalesIQ's float script renders the bubble only after window `load`. The Bookings preload iframe (~2.7 MB), nine hidden YouTube warm-up iframes (~2.8 MB) and reCAPTCHA `api.js` used to start before `load` and held it. That put the bubble at ~6 s on a fast machine and 20 s+ on a slow one. All three now start at `load`:
 - Footer: `addEventListener("load",a)` for Bookings (opening the modal earlier still creates the iframe at once), and `addEventListener("load",h)` for the video warm-ups.
@@ -55,7 +58,7 @@ Schedule a demo buttons in the bot should use `https://www.delphi-me.com/#schedu
 | Zoho CRM Web-to-Contact (Website Contact Us) | `3131408000003185015` | returns to `?contact=thanks`; **Google reCAPTCHA v2** site key `6LcnUtkt…` (live 2026-10-01); honeypot `aG9uZXlwb3Q` retained; image CaptchaServlet removed |
 | Zoho Desk WebToCase | `1470822000000482143` | allowed domain `https://www.delphi-me.com`, returns to `?ticket=thanks` (unchanged) |
 
-Contact form HTML lives in the site-wide Header/Footer pack (`homepage-sites-v5.html` → `dist/`), not the native `/contact-us` page body. Pack sizes after reCAPTCHA paste (2026-10-01 MT): Header 44,425 / Footer 44,230 (under 44,900). After the SalesIQ close-on-demo script (2026-10-07 MT, fix 330): Header 44,881 / Footer 44,886 as pasted (`dist` footer has 2 extra leading newlines). After the load-speed fix (2026-10-07 MT): Header 44,725 / Footer 44,852 (`dist`). After fix 350 (2026-10-07 MT): Header 44,631 / Footer unchanged. The builder footer is still over the cap (44,973). The `dist` footer stays hand-minified. To make room, the `/* dl28: ... */` comment was moved out of the shipped neutralizer script into the builder source.
+Contact form HTML lives in the site-wide Header/Footer pack (`homepage-sites-v5.html` → `dist/`), not the native `/contact-us` page body. Pack sizes after reCAPTCHA paste (2026-10-01 MT): Header 44,425 / Footer 44,230 (under 44,900). After the SalesIQ close-on-demo script (2026-10-07 MT, fix 330): Header 44,881 / Footer 44,886 as pasted (`dist` footer has 2 extra leading newlines). After the load-speed fix (2026-10-07 MT): Header 44,725 / Footer 44,852 (`dist`). After fix 350 (2026-10-07 MT): Header 44,652 / Footer unchanged. The builder footer is still over the cap (44,973). The `dist` footer stays hand-minified. To make room, the `/* dl28: ... */` comment was moved out of the shipped neutralizer script into the builder source.
 
 ## Favicon
 `/dl28-favicon.png` (hosted on Zoho)
