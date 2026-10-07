@@ -43,7 +43,10 @@ FAVICON_LINKS = (
 )
 
 NEUTRALIZE = (
-    "<script>/* dl28: page is standalone; switch off Zoho theme CSS + legacy Home-snippet inline styles so only zs-customcss (ours) applies */\n"
+    # dl28: page is standalone; switch off Zoho theme CSS + legacy Home-snippet inline
+    # styles so only zs-customcss (ours) applies. (Comment kept here, not in the
+    # shipped script, to stay under the 44,900 Header cap.)
+    "<script>"
     "(function(){var d=document;var legal=/\\/(?:eula|purchase-agreement)$/.test((location.pathname||\"/\").replace(/\\/+$/,\"\")||\"/\");function off(n){try{if(n.tagName==='LINK'&&/stylesheet/i.test(n.rel||'')&&/\\/template\\/|zsite-core|webfonts\\.zoho|fonts\\.googleapis/.test(n.href||'')){n.disabled=true;n.media='not all';n.setAttribute('data-dl-off','1');}\n"
     "else if(!legal&&n.closest&&n.closest('.theme-content-area,.zpcontent-container,[data-element-type]')){var t=n.tagName;n.setAttribute('data-dl-off','1');\n"
     "if(t==='STYLE'){n.media='not all';}else if(t==='SCRIPT'){n.type='text/plain';}else if(t==='LINK'){n.removeAttribute('href');}\n"
@@ -51,6 +54,17 @@ NEUTRALIZE = (
     "function sweep(){d.querySelectorAll('link,style,script,img,source,video,iframe').forEach(off);}sweep();\n"
     "var mo=new MutationObserver(function(ms){ms.forEach(function(m){m.addedNodes.forEach(function(n){if(n.nodeType===1){off(n);if(n.querySelectorAll)n.querySelectorAll('link,style,script,img,source,video,iframe').forEach(off);}});});});\n"
     "mo.observe(d.documentElement,{childList:true,subtree:true});d.addEventListener('DOMContentLoaded',function(){sweep();setTimeout(function(){sweep();mo.disconnect();},4000);});})();</script>"
+)
+
+# SalesIQ widget (Jared go-live 2026-10-06), last thing in Header Code. The inline
+# script closes the chat window when the Schedule a demo modal opens: on a click of
+# [data-bookings-open] / [data-research-book], on a hashchange to #schedule-demo,
+# and (via $zoho.salesiq.ready) when a page loads with #schedule-demo. It only
+# hides while #dl-book-modal is open (inert === false), retrying for ~10 s because
+# SalesIQ restores an open window a few seconds after load. Do not swap the widget code.
+SALESIQ = (
+    "<script>{let z=window.$zoho=window.$zoho||{},s='#schedule-demo',q=location.hash==s,x=()=>self['dl-book-modal']?.inert===!1&&z.salesiq.floatwindow?.visible('hide'),y=()=>[0,1,2,4,7,10].map(t=>setTimeout(x,t*1e3)),h=e=>(e.type<'d'?e.target.closest?.('[data-bookings-open],[data-research-book]'):location.hash==s)&&y();(z.salesiq=z.salesiq||{}).ready=()=>q&&y();addEventListener('hashchange',h);addEventListener('click',h,!0)}</script>"
+    '<script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq43657238767afe5a3238ca4de01feca14e1d65dc4607454dc9beb3e80e4c5351" defer></script>'
 )
 
 FONT_COMMENT = "/* self-hosted fonts (Zoho Files) 2026-09-28 */\n"
@@ -330,7 +344,7 @@ def split_parts(full_header: str) -> tuple[str, str]:
     if top < 0:
         raise SystemExit(".dl-top not found")
     header = header[:top] + FAVICON_LINKS + NEUTRALIZE + header[top:]
-    return keep_ws(header), keep_ws(footer)
+    return keep_ws(header) + SALESIQ, keep_ws(footer)
 
 
 def custom_css(doc: str) -> str:
