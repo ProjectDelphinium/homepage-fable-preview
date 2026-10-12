@@ -1,0 +1,378 @@
+{
+ "he-1440": {
+  "html": "dl-path-he js dl-he-ready",
+  "heReady": true,
+  "cols": "377.594px 377.609px 377.594px",
+  "punch": "Three crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "heroLead": "Delphinium transforms the Canvas courses you already teach into engaging student experiences and an early-warning system for teachers. No migration. No extra work. Just turn it on.",
+  "coverUpto": "Lower course failures, as much as",
+  "studyHeading": "UTAH VALLEY UNIVERSITY STUDIES",
+  "cards": [
+   {
+    "kicker": "ONLINE COURSES",
+    "num": "10–15%",
+    "txt": "higher withdrawal rates in online courses for low-income and underprepared students.",
+    "src": "Columbia University",
+    "box": [
+     133,
+     378,
+     185
+    ],
+    "numOverflow": false
+   },
+   {
+    "kicker": "COMPLETION",
+    "num": "~4 in 10",
+    "txt": "students drop out of college. About 2M a year leave with student debt.",
+    "src": "National Center for Education Statistics",
+    "box": [
+     524,
+     378,
+     185
+    ],
+    "numOverflow": false
+   },
+   {
+    "kicker": "Cost",
+    "num": "~$1M",
+    "txt": "less in lifetime earnings without a degree. Twice as likely to be unemployed.",
+    "src": "Pew Research Center",
+    "box": [
+     915,
+     378,
+     185
+    ],
+    "numOverflow": false
+   }
+  ]
+ },
+ "he-1040": {
+  "html": "dl-path-he js dl-he-ready",
+  "heReady": true,
+  "cols": "319.266px 319.266px 319.281px",
+  "punch": "Three crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "heroLead": "Delphinium transforms the Canvas courses you already teach into engaging student experiences and an early-warning system for teachers. No migration. No extra work. Just turn it on.",
+  "coverUpto": "Lower course failures, as much as",
+  "studyHeading": "UTAH VALLEY UNIVERSITY STUDIES",
+  "cards": [
+   {
+    "kicker": "ONLINE COURSES",
+    "num": "10–15%",
+    "txt": "higher withdrawal rates in online courses for low-income and underprepared students.",
+    "src": "Columbia University",
+    "box": [
+     20,
+     319,
+     198
+    ],
+    "numOverflow": false
+   },
+   {
+    "kicker": "COMPLETION",
+    "num": "~4 in 10",
+    "txt": "students drop out of college. About 2M a year leave with student debt.",
+    "src": "National Center for Education Statistics",
+    "box": [
+     353,
+     319,
+     198
+    ],
+    "numOverflow": false
+   },
+   {
+    "kicker": "Cost",
+    "num": "~$1M",
+    "txt": "less in lifetime earnings without a degree. Twice as likely to be unemployed.",
+    "src": "Pew Research Center",
+    "box": [
+     686,
+     319,
+     198
+    ],
+    "numOverflow": false
+   }
+  ]
+ },
+ "he-760": {
+  "html": "dl-path-he js dl-he-ready",
+  "heReady": true,
+  "cols": "225.938px 225.938px 225.938px",
+  "punch": "Three crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "heroLead": "Delphinium transforms the Canvas courses you already teach into engaging student experiences and an early-warning system for teachers. No migration. No extra work. Just turn it on.",
+  "coverUpto": "Lower course failures, as much as",
+  "studyHeading": "UTAH VALLEY UNIVERSITY STUDIES",
+  "cards": [
+   {
+    "kicker": "ONLINE COURSES",
+    "num": "10–15%",
+    "txt": "higher withdrawal rates in online courses for low-income and underprepared students.",
+    "src": "Columbia University",
+    "box": [
+     20,
+     226,
+     219
+    ],
+    "numOverflow": false
+   },
+   {
+    "kicker": "COMPLETION",
+    "num": "~4 in 10",
+    "txt": "students drop out of college. About 2M a year leave with student debt.",
+    "src": "National Center for Education Statistics",
+    "box": [
+     260,
+     226,
+     219
+    ],
+    "numOverflow": false
+   },
+   {
+    "kicker": "Cost",
+    "num": "~$1M",
+    "txt": "less in lifetime earnings without a degree. Twice as likely to be unemployed.",
+    "src": "Pew Research Center",
+    "box": [
+     499,
+     226,
+     219
+    ],
+    "numOverflow": false
+   }
+  ]
+ },
+ "he-390": {
+  "html": "dl-path-he js dl-he-ready",
+  "heReady": true,
+  "cols": "350px",
+  "punch": "Three crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "heroLead": "Delphinium transforms the Canvas courses you already teach into engaging student experiences and an early-warning system for teachers. No migration. No extra work. Just turn it on.",
+  "coverUpto": "Lower course failures, as much as",
+  "studyHeading": "UTAH VALLEY UNIVERSITY STUDIES",
+  "cards": [
+   {
+    "kicker": "ONLINE COURSES",
+    "num": "10–15%",
+    "txt": "higher withdrawal rates in online courses for low-income and underprepared students.",
+    "src": "Columbia University",
+    "box": [
+     20,
+     350,
+     174
+    ],
+    "numOverflow": false
+   },
+   {
+    "kicker": "COMPLETION",
+    "num": "~4 in 10",
+    "txt": "students drop out of college. About 2M a year leave with student debt.",
+    "src": "National Center for Education Statistics",
+    "box": [
+     20,
+     350,
+     174
+    ],
+    "numOverflow": false
+   },
+   {
+    "kicker": "Cost",
+    "num": "~$1M",
+    "txt": "less in lifetime earnings without a degree. Twice as likely to be unemployed.",
+    "src": "Pew Research Center",
+    "box": [
+     20,
+     350,
+     174
+    ],
+    "numOverflow": false
+   }
+  ]
+ },
+ "k12-1440": {
+  "html": "dl-path-home js",
+  "heReady": false,
+  "cols": "377.594px 377.609px 377.594px",
+  "punch": "Three crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "heroLead": "Delphinium transforms the Canvas courses you already teach into engaging student experiences and an early-warning system for parents and teachers. No migration. No extra work. Just turn it on.",
+  "coverUpto": "Cut failures, up to",
+  "studyHeading": "THE DAVIS CONNECT STUDY",
+  "cards": [
+   {
+    "kicker": "ATTENDANCE",
+    "num": "1 in 4",
+    "txt": "students are chronically absent, still elevated years after the shift online.",
+    "src": "RAND / Return to Learn Tracker, 2024-25",
+    "box": [
+     133,
+     378,
+     185
+    ],
+    "numOverflow": false
+   },
+   {
+    "kicker": "ACHIEVEMENT",
+    "num": "1 in 3",
+    "txt": "students score below grade level. The lowest performers keep losing ground.",
+    "src": "The Nation's Report Card (NAEP), 2024",
+    "box": [
+     524,
+     378,
+     185
+    ],
+    "numOverflow": false
+   },
+   {
+    "kicker": "Cost",
+    "num": "$229K",
+    "txt": "the cost of a K-12 education and lost potential when students don't finish.",
+    "src": "U.S. Census Bureau, FY2024",
+    "box": [
+     915,
+     378,
+     185
+    ],
+    "numOverflow": false
+   }
+  ]
+ },
+ "k12-1040": {
+  "html": "dl-path-home js",
+  "heReady": false,
+  "cols": "319.266px 319.266px 319.281px",
+  "punch": "Three crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "heroLead": "Delphinium transforms the Canvas courses you already teach into engaging student experiences and an early-warning system for parents and teachers. No migration. No extra work. Just turn it on.",
+  "coverUpto": "Cut failures, up to",
+  "studyHeading": "THE DAVIS CONNECT STUDY",
+  "cards": [
+   {
+    "kicker": "ATTENDANCE",
+    "num": "1 in 4",
+    "txt": "students are chronically absent, still elevated years after the shift online.",
+    "src": "RAND / Return to Learn Tracker, 2024-25",
+    "box": [
+     20,
+     319,
+     175
+    ],
+    "numOverflow": false
+   },
+   {
+    "kicker": "ACHIEVEMENT",
+    "num": "1 in 3",
+    "txt": "students score below grade level. The lowest performers keep losing ground.",
+    "src": "The Nation's Report Card (NAEP), 2024",
+    "box": [
+     353,
+     319,
+     175
+    ],
+    "numOverflow": false
+   },
+   {
+    "kicker": "Cost",
+    "num": "$229K",
+    "txt": "the cost of a K-12 education and lost potential when students don't finish.",
+    "src": "U.S. Census Bureau, FY2024",
+    "box": [
+     686,
+     319,
+     175
+    ],
+    "numOverflow": false
+   }
+  ]
+ },
+ "k12-760": {
+  "html": "dl-path-home js",
+  "heReady": false,
+  "cols": "225.938px 225.938px 225.938px",
+  "punch": "Three crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "heroLead": "Delphinium transforms the Canvas courses you already teach into engaging student experiences and an early-warning system for parents and teachers. No migration. No extra work. Just turn it on.",
+  "coverUpto": "Cut failures, up to",
+  "studyHeading": "THE DAVIS CONNECT STUDY",
+  "cards": [
+   {
+    "kicker": "ATTENDANCE",
+    "num": "1 in 4",
+    "txt": "students are chronically absent, still elevated years after the shift online.",
+    "src": "RAND / Return to Learn Tracker, 2024-25",
+    "box": [
+     20,
+     226,
+     214
+    ],
+    "numOverflow": false
+   },
+   {
+    "kicker": "ACHIEVEMENT",
+    "num": "1 in 3",
+    "txt": "students score below grade level. The lowest performers keep losing ground.",
+    "src": "The Nation's Report Card (NAEP), 2024",
+    "box": [
+     260,
+     226,
+     214
+    ],
+    "numOverflow": false
+   },
+   {
+    "kicker": "Cost",
+    "num": "$229K",
+    "txt": "the cost of a K-12 education and lost potential when students don't finish.",
+    "src": "U.S. Census Bureau, FY2024",
+    "box": [
+     499,
+     226,
+     214
+    ],
+    "numOverflow": false
+   }
+  ]
+ },
+ "k12-390": {
+  "html": "dl-path-home js",
+  "heReady": false,
+  "cols": "350px",
+  "punch": "Three crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "heroLead": "Delphinium transforms the Canvas courses you already teach into engaging student experiences and an early-warning system for parents and teachers. No migration. No extra work. Just turn it on.",
+  "coverUpto": "Cut failures, up to",
+  "studyHeading": "THE DAVIS CONNECT STUDY",
+  "cards": [
+   {
+    "kicker": "ATTENDANCE",
+    "num": "1 in 4",
+    "txt": "students are chronically absent, still elevated years after the shift online.",
+    "src": "RAND / Return to Learn Tracker, 2024-25",
+    "box": [
+     20,
+     350,
+     174
+    ],
+    "numOverflow": false
+   },
+   {
+    "kicker": "ACHIEVEMENT",
+    "num": "1 in 3",
+    "txt": "students score below grade level. The lowest performers keep losing ground.",
+    "src": "The Nation's Report Card (NAEP), 2024",
+    "box": [
+     20,
+     350,
+     174
+    ],
+    "numOverflow": false
+   },
+   {
+    "kicker": "Cost",
+    "num": "$229K",
+    "txt": "the cost of a K-12 education and lost potential when students don't finish.",
+    "src": "U.S. Census Bureau, FY2024",
+    "box": [
+     20,
+     350,
+     174
+    ],
+    "numOverflow": false
+   }
+  ]
+ }
+}

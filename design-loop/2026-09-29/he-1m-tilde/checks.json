@@ -1,0 +1,47 @@
+[
+  {
+    "path": "/highered",
+    "width": 1440,
+    "found": true,
+    "numText": "$1M",
+    "numHtml": "<span class=\"dk\">$229K</span><span class=\"dh\">$1M</span>",
+    "kicker": "EARNINGS AND EMPLOYMENT",
+    "tildeAnywhereInCase": false,
+    "rect": {
+      "x": 719.296875,
+      "y": 1663.59375,
+      "width": 573.203125,
+      "height": 203.3125
+    }
+  },
+  {
+    "path": "/highered",
+    "width": 390,
+    "found": true,
+    "numText": "$1M",
+    "numHtml": "<span class=\"dk\">$229K</span><span class=\"dh\">$1M</span>",
+    "kicker": "EARNINGS AND EMPLOYMENT",
+    "tildeAnywhereInCase": false,
+    "rect": {
+      "x": 20,
+      "y": 2071.34375,
+      "width": 350,
+      "height": 173.890625
+    }
+  },
+  {
+    "path": "/home",
+    "width": 1440,
+    "found": true,
+    "numText": "$229K",
+    "numHtml": "<span class=\"dk\">$229K</span><span class=\"dh\">$1M</span>",
+    "kicker": "COST",
+    "tildeAnywhereInCase": false,
+    "rect": {
+      "x": 914.890625,
+      "y": 1477.09375,
+      "width": 377.59375,
+      "height": 184.53125
+    }
+  }
+]

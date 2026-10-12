@@ -1,0 +1,76 @@
+[
+ {
+  "path": "/highered",
+  "width": 1440,
+  "cardShown": true,
+  "text": "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+  "html": "students drop out of college. About <b>2M a year</b> leave with student loan debt, but no degree to help pay for that debt.",
+  "runs": [
+   {
+    "text": "students drop out of college. About ",
+    "weight": "400",
+    "tag": "P"
+   },
+   {
+    "text": "2M a year",
+    "weight": "700",
+    "tag": "B"
+   },
+   {
+    "text": " leave with student loan debt, but no degree to help pay for that debt.",
+    "weight": "400",
+    "tag": "P"
+   }
+  ],
+  "boldText": [
+   "2M a year"
+  ],
+  "onlyTwoMBold": true,
+  "clip": {
+   "x": 132.5,
+   "y": 1428.703125,
+   "width": 573.203125,
+   "height": 376.28125
+  }
+ },
+ {
+  "path": "/highered",
+  "width": 390,
+  "cardShown": true,
+  "text": "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+  "html": "students drop out of college. About <b>2M a year</b> leave with student loan debt, but no degree to help pay for that debt.",
+  "runs": [
+   {
+    "text": "students drop out of college. About ",
+    "weight": "400",
+    "tag": "P"
+   },
+   {
+    "text": "2M a year",
+    "weight": "700",
+    "tag": "B"
+   },
+   {
+    "text": " leave with student loan debt, but no degree to help pay for that debt.",
+    "weight": "400",
+    "tag": "P"
+   }
+  ],
+  "boldText": [
+   "2M a year"
+  ],
+  "onlyTwoMBold": true,
+  "clip": {
+   "x": 20,
+   "y": 1418.515625,
+   "width": 350,
+   "height": 389.828125
+  }
+ },
+ {
+  "path": "/home",
+  "width": 1440,
+  "heCardShown": false,
+  "visibleText2M": false
+ }
+]

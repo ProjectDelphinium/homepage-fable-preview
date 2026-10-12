@@ -1,0 +1,386 @@
+[
+ [
+  "he-1440",
+  {
+   "cols": "84.2031px 84.2031px 84.2031px 84.2031px 84.2031px 84.2031px 84.2031px 84.2031px 84.2031px 84.2031px 84.2031px 84.2031px",
+   "cards": [
+    {
+     "kicker": "LOWER INCOME AND UNDERPREPARED STUDENTS",
+     "kickerLines": 2,
+     "num": "10–15%",
+     "body": "higher withdrawal rates in online courses.",
+     "src": "Columbia University",
+     "top": 1429,
+     "left": 133,
+     "w": 280,
+     "h": 207,
+     "numTop": 64
+    },
+    {
+     "kicker": "RETENTION",
+     "kickerLines": 1,
+     "num": "~1 in 3",
+     "body": "first-year students don't return for year two. Seats and tuition that never come back.",
+     "src": "NCES / IPEDS retention",
+     "top": 1429,
+     "left": 426,
+     "w": 280,
+     "h": 207,
+     "numTop": 45
+    },
+    {
+     "kicker": "COMPLETION",
+     "kickerLines": 1,
+     "num": "~40%",
+     "body": "of students finish a bachelor's in 4 years (about 60% in 6). Time-to-degree keeps stretching.",
+     "src": "NCES graduation rates",
+     "top": 1429,
+     "left": 719,
+     "w": 280,
+     "h": 207,
+     "numTop": 45
+    },
+    {
+     "kicker": "DROPOUTS",
+     "kickerLines": 1,
+     "num": "~4 in 10",
+     "body": "students drop out of college.",
+     "src": "National Center for Education Statistics",
+     "top": 1429,
+     "left": 1013,
+     "w": 280,
+     "h": 207,
+     "numTop": 45
+    },
+    {
+     "kicker": "STUDENT DEBT",
+     "kickerLines": 1,
+     "num": "~2M",
+     "body": "students drop out each year with student debt.",
+     "src": "National Center for Education Statistics",
+     "top": 1650,
+     "left": 133,
+     "w": 378,
+     "h": 162,
+     "numTop": 45
+    },
+    {
+     "kicker": "EARNINGS",
+     "kickerLines": 1,
+     "num": "~$1M",
+     "body": "less in lifetime earnings without a degree.",
+     "src": "Pew Research Center",
+     "top": 1650,
+     "left": 524,
+     "w": 378,
+     "h": 162,
+     "numTop": 45
+    },
+    {
+     "kicker": "EMPLOYMENT",
+     "kickerLines": 1,
+     "num": "2x",
+     "body": "as likely to be unemployed without a degree.",
+     "src": "Pew Research Center",
+     "top": 1650,
+     "left": 915,
+     "w": 378,
+     "h": 162,
+     "numTop": 45
+    }
+   ]
+  }
+ ],
+ [
+  "shot",
+  "he-1440-stats.png"
+ ],
+ [
+  "he-1040",
+  {
+   "cols": "69.6094px 69.6094px 69.6094px 69.625px 69.625px 69.625px 69.6094px 69.6094px 69.625px 69.625px 69.625px 69.625px",
+   "cards": [
+    {
+     "kicker": "LOWER INCOME AND UNDERPREPARED STUDENTS",
+     "kickerLines": 2,
+     "num": "10–15%",
+     "body": "higher withdrawal rates in online courses.",
+     "src": "Columbia University",
+     "top": 1327,
+     "left": 20,
+     "w": 236,
+     "h": 221,
+     "numTop": 64
+    },
+    {
+     "kicker": "RETENTION",
+     "kickerLines": 1,
+     "num": "~1 in 3",
+     "body": "first-year students don't return for year two. Seats and tuition that never come back.",
+     "src": "NCES / IPEDS retention",
+     "top": 1327,
+     "left": 270,
+     "w": 236,
+     "h": 221,
+     "numTop": 45
+    },
+    {
+     "kicker": "COMPLETION",
+     "kickerLines": 1,
+     "num": "~40%",
+     "body": "of students finish a bachelor's in 4 years (about 60% in 6). Time-to-degree keeps stretching.",
+     "src": "NCES graduation rates",
+     "top": 1327,
+     "left": 519,
+     "w": 236,
+     "h": 221,
+     "numTop": 45
+    },
+    {
+     "kicker": "DROPOUTS",
+     "kickerLines": 1,
+     "num": "~4 in 10",
+     "body": "students drop out of college.",
+     "src": "National Center for Education Statistics",
+     "top": 1327,
+     "left": 769,
+     "w": 236,
+     "h": 221,
+     "numTop": 45
+    },
+    {
+     "kicker": "STUDENT DEBT",
+     "kickerLines": 1,
+     "num": "~2M",
+     "body": "students drop out each year with student debt.",
+     "src": "National Center for Education Statistics",
+     "top": 1562,
+     "left": 20,
+     "w": 319,
+     "h": 175,
+     "numTop": 45
+    },
+    {
+     "kicker": "EARNINGS",
+     "kickerLines": 1,
+     "num": "~$1M",
+     "body": "less in lifetime earnings without a degree.",
+     "src": "Pew Research Center",
+     "top": 1562,
+     "left": 353,
+     "w": 319,
+     "h": 175,
+     "numTop": 45
+    },
+    {
+     "kicker": "EMPLOYMENT",
+     "kickerLines": 1,
+     "num": "2x",
+     "body": "as likely to be unemployed without a degree.",
+     "src": "Pew Research Center",
+     "top": 1562,
+     "left": 686,
+     "w": 319,
+     "h": 175,
+     "numTop": 45
+    }
+   ]
+  }
+ ],
+ [
+  "shot",
+  "he-1040-stats.png"
+ ],
+ [
+  "he-390",
+  {
+   "cols": "350px",
+   "cards": [
+    {
+     "kicker": "LOWER INCOME AND UNDERPREPARED STUDENTS",
+     "kickerLines": 2,
+     "num": "10–15%",
+     "body": "higher withdrawal rates in online courses.",
+     "src": "Columbia University",
+     "top": 1419,
+     "left": 20,
+     "w": 350,
+     "h": 170,
+     "numTop": 64
+    },
+    {
+     "kicker": "RETENTION",
+     "kickerLines": 1,
+     "num": "~1 in 3",
+     "body": "first-year students don't return for year two. Seats and tuition that never come back.",
+     "src": "NCES / IPEDS retention",
+     "top": 1602,
+     "left": 20,
+     "w": 350,
+     "h": 174,
+     "numTop": 45
+    },
+    {
+     "kicker": "COMPLETION",
+     "kickerLines": 1,
+     "num": "~40%",
+     "body": "of students finish a bachelor's in 4 years (about 60% in 6). Time-to-degree keeps stretching.",
+     "src": "NCES graduation rates",
+     "top": 1790,
+     "left": 20,
+     "w": 350,
+     "h": 174,
+     "numTop": 45
+    },
+    {
+     "kicker": "DROPOUTS",
+     "kickerLines": 1,
+     "num": "~4 in 10",
+     "body": "students drop out of college.",
+     "src": "National Center for Education Statistics",
+     "top": 1977,
+     "left": 20,
+     "w": 350,
+     "h": 151,
+     "numTop": 45
+    },
+    {
+     "kicker": "STUDENT DEBT",
+     "kickerLines": 1,
+     "num": "~2M",
+     "body": "students drop out each year with student debt.",
+     "src": "National Center for Education Statistics",
+     "top": 2142,
+     "left": 20,
+     "w": 350,
+     "h": 151,
+     "numTop": 45
+    },
+    {
+     "kicker": "EARNINGS",
+     "kickerLines": 1,
+     "num": "~$1M",
+     "body": "less in lifetime earnings without a degree.",
+     "src": "Pew Research Center",
+     "top": 2307,
+     "left": 20,
+     "w": 350,
+     "h": 151,
+     "numTop": 45
+    },
+    {
+     "kicker": "EMPLOYMENT",
+     "kickerLines": 1,
+     "num": "2x",
+     "body": "as likely to be unemployed without a degree.",
+     "src": "Pew Research Center",
+     "top": 2472,
+     "left": 20,
+     "w": 350,
+     "h": 151,
+     "numTop": 45
+    }
+   ]
+  }
+ ],
+ [
+  "shot",
+  "he-390-stats.png"
+ ],
+ [
+  "k12-1440",
+  {
+   "cols": "377.594px 377.609px 377.594px",
+   "cards": [
+    {
+     "kicker": "ATTENDANCE",
+     "kickerLines": 1,
+     "num": "1 in 4",
+     "body": "students are chronically absent, still elevated years after the shift online.",
+     "src": "RAND / Return to Learn Tracker, 2024-25",
+     "top": 1459,
+     "left": 133,
+     "w": 378,
+     "h": 185,
+     "numTop": 45
+    },
+    {
+     "kicker": "ACHIEVEMENT",
+     "kickerLines": 1,
+     "num": "1 in 3",
+     "body": "students score below grade level. The lowest performers keep losing ground.",
+     "src": "The Nation's Report Card (NAEP), 2024",
+     "top": 1459,
+     "left": 524,
+     "w": 378,
+     "h": 185,
+     "numTop": 45
+    },
+    {
+     "kicker": "COST",
+     "kickerLines": 1,
+     "num": "$229K",
+     "body": "the cost of a K-12 education and lost potential when students don't finish.",
+     "src": "U.S. Census Bureau, FY2024",
+     "top": 1459,
+     "left": 915,
+     "w": 378,
+     "h": 185,
+     "numTop": 45
+    }
+   ]
+  }
+ ],
+ [
+  "shot",
+  "k12-1440-stats.png"
+ ],
+ [
+  "k12-390",
+  {
+   "cols": "350px",
+   "cards": [
+    {
+     "kicker": "ATTENDANCE",
+     "kickerLines": 1,
+     "num": "1 in 4",
+     "body": "students are chronically absent, still elevated years after the shift online.",
+     "src": "RAND / Return to Learn Tracker, 2024-25",
+     "top": 1419,
+     "left": 20,
+     "w": 350,
+     "h": 174,
+     "numTop": 45
+    },
+    {
+     "kicker": "ACHIEVEMENT",
+     "kickerLines": 1,
+     "num": "1 in 3",
+     "body": "students score below grade level. The lowest performers keep losing ground.",
+     "src": "The Nation's Report Card (NAEP), 2024",
+     "top": 1606,
+     "left": 20,
+     "w": 350,
+     "h": 174,
+     "numTop": 45
+    },
+    {
+     "kicker": "COST",
+     "kickerLines": 1,
+     "num": "$229K",
+     "body": "the cost of a K-12 education and lost potential when students don't finish.",
+     "src": "U.S. Census Bureau, FY2024",
+     "top": 1793,
+     "left": 20,
+     "w": 350,
+     "h": 174,
+     "numTop": 45
+    }
+   ]
+  }
+ ],
+ [
+  "shot",
+  "k12-390-stats.png"
+ ]
+]

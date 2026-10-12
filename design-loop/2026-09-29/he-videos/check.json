@@ -1,0 +1,160 @@
+{
+ "highered-1440": {
+  "htmlClass": "dl-path-he js dl-he-ready",
+  "videosInDom": true,
+  "videosDisplay": "none",
+  "customersDisplay": "none",
+  "linksToVideos": [],
+  "visibleNavLinks": [
+   "Proof -> #proof-eyebrow",
+   " -> #top",
+   "Control Tower -> #control-tower",
+   "Community Builder -> #community-builder",
+   "Engagement Builder -> #engagement-builder",
+   "Proof -> #proof-eyebrow",
+   "Easy to Deploy -> #easy-to-deploy"
+  ],
+  "warmedYtIds": [
+   "id9dqfNZsf4",
+   "xC1b-9bZW4w",
+   "acjbTVs8IUM",
+   "Ek-BBS8rP_0",
+   "ejtU7miZWD4",
+   "UgEyq7gUWmM",
+   "L90IoF6LGAE"
+  ],
+  "visibleVideoIds": [
+   "id9dqfNZsf4",
+   "xC1b-9bZW4w",
+   "acjbTVs8IUM",
+   "Ek-BBS8rP_0",
+   "ejtU7miZWD4",
+   "UgEyq7gUWmM",
+   "L90IoF6LGAE"
+  ],
+  "sectionOrder": [
+   null,
+   "dl-teach",
+   "product",
+   "community",
+   "makeover",
+   "engagement",
+   "proof",
+   "dl-how",
+   "dl-close"
+  ],
+  "heroClickOpensModal": true,
+  "modalTitle": "Watch: Online learning, elevated",
+  "consoleErrors": [
+   {
+    "kind": "log.network",
+    "text": "Failed to load resource: the server responded with a status of 404 (File not found)",
+    "url": "http://127.0.0.1:8767/favicon.ico"
+   }
+  ]
+ },
+ "highered-390": {
+  "htmlClass": "dl-path-he js dl-he-ready",
+  "videosInDom": true,
+  "videosDisplay": "none",
+  "customersDisplay": "none",
+  "linksToVideos": [],
+  "visibleNavLinks": [
+   " -> #top",
+   "Control Tower -> #control-tower",
+   "Community Builder -> #community-builder",
+   "Engagement Builder -> #engagement-builder",
+   "Proof -> #proof-eyebrow",
+   "Easy to Deploy -> #easy-to-deploy"
+  ],
+  "warmedYtIds": [
+   "id9dqfNZsf4",
+   "xC1b-9bZW4w",
+   "acjbTVs8IUM",
+   "Ek-BBS8rP_0",
+   "ejtU7miZWD4",
+   "UgEyq7gUWmM",
+   "L90IoF6LGAE"
+  ],
+  "visibleVideoIds": [
+   "id9dqfNZsf4",
+   "xC1b-9bZW4w",
+   "acjbTVs8IUM",
+   "Ek-BBS8rP_0",
+   "ejtU7miZWD4",
+   "UgEyq7gUWmM",
+   "L90IoF6LGAE"
+  ],
+  "sectionOrder": [
+   null,
+   "dl-teach",
+   "product",
+   "community",
+   "makeover",
+   "engagement",
+   "proof",
+   "dl-how",
+   "dl-close"
+  ],
+  "heroClickOpensModal": true,
+  "modalTitle": "Watch: Online learning, elevated",
+  "consoleErrors": []
+ },
+ "home-1440": {
+  "htmlClass": "dl-path-home js",
+  "videosInDom": true,
+  "videosDisplay": "block",
+  "customersDisplay": "block",
+  "linksToVideos": [],
+  "visibleNavLinks": [
+   "In Their Own Words -> #customers",
+   "Proof -> #proof-eyebrow",
+   " -> #top",
+   "Control Tower -> #control-tower",
+   "Community Builder -> #community-builder",
+   "Engagement Builder -> #engagement-builder",
+   "In Their Own Words -> #customers",
+   "Proof -> #proof-eyebrow",
+   "Easy to Deploy -> #easy-to-deploy"
+  ],
+  "warmedYtIds": [
+   "id9dqfNZsf4",
+   "xC1b-9bZW4w",
+   "acjbTVs8IUM",
+   "Ek-BBS8rP_0",
+   "ejtU7miZWD4",
+   "Tp3IO0TzvM0",
+   "3N0SXpFT36w",
+   "UgEyq7gUWmM",
+   "L90IoF6LGAE"
+  ],
+  "visibleVideoIds": [
+   "id9dqfNZsf4",
+   "xC1b-9bZW4w",
+   "acjbTVs8IUM",
+   "Ek-BBS8rP_0",
+   "ejtU7miZWD4",
+   "Tp3IO0TzvM0",
+   "3N0SXpFT36w",
+   "UgEyq7gUWmM",
+   "L90IoF6LGAE"
+  ],
+  "sectionOrder": [
+   null,
+   "dl-case",
+   "dl-teach",
+   "product",
+   "community",
+   "makeover",
+   "engagement",
+   "customers",
+   "videos",
+   "proof",
+   "dl-how",
+   "dl-close"
+  ],
+  "heroClickOpensModal": true,
+  "modalTitle": "Watch: Online learning, elevated",
+  "consoleErrors": []
+ }
+}

@@ -1,0 +1,70 @@
+{
+ "1440 /home": {
+  "htmlClass": "dl-path-home js",
+  "innerHTML": "For online students, Canvas <em>is</em> school, and too often it looks like a <b>gray wall of text</b>.",
+  "innerText": "For online students, Canvas is school, and too often it looks like a gray wall of text.",
+  "emText": "is",
+  "emStyle": "italic",
+  "bText": "gray wall of text",
+  "bWeight": "700",
+  "rect": [
+   385.640625,
+   5671.671875,
+   653.703125,
+   30.390625
+  ],
+  "matches": true,
+  "emDash": false
+ },
+ "1440 /highered": {
+  "htmlClass": "dl-path-he js dl-he-ready",
+  "innerHTML": "For online students, Canvas <em>is</em> school, and too often it looks like a <b>gray wall of text</b>.",
+  "innerText": "For online students, Canvas is school, and too often it looks like a gray wall of text.",
+  "emText": "is",
+  "emStyle": "italic",
+  "bText": "gray wall of text",
+  "bWeight": "700",
+  "rect": [
+   385.640625,
+   4552.59375,
+   653.703125,
+   30.390625
+  ],
+  "matches": true,
+  "emDash": false
+ },
+ "390 /home": {
+  "htmlClass": "dl-path-home js",
+  "innerHTML": "For online students, Canvas <em>is</em> school, and too often it looks like a <b>gray wall of text</b>.",
+  "innerText": "For online students, Canvas is school, and too often it looks like a gray wall of text.",
+  "emText": "is",
+  "emStyle": "italic",
+  "bText": "gray wall of text",
+  "bWeight": "700",
+  "rect": [
+   20,
+   7483.703125,
+   350,
+   60.78125
+  ],
+  "matches": true,
+  "emDash": false
+ },
+ "390 /highered": {
+  "htmlClass": "dl-path-he js dl-he-ready",
+  "innerHTML": "For online students, Canvas <em>is</em> school, and too often it looks like a <b>gray wall of text</b>.",
+  "innerText": "For online students, Canvas is school, and too often it looks like a gray wall of text.",
+  "emText": "is",
+  "emStyle": "italic",
+  "bText": "gray wall of text",
+  "bWeight": "700",
+  "rect": [
+   20,
+   5735.890625,
+   350,
+   60.78125
+  ],
+  "matches": true,
+  "emDash": false
+ }
+}

@@ -1,0 +1,31 @@
+html.dl-path-he .dl-proof .dl-proof__result--outcomes { background: color-mix(in srgb, var(--green) 7%, var(--white)); border-color: color-mix(in srgb, var(--green) 22%, transparent); }
+html.dl-path-he .dl-proof__outcomes-list { gap: 0; }
+html.dl-path-he .dl-proof__outcomes-list li { padding: 0.8rem 0; }
+html.dl-path-he .dl-proof__outcomes-list li:first-child { padding-top: 0.15rem; }
+html.dl-path-he .dl-proof__outcomes-list li:last-child { padding-bottom: 0; }
+html.dl-path-he .dl-proof__outcomes-list li + li { border-top: 1px solid color-mix(in srgb, var(--green) 20%, transparent); }
+@media (min-width: 560px) and (max-width: 959px) {
+  html.dl-path-he .dl-proof__outcomes-list li { padding: 0 0 0 1.25rem; }
+  html.dl-path-he .dl-proof__outcomes-list li:first-child { padding-left: 0; }
+  html.dl-path-he .dl-proof__outcomes-list li + li { border-top: 0; border-left: 1px solid color-mix(in srgb, var(--green) 20%, transparent); }
+}
+@media (min-width: 960px) {
+  html.dl-path-he .dl-proof__results { grid-template-columns: repeat(10, minmax(0, 1fr)); }
+  html.dl-path-he .dl-proof__result--davis { grid-column: 1 / span 6; grid-row: auto; }
+  html.dl-path-he .dl-proof__result--outcomes { grid-column: 7 / -1; display: flex; flex-direction: column; }
+  html.dl-path-he .dl-proof__result--motivation { grid-column: 1 / span 5; }
+  html.dl-path-he .dl-proof__result--fun { grid-column: 6 / -1; }
+  html.dl-path-he .dl-proof__outcomes-list { flex: 1; grid-auto-rows: 1fr; }
+  html.dl-path-he .dl-proof__outcomes-list li,
+  html.dl-path-he .dl-proof__outcomes-list li:first-child,
+  html.dl-path-he .dl-proof__outcomes-list li:last-child { grid-template-columns: 1fr; align-content: center; row-gap: 0.45rem; padding: 0.75rem 0; }
+  html.dl-path-he .dl-proof__outcomes-list b { font-size: clamp(2.5rem, 3.7vw, 3.25rem); }
+  html.dl-path-he .dl-proof__result--motivation,
+  html.dl-path-he .dl-proof__result--fun { display: grid; grid-template-columns: auto minmax(0, 1fr); align-content: center; align-items: center; column-gap: clamp(1.25rem, 2.5vw, 2rem); }
+  html.dl-path-he .dl-proof__result--motivation .dl-card__kicker,
+  html.dl-path-he .dl-proof__result--fun .dl-card__kicker { grid-column: 1 / -1; }
+  html.dl-path-he .dl-proof__result--motivation .dl-card__num,
+  html.dl-path-he .dl-proof__result--fun .dl-card__num { font-size: clamp(2.25rem, 3.3vw, 2.75rem); }
+  html.dl-path-he .dl-proof__result--motivation .dl-card__txt,
+  html.dl-path-he .dl-proof__result--fun .dl-card__txt { margin-top: 0; }
+}

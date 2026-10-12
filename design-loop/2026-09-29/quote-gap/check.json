@@ -1,0 +1,422 @@
+{
+ "head-390": {
+  "listBottom": 4081,
+  "quote": {
+   "t": 4720,
+   "b": 5017,
+   "l": 20,
+   "r": 370
+  },
+  "pullTop": 4720,
+  "gapListToQuote": 639,
+  "quoteHitsList": false,
+  "quoteHitsMedia": false,
+  "quoteHitsDetail": false,
+  "detailLeftMinusQuoteRight": -350,
+  "rosterDetailOverlap": -46,
+  "detail": {
+   "t": 4380,
+   "b": 4688,
+   "l": 20,
+   "r": 370
+  },
+  "media": {
+   "t": 4113,
+   "b": 4334,
+   "l": 20,
+   "r": 372
+  },
+  "section": {
+   "t": 3569,
+   "b": 5081,
+   "l": 0,
+   "r": 390
+  },
+  "docWidth": 390
+ },
+ "work-390": {
+  "listBottom": 4081,
+  "quote": {
+   "t": 4121,
+   "b": 4417,
+   "l": 20,
+   "r": 370
+  },
+  "pullTop": 4121,
+  "gapListToQuote": 40,
+  "quoteHitsList": false,
+  "quoteHitsMedia": false,
+  "quoteHitsDetail": false,
+  "detailLeftMinusQuoteRight": -350,
+  "rosterDetailOverlap": -45,
+  "detail": {
+   "t": 4716,
+   "b": 5025,
+   "l": 20,
+   "r": 370
+  },
+  "media": {
+   "t": 4449,
+   "b": 4671,
+   "l": 20,
+   "r": 372
+  },
+  "section": {
+   "t": 3569,
+   "b": 5089,
+   "l": 0,
+   "r": 390
+  },
+  "docWidth": 390
+ },
+ "head-760": {
+  "listBottom": 2999,
+  "quote": {
+   "t": 4188,
+   "b": 4399,
+   "l": 20,
+   "r": 520
+  },
+  "pullTop": 4188,
+  "gapListToQuote": 1189,
+  "quoteHitsList": false,
+  "quoteHitsMedia": false,
+  "quoteHitsDetail": false,
+  "detailLeftMinusQuoteRight": -500,
+  "rosterDetailOverlap": -46,
+  "detail": {
+   "t": 3531,
+   "b": 4156,
+   "l": 20,
+   "r": 724
+  },
+  "media": {
+   "t": 3031,
+   "b": 3485,
+   "l": 20,
+   "r": 742
+  },
+  "section": {
+   "t": 2533,
+   "b": 4468,
+   "l": 0,
+   "r": 760
+  },
+  "docWidth": 760
+ },
+ "work-760": {
+  "listBottom": 2999,
+  "quote": {
+   "t": 3039,
+   "b": 3250,
+   "l": 20,
+   "r": 520
+  },
+  "pullTop": 3039,
+  "gapListToQuote": 40,
+  "quoteHitsList": false,
+  "quoteHitsMedia": false,
+  "quoteHitsDetail": false,
+  "detailLeftMinusQuoteRight": -500,
+  "rosterDetailOverlap": -46,
+  "detail": {
+   "t": 3782,
+   "b": 4407,
+   "l": 20,
+   "r": 724
+  },
+  "media": {
+   "t": 3282,
+   "b": 3736,
+   "l": 20,
+   "r": 742
+  },
+  "section": {
+   "t": 2533,
+   "b": 4476,
+   "l": 0,
+   "r": 760
+  },
+  "docWidth": 760
+ },
+ "head-960": {
+  "listBottom": 3240,
+  "quote": {
+   "t": 3048,
+   "b": 3259,
+   "l": 20,
+   "r": 520
+  },
+  "pullTop": 3048,
+  "gapListToQuote": -192,
+  "quoteHitsList": true,
+  "quoteHitsMedia": true,
+  "quoteHitsDetail": true,
+  "detailLeftMinusQuoteRight": -1,
+  "rosterDetailOverlap": 116,
+  "detail": {
+   "t": 3006,
+   "b": 3360,
+   "l": 519,
+   "r": 920
+  },
+  "media": {
+   "t": 2764,
+   "b": 3122,
+   "l": 373,
+   "r": 942
+  },
+  "section": {
+   "t": 2633,
+   "b": 3446,
+   "l": 0,
+   "r": 960
+  },
+  "docWidth": 960
+ },
+ "work-960": {
+  "listBottom": 3240,
+  "quote": {
+   "t": 3304,
+   "b": 3541,
+   "l": 20,
+   "r": 437
+  },
+  "pullTop": 3304,
+  "gapListToQuote": 64,
+  "quoteHitsList": false,
+  "quoteHitsMedia": false,
+  "quoteHitsDetail": false,
+  "detailLeftMinusQuoteRight": 82,
+  "rosterDetailOverlap": 116,
+  "detail": {
+   "t": 3006,
+   "b": 3360,
+   "l": 519,
+   "r": 920
+  },
+  "media": {
+   "t": 2764,
+   "b": 3122,
+   "l": 373,
+   "r": 942
+  },
+  "section": {
+   "t": 2633,
+   "b": 3627,
+   "l": 0,
+   "r": 960
+  },
+  "docWidth": 960
+ },
+ "head-1024": {
+  "listBottom": 3198,
+  "quote": {
+   "t": 3084,
+   "b": 3296,
+   "l": 20,
+   "r": 520
+  },
+  "pullTop": 3084,
+  "gapListToQuote": -114,
+  "quoteHitsList": true,
+  "quoteHitsMedia": true,
+  "quoteHitsDetail": false,
+  "detailLeftMinusQuoteRight": 31,
+  "rosterDetailOverlap": 113,
+  "detail": {
+   "t": 3010,
+   "b": 3393,
+   "l": 551,
+   "r": 984
+  },
+  "media": {
+   "t": 2741,
+   "b": 3123,
+   "l": 398,
+   "r": 1006
+  },
+  "section": {
+   "t": 2604,
+   "b": 3485,
+   "l": 0,
+   "r": 1024
+  },
+  "docWidth": 1024
+ },
+ "work-1024": {
+  "listBottom": 3198,
+  "quote": {
+   "t": 3262,
+   "b": 3474,
+   "l": 20,
+   "r": 462
+  },
+  "pullTop": 3262,
+  "gapListToQuote": 64,
+  "quoteHitsList": false,
+  "quoteHitsMedia": false,
+  "quoteHitsDetail": false,
+  "detailLeftMinusQuoteRight": 89,
+  "rosterDetailOverlap": 113,
+  "detail": {
+   "t": 3010,
+   "b": 3393,
+   "l": 551,
+   "r": 984
+  },
+  "media": {
+   "t": 2741,
+   "b": 3123,
+   "l": 398,
+   "r": 1006
+  },
+  "section": {
+   "t": 2604,
+   "b": 3566,
+   "l": 0,
+   "r": 1024
+  },
+  "docWidth": 1024
+ },
+ "head-1180": {
+  "listBottom": 3350,
+  "quote": {
+   "t": 3419,
+   "b": 3631,
+   "l": 20,
+   "r": 520
+  },
+  "pullTop": 3419,
+  "gapListToQuote": 69,
+  "quoteHitsList": false,
+  "quoteHitsMedia": false,
+  "quoteHitsDetail": false,
+  "detailLeftMinusQuoteRight": 109,
+  "rosterDetailOverlap": 105,
+  "detail": {
+   "t": 3267,
+   "b": 3720,
+   "l": 629,
+   "r": 1140
+  },
+  "media": {
+   "t": 2929,
+   "b": 3372,
+   "l": 457,
+   "r": 1162
+  },
+  "section": {
+   "t": 2778,
+   "b": 3826,
+   "l": 0,
+   "r": 1180
+  },
+  "docWidth": 1180
+ },
+ "work-1180": {
+  "listBottom": 3350,
+  "quote": {
+   "t": 3414,
+   "b": 3625,
+   "l": 20,
+   "r": 520
+  },
+  "pullTop": 3414,
+  "gapListToQuote": 64,
+  "quoteHitsList": false,
+  "quoteHitsMedia": false,
+  "quoteHitsDetail": false,
+  "detailLeftMinusQuoteRight": 109,
+  "rosterDetailOverlap": 105,
+  "detail": {
+   "t": 3267,
+   "b": 3720,
+   "l": 629,
+   "r": 1140
+  },
+  "media": {
+   "t": 2929,
+   "b": 3372,
+   "l": 457,
+   "r": 1162
+  },
+  "section": {
+   "t": 2778,
+   "b": 3826,
+   "l": 0,
+   "r": 1180
+  },
+  "docWidth": 1180
+ },
+ "head-1440": {
+  "listBottom": 3403,
+  "quote": {
+   "t": 3504,
+   "b": 3716,
+   "l": 140,
+   "r": 640
+  },
+  "pullTop": 3504,
+  "gapListToQuote": 101,
+  "quoteHitsList": false,
+  "quoteHitsMedia": false,
+  "quoteHitsDetail": false,
+  "detailLeftMinusQuoteRight": 125,
+  "rosterDetailOverlap": 92,
+  "detail": {
+   "t": 3336,
+   "b": 3792,
+   "l": 765,
+   "r": 1280
+  },
+  "media": {
+   "t": 2982,
+   "b": 3428,
+   "l": 593,
+   "r": 1302
+  },
+  "section": {
+   "t": 2825,
+   "b": 3904,
+   "l": 0,
+   "r": 1440
+  },
+  "docWidth": 1440
+ },
+ "work-1440": {
+  "listBottom": 3403,
+  "quote": {
+   "t": 3467,
+   "b": 3678,
+   "l": 140,
+   "r": 640
+  },
+  "pullTop": 3467,
+  "gapListToQuote": 64,
+  "quoteHitsList": false,
+  "quoteHitsMedia": false,
+  "quoteHitsDetail": false,
+  "detailLeftMinusQuoteRight": 125,
+  "rosterDetailOverlap": 92,
+  "detail": {
+   "t": 3336,
+   "b": 3792,
+   "l": 765,
+   "r": 1280
+  },
+  "media": {
+   "t": 2982,
+   "b": 3428,
+   "l": 593,
+   "r": 1302
+  },
+  "section": {
+   "t": 2825,
+   "b": 3904,
+   "l": 0,
+   "r": 1440
+  },
+  "docWidth": 1440
+ }
+}

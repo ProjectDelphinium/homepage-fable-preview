@@ -1,0 +1,222 @@
+[
+ [
+  "before home-1440",
+  {
+   "cardW": 418,
+   "cardH": 382,
+   "cardRadius": "18px",
+   "transform": "matrix(0.999048, 0.0436194, -0.0436194, 0.999048, 0, 0)",
+   "origin": "209.172px 190.789px",
+   "cardBg": "none",
+   "cardBgSize": "auto",
+   "before": {
+    "content": "\"\"",
+    "w": "418.344px",
+    "h": "10px",
+    "top": "0px",
+    "left": "0px",
+    "right": "0px",
+    "radius": "18px / 18px",
+    "transform": "none"
+   },
+   "bbox": {
+    "x": 794.3,
+    "y": 133.5,
+    "w": 434.6,
+    "h": 399.5
+   }
+  }
+ ],
+ [
+  "shot",
+  "before-home-1440-zoom.png"
+ ],
+ [
+  "shot",
+  "before-home-1440-corner.png"
+ ],
+ [
+  "shot",
+  "diag-before-home-1440-tl.png"
+ ],
+ [
+  "shot",
+  "diag-before-home-1440-tr.png"
+ ],
+ [
+  "before home-1097",
+  {
+   "cardW": 397,
+   "cardH": 382,
+   "cardRadius": "18px",
+   "transform": "matrix(0.999048, 0.0436194, -0.0436194, 0.999048, 0, 0)",
+   "origin": "198.344px 190.789px",
+   "cardBg": "none",
+   "cardBgSize": "auto",
+   "before": {
+    "content": "\"\"",
+    "w": "396.688px",
+    "h": "10px",
+    "top": "0px",
+    "left": "0px",
+    "right": "0px",
+    "radius": "18px / 18px",
+    "transform": "none"
+   },
+   "bbox": {
+    "x": 611.9,
+    "y": 242.3,
+    "w": 413,
+    "h": 398.5
+   }
+  }
+ ],
+ [
+  "shot",
+  "before-home-1097-zoom.png"
+ ],
+ [
+  "shot",
+  "before-home-1097-corner.png"
+ ],
+ [
+  "shot",
+  "diag-before-home-1097-tl.png"
+ ],
+ [
+  "shot",
+  "diag-before-home-1097-tr.png"
+ ],
+ [
+  "before home-390",
+  {
+   "cardW": 294,
+   "cardH": 428,
+   "cardRadius": "18px",
+   "transform": "matrix(0.999657, 0.0261769, -0.0261769, 0.999657, 0, 0)",
+   "origin": "147px 213.773px",
+   "cardBg": "none",
+   "cardBgSize": "auto",
+   "before": {
+    "content": "\"\"",
+    "w": "294px",
+    "h": "10px",
+    "top": "0px",
+    "left": "0px",
+    "right": "0px",
+    "radius": "18px / 18px",
+    "transform": "none"
+   },
+   "bbox": {
+    "x": 38.5,
+    "y": 246.8,
+    "w": 305.1,
+    "h": 435.1
+   }
+  }
+ ],
+ [
+  "shot",
+  "before-home-390-zoom.png"
+ ],
+ [
+  "shot",
+  "before-home-390-corner.png"
+ ],
+ [
+  "shot",
+  "diag-before-home-390-tl.png"
+ ],
+ [
+  "shot",
+  "diag-before-home-390-tr.png"
+ ],
+ [
+  "before he-1440",
+  {
+   "cardW": 418,
+   "cardH": 382,
+   "cardRadius": "18px",
+   "transform": "matrix(0.999048, 0.0436194, -0.0436194, 0.999048, 0, 0)",
+   "origin": "209.172px 190.789px",
+   "cardBg": "none",
+   "cardBgSize": "auto",
+   "before": {
+    "content": "\"\"",
+    "w": "418.344px",
+    "h": "10px",
+    "top": "0px",
+    "left": "0px",
+    "right": "0px",
+    "radius": "18px / 18px",
+    "transform": "none"
+   },
+   "bbox": {
+    "x": 794.3,
+    "y": 292.2,
+    "w": 434.6,
+    "h": 399.5
+   }
+  }
+ ],
+ [
+  "shot",
+  "before-he-1440-zoom.png"
+ ],
+ [
+  "shot",
+  "before-he-1440-corner.png"
+ ],
+ [
+  "shot",
+  "diag-before-he-1440-tl.png"
+ ],
+ [
+  "shot",
+  "diag-before-he-1440-tr.png"
+ ],
+ [
+  "before he-390",
+  {
+   "cardW": 294,
+   "cardH": 428,
+   "cardRadius": "18px",
+   "transform": "matrix(0.999657, 0.0261769, -0.0261769, 0.999657, 0, 0)",
+   "origin": "147px 213.773px",
+   "cardBg": "none",
+   "cardBgSize": "auto",
+   "before": {
+    "content": "\"\"",
+    "w": "294px",
+    "h": "10px",
+    "top": "0px",
+    "left": "0px",
+    "right": "0px",
+    "radius": "18px / 18px",
+    "transform": "none"
+   },
+   "bbox": {
+    "x": 38.5,
+    "y": 246.8,
+    "w": 305.1,
+    "h": 435.1
+   }
+  }
+ ],
+ [
+  "shot",
+  "before-he-390-zoom.png"
+ ],
+ [
+  "shot",
+  "before-he-390-corner.png"
+ ],
+ [
+  "shot",
+  "diag-before-he-390-tl.png"
+ ],
+ [
+  "shot",
+  "diag-before-he-390-tr.png"
+ ]
+]

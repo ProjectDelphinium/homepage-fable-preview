@@ -1,0 +1,146 @@
+{
+ "he-1440": {
+  "text": "~$1M & 2x",
+  "html": "~$1M &amp; 2x",
+  "numSize": "40.8px",
+  "lineHeight": "38.76px",
+  "color": "rgb(43, 47, 126)",
+  "whiteSpace": "nowrap",
+  "lineBoxes": 1,
+  "numH": 39,
+  "spanW": 183.7,
+  "contentW": 534.4,
+  "slack": 350.7,
+  "overflow": false,
+  "cardW": 573,
+  "cardH": 185,
+  "rowHeights": [
+   207,
+   207,
+   207,
+   185,
+   185
+  ],
+  "docOverflow": false
+ },
+ "he-1040": {
+  "text": "~$1M & 2x",
+  "html": "~$1M &amp; 2x",
+  "numSize": "31.2px",
+  "lineHeight": "29.64px",
+  "color": "rgb(43, 47, 126)",
+  "whiteSpace": "nowrap",
+  "lineBoxes": 1,
+  "numH": 30,
+  "spanW": 140.5,
+  "contentW": 454.4,
+  "slack": 313.9,
+  "overflow": false,
+  "cardW": 493,
+  "cardH": 175,
+  "rowHeights": [
+   198,
+   198,
+   198,
+   175,
+   175
+  ],
+  "docOverflow": false
+ },
+ "he-760": {
+  "text": "~$1M & 2x",
+  "html": "~$1M &amp; 2x",
+  "numSize": "29.6px",
+  "lineHeight": "28.12px",
+  "color": "rgb(43, 47, 126)",
+  "whiteSpace": "nowrap",
+  "lineBoxes": 1,
+  "numH": 28,
+  "spanW": 133.3,
+  "contentW": 314.4,
+  "slack": 181.1,
+  "overflow": false,
+  "cardW": 353,
+  "cardH": 174,
+  "rowHeights": [
+   260,
+   260,
+   260,
+   174,
+   174
+  ],
+  "docOverflow": false
+ },
+ "he-390": {
+  "text": "~$1M & 2x",
+  "html": "~$1M &amp; 2x",
+  "numSize": "29.6px",
+  "lineHeight": "28.12px",
+  "color": "rgb(43, 47, 126)",
+  "whiteSpace": "nowrap",
+  "lineBoxes": 1,
+  "numH": 28,
+  "spanW": 133.3,
+  "contentW": 311.2,
+  "slack": 177.9,
+  "overflow": false,
+  "cardW": 350,
+  "cardH": 174,
+  "rowHeights": [
+   197,
+   174,
+   174,
+   174,
+   174
+  ],
+  "docOverflow": false
+ },
+ "ctrl-1440": true,
+ "home-1440": {
+  "identical": true,
+  "pageH": 13570,
+  "pageH2": 13570,
+  "k12": [
+   "Cost",
+   "$229K",
+   "the cost of a K-12 education and lost potential when students don't finish.",
+   "U.S. Census Bureau, FY2024"
+  ]
+ },
+ "ctrl-1040": true,
+ "home-1040": {
+  "identical": true,
+  "pageH": 12778,
+  "pageH2": 12778,
+  "k12": [
+   "Cost",
+   "$229K",
+   "the cost of a K-12 education and lost potential when students don't finish.",
+   "U.S. Census Bureau, FY2024"
+  ]
+ },
+ "ctrl-760": true,
+ "home-760": {
+  "identical": true,
+  "pageH": 15483,
+  "pageH2": 15483,
+  "k12": [
+   "Cost",
+   "$229K",
+   "the cost of a K-12 education and lost potential when students don't finish.",
+   "U.S. Census Bureau, FY2024"
+  ]
+ },
+ "ctrl-390": true,
+ "home-390": {
+  "identical": true,
+  "pageH": 18744,
+  "pageH2": 18744,
+  "k12": [
+   "Cost",
+   "$229K",
+   "the cost of a K-12 education and lost potential when students don't finish.",
+   "U.S. Census Bureau, FY2024"
+  ]
+ }
+}

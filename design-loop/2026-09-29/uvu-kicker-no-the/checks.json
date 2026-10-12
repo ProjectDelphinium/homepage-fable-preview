@@ -1,0 +1,58 @@
+[
+ [
+  "highered 1440",
+  {
+   "html": "dl-path-he js dl-he-ready",
+   "text": "Utah Valley University studies",
+   "rendered": "UTAH VALLEY UNIVERSITY STUDIES",
+   "transform": "uppercase",
+   "inDavisCard": true
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-study-card.png"
+ ],
+ [
+  "highered 390",
+  {
+   "html": "dl-path-he js dl-he-ready",
+   "text": "Utah Valley University studies",
+   "rendered": "UTAH VALLEY UNIVERSITY STUDIES",
+   "transform": "uppercase",
+   "inDavisCard": true
+  }
+ ],
+ [
+  "shot",
+  "highered-390-study-card.png"
+ ],
+ [
+  "home 1440",
+  {
+   "html": "dl-path-home js",
+   "text": "The Davis Connect study",
+   "rendered": "THE DAVIS CONNECT STUDY",
+   "transform": "uppercase",
+   "inDavisCard": true
+  }
+ ],
+ [
+  "shot",
+  "home-1440-study-card.png"
+ ],
+ [
+  "home 390",
+  {
+   "html": "dl-path-home js",
+   "text": "The Davis Connect study",
+   "rendered": "THE DAVIS CONNECT STUDY",
+   "transform": "uppercase",
+   "inDavisCard": true
+  }
+ ],
+ [
+  "shot",
+  "home-390-study-card.png"
+ ]
+]

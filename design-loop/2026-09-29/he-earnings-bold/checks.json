@@ -1,0 +1,84 @@
+[
+ [
+  "highered 1440",
+  {
+   "html": "dl-path-he js dl-he-ready",
+   "kicker": "EARNINGS AND EMPLOYMENT",
+   "num": "~$1M & 2x",
+   "visibleClass": "dh",
+   "visibleText": "less in lifetime earnings without a degree, and twice as likely to be unemployed.",
+   "visibleHTML": "less in lifetime earnings without a degree, and <b>twice</b> as likely to be unemployed.",
+   "spanWeight": "400",
+   "bold": [
+    {
+     "text": "twice",
+     "weight": "700",
+     "display": "inline",
+     "color": "rgb(35, 35, 42)"
+    }
+   ]
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-earnings-card.png"
+ ],
+ [
+  "highered 390",
+  {
+   "html": "dl-path-he js dl-he-ready",
+   "kicker": "EARNINGS AND EMPLOYMENT",
+   "num": "~$1M & 2x",
+   "visibleClass": "dh",
+   "visibleText": "less in lifetime earnings without a degree, and twice as likely to be unemployed.",
+   "visibleHTML": "less in lifetime earnings without a degree, and <b>twice</b> as likely to be unemployed.",
+   "spanWeight": "400",
+   "bold": [
+    {
+     "text": "twice",
+     "weight": "700",
+     "display": "inline",
+     "color": "rgb(35, 35, 42)"
+    }
+   ]
+  }
+ ],
+ [
+  "shot",
+  "highered-390-earnings-card.png"
+ ],
+ [
+  "home 1440",
+  {
+   "html": "dl-path-home js",
+   "kicker": "COST",
+   "num": "$229K",
+   "visibleClass": "dk",
+   "visibleText": "the cost of a K-12 education and lost potential when students don't finish.",
+   "visibleHTML": "the cost of a K-12 education and lost potential when students don't finish.",
+   "spanWeight": "400",
+   "bold": []
+  }
+ ],
+ [
+  "shot",
+  "home-1440-earnings-card.png"
+ ],
+ [
+  "home 390",
+  {
+   "html": "dl-path-home js",
+   "kicker": "COST",
+   "num": "$229K",
+   "visibleClass": "dk",
+   "visibleText": "the cost of a K-12 education and lost potential when students don't finish.",
+   "visibleHTML": "the cost of a K-12 education and lost potential when students don't finish.",
+   "spanWeight": "400",
+   "bold": []
+  }
+ ],
+ [
+  "shot",
+  "home-390-earnings-card.png"
+ ]
+]

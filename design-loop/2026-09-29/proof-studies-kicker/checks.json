@@ -1,0 +1,54 @@
+[
+ [
+  "highered 1440",
+  {
+   "src": "In the studies",
+   "rendered": "IN THE STUDIES",
+   "transform": "uppercase",
+   "cardDisplay": "flex",
+   "cardVisible": true,
+   "html": "dl-path-he js dl-he-ready"
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-outcomes.png"
+ ],
+ [
+  "home 1440",
+  {
+   "src": "In the studies",
+   "rendered": "In the studies",
+   "transform": "uppercase",
+   "cardDisplay": "none",
+   "cardVisible": false,
+   "html": "dl-path-home js"
+  }
+ ],
+ [
+  "highered 390",
+  {
+   "src": "In the studies",
+   "rendered": "IN THE STUDIES",
+   "transform": "uppercase",
+   "cardDisplay": "flex",
+   "cardVisible": true,
+   "html": "dl-path-he js dl-he-ready"
+  }
+ ],
+ [
+  "shot",
+  "highered-390-outcomes.png"
+ ],
+ [
+  "home 390",
+  {
+   "src": "In the studies",
+   "rendered": "In the studies",
+   "transform": "uppercase",
+   "cardDisplay": "none",
+   "cardVisible": false,
+   "html": "dl-path-home js"
+  }
+ ]
+]

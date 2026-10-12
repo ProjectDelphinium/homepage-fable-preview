@@ -1,0 +1,16 @@
+[
+ [
+  "highered 1440",
+  {
+   "html": "dl-path-he js dl-he-ready",
+   "text": "Utah Valley University studies",
+   "rendered": "UTAH VALLEY UNIVERSITY STUDIES",
+   "transform": "uppercase",
+   "inDavisCard": true
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-study-card.png"
+ ]
+]

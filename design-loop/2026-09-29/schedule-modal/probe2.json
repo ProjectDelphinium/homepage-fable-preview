@@ -1,0 +1,246 @@
+{
+ "1440 days": [
+  [
+   "29",
+   "SPAN",
+   "zdatetimepicker__text",
+   485,
+   581
+  ],
+  [
+   "30",
+   "SPAN",
+   "zdatetimepicker__text",
+   530,
+   581
+  ]
+ ],
+ "1440 body after day click": "Back\nSC\nSchedule a Demo!\njared_delphi-me\n1 hr\nTuesday, September 29\n02:00 pm\n02:30 pm\n03:00 pm\n03:30 pm\n04:00 pm\n04:30 pm\n05:00 pm",
+ "1440 slots visible": true,
+ "1440 date": {
+  "top": [
+   [
+    51,
+    "Back"
+   ],
+   [
+    83,
+    "SC"
+   ],
+   [
+    100,
+    "Schedule a Demo!"
+   ],
+   [
+    270,
+    "Tuesday, September 29"
+   ]
+  ],
+  "content": {
+   "sh": 719,
+   "ch": 719
+  },
+  "natural": 719
+ },
+ "1440 date natural@3000": {
+  "top": [
+   [
+    51,
+    "Back"
+   ],
+   [
+    83,
+    "SC"
+   ],
+   [
+    100,
+    "Schedule a Demo!"
+   ],
+   [
+    270,
+    "Tuesday, September 29"
+   ]
+  ],
+  "content": {
+   "sh": 2915,
+   "ch": 2915
+  },
+  "natural": 2915
+ },
+ "1440 clicked": [
+  549,
+  329
+ ],
+ "1440 details": {
+  "top": [
+   [
+    51,
+    "Back"
+   ],
+   [
+    83,
+    "SC"
+   ],
+   [
+    100,
+    "Schedule a Demo!"
+   ],
+   [
+    270,
+    "Tuesday, September 29"
+   ]
+  ],
+  "content": {
+   "sh": 719,
+   "ch": 719
+  },
+  "natural": 719
+ },
+ "1440 details natural@3000": {
+  "top": [
+   [
+    51,
+    "Back"
+   ],
+   [
+    83,
+    "SC"
+   ],
+   [
+    100,
+    "Schedule a Demo!"
+   ],
+   [
+    270,
+    "Tuesday, September 29"
+   ]
+  ],
+  "content": {
+   "sh": 2915,
+   "ch": 2915
+  },
+  "natural": 2915
+ },
+ "390 days": [
+  [
+   "29",
+   "SPAN",
+   "zdatetimepicker__text",
+   140,
+   581
+  ],
+  [
+   "30",
+   "SPAN",
+   "zdatetimepicker__text",
+   179,
+   581
+  ]
+ ],
+ "390 body after day click": "Back\nSC\nSchedule a Demo!\njared_delphi-me\n1 hr\nTuesday, September 29\n02:00 pm\n02:30 pm\n03:00 pm\n03:30 pm\n04:00 pm\n04:30 pm\n05:00 pm",
+ "390 slots visible": true,
+ "390 date": {
+  "top": [
+   [
+    51,
+    "Back"
+   ],
+   [
+    83,
+    "SC"
+   ],
+   [
+    100,
+    "Schedule a Demo!"
+   ],
+   [
+    270,
+    "Tuesday, September 29"
+   ]
+  ],
+  "content": {
+   "sh": 679,
+   "ch": 663
+  },
+  "natural": 663
+ },
+ "390 date natural@3000": {
+  "top": [
+   [
+    51,
+    "Back"
+   ],
+   [
+    83,
+    "SC"
+   ],
+   [
+    100,
+    "Schedule a Demo!"
+   ],
+   [
+    270,
+    "Tuesday, September 29"
+   ]
+  ],
+  "content": {
+   "sh": 2915,
+   "ch": 2915
+  },
+  "natural": 2915
+ },
+ "390 clicked": [
+  178,
+  329
+ ],
+ "390 details": {
+  "top": [
+   [
+    51,
+    "Back"
+   ],
+   [
+    83,
+    "SC"
+   ],
+   [
+    100,
+    "Schedule a Demo!"
+   ],
+   [
+    270,
+    "Tuesday, September 29"
+   ]
+  ],
+  "content": {
+   "sh": 679,
+   "ch": 663
+  },
+  "natural": 663
+ },
+ "390 details natural@3000": {
+  "top": [
+   [
+    51,
+    "Back"
+   ],
+   [
+    83,
+    "SC"
+   ],
+   [
+    100,
+    "Schedule a Demo!"
+   ],
+   [
+    270,
+    "Tuesday, September 29"
+   ]
+  ],
+  "content": {
+   "sh": 2915,
+   "ch": 2915
+  },
+  "natural": 2915
+ }
+}

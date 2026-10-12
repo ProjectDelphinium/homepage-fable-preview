@@ -1,0 +1,717 @@
+[
+ [
+  "highered 1440",
+  {
+   "path": "/highered",
+   "gridW": 1160,
+   "gridH": 752,
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "bg": "rgb(255, 255, 255)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "yes",
+     "radius": "14px",
+     "x": 0,
+     "y": 0,
+     "w": 680,
+     "h": 550
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "flex",
+     "bg": "color(srgb 0.93 0.975569 0.952235)",
+     "border": "color(srgb 0 0.65098 0.317647 / 0.22)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 720,
+     "y": 0,
+     "w": 440,
+     "h": 550
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "grid",
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 0,
+     "y": 574,
+     "w": 560,
+     "h": 179
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "grid",
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 600,
+     "y": 574,
+     "w": 560,
+     "h": 179
+    }
+   ],
+   "davisHole": 40,
+   "davisNumSize": "156px",
+   "overflowX": false,
+   "clippedEls": 0,
+   "emDash": false,
+   "sha": "349a36b8277c40a7",
+   "consoleErrors": []
+  }
+ ],
+ [
+  "highered 1280",
+  {
+   "path": "/highered",
+   "gridW": 1160,
+   "gridH": 750,
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "bg": "rgb(255, 255, 255)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "yes",
+     "radius": "14px",
+     "x": 0,
+     "y": 0,
+     "w": 681,
+     "h": 548
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "flex",
+     "bg": "color(srgb 0.93 0.975569 0.952235)",
+     "border": "color(srgb 0 0.65098 0.317647 / 0.22)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 719,
+     "y": 0,
+     "w": 441,
+     "h": 548
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "grid",
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 0,
+     "y": 572,
+     "w": 561,
+     "h": 179
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "grid",
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 599,
+     "y": 572,
+     "w": 561,
+     "h": 179
+    }
+   ],
+   "davisHole": 40,
+   "davisNumSize": "153.6px",
+   "overflowX": false,
+   "clippedEls": 0,
+   "emDash": false,
+   "sha": "8a9e63c6f70572a9",
+   "consoleErrors": []
+  }
+ ],
+ [
+  "highered 1100",
+  {
+   "path": "/highered",
+   "gridW": 1060,
+   "gridH": 719,
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "bg": "rgb(255, 255, 255)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "yes",
+     "radius": "14px",
+     "x": 0,
+     "y": 0,
+     "w": 623,
+     "h": 518
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "flex",
+     "bg": "color(srgb 0.93 0.975569 0.952235)",
+     "border": "color(srgb 0 0.65098 0.317647 / 0.22)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 656,
+     "y": 0,
+     "w": 404,
+     "h": 518
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "grid",
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 0,
+     "y": 542,
+     "w": 514,
+     "h": 177
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "grid",
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 547,
+     "y": 542,
+     "w": 514,
+     "h": 177
+    }
+   ],
+   "davisHole": 39,
+   "davisNumSize": "132px",
+   "overflowX": false,
+   "clippedEls": 0,
+   "emDash": false,
+   "sha": "95b1a6e2fa993ec7",
+   "consoleErrors": []
+  }
+ ],
+ [
+  "highered 1040",
+  {
+   "path": "/highered",
+   "gridW": 1000,
+   "gridH": 700,
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "bg": "rgb(255, 255, 255)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "yes",
+     "radius": "14px",
+     "x": 0,
+     "y": 0,
+     "w": 588,
+     "h": 502
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "flex",
+     "bg": "color(srgb 0.93 0.975569 0.952235)",
+     "border": "color(srgb 0 0.65098 0.317647 / 0.22)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 619,
+     "y": 0,
+     "w": 381,
+     "h": 502
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "grid",
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 0,
+     "y": 526,
+     "w": 484,
+     "h": 174
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "grid",
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 516,
+     "y": 526,
+     "w": 484,
+     "h": 174
+    }
+   ],
+   "davisHole": 36,
+   "davisNumSize": "124.8px",
+   "overflowX": false,
+   "clippedEls": 0,
+   "emDash": false,
+   "sha": "5f92aac23cc2a873",
+   "consoleErrors": []
+  }
+ ],
+ [
+  "highered 960",
+  {
+   "path": "/highered",
+   "gridW": 920,
+   "gridH": 674,
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "bg": "rgb(255, 255, 255)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "yes",
+     "radius": "14px",
+     "x": 0,
+     "y": 0,
+     "w": 540,
+     "h": 481
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "flex",
+     "bg": "color(srgb 0.93 0.975569 0.952235)",
+     "border": "color(srgb 0 0.65098 0.317647 / 0.22)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 569,
+     "y": 0,
+     "w": 351,
+     "h": 481
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "grid",
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 0,
+     "y": 505,
+     "w": 446,
+     "h": 169
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "grid",
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 474,
+     "y": 505,
+     "w": 446,
+     "h": 169
+    }
+   ],
+   "davisHole": 34,
+   "davisNumSize": "115.2px",
+   "overflowX": false,
+   "clippedEls": 0,
+   "emDash": false,
+   "sha": "600202161ef63b53",
+   "consoleErrors": []
+  }
+ ],
+ [
+  "highered 760",
+  {
+   "path": "/highered",
+   "gridW": 720,
+   "gridH": 754,
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "bg": "rgb(255, 255, 255)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "yes",
+     "radius": "14px",
+     "x": 0,
+     "y": 0,
+     "w": 720,
+     "h": 333
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "flex",
+     "bg": "color(srgb 0.93 0.975569 0.952235)",
+     "border": "color(srgb 0 0.65098 0.317647 / 0.22)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 0,
+     "y": 357,
+     "w": 720,
+     "h": 164
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "block",
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 0,
+     "y": 545,
+     "w": 348,
+     "h": 209
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "block",
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 372,
+     "y": 545,
+     "w": 348,
+     "h": 209
+    }
+   ],
+   "davisHole": 28,
+   "davisNumSize": "91.2px",
+   "overflowX": false,
+   "clippedEls": 0,
+   "emDash": false,
+   "sha": "280a8734b3bbcb6a",
+   "consoleErrors": []
+  }
+ ],
+ [
+  "highered 390",
+  {
+   "path": "/highered",
+   "gridW": 350,
+   "gridH": 1101,
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "bg": "rgb(255, 255, 255)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "yes",
+     "radius": "14px",
+     "x": 0,
+     "y": 0,
+     "w": 350,
+     "h": 451
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "flex",
+     "bg": "color(srgb 0.93 0.975569 0.952235)",
+     "border": "color(srgb 0 0.65098 0.317647 / 0.22)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 0,
+     "y": 471,
+     "w": 350,
+     "h": 241
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "grid",
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 0,
+     "y": 732,
+     "w": 350,
+     "h": 151
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "grid",
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 0,
+     "y": 902,
+     "w": 350,
+     "h": 199
+    }
+   ],
+   "davisHole": 28,
+   "davisNumSize": "84px",
+   "overflowX": false,
+   "clippedEls": 0,
+   "emDash": false,
+   "sha": "ee7e25e0683d022a",
+   "consoleErrors": []
+  }
+ ],
+ [
+  "home 1440",
+  {
+   "path": "/home",
+   "gridW": 1160,
+   "gridH": 497,
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "bg": "rgb(255, 255, 255)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "yes",
+     "radius": "14px",
+     "x": 0,
+     "y": 0,
+     "w": 672,
+     "h": 497
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "none",
+     "bg": "color(srgb 0.93 0.975569 0.952235)",
+     "border": "color(srgb 0 0.65098 0.317647 / 0.22)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": -140,
+     "y": -412,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "block",
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 712,
+     "y": 0,
+     "w": 448,
+     "h": 236
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "block",
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 712,
+     "y": 260,
+     "w": 448,
+     "h": 236
+    }
+   ],
+   "davisHole": 40,
+   "davisNumSize": "156px",
+   "overflowX": false,
+   "clippedEls": 0,
+   "emDash": false,
+   "sha": "7afcd227d83524d2",
+   "consoleErrors": []
+  }
+ ],
+ [
+  "home 1100",
+  {
+   "path": "/home",
+   "gridW": 1060,
+   "gridH": 474,
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "bg": "rgb(255, 255, 255)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "yes",
+     "radius": "14px",
+     "x": 0,
+     "y": 0,
+     "w": 616,
+     "h": 474
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "none",
+     "bg": "color(srgb 0.93 0.975569 0.952235)",
+     "border": "color(srgb 0 0.65098 0.317647 / 0.22)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": -20,
+     "y": -400,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "block",
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 649,
+     "y": 0,
+     "w": 411,
+     "h": 212
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "block",
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 649,
+     "y": 236,
+     "w": 411,
+     "h": 238
+    }
+   ],
+   "davisHole": 47,
+   "davisNumSize": "132px",
+   "overflowX": false,
+   "clippedEls": 0,
+   "emDash": false,
+   "sha": "1d317fef1ec39838",
+   "consoleErrors": []
+  }
+ ],
+ [
+  "home 760",
+  {
+   "path": "/home",
+   "gridW": 720,
+   "gridH": 514,
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "bg": "rgb(255, 255, 255)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "yes",
+     "radius": "14px",
+     "x": 0,
+     "y": 0,
+     "w": 720,
+     "h": 280
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "none",
+     "bg": "color(srgb 0.93 0.975569 0.952235)",
+     "border": "color(srgb 0 0.65098 0.317647 / 0.22)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": -20,
+     "y": -474,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "block",
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 0,
+     "y": 304,
+     "w": 348,
+     "h": 209
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "block",
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 372,
+     "y": 304,
+     "w": 348,
+     "h": 209
+    }
+   ],
+   "davisHole": 28,
+   "davisNumSize": "91.2px",
+   "overflowX": false,
+   "clippedEls": 0,
+   "emDash": false,
+   "sha": "87cfc003a91258bc",
+   "consoleErrors": []
+  }
+ ],
+ [
+  "home 390",
+  {
+   "path": "/home",
+   "gridW": 350,
+   "gridH": 791,
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "bg": "rgb(255, 255, 255)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "yes",
+     "radius": "14px",
+     "x": 0,
+     "y": 0,
+     "w": 350,
+     "h": 401
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "none",
+     "bg": "color(srgb 0.93 0.975569 0.952235)",
+     "border": "color(srgb 0 0.65098 0.317647 / 0.22)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": -20,
+     "y": -285,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "grid",
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 0,
+     "y": 421,
+     "w": 350,
+     "h": 151
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "grid",
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "shadow": "none",
+     "radius": "14px",
+     "x": 0,
+     "y": 592,
+     "w": 350,
+     "h": 199
+    }
+   ],
+   "davisHole": 28,
+   "davisNumSize": "84px",
+   "overflowX": false,
+   "clippedEls": 0,
+   "emDash": false,
+   "sha": "f0657b90ce59d348",
+   "consoleErrors": []
+  }
+ ]
+]

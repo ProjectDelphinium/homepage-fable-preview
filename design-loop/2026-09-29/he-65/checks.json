@@ -1,0 +1,362 @@
+[
+ [
+  "highered-1440-before",
+  {
+   "outcomesDisplay": "block",
+   "items": [
+    {
+     "text": "64% fewer failures for part-time faculty",
+     "rect": [
+      167,
+      9689,
+      342,
+      83
+     ],
+     "numW": 342.3
+    },
+    {
+     "text": "67% fewer withdrawals",
+     "rect": [
+      541,
+      9689,
+      342,
+      83
+     ],
+     "numW": 309.3
+    },
+    {
+     "text": "66% fewer dropouts",
+     "rect": [
+      916,
+      9689,
+      342,
+      83
+     ],
+     "numW": 309.3
+    }
+   ],
+   "outcomes": [
+    133,
+    9623,
+    1160,
+    184
+   ],
+   "proof": [
+    0,
+    8420,
+    1425,
+    2285
+   ],
+   "cards": [
+    [
+     133,
+     9049,
+     672,
+     550
+    ],
+    [
+     133,
+     9623,
+     1160,
+     184
+    ],
+    [
+     845,
+     9049,
+     448,
+     263
+    ],
+    [
+     845,
+     9336,
+     448,
+     263
+    ]
+   ],
+   "docH": 12781
+  }
+ ],
+ [
+  "highered-1440-after",
+  {
+   "outcomesDisplay": "block",
+   "items": [
+    {
+     "text": "64% fewer failures for part-time faculty",
+     "rect": [
+      167,
+      9689,
+      342,
+      83
+     ],
+     "numW": 342.3
+    },
+    {
+     "text": "67% fewer withdrawals",
+     "rect": [
+      541,
+      9689,
+      342,
+      83
+     ],
+     "numW": 309.3
+    },
+    {
+     "text": "65% fewer dropouts",
+     "rect": [
+      916,
+      9689,
+      342,
+      83
+     ],
+     "numW": 309.3
+    }
+   ],
+   "outcomes": [
+    133,
+    9623,
+    1160,
+    184
+   ],
+   "proof": [
+    0,
+    8420,
+    1425,
+    2285
+   ],
+   "cards": [
+    [
+     133,
+     9049,
+     672,
+     550
+    ],
+    [
+     133,
+     9623,
+     1160,
+     184
+    ],
+    [
+     845,
+     9049,
+     448,
+     263
+    ],
+    [
+     845,
+     9336,
+     448,
+     263
+    ]
+   ],
+   "docH": 12781
+  }
+ ],
+ [
+  "highered-1440-layout-unchanged",
+  {
+   "outcomes": true,
+   "proof": true,
+   "cards": true,
+   "docH": true,
+   "itemRects": true
+  }
+ ],
+ [
+  "highered-390-before",
+  {
+   "outcomesDisplay": "block",
+   "items": [
+    {
+     "text": "64% fewer failures for part-time faculty",
+     "rect": [
+      43,
+      11980,
+      303,
+      51
+     ],
+     "numW": 65.6
+    },
+    {
+     "text": "67% fewer withdrawals",
+     "rect": [
+      43,
+      12043,
+      303,
+      43
+     ],
+     "numW": 65.6
+    },
+    {
+     "text": "66% fewer dropouts",
+     "rect": [
+      43,
+      12099,
+      303,
+      43
+     ],
+     "numW": 65.6
+    }
+   ],
+   "outcomes": [
+    20,
+    11925,
+    350,
+    241
+   ],
+   "proof": [
+    0,
+    10451,
+    390,
+    3871
+   ],
+   "cards": [
+    [
+     20,
+     11453,
+     350,
+     451
+    ],
+    [
+     20,
+     11925,
+     350,
+     241
+    ],
+    [
+     20,
+     12185,
+     350,
+     151
+    ],
+    [
+     20,
+     12356,
+     350,
+     199
+    ]
+   ],
+   "docH": 17299
+  }
+ ],
+ [
+  "highered-390-after",
+  {
+   "outcomesDisplay": "block",
+   "items": [
+    {
+     "text": "64% fewer failures for part-time faculty",
+     "rect": [
+      43,
+      11980,
+      303,
+      51
+     ],
+     "numW": 65.6
+    },
+    {
+     "text": "67% fewer withdrawals",
+     "rect": [
+      43,
+      12043,
+      303,
+      43
+     ],
+     "numW": 65.6
+    },
+    {
+     "text": "65% fewer dropouts",
+     "rect": [
+      43,
+      12099,
+      303,
+      43
+     ],
+     "numW": 65.6
+    }
+   ],
+   "outcomes": [
+    20,
+    11925,
+    350,
+    241
+   ],
+   "proof": [
+    0,
+    10451,
+    390,
+    3871
+   ],
+   "cards": [
+    [
+     20,
+     11453,
+     350,
+     451
+    ],
+    [
+     20,
+     11925,
+     350,
+     241
+    ],
+    [
+     20,
+     12185,
+     350,
+     151
+    ],
+    [
+     20,
+     12356,
+     350,
+     199
+    ]
+   ],
+   "docH": 17299
+  }
+ ],
+ [
+  "highered-390-layout-unchanged",
+  {
+   "outcomes": true,
+   "proof": true,
+   "cards": true,
+   "docH": true,
+   "itemRects": true
+  }
+ ],
+ [
+  "home-1440",
+  {
+   "outcomesDisplay": "none",
+   "docH": [
+    13677,
+    13677
+   ],
+   "cardsSame": true,
+   "proofPngBytesIdentical": true,
+   "pngLen": [
+    359176,
+    359176
+   ]
+  }
+ ],
+ [
+  "home-390",
+  {
+   "outcomesDisplay": "none",
+   "docH": [
+    18713,
+    18713
+   ],
+   "cardsSame": true,
+   "proofPngBytesIdentical": true,
+   "pngLen": [
+    811380,
+    811380
+   ]
+  }
+ ]
+]

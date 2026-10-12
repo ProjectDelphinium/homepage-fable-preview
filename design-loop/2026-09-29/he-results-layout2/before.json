@@ -1,0 +1,1255 @@
+[
+ [
+  "highered 1440",
+  {
+   "path": "/highered",
+   "gridW": 1160,
+   "gridH": 752,
+   "gridCols": "80px 80px 80px 80px 80px 80px 80px 80px 80px 80px",
+   "order": [
+    "davis",
+    "outcomes",
+    "motivation",
+    "fun"
+   ],
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "bg": "rgb(255, 255, 255)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 0,
+     "y": 0,
+     "w": 680,
+     "h": 550,
+     "bottom": 550
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "flex",
+     "bg": "color(srgb 0.93 0.975569 0.952235)",
+     "border": "color(srgb 0 0.65098 0.317647 / 0.22)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 720,
+     "y": 0,
+     "w": 440,
+     "h": 550,
+     "bottom": 550
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "grid",
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 14,
+     "x": 0,
+     "y": 574,
+     "w": 560,
+     "h": 179,
+     "bottom": 752
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "grid",
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 600,
+     "y": 574,
+     "w": 560,
+     "h": 179,
+     "bottom": 752
+    }
+   ],
+   "balance": {
+    "davisTop": 0,
+    "motTop": 574,
+    "davisBottom": 550,
+    "funBottom": 752,
+    "topDelta": 574,
+    "bottomDelta": 202
+   },
+   "davisHole": 40,
+   "outcomes": {
+    "lis": [
+     {
+      "x": 755,
+      "y": 67,
+      "w": 371,
+      "h": 150,
+      "contentW": 371,
+      "pinL": "0px none rgb(85, 85, 95)",
+      "pinT": "0px",
+      "numTop": 100,
+      "numBottom": 152,
+      "numSize": "52px",
+      "labelTop": 159,
+      "labelLines": 1,
+      "numAboveLabel": true
+     },
+     {
+      "x": 755,
+      "y": 216,
+      "w": 371,
+      "h": 150,
+      "contentW": 371,
+      "pinL": "0px none rgb(85, 85, 95)",
+      "pinT": "1px",
+      "numTop": 250,
+      "numBottom": 302,
+      "numSize": "52px",
+      "labelTop": 309,
+      "labelLines": 1,
+      "numAboveLabel": true
+     },
+     {
+      "x": 755,
+      "y": 366,
+      "w": 371,
+      "h": 150,
+      "contentW": 371,
+      "pinL": "0px none rgb(85, 85, 95)",
+      "pinT": "1px",
+      "numTop": 399,
+      "numBottom": 451,
+      "numSize": "52px",
+      "labelTop": 459,
+      "labelLines": 1,
+      "numAboveLabel": true
+     }
+    ],
+    "kicker": {
+     "x": 755,
+     "y": 35,
+     "w": 371,
+     "h": 19,
+     "bottom": 54
+    }
+   },
+   "overflowX": false,
+   "clippedEls": 0,
+   "emDash": false,
+   "sha": "d958669a6f496493",
+   "consoleErrors": []
+  }
+ ],
+ [
+  "highered 1280",
+  {
+   "path": "/highered",
+   "gridW": 1160,
+   "gridH": 750,
+   "gridCols": "81.4375px 81.4375px 81.4375px 81.4375px 81.4375px 81.4531px 81.4375px 81.4375px 81.4375px 81.4375px",
+   "order": [
+    "davis",
+    "outcomes",
+    "motivation",
+    "fun"
+   ],
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "bg": "rgb(255, 255, 255)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 0,
+     "y": 0,
+     "w": 681,
+     "h": 548,
+     "bottom": 548
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "flex",
+     "bg": "color(srgb 0.93 0.975569 0.952235)",
+     "border": "color(srgb 0 0.65098 0.317647 / 0.22)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 719,
+     "y": 0,
+     "w": 441,
+     "h": 548,
+     "bottom": 548
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "grid",
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 14,
+     "x": 0,
+     "y": 572,
+     "w": 561,
+     "h": 179,
+     "bottom": 750
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "grid",
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 599,
+     "y": 572,
+     "w": 561,
+     "h": 179,
+     "bottom": 750
+    }
+   ],
+   "balance": {
+    "davisTop": 0,
+    "motTop": 572,
+    "davisBottom": 548,
+    "funBottom": 750,
+    "topDelta": 572,
+    "bottomDelta": 202
+   },
+   "davisHole": 40,
+   "outcomes": {
+    "lis": [
+     {
+      "x": 754,
+      "y": 67,
+      "w": 372,
+      "h": 149,
+      "contentW": 372,
+      "pinL": "0px none rgb(85, 85, 95)",
+      "pinT": "0px",
+      "numTop": 102,
+      "numBottom": 149,
+      "numSize": "47.36px",
+      "labelTop": 156,
+      "labelLines": 1,
+      "numAboveLabel": true
+     },
+     {
+      "x": 754,
+      "y": 215,
+      "w": 372,
+      "h": 149,
+      "contentW": 372,
+      "pinL": "0px none rgb(85, 85, 95)",
+      "pinT": "1px",
+      "numTop": 251,
+      "numBottom": 299,
+      "numSize": "47.36px",
+      "labelTop": 306,
+      "labelLines": 1,
+      "numAboveLabel": true
+     },
+     {
+      "x": 754,
+      "y": 364,
+      "w": 372,
+      "h": 149,
+      "contentW": 372,
+      "pinL": "0px none rgb(85, 85, 95)",
+      "pinT": "1px",
+      "numTop": 400,
+      "numBottom": 447,
+      "numSize": "47.36px",
+      "labelTop": 455,
+      "labelLines": 1,
+      "numAboveLabel": true
+     }
+    ],
+    "kicker": {
+     "x": 754,
+     "y": 35,
+     "w": 372,
+     "h": 19,
+     "bottom": 54
+    }
+   },
+   "overflowX": false,
+   "clippedEls": 0,
+   "emDash": false,
+   "sha": "3b8dc2664e08c909",
+   "consoleErrors": []
+  }
+ ],
+ [
+  "highered 1100",
+  {
+   "path": "/highered",
+   "gridW": 1060,
+   "gridH": 719,
+   "gridCols": "76.2969px 76.2969px 76.2969px 76.2969px 76.2969px 76.2969px 76.2969px 76.2969px 76.2969px 76.2969px",
+   "order": [
+    "davis",
+    "outcomes",
+    "motivation",
+    "fun"
+   ],
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "bg": "rgb(255, 255, 255)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 0,
+     "y": 0,
+     "w": 623,
+     "h": 518,
+     "bottom": 518
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "flex",
+     "bg": "color(srgb 0.93 0.975569 0.952235)",
+     "border": "color(srgb 0 0.65098 0.317647 / 0.22)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 656,
+     "y": 0,
+     "w": 404,
+     "h": 518,
+     "bottom": 518
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "grid",
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 14,
+     "x": 0,
+     "y": 542,
+     "w": 514,
+     "h": 177,
+     "bottom": 719
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "grid",
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 547,
+     "y": 542,
+     "w": 514,
+     "h": 177,
+     "bottom": 719
+    }
+   ],
+   "balance": {
+    "davisTop": 0,
+    "motTop": 542,
+    "davisBottom": 518,
+    "funBottom": 719,
+    "topDelta": 542,
+    "bottomDelta": 201
+   },
+   "davisHole": 39,
+   "outcomes": {
+    "lis": [
+     {
+      "x": 690,
+      "y": 66,
+      "w": 336,
+      "h": 139,
+      "contentW": 336,
+      "pinL": "0px none rgb(85, 85, 95)",
+      "pinT": "0px",
+      "numTop": 101,
+      "numBottom": 142,
+      "numSize": "40.7px",
+      "labelTop": 149,
+      "labelLines": 1,
+      "numAboveLabel": true
+     },
+     {
+      "x": 690,
+      "y": 205,
+      "w": 336,
+      "h": 139,
+      "contentW": 336,
+      "pinL": "0px none rgb(85, 85, 95)",
+      "pinT": "1px",
+      "numTop": 241,
+      "numBottom": 282,
+      "numSize": "40.7px",
+      "labelTop": 289,
+      "labelLines": 1,
+      "numAboveLabel": true
+     },
+     {
+      "x": 690,
+      "y": 345,
+      "w": 336,
+      "h": 139,
+      "contentW": 336,
+      "pinL": "0px none rgb(85, 85, 95)",
+      "pinT": "1px",
+      "numTop": 380,
+      "numBottom": 421,
+      "numSize": "40.7px",
+      "labelTop": 428,
+      "labelLines": 1,
+      "numAboveLabel": true
+     }
+    ],
+    "kicker": {
+     "x": 690,
+     "y": 34,
+     "w": 336,
+     "h": 19,
+     "bottom": 53
+    }
+   },
+   "overflowX": false,
+   "clippedEls": 0,
+   "emDash": false,
+   "sha": "8fab4d00fd7e5227",
+   "consoleErrors": []
+  }
+ ],
+ [
+  "highered 1040",
+  {
+   "path": "/highered",
+   "gridW": 1000,
+   "gridH": 700,
+   "gridCols": "71.9219px 71.9219px 71.9219px 71.9219px 71.9219px 71.9219px 71.9219px 71.9219px 71.9219px 71.9219px",
+   "order": [
+    "davis",
+    "outcomes",
+    "motivation",
+    "fun"
+   ],
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "bg": "rgb(255, 255, 255)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 0,
+     "y": 0,
+     "w": 588,
+     "h": 502,
+     "bottom": 502
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "flex",
+     "bg": "color(srgb 0.93 0.975569 0.952235)",
+     "border": "color(srgb 0 0.65098 0.317647 / 0.22)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 619,
+     "y": 0,
+     "w": 381,
+     "h": 502,
+     "bottom": 502
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "grid",
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 14,
+     "x": 0,
+     "y": 526,
+     "w": 484,
+     "h": 174,
+     "bottom": 700
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "grid",
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 516,
+     "y": 526,
+     "w": 484,
+     "h": 174,
+     "bottom": 700
+    }
+   ],
+   "balance": {
+    "davisTop": 0,
+    "motTop": 526,
+    "davisBottom": 502,
+    "funBottom": 700,
+    "topDelta": 526,
+    "bottomDelta": 198
+   },
+   "davisHole": 36,
+   "outcomes": {
+    "lis": [
+     {
+      "x": 651,
+      "y": 64,
+      "w": 317,
+      "h": 135,
+      "contentW": 317,
+      "pinL": "0px none rgb(85, 85, 95)",
+      "pinT": "0px",
+      "numTop": 98,
+      "numBottom": 138,
+      "numSize": "40px",
+      "labelTop": 145,
+      "labelLines": 1,
+      "numAboveLabel": true
+     },
+     {
+      "x": 651,
+      "y": 199,
+      "w": 317,
+      "h": 135,
+      "contentW": 317,
+      "pinL": "0px none rgb(85, 85, 95)",
+      "pinT": "1px",
+      "numTop": 233,
+      "numBottom": 273,
+      "numSize": "40px",
+      "labelTop": 281,
+      "labelLines": 1,
+      "numAboveLabel": true
+     },
+     {
+      "x": 651,
+      "y": 335,
+      "w": 317,
+      "h": 135,
+      "contentW": 317,
+      "pinL": "0px none rgb(85, 85, 95)",
+      "pinT": "1px",
+      "numTop": 369,
+      "numBottom": 409,
+      "numSize": "40px",
+      "labelTop": 416,
+      "labelLines": 1,
+      "numAboveLabel": true
+     }
+    ],
+    "kicker": {
+     "x": 651,
+     "y": 32,
+     "w": 317,
+     "h": 19,
+     "bottom": 51
+    }
+   },
+   "overflowX": false,
+   "clippedEls": 0,
+   "emDash": false,
+   "sha": "1a7a754f72833ae6",
+   "consoleErrors": []
+  }
+ ],
+ [
+  "highered 960",
+  {
+   "path": "/highered",
+   "gridW": 920,
+   "gridH": 674,
+   "gridCols": "66.0781px 66.0781px 66.0781px 66.0781px 66.0781px 66.0781px 66.0781px 66.0781px 66.0781px 66.0781px",
+   "order": [
+    "davis",
+    "outcomes",
+    "motivation",
+    "fun"
+   ],
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "bg": "rgb(255, 255, 255)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 0,
+     "y": 0,
+     "w": 540,
+     "h": 481,
+     "bottom": 481
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "flex",
+     "bg": "color(srgb 0.93 0.975569 0.952235)",
+     "border": "color(srgb 0 0.65098 0.317647 / 0.22)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 569,
+     "y": 0,
+     "w": 351,
+     "h": 481,
+     "bottom": 481
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "grid",
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 0,
+     "y": 505,
+     "w": 446,
+     "h": 169,
+     "bottom": 674
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "grid",
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 474,
+     "y": 505,
+     "w": 446,
+     "h": 169,
+     "bottom": 674
+    }
+   ],
+   "balance": {
+    "davisTop": 0,
+    "motTop": 505,
+    "davisBottom": 481,
+    "funBottom": 674,
+    "topDelta": 505,
+    "bottomDelta": 193
+   },
+   "davisHole": 34,
+   "outcomes": {
+    "lis": [
+     {
+      "x": 599,
+      "y": 62,
+      "w": 291,
+      "h": 130,
+      "contentW": 291,
+      "pinL": "0px none rgb(85, 85, 95)",
+      "pinT": "0px",
+      "numTop": 92,
+      "numBottom": 132,
+      "numSize": "40px",
+      "labelTop": 140,
+      "labelLines": 1,
+      "numAboveLabel": true
+     },
+     {
+      "x": 599,
+      "y": 192,
+      "w": 291,
+      "h": 130,
+      "contentW": 291,
+      "pinL": "0px none rgb(85, 85, 95)",
+      "pinT": "1px",
+      "numTop": 223,
+      "numBottom": 263,
+      "numSize": "40px",
+      "labelTop": 270,
+      "labelLines": 1,
+      "numAboveLabel": true
+     },
+     {
+      "x": 599,
+      "y": 321,
+      "w": 291,
+      "h": 130,
+      "contentW": 291,
+      "pinL": "0px none rgb(85, 85, 95)",
+      "pinT": "1px",
+      "numTop": 353,
+      "numBottom": 393,
+      "numSize": "40px",
+      "labelTop": 400,
+      "labelLines": 1,
+      "numAboveLabel": true
+     }
+    ],
+    "kicker": {
+     "x": 599,
+     "y": 30,
+     "w": 291,
+     "h": 19,
+     "bottom": 49
+    }
+   },
+   "overflowX": false,
+   "clippedEls": 0,
+   "emDash": false,
+   "sha": "cb53016598fc887f",
+   "consoleErrors": []
+  }
+ ],
+ [
+  "highered 760",
+  {
+   "path": "/highered",
+   "gridW": 720,
+   "gridH": 754,
+   "gridCols": "348px 348px",
+   "order": [
+    "davis",
+    "outcomes",
+    "motivation",
+    "fun"
+   ],
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "bg": "rgb(255, 255, 255)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 0,
+     "y": 0,
+     "w": 720,
+     "h": 333,
+     "bottom": 333
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "flex",
+     "bg": "color(srgb 0.93 0.975569 0.952235)",
+     "border": "color(srgb 0 0.65098 0.317647 / 0.22)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 0,
+     "y": 357,
+     "w": 720,
+     "h": 164,
+     "bottom": 521
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "block",
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 0,
+     "y": 545,
+     "w": 348,
+     "h": 209,
+     "bottom": 754
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "block",
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 372,
+     "y": 545,
+     "w": 348,
+     "h": 209,
+     "bottom": 754
+    }
+   ],
+   "balance": {
+    "davisTop": 0,
+    "motTop": 545,
+    "davisBottom": 333,
+    "funBottom": 754,
+    "topDelta": 545,
+    "bottomDelta": 421
+   },
+   "davisHole": 28,
+   "outcomes": {
+    "lis": [
+     {
+      "x": 24,
+      "y": 413,
+      "w": 211,
+      "h": 84,
+      "contentW": 211,
+      "pinL": "0px none rgb(85, 85, 95)",
+      "pinT": "0px",
+      "numTop": 413,
+      "numBottom": 449,
+      "numSize": "36px",
+      "labelTop": 454,
+      "labelLines": 2,
+      "numAboveLabel": true
+     },
+     {
+      "x": 255,
+      "y": 413,
+      "w": 211,
+      "h": 84,
+      "contentW": 190,
+      "pinL": "1px solid color(srgb 0 0.65098 0.317647 / 0.2)",
+      "pinT": "0px",
+      "numTop": 413,
+      "numBottom": 449,
+      "numSize": "36px",
+      "labelTop": 465,
+      "labelLines": 1,
+      "numAboveLabel": true
+     },
+     {
+      "x": 485,
+      "y": 413,
+      "w": 211,
+      "h": 84,
+      "contentW": 190,
+      "pinL": "1px solid color(srgb 0 0.65098 0.317647 / 0.2)",
+      "pinT": "0px",
+      "numTop": 413,
+      "numBottom": 449,
+      "numSize": "36px",
+      "labelTop": 465,
+      "labelLines": 1,
+      "numAboveLabel": true
+     }
+    ],
+    "kicker": {
+     "x": 24,
+     "y": 381,
+     "w": 672,
+     "h": 19,
+     "bottom": 400
+    }
+   },
+   "overflowX": false,
+   "clippedEls": 0,
+   "emDash": false,
+   "sha": "6e6d0d0a23b26991",
+   "consoleErrors": []
+  }
+ ],
+ [
+  "highered 390",
+  {
+   "path": "/highered",
+   "gridW": 350,
+   "gridH": 1101,
+   "gridCols": "350px",
+   "order": [
+    "davis",
+    "outcomes",
+    "motivation",
+    "fun"
+   ],
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "bg": "rgb(255, 255, 255)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 0,
+     "y": 0,
+     "w": 350,
+     "h": 451,
+     "bottom": 451
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "flex",
+     "bg": "color(srgb 0.93 0.975569 0.952235)",
+     "border": "color(srgb 0 0.65098 0.317647 / 0.22)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 0,
+     "y": 471,
+     "w": 350,
+     "h": 241,
+     "bottom": 712
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "grid",
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 0,
+     "y": 732,
+     "w": 350,
+     "h": 151,
+     "bottom": 882
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "grid",
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 0,
+     "y": 902,
+     "w": 350,
+     "h": 199,
+     "bottom": 1101
+    }
+   ],
+   "balance": {
+    "davisTop": 0,
+    "motTop": 732,
+    "davisBottom": 451,
+    "funBottom": 1101,
+    "topDelta": 732,
+    "bottomDelta": 650
+   },
+   "davisHole": 28,
+   "outcomes": {
+    "lis": [
+     {
+      "x": 23,
+      "y": 526,
+      "w": 303,
+      "h": 51,
+      "contentW": 303,
+      "pinL": "0px none rgb(85, 85, 95)",
+      "pinT": "0px",
+      "numTop": 526,
+      "numBottom": 556,
+      "numSize": "29.6px",
+      "labelTop": 535,
+      "labelLines": 2,
+      "numAboveLabel": false
+     },
+     {
+      "x": 23,
+      "y": 590,
+      "w": 303,
+      "h": 43,
+      "contentW": 303,
+      "pinL": "0px none rgb(85, 85, 95)",
+      "pinT": "1px",
+      "numTop": 603,
+      "numBottom": 632,
+      "numSize": "29.6px",
+      "labelTop": 612,
+      "labelLines": 1,
+      "numAboveLabel": false
+     },
+     {
+      "x": 23,
+      "y": 645,
+      "w": 303,
+      "h": 43,
+      "contentW": 303,
+      "pinL": "0px none rgb(85, 85, 95)",
+      "pinT": "1px",
+      "numTop": 658,
+      "numBottom": 688,
+      "numSize": "29.6px",
+      "labelTop": 667,
+      "labelLines": 1,
+      "numAboveLabel": false
+     }
+    ],
+    "kicker": {
+     "x": 23,
+     "y": 495,
+     "w": 303,
+     "h": 19,
+     "bottom": 514
+    }
+   },
+   "overflowX": false,
+   "clippedEls": 0,
+   "emDash": false,
+   "sha": "80d3f7f53933948a",
+   "consoleErrors": []
+  }
+ ],
+ [
+  "home 1440",
+  {
+   "path": "/home",
+   "gridW": 1160,
+   "gridH": 497,
+   "gridCols": "672px 448px",
+   "order": [
+    "davis",
+    "motivation",
+    "fun"
+   ],
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "bg": "rgb(255, 255, 255)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 0,
+     "y": 0,
+     "w": 672,
+     "h": 497,
+     "bottom": 497
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "block",
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 20,
+     "x": 712,
+     "y": 0,
+     "w": 448,
+     "h": 236,
+     "bottom": 236
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "block",
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 20,
+     "x": 712,
+     "y": 260,
+     "w": 448,
+     "h": 236,
+     "bottom": 497
+    }
+   ],
+   "balance": {
+    "davisTop": 0,
+    "motTop": 0,
+    "davisBottom": 497,
+    "funBottom": 497,
+    "topDelta": 0,
+    "bottomDelta": 0
+   },
+   "davisHole": 40,
+   "outcomes": null,
+   "overflowX": false,
+   "clippedEls": 0,
+   "emDash": false,
+   "sha": "7afcd227d83524d2",
+   "consoleErrors": []
+  }
+ ],
+ [
+  "home 1100",
+  {
+   "path": "/home",
+   "gridW": 1060,
+   "gridH": 474,
+   "gridCols": "616.188px 410.797px",
+   "order": [
+    "davis",
+    "motivation",
+    "fun"
+   ],
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "bg": "rgb(255, 255, 255)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 0,
+     "y": 0,
+     "w": 616,
+     "h": 474,
+     "bottom": 474
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "block",
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 649,
+     "y": 0,
+     "w": 411,
+     "h": 212,
+     "bottom": 212
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "block",
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 649,
+     "y": 236,
+     "w": 411,
+     "h": 238,
+     "bottom": 474
+    }
+   ],
+   "balance": {
+    "davisTop": 0,
+    "motTop": 0,
+    "davisBottom": 474,
+    "funBottom": 474,
+    "topDelta": 0,
+    "bottomDelta": 0
+   },
+   "davisHole": 47,
+   "outcomes": null,
+   "overflowX": false,
+   "clippedEls": 0,
+   "emDash": false,
+   "sha": "1d317fef1ec39838",
+   "consoleErrors": []
+  }
+ ],
+ [
+  "home 760",
+  {
+   "path": "/home",
+   "gridW": 720,
+   "gridH": 514,
+   "gridCols": "348px 348px",
+   "order": [
+    "davis",
+    "motivation",
+    "fun"
+   ],
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "bg": "rgb(255, 255, 255)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 0,
+     "y": 0,
+     "w": 720,
+     "h": 280,
+     "bottom": 280
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "block",
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 0,
+     "y": 304,
+     "w": 348,
+     "h": 209,
+     "bottom": 514
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "block",
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 372,
+     "y": 304,
+     "w": 348,
+     "h": 209,
+     "bottom": 514
+    }
+   ],
+   "balance": {
+    "davisTop": 0,
+    "motTop": 304,
+    "davisBottom": 280,
+    "funBottom": 514,
+    "topDelta": 304,
+    "bottomDelta": 234
+   },
+   "davisHole": 28,
+   "outcomes": null,
+   "overflowX": false,
+   "clippedEls": 0,
+   "emDash": false,
+   "sha": "87cfc003a91258bc",
+   "consoleErrors": []
+  }
+ ],
+ [
+  "home 390",
+  {
+   "path": "/home",
+   "gridW": 350,
+   "gridH": 791,
+   "gridCols": "350px",
+   "order": [
+    "davis",
+    "motivation",
+    "fun"
+   ],
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "bg": "rgb(255, 255, 255)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 0,
+     "y": 0,
+     "w": 350,
+     "h": 401,
+     "bottom": 401
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "grid",
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 0,
+     "y": 421,
+     "w": 350,
+     "h": 151,
+     "bottom": 572
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "grid",
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "border": "rgba(43, 47, 126, 0.12)",
+     "radius": "14px",
+     "slackBottom": 1,
+     "x": 0,
+     "y": 592,
+     "w": 350,
+     "h": 199,
+     "bottom": 791
+    }
+   ],
+   "balance": {
+    "davisTop": 0,
+    "motTop": 421,
+    "davisBottom": 401,
+    "funBottom": 791,
+    "topDelta": 421,
+    "bottomDelta": 390
+   },
+   "davisHole": 28,
+   "outcomes": null,
+   "overflowX": false,
+   "clippedEls": 0,
+   "emDash": false,
+   "sha": "f0657b90ce59d348",
+   "consoleErrors": []
+  }
+ ]
+]

@@ -1,0 +1,915 @@
+{
+ "he-1440": {
+  "docOverflow": false,
+  "scrollW": 1440,
+  "cards": [
+   {
+    "x": 140,
+    "y": 1429,
+    "w": 573,
+    "h": 420,
+    "b": 1849,
+    "cls": "dl-card dl-he",
+    "kids": [
+     {
+      "t": "COMPLETION AND RETENTION",
+      "y": 1448,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "4 in 10",
+      "y": 1474,
+      "h": 39,
+      "fs": "40.8px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+      "y": 1521,
+      "h": 45,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "1 in 3",
+      "y": 1584,
+      "h": 57,
+      "fs": "40.8px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "1px solid rgba(43, 47, 126, 0.12)",
+      "over": false
+     },
+     {
+      "t": "first-year students don't return for year two.",
+      "y": 1650,
+      "h": 23,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "60%",
+      "y": 1691,
+      "h": 57,
+      "fs": "40.8px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "1px solid rgba(43, 47, 126, 0.12)",
+      "over": false
+     },
+     {
+      "t": "of students don't finish a bachelor's in 4 years, and about 40% still haven't in 6. Time-to-degree keeps stretching.",
+      "y": 1757,
+      "h": 45,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "National Center for Education Statistics (NCES / IPEDS)",
+      "y": 1802,
+      "h": 30,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 727,
+    "y": 1429,
+    "w": 573,
+    "h": 203,
+    "b": 1632,
+    "cls": "dl-card",
+    "kids": [
+     {
+      "t": "HIGHER WITHDRAWAL RATES",
+      "y": 1448,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "10–15%",
+      "y": 1474,
+      "h": 39,
+      "fs": "40.8px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "for lower income and underprepared students in online courses.",
+      "y": 1521,
+      "h": 23,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "Columbia University",
+      "y": 1585,
+      "h": 30,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 727,
+    "y": 1646,
+    "w": 573,
+    "h": 203,
+    "b": 1849,
+    "cls": "dl-card",
+    "kids": [
+     {
+      "t": "EARNINGS AND EMPLOYMENT",
+      "y": 1665,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "$1M",
+      "y": 1691,
+      "h": 39,
+      "fs": "40.8px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "less in lifetime earnings without a degree, and twice as likely to be unemployed.",
+      "y": 1738,
+      "h": 23,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "Pew Research Center",
+      "y": 1802,
+      "h": 30,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   }
+  ]
+ },
+ "he-1440-hash": "89cc4bc4e63750ec",
+ "home-1440-case-hash": "0d2bdecd4e938879",
+ "home-1440-full-hash": "0762130e8e59ee07",
+ "he-1280": {
+  "docOverflow": false,
+  "scrollW": 1280,
+  "cards": [
+   {
+    "x": 60,
+    "y": 1429,
+    "w": 573,
+    "h": 413,
+    "b": 1842,
+    "cls": "dl-card dl-he",
+    "kids": [
+     {
+      "t": "COMPLETION AND RETENTION",
+      "y": 1448,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "4 in 10",
+      "y": 1474,
+      "h": 36,
+      "fs": "38.4px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+      "y": 1519,
+      "h": 45,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "1 in 3",
+      "y": 1582,
+      "h": 55,
+      "fs": "38.4px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "1px solid rgba(43, 47, 126, 0.12)",
+      "over": false
+     },
+     {
+      "t": "first-year students don't return for year two.",
+      "y": 1646,
+      "h": 23,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "60%",
+      "y": 1686,
+      "h": 55,
+      "fs": "38.4px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "1px solid rgba(43, 47, 126, 0.12)",
+      "over": false
+     },
+     {
+      "t": "of students don't finish a bachelor's in 4 years, and about 40% still haven't in 6. Time-to-degree keeps stretching.",
+      "y": 1750,
+      "h": 45,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "National Center for Education Statistics (NCES / IPEDS)",
+      "y": 1796,
+      "h": 30,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 647,
+    "y": 1429,
+    "w": 573,
+    "h": 200,
+    "b": 1629,
+    "cls": "dl-card",
+    "kids": [
+     {
+      "t": "HIGHER WITHDRAWAL RATES",
+      "y": 1448,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "10–15%",
+      "y": 1474,
+      "h": 36,
+      "fs": "38.4px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "for lower income and underprepared students in online courses.",
+      "y": 1519,
+      "h": 23,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "Columbia University",
+      "y": 1582,
+      "h": 30,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 647,
+    "y": 1642,
+    "w": 573,
+    "h": 200,
+    "b": 1842,
+    "cls": "dl-card",
+    "kids": [
+     {
+      "t": "EARNINGS AND EMPLOYMENT",
+      "y": 1662,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "$1M",
+      "y": 1687,
+      "h": 36,
+      "fs": "38.4px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "less in lifetime earnings without a degree, and twice as likely to be unemployed.",
+      "y": 1732,
+      "h": 23,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "Pew Research Center",
+      "y": 1796,
+      "h": 30,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   }
+  ]
+ },
+ "he-1280-hash": "3b8437b5cad05fe1",
+ "he-1040": {
+  "docOverflow": false,
+  "scrollW": 1040,
+  "cards": [
+   {
+    "x": 20,
+    "y": 1327,
+    "w": 493,
+    "h": 393,
+    "b": 1720,
+    "cls": "dl-card dl-he",
+    "kids": [
+     {
+      "t": "COMPLETION AND RETENTION",
+      "y": 1347,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "4 in 10",
+      "y": 1372,
+      "h": 30,
+      "fs": "31.2px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+      "y": 1411,
+      "h": 45,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "1 in 3",
+      "y": 1474,
+      "h": 48,
+      "fs": "31.2px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "1px solid rgba(43, 47, 126, 0.12)",
+      "over": false
+     },
+     {
+      "t": "first-year students don't return for year two.",
+      "y": 1531,
+      "h": 23,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "60%",
+      "y": 1571,
+      "h": 48,
+      "fs": "31.2px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "1px solid rgba(43, 47, 126, 0.12)",
+      "over": false
+     },
+     {
+      "t": "of students don't finish a bachelor's in 4 years, and about 40% still haven't in 6. Time-to-degree keeps stretching.",
+      "y": 1628,
+      "h": 45,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "National Center for Education Statistics (NCES / IPEDS)",
+      "y": 1674,
+      "h": 30,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 527,
+    "y": 1327,
+    "w": 493,
+    "h": 190,
+    "b": 1517,
+    "cls": "dl-card",
+    "kids": [
+     {
+      "t": "HIGHER WITHDRAWAL RATES",
+      "y": 1347,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "10–15%",
+      "y": 1372,
+      "h": 30,
+      "fs": "31.2px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "for lower income and underprepared students in online courses.",
+      "y": 1411,
+      "h": 23,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "Columbia University",
+      "y": 1470,
+      "h": 30,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 527,
+    "y": 1531,
+    "w": 493,
+    "h": 190,
+    "b": 1720,
+    "cls": "dl-card",
+    "kids": [
+     {
+      "t": "EARNINGS AND EMPLOYMENT",
+      "y": 1550,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "$1M",
+      "y": 1576,
+      "h": 30,
+      "fs": "31.2px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "less in lifetime earnings without a degree, and twice as likely to be unemployed.",
+      "y": 1614,
+      "h": 45,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "Pew Research Center",
+      "y": 1674,
+      "h": 30,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   }
+  ]
+ },
+ "he-1040-hash": "9f912e49e8a82605",
+ "home-1040-case-hash": "aeb9f11aad4efddd",
+ "home-1040-full-hash": "85e9cb591cd20fbe",
+ "he-760": {
+  "docOverflow": false,
+  "scrollW": 760,
+  "cards": [
+   {
+    "x": 20,
+    "y": 1218,
+    "w": 720,
+    "h": 388,
+    "b": 1606,
+    "cls": "dl-card dl-he",
+    "kids": [
+     {
+      "t": "COMPLETION AND RETENTION",
+      "y": 1237,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "4 in 10",
+      "y": 1263,
+      "h": 28,
+      "fs": "29.6px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+      "y": 1300,
+      "h": 45,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "1 in 3",
+      "y": 1363,
+      "h": 47,
+      "fs": "29.6px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "1px solid rgba(43, 47, 126, 0.12)",
+      "over": false
+     },
+     {
+      "t": "first-year students don't return for year two.",
+      "y": 1418,
+      "h": 23,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "60%",
+      "y": 1459,
+      "h": 47,
+      "fs": "29.6px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "1px solid rgba(43, 47, 126, 0.12)",
+      "over": false
+     },
+     {
+      "t": "of students don't finish a bachelor's in 4 years, and about 40% still haven't in 6. Time-to-degree keeps stretching.",
+      "y": 1514,
+      "h": 45,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "National Center for Education Statistics (NCES / IPEDS)",
+      "y": 1560,
+      "h": 30,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 20,
+    "y": 1620,
+    "w": 353,
+    "h": 174,
+    "b": 1794,
+    "cls": "dl-card",
+    "kids": [
+     {
+      "t": "HIGHER WITHDRAWAL RATES",
+      "y": 1639,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "10–15%",
+      "y": 1665,
+      "h": 28,
+      "fs": "29.6px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "for lower income and underprepared students in online courses.",
+      "y": 1702,
+      "h": 45,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "Columbia University",
+      "y": 1747,
+      "h": 30,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 387,
+    "y": 1620,
+    "w": 353,
+    "h": 174,
+    "b": 1794,
+    "cls": "dl-card",
+    "kids": [
+     {
+      "t": "EARNINGS AND EMPLOYMENT",
+      "y": 1639,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "$1M",
+      "y": 1665,
+      "h": 28,
+      "fs": "29.6px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "less in lifetime earnings without a degree, and twice as likely to be unemployed.",
+      "y": 1702,
+      "h": 45,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "Pew Research Center",
+      "y": 1747,
+      "h": 30,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   }
+  ]
+ },
+ "he-760-hash": "74a798220585458f",
+ "home-760-case-hash": "fa908eb40816160e",
+ "home-760-full-hash": "c854116eaff39ce7",
+ "he-390": {
+  "docOverflow": false,
+  "scrollW": 390,
+  "cards": [
+   {
+    "x": 20,
+    "y": 1419,
+    "w": 350,
+    "h": 434,
+    "b": 1852,
+    "cls": "dl-card dl-he",
+    "kids": [
+     {
+      "t": "COMPLETION AND RETENTION",
+      "y": 1438,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "4 in 10",
+      "y": 1463,
+      "h": 28,
+      "fs": "29.6px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+      "y": 1500,
+      "h": 68,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "1 in 3",
+      "y": 1586,
+      "h": 47,
+      "fs": "29.6px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "1px solid rgba(43, 47, 126, 0.12)",
+      "over": false
+     },
+     {
+      "t": "first-year students don't return for year two.",
+      "y": 1642,
+      "h": 23,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "60%",
+      "y": 1682,
+      "h": 47,
+      "fs": "29.6px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "1px solid rgba(43, 47, 126, 0.12)",
+      "over": false
+     },
+     {
+      "t": "of students don't finish a bachelor's in 4 years, and about 40% still haven't in 6. Time-to-degree keeps stretching.",
+      "y": 1738,
+      "h": 68,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "National Center for Education Statistics (NCES / IPEDS)",
+      "y": 1806,
+      "h": 30,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 20,
+    "y": 1866,
+    "w": 350,
+    "h": 174,
+    "b": 2040,
+    "cls": "dl-card",
+    "kids": [
+     {
+      "t": "HIGHER WITHDRAWAL RATES",
+      "y": 1885,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "10–15%",
+      "y": 1911,
+      "h": 28,
+      "fs": "29.6px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "for lower income and underprepared students in online courses.",
+      "y": 1948,
+      "h": 45,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "Columbia University",
+      "y": 1993,
+      "h": 30,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 20,
+    "y": 2053,
+    "w": 350,
+    "h": 174,
+    "b": 2227,
+    "cls": "dl-card",
+    "kids": [
+     {
+      "t": "EARNINGS AND EMPLOYMENT",
+      "y": 2073,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "$1M",
+      "y": 2098,
+      "h": 28,
+      "fs": "29.6px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "less in lifetime earnings without a degree, and twice as likely to be unemployed.",
+      "y": 2135,
+      "h": 45,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "Pew Research Center",
+      "y": 2181,
+      "h": 30,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   }
+  ]
+ },
+ "he-390-hash": "c380a3f29bac1562",
+ "home-390-case-hash": "ed5e5b4097d21af8",
+ "home-390-full-hash": "89bc1a6b637aba39"
+}

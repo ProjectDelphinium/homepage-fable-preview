@@ -1,0 +1,1900 @@
+[
+ [
+  "home-1440 cta",
+  {
+   "x": 1305.75,
+   "y": 30,
+   "href": "https://jared-delphi-me.zohobookings.com/4937208000000036014",
+   "text": "Schedule a demo"
+  }
+ ],
+ [
+  "home-1440 opened",
+  {
+   "hidden": false,
+   "frame": [
+    317,
+    72.796875,
+    1123,
+    876.796875
+   ],
+   "iframe": [
+    -276,
+    41.796875,
+    1600,
+    906
+   ],
+   "box": [
+    806,
+    854
+   ],
+   "scroll": [
+    0,
+    0,
+    201,
+    71
+   ],
+   "overflow": "clip",
+   "active": "dl-modal__close"
+  }
+ ],
+ [
+  "home-1440 1-date header",
+  {
+   "layout": "two-column",
+   "zohoViewport": [
+    1600,
+    906
+   ],
+   "cardInPage": [
+    -75,
+    73,
+    317,
+    877
+   ],
+   "frame": [
+    317,
+    73,
+    1123,
+    877
+   ],
+   "visiblePx": [
+    0,
+    804
+   ],
+   "frameScroll": [
+    0,
+    0,
+    201,
+    71
+   ],
+   "box": [
+    806,
+    854
+   ]
+  }
+ ],
+ [
+  "shot",
+  "home-1440-1-date.png"
+ ],
+ [
+  "home-1440 click last enabled day",
+  {
+   "at": [
+    527,
+    440
+   ],
+   "insideVisibleFrame": true
+  }
+ ],
+ [
+  "home-1440 2-times header",
+  {
+   "layout": "two-column",
+   "zohoViewport": [
+    1600,
+    906
+   ],
+   "cardInPage": [
+    -75,
+    73,
+    317,
+    877
+   ],
+   "frame": [
+    317,
+    73,
+    1123,
+    877
+   ],
+   "visiblePx": [
+    0,
+    804
+   ],
+   "frameScroll": [
+    0,
+    0,
+    201,
+    71
+   ],
+   "box": [
+    806,
+    854
+   ]
+  }
+ ],
+ [
+  "shot",
+  "home-1440-2-times.png"
+ ],
+ [
+  "home-1440 2-times scrolled header",
+  {
+   "layout": "two-column",
+   "zohoViewport": [
+    1600,
+    906
+   ],
+   "cardInPage": [
+    -75,
+    73,
+    317,
+    877
+   ],
+   "frame": [
+    317,
+    73,
+    1123,
+    877
+   ],
+   "visiblePx": [
+    0,
+    804
+   ],
+   "frameScroll": [
+    0,
+    0,
+    201,
+    71
+   ],
+   "box": [
+    806,
+    854
+   ]
+  }
+ ],
+ [
+  "shot",
+  "home-1440-2-times-scrolled.png"
+ ],
+ [
+  "home-1440 click first time",
+  {
+   "at": [
+    712,
+    156
+   ],
+   "insideVisibleFrame": true
+  }
+ ],
+ [
+  "home-1440 2b-time-picked header",
+  {
+   "layout": "two-column",
+   "zohoViewport": [
+    1600,
+    906
+   ],
+   "cardInPage": [
+    -75,
+    73,
+    317,
+    877
+   ],
+   "frame": [
+    317,
+    73,
+    1123,
+    877
+   ],
+   "visiblePx": [
+    0,
+    804
+   ],
+   "frameScroll": [
+    0,
+    0,
+    201,
+    71
+   ],
+   "box": [
+    806,
+    854
+   ]
+  }
+ ],
+ [
+  "shot",
+  "home-1440-2b-time-picked.png"
+ ],
+ [
+  "home-1440 click Next",
+  {
+   "at": [
+    780,
+    156
+   ],
+   "insideVisibleFrame": true
+  }
+ ],
+ [
+  "home-1440 3-details header",
+  {
+   "layout": "two-column",
+   "zohoViewport": [
+    1600,
+    906
+   ],
+   "cardInPage": [
+    -75,
+    73,
+    317,
+    877
+   ],
+   "frame": [
+    317,
+    73,
+    1123,
+    877
+   ],
+   "visiblePx": [
+    0,
+    804
+   ],
+   "frameScroll": [
+    0,
+    0,
+    201,
+    71
+   ],
+   "box": [
+    806,
+    854
+   ]
+  }
+ ],
+ [
+  "shot",
+  "home-1440-3-details.png"
+ ],
+ [
+  "home-1440 3-details bottom header",
+  {
+   "layout": "two-column",
+   "zohoViewport": [
+    1600,
+    906
+   ],
+   "cardInPage": [
+    -75,
+    73,
+    317,
+    877
+   ],
+   "frame": [
+    317,
+    73,
+    1123,
+    877
+   ],
+   "visiblePx": [
+    0,
+    804
+   ],
+   "frameScroll": [
+    0,
+    0,
+    201,
+    71
+   ],
+   "box": [
+    806,
+    854
+   ]
+  }
+ ],
+ [
+  "home-1440 submit button visible (not clicked)",
+  [
+   701,
+   761,
+   906
+  ]
+ ],
+ [
+  "shot",
+  "home-1440-3-details-bottom.png"
+ ],
+ [
+  "home-1440 Tab from close ->",
+  "IFRAME"
+ ],
+ [
+  "home-1440 Shift+Tab from close ->",
+  "IFRAME"
+ ],
+ [
+  "home-1440 after Escape",
+  {
+   "hidden": true,
+   "focus": "Schedule a demo",
+   "bodyOverflow": ""
+  }
+ ],
+ [
+  "home-1440 reopened header",
+  {
+   "layout": "two-column",
+   "zohoViewport": [
+    1600,
+    906
+   ],
+   "cardInPage": [
+    -75,
+    73,
+    317,
+    877
+   ],
+   "frame": [
+    317,
+    73,
+    1123,
+    877
+   ],
+   "visiblePx": [
+    0,
+    804
+   ],
+   "frameScroll": [
+    0,
+    0,
+    201,
+    71
+   ],
+   "box": [
+    806,
+    854
+   ]
+  }
+ ],
+ [
+  "home-1440 after close click",
+  {
+   "hidden": true,
+   "fallback": "https://jared-delphi-me.zohobookings.com/4937208000000036014",
+   "ctaHrefs": [
+    "https://jared-delphi-me.zohobookings.com/4937208000000036014"
+   ],
+   "html": "dl-path-home js"
+  }
+ ],
+ [
+  "home-390 cta",
+  {
+   "x": 249.78125,
+   "y": 28,
+   "href": "https://jared-delphi-me.zohobookings.com/4937208000000036014",
+   "text": "Schedule a demo"
+  }
+ ],
+ [
+  "home-390 opened",
+  {
+   "hidden": false,
+   "frame": [
+    16,
+    84.796875,
+    374,
+    820.796875
+   ],
+   "iframe": [
+    16,
+    -179.203125,
+    358,
+    1036
+   ],
+   "box": [
+    358,
+    798
+   ],
+   "scroll": [
+    0,
+    0,
+    0,
+    36
+   ],
+   "overflow": "clip",
+   "active": "dl-modal__close"
+  }
+ ],
+ [
+  "home-390 1-date header",
+  {
+   "layout": "stacked",
+   "zohoViewport": [
+    358,
+    1036
+   ],
+   "cardInPage": [
+    46,
+    -149,
+    344,
+    35
+   ],
+   "frame": [
+    16,
+    85,
+    374,
+    821
+   ],
+   "visiblePx": [
+    298,
+    0
+   ],
+   "frameScroll": [
+    0,
+    0,
+    0,
+    36
+   ],
+   "box": [
+    358,
+    798
+   ]
+  }
+ ],
+ [
+  "shot",
+  "home-390-1-date.png"
+ ],
+ [
+  "home-390 click last enabled day",
+  {
+   "at": [
+    195,
+    402
+   ],
+   "insideVisibleFrame": true
+  }
+ ],
+ [
+  "home-390 2-times header",
+  {
+   "layout": "stacked",
+   "zohoViewport": [
+    358,
+    1036
+   ],
+   "cardInPage": [
+    46,
+    -149,
+    329,
+    67
+   ],
+   "frame": [
+    16,
+    85,
+    374,
+    821
+   ],
+   "visiblePx": [
+    283,
+    0
+   ],
+   "frameScroll": [
+    0,
+    0,
+    0,
+    36
+   ],
+   "box": [
+    358,
+    798
+   ]
+  }
+ ],
+ [
+  "shot",
+  "home-390-2-times.png"
+ ],
+ [
+  "home-390 2-times scrolled header",
+  {
+   "layout": "stacked",
+   "zohoViewport": [
+    358,
+    1036
+   ],
+   "cardInPage": [
+    46,
+    -458,
+    329,
+    -242
+   ],
+   "frame": [
+    16,
+    85,
+    374,
+    821
+   ],
+   "visiblePx": [
+    283,
+    0
+   ],
+   "frameScroll": [
+    0,
+    0,
+    0,
+    36
+   ],
+   "box": [
+    358,
+    798
+   ]
+  }
+ ],
+ [
+  "shot",
+  "home-390-2-times-scrolled.png"
+ ],
+ [
+  "home-390 click first time",
+  {
+   "at": [
+    187,
+    171
+   ],
+   "insideVisibleFrame": true
+  }
+ ],
+ [
+  "home-390 2b-time-picked header",
+  {
+   "layout": "stacked",
+   "zohoViewport": [
+    358,
+    1036
+   ],
+   "cardInPage": [
+    46,
+    -149,
+    329,
+    67
+   ],
+   "frame": [
+    16,
+    85,
+    374,
+    821
+   ],
+   "visiblePx": [
+    283,
+    0
+   ],
+   "frameScroll": [
+    0,
+    0,
+    0,
+    36
+   ],
+   "box": [
+    358,
+    798
+   ]
+  }
+ ],
+ [
+  "shot",
+  "home-390-2b-time-picked.png"
+ ],
+ [
+  "home-390 click Next",
+  {
+   "at": [
+    254,
+    171
+   ],
+   "insideVisibleFrame": true
+  }
+ ],
+ [
+  "home-390 3-details header",
+  {
+   "layout": "stacked",
+   "zohoViewport": [
+    358,
+    1036
+   ],
+   "cardInPage": [
+    46,
+    -149,
+    329,
+    138
+   ],
+   "frame": [
+    16,
+    85,
+    374,
+    821
+   ],
+   "visiblePx": [
+    283,
+    53
+   ],
+   "frameScroll": [
+    0,
+    0,
+    0,
+    36
+   ],
+   "box": [
+    358,
+    798
+   ]
+  }
+ ],
+ [
+  "shot",
+  "home-390-3-details.png"
+ ],
+ [
+  "home-390 3-details bottom header",
+  {
+   "layout": "stacked",
+   "zohoViewport": [
+    358,
+    1036
+   ],
+   "cardInPage": [
+    46,
+    -426,
+    329,
+    -139
+   ],
+   "frame": [
+    16,
+    85,
+    374,
+    821
+   ],
+   "visiblePx": [
+    283,
+    0
+   ],
+   "frameScroll": [
+    0,
+    0,
+    0,
+    36
+   ],
+   "box": [
+    358,
+    798
+   ]
+  }
+ ],
+ [
+  "home-390 submit button visible (not clicked)",
+  [
+   897,
+   957,
+   1036
+  ]
+ ],
+ [
+  "shot",
+  "home-390-3-details-bottom.png"
+ ],
+ [
+  "home-390 Tab from close ->",
+  "IFRAME"
+ ],
+ [
+  "home-390 Shift+Tab from close ->",
+  "IFRAME"
+ ],
+ [
+  "home-390 after Escape",
+  {
+   "hidden": true,
+   "focus": "Schedule a demo",
+   "bodyOverflow": ""
+  }
+ ],
+ [
+  "home-390 reopened header",
+  {
+   "layout": "stacked",
+   "zohoViewport": [
+    358,
+    1036
+   ],
+   "cardInPage": [
+    46,
+    -149,
+    329,
+    138
+   ],
+   "frame": [
+    16,
+    85,
+    374,
+    821
+   ],
+   "visiblePx": [
+    283,
+    53
+   ],
+   "frameScroll": [
+    0,
+    0,
+    0,
+    36
+   ],
+   "box": [
+    358,
+    798
+   ]
+  }
+ ],
+ [
+  "home-390 after close click",
+  {
+   "hidden": true,
+   "fallback": "https://jared-delphi-me.zohobookings.com/4937208000000036014",
+   "ctaHrefs": [
+    "https://jared-delphi-me.zohobookings.com/4937208000000036014"
+   ],
+   "html": "dl-path-home js"
+  }
+ ],
+ [
+  "home-1024 cta",
+  {
+   "x": 889.75,
+   "y": 30,
+   "href": "https://jared-delphi-me.zohobookings.com/4937208000000036014",
+   "text": "Schedule a demo"
+  }
+ ],
+ [
+  "home-1024 opened",
+  {
+   "hidden": false,
+   "frame": [
+    109,
+    72.796875,
+    915,
+    744.796875
+   ],
+   "iframe": [
+    -484,
+    41.796875,
+    1600,
+    774
+   ],
+   "box": [
+    806,
+    722
+   ],
+   "scroll": [
+    0,
+    0,
+    201,
+    71
+   ],
+   "overflow": "clip",
+   "active": "dl-modal__close"
+  }
+ ],
+ [
+  "home-1024 1-date header",
+  {
+   "layout": "two-column",
+   "zohoViewport": [
+    1600,
+    774
+   ],
+   "cardInPage": [
+    -283,
+    73,
+    109,
+    745
+   ],
+   "frame": [
+    109,
+    73,
+    915,
+    745
+   ],
+   "visiblePx": [
+    0,
+    672
+   ],
+   "frameScroll": [
+    0,
+    0,
+    201,
+    71
+   ],
+   "box": [
+    806,
+    722
+   ]
+  }
+ ],
+ [
+  "shot",
+  "home-1024-1-date.png"
+ ],
+ [
+  "home-1024 click last enabled day",
+  {
+   "at": [
+    319,
+    440
+   ],
+   "insideVisibleFrame": true
+  }
+ ],
+ [
+  "home-1024 2-times header",
+  {
+   "layout": "two-column",
+   "zohoViewport": [
+    1600,
+    774
+   ],
+   "cardInPage": [
+    -283,
+    73,
+    109,
+    745
+   ],
+   "frame": [
+    109,
+    73,
+    915,
+    745
+   ],
+   "visiblePx": [
+    0,
+    672
+   ],
+   "frameScroll": [
+    0,
+    0,
+    201,
+    71
+   ],
+   "box": [
+    806,
+    722
+   ]
+  }
+ ],
+ [
+  "shot",
+  "home-1024-2-times.png"
+ ],
+ [
+  "home-1024 click first time",
+  {
+   "at": [
+    504,
+    156
+   ],
+   "insideVisibleFrame": true
+  }
+ ],
+ [
+  "home-1024 click Next",
+  {
+   "at": [
+    572,
+    156
+   ],
+   "insideVisibleFrame": true
+  }
+ ],
+ [
+  "home-1024 3-details header",
+  {
+   "layout": "two-column",
+   "zohoViewport": [
+    1600,
+    774
+   ],
+   "cardInPage": [
+    -283,
+    73,
+    109,
+    745
+   ],
+   "frame": [
+    109,
+    73,
+    915,
+    745
+   ],
+   "visiblePx": [
+    0,
+    672
+   ],
+   "frameScroll": [
+    0,
+    0,
+    201,
+    71
+   ],
+   "box": [
+    806,
+    722
+   ]
+  }
+ ],
+ [
+  "shot",
+  "home-1024-3-details.png"
+ ],
+ [
+  "home-800 cta",
+  {
+   "x": 619.34375,
+   "y": 30,
+   "href": "https://jared-delphi-me.zohobookings.com/4937208000000036014",
+   "text": "Schedule a demo"
+  }
+ ],
+ [
+  "home-800 opened",
+  {
+   "hidden": false,
+   "frame": [
+    16,
+    84.796875,
+    784,
+    876.796875
+   ],
+   "iframe": [
+    16,
+    -179.203125,
+    768,
+    1092
+   ],
+   "box": [
+    768,
+    854
+   ],
+   "scroll": [
+    0,
+    0,
+    0,
+    36
+   ],
+   "overflow": "clip",
+   "active": "dl-modal__close"
+  }
+ ],
+ [
+  "home-800 1-date header",
+  {
+   "layout": "stacked",
+   "zohoViewport": [
+    768,
+    1092
+   ],
+   "cardInPage": [
+    46,
+    -149,
+    754,
+    35
+   ],
+   "frame": [
+    16,
+    85,
+    784,
+    877
+   ],
+   "visiblePx": [
+    708,
+    0
+   ],
+   "frameScroll": [
+    0,
+    0,
+    0,
+    36
+   ],
+   "box": [
+    768,
+    854
+   ]
+  }
+ ],
+ [
+  "shot",
+  "home-800-1-date.png"
+ ],
+ [
+  "home-800 click last enabled day",
+  {
+   "at": [
+    400,
+    402
+   ],
+   "insideVisibleFrame": true
+  }
+ ],
+ [
+  "home-800 2-times header",
+  {
+   "layout": "stacked",
+   "zohoViewport": [
+    768,
+    1092
+   ],
+   "cardInPage": [
+    46,
+    -149,
+    739,
+    67
+   ],
+   "frame": [
+    16,
+    85,
+    784,
+    877
+   ],
+   "visiblePx": [
+    693,
+    0
+   ],
+   "frameScroll": [
+    0,
+    0,
+    0,
+    36
+   ],
+   "box": [
+    768,
+    854
+   ]
+  }
+ ],
+ [
+  "shot",
+  "home-800-2-times.png"
+ ],
+ [
+  "home-800 click first time",
+  {
+   "at": [
+    392,
+    150
+   ],
+   "insideVisibleFrame": true
+  }
+ ],
+ [
+  "home-800 click Next",
+  {
+   "at": [
+    459,
+    150
+   ],
+   "insideVisibleFrame": true
+  }
+ ],
+ [
+  "home-800 3-details header",
+  {
+   "layout": "stacked",
+   "zohoViewport": [
+    768,
+    1092
+   ],
+   "cardInPage": [
+    46,
+    -149,
+    739,
+    138
+   ],
+   "frame": [
+    16,
+    85,
+    784,
+    877
+   ],
+   "visiblePx": [
+    693,
+    53
+   ],
+   "frameScroll": [
+    0,
+    0,
+    0,
+    36
+   ],
+   "box": [
+    768,
+    854
+   ]
+  }
+ ],
+ [
+  "shot",
+  "home-800-3-details.png"
+ ],
+ [
+  "highered-1440 cta",
+  {
+   "x": 1305.75,
+   "y": 30,
+   "href": "https://jared-delphi-me.zohobookings.com/4937208000000036014",
+   "text": "Schedule a demo"
+  }
+ ],
+ [
+  "highered-1440 opened",
+  {
+   "hidden": false,
+   "frame": [
+    317,
+    72.796875,
+    1123,
+    876.796875
+   ],
+   "iframe": [
+    -276,
+    41.796875,
+    1600,
+    906
+   ],
+   "box": [
+    806,
+    854
+   ],
+   "scroll": [
+    0,
+    0,
+    201,
+    71
+   ],
+   "overflow": "clip",
+   "active": "dl-modal__close"
+  }
+ ],
+ [
+  "highered-1440 1-date header",
+  {
+   "layout": "two-column",
+   "zohoViewport": [
+    1600,
+    906
+   ],
+   "cardInPage": [
+    -75,
+    73,
+    317,
+    877
+   ],
+   "frame": [
+    317,
+    73,
+    1123,
+    877
+   ],
+   "visiblePx": [
+    0,
+    804
+   ],
+   "frameScroll": [
+    0,
+    0,
+    201,
+    71
+   ],
+   "box": [
+    806,
+    854
+   ]
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-1-date.png"
+ ],
+ [
+  "highered-1440 click last enabled day",
+  {
+   "at": [
+    527,
+    440
+   ],
+   "insideVisibleFrame": true
+  }
+ ],
+ [
+  "highered-1440 2-times header",
+  {
+   "layout": "two-column",
+   "zohoViewport": [
+    1600,
+    906
+   ],
+   "cardInPage": [
+    -75,
+    73,
+    317,
+    877
+   ],
+   "frame": [
+    317,
+    73,
+    1123,
+    877
+   ],
+   "visiblePx": [
+    0,
+    804
+   ],
+   "frameScroll": [
+    0,
+    0,
+    201,
+    71
+   ],
+   "box": [
+    806,
+    854
+   ]
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-2-times.png"
+ ],
+ [
+  "highered-1440 2-times scrolled header",
+  {
+   "layout": "two-column",
+   "zohoViewport": [
+    1600,
+    906
+   ],
+   "cardInPage": [
+    -75,
+    73,
+    317,
+    877
+   ],
+   "frame": [
+    317,
+    73,
+    1123,
+    877
+   ],
+   "visiblePx": [
+    0,
+    804
+   ],
+   "frameScroll": [
+    0,
+    0,
+    201,
+    71
+   ],
+   "box": [
+    806,
+    854
+   ]
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-2-times-scrolled.png"
+ ],
+ [
+  "highered-1440 click first time",
+  {
+   "at": [
+    712,
+    156
+   ],
+   "insideVisibleFrame": true
+  }
+ ],
+ [
+  "highered-1440 2b-time-picked header",
+  {
+   "layout": "two-column",
+   "zohoViewport": [
+    1600,
+    906
+   ],
+   "cardInPage": [
+    -75,
+    73,
+    317,
+    877
+   ],
+   "frame": [
+    317,
+    73,
+    1123,
+    877
+   ],
+   "visiblePx": [
+    0,
+    804
+   ],
+   "frameScroll": [
+    0,
+    0,
+    201,
+    71
+   ],
+   "box": [
+    806,
+    854
+   ]
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-2b-time-picked.png"
+ ],
+ [
+  "highered-1440 click Next",
+  {
+   "at": [
+    780,
+    156
+   ],
+   "insideVisibleFrame": true
+  }
+ ],
+ [
+  "highered-1440 3-details header",
+  {
+   "layout": "two-column",
+   "zohoViewport": [
+    1600,
+    906
+   ],
+   "cardInPage": [
+    -75,
+    73,
+    317,
+    877
+   ],
+   "frame": [
+    317,
+    73,
+    1123,
+    877
+   ],
+   "visiblePx": [
+    0,
+    804
+   ],
+   "frameScroll": [
+    0,
+    0,
+    201,
+    71
+   ],
+   "box": [
+    806,
+    854
+   ]
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-3-details.png"
+ ],
+ [
+  "highered-1440 3-details bottom header",
+  {
+   "layout": "two-column",
+   "zohoViewport": [
+    1600,
+    906
+   ],
+   "cardInPage": [
+    -75,
+    73,
+    317,
+    877
+   ],
+   "frame": [
+    317,
+    73,
+    1123,
+    877
+   ],
+   "visiblePx": [
+    0,
+    804
+   ],
+   "frameScroll": [
+    0,
+    0,
+    201,
+    71
+   ],
+   "box": [
+    806,
+    854
+   ]
+  }
+ ],
+ [
+  "highered-1440 submit button visible (not clicked)",
+  [
+   701,
+   761,
+   906
+  ]
+ ],
+ [
+  "shot",
+  "highered-1440-3-details-bottom.png"
+ ],
+ [
+  "highered-1440 Tab from close ->",
+  "IFRAME"
+ ],
+ [
+  "highered-1440 Shift+Tab from close ->",
+  "IFRAME"
+ ],
+ [
+  "highered-1440 after Escape",
+  {
+   "hidden": true,
+   "focus": "Schedule a demo",
+   "bodyOverflow": ""
+  }
+ ],
+ [
+  "highered-1440 reopened header",
+  {
+   "layout": "two-column",
+   "zohoViewport": [
+    1600,
+    906
+   ],
+   "cardInPage": [
+    -75,
+    73,
+    317,
+    877
+   ],
+   "frame": [
+    317,
+    73,
+    1123,
+    877
+   ],
+   "visiblePx": [
+    0,
+    804
+   ],
+   "frameScroll": [
+    0,
+    0,
+    201,
+    71
+   ],
+   "box": [
+    806,
+    854
+   ]
+  }
+ ],
+ [
+  "highered-1440 after close click",
+  {
+   "hidden": true,
+   "fallback": "https://jared-delphi-me.zohobookings.com/4937208000000036014",
+   "ctaHrefs": [
+    "https://jared-delphi-me.zohobookings.com/4937208000000036014"
+   ],
+   "html": "dl-path-he js dl-he-ready"
+  }
+ ],
+ [
+  "highered-390 cta",
+  {
+   "x": 249.78125,
+   "y": 28,
+   "href": "https://jared-delphi-me.zohobookings.com/4937208000000036014",
+   "text": "Schedule a demo"
+  }
+ ],
+ [
+  "highered-390 opened",
+  {
+   "hidden": false,
+   "frame": [
+    16,
+    84.796875,
+    374,
+    820.796875
+   ],
+   "iframe": [
+    16,
+    -179.203125,
+    358,
+    1036
+   ],
+   "box": [
+    358,
+    798
+   ],
+   "scroll": [
+    0,
+    0,
+    0,
+    36
+   ],
+   "overflow": "clip",
+   "active": "dl-modal__close"
+  }
+ ],
+ [
+  "highered-390 1-date header",
+  {
+   "layout": "stacked",
+   "zohoViewport": [
+    358,
+    1036
+   ],
+   "cardInPage": [
+    46,
+    -149,
+    344,
+    35
+   ],
+   "frame": [
+    16,
+    85,
+    374,
+    821
+   ],
+   "visiblePx": [
+    298,
+    0
+   ],
+   "frameScroll": [
+    0,
+    0,
+    0,
+    36
+   ],
+   "box": [
+    358,
+    798
+   ]
+  }
+ ],
+ [
+  "shot",
+  "highered-390-1-date.png"
+ ],
+ [
+  "highered-390 click last enabled day",
+  {
+   "at": [
+    195,
+    402
+   ],
+   "insideVisibleFrame": true
+  }
+ ],
+ [
+  "highered-390 2-times header",
+  {
+   "layout": "stacked",
+   "zohoViewport": [
+    358,
+    1036
+   ],
+   "cardInPage": [
+    46,
+    -149,
+    329,
+    67
+   ],
+   "frame": [
+    16,
+    85,
+    374,
+    821
+   ],
+   "visiblePx": [
+    283,
+    0
+   ],
+   "frameScroll": [
+    0,
+    0,
+    0,
+    36
+   ],
+   "box": [
+    358,
+    798
+   ]
+  }
+ ],
+ [
+  "shot",
+  "highered-390-2-times.png"
+ ],
+ [
+  "highered-390 2-times scrolled header",
+  {
+   "layout": "stacked",
+   "zohoViewport": [
+    358,
+    1036
+   ],
+   "cardInPage": [
+    46,
+    -458,
+    329,
+    -242
+   ],
+   "frame": [
+    16,
+    85,
+    374,
+    821
+   ],
+   "visiblePx": [
+    283,
+    0
+   ],
+   "frameScroll": [
+    0,
+    0,
+    0,
+    36
+   ],
+   "box": [
+    358,
+    798
+   ]
+  }
+ ],
+ [
+  "shot",
+  "highered-390-2-times-scrolled.png"
+ ],
+ [
+  "highered-390 click first time",
+  {
+   "at": [
+    187,
+    171
+   ],
+   "insideVisibleFrame": true
+  }
+ ],
+ [
+  "highered-390 2b-time-picked header",
+  {
+   "layout": "stacked",
+   "zohoViewport": [
+    358,
+    1036
+   ],
+   "cardInPage": [
+    46,
+    -149,
+    329,
+    67
+   ],
+   "frame": [
+    16,
+    85,
+    374,
+    821
+   ],
+   "visiblePx": [
+    283,
+    0
+   ],
+   "frameScroll": [
+    0,
+    0,
+    0,
+    36
+   ],
+   "box": [
+    358,
+    798
+   ]
+  }
+ ],
+ [
+  "shot",
+  "highered-390-2b-time-picked.png"
+ ],
+ [
+  "highered-390 click Next",
+  {
+   "at": [
+    254,
+    171
+   ],
+   "insideVisibleFrame": true
+  }
+ ],
+ [
+  "highered-390 3-details header",
+  {
+   "layout": "stacked",
+   "zohoViewport": [
+    358,
+    1036
+   ],
+   "cardInPage": [
+    46,
+    -149,
+    329,
+    138
+   ],
+   "frame": [
+    16,
+    85,
+    374,
+    821
+   ],
+   "visiblePx": [
+    283,
+    53
+   ],
+   "frameScroll": [
+    0,
+    0,
+    0,
+    36
+   ],
+   "box": [
+    358,
+    798
+   ]
+  }
+ ],
+ [
+  "shot",
+  "highered-390-3-details.png"
+ ],
+ [
+  "highered-390 3-details bottom header",
+  {
+   "layout": "stacked",
+   "zohoViewport": [
+    358,
+    1036
+   ],
+   "cardInPage": [
+    46,
+    -426,
+    329,
+    -139
+   ],
+   "frame": [
+    16,
+    85,
+    374,
+    821
+   ],
+   "visiblePx": [
+    283,
+    0
+   ],
+   "frameScroll": [
+    0,
+    0,
+    0,
+    36
+   ],
+   "box": [
+    358,
+    798
+   ]
+  }
+ ],
+ [
+  "highered-390 submit button visible (not clicked)",
+  [
+   897,
+   957,
+   1036
+  ]
+ ],
+ [
+  "shot",
+  "highered-390-3-details-bottom.png"
+ ],
+ [
+  "highered-390 Tab from close ->",
+  "IFRAME"
+ ],
+ [
+  "highered-390 Shift+Tab from close ->",
+  "IFRAME"
+ ],
+ [
+  "highered-390 after Escape",
+  {
+   "hidden": true,
+   "focus": "Schedule a demo",
+   "bodyOverflow": ""
+  }
+ ],
+ [
+  "highered-390 reopened header",
+  {
+   "layout": "stacked",
+   "zohoViewport": [
+    358,
+    1036
+   ],
+   "cardInPage": [
+    46,
+    -149,
+    329,
+    138
+   ],
+   "frame": [
+    16,
+    85,
+    374,
+    821
+   ],
+   "visiblePx": [
+    283,
+    53
+   ],
+   "frameScroll": [
+    0,
+    0,
+    0,
+    36
+   ],
+   "box": [
+    358,
+    798
+   ]
+  }
+ ],
+ [
+  "highered-390 after close click",
+  {
+   "hidden": true,
+   "fallback": "https://jared-delphi-me.zohobookings.com/4937208000000036014",
+   "ctaHrefs": [
+    "https://jared-delphi-me.zohobookings.com/4937208000000036014"
+   ],
+   "html": "dl-path-he js dl-he-ready"
+  }
+ ]
+]

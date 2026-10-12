@@ -1,0 +1,412 @@
+{
+ "/home 1440": {
+  "shot": "before-home-1440.png",
+  "html": "dl-path-home js",
+  "display": "grid",
+  "cols": "279.797px 279.812px 279.797px 279.812px",
+  "gap": "13.6px / 13.6px",
+  "ulW": 1160,
+  "visible": 4,
+  "fill": 1,
+  "rows": [
+   [
+    279.8,
+    279.8,
+    279.8,
+    279.8
+   ]
+  ],
+  "heights": [
+   192.7,
+   192.7,
+   192.7,
+   192.7
+  ],
+  "cards": [
+   {
+    "h3": "Invisible until it's too late",
+    "x": 0,
+    "y": 0,
+    "w": 279.8,
+    "h": 192.7
+   },
+   {
+    "h3": "Thirty messages, one at a time",
+    "x": 293,
+    "y": 0,
+    "w": 279.8,
+    "h": 192.7
+   },
+   {
+    "h3": "Detective work, not teaching",
+    "x": 587,
+    "y": 0,
+    "w": 279.8,
+    "h": 192.7
+   },
+   {
+    "h3": "Parents in the dark",
+    "x": 880,
+    "y": 0,
+    "w": 279.8,
+    "h": 192.7
+   }
+  ]
+ },
+ "/home 1100": {
+  "shot": "before-home-1100.png",
+  "html": "dl-path-home js",
+  "display": "grid",
+  "cols": "251.047px 251.062px 251.047px 251.062px",
+  "gap": "13.6px / 13.6px",
+  "ulW": 1045,
+  "visible": 4,
+  "fill": 1,
+  "rows": [
+   [
+    251,
+    251.1,
+    251,
+    251.1
+   ]
+  ],
+  "heights": [
+   215.4,
+   215.4,
+   215.4,
+   215.4
+  ],
+  "cards": [
+   {
+    "h3": "Invisible until it's too late",
+    "x": 0,
+    "y": 0,
+    "w": 251,
+    "h": 215.4
+   },
+   {
+    "h3": "Thirty messages, one at a time",
+    "x": 265,
+    "y": 0,
+    "w": 251.1,
+    "h": 215.4
+   },
+   {
+    "h3": "Detective work, not teaching",
+    "x": 529,
+    "y": 0,
+    "w": 251,
+    "h": 215.4
+   },
+   {
+    "h3": "Parents in the dark",
+    "x": 794,
+    "y": 0,
+    "w": 251.1,
+    "h": 215.4
+   }
+  ]
+ },
+ "/home 800": {
+  "shot": "before-home-800.png",
+  "html": "dl-path-home js",
+  "display": "grid",
+  "cols": "365.703px 365.703px",
+  "gap": "13.6px / 13.6px",
+  "ulW": 745,
+  "visible": 4,
+  "fill": 1,
+  "rows": [
+   [
+    365.7,
+    365.7
+   ],
+   [
+    365.7,
+    365.7
+   ]
+  ],
+  "heights": [
+   165.8,
+   165.8,
+   165.8,
+   165.8
+  ],
+  "cards": [
+   {
+    "h3": "Invisible until it's too late",
+    "x": 0,
+    "y": 0,
+    "w": 365.7,
+    "h": 165.8
+   },
+   {
+    "h3": "Thirty messages, one at a time",
+    "x": 379,
+    "y": 0,
+    "w": 365.7,
+    "h": 165.8
+   },
+   {
+    "h3": "Detective work, not teaching",
+    "x": 0,
+    "y": 179,
+    "w": 365.7,
+    "h": 165.8
+   },
+   {
+    "h3": "Parents in the dark",
+    "x": 379,
+    "y": 179,
+    "w": 365.7,
+    "h": 165.8
+   }
+  ]
+ },
+ "/home 390": {
+  "shot": "before-home-390.png",
+  "html": "dl-path-home js",
+  "display": "grid",
+  "cols": "350px",
+  "gap": "13.6px / 13.6px",
+  "ulW": 350,
+  "visible": 4,
+  "fill": 1,
+  "rows": [
+   [
+    350
+   ],
+   [
+    350
+   ],
+   [
+    350
+   ],
+   [
+    350
+   ]
+  ],
+  "heights": [
+   165.8,
+   165.8,
+   165.8,
+   165.8
+  ],
+  "cards": [
+   {
+    "h3": "Invisible until it's too late",
+    "x": 0,
+    "y": 0,
+    "w": 350,
+    "h": 165.8
+   },
+   {
+    "h3": "Thirty messages, one at a time",
+    "x": 0,
+    "y": 179,
+    "w": 350,
+    "h": 165.8
+   },
+   {
+    "h3": "Detective work, not teaching",
+    "x": 0,
+    "y": 359,
+    "w": 350,
+    "h": 165.8
+   },
+   {
+    "h3": "Parents in the dark",
+    "x": 0,
+    "y": 538,
+    "w": 350,
+    "h": 165.8
+   }
+  ]
+ },
+ "/highered 1440": {
+  "shot": "before-highered-1440.png",
+  "html": "dl-path-he js dl-he-ready",
+  "display": "grid",
+  "cols": "279.797px 279.812px 279.797px 279.812px",
+  "gap": "13.6px / 13.6px",
+  "ulW": 1160,
+  "visible": 3,
+  "fill": 0.747,
+  "rows": [
+   [
+    279.8,
+    279.8,
+    279.8
+   ]
+  ],
+  "heights": [
+   192.7,
+   192.7,
+   192.7
+  ],
+  "cards": [
+   {
+    "h3": "Invisible until it's too late",
+    "x": 0,
+    "y": 0,
+    "w": 279.8,
+    "h": 192.7
+   },
+   {
+    "h3": "Thirty messages, one at a time",
+    "x": 293,
+    "y": 0,
+    "w": 279.8,
+    "h": 192.7
+   },
+   {
+    "h3": "Detective work, not teaching",
+    "x": 587,
+    "y": 0,
+    "w": 279.8,
+    "h": 192.7
+   }
+  ]
+ },
+ "/highered 1100": {
+  "shot": "before-highered-1100.png",
+  "html": "dl-path-he js dl-he-ready",
+  "display": "grid",
+  "cols": "251.047px 251.062px 251.047px 251.062px",
+  "gap": "13.6px / 13.6px",
+  "ulW": 1045,
+  "visible": 3,
+  "fill": 0.746,
+  "rows": [
+   [
+    251,
+    251.1,
+    251
+   ]
+  ],
+  "heights": [
+   215.4,
+   215.4,
+   215.4
+  ],
+  "cards": [
+   {
+    "h3": "Invisible until it's too late",
+    "x": 0,
+    "y": 0,
+    "w": 251,
+    "h": 215.4
+   },
+   {
+    "h3": "Thirty messages, one at a time",
+    "x": 265,
+    "y": 0,
+    "w": 251.1,
+    "h": 215.4
+   },
+   {
+    "h3": "Detective work, not teaching",
+    "x": 529,
+    "y": 0,
+    "w": 251,
+    "h": 215.4
+   }
+  ]
+ },
+ "/highered 800": {
+  "shot": "before-highered-800.png",
+  "html": "dl-path-he js dl-he-ready",
+  "display": "grid",
+  "cols": "365.703px 365.703px",
+  "gap": "13.6px / 13.6px",
+  "ulW": 745,
+  "visible": 3,
+  "fill": 1,
+  "rows": [
+   [
+    365.7,
+    365.7
+   ],
+   [
+    365.7
+   ]
+  ],
+  "heights": [
+   165.8,
+   165.8,
+   165.8
+  ],
+  "cards": [
+   {
+    "h3": "Invisible until it's too late",
+    "x": 0,
+    "y": 0,
+    "w": 365.7,
+    "h": 165.8
+   },
+   {
+    "h3": "Thirty messages, one at a time",
+    "x": 379,
+    "y": 0,
+    "w": 365.7,
+    "h": 165.8
+   },
+   {
+    "h3": "Detective work, not teaching",
+    "x": 0,
+    "y": 179,
+    "w": 365.7,
+    "h": 165.8
+   }
+  ]
+ },
+ "/highered 390": {
+  "shot": "before-highered-390.png",
+  "html": "dl-path-he js dl-he-ready",
+  "display": "grid",
+  "cols": "350px",
+  "gap": "13.6px / 13.6px",
+  "ulW": 350,
+  "visible": 3,
+  "fill": 1,
+  "rows": [
+   [
+    350
+   ],
+   [
+    350
+   ],
+   [
+    350
+   ]
+  ],
+  "heights": [
+   165.8,
+   165.8,
+   165.8
+  ],
+  "cards": [
+   {
+    "h3": "Invisible until it's too late",
+    "x": 0,
+    "y": 0,
+    "w": 350,
+    "h": 165.8
+   },
+   {
+    "h3": "Thirty messages, one at a time",
+    "x": 0,
+    "y": 179,
+    "w": 350,
+    "h": 165.8
+   },
+   {
+    "h3": "Detective work, not teaching",
+    "x": 0,
+    "y": 359,
+    "w": 350,
+    "h": 165.8
+   }
+  ]
+ }
+}

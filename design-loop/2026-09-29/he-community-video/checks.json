@@ -1,0 +1,495 @@
+[
+ [
+  "HE table from source",
+  {
+   "id9dqfNZsf4": "9mfMC9jC6lU",
+   "xC1b-9bZW4w": "MBYmCCeZqxo",
+   "acjbTVs8IUM": "4vzDJ1poyvU",
+   "Ek-BBS8rP_0": "63Iu4Xxg_tg",
+   "ejtU7miZWD4": "xbdP6GSjPgY",
+   "L90IoF6LGAE": "U615qsZh8bc"
+  }
+ ],
+ [
+  "highered 1440 html class",
+  "dl-path-he js dl-he-ready"
+ ],
+ [
+  "highered 1440 hero",
+  {
+   "href": "https://www.youtube.com/watch?v=9mfMC9jC6lU",
+   "yt": "9mfMC9jC6lU",
+   "title": "Watch: Online learning, elevated",
+   "attrTitle": "Watch: Online learning, elevated",
+   "text": "Watch: Online learning, elevated"
+  }
+ ],
+ [
+  "PASS highered 1440 hero id 9mfMC9jC6lU",
+  true
+ ],
+ [
+  "highered 1440 ct",
+  {
+   "href": "https://www.youtube.com/watch?v=MBYmCCeZqxo",
+   "yt": "MBYmCCeZqxo",
+   "title": "Watch: Insightful data",
+   "attrTitle": "Watch: Insightful data",
+   "text": "Watch: Insightful data"
+  }
+ ],
+ [
+  "PASS highered 1440 ct id MBYmCCeZqxo",
+  true
+ ],
+ [
+  "highered 1440 cb",
+  {
+   "href": "https://www.youtube.com/watch?v=4vzDJ1poyvU",
+   "yt": "4vzDJ1poyvU",
+   "title": "Watch: Communication that works!",
+   "attrTitle": "Watch: Communication that works!",
+   "text": "Watch: Communication that works!"
+  }
+ ],
+ [
+  "PASS highered 1440 cb id 4vzDJ1poyvU",
+  true
+ ],
+ [
+  "PASS highered 1440 cb label kept",
+  true
+ ],
+ [
+  "highered 1440 all yt links",
+  [
+   "9mfMC9jC6lU",
+   "MBYmCCeZqxo",
+   "4vzDJ1poyvU",
+   "63Iu4Xxg_tg",
+   "xbdP6GSjPgY",
+   "Tp3IO0TzvM0",
+   "3N0SXpFT36w",
+   "UgEyq7gUWmM",
+   "U615qsZh8bc"
+  ]
+ ],
+ [
+  "PASS highered 1440 all yt links as expected",
+  true
+ ],
+ [
+  "highered 1440 HE copy swaps",
+  {
+   "ready": true,
+   "lead": "Delphinium transforms the Canvas courses",
+   "num": "47%!",
+   "study": "Utah Valley University studies",
+   "davisNum": "47%",
+   "punch": "The courses didn't change. The teachers didn't change. Engagement did, and so did the outcomes."
+  }
+ ],
+ [
+  "PASS highered 1440 HE copy swaps land",
+  true
+ ],
+ [
+  "shot",
+  "highered-1440-community-link.png"
+ ],
+ [
+  "highered 1440 cb modal",
+  {
+   "open": true,
+   "title": "Watch: Communication that works!",
+   "iframe": "https://www.youtube.com/embed/4vzDJ1poyvU?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767"
+  }
+ ],
+ [
+  "PASS highered 1440 cb modal opens with 4vzDJ1poyvU",
+  true
+ ],
+ [
+  "shot",
+  "highered-1440-community-modal.png"
+ ],
+ [
+  "highered 1440 hero modal",
+  {
+   "open": true,
+   "title": "Watch: Online learning, elevated",
+   "iframe": "https://www.youtube.com/embed/9mfMC9jC6lU?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767"
+  }
+ ],
+ [
+  "PASS highered 1440 hero modal opens with 9mfMC9jC6lU",
+  true
+ ],
+ [
+  "highered 1440 ct modal",
+  {
+   "open": true,
+   "title": "Watch: Insightful data",
+   "iframe": "https://www.youtube.com/embed/MBYmCCeZqxo?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767"
+  }
+ ],
+ [
+  "PASS highered 1440 ct modal opens with MBYmCCeZqxo",
+  true
+ ],
+ [
+  "home 1440 html class",
+  "dl-path-home js"
+ ],
+ [
+  "home 1440 hero",
+  {
+   "href": "https://www.youtube.com/watch?v=id9dqfNZsf4",
+   "yt": "id9dqfNZsf4",
+   "title": "Watch: Online learning, elevated",
+   "attrTitle": "Watch: Online learning, elevated",
+   "text": "Watch: Online learning, elevated"
+  }
+ ],
+ [
+  "PASS home 1440 hero id id9dqfNZsf4",
+  true
+ ],
+ [
+  "home 1440 ct",
+  {
+   "href": "https://www.youtube.com/watch?v=xC1b-9bZW4w",
+   "yt": "xC1b-9bZW4w",
+   "title": "Watch: Insightful data",
+   "attrTitle": "Watch: Insightful data",
+   "text": "Watch: Insightful data"
+  }
+ ],
+ [
+  "PASS home 1440 ct id xC1b-9bZW4w",
+  true
+ ],
+ [
+  "home 1440 cb",
+  {
+   "href": "https://www.youtube.com/watch?v=acjbTVs8IUM",
+   "yt": "acjbTVs8IUM",
+   "title": "Watch: Communication that works!",
+   "attrTitle": "Watch: Communication that works!",
+   "text": "Watch: Communication that works!"
+  }
+ ],
+ [
+  "PASS home 1440 cb id acjbTVs8IUM",
+  true
+ ],
+ [
+  "PASS home 1440 cb label kept",
+  true
+ ],
+ [
+  "home 1440 all yt links",
+  [
+   "id9dqfNZsf4",
+   "xC1b-9bZW4w",
+   "acjbTVs8IUM",
+   "Ek-BBS8rP_0",
+   "ejtU7miZWD4",
+   "Tp3IO0TzvM0",
+   "3N0SXpFT36w",
+   "UgEyq7gUWmM",
+   "L90IoF6LGAE"
+  ]
+ ],
+ [
+  "PASS home 1440 all yt links as expected",
+  true
+ ],
+ [
+  "shot",
+  "home-1440-community-link.png"
+ ],
+ [
+  "home 1440 cb modal",
+  {
+   "open": true,
+   "title": "Watch: Communication that works!",
+   "iframe": "https://www.youtube.com/embed/acjbTVs8IUM?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767"
+  }
+ ],
+ [
+  "PASS home 1440 cb modal opens with acjbTVs8IUM",
+  true
+ ],
+ [
+  "shot",
+  "home-1440-community-modal.png"
+ ],
+ [
+  "home 1440 hero modal",
+  {
+   "open": true,
+   "title": "Watch: Online learning, elevated",
+   "iframe": "https://www.youtube.com/embed/id9dqfNZsf4?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767"
+  }
+ ],
+ [
+  "PASS home 1440 hero modal opens with id9dqfNZsf4",
+  true
+ ],
+ [
+  "home 1440 ct modal",
+  {
+   "open": true,
+   "title": "Watch: Insightful data",
+   "iframe": "https://www.youtube.com/embed/xC1b-9bZW4w?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767"
+  }
+ ],
+ [
+  "PASS home 1440 ct modal opens with xC1b-9bZW4w",
+  true
+ ],
+ [
+  "highered 390 html class",
+  "dl-path-he js dl-he-ready"
+ ],
+ [
+  "highered 390 hero",
+  {
+   "href": "https://www.youtube.com/watch?v=9mfMC9jC6lU",
+   "yt": "9mfMC9jC6lU",
+   "title": "Watch: Online learning, elevated",
+   "attrTitle": "Watch: Online learning, elevated",
+   "text": "Watch: Online learning, elevated"
+  }
+ ],
+ [
+  "PASS highered 390 hero id 9mfMC9jC6lU",
+  true
+ ],
+ [
+  "highered 390 ct",
+  {
+   "href": "https://www.youtube.com/watch?v=MBYmCCeZqxo",
+   "yt": "MBYmCCeZqxo",
+   "title": "Watch: Insightful data",
+   "attrTitle": "Watch: Insightful data",
+   "text": "Watch: Insightful data"
+  }
+ ],
+ [
+  "PASS highered 390 ct id MBYmCCeZqxo",
+  true
+ ],
+ [
+  "highered 390 cb",
+  {
+   "href": "https://www.youtube.com/watch?v=4vzDJ1poyvU",
+   "yt": "4vzDJ1poyvU",
+   "title": "Watch: Communication that works!",
+   "attrTitle": "Watch: Communication that works!",
+   "text": "Watch: Communication that works!"
+  }
+ ],
+ [
+  "PASS highered 390 cb id 4vzDJ1poyvU",
+  true
+ ],
+ [
+  "PASS highered 390 cb label kept",
+  true
+ ],
+ [
+  "highered 390 all yt links",
+  [
+   "9mfMC9jC6lU",
+   "MBYmCCeZqxo",
+   "4vzDJ1poyvU",
+   "63Iu4Xxg_tg",
+   "xbdP6GSjPgY",
+   "Tp3IO0TzvM0",
+   "3N0SXpFT36w",
+   "UgEyq7gUWmM",
+   "U615qsZh8bc"
+  ]
+ ],
+ [
+  "PASS highered 390 all yt links as expected",
+  true
+ ],
+ [
+  "highered 390 HE copy swaps",
+  {
+   "ready": true,
+   "lead": "Delphinium transforms the Canvas courses",
+   "num": "47%!",
+   "study": "Utah Valley University studies",
+   "davisNum": "47%",
+   "punch": "The courses didn't change. The teachers didn't change. Engagement did, and so did the outcomes."
+  }
+ ],
+ [
+  "PASS highered 390 HE copy swaps land",
+  true
+ ],
+ [
+  "shot",
+  "highered-390-community-link.png"
+ ],
+ [
+  "highered 390 cb modal",
+  {
+   "open": true,
+   "title": "Watch: Communication that works!",
+   "iframe": "https://www.youtube.com/embed/4vzDJ1poyvU?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767"
+  }
+ ],
+ [
+  "PASS highered 390 cb modal opens with 4vzDJ1poyvU",
+  true
+ ],
+ [
+  "shot",
+  "highered-390-community-modal.png"
+ ],
+ [
+  "highered 390 hero modal",
+  {
+   "open": true,
+   "title": "Watch: Online learning, elevated",
+   "iframe": "https://www.youtube.com/embed/9mfMC9jC6lU?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767"
+  }
+ ],
+ [
+  "PASS highered 390 hero modal opens with 9mfMC9jC6lU",
+  true
+ ],
+ [
+  "highered 390 ct modal",
+  {
+   "open": true,
+   "title": "Watch: Insightful data",
+   "iframe": "https://www.youtube.com/embed/MBYmCCeZqxo?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767"
+  }
+ ],
+ [
+  "PASS highered 390 ct modal opens with MBYmCCeZqxo",
+  true
+ ],
+ [
+  "home 390 html class",
+  "dl-path-home js"
+ ],
+ [
+  "home 390 hero",
+  {
+   "href": "https://www.youtube.com/watch?v=id9dqfNZsf4",
+   "yt": "id9dqfNZsf4",
+   "title": "Watch: Online learning, elevated",
+   "attrTitle": "Watch: Online learning, elevated",
+   "text": "Watch: Online learning, elevated"
+  }
+ ],
+ [
+  "PASS home 390 hero id id9dqfNZsf4",
+  true
+ ],
+ [
+  "home 390 ct",
+  {
+   "href": "https://www.youtube.com/watch?v=xC1b-9bZW4w",
+   "yt": "xC1b-9bZW4w",
+   "title": "Watch: Insightful data",
+   "attrTitle": "Watch: Insightful data",
+   "text": "Watch: Insightful data"
+  }
+ ],
+ [
+  "PASS home 390 ct id xC1b-9bZW4w",
+  true
+ ],
+ [
+  "home 390 cb",
+  {
+   "href": "https://www.youtube.com/watch?v=acjbTVs8IUM",
+   "yt": "acjbTVs8IUM",
+   "title": "Watch: Communication that works!",
+   "attrTitle": "Watch: Communication that works!",
+   "text": "Watch: Communication that works!"
+  }
+ ],
+ [
+  "PASS home 390 cb id acjbTVs8IUM",
+  true
+ ],
+ [
+  "PASS home 390 cb label kept",
+  true
+ ],
+ [
+  "home 390 all yt links",
+  [
+   "id9dqfNZsf4",
+   "xC1b-9bZW4w",
+   "acjbTVs8IUM",
+   "Ek-BBS8rP_0",
+   "ejtU7miZWD4",
+   "Tp3IO0TzvM0",
+   "3N0SXpFT36w",
+   "UgEyq7gUWmM",
+   "L90IoF6LGAE"
+  ]
+ ],
+ [
+  "PASS home 390 all yt links as expected",
+  true
+ ],
+ [
+  "shot",
+  "home-390-community-link.png"
+ ],
+ [
+  "home 390 cb modal",
+  {
+   "open": true,
+   "title": "Watch: Communication that works!",
+   "iframe": "https://www.youtube.com/embed/acjbTVs8IUM?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767"
+  }
+ ],
+ [
+  "PASS home 390 cb modal opens with acjbTVs8IUM",
+  true
+ ],
+ [
+  "shot",
+  "home-390-community-modal.png"
+ ],
+ [
+  "home 390 hero modal",
+  {
+   "open": true,
+   "title": "Watch: Online learning, elevated",
+   "iframe": "https://www.youtube.com/embed/id9dqfNZsf4?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767"
+  }
+ ],
+ [
+  "PASS home 390 hero modal opens with id9dqfNZsf4",
+  true
+ ],
+ [
+  "home 390 ct modal",
+  {
+   "open": true,
+   "title": "Watch: Insightful data",
+   "iframe": "https://www.youtube.com/embed/xC1b-9bZW4w?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767"
+  }
+ ],
+ [
+  "PASS home 390 ct modal opens with xC1b-9bZW4w",
+  true
+ ],
+ [
+  "fails",
+  0
+ ]
+]

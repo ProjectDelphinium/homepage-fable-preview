@@ -1,0 +1,54 @@
+[
+  {
+    "path": "/highered",
+    "w": 1440,
+    "found": true,
+    "ctxDisplay": "block",
+    "visible": true,
+    "lis": [
+      "14 sections, ~420 students",
+      "High-enrollment, high-failure freshman gateway courses, just like the toughest ones at your school"
+    ],
+    "trailingPeriod": false,
+    "proofHead": "Years of research\nbehind every design decision."
+  },
+  {
+    "path": "/highered",
+    "w": 390,
+    "found": true,
+    "ctxDisplay": "block",
+    "visible": true,
+    "lis": [
+      "14 sections, ~420 students",
+      "High-enrollment, high-failure freshman gateway courses, just like the toughest ones at your school"
+    ],
+    "trailingPeriod": false,
+    "proofHead": "Years of research\nbehind every design decision."
+  },
+  {
+    "path": "/home",
+    "w": 1440,
+    "found": true,
+    "ctxDisplay": "none",
+    "visible": false,
+    "lis": [
+      "14 sections, ~420 students",
+      "High-enrollment, high-failure freshman gateway courses, just like the toughest ones at your school"
+    ],
+    "trailingPeriod": false,
+    "proofHead": "Years of research\nbehind every design decision."
+  },
+  {
+    "path": "/home",
+    "w": 390,
+    "found": true,
+    "ctxDisplay": "none",
+    "visible": false,
+    "lis": [
+      "14 sections, ~420 students",
+      "High-enrollment, high-failure freshman gateway courses, just like the toughest ones at your school"
+    ],
+    "trailingPeriod": false,
+    "proofHead": "Years of research\nbehind every design decision."
+  }
+]

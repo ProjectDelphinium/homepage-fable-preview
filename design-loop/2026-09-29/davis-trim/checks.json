@@ -1,0 +1,54 @@
+{
+ "1440 /home": {
+  "htmlClass": "dl-path-home js",
+  "txtText": "decrease in course failure rates.",
+  "txtHTML": "<b>decrease in course failure rates</b>.",
+  "boldText": "decrease in course failure rates",
+  "boldWeight": "700",
+  "rect": [
+   132.5,
+   9878.764907836914,
+   672,
+   496.96875
+  ]
+ },
+ "1440 /highered": {
+  "htmlClass": "dl-path-he js dl-he-ready",
+  "txtText": "lower course failures",
+  "txtHTML": "<b>lower course failures</b>",
+  "boldText": "lower course failures",
+  "boldWeight": "700",
+  "rect": [
+   132.5,
+   7623.104537963867,
+   672,
+   709.5
+  ]
+ },
+ "390 /home": {
+  "htmlClass": "dl-path-home js",
+  "txtText": "decrease in course failure rates.",
+  "txtHTML": "<b>decrease in course failure rates</b>.",
+  "boldText": "decrease in course failure rates",
+  "boldWeight": "700",
+  "rect": [
+   20,
+   12798.77865600586,
+   350,
+   401.4375305175781
+  ]
+ },
+ "390 /highered": {
+  "htmlClass": "dl-path-he js dl-he-ready",
+  "txtText": "lower course failures",
+  "txtHTML": "<b>lower course failures</b>",
+  "boldText": "lower course failures",
+  "boldWeight": "700",
+  "rect": [
+   20,
+   9943.766967773438,
+   350,
+   451.109375
+  ]
+ }
+}

@@ -1,0 +1,1090 @@
+{
+ "before-home-1440": {
+  "path": "/home",
+  "cls": "dl-path-home js",
+  "docOverflowX": false,
+  "caseVisible": true,
+  "caseEyebrow": "THE HIDDEN COSTS",
+  "caseH2": "Education moved online, Engagement didn't follow.",
+  "caseLede": "In a classroom, teachers can read the room, catch a glance, and stand by the student who is drifting. None of that survives the move to a screen.",
+  "caseCards": [
+   {
+    "text": "ATTENDANCE 1 in 4 students are chronically absent, still elevated years after the shift online. RAND / Return to Learn Tracker, 2024-25",
+    "x": 140,
+    "w": 377.6,
+    "h": 184.5,
+    "overflowX": false
+   },
+   {
+    "text": "ACHIEVEMENT 1 in 3 students score below grade level. The lowest performers keep losing ground. The Nation's Report Card (NAEP), 2024",
+    "x": 531.2,
+    "w": 377.6,
+    "h": 184.5,
+    "overflowX": false
+   },
+   {
+    "text": "COST $229K the cost of a K-12 education and lost potential when students don't finish. U.S. Census Bureau, FY2024",
+    "x": 922.4,
+    "w": 377.6,
+    "h": 184.5,
+    "overflowX": false
+   }
+  ],
+  "casePunch": "Three crises, one cause: disengagement. Doing nothing is the most expensive option you have.",
+  "caseOutOfViewport": [],
+  "heSwaps": {
+   "heroLead": "Delphinium transforms the Canvas courses you already teach into engaging student experiences and an early-warning system for parents and teachers. No migration. No extra work. Just turn it on.",
+   "coverUpto": "Cut failures, up to",
+   "coverNum": "31%!",
+   "studyHeading": "THE DAVIS CONNECT STUDY",
+   "davisNum": "31%",
+   "davisTxt": "decrease in course failure rates.",
+   "studyPunch": "The courses didn't change. The teachers didn't change. Engagement did, and so did the outcomes.",
+   "deployPunch": null
+  },
+  "sections": [
+   {
+    "cls": "dl-hero",
+    "id": null,
+    "top": 60,
+    "h": 923.6,
+    "padTop": 36,
+    "padBottom": 112,
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   {
+    "cls": "dl-section.dl-case",
+    "id": null,
+    "top": 983.6,
+    "h": 961.9,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(238, 244, 244)"
+   },
+   {
+    "cls": "dl-section.dl-teach",
+    "id": null,
+    "top": 1945.6,
+    "h": 894.7,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-products",
+    "id": "product",
+    "top": 2840.3,
+    "h": 1071.9,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(245, 244, 250)"
+   },
+   {
+    "cls": "dl-section.dl-products",
+    "id": "community",
+    "top": 3912.2,
+    "h": 1548.6,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-mk",
+    "id": "makeover",
+    "top": 5460.8,
+    "h": 1368.2,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(245, 244, 250)"
+   },
+   {
+    "cls": "dl-section.dl-products",
+    "id": "engagement",
+    "top": 6829,
+    "h": 1282.9,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-logos-section",
+    "id": "customers",
+    "top": 8112,
+    "h": 442.2,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(245, 244, 250)"
+   },
+   {
+    "cls": "dl-section.dl-videos",
+    "id": "videos",
+    "top": 8554.1,
+    "h": 773.1,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-proof",
+    "id": "proof",
+    "top": 9327.2,
+    "h": 2113,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(238, 244, 244)"
+   },
+   {
+    "cls": "dl-section.dl-how",
+    "id": null,
+    "top": 11440.2,
+    "h": 933.8,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-close",
+    "id": null,
+    "top": 12374,
+    "h": 756.6,
+    "padTop": 0,
+    "padBottom": 112,
+    "bg": "rgb(255, 253, 246)"
+   }
+  ]
+ },
+ "before-highered-1440": {
+  "path": "/highered",
+  "cls": "dl-path-he js dl-he-ready",
+  "docOverflowX": false,
+  "caseVisible": false,
+  "caseEyebrow": "The hidden costs",
+  "caseH2": "Education moved online, Engagement didn't follow.",
+  "caseLede": "In a classroom, teachers can read the room, catch a glance, and stand by the student who is drifting. None of that survives the move to a screen.",
+  "caseCards": [],
+  "casePunch": "Three crises, one cause: disengagement. Doing nothing is the most expensive option you have.",
+  "caseOutOfViewport": [],
+  "heSwaps": {
+   "heroLead": "Delphinium transforms the Canvas courses you already teach into engaging student experiences and an early-warning system for teachers. No migration. No extra work. Just turn it on.",
+   "coverUpto": "Lower course failures, as much as",
+   "coverNum": "47%!",
+   "studyHeading": "UTAH VALLEY UNIVERSITY STUDIES",
+   "davisNum": "47%",
+   "davisTxt": "lower course failures",
+   "studyPunch": "The courses didn't change. The teachers didn't change. Engagement did, and so did the outcomes.",
+   "deployPunch": null
+  },
+  "sections": [
+   {
+    "cls": "dl-hero",
+    "id": null,
+    "top": 60,
+    "h": 923.6,
+    "padTop": 36,
+    "padBottom": 112,
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   {
+    "cls": "dl-section.dl-teach",
+    "id": null,
+    "top": 983.6,
+    "h": 867.8,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-products",
+    "id": "product",
+    "top": 1851.5,
+    "h": 1071.9,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(245, 244, 250)"
+   },
+   {
+    "cls": "dl-section.dl-products",
+    "id": "community",
+    "top": 2923.4,
+    "h": 1530.4,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-mk",
+    "id": "makeover",
+    "top": 4453.7,
+    "h": 1368.2,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(245, 244, 250)"
+   },
+   {
+    "cls": "dl-section.dl-products",
+    "id": "engagement",
+    "top": 5822,
+    "h": 1282.9,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-proof",
+    "id": "proof",
+    "top": 7104.9,
+    "h": 2284.6,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(238, 244, 244)"
+   },
+   {
+    "cls": "dl-section.dl-how",
+    "id": null,
+    "top": 9389.5,
+    "h": 933.8,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-close",
+    "id": null,
+    "top": 10323.3,
+    "h": 756.6,
+    "padTop": 0,
+    "padBottom": 112,
+    "bg": "rgb(255, 253, 246)"
+   }
+  ]
+ },
+ "after-home-1440": {
+  "path": "/home",
+  "cls": "dl-path-home js",
+  "docOverflowX": false,
+  "caseVisible": true,
+  "caseEyebrow": "THE HIDDEN COSTS",
+  "caseH2": "Education moved online, Engagement didn't follow.",
+  "caseLede": "In a classroom, teachers can read the room, catch a glance, and stand by the student who is drifting. None of that survives the move to a screen.",
+  "caseCards": [
+   {
+    "text": "ATTENDANCE 1 in 4 students are chronically absent, still elevated years after the shift online. RAND / Return to Learn Tracker, 2024-25",
+    "x": 140,
+    "w": 377.6,
+    "h": 184.5,
+    "overflowX": false
+   },
+   {
+    "text": "ACHIEVEMENT 1 in 3 students score below grade level. The lowest performers keep losing ground. The Nation's Report Card (NAEP), 2024",
+    "x": 531.2,
+    "w": 377.6,
+    "h": 184.5,
+    "overflowX": false
+   },
+   {
+    "text": "COST $229K the cost of a K-12 education and lost potential when students don't finish. U.S. Census Bureau, FY2024",
+    "x": 922.4,
+    "w": 377.6,
+    "h": 184.5,
+    "overflowX": false
+   }
+  ],
+  "casePunch": "Three crises, one cause: disengagement. Doing nothing is the most expensive option you have.",
+  "caseOutOfViewport": [],
+  "heSwaps": {
+   "heroLead": "Delphinium transforms the Canvas courses you already teach into engaging student experiences and an early-warning system for parents and teachers. No migration. No extra work. Just turn it on.",
+   "coverUpto": "Cut failures, up to",
+   "coverNum": "31%!",
+   "studyHeading": "THE DAVIS CONNECT STUDY",
+   "davisNum": "31%",
+   "davisTxt": "decrease in course failure rates.",
+   "studyPunch": "The courses didn't change. The teachers didn't change. Engagement did, and so did the outcomes.",
+   "deployPunch": null
+  },
+  "sections": [
+   {
+    "cls": "dl-hero",
+    "id": null,
+    "top": 60,
+    "h": 923.6,
+    "padTop": 36,
+    "padBottom": 112,
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   {
+    "cls": "dl-section.dl-case",
+    "id": null,
+    "top": 983.6,
+    "h": 961.9,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(238, 244, 244)"
+   },
+   {
+    "cls": "dl-section.dl-teach",
+    "id": null,
+    "top": 1945.6,
+    "h": 894.7,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-products",
+    "id": "product",
+    "top": 2840.3,
+    "h": 1071.9,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(245, 244, 250)"
+   },
+   {
+    "cls": "dl-section.dl-products",
+    "id": "community",
+    "top": 3912.2,
+    "h": 1548.6,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-mk",
+    "id": "makeover",
+    "top": 5460.8,
+    "h": 1368.2,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(245, 244, 250)"
+   },
+   {
+    "cls": "dl-section.dl-products",
+    "id": "engagement",
+    "top": 6829,
+    "h": 1282.9,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-logos-section",
+    "id": "customers",
+    "top": 8112,
+    "h": 442.2,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(245, 244, 250)"
+   },
+   {
+    "cls": "dl-section.dl-videos",
+    "id": "videos",
+    "top": 8554.1,
+    "h": 773.1,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-proof",
+    "id": "proof",
+    "top": 9327.2,
+    "h": 2113,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(238, 244, 244)"
+   },
+   {
+    "cls": "dl-section.dl-how",
+    "id": null,
+    "top": 11440.2,
+    "h": 933.8,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-close",
+    "id": null,
+    "top": 12374,
+    "h": 756.6,
+    "padTop": 0,
+    "padBottom": 112,
+    "bg": "rgb(255, 253, 246)"
+   }
+  ]
+ },
+ "after-highered-1440": {
+  "path": "/highered",
+  "cls": "dl-path-he js dl-he-ready",
+  "docOverflowX": false,
+  "caseVisible": true,
+  "caseEyebrow": "THE HIDDEN COSTS",
+  "caseH2": "Education moved online, Engagement didn't follow.",
+  "caseLede": "In a classroom, faculty can read the room, catch a glance, and stand by the student who is drifting. None of that survives the move to a screen.",
+  "caseCards": [
+   {
+    "text": "RETENTION ~1 in 3 first-year students don't return for year two. Seats and tuition that never come back. NCES / IPEDS retention",
+    "x": 140,
+    "w": 573.2,
+    "h": 184.5,
+    "overflowX": false
+   },
+   {
+    "text": "COMPLETION ~40% of students finish a bachelor's in 4 years (about 60% in 6). Time-to-degree keeps stretching. NCES graduation rates",
+    "x": 726.8,
+    "w": 573.2,
+    "h": 184.5,
+    "overflowX": false
+   }
+  ],
+  "casePunch": "Two crises, one cause: disengagement. Doing nothing is the most expensive option you have.",
+  "caseOutOfViewport": [],
+  "heSwaps": {
+   "heroLead": "Delphinium transforms the Canvas courses you already teach into engaging student experiences and an early-warning system for teachers. No migration. No extra work. Just turn it on.",
+   "coverUpto": "Lower course failures, as much as",
+   "coverNum": "47%!",
+   "studyHeading": "UTAH VALLEY UNIVERSITY STUDIES",
+   "davisNum": "47%",
+   "davisTxt": "lower course failures",
+   "studyPunch": "The courses didn't change. The teachers didn't change. Engagement did, and so did the outcomes.",
+   "deployPunch": null
+  },
+  "sections": [
+   {
+    "cls": "dl-hero",
+    "id": null,
+    "top": 60,
+    "h": 923.6,
+    "padTop": 36,
+    "padBottom": 112,
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   {
+    "cls": "dl-section.dl-case",
+    "id": null,
+    "top": 983.6,
+    "h": 931.5,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(238, 244, 244)"
+   },
+   {
+    "cls": "dl-section.dl-teach",
+    "id": null,
+    "top": 1915.2,
+    "h": 867.8,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-products",
+    "id": "product",
+    "top": 2783,
+    "h": 1071.9,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(245, 244, 250)"
+   },
+   {
+    "cls": "dl-section.dl-products",
+    "id": "community",
+    "top": 3854.9,
+    "h": 1530.4,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-mk",
+    "id": "makeover",
+    "top": 5385.3,
+    "h": 1368.2,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(245, 244, 250)"
+   },
+   {
+    "cls": "dl-section.dl-products",
+    "id": "engagement",
+    "top": 6753.5,
+    "h": 1282.9,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-proof",
+    "id": "proof",
+    "top": 8036.4,
+    "h": 2284.6,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(238, 244, 244)"
+   },
+   {
+    "cls": "dl-section.dl-how",
+    "id": null,
+    "top": 10321,
+    "h": 933.8,
+    "padTop": 112,
+    "padBottom": 112,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-close",
+    "id": null,
+    "top": 11254.8,
+    "h": 756.6,
+    "padTop": 0,
+    "padBottom": 112,
+    "bg": "rgb(255, 253, 246)"
+   }
+  ]
+ },
+ "before-home-390": {
+  "path": "/home",
+  "cls": "dl-path-home js",
+  "docOverflowX": false,
+  "caseVisible": true,
+  "caseEyebrow": "THE HIDDEN COSTS",
+  "caseH2": "Education moved online, Engagement didn't follow.",
+  "caseLede": "In a classroom, teachers can read the room, catch a glance, and stand by the student who is drifting. None of that survives the move to a screen.",
+  "caseCards": [
+   {
+    "text": "ATTENDANCE 1 in 4 students are chronically absent, still elevated years after the shift online. RAND / Return to Learn Tracker, 2024-25",
+    "x": 20,
+    "w": 350,
+    "h": 173.9,
+    "overflowX": false
+   },
+   {
+    "text": "ACHIEVEMENT 1 in 3 students score below grade level. The lowest performers keep losing ground. The Nation's Report Card (NAEP), 2024",
+    "x": 20,
+    "w": 350,
+    "h": 173.9,
+    "overflowX": false
+   },
+   {
+    "text": "COST $229K the cost of a K-12 education and lost potential when students don't finish. U.S. Census Bureau, FY2024",
+    "x": 20,
+    "w": 350,
+    "h": 173.9,
+    "overflowX": false
+   }
+  ],
+  "casePunch": "Three crises, one cause: disengagement. Doing nothing is the most expensive option you have.",
+  "caseOutOfViewport": [],
+  "heSwaps": {
+   "heroLead": "Delphinium transforms the Canvas courses you already teach into engaging student experiences and an early-warning system for parents and teachers. No migration. No extra work. Just turn it on.",
+   "coverUpto": "Cut failures, up to",
+   "coverNum": "31%!",
+   "studyHeading": "THE DAVIS CONNECT STUDY",
+   "davisNum": "31%",
+   "davisTxt": "decrease in course failure rates.",
+   "studyPunch": "The courses didn't change. The teachers didn't change. Engagement did, and so did the outcomes.",
+   "deployPunch": null
+  },
+  "sections": [
+   {
+    "cls": "dl-hero",
+    "id": null,
+    "top": 56,
+    "h": 921.7,
+    "padTop": 20,
+    "padBottom": 64,
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   {
+    "cls": "dl-section.dl-case",
+    "id": null,
+    "top": 977.7,
+    "h": 1217.9,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(238, 244, 244)"
+   },
+   {
+    "cls": "dl-section.dl-teach",
+    "id": null,
+    "top": 2195.6,
+    "h": 1372.2,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-products",
+    "id": "product",
+    "top": 3567.8,
+    "h": 1513,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(245, 244, 250)"
+   },
+   {
+    "cls": "dl-section.dl-products",
+    "id": "community",
+    "top": 5080.8,
+    "h": 2223.5,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-mk",
+    "id": "makeover",
+    "top": 7304.3,
+    "h": 1650.7,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(245, 244, 250)"
+   },
+   {
+    "cls": "dl-section.dl-products",
+    "id": "engagement",
+    "top": 8955.1,
+    "h": 1729.3,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-logos-section",
+    "id": "customers",
+    "top": 10684.3,
+    "h": 555,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(245, 244, 250)"
+   },
+   {
+    "cls": "dl-section.dl-videos",
+    "id": "videos",
+    "top": 11239.3,
+    "h": 820.9,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-proof",
+    "id": "proof",
+    "top": 12060.2,
+    "h": 3650.6,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(238, 244, 244)"
+   },
+   {
+    "cls": "dl-section.dl-how",
+    "id": null,
+    "top": 15710.8,
+    "h": 1195.4,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-close",
+    "id": null,
+    "top": 16906.2,
+    "h": 1038,
+    "padTop": 0,
+    "padBottom": 64,
+    "bg": "rgb(255, 253, 246)"
+   }
+  ]
+ },
+ "before-highered-390": {
+  "path": "/highered",
+  "cls": "dl-path-he js dl-he-ready",
+  "docOverflowX": false,
+  "caseVisible": false,
+  "caseEyebrow": "The hidden costs",
+  "caseH2": "Education moved online, Engagement didn't follow.",
+  "caseLede": "In a classroom, teachers can read the room, catch a glance, and stand by the student who is drifting. None of that survives the move to a screen.",
+  "caseCards": [],
+  "casePunch": "Three crises, one cause: disengagement. Doing nothing is the most expensive option you have.",
+  "caseOutOfViewport": [],
+  "heSwaps": {
+   "heroLead": "Delphinium transforms the Canvas courses you already teach into engaging student experiences and an early-warning system for teachers. No migration. No extra work. Just turn it on.",
+   "coverUpto": "Lower course failures, as much as",
+   "coverNum": "47%!",
+   "studyHeading": "UTAH VALLEY UNIVERSITY STUDIES",
+   "davisNum": "47%",
+   "davisTxt": "lower course failures",
+   "studyPunch": "The courses didn't change. The teachers didn't change. Engagement did, and so did the outcomes.",
+   "deployPunch": null
+  },
+  "sections": [
+   {
+    "cls": "dl-hero",
+    "id": null,
+    "top": 56,
+    "h": 921.7,
+    "padTop": 20,
+    "padBottom": 64,
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   {
+    "cls": "dl-section.dl-teach",
+    "id": null,
+    "top": 977.7,
+    "h": 1192.8,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-products",
+    "id": "product",
+    "top": 2170.5,
+    "h": 1290,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(245, 244, 250)"
+   },
+   {
+    "cls": "dl-section.dl-products",
+    "id": "community",
+    "top": 3460.5,
+    "h": 2160,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-mk",
+    "id": "makeover",
+    "top": 5620.5,
+    "h": 1650.7,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(245, 244, 250)"
+   },
+   {
+    "cls": "dl-section.dl-products",
+    "id": "engagement",
+    "top": 7271.3,
+    "h": 1729.3,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-proof",
+    "id": "proof",
+    "top": 9000.5,
+    "h": 3871.4,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(238, 244, 244)"
+   },
+   {
+    "cls": "dl-section.dl-how",
+    "id": null,
+    "top": 12871.9,
+    "h": 1195.4,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-close",
+    "id": null,
+    "top": 14067.3,
+    "h": 1038,
+    "padTop": 0,
+    "padBottom": 64,
+    "bg": "rgb(255, 253, 246)"
+   }
+  ]
+ },
+ "after-home-390": {
+  "path": "/home",
+  "cls": "dl-path-home js",
+  "docOverflowX": false,
+  "caseVisible": true,
+  "caseEyebrow": "THE HIDDEN COSTS",
+  "caseH2": "Education moved online, Engagement didn't follow.",
+  "caseLede": "In a classroom, teachers can read the room, catch a glance, and stand by the student who is drifting. None of that survives the move to a screen.",
+  "caseCards": [
+   {
+    "text": "ATTENDANCE 1 in 4 students are chronically absent, still elevated years after the shift online. RAND / Return to Learn Tracker, 2024-25",
+    "x": 20,
+    "w": 350,
+    "h": 173.9,
+    "overflowX": false
+   },
+   {
+    "text": "ACHIEVEMENT 1 in 3 students score below grade level. The lowest performers keep losing ground. The Nation's Report Card (NAEP), 2024",
+    "x": 20,
+    "w": 350,
+    "h": 173.9,
+    "overflowX": false
+   },
+   {
+    "text": "COST $229K the cost of a K-12 education and lost potential when students don't finish. U.S. Census Bureau, FY2024",
+    "x": 20,
+    "w": 350,
+    "h": 173.9,
+    "overflowX": false
+   }
+  ],
+  "casePunch": "Three crises, one cause: disengagement. Doing nothing is the most expensive option you have.",
+  "caseOutOfViewport": [],
+  "heSwaps": {
+   "heroLead": "Delphinium transforms the Canvas courses you already teach into engaging student experiences and an early-warning system for parents and teachers. No migration. No extra work. Just turn it on.",
+   "coverUpto": "Cut failures, up to",
+   "coverNum": "31%!",
+   "studyHeading": "THE DAVIS CONNECT STUDY",
+   "davisNum": "31%",
+   "davisTxt": "decrease in course failure rates.",
+   "studyPunch": "The courses didn't change. The teachers didn't change. Engagement did, and so did the outcomes.",
+   "deployPunch": null
+  },
+  "sections": [
+   {
+    "cls": "dl-hero",
+    "id": null,
+    "top": 56,
+    "h": 921.7,
+    "padTop": 20,
+    "padBottom": 64,
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   {
+    "cls": "dl-section.dl-case",
+    "id": null,
+    "top": 977.7,
+    "h": 1217.9,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(238, 244, 244)"
+   },
+   {
+    "cls": "dl-section.dl-teach",
+    "id": null,
+    "top": 2195.6,
+    "h": 1372.2,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-products",
+    "id": "product",
+    "top": 3567.8,
+    "h": 1513,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(245, 244, 250)"
+   },
+   {
+    "cls": "dl-section.dl-products",
+    "id": "community",
+    "top": 5080.8,
+    "h": 2223.5,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-mk",
+    "id": "makeover",
+    "top": 7304.3,
+    "h": 1650.7,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(245, 244, 250)"
+   },
+   {
+    "cls": "dl-section.dl-products",
+    "id": "engagement",
+    "top": 8955.1,
+    "h": 1729.3,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-logos-section",
+    "id": "customers",
+    "top": 10684.3,
+    "h": 555,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(245, 244, 250)"
+   },
+   {
+    "cls": "dl-section.dl-videos",
+    "id": "videos",
+    "top": 11239.3,
+    "h": 820.9,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-proof",
+    "id": "proof",
+    "top": 12060.2,
+    "h": 3650.6,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(238, 244, 244)"
+   },
+   {
+    "cls": "dl-section.dl-how",
+    "id": null,
+    "top": 15710.8,
+    "h": 1195.4,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-close",
+    "id": null,
+    "top": 16906.2,
+    "h": 1038,
+    "padTop": 0,
+    "padBottom": 64,
+    "bg": "rgb(255, 253, 246)"
+   }
+  ]
+ },
+ "after-highered-390": {
+  "path": "/highered",
+  "cls": "dl-path-he js dl-he-ready",
+  "docOverflowX": false,
+  "caseVisible": true,
+  "caseEyebrow": "THE HIDDEN COSTS",
+  "caseH2": "Education moved online, Engagement didn't follow.",
+  "caseLede": "In a classroom, faculty can read the room, catch a glance, and stand by the student who is drifting. None of that survives the move to a screen.",
+  "caseCards": [
+   {
+    "text": "RETENTION ~1 in 3 first-year students don't return for year two. Seats and tuition that never come back. NCES / IPEDS retention",
+    "x": 20,
+    "w": 350,
+    "h": 173.9,
+    "overflowX": false
+   },
+   {
+    "text": "COMPLETION ~40% of students finish a bachelor's in 4 years (about 60% in 6). Time-to-degree keeps stretching. NCES graduation rates",
+    "x": 20,
+    "w": 350,
+    "h": 173.9,
+    "overflowX": false
+   }
+  ],
+  "casePunch": "Two crises, one cause: disengagement. Doing nothing is the most expensive option you have.",
+  "caseOutOfViewport": [],
+  "heSwaps": {
+   "heroLead": "Delphinium transforms the Canvas courses you already teach into engaging student experiences and an early-warning system for teachers. No migration. No extra work. Just turn it on.",
+   "coverUpto": "Lower course failures, as much as",
+   "coverNum": "47%!",
+   "studyHeading": "UTAH VALLEY UNIVERSITY STUDIES",
+   "davisNum": "47%",
+   "davisTxt": "lower course failures",
+   "studyPunch": "The courses didn't change. The teachers didn't change. Engagement did, and so did the outcomes.",
+   "deployPunch": null
+  },
+  "sections": [
+   {
+    "cls": "dl-hero",
+    "id": null,
+    "top": 56,
+    "h": 921.7,
+    "padTop": 20,
+    "padBottom": 64,
+    "bg": "rgba(0, 0, 0, 0)"
+   },
+   {
+    "cls": "dl-section.dl-case",
+    "id": null,
+    "top": 977.7,
+    "h": 1030.4,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(238, 244, 244)"
+   },
+   {
+    "cls": "dl-section.dl-teach",
+    "id": null,
+    "top": 2008.1,
+    "h": 1192.8,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-products",
+    "id": "product",
+    "top": 3201,
+    "h": 1290,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(245, 244, 250)"
+   },
+   {
+    "cls": "dl-section.dl-products",
+    "id": "community",
+    "top": 4490.9,
+    "h": 2160,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-mk",
+    "id": "makeover",
+    "top": 6651,
+    "h": 1650.7,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(245, 244, 250)"
+   },
+   {
+    "cls": "dl-section.dl-products",
+    "id": "engagement",
+    "top": 8301.7,
+    "h": 1729.3,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-proof",
+    "id": "proof",
+    "top": 10030.9,
+    "h": 3871.4,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(238, 244, 244)"
+   },
+   {
+    "cls": "dl-section.dl-how",
+    "id": null,
+    "top": 13902.3,
+    "h": 1195.4,
+    "padTop": 64,
+    "padBottom": 64,
+    "bg": "rgb(255, 253, 246)"
+   },
+   {
+    "cls": "dl-section.dl-close",
+    "id": null,
+    "top": 15097.7,
+    "h": 1038,
+    "padTop": 0,
+    "padBottom": 64,
+    "bg": "rgb(255, 253, 246)"
+   }
+  ]
+ },
+ "homePixelIdentical": {
+  "390": true,
+  "1440": true
+ }
+}

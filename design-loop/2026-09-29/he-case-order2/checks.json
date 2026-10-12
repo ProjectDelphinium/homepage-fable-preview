@@ -1,0 +1,226 @@
+{
+ "he-1440": {
+  "path": "/highered",
+  "html": "dl-path-he js dl-he-ready",
+  "visual": [
+   "Retention | ~4 in 10 | National Center for Education Statistics (order -1, cols span 2/auto, 378x207)",
+   "Higher withdrawal rates | 10–15% | Columbia University (order -1, cols span 2/auto, 378x207)",
+   "Completion | ~40% | NCES graduation rates (order 0, cols span 2/auto, 378x207)",
+   "Retention | ~1 in 3 | NCES / IPEDS retention (order 0, cols span 3/auto, 573x185)",
+   "Earnings and employment | ~$1M & 2x | Pew Research Center (order 0, cols span 3/auto, 573x185)"
+  ],
+  "rows": [
+   {
+    "cards": [
+     "Retention ~4 in 10",
+     "Higher withdrawal rates 10–15%",
+     "Completion ~40%"
+    ],
+    "heights": [
+     207,
+     207,
+     207
+    ],
+    "equalHeights": true,
+    "partsAligned": true
+   },
+   {
+    "cards": [
+     "Retention ~1 in 3",
+     "Earnings and employment ~$1M & 2x"
+    ],
+    "heights": [
+     185,
+     185
+    ],
+    "equalHeights": true,
+    "partsAligned": true
+   }
+  ],
+  "docOverflow": false
+ },
+ "he-1040": {
+  "path": "/highered",
+  "html": "dl-path-he js dl-he-ready",
+  "visual": [
+   "Retention | ~4 in 10 | National Center for Education Statistics (order -1, cols span 2/auto, 324x198)",
+   "Higher withdrawal rates | 10–15% | Columbia University (order -1, cols span 2/auto, 324x198)",
+   "Completion | ~40% | NCES graduation rates (order 0, cols span 2/auto, 324x198)",
+   "Retention | ~1 in 3 | NCES / IPEDS retention (order 0, cols span 3/auto, 493x175)",
+   "Earnings and employment | ~$1M & 2x | Pew Research Center (order 0, cols span 3/auto, 493x175)"
+  ],
+  "rows": [
+   {
+    "cards": [
+     "Retention ~4 in 10",
+     "Higher withdrawal rates 10–15%",
+     "Completion ~40%"
+    ],
+    "heights": [
+     198,
+     198,
+     198
+    ],
+    "equalHeights": true,
+    "partsAligned": true
+   },
+   {
+    "cards": [
+     "Retention ~1 in 3",
+     "Earnings and employment ~$1M & 2x"
+    ],
+    "heights": [
+     175,
+     175
+    ],
+    "equalHeights": true,
+    "partsAligned": true
+   }
+  ],
+  "docOverflow": false
+ },
+ "he-760": {
+  "path": "/highered",
+  "html": "dl-path-he js dl-he-ready",
+  "visual": [
+   "Retention | ~4 in 10 | National Center for Education Statistics (order -1, cols span 2/auto, 231x260)",
+   "Higher withdrawal rates | 10–15% | Columbia University (order -1, cols span 2/auto, 231x260)",
+   "Completion | ~40% | NCES graduation rates (order 0, cols span 2/auto, 231x260)",
+   "Retention | ~1 in 3 | NCES / IPEDS retention (order 0, cols span 3/auto, 353x174)",
+   "Earnings and employment | ~$1M & 2x | Pew Research Center (order 0, cols span 3/auto, 353x174)"
+  ],
+  "rows": [
+   {
+    "cards": [
+     "Retention ~4 in 10",
+     "Higher withdrawal rates 10–15%",
+     "Completion ~40%"
+    ],
+    "heights": [
+     260,
+     260,
+     260
+    ],
+    "equalHeights": true,
+    "partsAligned": false
+   },
+   {
+    "cards": [
+     "Retention ~1 in 3",
+     "Earnings and employment ~$1M & 2x"
+    ],
+    "heights": [
+     174,
+     174
+    ],
+    "equalHeights": true,
+    "partsAligned": true
+   }
+  ],
+  "docOverflow": false
+ },
+ "he-390": {
+  "path": "/highered",
+  "html": "dl-path-he js dl-he-ready",
+  "visual": [
+   "Retention | ~4 in 10 | National Center for Education Statistics (order -1, cols auto/auto, 350x197)",
+   "Higher withdrawal rates | 10–15% | Columbia University (order -1, cols auto/auto, 350x174)",
+   "Completion | ~40% | NCES graduation rates (order 0, cols auto/auto, 350x174)",
+   "Retention | ~1 in 3 | NCES / IPEDS retention (order 0, cols auto/auto, 350x174)",
+   "Earnings and employment | ~$1M & 2x | Pew Research Center (order 0, cols auto/auto, 350x174)"
+  ],
+  "rows": [
+   {
+    "cards": [
+     "Retention ~4 in 10"
+    ],
+    "heights": [
+     197
+    ],
+    "equalHeights": true,
+    "partsAligned": true
+   },
+   {
+    "cards": [
+     "Higher withdrawal rates 10–15%"
+    ],
+    "heights": [
+     174
+    ],
+    "equalHeights": true,
+    "partsAligned": true
+   },
+   {
+    "cards": [
+     "Completion ~40%"
+    ],
+    "heights": [
+     174
+    ],
+    "equalHeights": true,
+    "partsAligned": true
+   },
+   {
+    "cards": [
+     "Retention ~1 in 3"
+    ],
+    "heights": [
+     174
+    ],
+    "equalHeights": true,
+    "partsAligned": true
+   },
+   {
+    "cards": [
+     "Earnings and employment ~$1M & 2x"
+    ],
+    "heights": [
+     174
+    ],
+    "equalHeights": true,
+    "partsAligned": true
+   }
+  ],
+  "docOverflow": false
+ },
+ "home-1440": {
+  "html": "dl-path-home js",
+  "visual": [
+   "Attendance | 1 in 4 | RAND / Return to Learn Tracker, 2024-25 (order 0, cols auto/auto, 378x185)",
+   "Achievement | 1 in 3 | The Nation's Report Card (NAEP), 2024 (order 0, cols auto/auto, 378x185)",
+   "Cost | $229K | U.S. Census Bureau, FY2024 (order 0, cols auto/auto, 378x185)"
+  ],
+  "control": true,
+  "identicalWithoutOrderRule": true
+ },
+ "home-1040": {
+  "html": "dl-path-home js",
+  "visual": [
+   "Attendance | 1 in 4 | RAND / Return to Learn Tracker, 2024-25 (order 0, cols auto/auto, 324x175)",
+   "Achievement | 1 in 3 | The Nation's Report Card (NAEP), 2024 (order 0, cols auto/auto, 324x175)",
+   "Cost | $229K | U.S. Census Bureau, FY2024 (order 0, cols auto/auto, 324x175)"
+  ],
+  "control": true,
+  "identicalWithoutOrderRule": true
+ },
+ "home-760": {
+  "html": "dl-path-home js",
+  "visual": [
+   "Attendance | 1 in 4 | RAND / Return to Learn Tracker, 2024-25 (order 0, cols auto/auto, 231x214)",
+   "Achievement | 1 in 3 | The Nation's Report Card (NAEP), 2024 (order 0, cols auto/auto, 231x214)",
+   "Cost | $229K | U.S. Census Bureau, FY2024 (order 0, cols auto/auto, 231x214)"
+  ],
+  "control": true,
+  "identicalWithoutOrderRule": true
+ },
+ "home-390": {
+  "html": "dl-path-home js",
+  "visual": [
+   "Attendance | 1 in 4 | RAND / Return to Learn Tracker, 2024-25 (order 0, cols auto/auto, 350x174)",
+   "Achievement | 1 in 3 | The Nation's Report Card (NAEP), 2024 (order 0, cols auto/auto, 350x174)",
+   "Cost | $229K | U.S. Census Bureau, FY2024 (order 0, cols auto/auto, 350x174)"
+  ],
+  "control": true,
+  "identicalWithoutOrderRule": true
+ }
+}

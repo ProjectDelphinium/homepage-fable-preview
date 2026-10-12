@@ -1,0 +1,46 @@
+{
+ "1440 /home": {
+  "htmlClass": "dl-path-home js",
+  "innerHTML": "Delphinium transforms the Canvas courses you already teach into <b>engaging student experiences</b> and an <b>early-warning system</b> for parents and teachers. No migration. No extra work. <em>Just turn it on.</em>",
+  "visibility": "visible",
+  "rect": [
+   132.5,
+   451.4375,
+   537.546875,
+   133.0625
+  ]
+ },
+ "1440 /highered": {
+  "htmlClass": "dl-path-he js dl-he-ready",
+  "innerHTML": "Delphinium transforms the Canvas courses you already teach into <b>engaging student experiences</b> and an <b>early-warning system</b> for teachers. No migration. No extra work. <em>Just turn it on.</em>",
+  "visibility": "visible",
+  "rect": [
+   132.5,
+   451.4375,
+   537.546875,
+   133.0625
+  ]
+ },
+ "390 /home": {
+  "htmlClass": "dl-path-home js",
+  "innerHTML": "Delphinium transforms the Canvas courses you already teach into <b>engaging student experiences</b> and an <b>early-warning system</b> for parents and teachers. No migration. No extra work. <em>Just turn it on.</em>",
+  "visibility": "visible",
+  "rect": [
+   20,
+   273.28125,
+   350,
+   147.1875
+  ]
+ },
+ "390 /highered": {
+  "htmlClass": "dl-path-he js dl-he-ready",
+  "innerHTML": "Delphinium transforms the Canvas courses you already teach into <b>engaging student experiences</b> and an <b>early-warning system</b> for teachers. No migration. No extra work. <em>Just turn it on.</em>",
+  "visibility": "visible",
+  "rect": [
+   20,
+   273.28125,
+   350,
+   147.1875
+  ]
+ }
+}

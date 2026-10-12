@@ -1,0 +1,474 @@
+[
+ [
+  "highered-1440 link",
+  {
+   "html": [
+    "dl-path-he",
+    "dl-he-ready"
+   ],
+   "innerText": "Watch: Higher Ed, elevated",
+   "yt": "9mfMC9jC6lU",
+   "dataTitle": "Watch: Higher Ed, elevated",
+   "title": "Watch: Higher Ed, elevated",
+   "box": {
+    "w": 242.9,
+    "h": 48.4,
+    "iconH": 32
+   },
+   "textLines": 1,
+   "whiteSpace": "normal",
+   "radius": "999px",
+   "border": "1px solid rgb(43, 47, 126)",
+   "sameRowAsButton": true,
+   "fitsRow": true,
+   "vw": 1440,
+   "overflowX": false
+  }
+ ],
+ [
+  "PASS highered-1440 visible label",
+  "Watch: Higher Ed, elevated"
+ ],
+ [
+  "PASS highered-1440 data-title",
+  "Watch: Higher Ed, elevated"
+ ],
+ [
+  "PASS highered-1440 title",
+  "Watch: Higher Ed, elevated"
+ ],
+ [
+  "PASS highered-1440 video id",
+  "9mfMC9jC6lU"
+ ],
+ [
+  "PASS highered-1440 one line",
+  {
+   "lines": 1,
+   "box": {
+    "w": 242.9,
+    "h": 48.4,
+    "iconH": 32
+   }
+  }
+ ],
+ [
+  "PASS highered-1440 no x overflow",
+  {
+   "overflowX": false,
+   "fitsRow": true
+  }
+ ],
+ [
+  "highered-1440 link a11y",
+  {
+   "role": "link",
+   "name": "Watch: Higher Ed, elevated"
+  }
+ ],
+ [
+  "PASS highered-1440 link accessible name",
+  {
+   "role": "link",
+   "name": "Watch: Higher Ed, elevated"
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-hero.png"
+ ],
+ [
+  "shot",
+  "highered-1440-actions.png"
+ ],
+ [
+  "highered-1440 modal",
+  {
+   "open": true,
+   "title": "Watch: Higher Ed, elevated",
+   "iframe": "https://www.youtube.com/embed/9mfMC9jC6lU",
+   "iframeTitle": "Watch: Higher Ed, elevated"
+  }
+ ],
+ [
+  "PASS highered-1440 modal heading",
+  "Watch: Higher Ed, elevated"
+ ],
+ [
+  "PASS highered-1440 modal iframe title",
+  "Watch: Higher Ed, elevated"
+ ],
+ [
+  "PASS highered-1440 modal video",
+  "https://www.youtube.com/embed/9mfMC9jC6lU"
+ ],
+ [
+  "PASS highered-1440 dialog accessible name",
+  {
+   "role": "dialog",
+   "name": "Watch: Higher Ed, elevated"
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-modal.png"
+ ],
+ [
+  "home-1440 link",
+  {
+   "html": [
+    "dl-path-home"
+   ],
+   "innerText": "Watch: Online learning, elevated",
+   "yt": "id9dqfNZsf4",
+   "dataTitle": "Watch: Online learning, elevated",
+   "title": "Watch: Online learning, elevated",
+   "box": {
+    "w": 280.2,
+    "h": 48.4,
+    "iconH": 32
+   },
+   "textLines": 1,
+   "whiteSpace": "normal",
+   "radius": "999px",
+   "border": "1px solid rgb(43, 47, 126)",
+   "sameRowAsButton": true,
+   "fitsRow": true,
+   "vw": 1440,
+   "overflowX": false
+  }
+ ],
+ [
+  "PASS home-1440 visible label",
+  "Watch: Online learning, elevated"
+ ],
+ [
+  "PASS home-1440 data-title",
+  "Watch: Online learning, elevated"
+ ],
+ [
+  "PASS home-1440 title",
+  "Watch: Online learning, elevated"
+ ],
+ [
+  "PASS home-1440 video id",
+  "id9dqfNZsf4"
+ ],
+ [
+  "PASS home-1440 one line",
+  {
+   "lines": 1,
+   "box": {
+    "w": 280.2,
+    "h": 48.4,
+    "iconH": 32
+   }
+  }
+ ],
+ [
+  "PASS home-1440 no x overflow",
+  {
+   "overflowX": false,
+   "fitsRow": true
+  }
+ ],
+ [
+  "home-1440 link a11y",
+  {
+   "role": "link",
+   "name": "Watch: Online learning, elevated"
+  }
+ ],
+ [
+  "PASS home-1440 link accessible name",
+  {
+   "role": "link",
+   "name": "Watch: Online learning, elevated"
+  }
+ ],
+ [
+  "PASS home-1440 pixel-identical to old markup",
+  {
+   "afterLen": 14232,
+   "beforeLen": 14232
+  }
+ ],
+ [
+  "shot",
+  "home-1440-hero.png"
+ ],
+ [
+  "shot",
+  "home-1440-actions.png"
+ ],
+ [
+  "home-1440 modal",
+  {
+   "open": true,
+   "title": "Watch: Online learning, elevated",
+   "iframe": "https://www.youtube.com/embed/id9dqfNZsf4",
+   "iframeTitle": "Watch: Online learning, elevated"
+  }
+ ],
+ [
+  "PASS home-1440 modal heading",
+  "Watch: Online learning, elevated"
+ ],
+ [
+  "PASS home-1440 modal iframe title",
+  "Watch: Online learning, elevated"
+ ],
+ [
+  "PASS home-1440 modal video",
+  "https://www.youtube.com/embed/id9dqfNZsf4"
+ ],
+ [
+  "PASS home-1440 dialog accessible name",
+  {
+   "role": "dialog",
+   "name": "Watch: Online learning, elevated"
+  }
+ ],
+ [
+  "shot",
+  "home-1440-modal.png"
+ ],
+ [
+  "highered-390 link",
+  {
+   "html": [
+    "dl-path-he",
+    "dl-he-ready"
+   ],
+   "innerText": "Watch: Higher Ed, elevated",
+   "yt": "9mfMC9jC6lU",
+   "dataTitle": "Watch: Higher Ed, elevated",
+   "title": "Watch: Higher Ed, elevated",
+   "box": {
+    "w": 242.9,
+    "h": 48.4,
+    "iconH": 32
+   },
+   "textLines": 1,
+   "whiteSpace": "normal",
+   "radius": "999px",
+   "border": "1px solid rgb(43, 47, 126)",
+   "sameRowAsButton": false,
+   "fitsRow": true,
+   "vw": 390,
+   "overflowX": false
+  }
+ ],
+ [
+  "PASS highered-390 visible label",
+  "Watch: Higher Ed, elevated"
+ ],
+ [
+  "PASS highered-390 data-title",
+  "Watch: Higher Ed, elevated"
+ ],
+ [
+  "PASS highered-390 title",
+  "Watch: Higher Ed, elevated"
+ ],
+ [
+  "PASS highered-390 video id",
+  "9mfMC9jC6lU"
+ ],
+ [
+  "PASS highered-390 one line",
+  {
+   "lines": 1,
+   "box": {
+    "w": 242.9,
+    "h": 48.4,
+    "iconH": 32
+   }
+  }
+ ],
+ [
+  "PASS highered-390 no x overflow",
+  {
+   "overflowX": false,
+   "fitsRow": true
+  }
+ ],
+ [
+  "highered-390 link a11y",
+  {
+   "role": "link",
+   "name": "Watch: Higher Ed, elevated"
+  }
+ ],
+ [
+  "PASS highered-390 link accessible name",
+  {
+   "role": "link",
+   "name": "Watch: Higher Ed, elevated"
+  }
+ ],
+ [
+  "shot",
+  "highered-390-hero.png"
+ ],
+ [
+  "shot",
+  "highered-390-actions.png"
+ ],
+ [
+  "highered-390 modal",
+  {
+   "open": true,
+   "title": "Watch: Higher Ed, elevated",
+   "iframe": "https://www.youtube.com/embed/9mfMC9jC6lU",
+   "iframeTitle": "Watch: Higher Ed, elevated"
+  }
+ ],
+ [
+  "PASS highered-390 modal heading",
+  "Watch: Higher Ed, elevated"
+ ],
+ [
+  "PASS highered-390 modal iframe title",
+  "Watch: Higher Ed, elevated"
+ ],
+ [
+  "PASS highered-390 modal video",
+  "https://www.youtube.com/embed/9mfMC9jC6lU"
+ ],
+ [
+  "PASS highered-390 dialog accessible name",
+  {
+   "role": "dialog",
+   "name": "Watch: Higher Ed, elevated"
+  }
+ ],
+ [
+  "shot",
+  "highered-390-modal.png"
+ ],
+ [
+  "home-390 link",
+  {
+   "html": [
+    "dl-path-home"
+   ],
+   "innerText": "Watch: Online learning, elevated",
+   "yt": "id9dqfNZsf4",
+   "dataTitle": "Watch: Online learning, elevated",
+   "title": "Watch: Online learning, elevated",
+   "box": {
+    "w": 280.2,
+    "h": 48.4,
+    "iconH": 32
+   },
+   "textLines": 1,
+   "whiteSpace": "normal",
+   "radius": "999px",
+   "border": "1px solid rgb(43, 47, 126)",
+   "sameRowAsButton": false,
+   "fitsRow": true,
+   "vw": 390,
+   "overflowX": false
+  }
+ ],
+ [
+  "PASS home-390 visible label",
+  "Watch: Online learning, elevated"
+ ],
+ [
+  "PASS home-390 data-title",
+  "Watch: Online learning, elevated"
+ ],
+ [
+  "PASS home-390 title",
+  "Watch: Online learning, elevated"
+ ],
+ [
+  "PASS home-390 video id",
+  "id9dqfNZsf4"
+ ],
+ [
+  "PASS home-390 one line",
+  {
+   "lines": 1,
+   "box": {
+    "w": 280.2,
+    "h": 48.4,
+    "iconH": 32
+   }
+  }
+ ],
+ [
+  "PASS home-390 no x overflow",
+  {
+   "overflowX": false,
+   "fitsRow": true
+  }
+ ],
+ [
+  "home-390 link a11y",
+  {
+   "role": "link",
+   "name": "Watch: Online learning, elevated"
+  }
+ ],
+ [
+  "PASS home-390 link accessible name",
+  {
+   "role": "link",
+   "name": "Watch: Online learning, elevated"
+  }
+ ],
+ [
+  "PASS home-390 pixel-identical to old markup",
+  {
+   "afterLen": 32284,
+   "beforeLen": 32284
+  }
+ ],
+ [
+  "shot",
+  "home-390-hero.png"
+ ],
+ [
+  "shot",
+  "home-390-actions.png"
+ ],
+ [
+  "home-390 modal",
+  {
+   "open": true,
+   "title": "Watch: Online learning, elevated",
+   "iframe": "https://www.youtube.com/embed/id9dqfNZsf4",
+   "iframeTitle": "Watch: Online learning, elevated"
+  }
+ ],
+ [
+  "PASS home-390 modal heading",
+  "Watch: Online learning, elevated"
+ ],
+ [
+  "PASS home-390 modal iframe title",
+  "Watch: Online learning, elevated"
+ ],
+ [
+  "PASS home-390 modal video",
+  "https://www.youtube.com/embed/id9dqfNZsf4"
+ ],
+ [
+  "PASS home-390 dialog accessible name",
+  {
+   "role": "dialog",
+   "name": "Watch: Online learning, elevated"
+  }
+ ],
+ [
+  "shot",
+  "home-390-modal.png"
+ ],
+ [
+  "fails",
+  0
+ ]
+]

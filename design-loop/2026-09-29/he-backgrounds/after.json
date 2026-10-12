@@ -1,0 +1,470 @@
+{
+ "home": {
+  "body": "rgb(255, 253, 246)",
+  "htmlClass": "dl-path-home js",
+  "sections": [
+   {
+    "top": 60,
+    "name": "dl-hero",
+    "cls": "dl-hero",
+    "shown": true,
+    "bg": "rgba(0, 0, 0, 0)",
+    "img": "",
+    "borderTop": "0px rgb(35, 35, 42)",
+    "borderBottom": "0px rgb(35, 35, 42)",
+    "before": "",
+    "after": "",
+    "h": 924,
+    "painted": [
+     "body.dl-v5 rgb(255, 253, 246)",
+     "body.dl-v5 rgb(255, 253, 246)",
+     "body.dl-v5 rgb(255, 253, 246)"
+    ]
+   },
+   {
+    "top": 983.625,
+    "name": "dl-case",
+    "cls": "dl-section dl-case",
+    "shown": true,
+    "bg": "rgb(238, 244, 244)",
+    "img": "",
+    "borderTop": "0px rgb(35, 35, 42)",
+    "borderBottom": "0px rgb(35, 35, 42)",
+    "before": "",
+    "after": "",
+    "h": 962,
+    "painted": [
+     "section.dl-section.dl-case rgb(238, 244, 244)",
+     "none",
+     "none"
+    ]
+   },
+   {
+    "top": 1945.5625,
+    "name": "dl-teach",
+    "cls": "dl-section dl-teach",
+    "shown": true,
+    "bg": "rgb(255, 253, 246)",
+    "img": "",
+    "borderTop": "0px rgb(35, 35, 42)",
+    "borderBottom": "0px rgb(35, 35, 42)",
+    "before": "",
+    "after": "",
+    "h": 895,
+    "painted": [
+     "section.dl-section.dl-teach rgb(255, 253, 246)",
+     "none",
+     "none"
+    ]
+   },
+   {
+    "top": 2840.28125,
+    "name": "product",
+    "cls": "dl-section dl-products dl-products--ct",
+    "shown": true,
+    "bg": "rgb(245, 244, 250)",
+    "img": "",
+    "borderTop": "0px rgb(35, 35, 42)",
+    "borderBottom": "0px rgb(35, 35, 42)",
+    "before": "",
+    "after": "",
+    "h": 1072,
+    "painted": [
+     "section#product.dl-section.dl-products rgb(245, 244, 250)",
+     "none",
+     "none"
+    ]
+   },
+   {
+    "top": 3912.1875,
+    "name": "community",
+    "cls": "dl-section dl-products",
+    "shown": true,
+    "bg": "rgb(255, 253, 246)",
+    "img": "",
+    "borderTop": "0px rgb(35, 35, 42)",
+    "borderBottom": "0px rgb(35, 35, 42)",
+    "before": "",
+    "after": "",
+    "h": 1549,
+    "painted": [
+     "section#community.dl-section.dl-products rgb(255, 253, 246)",
+     "none",
+     "none"
+    ]
+   },
+   {
+    "top": 5460.8125,
+    "name": "makeover",
+    "cls": "dl-section dl-mk",
+    "shown": true,
+    "bg": "rgb(245, 244, 250)",
+    "img": "",
+    "borderTop": "0px rgb(35, 35, 42)",
+    "borderBottom": "0px rgb(35, 35, 42)",
+    "before": "",
+    "after": "",
+    "h": 1368,
+    "painted": [
+     "section#makeover.dl-section.dl-mk rgb(245, 244, 250)",
+     "none",
+     "none"
+    ]
+   },
+   {
+    "top": 6829.03125,
+    "name": "engagement",
+    "cls": "dl-section dl-products dl-products--eb",
+    "shown": true,
+    "bg": "rgb(255, 253, 246)",
+    "img": "",
+    "borderTop": "0px rgb(35, 35, 42)",
+    "borderBottom": "0px rgb(35, 35, 42)",
+    "before": "",
+    "after": "",
+    "h": 1283,
+    "painted": [
+     "section#engagement.dl-section.dl-products rgb(255, 253, 246)",
+     "none",
+     "none"
+    ]
+   },
+   {
+    "top": 8111.953125,
+    "name": "customers",
+    "cls": "dl-section dl-logos-section",
+    "shown": true,
+    "bg": "rgb(245, 244, 250)",
+    "img": "",
+    "borderTop": "1px rgba(43, 47, 126, 0.12)",
+    "borderBottom": "1px rgba(43, 47, 126, 0.12)",
+    "before": "",
+    "after": "",
+    "h": 442,
+    "painted": [
+     "section#customers.dl-section.dl-logos-section rgb(245, 244, 250)",
+     "none",
+     "none"
+    ]
+   },
+   {
+    "top": 8554.140625,
+    "name": "videos",
+    "cls": "dl-section dl-videos",
+    "shown": true,
+    "bg": "rgb(255, 253, 246)",
+    "img": "",
+    "borderTop": "0px rgb(35, 35, 42)",
+    "borderBottom": "0px rgb(35, 35, 42)",
+    "before": "",
+    "after": "",
+    "h": 773,
+    "painted": [
+     "section#videos.dl-section.dl-videos rgb(255, 253, 246)",
+     "none",
+     "none"
+    ]
+   },
+   {
+    "top": 9327.234375,
+    "name": "proof",
+    "cls": "dl-section dl-proof",
+    "shown": true,
+    "bg": "rgb(238, 244, 244)",
+    "img": "",
+    "borderTop": "0px rgb(35, 35, 42)",
+    "borderBottom": "0px rgb(35, 35, 42)",
+    "before": "",
+    "after": "",
+    "h": 2113,
+    "painted": [
+     "section#proof.dl-section.dl-proof rgb(238, 244, 244)",
+     "none",
+     "none"
+    ]
+   },
+   {
+    "top": 11440.21875,
+    "name": "dl-how",
+    "cls": "dl-section dl-how",
+    "shown": true,
+    "bg": "rgb(255, 253, 246)",
+    "img": "",
+    "borderTop": "0px rgb(35, 35, 42)",
+    "borderBottom": "0px rgb(35, 35, 42)",
+    "before": "",
+    "after": "",
+    "h": 934,
+    "painted": [
+     "section.dl-section.dl-how rgb(255, 253, 246)",
+     "none",
+     "none"
+    ]
+   },
+   {
+    "top": 12373.96875,
+    "name": "dl-close",
+    "cls": "dl-section dl-close",
+    "shown": true,
+    "bg": "rgb(255, 253, 246)",
+    "img": "",
+    "borderTop": "0px rgb(35, 35, 42)",
+    "borderBottom": "0px rgb(35, 35, 42)",
+    "before": "",
+    "after": "",
+    "h": 757,
+    "painted": [
+     "section.dl-section.dl-close rgb(255, 253, 246)",
+     "section.dl-section.dl-close rgb(255, 253, 246)",
+     "section.dl-section.dl-close rgb(255, 253, 246)"
+    ]
+   },
+   {
+    "top": 13130.578125,
+    "name": "dl-footer",
+    "cls": "dl-footer",
+    "shown": true,
+    "bg": "rgb(29, 33, 88)",
+    "img": "",
+    "borderTop": "0px rgba(255, 255, 255, 0.72)",
+    "borderBottom": "0px rgba(255, 255, 255, 0.72)",
+    "before": "",
+    "after": "",
+    "h": 439,
+    "painted": [
+     "footer.dl-footer rgb(29, 33, 88)",
+     "footer.dl-footer rgb(29, 33, 88)",
+     "footer.dl-footer rgb(29, 33, 88)"
+    ]
+   }
+  ]
+ },
+ "highered": {
+  "body": "rgb(255, 253, 246)",
+  "htmlClass": "dl-path-he js dl-he-ready",
+  "sections": [
+   {
+    "top": 60,
+    "name": "dl-hero",
+    "cls": "dl-hero",
+    "shown": true,
+    "bg": "rgba(0, 0, 0, 0)",
+    "img": "",
+    "borderTop": "0px rgb(35, 35, 42)",
+    "borderBottom": "0px rgb(35, 35, 42)",
+    "before": "",
+    "after": "",
+    "h": 924,
+    "painted": [
+     "body.dl-v5 rgb(255, 253, 246)",
+     "body.dl-v5 rgb(255, 253, 246)",
+     "body.dl-v5 rgb(255, 253, 246)"
+    ]
+   },
+   {
+    "top": 0,
+    "name": "dl-case",
+    "cls": "dl-section dl-case",
+    "shown": false,
+    "bg": "rgb(238, 244, 244)",
+    "img": "",
+    "borderTop": "0px rgb(35, 35, 42)",
+    "borderBottom": "0px rgb(35, 35, 42)",
+    "before": "",
+    "after": "",
+    "h": 0,
+    "painted": []
+   },
+   {
+    "top": 983.625,
+    "name": "dl-teach",
+    "cls": "dl-section dl-teach",
+    "shown": true,
+    "bg": "rgb(255, 253, 246)",
+    "img": "",
+    "borderTop": "0px rgb(35, 35, 42)",
+    "borderBottom": "0px rgb(35, 35, 42)",
+    "before": "",
+    "after": "",
+    "h": 756,
+    "painted": [
+     "section.dl-section.dl-teach rgb(255, 253, 246)",
+     "none",
+     "none"
+    ]
+   },
+   {
+    "top": 1739.453125,
+    "name": "product",
+    "cls": "dl-section dl-products dl-products--ct",
+    "shown": true,
+    "bg": "rgb(245, 244, 250)",
+    "img": "",
+    "borderTop": "0px rgb(35, 35, 42)",
+    "borderBottom": "0px rgb(35, 35, 42)",
+    "before": "",
+    "after": "",
+    "h": 1072,
+    "painted": [
+     "section#product.dl-section.dl-products rgb(245, 244, 250)",
+     "none",
+     "none"
+    ]
+   },
+   {
+    "top": 2811.359375,
+    "name": "community",
+    "cls": "dl-section dl-products",
+    "shown": true,
+    "bg": "rgb(255, 253, 246)",
+    "img": "",
+    "borderTop": "0px rgb(35, 35, 42)",
+    "borderBottom": "0px rgb(35, 35, 42)",
+    "before": "",
+    "after": "",
+    "h": 1530,
+    "painted": [
+     "section#community.dl-section.dl-products rgb(255, 253, 246)",
+     "none",
+     "none"
+    ]
+   },
+   {
+    "top": 4341.734375,
+    "name": "makeover",
+    "cls": "dl-section dl-mk",
+    "shown": true,
+    "bg": "rgb(245, 244, 250)",
+    "img": "",
+    "borderTop": "0px rgb(35, 35, 42)",
+    "borderBottom": "0px rgb(35, 35, 42)",
+    "before": "",
+    "after": "",
+    "h": 1368,
+    "painted": [
+     "section#makeover.dl-section.dl-mk rgb(245, 244, 250)",
+     "none",
+     "none"
+    ]
+   },
+   {
+    "top": 5709.953125,
+    "name": "engagement",
+    "cls": "dl-section dl-products dl-products--eb",
+    "shown": true,
+    "bg": "rgb(255, 253, 246)",
+    "img": "",
+    "borderTop": "0px rgb(35, 35, 42)",
+    "borderBottom": "0px rgb(35, 35, 42)",
+    "before": "",
+    "after": "",
+    "h": 1283,
+    "painted": [
+     "section#engagement.dl-section.dl-products rgb(255, 253, 246)",
+     "none",
+     "none"
+    ]
+   },
+   {
+    "top": 0,
+    "name": "customers",
+    "cls": "dl-section dl-logos-section",
+    "shown": false,
+    "bg": "rgb(245, 244, 250)",
+    "img": "",
+    "borderTop": "1px rgba(43, 47, 126, 0.12)",
+    "borderBottom": "1px rgba(43, 47, 126, 0.12)",
+    "before": "",
+    "after": "",
+    "h": 0,
+    "painted": []
+   },
+   {
+    "top": 0,
+    "name": "videos",
+    "cls": "dl-section dl-videos",
+    "shown": false,
+    "bg": "rgb(255, 253, 246)",
+    "img": "",
+    "borderTop": "0px rgb(35, 35, 42)",
+    "borderBottom": "0px rgb(35, 35, 42)",
+    "before": "",
+    "after": "",
+    "h": 0,
+    "painted": []
+   },
+   {
+    "top": 6992.875,
+    "name": "proof",
+    "cls": "dl-section dl-proof",
+    "shown": true,
+    "bg": "rgb(238, 244, 244)",
+    "img": "",
+    "borderTop": "0px rgb(35, 35, 42)",
+    "borderBottom": "0px rgb(35, 35, 42)",
+    "before": "",
+    "after": "",
+    "h": 2306,
+    "painted": [
+     "section#proof.dl-section.dl-proof rgb(238, 244, 244)",
+     "none",
+     "none"
+    ]
+   },
+   {
+    "top": 9299.296875,
+    "name": "dl-how",
+    "cls": "dl-section dl-how",
+    "shown": true,
+    "bg": "rgb(255, 253, 246)",
+    "img": "",
+    "borderTop": "0px rgb(35, 35, 42)",
+    "borderBottom": "0px rgb(35, 35, 42)",
+    "before": "",
+    "after": "",
+    "h": 934,
+    "painted": [
+     "section.dl-section.dl-how rgb(255, 253, 246)",
+     "none",
+     "none"
+    ]
+   },
+   {
+    "top": 10233.046875,
+    "name": "dl-close",
+    "cls": "dl-section dl-close",
+    "shown": true,
+    "bg": "rgb(255, 253, 246)",
+    "img": "",
+    "borderTop": "0px rgb(35, 35, 42)",
+    "borderBottom": "0px rgb(35, 35, 42)",
+    "before": "",
+    "after": "",
+    "h": 757,
+    "painted": [
+     "section.dl-section.dl-close rgb(255, 253, 246)",
+     "section.dl-section.dl-close rgb(255, 253, 246)",
+     "section.dl-section.dl-close rgb(255, 253, 246)"
+    ]
+   },
+   {
+    "top": 10989.65625,
+    "name": "dl-footer",
+    "cls": "dl-footer",
+    "shown": true,
+    "bg": "rgb(29, 33, 88)",
+    "img": "",
+    "borderTop": "0px rgba(255, 255, 255, 0.72)",
+    "borderBottom": "0px rgba(255, 255, 255, 0.72)",
+    "before": "",
+    "after": "",
+    "h": 438,
+    "painted": [
+     "footer.dl-footer rgb(29, 33, 88)",
+     "footer.dl-footer rgb(29, 33, 88)",
+     "footer.dl-footer rgb(29, 33, 88)"
+    ]
+   }
+  ]
+ }
+}

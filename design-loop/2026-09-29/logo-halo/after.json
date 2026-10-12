@@ -1,0 +1,190 @@
+[
+ [
+  "home 1440 logo",
+  {
+   "img": [
+    36,
+    12,
+    140,
+    99
+   ],
+   "navH": 60,
+   "imgFilter": "none",
+   "aFilter": "drop-shadow(rgb(255, 253, 246) 0px 0px 1px) drop-shadow(rgb(255, 253, 246) 0px 0px 1px) drop-shadow(rgb(255, 253, 246) 0px 0px 1px) drop-shadow(rgb(255, 253, 246) 0px 0px 2px) drop-shadow(rgb(255, 253, 246) 0px 0px 2px) drop-shadow(rgb(255, 253, 246) 0px 0px 2px) drop-shadow(rgb(255, 253, 246) 0px 0px 3px) drop-shadow(rgb(255, 253, 246) 0px 0px 3px) drop-shadow(rgb(255, 253, 246) 0px 0px 6px)",
+   "aBg": "none",
+   "clippingAncestors": []
+  }
+ ],
+ [
+  "shot",
+  "after-home-1440-rest.png"
+ ],
+ [
+  "home 1440 h1",
+  {
+   "scrollY": 62,
+   "top": 58,
+   "left": 133
+  }
+ ],
+ [
+  "shot",
+  "after-home-1440-scrolled-h1.png"
+ ],
+ [
+  "home 1440 em",
+  {
+   "scrollY": 475,
+   "top": 78,
+   "left": 133
+  }
+ ],
+ [
+  "shot",
+  "after-home-1440-scrolled-lead.png"
+ ],
+ [
+  "home 390 logo",
+  {
+   "img": [
+    16,
+    10,
+    90,
+    64
+   ],
+   "navH": 56,
+   "imgFilter": "none",
+   "aFilter": "drop-shadow(rgb(255, 253, 246) 0px 0px 1px) drop-shadow(rgb(255, 253, 246) 0px 0px 1px) drop-shadow(rgb(255, 253, 246) 0px 0px 1px) drop-shadow(rgb(255, 253, 246) 0px 0px 2px) drop-shadow(rgb(255, 253, 246) 0px 0px 2px) drop-shadow(rgb(255, 253, 246) 0px 0px 2px) drop-shadow(rgb(255, 253, 246) 0px 0px 3px) drop-shadow(rgb(255, 253, 246) 0px 0px 3px) drop-shadow(rgb(255, 253, 246) 0px 0px 6px)",
+   "aBg": "none",
+   "clippingAncestors": []
+  }
+ ],
+ [
+  "shot",
+  "after-home-390-rest.png"
+ ],
+ [
+  "home 390 h1",
+  {
+   "scrollY": 32,
+   "top": 50,
+   "left": 20
+  }
+ ],
+ [
+  "shot",
+  "after-home-390-scrolled-h1.png"
+ ],
+ [
+  "home 390 em",
+  {
+   "scrollY": 332,
+   "top": 60,
+   "left": 67
+  }
+ ],
+ [
+  "shot",
+  "after-home-390-scrolled-lead.png"
+ ],
+ [
+  "highered 1440 logo",
+  {
+   "img": [
+    36,
+    12,
+    140,
+    99
+   ],
+   "navH": 60,
+   "imgFilter": "none",
+   "aFilter": "drop-shadow(rgb(255, 253, 246) 0px 0px 1px) drop-shadow(rgb(255, 253, 246) 0px 0px 1px) drop-shadow(rgb(255, 253, 246) 0px 0px 1px) drop-shadow(rgb(255, 253, 246) 0px 0px 2px) drop-shadow(rgb(255, 253, 246) 0px 0px 2px) drop-shadow(rgb(255, 253, 246) 0px 0px 2px) drop-shadow(rgb(255, 253, 246) 0px 0px 3px) drop-shadow(rgb(255, 253, 246) 0px 0px 3px) drop-shadow(rgb(255, 253, 246) 0px 0px 6px)",
+   "aBg": "none",
+   "clippingAncestors": []
+  }
+ ],
+ [
+  "shot",
+  "after-highered-1440-rest.png"
+ ],
+ [
+  "highered 1440 h1",
+  {
+   "scrollY": 62,
+   "top": 58,
+   "left": 133
+  }
+ ],
+ [
+  "shot",
+  "after-highered-1440-scrolled-h1.png"
+ ],
+ [
+  "highered 1440 em",
+  {
+   "scrollY": 442,
+   "top": 78,
+   "left": 133
+  }
+ ],
+ [
+  "shot",
+  "after-highered-1440-scrolled-lead.png"
+ ],
+ [
+  "highered 390 logo",
+  {
+   "img": [
+    16,
+    10,
+    90,
+    64
+   ],
+   "navH": 56,
+   "imgFilter": "none",
+   "aFilter": "drop-shadow(rgb(255, 253, 246) 0px 0px 1px) drop-shadow(rgb(255, 253, 246) 0px 0px 1px) drop-shadow(rgb(255, 253, 246) 0px 0px 1px) drop-shadow(rgb(255, 253, 246) 0px 0px 2px) drop-shadow(rgb(255, 253, 246) 0px 0px 2px) drop-shadow(rgb(255, 253, 246) 0px 0px 2px) drop-shadow(rgb(255, 253, 246) 0px 0px 3px) drop-shadow(rgb(255, 253, 246) 0px 0px 3px) drop-shadow(rgb(255, 253, 246) 0px 0px 6px)",
+   "aBg": "none",
+   "clippingAncestors": []
+  }
+ ],
+ [
+  "shot",
+  "after-highered-390-rest.png"
+ ],
+ [
+  "highered 390 h1",
+  {
+   "scrollY": 32,
+   "top": 50,
+   "left": 20
+  }
+ ],
+ [
+  "shot",
+  "after-highered-390-scrolled-h1.png"
+ ],
+ [
+  "highered 390 em",
+  {
+   "scrollY": 303,
+   "top": 60,
+   "left": 20
+  }
+ ],
+ [
+  "shot",
+  "after-highered-390-scrolled-lead.png"
+ ],
+ [
+  "focus",
+  {
+   "cls": "dl-nav__logo",
+   "focusVisible": true,
+   "outline": "solid 3px rgb(43, 47, 126)"
+  }
+ ],
+ [
+  "shot",
+  "after-home-1440-logo-focus.png"
+ ]
+]

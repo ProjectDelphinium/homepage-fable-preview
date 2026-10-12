@@ -1,0 +1,36 @@
+{
+  "/highered-1440": {
+    "found": true,
+    "index": 3,
+    "kicker": "HIGHER WITHDRAWAL RATES",
+    "kickerLines": 1,
+    "num": "10–15%",
+    "body": "for lower income and underprepared students in online courses.",
+    "src": "Columbia University",
+    "rect": {
+      "x": 914.890625,
+      "y": 1428.703125,
+      "w": 377.59375,
+      "h": 207.265625
+    }
+  },
+  "/highered-390": {
+    "found": true,
+    "index": 3,
+    "kicker": "HIGHER WITHDRAWAL RATES",
+    "kickerLines": 1,
+    "num": "10–15%",
+    "body": "for lower income and underprepared students in online courses.",
+    "src": "Columbia University",
+    "rect": {
+      "x": 20,
+      "y": 1816.21875,
+      "w": 350,
+      "h": 173.890625
+    }
+  },
+  "/home-1440": {
+    "found": false,
+    "firstKicker": "ATTENDANCE"
+  }
+}

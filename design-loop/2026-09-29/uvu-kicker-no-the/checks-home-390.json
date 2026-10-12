@@ -1,0 +1,16 @@
+[
+ [
+  "home 390",
+  {
+   "html": "dl-path-home js",
+   "text": "The Davis Connect study",
+   "rendered": "THE DAVIS CONNECT STUDY",
+   "transform": "uppercase",
+   "inDavisCard": true
+  }
+ ],
+ [
+  "shot",
+  "home-390-study-card.png"
+ ]
+]

@@ -1,0 +1,333 @@
+{
+ "failures": [],
+ "results": [
+  [
+   "k12 1440 links",
+   [
+    {
+     "sec": ".dl-hero",
+     "label": "Watch: Online learning, elevated",
+     "yt": "id9dqfNZsf4",
+     "href": "https://www.youtube.com/watch?v=id9dqfNZsf4",
+     "visible": true
+    },
+    {
+     "sec": "#product",
+     "label": "Watch: Insightful data",
+     "yt": "xC1b-9bZW4w",
+     "href": "https://www.youtube.com/watch?v=xC1b-9bZW4w",
+     "visible": true
+    },
+    {
+     "sec": "#community",
+     "label": "Watch: Communication that works!",
+     "yt": "acjbTVs8IUM",
+     "href": "https://www.youtube.com/watch?v=acjbTVs8IUM",
+     "visible": true
+    },
+    {
+     "sec": "#makeover",
+     "label": "Watch: Meaningful engagement",
+     "yt": "Ek-BBS8rP_0",
+     "href": "https://www.youtube.com/watch?v=Ek-BBS8rP_0",
+     "visible": true
+    },
+    {
+     "sec": "#engagement",
+     "label": "Watch: Effortless gamification",
+     "yt": "ejtU7miZWD4",
+     "href": "https://www.youtube.com/watch?v=ejtU7miZWD4",
+     "visible": true
+    },
+    {
+     "sec": "#videos",
+     "label": "",
+     "yt": "Tp3IO0TzvM0",
+     "href": "https://www.youtube.com/watch?v=Tp3IO0TzvM0",
+     "visible": true
+    },
+    {
+     "sec": "#videos",
+     "label": "",
+     "yt": "3N0SXpFT36w",
+     "href": "https://www.youtube.com/watch?v=3N0SXpFT36w",
+     "visible": true
+    },
+    {
+     "sec": "#proof",
+     "label": "Watch: Evidence, research, and theory",
+     "yt": "UgEyq7gUWmM",
+     "href": "https://www.youtube.com/watch?v=UgEyq7gUWmM",
+     "visible": true
+    },
+    {
+     "sec": ".dl-section.dl-how",
+     "label": "Watch: Integration is easy!",
+     "yt": "L90IoF6LGAE",
+     "href": "https://www.youtube.com/watch?v=L90IoF6LGAE",
+     "visible": true
+    }
+   ]
+  ],
+  [
+   "k12 1440 warm iframes",
+   [
+    "id9dqfNZsf4",
+    "xC1b-9bZW4w",
+    "acjbTVs8IUM",
+    "Ek-BBS8rP_0",
+    "ejtU7miZWD4",
+    "Tp3IO0TzvM0",
+    "3N0SXpFT36w",
+    "UgEyq7gUWmM",
+    "L90IoF6LGAE"
+   ]
+  ],
+  [
+   "PASS k12 1440 hero link has id9dqfNZsf4",
+   {
+    "label": "Watch: Online learning, elevated",
+    "href": "https://www.youtube.com/watch?v=id9dqfNZsf4",
+    "title": "Watch: Online learning, elevated"
+   }
+  ],
+  [
+   "PASS k12 1440 hero no 9mfMC9jC6lU left",
+   "9mfMC9jC6lU"
+  ],
+  [
+   "PASS k12 1440 hero warm-up has id9dqfNZsf4",
+   [
+    "id9dqfNZsf4",
+    "xC1b-9bZW4w",
+    "acjbTVs8IUM",
+    "Ek-BBS8rP_0",
+    "ejtU7miZWD4",
+    "Tp3IO0TzvM0",
+    "3N0SXpFT36w",
+    "UgEyq7gUWmM",
+    "L90IoF6LGAE"
+   ]
+  ],
+  [
+   "PASS k12 1440 hero click point hits link",
+   [
+    467.0859375,
+    509.6875
+   ]
+  ],
+  [
+   "PASS k12 1440 hero modal embeds id9dqfNZsf4",
+   {
+    "open": true,
+    "src": "https://www.youtube.com/embed/id9dqfNZsf4?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767",
+    "url": "http://127.0.0.1:8767/home"
+   }
+  ],
+  [
+   "PASS k12 1440 control-tower link has xC1b-9bZW4w",
+   {
+    "label": "Watch: Insightful data",
+    "href": "https://www.youtube.com/watch?v=xC1b-9bZW4w",
+    "title": "Watch: Insightful data"
+   }
+  ],
+  [
+   "PASS k12 1440 control-tower no MBYmCCeZqxo left",
+   "MBYmCCeZqxo"
+  ],
+  [
+   "PASS k12 1440 control-tower warm-up has xC1b-9bZW4w",
+   [
+    "id9dqfNZsf4",
+    "xC1b-9bZW4w",
+    "acjbTVs8IUM",
+    "Ek-BBS8rP_0",
+    "ejtU7miZWD4",
+    "Tp3IO0TzvM0",
+    "3N0SXpFT36w",
+    "UgEyq7gUWmM",
+    "L90IoF6LGAE"
+   ]
+  ],
+  [
+   "PASS k12 1440 control-tower click point hits link",
+   [
+    431.9609375,
+    473.984375
+   ]
+  ],
+  [
+   "PASS k12 1440 control-tower modal embeds xC1b-9bZW4w",
+   {
+    "open": true,
+    "src": "https://www.youtube.com/embed/xC1b-9bZW4w?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767",
+    "url": "http://127.0.0.1:8767/home"
+   }
+  ],
+  [
+   "PASS k12 1440 community link has acjbTVs8IUM",
+   {
+    "label": "Watch: Communication that works!",
+    "href": "https://www.youtube.com/watch?v=acjbTVs8IUM",
+    "title": "Watch: Communication that works!"
+   }
+  ],
+  [
+   "PASS k12 1440 community no 4vzDJ1poyvU left",
+   "4vzDJ1poyvU"
+  ],
+  [
+   "PASS k12 1440 community warm-up has acjbTVs8IUM",
+   [
+    "id9dqfNZsf4",
+    "xC1b-9bZW4w",
+    "acjbTVs8IUM",
+    "Ek-BBS8rP_0",
+    "ejtU7miZWD4",
+    "Tp3IO0TzvM0",
+    "3N0SXpFT36w",
+    "UgEyq7gUWmM",
+    "L90IoF6LGAE"
+   ]
+  ],
+  [
+   "PASS k12 1440 community click point hits link",
+   [
+    971.4765625,
+    492.4375
+   ]
+  ],
+  [
+   "PASS k12 1440 community modal embeds acjbTVs8IUM",
+   {
+    "open": true,
+    "src": "https://www.youtube.com/embed/acjbTVs8IUM?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767",
+    "url": "http://127.0.0.1:8767/home"
+   }
+  ],
+  [
+   "PASS k12 1440 makeover link has Ek-BBS8rP_0",
+   {
+    "label": "Watch: Meaningful engagement",
+    "href": "https://www.youtube.com/watch?v=Ek-BBS8rP_0",
+    "title": "Watch: Meaningful engagement"
+   }
+  ],
+  [
+   "PASS k12 1440 makeover no 63Iu4Xxg_tg left",
+   "63Iu4Xxg_tg"
+  ],
+  [
+   "PASS k12 1440 makeover warm-up has Ek-BBS8rP_0",
+   [
+    "id9dqfNZsf4",
+    "xC1b-9bZW4w",
+    "acjbTVs8IUM",
+    "Ek-BBS8rP_0",
+    "ejtU7miZWD4",
+    "Tp3IO0TzvM0",
+    "3N0SXpFT36w",
+    "UgEyq7gUWmM",
+    "L90IoF6LGAE"
+   ]
+  ],
+  [
+   "PASS k12 1440 makeover click point hits link",
+   [
+    464.5078125,
+    491.84375
+   ]
+  ],
+  [
+   "PASS k12 1440 makeover modal embeds Ek-BBS8rP_0",
+   {
+    "open": true,
+    "src": "https://www.youtube.com/embed/Ek-BBS8rP_0?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767",
+    "url": "http://127.0.0.1:8767/home"
+   }
+  ],
+  [
+   "PASS k12 1440 engagement link has ejtU7miZWD4",
+   {
+    "label": "Watch: Effortless gamification",
+    "href": "https://www.youtube.com/watch?v=ejtU7miZWD4",
+    "title": "Watch: Effortless gamification"
+   }
+  ],
+  [
+   "PASS k12 1440 engagement no xbdP6GSjPgY left",
+   "xbdP6GSjPgY"
+  ],
+  [
+   "PASS k12 1440 engagement warm-up has ejtU7miZWD4",
+   [
+    "id9dqfNZsf4",
+    "xC1b-9bZW4w",
+    "acjbTVs8IUM",
+    "Ek-BBS8rP_0",
+    "ejtU7miZWD4",
+    "Tp3IO0TzvM0",
+    "3N0SXpFT36w",
+    "UgEyq7gUWmM",
+    "L90IoF6LGAE"
+   ]
+  ],
+  [
+   "PASS k12 1440 engagement click point hits link",
+   [
+    458.484375,
+    491.765625
+   ]
+  ],
+  [
+   "PASS k12 1440 engagement modal embeds ejtU7miZWD4",
+   {
+    "open": true,
+    "src": "https://www.youtube.com/embed/ejtU7miZWD4?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767",
+    "url": "http://127.0.0.1:8767/home"
+   }
+  ],
+  [
+   "PASS k12 1440 how link has L90IoF6LGAE",
+   {
+    "label": "Watch: Integration is easy!",
+    "href": "https://www.youtube.com/watch?v=L90IoF6LGAE",
+    "title": "Watch: Integration is easy!"
+   }
+  ],
+  [
+   "PASS k12 1440 how no U615qsZh8bc left",
+   "U615qsZh8bc"
+  ],
+  [
+   "PASS k12 1440 how warm-up has L90IoF6LGAE",
+   [
+    "id9dqfNZsf4",
+    "xC1b-9bZW4w",
+    "acjbTVs8IUM",
+    "Ek-BBS8rP_0",
+    "ejtU7miZWD4",
+    "Tp3IO0TzvM0",
+    "3N0SXpFT36w",
+    "UgEyq7gUWmM",
+    "L90IoF6LGAE"
+   ]
+  ],
+  [
+   "PASS k12 1440 how click point hits link",
+   [
+    446.578125,
+    509.84375
+   ]
+  ],
+  [
+   "PASS k12 1440 how modal embeds L90IoF6LGAE",
+   {
+    "open": true,
+    "src": "https://www.youtube.com/embed/L90IoF6LGAE?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767",
+    "url": "http://127.0.0.1:8767/home"
+   }
+  ]
+ ]
+}

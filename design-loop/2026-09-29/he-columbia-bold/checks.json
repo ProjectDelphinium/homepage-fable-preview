@@ -1,0 +1,92 @@
+[
+ [
+  "highered 1440",
+  {
+   "htmlClass": "dl-path-he js dl-he-ready",
+   "kicker": "HIGHER WITHDRAWAL RATES",
+   "num": "10–15%",
+   "visibleText": "for lower income and underprepared students in online courses.",
+   "runs": [
+    {
+     "text": "for ",
+     "weight": "400",
+     "tag": "SPAN"
+    },
+    {
+     "text": "lower income and underprepared",
+     "weight": "700",
+     "tag": "B"
+    },
+    {
+     "text": " students in online courses.",
+     "weight": "400",
+     "tag": "SPAN"
+    }
+   ],
+   "boldText": [
+    "lower income and underprepared"
+   ],
+   "baseWeight": "400"
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-columbia.png"
+ ],
+ [
+  "highered 390",
+  {
+   "htmlClass": "dl-path-he js dl-he-ready",
+   "kicker": "HIGHER WITHDRAWAL RATES",
+   "num": "10–15%",
+   "visibleText": "for lower income and underprepared students in online courses.",
+   "runs": [
+    {
+     "text": "for ",
+     "weight": "400",
+     "tag": "SPAN"
+    },
+    {
+     "text": "lower income and underprepared",
+     "weight": "700",
+     "tag": "B"
+    },
+    {
+     "text": " students in online courses.",
+     "weight": "400",
+     "tag": "SPAN"
+    }
+   ],
+   "boldText": [
+    "lower income and underprepared"
+   ],
+   "baseWeight": "400"
+  }
+ ],
+ [
+  "shot",
+  "highered-390-columbia.png"
+ ],
+ [
+  "home 1440",
+  {
+   "htmlClass": "dl-path-home js",
+   "kicker": "ACHIEVEMENT",
+   "num": "1 in 3",
+   "visibleText": "students score below grade level. The lowest performers keep losing ground.",
+   "runs": [
+    {
+     "text": "students score below grade level. The lowest performers keep losing ground.",
+     "weight": "400",
+     "tag": "SPAN"
+    }
+   ],
+   "boldText": [],
+   "baseWeight": "400"
+  }
+ ],
+ [
+  "shot",
+  "home-1440-naep.png"
+ ]
+]

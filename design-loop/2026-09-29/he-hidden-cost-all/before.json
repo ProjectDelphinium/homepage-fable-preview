@@ -1,0 +1,702 @@
+{
+ "he-1440": {
+  "heReady": true,
+  "docH": 12608,
+  "secH": 932,
+  "cols": "377.594px 377.609px 377.594px",
+  "gridW": 1160,
+  "punch": "Three crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "cards": [
+   {
+    "kicker": "ONLINE COURSES",
+    "num": "10–15%",
+    "txt": "higher withdrawal rates in online courses for low-income and underprepared students.",
+    "src": "Columbia University",
+    "box": [
+     133,
+     445,
+     378,
+     185
+    ],
+    "srcBottomGap": 17,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "40.8px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "COMPLETION",
+    "num": "~4 in 10",
+    "txt": "students drop out of college. About 2M a year leave with student debt.",
+    "src": "National Center for Education Statistics",
+    "box": [
+     524,
+     445,
+     378,
+     185
+    ],
+    "srcBottomGap": 17,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "40.8px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Cost",
+    "num": "~$1M",
+    "txt": "less in lifetime earnings without a degree. Twice as likely to be unemployed.",
+    "src": "Pew Research Center",
+    "box": [
+     915,
+     445,
+     378,
+     185
+    ],
+    "srcBottomGap": 17,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "40.8px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   }
+  ]
+ },
+ "he-1280": {
+  "heReady": true,
+  "docH": 12582,
+  "secH": 929,
+  "cols": "377.594px 377.609px 377.594px",
+  "gridW": 1160,
+  "punch": "Three crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "cards": [
+   {
+    "kicker": "ONLINE COURSES",
+    "num": "10–15%",
+    "txt": "higher withdrawal rates in online courses for low-income and underprepared students.",
+    "src": "Columbia University",
+    "box": [
+     53,
+     445,
+     378,
+     182
+    ],
+    "srcBottomGap": 17,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "38.4px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "COMPLETION",
+    "num": "~4 in 10",
+    "txt": "students drop out of college. About 2M a year leave with student debt.",
+    "src": "National Center for Education Statistics",
+    "box": [
+     444,
+     445,
+     378,
+     182
+    ],
+    "srcBottomGap": 17,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "38.4px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Cost",
+    "num": "~$1M",
+    "txt": "less in lifetime earnings without a degree. Twice as likely to be unemployed.",
+    "src": "Pew Research Center",
+    "box": [
+     835,
+     445,
+     378,
+     182
+    ],
+    "srcBottomGap": 17,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "38.4px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   }
+  ]
+ },
+ "he-1040": {
+  "heReady": true,
+  "docH": 11890,
+  "secH": 867,
+  "cols": "319.266px 319.266px 319.281px",
+  "gridW": 985,
+  "punch": "Three crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "cards": [
+   {
+    "kicker": "ONLINE COURSES",
+    "num": "10–15%",
+    "txt": "higher withdrawal rates in online courses for low-income and underprepared students.",
+    "src": "Columbia University",
+    "box": [
+     20,
+     412,
+     319,
+     198
+    ],
+    "srcBottomGap": 17,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "31.2px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "COMPLETION",
+    "num": "~4 in 10",
+    "txt": "students drop out of college. About 2M a year leave with student debt.",
+    "src": "National Center for Education Statistics",
+    "box": [
+     353,
+     412,
+     319,
+     198
+    ],
+    "srcBottomGap": 40,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "31.2px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Cost",
+    "num": "~$1M",
+    "txt": "less in lifetime earnings without a degree. Twice as likely to be unemployed.",
+    "src": "Pew Research Center",
+    "box": [
+     686,
+     412,
+     319,
+     198
+    ],
+    "srcBottomGap": 40,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "31.2px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   }
+  ]
+ },
+ "he-760": {
+  "heReady": true,
+  "docH": 14532,
+  "secH": 776,
+  "cols": "225.938px 225.938px 225.938px",
+  "gridW": 705,
+  "punch": "Three crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "cards": [
+   {
+    "kicker": "ONLINE COURSES",
+    "num": "10–15%",
+    "txt": "higher withdrawal rates in online courses for low-income and underprepared students.",
+    "src": "Columbia University",
+    "box": [
+     20,
+     353,
+     226,
+     219
+    ],
+    "srcBottomGap": 17,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "COMPLETION",
+    "num": "~4 in 10",
+    "txt": "students drop out of college. About 2M a year leave with student debt.",
+    "src": "National Center for Education Statistics",
+    "box": [
+     260,
+     353,
+     226,
+     219
+    ],
+    "srcBottomGap": 22,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Cost",
+    "num": "~$1M",
+    "txt": "less in lifetime earnings without a degree. Twice as likely to be unemployed.",
+    "src": "Pew Research Center",
+    "box": [
+     499,
+     353,
+     226,
+     219
+    ],
+    "srcBottomGap": 40,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   }
+  ]
+ },
+ "he-390": {
+  "heReady": true,
+  "docH": 17085,
+  "secH": 1218,
+  "cols": "350px",
+  "gridW": 350,
+  "punch": "Three crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "cards": [
+   {
+    "kicker": "ONLINE COURSES",
+    "num": "10–15%",
+    "txt": "higher withdrawal rates in online courses for low-income and underprepared students.",
+    "src": "Columbia University",
+    "box": [
+     20,
+     441,
+     350,
+     174
+    ],
+    "srcBottomGap": 17,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "COMPLETION",
+    "num": "~4 in 10",
+    "txt": "students drop out of college. About 2M a year leave with student debt.",
+    "src": "National Center for Education Statistics",
+    "box": [
+     20,
+     628,
+     350,
+     174
+    ],
+    "srcBottomGap": 17,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Cost",
+    "num": "~$1M",
+    "txt": "less in lifetime earnings without a degree. Twice as likely to be unemployed.",
+    "src": "Pew Research Center",
+    "box": [
+     20,
+     816,
+     350,
+     174
+    ],
+    "srcBottomGap": 17,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   }
+  ]
+ },
+ "k12-1440": {
+  "heReady": false,
+  "docH": 13729,
+  "secH": 962,
+  "cols": "377.594px 377.609px 377.594px",
+  "gridW": 1160,
+  "punch": "Three crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "cards": [
+   {
+    "kicker": "ATTENDANCE",
+    "num": "1 in 4",
+    "txt": "students are chronically absent, still elevated years after the shift online.",
+    "src": "RAND / Return to Learn Tracker, 2024-25",
+    "box": [
+     133,
+     475,
+     378,
+     185
+    ],
+    "srcBottomGap": 17,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "40.8px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "ACHIEVEMENT",
+    "num": "1 in 3",
+    "txt": "students score below grade level. The lowest performers keep losing ground.",
+    "src": "The Nation's Report Card (NAEP), 2024",
+    "box": [
+     524,
+     475,
+     378,
+     185
+    ],
+    "srcBottomGap": 17,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "40.8px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Cost",
+    "num": "$229K",
+    "txt": "the cost of a K-12 education and lost potential when students don't finish.",
+    "src": "U.S. Census Bureau, FY2024",
+    "box": [
+     915,
+     475,
+     378,
+     185
+    ],
+    "srcBottomGap": 17,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "40.8px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   }
+  ]
+ },
+ "k12-1280": {
+  "heReady": false,
+  "docH": 13699,
+  "secH": 960,
+  "cols": "377.594px 377.609px 377.594px",
+  "gridW": 1160,
+  "punch": "Three crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "cards": [
+   {
+    "kicker": "ATTENDANCE",
+    "num": "1 in 4",
+    "txt": "students are chronically absent, still elevated years after the shift online.",
+    "src": "RAND / Return to Learn Tracker, 2024-25",
+    "box": [
+     53,
+     475,
+     378,
+     182
+    ],
+    "srcBottomGap": 17,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "38.4px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "ACHIEVEMENT",
+    "num": "1 in 3",
+    "txt": "students score below grade level. The lowest performers keep losing ground.",
+    "src": "The Nation's Report Card (NAEP), 2024",
+    "box": [
+     444,
+     475,
+     378,
+     182
+    ],
+    "srcBottomGap": 17,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "38.4px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Cost",
+    "num": "$229K",
+    "txt": "the cost of a K-12 education and lost potential when students don't finish.",
+    "src": "U.S. Census Bureau, FY2024",
+    "box": [
+     835,
+     475,
+     378,
+     182
+    ],
+    "srcBottomGap": 17,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "38.4px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   }
+  ]
+ },
+ "k12-1040": {
+  "heReady": false,
+  "docH": 13013,
+  "secH": 875,
+  "cols": "319.266px 319.266px 319.281px",
+  "gridW": 985,
+  "punch": "Three crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "cards": [
+   {
+    "kicker": "ATTENDANCE",
+    "num": "1 in 4",
+    "txt": "students are chronically absent, still elevated years after the shift online.",
+    "src": "RAND / Return to Learn Tracker, 2024-25",
+    "box": [
+     20,
+     443,
+     319,
+     175
+    ],
+    "srcBottomGap": 17,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "31.2px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "ACHIEVEMENT",
+    "num": "1 in 3",
+    "txt": "students score below grade level. The lowest performers keep losing ground.",
+    "src": "The Nation's Report Card (NAEP), 2024",
+    "box": [
+     353,
+     443,
+     319,
+     175
+    ],
+    "srcBottomGap": 17,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "31.2px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Cost",
+    "num": "$229K",
+    "txt": "the cost of a K-12 education and lost potential when students don't finish.",
+    "src": "U.S. Census Bureau, FY2024",
+    "box": [
+     686,
+     443,
+     319,
+     175
+    ],
+    "srcBottomGap": 17,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "31.2px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   }
+  ]
+ },
+ "k12-760": {
+  "heReady": false,
+  "docH": 15664,
+  "secH": 801,
+  "cols": "225.938px 225.938px 225.938px",
+  "gridW": 705,
+  "punch": "Three crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "cards": [
+   {
+    "kicker": "ATTENDANCE",
+    "num": "1 in 4",
+    "txt": "students are chronically absent, still elevated years after the shift online.",
+    "src": "RAND / Return to Learn Tracker, 2024-25",
+    "box": [
+     20,
+     384,
+     226,
+     214
+    ],
+    "srcBottomGap": 17,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "ACHIEVEMENT",
+    "num": "1 in 3",
+    "txt": "students score below grade level. The lowest performers keep losing ground.",
+    "src": "The Nation's Report Card (NAEP), 2024",
+    "box": [
+     260,
+     384,
+     226,
+     214
+    ],
+    "srcBottomGap": 17,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Cost",
+    "num": "$229K",
+    "txt": "the cost of a K-12 education and lost potential when students don't finish.",
+    "src": "U.S. Census Bureau, FY2024",
+    "box": [
+     499,
+     384,
+     226,
+     214
+    ],
+    "srcBottomGap": 35,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   }
+  ]
+ },
+ "k12-390": {
+  "heReady": false,
+  "docH": 18738,
+  "secH": 1218,
+  "cols": "350px",
+  "gridW": 350,
+  "punch": "Three crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "cards": [
+   {
+    "kicker": "ATTENDANCE",
+    "num": "1 in 4",
+    "txt": "students are chronically absent, still elevated years after the shift online.",
+    "src": "RAND / Return to Learn Tracker, 2024-25",
+    "box": [
+     20,
+     441,
+     350,
+     174
+    ],
+    "srcBottomGap": 17,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "ACHIEVEMENT",
+    "num": "1 in 3",
+    "txt": "students score below grade level. The lowest performers keep losing ground.",
+    "src": "The Nation's Report Card (NAEP), 2024",
+    "box": [
+     20,
+     628,
+     350,
+     174
+    ],
+    "srcBottomGap": 17,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Cost",
+    "num": "$229K",
+    "txt": "the cost of a K-12 education and lost potential when students don't finish.",
+    "src": "U.S. Census Bureau, FY2024",
+    "box": [
+     20,
+     816,
+     350,
+     174
+    ],
+    "srcBottomGap": 17,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   }
+  ]
+ }
+}

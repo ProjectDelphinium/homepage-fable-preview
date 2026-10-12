@@ -1,0 +1,216 @@
+[
+ [
+  "highered-1440 link",
+  {
+   "html": [
+    "dl-path-he",
+    "dl-he-ready"
+   ],
+   "link": {
+    "href": "https://www.youtube.com/watch?v=9mfMC9jC6lU",
+    "yt": "9mfMC9jC6lU",
+    "dataTitle": "Watch: Online learning, elevated",
+    "title": "Watch: Online learning, elevated",
+    "text": "Watch: Online learning, elevated"
+   },
+   "swaps": {
+    "lead": "Delphinium transforms the Canvas courses you already teach into engaging student experiences and an early-warning system for teachers. No migration. No extra work. Just turn it on.",
+    "upto": "Lower course failures, as much as",
+    "num": "47%!",
+    "studyHeading": "Utah Valley University studies",
+    "davisTxt": "lower course failures",
+    "davisNum": "47%",
+    "punch": "The courses didn't change. The teachers didn't change. Engagement did, and so did the outcomes."
+   },
+   "oldIdInDom": 0,
+   "newIdInDom": 4,
+   "ytIframes": [
+    "https://www.youtube.com/embed/9mfMC9jC6lU",
+    "https://www.youtube.com/embed/xC1b-9bZW4w",
+    "https://www.youtube.com/embed/acjbTVs8IUM",
+    "https://www.youtube.com/embed/Ek-BBS8rP_0",
+    "https://www.youtube.com/embed/ejtU7miZWD4",
+    "https://www.youtube.com/embed/UgEyq7gUWmM",
+    "https://www.youtube.com/embed/L90IoF6LGAE"
+   ]
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-hero.png"
+ ],
+ [
+  "highered-1440 modal",
+  {
+   "open": true,
+   "title": "Watch: Online learning, elevated",
+   "iframe": "https://www.youtube.com/embed/9mfMC9jC6lU?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767",
+   "iframeTitle": "Watch: Online learning, elevated"
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-modal.png"
+ ],
+ [
+  "home-1440 link",
+  {
+   "html": [
+    "dl-path-home"
+   ],
+   "link": {
+    "href": "https://www.youtube.com/watch?v=id9dqfNZsf4",
+    "yt": "id9dqfNZsf4",
+    "dataTitle": "Watch: Online learning, elevated",
+    "title": "Watch: Online learning, elevated",
+    "text": "Watch: Online learning, elevated"
+   },
+   "swaps": {
+    "lead": "Delphinium transforms the Canvas courses you already teach into engaging student experiences and an early-warning system for parents and teachers. No migration. No extra work. Just turn it on.",
+    "upto": "Cut failures, up to",
+    "num": "31%!",
+    "studyHeading": "The Davis Connect study",
+    "davisTxt": "decrease in course failure rates.",
+    "davisNum": "31%",
+    "punch": "The courses didn't change. The teachers didn't change. Engagement did, and so did the outcomes."
+   },
+   "oldIdInDom": 3,
+   "newIdInDom": 1,
+   "ytIframes": [
+    "https://www.youtube.com/embed/id9dqfNZsf4",
+    "https://www.youtube.com/embed/xC1b-9bZW4w",
+    "https://www.youtube.com/embed/acjbTVs8IUM",
+    "https://www.youtube.com/embed/Ek-BBS8rP_0",
+    "https://www.youtube.com/embed/ejtU7miZWD4",
+    "https://www.youtube.com/embed/Tp3IO0TzvM0",
+    "https://www.youtube.com/embed/3N0SXpFT36w",
+    "https://www.youtube.com/embed/UgEyq7gUWmM",
+    "https://www.youtube.com/embed/L90IoF6LGAE"
+   ]
+  }
+ ],
+ [
+  "shot",
+  "home-1440-hero.png"
+ ],
+ [
+  "home-1440 modal",
+  {
+   "open": true,
+   "title": "Watch: Online learning, elevated",
+   "iframe": "https://www.youtube.com/embed/id9dqfNZsf4?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767",
+   "iframeTitle": "Watch: Online learning, elevated"
+  }
+ ],
+ [
+  "shot",
+  "home-1440-modal.png"
+ ],
+ [
+  "highered-390 link",
+  {
+   "html": [
+    "dl-path-he",
+    "dl-he-ready"
+   ],
+   "link": {
+    "href": "https://www.youtube.com/watch?v=9mfMC9jC6lU",
+    "yt": "9mfMC9jC6lU",
+    "dataTitle": "Watch: Online learning, elevated",
+    "title": "Watch: Online learning, elevated",
+    "text": "Watch: Online learning, elevated"
+   },
+   "swaps": {
+    "lead": "Delphinium transforms the Canvas courses you already teach into engaging student experiences and an early-warning system for teachers. No migration. No extra work. Just turn it on.",
+    "upto": "Lower course failures, as much as",
+    "num": "47%!",
+    "studyHeading": "Utah Valley University studies",
+    "davisTxt": "lower course failures",
+    "davisNum": "47%",
+    "punch": "The courses didn't change. The teachers didn't change. Engagement did, and so did the outcomes."
+   },
+   "oldIdInDom": 0,
+   "newIdInDom": 4,
+   "ytIframes": [
+    "https://www.youtube.com/embed/9mfMC9jC6lU",
+    "https://www.youtube.com/embed/xC1b-9bZW4w",
+    "https://www.youtube.com/embed/acjbTVs8IUM",
+    "https://www.youtube.com/embed/Ek-BBS8rP_0",
+    "https://www.youtube.com/embed/ejtU7miZWD4",
+    "https://www.youtube.com/embed/UgEyq7gUWmM",
+    "https://www.youtube.com/embed/L90IoF6LGAE"
+   ]
+  }
+ ],
+ [
+  "shot",
+  "highered-390-hero.png"
+ ],
+ [
+  "highered-390 modal",
+  {
+   "open": true,
+   "title": "Watch: Online learning, elevated",
+   "iframe": "https://www.youtube.com/embed/9mfMC9jC6lU?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767",
+   "iframeTitle": "Watch: Online learning, elevated"
+  }
+ ],
+ [
+  "shot",
+  "highered-390-modal.png"
+ ],
+ [
+  "home-390 link",
+  {
+   "html": [
+    "dl-path-home"
+   ],
+   "link": {
+    "href": "https://www.youtube.com/watch?v=id9dqfNZsf4",
+    "yt": "id9dqfNZsf4",
+    "dataTitle": "Watch: Online learning, elevated",
+    "title": "Watch: Online learning, elevated",
+    "text": "Watch: Online learning, elevated"
+   },
+   "swaps": {
+    "lead": "Delphinium transforms the Canvas courses you already teach into engaging student experiences and an early-warning system for parents and teachers. No migration. No extra work. Just turn it on.",
+    "upto": "Cut failures, up to",
+    "num": "31%!",
+    "studyHeading": "The Davis Connect study",
+    "davisTxt": "decrease in course failure rates.",
+    "davisNum": "31%",
+    "punch": "The courses didn't change. The teachers didn't change. Engagement did, and so did the outcomes."
+   },
+   "oldIdInDom": 3,
+   "newIdInDom": 1,
+   "ytIframes": [
+    "https://www.youtube.com/embed/id9dqfNZsf4",
+    "https://www.youtube.com/embed/xC1b-9bZW4w",
+    "https://www.youtube.com/embed/acjbTVs8IUM",
+    "https://www.youtube.com/embed/Ek-BBS8rP_0",
+    "https://www.youtube.com/embed/ejtU7miZWD4",
+    "https://www.youtube.com/embed/Tp3IO0TzvM0",
+    "https://www.youtube.com/embed/3N0SXpFT36w",
+    "https://www.youtube.com/embed/UgEyq7gUWmM",
+    "https://www.youtube.com/embed/L90IoF6LGAE"
+   ]
+  }
+ ],
+ [
+  "shot",
+  "home-390-hero.png"
+ ],
+ [
+  "home-390 modal",
+  {
+   "open": true,
+   "title": "Watch: Online learning, elevated",
+   "iframe": "https://www.youtube.com/embed/id9dqfNZsf4?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767",
+   "iframeTitle": "Watch: Online learning, elevated"
+  }
+ ],
+ [
+  "shot",
+  "home-390-modal.png"
+ ]
+]

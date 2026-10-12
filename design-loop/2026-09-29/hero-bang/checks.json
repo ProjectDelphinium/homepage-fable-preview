@@ -1,0 +1,98 @@
+[
+ [
+  "home 1440",
+  {
+   "html": "dl-path-home js",
+   "upto": "Cut failures, up to",
+   "num": "31%!",
+   "numInner": "31%!",
+   "numHTML": "31%!",
+   "aria": null,
+   "visibility": "visible",
+   "fontSize": "101.6px",
+   "letterSpacing": "-5.08px",
+   "color": "rgb(43, 47, 126)",
+   "box": [
+    201,
+    85
+   ],
+   "davisNum": "31%"
+  }
+ ],
+ [
+  "shot",
+  "home-1440-cover.png"
+ ],
+ [
+  "home 390",
+  {
+   "html": "dl-path-home js",
+   "upto": "Cut failures, up to",
+   "num": "31%!",
+   "numInner": "31%!",
+   "numHTML": "31%!",
+   "aria": null,
+   "visibility": "visible",
+   "fontSize": "72.8px",
+   "letterSpacing": "-3.64px",
+   "color": "rgb(43, 47, 126)",
+   "box": [
+    144,
+    61
+   ],
+   "davisNum": "31%"
+  }
+ ],
+ [
+  "shot",
+  "home-390-cover.png"
+ ],
+ [
+  "highered 1440",
+  {
+   "html": "dl-path-he js dl-he-ready",
+   "upto": "Lower course failure, as much as",
+   "num": "47%!",
+   "numInner": "47%!",
+   "numHTML": "47%!",
+   "aria": null,
+   "visibility": "visible",
+   "fontSize": "101.6px",
+   "letterSpacing": "-5.08px",
+   "color": "rgb(43, 47, 126)",
+   "box": [
+    201,
+    85
+   ],
+   "davisNum": "47%"
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-cover.png"
+ ],
+ [
+  "highered 390",
+  {
+   "html": "dl-path-he js dl-he-ready",
+   "upto": "Lower course failure, as much as",
+   "num": "47%!",
+   "numInner": "47%!",
+   "numHTML": "47%!",
+   "aria": null,
+   "visibility": "visible",
+   "fontSize": "72.8px",
+   "letterSpacing": "-3.64px",
+   "color": "rgb(43, 47, 126)",
+   "box": [
+    144,
+    61
+   ],
+   "davisNum": "47%"
+  }
+ ],
+ [
+  "shot",
+  "highered-390-cover.png"
+ ]
+]

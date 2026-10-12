@@ -1,0 +1,326 @@
+[
+ [
+  "1440 rest",
+  {
+   "label": "Pause logos",
+   "title": "Pause logos",
+   "text": "",
+   "pressed": null,
+   "play": "running",
+   "anim": "dl-logos-marquee",
+   "display": "flex",
+   "size": [
+    28,
+    28
+   ],
+   "color": "rgb(85, 85, 95)",
+   "border": "color(srgb 0.168627 0.184314 0.494118 / 0.55)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "outline": "none 3px rgb(85, 85, 95)",
+   "focusVisible": false
+  }
+ ],
+ [
+  "shot",
+  "k12-logos-1440-rest.png"
+ ],
+ [
+  "1440 hover viewport",
+  {
+   "label": "Pause logos",
+   "title": "Pause logos",
+   "text": "",
+   "pressed": null,
+   "play": "paused",
+   "anim": "dl-logos-marquee",
+   "display": "flex",
+   "size": [
+    28,
+    28
+   ],
+   "color": "rgb(85, 85, 95)",
+   "border": "color(srgb 0.168627 0.184314 0.494118 / 0.55)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "outline": "none 3px rgb(85, 85, 95)",
+   "focusVisible": false
+  }
+ ],
+ [
+  "1440 hover button",
+  {
+   "label": "Pause logos",
+   "title": "Pause logos",
+   "text": "",
+   "pressed": null,
+   "play": "running",
+   "anim": "dl-logos-marquee",
+   "display": "flex",
+   "size": [
+    28,
+    28
+   ],
+   "color": "rgb(43, 47, 126)",
+   "border": "rgb(43, 47, 126)",
+   "bg": "rgb(255, 255, 255)",
+   "outline": "none 3px rgb(43, 47, 126)",
+   "focusVisible": false
+  }
+ ],
+ [
+  "shot",
+  "k12-logos-1440-hover-button.png"
+ ],
+ [
+  "1440 after click",
+  {
+   "label": "Play logos",
+   "title": "Play logos",
+   "text": "",
+   "pressed": null,
+   "play": "paused",
+   "anim": "dl-logos-marquee",
+   "display": "flex",
+   "size": [
+    28,
+    28
+   ],
+   "color": "rgb(85, 85, 95)",
+   "border": "color(srgb 0.168627 0.184314 0.494118 / 0.55)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "outline": "none 3px rgb(85, 85, 95)",
+   "focusVisible": false
+  }
+ ],
+ [
+  "shot",
+  "k12-logos-1440-paused.png"
+ ],
+ [
+  "1440 keyboard focus (paused)",
+  {
+   "label": "Play logos",
+   "title": "Play logos",
+   "text": "",
+   "pressed": null,
+   "play": "paused",
+   "anim": "dl-logos-marquee",
+   "display": "flex",
+   "size": [
+    28,
+    28
+   ],
+   "color": "rgb(43, 47, 126)",
+   "border": "rgb(43, 47, 126)",
+   "bg": "rgb(255, 255, 255)",
+   "outline": "solid 3px rgb(43, 47, 126)",
+   "focusVisible": true
+  }
+ ],
+ [
+  "shot",
+  "k12-logos-1440-focus-paused.png"
+ ],
+ [
+  "1440 Enter -> play",
+  {
+   "label": "Pause logos",
+   "title": "Pause logos",
+   "text": "",
+   "pressed": null,
+   "play": "running",
+   "anim": "dl-logos-marquee",
+   "display": "flex",
+   "size": [
+    28,
+    28
+   ],
+   "color": "rgb(43, 47, 126)",
+   "border": "rgb(43, 47, 126)",
+   "bg": "rgb(255, 255, 255)",
+   "outline": "solid 3px rgb(43, 47, 126)",
+   "focusVisible": true
+  }
+ ],
+ [
+  "shot",
+  "k12-logos-1440-focus-playing.png"
+ ],
+ [
+  "390 rest",
+  {
+   "label": "Pause logos",
+   "title": "Pause logos",
+   "text": "",
+   "pressed": null,
+   "play": "running",
+   "anim": "dl-logos-marquee",
+   "display": "flex",
+   "size": [
+    28,
+    28
+   ],
+   "color": "rgb(85, 85, 95)",
+   "border": "color(srgb 0.168627 0.184314 0.494118 / 0.55)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "outline": "none 3px rgb(85, 85, 95)",
+   "focusVisible": false
+  }
+ ],
+ [
+  "shot",
+  "k12-logos-390-rest.png"
+ ],
+ [
+  "390 hover viewport",
+  {
+   "label": "Pause logos",
+   "title": "Pause logos",
+   "text": "",
+   "pressed": null,
+   "play": "paused",
+   "anim": "dl-logos-marquee",
+   "display": "flex",
+   "size": [
+    28,
+    28
+   ],
+   "color": "rgb(85, 85, 95)",
+   "border": "color(srgb 0.168627 0.184314 0.494118 / 0.55)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "outline": "none 3px rgb(85, 85, 95)",
+   "focusVisible": false
+  }
+ ],
+ [
+  "390 hover button",
+  {
+   "label": "Pause logos",
+   "title": "Pause logos",
+   "text": "",
+   "pressed": null,
+   "play": "running",
+   "anim": "dl-logos-marquee",
+   "display": "flex",
+   "size": [
+    28,
+    28
+   ],
+   "color": "rgb(43, 47, 126)",
+   "border": "rgb(43, 47, 126)",
+   "bg": "rgb(255, 255, 255)",
+   "outline": "none 3px rgb(43, 47, 126)",
+   "focusVisible": false
+  }
+ ],
+ [
+  "shot",
+  "k12-logos-390-hover-button.png"
+ ],
+ [
+  "390 after click",
+  {
+   "label": "Play logos",
+   "title": "Play logos",
+   "text": "",
+   "pressed": null,
+   "play": "paused",
+   "anim": "dl-logos-marquee",
+   "display": "flex",
+   "size": [
+    28,
+    28
+   ],
+   "color": "rgb(85, 85, 95)",
+   "border": "color(srgb 0.168627 0.184314 0.494118 / 0.55)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "outline": "none 3px rgb(85, 85, 95)",
+   "focusVisible": false
+  }
+ ],
+ [
+  "shot",
+  "k12-logos-390-paused.png"
+ ],
+ [
+  "390 keyboard focus (paused)",
+  {
+   "label": "Play logos",
+   "title": "Play logos",
+   "text": "",
+   "pressed": null,
+   "play": "paused",
+   "anim": "dl-logos-marquee",
+   "display": "flex",
+   "size": [
+    28,
+    28
+   ],
+   "color": "rgb(43, 47, 126)",
+   "border": "rgb(43, 47, 126)",
+   "bg": "rgb(255, 255, 255)",
+   "outline": "solid 3px rgb(43, 47, 126)",
+   "focusVisible": true
+  }
+ ],
+ [
+  "shot",
+  "k12-logos-390-focus-paused.png"
+ ],
+ [
+  "390 Enter -> play",
+  {
+   "label": "Pause logos",
+   "title": "Pause logos",
+   "text": "",
+   "pressed": null,
+   "play": "running",
+   "anim": "dl-logos-marquee",
+   "display": "flex",
+   "size": [
+    28,
+    28
+   ],
+   "color": "rgb(43, 47, 126)",
+   "border": "rgb(43, 47, 126)",
+   "bg": "rgb(255, 255, 255)",
+   "outline": "solid 3px rgb(43, 47, 126)",
+   "focusVisible": true
+  }
+ ],
+ [
+  "shot",
+  "k12-logos-390-focus-playing.png"
+ ],
+ [
+  "1440 reduced-motion",
+  {
+   "label": "Pause logos",
+   "title": "Pause logos",
+   "text": "",
+   "pressed": null,
+   "play": "running",
+   "anim": "none",
+   "display": "none",
+   "size": [
+    0,
+    0
+   ],
+   "color": "rgb(85, 85, 95)",
+   "border": "color(srgb 0.168627 0.184314 0.494118 / 0.55)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "outline": "none 3px rgb(85, 85, 95)",
+   "focusVisible": false
+  }
+ ],
+ [
+  "shot",
+  "k12-logos-1440-reduced-motion.png"
+ ],
+ [
+  "highered strip",
+  {
+   "html": "dl-path-he js dl-he-ready",
+   "display": "none"
+  }
+ ]
+]

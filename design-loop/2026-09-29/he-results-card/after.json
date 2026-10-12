@@ -1,0 +1,500 @@
+[
+ [
+  "highered 1440",
+  {
+   "path": "/highered",
+   "gridH": 710,
+   "gridW": 1160,
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "x": 0,
+     "y": 0,
+     "w": 672,
+     "h": 710,
+     "bg": "rgb(255, 255, 255)",
+     "text": "THE UTAH VALLEY UNIVERSITY STUDY 47% lower course failures 14 sections, ~420 students. High enrollment, high failure, freshman level, gateway classes, just like"
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "block",
+     "x": 712,
+     "y": 0,
+     "w": 448,
+     "h": 227,
+     "bg": "color(srgb 0.95 0.982549 0.965882)",
+     "text": "IN THE STUDY 65% fewer failures for part-time faculty 68% fewer withdrawals 66% fewer dropouts"
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "block",
+     "x": 712,
+     "y": 251,
+     "w": 448,
+     "h": 217,
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "text": "MORE MOTIVATION 72% of students say a Delphinium course is more motivating than a traditional Canvas course."
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "block",
+     "x": 712,
+     "y": 492,
+     "w": 448,
+     "h": 217,
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "text": "IN THEIR WORDS “Fun.” One of the most common words students reported when we ask how a Delphinium course is different."
+    }
+   ],
+   "davisHasOutcomes": false,
+   "overflowX": false,
+   "scrollW": 1425,
+   "emDash": false
+  }
+ ],
+ [
+  "highered 1440 console errors",
+  [
+   "Failed to load resource: the server responded with a status of 404 (File not found) http://127.0.0.1:8767/favicon.ico"
+  ]
+ ],
+ [
+  "shot",
+  "after-highered-1440-results.png"
+ ],
+ [
+  "highered 1100",
+  {
+   "path": "/highered",
+   "gridH": 710,
+   "gridW": 1045,
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "x": 0,
+     "y": 0,
+     "w": 607,
+     "h": 710,
+     "bg": "rgb(255, 255, 255)",
+     "text": "THE UTAH VALLEY UNIVERSITY STUDY 47% lower course failures 14 sections, ~420 students High enrollment, high failure, freshman level, gateway classes, just like "
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "block",
+     "x": 640,
+     "y": 0,
+     "w": 405,
+     "h": 212,
+     "bg": "color(srgb 0.95 0.982549 0.965882)",
+     "text": "IN THE STUDY 65% fewer failures for part-time faculty 68% fewer withdrawals 66% fewer dropouts"
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "block",
+     "x": 640,
+     "y": 236,
+     "w": 405,
+     "h": 212,
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "text": "MORE MOTIVATION 72% of students say a Delphinium course is more motivating than a traditional Canvas course."
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "block",
+     "x": 640,
+     "y": 472,
+     "w": 405,
+     "h": 238,
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "text": "IN THEIR WORDS “Fun.” One of the most common words students reported when we ask how a Delphinium course is different."
+    }
+   ],
+   "davisHasOutcomes": false,
+   "overflowX": false,
+   "scrollW": 1085,
+   "emDash": false
+  }
+ ],
+ [
+  "highered 1100 console errors",
+  []
+ ],
+ [
+  "shot",
+  "after-highered-1100-results.png"
+ ],
+ [
+  "highered 760",
+  {
+   "path": "/highered",
+   "gridH": 744,
+   "gridW": 705,
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "x": 0,
+     "y": 0,
+     "w": 705,
+     "h": 333,
+     "bg": "rgb(255, 255, 255)",
+     "text": "THE UTAH VALLEY UNIVERSITY STUDY 47% lower course failures 14 sections, ~420 students High enrollment, high failure, freshman level, gateway classes, just like "
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "block",
+     "x": 0,
+     "y": 357,
+     "w": 705,
+     "h": 153,
+     "bg": "color(srgb 0.95 0.982549 0.965882)",
+     "text": "IN THE STUDY 65% fewer failures for part-time faculty 68% fewer withdrawals 66% fewer dropouts"
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "block",
+     "x": 0,
+     "y": 534,
+     "w": 341,
+     "h": 209,
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "text": "MORE MOTIVATION 72% of students say a Delphinium course is more motivating than a traditional Canvas course."
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "block",
+     "x": 365,
+     "y": 534,
+     "w": 341,
+     "h": 209,
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "text": "IN THEIR WORDS “Fun.” One of the most common words students reported when we ask how a Delphinium course is different."
+    }
+   ],
+   "davisHasOutcomes": false,
+   "overflowX": false,
+   "scrollW": 745,
+   "emDash": false
+  }
+ ],
+ [
+  "highered 760 console errors",
+  []
+ ],
+ [
+  "shot",
+  "after-highered-760-results.png"
+ ],
+ [
+  "highered 390",
+  {
+   "path": "/highered",
+   "gridH": 1066,
+   "gridW": 350,
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "x": 0,
+     "y": 0,
+     "w": 350,
+     "h": 451,
+     "bg": "rgb(255, 255, 255)",
+     "text": "THE UTAH VALLEY UNIVERSITY STUDY 47% lower course failures 14 sections, ~420 students High enrollment, high failure, freshman level, gateway classes, just like "
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "block",
+     "x": 0,
+     "y": 471,
+     "w": 350,
+     "h": 206,
+     "bg": "color(srgb 0.95 0.982549 0.965882)",
+     "text": "IN THE STUDY 65% fewer failures for part-time faculty 68% fewer withdrawals 66% fewer dropouts"
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "grid",
+     "x": 0,
+     "y": 697,
+     "w": 350,
+     "h": 151,
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "text": "MORE MOTIVATION 72% of students say a Delphinium course is more motivating than a traditional Canvas course."
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "grid",
+     "x": 0,
+     "y": 867,
+     "w": 350,
+     "h": 199,
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "text": "IN THEIR WORDS “Fun.” One of the most common words students reported when we ask how a Delphinium course is different."
+    }
+   ],
+   "davisHasOutcomes": false,
+   "overflowX": false,
+   "scrollW": 390,
+   "emDash": false
+  }
+ ],
+ [
+  "highered 390 console errors",
+  []
+ ],
+ [
+  "shot",
+  "after-highered-390-results.png"
+ ],
+ [
+  "home 1440",
+  {
+   "path": "/home",
+   "gridH": 497,
+   "gridW": 1160,
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "x": 0,
+     "y": 0,
+     "w": 672,
+     "h": 497,
+     "bg": "rgb(255, 255, 255)",
+     "text": "THE DAVIS CONNECT STUDY 31% decrease in course failure rates. Davis School District, Utah. 72 online classes and 6,000 students. The courses didn't change. The "
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "none",
+     "x": -132,
+     "y": -953,
+     "w": 0,
+     "h": 0,
+     "bg": "color(srgb 0.95 0.982549 0.965882)",
+     "text": "In the study 65% fewer failures for part-time faculty 68% fewer withdrawals 66% fewer dropouts"
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "block",
+     "x": 712,
+     "y": 0,
+     "w": 448,
+     "h": 236,
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "text": "MORE MOTIVATION 72% of students say a Delphinium course is more motivating than a traditional Canvas course."
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "block",
+     "x": 712,
+     "y": 260,
+     "w": 448,
+     "h": 236,
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "text": "IN THEIR WORDS “Fun.” One of the most common words students reported when we ask how a Delphinium course is different."
+    }
+   ],
+   "davisHasOutcomes": false,
+   "overflowX": false,
+   "scrollW": 1425,
+   "emDash": false
+  }
+ ],
+ [
+  "home 1440 console errors",
+  []
+ ],
+ [
+  "shot",
+  "after-home-1440-results.png"
+ ],
+ [
+  "home 1100",
+  {
+   "path": "/home",
+   "gridH": 474,
+   "gridW": 1045,
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "x": 0,
+     "y": 0,
+     "w": 607,
+     "h": 474,
+     "bg": "rgb(255, 255, 255)",
+     "text": "THE DAVIS CONNECT STUDY 31% decrease in course failure rates. Davis School District, Utah. 72 online classes and 6,000 students. The courses didn't change. The "
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "none",
+     "x": -20,
+     "y": -933,
+     "w": 0,
+     "h": 0,
+     "bg": "color(srgb 0.95 0.982549 0.965882)",
+     "text": "In the study 65% fewer failures for part-time faculty 68% fewer withdrawals 66% fewer dropouts"
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "block",
+     "x": 640,
+     "y": 0,
+     "w": 405,
+     "h": 212,
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "text": "MORE MOTIVATION 72% of students say a Delphinium course is more motivating than a traditional Canvas course."
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "block",
+     "x": 640,
+     "y": 236,
+     "w": 405,
+     "h": 238,
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "text": "IN THEIR WORDS “Fun.” One of the most common words students reported when we ask how a Delphinium course is different."
+    }
+   ],
+   "davisHasOutcomes": false,
+   "overflowX": false,
+   "scrollW": 1085,
+   "emDash": false
+  }
+ ],
+ [
+  "home 1100 console errors",
+  []
+ ],
+ [
+  "shot",
+  "after-home-1100-results.png"
+ ],
+ [
+  "home 760",
+  {
+   "path": "/home",
+   "gridH": 514,
+   "gridW": 705,
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "x": 0,
+     "y": 0,
+     "w": 705,
+     "h": 280,
+     "bg": "rgb(255, 255, 255)",
+     "text": "THE DAVIS CONNECT STUDY 31% decrease in course failure rates. Davis School District, Utah. 72 online classes and 6,000 students. The courses didn't change. The "
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "none",
+     "x": -20,
+     "y": -1145,
+     "w": 0,
+     "h": 0,
+     "bg": "color(srgb 0.95 0.982549 0.965882)",
+     "text": "In the study 65% fewer failures for part-time faculty 68% fewer withdrawals 66% fewer dropouts"
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "block",
+     "x": 0,
+     "y": 304,
+     "w": 341,
+     "h": 209,
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "text": "MORE MOTIVATION 72% of students say a Delphinium course is more motivating than a traditional Canvas course."
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "block",
+     "x": 365,
+     "y": 304,
+     "w": 341,
+     "h": 209,
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "text": "IN THEIR WORDS “Fun.” One of the most common words students reported when we ask how a Delphinium course is different."
+    }
+   ],
+   "davisHasOutcomes": false,
+   "overflowX": false,
+   "scrollW": 745,
+   "emDash": false
+  }
+ ],
+ [
+  "home 760 console errors",
+  []
+ ],
+ [
+  "shot",
+  "after-home-760-results.png"
+ ],
+ [
+  "home 390",
+  {
+   "path": "/home",
+   "gridH": 791,
+   "gridW": 350,
+   "cards": [
+    {
+     "cls": "dl-proof__result--davis",
+     "display": "flex",
+     "x": 0,
+     "y": 0,
+     "w": 350,
+     "h": 401,
+     "bg": "rgb(255, 255, 255)",
+     "text": "THE DAVIS CONNECT STUDY 31% decrease in course failure rates. Davis School District, Utah. 72 online classes and 6,000 students. The courses didn't change. The "
+    },
+    {
+     "cls": "dl-proof__result--outcomes",
+     "display": "none",
+     "x": -20,
+     "y": -1067,
+     "w": 0,
+     "h": 0,
+     "bg": "color(srgb 0.95 0.982549 0.965882)",
+     "text": "In the study 65% fewer failures for part-time faculty 68% fewer withdrawals 66% fewer dropouts"
+    },
+    {
+     "cls": "dl-proof__result--motivation",
+     "display": "grid",
+     "x": 0,
+     "y": 421,
+     "w": 350,
+     "h": 151,
+     "bg": "color(srgb 0.966745 0.967373 0.979765)",
+     "text": "MORE MOTIVATION 72% of students say a Delphinium course is more motivating than a traditional Canvas course."
+    },
+    {
+     "cls": "dl-proof__result--fun",
+     "display": "grid",
+     "x": 0,
+     "y": 592,
+     "w": 350,
+     "h": 199,
+     "bg": "color(srgb 0.98902 0.95 0.973922)",
+     "text": "IN THEIR WORDS “Fun.” One of the most common words students reported when we ask how a Delphinium course is different."
+    }
+   ],
+   "davisHasOutcomes": false,
+   "overflowX": false,
+   "scrollW": 390,
+   "emDash": false
+  }
+ ],
+ [
+  "home 390 console errors",
+  []
+ ],
+ [
+  "shot",
+  "after-home-390-results.png"
+ ]
+]

@@ -1,0 +1,97 @@
+[
+ [
+  "highered 1440",
+  {
+   "html": "dl-path-he js dl-he-ready",
+   "heDisplay": "flex",
+   "heParas": [
+    "Completion and retention",
+    "4 in 10",
+    "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+    "60%",
+    "of students don't finish a bachelor's in 4 years, and about 40% still haven't in 6. Time-to-degree keeps stretching.",
+    "1 in 3",
+    "first-year students don't return for year two.",
+    "National Center for Education Statistics (NCES / IPEDS)"
+   ],
+   "hasNew": true,
+   "hasOldParen": false,
+   "emDash": false,
+   "visibleCards": [
+    "COMPLETION AND RETENTION 4 in 10 students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt. 60% of students don't finish a bachelor's in 4 years, and about 40% still haven't in 6. Time-to-degree keeps stretching. 1 in 3 first-year students don't return for year two. National Center for Education Statistics (NCES / IPEDS)",
+    "HIGHER WITHDRAWAL RATES 10–15% for lower income and underprepared students in online courses. Columbia University",
+    "EARNINGS AND EMPLOYMENT ~$1M less in lifetime earnings without a degree, and twice as likely to be unemployed. Pew Research Center"
+   ]
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-card.png"
+ ],
+ [
+  "shot",
+  "highered-1440-section.png"
+ ],
+ [
+  "highered 390",
+  {
+   "html": "dl-path-he js dl-he-ready",
+   "heDisplay": "flex",
+   "heParas": [
+    "Completion and retention",
+    "4 in 10",
+    "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+    "60%",
+    "of students don't finish a bachelor's in 4 years, and about 40% still haven't in 6. Time-to-degree keeps stretching.",
+    "1 in 3",
+    "first-year students don't return for year two.",
+    "National Center for Education Statistics (NCES / IPEDS)"
+   ],
+   "hasNew": true,
+   "hasOldParen": false,
+   "emDash": false,
+   "visibleCards": [
+    "COMPLETION AND RETENTION 4 in 10 students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt. 60% of students don't finish a bachelor's in 4 years, and about 40% still haven't in 6. Time-to-degree keeps stretching. 1 in 3 first-year students don't return for year two. National Center for Education Statistics (NCES / IPEDS)",
+    "HIGHER WITHDRAWAL RATES 10–15% for lower income and underprepared students in online courses. Columbia University",
+    "EARNINGS AND EMPLOYMENT ~$1M less in lifetime earnings without a degree, and twice as likely to be unemployed. Pew Research Center"
+   ]
+  }
+ ],
+ [
+  "shot",
+  "highered-390-card.png"
+ ],
+ [
+  "shot",
+  "highered-390-section.png"
+ ],
+ [
+  "home 1440",
+  {
+   "html": "dl-path-home js",
+   "heDisplay": "none",
+   "heParas": [
+    "Completion and retention",
+    "4 in 10",
+    "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+    "60%",
+    "of students don't finish a bachelor's in 4 years, and about 40% still haven't in 6. Time-to-degree keeps stretching.",
+    "1 in 3",
+    "first-year students don't return for year two.",
+    "National Center for Education Statistics (NCES / IPEDS)"
+   ],
+   "hasNew": false,
+   "hasOldParen": false,
+   "emDash": false,
+   "visibleCards": [
+    "ATTENDANCE 1 in 4 students are chronically absent, still elevated years after the shift online. RAND / Return to Learn Tracker, 2024-25",
+    "ACHIEVEMENT 1 in 3 students score below grade level. The lowest performers keep losing ground. The Nation's Report Card (NAEP), 2024",
+    "COST $229K the cost of a K-12 education and lost potential when students don't finish. U.S. Census Bureau, FY2024"
+   ]
+  }
+ ],
+ [
+  "shot",
+  "home-1440-section.png"
+ ]
+]

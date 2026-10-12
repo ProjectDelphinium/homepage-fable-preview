@@ -1,0 +1,86 @@
+[
+ [
+  "highered 1440",
+  {
+   "found": true,
+   "count": 1,
+   "text": "More from the UVU studies",
+   "rendered": "MORE FROM THE UVU STUDIES",
+   "transform": "uppercase",
+   "fontSize": "12px",
+   "lineHeight": "19.2px",
+   "height": 19,
+   "lines": 1,
+   "kickerWidth": 371,
+   "cardWidth": 440,
+   "cardDisplay": "flex",
+   "cardVisible": true,
+   "htmlClass": "dl-path-he js dl-he-ready"
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-outcomes-card.png"
+ ],
+ [
+  "home 1440",
+  {
+   "found": true,
+   "count": 1,
+   "text": "More from the UVU studies",
+   "rendered": "More from the UVU studies",
+   "transform": "uppercase",
+   "fontSize": "12px",
+   "lineHeight": "19.2px",
+   "height": 0,
+   "lines": 0,
+   "kickerWidth": 0,
+   "cardWidth": 0,
+   "cardDisplay": "none",
+   "cardVisible": false,
+   "htmlClass": "dl-path-home js"
+  }
+ ],
+ [
+  "highered 390",
+  {
+   "found": true,
+   "count": 1,
+   "text": "More from the UVU studies",
+   "rendered": "MORE FROM THE UVU STUDIES",
+   "transform": "uppercase",
+   "fontSize": "12px",
+   "lineHeight": "19.2px",
+   "height": 19,
+   "lines": 1,
+   "kickerWidth": 303,
+   "cardWidth": 350,
+   "cardDisplay": "flex",
+   "cardVisible": true,
+   "htmlClass": "dl-path-he js dl-he-ready"
+  }
+ ],
+ [
+  "shot",
+  "highered-390-outcomes-card.png"
+ ],
+ [
+  "home 390",
+  {
+   "found": true,
+   "count": 1,
+   "text": "More from the UVU studies",
+   "rendered": "More from the UVU studies",
+   "transform": "uppercase",
+   "fontSize": "12px",
+   "lineHeight": "19.2px",
+   "height": 0,
+   "lines": 0,
+   "kickerWidth": 0,
+   "cardWidth": 0,
+   "cardDisplay": "none",
+   "cardVisible": false,
+   "htmlClass": "dl-path-home js"
+  }
+ ]
+]

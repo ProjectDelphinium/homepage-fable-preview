@@ -1,0 +1,74 @@
+{
+ "home-1440": {
+  "bodyPadTop": "0px",
+  "bodyMarTop": "0px",
+  "htmlPadTop": "0px",
+  "htmlMarTop": "0px",
+  "dlTopY": 0,
+  "dlTopH": 60,
+  "firstVisible": {
+   "tag": "A",
+   "cls": "dl-skip",
+   "top": -64.796875,
+   "h": 52.796875
+  },
+  "draftNodes": [],
+  "draftText": false,
+  "robots": "noindex, nofollow",
+  "title": "Canvas engagement for online K-12 schools · Delphinium"
+ },
+ "home-390": {
+  "bodyPadTop": "0px",
+  "bodyMarTop": "0px",
+  "htmlPadTop": "0px",
+  "htmlMarTop": "0px",
+  "dlTopY": 0,
+  "dlTopH": 56,
+  "firstVisible": {
+   "tag": "A",
+   "cls": "dl-skip",
+   "top": -64.796875,
+   "h": 52.796875
+  },
+  "draftNodes": [],
+  "draftText": false,
+  "robots": "noindex, nofollow",
+  "title": "Canvas engagement for online K-12 schools · Delphinium"
+ },
+ "highered-1440": {
+  "bodyPadTop": "0px",
+  "bodyMarTop": "0px",
+  "htmlPadTop": "0px",
+  "htmlMarTop": "0px",
+  "dlTopY": 0,
+  "dlTopH": 60,
+  "firstVisible": {
+   "tag": "A",
+   "cls": "dl-skip",
+   "top": -64.796875,
+   "h": 52.796875
+  },
+  "draftNodes": [],
+  "draftText": false,
+  "robots": "noindex, nofollow",
+  "title": "Canvas engagement for colleges and universities · Delphinium"
+ },
+ "highered-390": {
+  "bodyPadTop": "0px",
+  "bodyMarTop": "0px",
+  "htmlPadTop": "0px",
+  "htmlMarTop": "0px",
+  "dlTopY": 0,
+  "dlTopH": 56,
+  "firstVisible": {
+   "tag": "A",
+   "cls": "dl-skip",
+   "top": -64.796875,
+   "h": 52.796875
+  },
+  "draftNodes": [],
+  "draftText": false,
+  "robots": "noindex, nofollow",
+  "title": "Canvas engagement for colleges and universities · Delphinium"
+ }
+}

@@ -1,0 +1,111 @@
+{
+  "/highered-1440": {
+    "found": true,
+    "visible": true,
+    "gw": [
+      "High-enrollment, high-failure freshman gateway courses, just like the toughest ones at your school"
+    ],
+    "items": [
+      {
+        "text": "14 sections, ~420 students",
+        "html": "<b>14 sections, ~420 students</b>",
+        "lines": 1,
+        "heightLines": 1,
+        "width": 562,
+        "fontSize": "16px"
+      },
+      {
+        "text": "High-enrollment, high-failure freshman gateway courses, just like the toughest ones at your school",
+        "html": "High-enrollment, high-failure freshman gateway courses, just like the toughest ones at your school",
+        "lines": 2,
+        "heightLines": 2,
+        "width": 562,
+        "fontSize": "16px"
+      }
+    ],
+    "breaks": [
+      "High-enrollment, high-failure freshman gateway courses, just like the toughest ones",
+      "at your school"
+    ]
+  },
+  "/highered-390": {
+    "found": true,
+    "visible": true,
+    "gw": [
+      "High-enrollment, high-failure freshman gateway courses, just like the toughest ones at your school"
+    ],
+    "items": [
+      {
+        "text": "14 sections, ~420 students",
+        "html": "<b>14 sections, ~420 students</b>",
+        "lines": 1,
+        "heightLines": 1,
+        "width": 280,
+        "fontSize": "16px"
+      },
+      {
+        "text": "High-enrollment, high-failure freshman gateway courses, just like the toughest ones at your school",
+        "html": "High-enrollment, high-failure freshman gateway courses, just like the toughest ones at your school",
+        "lines": 3,
+        "heightLines": 3,
+        "width": 280,
+        "fontSize": "16px"
+      }
+    ],
+    "breaks": [
+      "High-enrollment, high-failure freshman",
+      "gateway courses, just like the toughest",
+      "ones at your school"
+    ]
+  },
+  "/home-1440": {
+    "found": true,
+    "visible": false,
+    "gw": [
+      "High-enrollment, high-failure freshman gateway courses, just like the toughest ones at your school"
+    ],
+    "items": [
+      {
+        "text": "14 sections, ~420 students",
+        "html": "<b>14 sections, ~420 students</b>",
+        "lines": 0,
+        "heightLines": 0,
+        "width": 0,
+        "fontSize": "16px"
+      },
+      {
+        "text": "High-enrollment, high-failure freshman gateway courses, just like the toughest ones at your school",
+        "html": "High-enrollment, high-failure freshman gateway courses, just like the toughest ones at your school",
+        "lines": 0,
+        "heightLines": 0,
+        "width": 0,
+        "fontSize": "16px"
+      }
+    ]
+  },
+  "/home-390": {
+    "found": true,
+    "visible": false,
+    "gw": [
+      "High-enrollment, high-failure freshman gateway courses, just like the toughest ones at your school"
+    ],
+    "items": [
+      {
+        "text": "14 sections, ~420 students",
+        "html": "<b>14 sections, ~420 students</b>",
+        "lines": 0,
+        "heightLines": 0,
+        "width": 0,
+        "fontSize": "16px"
+      },
+      {
+        "text": "High-enrollment, high-failure freshman gateway courses, just like the toughest ones at your school",
+        "html": "High-enrollment, high-failure freshman gateway courses, just like the toughest ones at your school",
+        "lines": 0,
+        "heightLines": 0,
+        "width": 0,
+        "fontSize": "16px"
+      }
+    ]
+  }
+}

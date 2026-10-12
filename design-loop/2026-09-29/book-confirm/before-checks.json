@@ -1,0 +1,197 @@
+[
+ [
+  "before-highered-1440 1-date",
+  {
+   "zohoW": 1600,
+   "scale": 1,
+   "box": [
+    806,
+    854
+   ],
+   "frame": [
+    317,
+    73,
+    1123,
+    877
+   ],
+   "headerTextVisiblePx": [
+    0,
+    142
+   ],
+   "dividerX_inFrame": -1,
+   "mask": null,
+   "stepContent_inFrame": [
+    40,
+    380
+   ],
+   "frameW": 806,
+   "clippedRight": false,
+   "clippedLeft": false,
+   "panelBg": [
+    "rgba(0, 0, 0, 0)",
+    "rgba(0, 0, 0, 0)"
+   ]
+  }
+ ],
+ [
+  "before-highered-1440 2-times",
+  {
+   "zohoW": 1600,
+   "scale": 1,
+   "box": [
+    806,
+    854
+   ],
+   "frame": [
+    317,
+    73,
+    1123,
+    877
+   ],
+   "headerTextVisiblePx": [
+    0,
+    174
+   ],
+   "dividerX_inFrame": -1,
+   "mask": null,
+   "stepContent_inFrame": [
+    271,
+    521
+   ],
+   "frameW": 806,
+   "clippedRight": false,
+   "clippedLeft": false,
+   "panelBg": [
+    "rgba(0, 0, 0, 0)",
+    "rgba(0, 0, 0, 0)"
+   ]
+  }
+ ],
+ [
+  "before-highered-1440 2b-time-picked",
+  {
+   "zohoW": 1600,
+   "scale": 1,
+   "box": [
+    806,
+    854
+   ],
+   "frame": [
+    317,
+    73,
+    1123,
+    877
+   ],
+   "headerTextVisiblePx": [
+    0,
+    174
+   ],
+   "dividerX_inFrame": -1,
+   "mask": null,
+   "stepContent_inFrame": [
+    271,
+    521
+   ],
+   "frameW": 806,
+   "clippedRight": false,
+   "clippedLeft": false,
+   "panelBg": [
+    "rgba(0, 0, 0, 0)",
+    "rgba(0, 0, 0, 0)"
+   ]
+  }
+ ],
+ [
+  "before-highered-1440 3-details",
+  {
+   "zohoW": 1600,
+   "scale": 1,
+   "box": [
+    806,
+    854
+   ],
+   "frame": [
+    317,
+    73,
+    1123,
+    877
+   ],
+   "headerTextVisiblePx": [
+    0,
+    245
+   ],
+   "dividerX_inFrame": -1,
+   "mask": null,
+   "stepContent_inFrame": [
+    40,
+    766
+   ],
+   "frameW": 806,
+   "clippedRight": false,
+   "clippedLeft": false,
+   "panelBg": [
+    "rgba(0, 0, 0, 0)",
+    "rgba(0, 0, 0, 0)"
+   ]
+  }
+ ],
+ [
+  "before-highered-1440 3-details submit button (not clicked)",
+  [
+   633,
+   701,
+   1033,
+   761,
+   906
+  ]
+ ],
+ [
+  "before-highered-1440 inject confirmation replica",
+  "ok"
+ ],
+ [
+  "before-highered-1440 4-confirm",
+  {
+   "zohoW": 1600,
+   "font": "23px zohopuvi-medium",
+   "zohoHeading": [
+    549,
+    96,
+    1051,
+    123
+   ],
+   "zohoCard": [
+    555,
+    173,
+    1045,
+    472
+   ],
+   "frameW": 806,
+   "heading_inFrame": [
+    -44,
+    458
+   ],
+   "card_inFrame": [
+    -38,
+    452
+   ],
+   "headingTop_inFrame": 65,
+   "marginsLR": [
+    -44,
+    348
+   ],
+   "headingClipped": true,
+   "cardClipped": true,
+   "maskOverHeading": false
+  }
+ ],
+ [
+  "blocked non-GET requests",
+  [
+   [
+    "POST",
+    "https://jared-delphi-me.zohobookings.com/service/api/v1/jared_delphi-me/bookings/functions/Common/PublicAction/execute"
+   ]
+  ]
+ ]
+]

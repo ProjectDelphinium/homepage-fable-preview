@@ -1,0 +1,254 @@
+{
+ "highered-1440": {
+  "display": "flex",
+  "card": {
+   "top": 217,
+   "bottom": 637,
+   "left": 133,
+   "right": 706
+  },
+  "children": [
+   {
+    "tag": "P",
+    "text": "Completion and retention",
+    "border": "0px none",
+    "fs": "12px",
+    "top": 19
+   },
+   {
+    "tag": "P",
+    "text": "4 in 10",
+    "border": "0px none",
+    "fs": "40.8px",
+    "top": 45
+   },
+   {
+    "tag": "P",
+    "text": "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+    "border": "0px none",
+    "fs": "15.68px",
+    "top": 93
+   },
+   {
+    "tag": "P",
+    "text": "60%",
+    "border": "1px solid",
+    "fs": "40.8px",
+    "top": 156
+   },
+   {
+    "tag": "P",
+    "text": "of students don't finish a bachelor's in 4 years, and about 40% still haven't in 6. Time-to-degree keeps stretching.",
+    "border": "0px none",
+    "fs": "15.68px",
+    "top": 222
+   },
+   {
+    "tag": "P",
+    "text": "1 in 3",
+    "border": "1px solid",
+    "fs": "40.8px",
+    "top": 285
+   },
+   {
+    "tag": "P",
+    "text": "first-year students don't return for year two.",
+    "border": "0px none",
+    "fs": "15.68px",
+    "top": 351
+   },
+   {
+    "tag": "P",
+    "text": "National Center for Education Statistics (NCES / IPEDS)",
+    "border": "0px none",
+    "fs": "13px",
+    "top": 374
+   }
+  ],
+  "others": [
+   {
+    "top": 217,
+    "bottom": 420,
+    "left": 719,
+    "right": 1293
+   },
+   {
+    "top": 434,
+    "bottom": 637,
+    "left": 719,
+    "right": 1293
+   }
+  ],
+  "shotHash": "ce4e9b41a5e443556c8b605d76918701e2dda8bb"
+ },
+ "highered-760": {
+  "display": "flex",
+  "card": {
+   "top": 218,
+   "bottom": 606,
+   "left": 20,
+   "right": 725
+  },
+  "children": [
+   {
+    "tag": "P",
+    "text": "Completion and retention",
+    "border": "0px none",
+    "fs": "12px",
+    "top": 19
+   },
+   {
+    "tag": "P",
+    "text": "4 in 10",
+    "border": "0px none",
+    "fs": "29.6px",
+    "top": 45
+   },
+   {
+    "tag": "P",
+    "text": "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+    "border": "0px none",
+    "fs": "15.68px",
+    "top": 82
+   },
+   {
+    "tag": "P",
+    "text": "60%",
+    "border": "1px solid",
+    "fs": "29.6px",
+    "top": 145
+   },
+   {
+    "tag": "P",
+    "text": "of students don't finish a bachelor's in 4 years, and about 40% still haven't in 6. Time-to-degree keeps stretching.",
+    "border": "0px none",
+    "fs": "15.68px",
+    "top": 200
+   },
+   {
+    "tag": "P",
+    "text": "1 in 3",
+    "border": "1px solid",
+    "fs": "29.6px",
+    "top": 264
+   },
+   {
+    "tag": "P",
+    "text": "first-year students don't return for year two.",
+    "border": "0px none",
+    "fs": "15.68px",
+    "top": 319
+   },
+   {
+    "tag": "P",
+    "text": "National Center for Education Statistics (NCES / IPEDS)",
+    "border": "0px none",
+    "fs": "13px",
+    "top": 342
+   }
+  ],
+  "others": [
+   {
+    "top": 620,
+    "bottom": 794,
+    "left": 20,
+    "right": 366
+   },
+   {
+    "top": 620,
+    "bottom": 794,
+    "left": 379,
+    "right": 725
+   }
+  ],
+  "shotHash": "d1cc492d51695b2621c77a2a35b21cbe609ea06e"
+ },
+ "highered-390": {
+  "display": "flex",
+  "card": {
+   "top": 9,
+   "bottom": 442,
+   "left": 20,
+   "right": 370
+  },
+  "children": [
+   {
+    "tag": "P",
+    "text": "Completion and retention",
+    "border": "0px none",
+    "fs": "12px",
+    "top": 19
+   },
+   {
+    "tag": "P",
+    "text": "4 in 10",
+    "border": "0px none",
+    "fs": "29.6px",
+    "top": 45
+   },
+   {
+    "tag": "P",
+    "text": "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+    "border": "0px none",
+    "fs": "15.68px",
+    "top": 82
+   },
+   {
+    "tag": "P",
+    "text": "60%",
+    "border": "1px solid",
+    "fs": "29.6px",
+    "top": 168
+   },
+   {
+    "tag": "P",
+    "text": "of students don't finish a bachelor's in 4 years, and about 40% still haven't in 6. Time-to-degree keeps stretching.",
+    "border": "0px none",
+    "fs": "15.68px",
+    "top": 223
+   },
+   {
+    "tag": "P",
+    "text": "1 in 3",
+    "border": "1px solid",
+    "fs": "29.6px",
+    "top": 309
+   },
+   {
+    "tag": "P",
+    "text": "first-year students don't return for year two.",
+    "border": "0px none",
+    "fs": "15.68px",
+    "top": 364
+   },
+   {
+    "tag": "P",
+    "text": "National Center for Education Statistics (NCES / IPEDS)",
+    "border": "0px none",
+    "fs": "13px",
+    "top": 387
+   }
+  ],
+  "others": [
+   {
+    "top": 456,
+    "bottom": 630,
+    "left": 20,
+    "right": 370
+   },
+   {
+    "top": 643,
+    "bottom": 817,
+    "left": 20,
+    "right": 370
+   }
+  ],
+  "shotHash": "97ba62616f8714c7210fc668467aa67b227e7421"
+ },
+ "home-1440": {
+  "shotHash": "6d56260c5056b9b8bd0ae4f499820716aed8e529"
+ },
+ "home-390": {
+  "shotHash": "ec009b3345d23f4070eda56fa736b26b97e2843d"
+ }
+}

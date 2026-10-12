@@ -1,0 +1,59 @@
+{
+ "home-1440": {
+  "ctMediaMinusH2": 0,
+  "mcMediaMinusH2": 0,
+  "ctDetailOverlap": 92,
+  "textBoxSupported": true,
+  "logosMoving": true,
+  "logosAnim": "dl-logos-marquee",
+  "anchorEyebrowTop": {
+   "#control-tower": 184.3,
+   "#community-builder": 184.2,
+   "#engagement-builder": 183.8,
+   "#customers": 185.1,
+   "#proof-eyebrow": 184.4
+  }
+ },
+ "home-1100": {
+  "ctMediaMinusH2": 0,
+  "mcMediaMinusH2": 0,
+  "ctDetailOverlap": 109,
+  "textBoxSupported": true,
+  "logosMoving": true,
+  "logosAnim": "dl-logos-marquee",
+  "anchorEyebrowTop": {
+   "#control-tower": 184.4,
+   "#community-builder": 184.2,
+   "#engagement-builder": 184.4,
+   "#customers": 184.9,
+   "#proof-eyebrow": 183.8
+  }
+ },
+ "highered-1024": {
+  "ctMediaMinusH2": 0,
+  "mcMediaMinusH2": 0,
+  "ctDetailOverlap": 112.8,
+  "textBoxSupported": true,
+  "anchorEyebrowTop": {
+   "#control-tower": 184.3,
+   "#community-builder": 184.1,
+   "#engagement-builder": 183.8,
+   "#proof-eyebrow": 184.5
+  }
+ },
+ "home-390": {
+  "ctMediaMinusH2": 771.8,
+  "mcMediaMinusH2": 1186.4,
+  "ctDetailOverlap": -45.6,
+  "textBoxSupported": true,
+  "logosMoving": true,
+  "logosAnim": "dl-logos-marquee",
+  "anchorEyebrowTop": {
+   "#control-tower": 183.8,
+   "#community-builder": 183.8,
+   "#engagement-builder": 184.3,
+   "#customers": 185.3,
+   "#proof-eyebrow": 184.2
+  }
+ }
+}

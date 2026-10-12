@@ -1,0 +1,63 @@
+{
+ "1440 /home": {
+  "htmlClass": "dl-path-home js",
+  "punchText": "The courses didn't change. The teachers didn't change. Engagement did, and so did the outcomes.",
+  "punchHTML": "The courses didn't change. The teachers didn't change. <b>Engagement did, and so did the outcomes.</b>",
+  "punchBoldColor": "rgb(35, 35, 42)",
+  "kicker": "The Davis Connect study",
+  "ctx": "Davis School District, Utah. <b>72 online classes and 6,000 students.</b>",
+  "mot": "of students say a Delphinium course is more motivating than a traditional Canvas course.",
+  "rect": [
+   132.5,
+   9876.631996154785,
+   672,
+   496.9687194824219
+  ]
+ },
+ "1440 /highered": {
+  "htmlClass": "dl-path-he js dl-he-ready",
+  "punchText": "The courses didn't change. The teachers didn't change. Engagement did, and so did the outcomes.",
+  "punchHTML": "The courses didn't change. The teachers didn't change. <b>Engagement did, and so did the outcomes.</b>",
+  "punchBoldColor": "rgb(35, 35, 42)",
+  "kicker": "The Utah Valley University study",
+  "ctx": "As much as <b>67%</b> lower withdrawal. As much as <b>65%</b> lower dropout: finished with less than about a third of the points.",
+  "mot": "of students say a Delphinium course is more motivating than a traditional Canvas course. From Davis Connect students, a K-12 online school. The word Fun is from that same survey.",
+  "rect": [
+   132.5,
+   7621.963470458984,
+   672,
+   520.96875
+  ]
+ },
+ "390 /home": {
+  "htmlClass": "dl-path-home js",
+  "punchText": "The courses didn't change. The teachers didn't change. Engagement did, and so did the outcomes.",
+  "punchHTML": "The courses didn't change. The teachers didn't change. <b>Engagement did, and so did the outcomes.</b>",
+  "punchBoldColor": "rgb(35, 35, 42)",
+  "kicker": "The Davis Connect study",
+  "ctx": "Davis School District, Utah. <b>72 online classes and 6,000 students.</b>",
+  "mot": "of students say a Delphinium course is more motivating than a traditional Canvas course.",
+  "rect": [
+   20,
+   12792.525115966797,
+   350,
+   401.4375305175781
+  ]
+ },
+ "390 /highered": {
+  "htmlClass": "dl-path-he js dl-he-ready",
+  "punchText": "The courses didn't change. The teachers didn't change. Engagement did, and so did the outcomes.",
+  "punchHTML": "The courses didn't change. The teachers didn't change. <b>Engagement did, and so did the outcomes.</b>",
+  "punchBoldColor": "rgb(35, 35, 42)",
+  "kicker": "The Utah Valley University study",
+  "ctx": "As much as <b>67%</b> lower withdrawal. As much as <b>65%</b> lower dropout: finished with less than about a third of the points.",
+  "mot": "of students say a Delphinium course is more motivating than a traditional Canvas course. From Davis Connect students, a K-12 online school. The word Fun is from that same survey.",
+  "rect": [
+   20,
+   9940.13461303711,
+   350,
+   425.4375305175781
+  ]
+ },
+ "samePunchEverywhere": true
+}

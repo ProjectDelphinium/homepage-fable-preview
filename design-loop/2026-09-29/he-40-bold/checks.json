@@ -1,0 +1,85 @@
+[
+ [
+  "highered 1440",
+  {
+   "display": "flex",
+   "html": "of students don't finish a bachelor's in 4 years; <b>40%</b> still haven't in 6.",
+   "pWeight": "400",
+   "bold": [
+    {
+     "text": "40%",
+     "weight": "700"
+    }
+   ],
+   "plainText": [
+    "of students don't finish a bachelor's in 4 years; ",
+    " still haven't in 6."
+   ],
+   "ref2M": {
+    "text": "2M a year",
+    "weight": "700",
+    "color": "rgb(35, 35, 42)"
+   },
+   "boldColor": "rgb(35, 35, 42)",
+   "pColor": "rgb(35, 35, 42)"
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-completion-card.png"
+ ],
+ [
+  "highered 390",
+  {
+   "display": "flex",
+   "html": "of students don't finish a bachelor's in 4 years; <b>40%</b> still haven't in 6.",
+   "pWeight": "400",
+   "bold": [
+    {
+     "text": "40%",
+     "weight": "700"
+    }
+   ],
+   "plainText": [
+    "of students don't finish a bachelor's in 4 years; ",
+    " still haven't in 6."
+   ],
+   "ref2M": {
+    "text": "2M a year",
+    "weight": "700",
+    "color": "rgb(35, 35, 42)"
+   },
+   "boldColor": "rgb(35, 35, 42)",
+   "pColor": "rgb(35, 35, 42)"
+  }
+ ],
+ [
+  "shot",
+  "highered-390-completion-card.png"
+ ],
+ [
+  "home 1440",
+  {
+   "display": "none",
+   "html": "of students don't finish a bachelor's in 4 years; <b>40%</b> still haven't in 6.",
+   "pWeight": "400",
+   "bold": [
+    {
+     "text": "40%",
+     "weight": "700"
+    }
+   ],
+   "plainText": [
+    "of students don't finish a bachelor's in 4 years; ",
+    " still haven't in 6."
+   ],
+   "ref2M": {
+    "text": "2M a year",
+    "weight": "700",
+    "color": "rgb(35, 35, 42)"
+   },
+   "boldColor": "rgb(35, 35, 42)",
+   "pColor": "rgb(35, 35, 42)"
+  }
+ ]
+]

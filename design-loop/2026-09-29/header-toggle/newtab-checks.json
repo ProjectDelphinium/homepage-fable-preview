@@ -1,0 +1,294 @@
+[
+ [
+  "1440 /home links",
+  [
+   {
+    "href": "http://127.0.0.1:8767/contact-us",
+    "target": "_blank",
+    "rel": "noopener",
+    "ariaLabel": "Contact (opens in new tab)",
+    "text": "Contact",
+    "where": "footer"
+   },
+   {
+    "href": "http://127.0.0.1:8767/support",
+    "target": "_blank",
+    "rel": "noopener",
+    "ariaLabel": "Support (opens in new tab)",
+    "text": "Support",
+    "where": "footer"
+   }
+  ]
+ ],
+ [
+  "1440 /home hit footer a[href$=\"/support\"]",
+  null
+ ],
+ [
+  "1440 /home click footer a[href$=\"/support\"]",
+  {
+   "newTabs": [],
+   "openerStayed": true
+  }
+ ],
+ [
+  "1440 /home hit footer a[href$=\"/contact-us\"]",
+  "link"
+ ],
+ [
+  "1440 /home click footer a[href$=\"/contact-us\"]",
+  {
+   "newTabs": [
+    "http://127.0.0.1:8767/contact-us"
+   ],
+   "openerStayed": true
+  }
+ ],
+ [
+  "1440 /home hit footer a[href$=\"/support\"]",
+  "link"
+ ],
+ [
+  "1440 /home click footer a[href$=\"/support\"]",
+  {
+   "newTabs": [
+    "http://127.0.0.1:8767/support"
+   ],
+   "openerStayed": true
+  }
+ ],
+ [
+  "1440 /home hit footer a[href$=\"/contact-us\"]",
+  "link"
+ ],
+ [
+  "1440 /home click footer a[href$=\"/contact-us\"]",
+  {
+   "newTabs": [
+    "http://127.0.0.1:8767/contact-us"
+   ],
+   "openerStayed": true
+  }
+ ],
+ [
+  "1440 /highered links",
+  [
+   {
+    "href": "http://127.0.0.1:8767/contact-us",
+    "target": "_blank",
+    "rel": "noopener",
+    "ariaLabel": "Contact (opens in new tab)",
+    "text": "Contact",
+    "where": "footer"
+   },
+   {
+    "href": "http://127.0.0.1:8767/support",
+    "target": "_blank",
+    "rel": "noopener",
+    "ariaLabel": "Support (opens in new tab)",
+    "text": "Support",
+    "where": "footer"
+   }
+  ]
+ ],
+ [
+  "1440 /highered hit footer a[href$=\"/support\"]",
+  null
+ ],
+ [
+  "1440 /highered click footer a[href$=\"/support\"]",
+  {
+   "newTabs": [],
+   "openerStayed": true
+  }
+ ],
+ [
+  "1440 /highered hit footer a[href$=\"/contact-us\"]",
+  "link"
+ ],
+ [
+  "1440 /highered click footer a[href$=\"/contact-us\"]",
+  {
+   "newTabs": [
+    "http://127.0.0.1:8767/contact-us"
+   ],
+   "openerStayed": true
+  }
+ ],
+ [
+  "1440 /highered hit footer a[href$=\"/support\"]",
+  "link"
+ ],
+ [
+  "1440 /highered click footer a[href$=\"/support\"]",
+  {
+   "newTabs": [
+    "http://127.0.0.1:8767/support"
+   ],
+   "openerStayed": true
+  }
+ ],
+ [
+  "1440 /highered hit footer a[href$=\"/contact-us\"]",
+  "link"
+ ],
+ [
+  "1440 /highered click footer a[href$=\"/contact-us\"]",
+  {
+   "newTabs": [
+    "http://127.0.0.1:8767/contact-us"
+   ],
+   "openerStayed": true
+  }
+ ],
+ [
+  "390 /home links",
+  [
+   {
+    "href": "http://127.0.0.1:8767/contact-us",
+    "target": "_blank",
+    "rel": "noopener",
+    "ariaLabel": "Contact (opens in new tab)",
+    "text": "Contact",
+    "where": "footer"
+   },
+   {
+    "href": "http://127.0.0.1:8767/support",
+    "target": "_blank",
+    "rel": "noopener",
+    "ariaLabel": "Support (opens in new tab)",
+    "text": "Support",
+    "where": "footer"
+   }
+  ]
+ ],
+ [
+  "390 /home menu has contact/support",
+  false
+ ],
+ [
+  "390 /home hit footer a[href$=\"/support\"]",
+  null
+ ],
+ [
+  "390 /home click footer a[href$=\"/support\"]",
+  {
+   "newTabs": [],
+   "openerStayed": true
+  }
+ ],
+ [
+  "390 /home hit footer a[href$=\"/contact-us\"]",
+  "link"
+ ],
+ [
+  "390 /home click footer a[href$=\"/contact-us\"]",
+  {
+   "newTabs": [
+    "http://127.0.0.1:8767/contact-us"
+   ],
+   "openerStayed": true
+  }
+ ],
+ [
+  "390 /home hit footer a[href$=\"/support\"]",
+  "link"
+ ],
+ [
+  "390 /home click footer a[href$=\"/support\"]",
+  {
+   "newTabs": [
+    "http://127.0.0.1:8767/support"
+   ],
+   "openerStayed": true
+  }
+ ],
+ [
+  "390 /home hit footer a[href$=\"/contact-us\"]",
+  "link"
+ ],
+ [
+  "390 /home click footer a[href$=\"/contact-us\"]",
+  {
+   "newTabs": [
+    "http://127.0.0.1:8767/contact-us"
+   ],
+   "openerStayed": true
+  }
+ ],
+ [
+  "390 /highered links",
+  [
+   {
+    "href": "http://127.0.0.1:8767/contact-us",
+    "target": "_blank",
+    "rel": "noopener",
+    "ariaLabel": "Contact (opens in new tab)",
+    "text": "Contact",
+    "where": "footer"
+   },
+   {
+    "href": "http://127.0.0.1:8767/support",
+    "target": "_blank",
+    "rel": "noopener",
+    "ariaLabel": "Support (opens in new tab)",
+    "text": "Support",
+    "where": "footer"
+   }
+  ]
+ ],
+ [
+  "390 /highered menu has contact/support",
+  false
+ ],
+ [
+  "390 /highered hit footer a[href$=\"/support\"]",
+  null
+ ],
+ [
+  "390 /highered click footer a[href$=\"/support\"]",
+  {
+   "newTabs": [],
+   "openerStayed": true
+  }
+ ],
+ [
+  "390 /highered hit footer a[href$=\"/contact-us\"]",
+  "link"
+ ],
+ [
+  "390 /highered click footer a[href$=\"/contact-us\"]",
+  {
+   "newTabs": [
+    "http://127.0.0.1:8767/contact-us"
+   ],
+   "openerStayed": true
+  }
+ ],
+ [
+  "390 /highered hit footer a[href$=\"/support\"]",
+  "link"
+ ],
+ [
+  "390 /highered click footer a[href$=\"/support\"]",
+  {
+   "newTabs": [
+    "http://127.0.0.1:8767/support"
+   ],
+   "openerStayed": true
+  }
+ ],
+ [
+  "390 /highered hit footer a[href$=\"/contact-us\"]",
+  "link"
+ ],
+ [
+  "390 /highered click footer a[href$=\"/contact-us\"]",
+  {
+   "newTabs": [
+    "http://127.0.0.1:8767/contact-us"
+   ],
+   "openerStayed": true
+  }
+ ]
+]

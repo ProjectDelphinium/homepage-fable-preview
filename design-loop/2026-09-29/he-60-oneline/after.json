@@ -1,0 +1,174 @@
+[
+ [
+  "highered 1440",
+  {
+   "vw": 1440,
+   "cardDisplay": "flex",
+   "html": "of students don't finish a bachelor's in 4 years; <b>40%</b> still haven't in 6.",
+   "boxW": 534.4,
+   "lines": 1,
+   "boldText": "40%",
+   "boldWeight": "700",
+   "bodies": [
+    {
+     "text": "students drop out of college. About 2M a",
+     "font": "15.68px",
+     "lh": "22.736px",
+     "lines": 2
+    },
+    {
+     "text": "first-year students don't return for yea",
+     "font": "15.68px",
+     "lh": "22.736px",
+     "lines": 1
+    },
+    {
+     "text": "of students don't finish a bachelor's in",
+     "font": "15.68px",
+     "lh": "22.736px",
+     "lines": 1
+    }
+   ],
+   "emDash": false
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-card.png"
+ ],
+ [
+  "highered 1112",
+  {
+   "vw": 1112,
+   "cardDisplay": "flex",
+   "html": "of students don't finish a bachelor's in 4 years; <b>40%</b> still haven't in 6.",
+   "boxW": 482.9,
+   "lines": 1,
+   "boldText": "40%",
+   "boldWeight": "700",
+   "bodies": [
+    {
+     "text": "students drop out of college. About 2M a",
+     "font": "15.68px",
+     "lh": "22.736px",
+     "lines": 2
+    },
+    {
+     "text": "first-year students don't return for yea",
+     "font": "15.68px",
+     "lh": "22.736px",
+     "lines": 1
+    },
+    {
+     "text": "of students don't finish a bachelor's in",
+     "font": "15.68px",
+     "lh": "22.736px",
+     "lines": 1
+    }
+   ],
+   "emDash": false
+  }
+ ],
+ [
+  "shot",
+  "highered-1112-card.png"
+ ],
+ [
+  "highered 577",
+  {
+   "vw": 577,
+   "cardDisplay": "flex",
+   "html": "of students don't finish a bachelor's in 4 years; <b>40%</b> still haven't in 6.",
+   "boxW": 483.2,
+   "lines": 1,
+   "boldText": "40%",
+   "boldWeight": "700",
+   "bodies": [
+    {
+     "text": "students drop out of college. About 2M a",
+     "font": "15.68px",
+     "lh": "22.736px",
+     "lines": 2
+    },
+    {
+     "text": "first-year students don't return for yea",
+     "font": "15.68px",
+     "lh": "22.736px",
+     "lines": 1
+    },
+    {
+     "text": "of students don't finish a bachelor's in",
+     "font": "15.68px",
+     "lh": "22.736px",
+     "lines": 1
+    }
+   ],
+   "emDash": false
+  }
+ ],
+ [
+  "shot",
+  "highered-577-card.png"
+ ],
+ [
+  "highered 390",
+  {
+   "vw": 390,
+   "cardDisplay": "flex",
+   "html": "of students don't finish a bachelor's in 4 years; <b>40%</b> still haven't in 6.",
+   "boxW": 311.2,
+   "lines": 2,
+   "boldText": "40%",
+   "boldWeight": "700",
+   "bodies": [
+    {
+     "text": "students drop out of college. About 2M a",
+     "font": "15.68px",
+     "lh": "22.736px",
+     "lines": 3
+    },
+    {
+     "text": "first-year students don't return for yea",
+     "font": "15.68px",
+     "lh": "22.736px",
+     "lines": 1
+    },
+    {
+     "text": "of students don't finish a bachelor's in",
+     "font": "15.68px",
+     "lh": "22.736px",
+     "lines": 2
+    }
+   ],
+   "emDash": false
+  }
+ ],
+ [
+  "shot",
+  "highered-390-card.png"
+ ],
+ [
+  "home 1440",
+  {
+   "heCardDisplay": "none",
+   "caseH": 961.9375,
+   "docH": 13649
+  }
+ ],
+ [
+  "shot",
+  "after-home-1440-case.png"
+ ],
+ [
+  "home 390",
+  {
+   "heCardDisplay": "none",
+   "caseH": 1217.90625,
+   "docH": 18466
+  }
+ ],
+ [
+  "shot",
+  "after-home-390-case.png"
+ ]
+]

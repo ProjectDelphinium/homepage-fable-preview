@@ -1,0 +1,458 @@
+{
+ "/home 1440": {
+  "shot": "after-home-1440-footer.png",
+  "vw": 1440,
+  "scrollW": 1425,
+  "overflowX": false,
+  "footerPadTop": "64px",
+  "footerMarginTop": "0px",
+  "footerTopToGrid": 64,
+  "logoMarginLeft": "48px",
+  "logo": {
+   "left": 180.5,
+   "top": 13273.5,
+   "right": 298.5,
+   "bottom": 13357.5,
+   "w": 118,
+   "h": 84
+  },
+  "tag": {
+   "left": 132.5,
+   "top": 13380.3,
+   "right": 462.9,
+   "bottom": 13427.4,
+   "w": 330.4,
+   "h": 47
+  },
+  "tagGlyphTop": null,
+  "headings": [
+   {
+    "text": "On this page",
+    "left": 621.4,
+    "boxTop": 13273.5,
+    "boxH": 14.5,
+    "trim": "trim-start / cap alphabetic",
+    "linksTop": 28.9,
+    "glyphTop": 13273.5
+   },
+   {
+    "text": "Talk with us",
+    "left": 989,
+    "boxTop": 13273.5,
+    "boxH": 14.5,
+    "trim": "trim-start / cap alphabetic",
+    "linksTop": 28.9,
+    "glyphTop": 13273.5
+   }
+  ],
+  "logoTopVsHeadingGlyph": [
+   0,
+   0
+  ],
+  "gridToDivider": 48,
+  "dividerToFooterBottom": 65.4,
+  "copyrightToFooterBottom": 24,
+  "footerH": 387,
+  "gridH": 209.7,
+  "prevEl": "MAIN.dl-home"
+ },
+ "/home 1097": {
+  "shot": "after-home-1097-footer.png",
+  "vw": 1097,
+  "scrollW": 1082,
+  "overflowX": false,
+  "footerPadTop": "54.85px",
+  "footerMarginTop": "0px",
+  "footerTopToGrid": 54.8,
+  "logoMarginLeft": "48px",
+  "logo": {
+   "left": 68,
+   "top": 12681.2,
+   "right": 186,
+   "bottom": 12765.2,
+   "w": 118,
+   "h": 84
+  },
+  "tag": {
+   "left": 20,
+   "top": 12788,
+   "right": 350.4,
+   "bottom": 12835,
+   "w": 330.4,
+   "h": 47
+  },
+  "tagGlyphTop": null,
+  "headings": [
+   {
+    "text": "On this page",
+    "left": 458.7,
+    "boxTop": 12681.2,
+    "boxH": 14.5,
+    "trim": "trim-start / cap alphabetic",
+    "linksTop": 28.9,
+    "glyphTop": 12681.2
+   },
+   {
+    "text": "Talk with us",
+    "left": 787.8,
+    "boxTop": 12681.2,
+    "boxH": 14.5,
+    "trim": "trim-start / cap alphabetic",
+    "linksTop": 28.9,
+    "glyphTop": 12681.2
+   }
+  ],
+  "logoTopVsHeadingGlyph": [
+   0,
+   0
+  ],
+  "gridToDivider": 43.9,
+  "dividerToFooterBottom": 65.4,
+  "copyrightToFooterBottom": 24,
+  "footerH": 373.8,
+  "gridH": 209.7,
+  "prevEl": "MAIN.dl-home"
+ },
+ "/home 760": {
+  "shot": "after-home-760-footer.png",
+  "vw": 760,
+  "scrollW": 745,
+  "overflowX": false,
+  "footerPadTop": "48px",
+  "footerMarginTop": "0px",
+  "footerTopToGrid": 48,
+  "logoMarginLeft": "48px",
+  "logo": {
+   "left": 68,
+   "top": 14804.3,
+   "right": 186,
+   "bottom": 14888.3,
+   "w": 118,
+   "h": 84
+  },
+  "tag": {
+   "left": 20,
+   "top": 14911.1,
+   "right": 350.4,
+   "bottom": 14958.2,
+   "w": 330.4,
+   "h": 47
+  },
+  "tagGlyphTop": null,
+  "headings": [
+   {
+    "text": "On this page",
+    "left": 20,
+    "boxTop": 14998.2,
+    "boxH": 14.5,
+    "trim": "trim-start / cap alphabetic",
+    "linksTop": 28.9,
+    "glyphTop": 14998.2
+   },
+   {
+    "text": "Talk with us",
+    "left": 391.5,
+    "boxTop": 14998.2,
+    "boxH": 14.5,
+    "trim": "trim-start / cap alphabetic",
+    "linksTop": 28.9,
+    "glyphTop": 14998.2
+   }
+  ],
+  "logoTopVsHeadingGlyph": [
+   193.9,
+   193.9
+  ],
+  "gridToDivider": 36,
+  "dividerToFooterBottom": 65.4,
+  "copyrightToFooterBottom": 24,
+  "footerH": 552.9,
+  "gridH": 403.5,
+  "prevEl": "MAIN.dl-home"
+ },
+ "/home 390": {
+  "shot": "after-home-390-footer.png",
+  "vw": 390,
+  "scrollW": 390,
+  "overflowX": false,
+  "footerPadTop": "48px",
+  "footerMarginTop": "0px",
+  "footerTopToGrid": 48,
+  "logoMarginLeft": "48px",
+  "logo": {
+   "left": 68,
+   "top": 17720.1,
+   "right": 172,
+   "bottom": 17794.2,
+   "w": 104,
+   "h": 74
+  },
+  "tag": {
+   "left": 20,
+   "top": 17817,
+   "right": 350.4,
+   "bottom": 17864,
+   "w": 330.4,
+   "h": 47
+  },
+  "tagGlyphTop": null,
+  "headings": [
+   {
+    "text": "On this page",
+    "left": 20,
+    "boxTop": 17896,
+    "boxH": 14.5,
+    "trim": "trim-start / cap alphabetic",
+    "linksTop": 28.9,
+    "glyphTop": 17896
+   },
+   {
+    "text": "Talk with us",
+    "left": 20,
+    "boxTop": 18137.6,
+    "boxH": 14.5,
+    "trim": "trim-start / cap alphabetic",
+    "linksTop": 28.9,
+    "glyphTop": 18137.6
+   }
+  ],
+  "logoTopVsHeadingGlyph": [
+   175.9,
+   417.5
+  ],
+  "gridToDivider": 36,
+  "dividerToFooterBottom": 65.4,
+  "copyrightToFooterBottom": 24,
+  "footerH": 775,
+  "gridH": 625.6,
+  "prevEl": "MAIN.dl-home"
+ },
+ "/highered 1440": {
+  "shot": "after-highered-1440-footer.png",
+  "vw": 1440,
+  "scrollW": 1425,
+  "overflowX": false,
+  "footerPadTop": "64px",
+  "footerMarginTop": "0px",
+  "footerTopToGrid": 64,
+  "logoMarginLeft": "48px",
+  "logo": {
+   "left": 180.5,
+   "top": 12301,
+   "right": 298.5,
+   "bottom": 12385,
+   "w": 118,
+   "h": 84
+  },
+  "tag": {
+   "left": 132.5,
+   "top": 12407.8,
+   "right": 462.9,
+   "bottom": 12454.8,
+   "w": 330.4,
+   "h": 47
+  },
+  "tagGlyphTop": null,
+  "headings": [
+   {
+    "text": "On this page",
+    "left": 621.4,
+    "boxTop": 12301,
+    "boxH": 14.5,
+    "trim": "trim-start / cap alphabetic",
+    "linksTop": 28.9,
+    "glyphTop": 12301
+   },
+   {
+    "text": "Talk with us",
+    "left": 989,
+    "boxTop": 12301,
+    "boxH": 14.5,
+    "trim": "trim-start / cap alphabetic",
+    "linksTop": 28.9,
+    "glyphTop": 12301
+   }
+  ],
+  "logoTopVsHeadingGlyph": [
+   0,
+   0
+  ],
+  "gridToDivider": 48,
+  "dividerToFooterBottom": 65.4,
+  "copyrightToFooterBottom": 24,
+  "footerH": 385.5,
+  "gridH": 208.1,
+  "prevEl": "MAIN.dl-home"
+ },
+ "/highered 1097": {
+  "shot": "after-highered-1097-footer.png",
+  "vw": 1097,
+  "scrollW": 1082,
+  "overflowX": false,
+  "footerPadTop": "54.85px",
+  "footerMarginTop": "0px",
+  "footerTopToGrid": 54.8,
+  "logoMarginLeft": "48px",
+  "logo": {
+   "left": 68,
+   "top": 11756.7,
+   "right": 186,
+   "bottom": 11840.7,
+   "w": 118,
+   "h": 84
+  },
+  "tag": {
+   "left": 20,
+   "top": 11863.5,
+   "right": 350.4,
+   "bottom": 11910.6,
+   "w": 330.4,
+   "h": 47
+  },
+  "tagGlyphTop": null,
+  "headings": [
+   {
+    "text": "On this page",
+    "left": 458.7,
+    "boxTop": 11756.7,
+    "boxH": 14.5,
+    "trim": "trim-start / cap alphabetic",
+    "linksTop": 28.9,
+    "glyphTop": 11756.7
+   },
+   {
+    "text": "Talk with us",
+    "left": 787.8,
+    "boxTop": 11756.7,
+    "boxH": 14.5,
+    "trim": "trim-start / cap alphabetic",
+    "linksTop": 28.9,
+    "glyphTop": 11756.7
+   }
+  ],
+  "logoTopVsHeadingGlyph": [
+   0,
+   0
+  ],
+  "gridToDivider": 43.9,
+  "dividerToFooterBottom": 65.4,
+  "copyrightToFooterBottom": 24,
+  "footerH": 372.2,
+  "gridH": 208.1,
+  "prevEl": "MAIN.dl-home"
+ },
+ "/highered 760": {
+  "shot": "after-highered-760-footer.png",
+  "vw": 760,
+  "scrollW": 745,
+  "overflowX": false,
+  "footerPadTop": "48px",
+  "footerMarginTop": "0px",
+  "footerTopToGrid": 48,
+  "logoMarginLeft": "48px",
+  "logo": {
+   "left": 68,
+   "top": 14168.2,
+   "right": 186,
+   "bottom": 14252.2,
+   "w": 118,
+   "h": 84
+  },
+  "tag": {
+   "left": 20,
+   "top": 14275,
+   "right": 350.4,
+   "bottom": 14322,
+   "w": 330.4,
+   "h": 47
+  },
+  "tagGlyphTop": null,
+  "headings": [
+   {
+    "text": "On this page",
+    "left": 20,
+    "boxTop": 14362,
+    "boxH": 14.5,
+    "trim": "trim-start / cap alphabetic",
+    "linksTop": 28.9,
+    "glyphTop": 14362
+   },
+   {
+    "text": "Talk with us",
+    "left": 391.5,
+    "boxTop": 14362,
+    "boxH": 14.5,
+    "trim": "trim-start / cap alphabetic",
+    "linksTop": 28.9,
+    "glyphTop": 14362
+   }
+  ],
+  "logoTopVsHeadingGlyph": [
+   193.8,
+   193.8
+  ],
+  "gridToDivider": 36,
+  "dividerToFooterBottom": 65.4,
+  "copyrightToFooterBottom": 24,
+  "footerH": 551.3,
+  "gridH": 401.9,
+  "prevEl": "MAIN.dl-home"
+ },
+ "/highered 390": {
+  "shot": "after-highered-390-footer.png",
+  "vw": 390,
+  "scrollW": 390,
+  "overflowX": false,
+  "footerPadTop": "48px",
+  "footerMarginTop": "0px",
+  "footerTopToGrid": 48,
+  "logoMarginLeft": "48px",
+  "logo": {
+   "left": 68,
+   "top": 16609.2,
+   "right": 172,
+   "bottom": 16683.2,
+   "w": 104,
+   "h": 74
+  },
+  "tag": {
+   "left": 20,
+   "top": 16706,
+   "right": 350.4,
+   "bottom": 16753,
+   "w": 330.4,
+   "h": 47
+  },
+  "tagGlyphTop": null,
+  "headings": [
+   {
+    "text": "On this page",
+    "left": 20,
+    "boxTop": 16785,
+    "boxH": 14.5,
+    "trim": "trim-start / cap alphabetic",
+    "linksTop": 28.9,
+    "glyphTop": 16785
+   },
+   {
+    "text": "Talk with us",
+    "left": 20,
+    "boxTop": 16995.1,
+    "boxH": 14.5,
+    "trim": "trim-start / cap alphabetic",
+    "linksTop": 28.9,
+    "glyphTop": 16995.1
+   }
+  ],
+  "logoTopVsHeadingGlyph": [
+   175.8,
+   385.9
+  ],
+  "gridToDivider": 36,
+  "dividerToFooterBottom": 65.4,
+  "copyrightToFooterBottom": 24,
+  "footerH": 743.4,
+  "gridH": 594,
+  "prevEl": "MAIN.dl-home"
+ }
+}

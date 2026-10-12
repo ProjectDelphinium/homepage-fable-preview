@@ -1,0 +1,188 @@
+{
+ "he-1440": {
+  "setupLines": 2,
+  "setup": [
+   "These are the stats that keep us up at night,",
+   "and the reason we made Delphinium."
+  ],
+  "payoffLines": 1,
+  "payoff": [
+   "Doing nothing is the most expensive option you have."
+  ],
+  "setupFont": "28.8px",
+  "setupWeight": "300",
+  "setupStyle": "normal",
+  "setupColor": "rgb(85, 85, 95)",
+  "textWrap": "balance",
+  "pW": 957,
+  "pH": 151,
+  "keyVisible": "expensive",
+  "docOverflow": false
+ },
+ "he-1040": {
+  "setupLines": 2,
+  "setup": [
+   "These are the stats that keep us up at night,",
+   "and the reason we made Delphinium."
+  ],
+  "payoffLines": 1,
+  "payoff": [
+   "Doing nothing is the most expensive option you have."
+  ],
+  "setupFont": "23.4px",
+  "setupWeight": "300",
+  "setupStyle": "normal",
+  "setupColor": "rgb(85, 85, 95)",
+  "textWrap": "balance",
+  "pW": 778,
+  "pH": 128,
+  "keyVisible": "expensive",
+  "docOverflow": false
+ },
+ "he-760": {
+  "setupLines": 2,
+  "setup": [
+   "These are the stats that keep us up at night,",
+   "and the reason we made Delphinium."
+  ],
+  "payoffLines": 1,
+  "payoff": [
+   "Doing nothing is the most expensive option you have."
+  ],
+  "setupFont": "19.2px",
+  "setupWeight": "300",
+  "setupStyle": "normal",
+  "setupColor": "rgb(85, 85, 95)",
+  "textWrap": "balance",
+  "pW": 638,
+  "pH": 109,
+  "keyVisible": "expensive",
+  "docOverflow": false
+ },
+ "he-390": {
+  "setupLines": 2,
+  "setup": [
+   "These are the stats that keep us up at night,",
+   "and the reason we made Delphinium."
+  ],
+  "payoffLines": 2,
+  "payoff": [
+   "Doing nothing is the most",
+   "expensive option you have."
+  ],
+  "setupFont": "19.2px",
+  "setupWeight": "300",
+  "setupStyle": "normal",
+  "setupColor": "rgb(85, 85, 95)",
+  "textWrap": "balance",
+  "pW": 350,
+  "pH": 138,
+  "keyVisible": "expensive",
+  "docOverflow": false
+ },
+ "home-1440-lines": {
+  "setupLines": 1,
+  "setup": [
+   "Three crises, one cause: disengagement ."
+  ],
+  "payoffLines": 1,
+  "payoff": [
+   "Doing nothing is the most expensive option you have."
+  ],
+  "setupFont": "28.8px",
+  "setupWeight": "300",
+  "setupStyle": "normal",
+  "setupColor": "rgb(85, 85, 95)",
+  "textWrap": "balance",
+  "pW": 957,
+  "pH": 118,
+  "keyVisible": "expensive",
+  "docOverflow": false
+ },
+ "home-1440": {
+  "control": true,
+  "reassignedSame": true,
+  "identical": true,
+  "reassignedVsRestored": true,
+  "altVsRestored": true
+ },
+ "home-1040-lines": {
+  "setupLines": 1,
+  "setup": [
+   "Three crises, one cause: disengagement ."
+  ],
+  "payoffLines": 1,
+  "payoff": [
+   "Doing nothing is the most expensive option you have."
+  ],
+  "setupFont": "23.4px",
+  "setupWeight": "300",
+  "setupStyle": "normal",
+  "setupColor": "rgb(85, 85, 95)",
+  "textWrap": "balance",
+  "pW": 778,
+  "pH": 101,
+  "keyVisible": "expensive",
+  "docOverflow": false
+ },
+ "home-1040": {
+  "control": true,
+  "reassignedSame": true,
+  "identical": true,
+  "reassignedVsRestored": true,
+  "altVsRestored": true
+ },
+ "home-760-lines": {
+  "setupLines": 1,
+  "setup": [
+   "Three crises, one cause: disengagement ."
+  ],
+  "payoffLines": 1,
+  "payoff": [
+   "Doing nothing is the most expensive option you have."
+  ],
+  "setupFont": "19.2px",
+  "setupWeight": "300",
+  "setupStyle": "normal",
+  "setupColor": "rgb(85, 85, 95)",
+  "textWrap": "balance",
+  "pW": 638,
+  "pH": 87,
+  "keyVisible": "expensive",
+  "docOverflow": false
+ },
+ "home-760": {
+  "control": true,
+  "reassignedSame": true,
+  "identical": true,
+  "reassignedVsRestored": true,
+  "altVsRestored": true
+ },
+ "home-390-lines": {
+  "setupLines": 1,
+  "setup": [
+   "Three crises, one cause: disengagement ."
+  ],
+  "payoffLines": 2,
+  "payoff": [
+   "Doing nothing is the most",
+   "expensive option you have."
+  ],
+  "setupFont": "19.2px",
+  "setupWeight": "300",
+  "setupStyle": "normal",
+  "setupColor": "rgb(85, 85, 95)",
+  "textWrap": "balance",
+  "pW": 350,
+  "pH": 116,
+  "keyVisible": "expensive",
+  "docOverflow": false
+ },
+ "home-390": {
+  "control": true,
+  "reassignedSame": true,
+  "identical": true,
+  "reassignedVsRestored": true,
+  "altVsRestored": true
+ }
+}

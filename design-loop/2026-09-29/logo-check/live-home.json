@@ -1,0 +1,150 @@
+{
+ "href": "https://www.delphi-me.com/home",
+ "sectionVisible": true,
+ "imgs": [
+  {
+   "src": "https://www.delphi-me.com/dl28-hubfs-Davis-School-District.png",
+   "alt": "Davis School District",
+   "clone": false,
+   "complete": true,
+   "naturalWidth": 536,
+   "naturalHeight": 99
+  },
+  {
+   "src": "https://www.delphi-me.com/dl28-hubfs-cropped-utva_pbk12_logo_rgb-1.webp",
+   "alt": "Utah Virtual Academy",
+   "clone": false,
+   "complete": true,
+   "naturalWidth": 363,
+   "naturalHeight": 100
+  },
+  {
+   "src": "https://www.delphi-me.com/dl28-hubfs-bakerwebacademylogo.webp",
+   "alt": "Baker Web Academy",
+   "clone": false,
+   "complete": true,
+   "naturalWidth": 100,
+   "naturalHeight": 100
+  },
+  {
+   "src": "https://www.delphi-me.com/dl28-hubfs-weblogo-e1668897946927.png",
+   "alt": "Partner school logo",
+   "clone": false,
+   "complete": true,
+   "naturalWidth": 300,
+   "naturalHeight": 100
+  },
+  {
+   "src": "https://www.delphi-me.com/dl28-hubfs-web_kelseypeak_logo.png",
+   "alt": "Kelsey Peak",
+   "clone": false,
+   "complete": true,
+   "naturalWidth": 300,
+   "naturalHeight": 100
+  },
+  {
+   "src": "https://www.delphi-me.com/dl28-hubfs-web_rockypeak_logo.png",
+   "alt": "Rocky Peak",
+   "clone": false,
+   "complete": true,
+   "naturalWidth": 300,
+   "naturalHeight": 100
+  },
+  {
+   "src": "https://www.delphi-me.com/dl28-hubfs-AHS.webp",
+   "alt": "AHS",
+   "clone": false,
+   "complete": true,
+   "naturalWidth": 182,
+   "naturalHeight": 100
+  },
+  {
+   "src": "https://www.delphi-me.com/dl28-mewalogo.gif",
+   "alt": "Mewa",
+   "clone": false,
+   "complete": true,
+   "naturalWidth": 1048,
+   "naturalHeight": 400
+  },
+  {
+   "src": "https://www.delphi-me.com/dl28-hubfs-vpw_logo_no_motto.webp",
+   "alt": "VPW",
+   "clone": false,
+   "complete": true,
+   "naturalWidth": 140,
+   "naturalHeight": 88
+  },
+  {
+   "src": "https://www.delphi-me.com/dl28-hubfs-Davis-School-District.png",
+   "alt": "",
+   "clone": true,
+   "complete": true,
+   "naturalWidth": 536,
+   "naturalHeight": 99
+  },
+  {
+   "src": "https://www.delphi-me.com/dl28-hubfs-cropped-utva_pbk12_logo_rgb-1.webp",
+   "alt": "",
+   "clone": true,
+   "complete": true,
+   "naturalWidth": 363,
+   "naturalHeight": 100
+  },
+  {
+   "src": "https://www.delphi-me.com/dl28-hubfs-bakerwebacademylogo.webp",
+   "alt": "",
+   "clone": true,
+   "complete": true,
+   "naturalWidth": 100,
+   "naturalHeight": 100
+  },
+  {
+   "src": "https://www.delphi-me.com/dl28-hubfs-weblogo-e1668897946927.png",
+   "alt": "",
+   "clone": true,
+   "complete": true,
+   "naturalWidth": 300,
+   "naturalHeight": 100
+  },
+  {
+   "src": "https://www.delphi-me.com/dl28-hubfs-web_kelseypeak_logo.png",
+   "alt": "",
+   "clone": true,
+   "complete": true,
+   "naturalWidth": 300,
+   "naturalHeight": 100
+  },
+  {
+   "src": "https://www.delphi-me.com/dl28-hubfs-web_rockypeak_logo.png",
+   "alt": "",
+   "clone": true,
+   "complete": true,
+   "naturalWidth": 300,
+   "naturalHeight": 100
+  },
+  {
+   "src": "https://www.delphi-me.com/dl28-hubfs-AHS.webp",
+   "alt": "",
+   "clone": true,
+   "complete": true,
+   "naturalWidth": 182,
+   "naturalHeight": 100
+  },
+  {
+   "src": "https://www.delphi-me.com/dl28-mewalogo.gif",
+   "alt": "",
+   "clone": true,
+   "complete": true,
+   "naturalWidth": 1048,
+   "naturalHeight": 400
+  },
+  {
+   "src": "https://www.delphi-me.com/dl28-hubfs-vpw_logo_no_motto.webp",
+   "alt": "",
+   "clone": true,
+   "complete": true,
+   "naturalWidth": 140,
+   "naturalHeight": 88
+  }
+ ]
+}

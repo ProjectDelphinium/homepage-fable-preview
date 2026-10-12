@@ -1,0 +1,262 @@
+{
+ "1440 date step": {
+  "hits": [
+   {
+    "t": "Schedule a Demo!",
+    "y": 68,
+    "h": 22,
+    "path": "div#ember7.zb-ctheme-container.ember-view > div.zb-ctheme-content > div.zb-ctheme-panel > div.zb-ct-leftpanel > div#ember14.zb-selected-container.ember-view > div#ember16.zb-all-details.zb-service-selected.ember-view > span.zb-ad-namedetails > span.zb-ad-name > span.zb-ad-names"
+   },
+   {
+    "t": "Select date and time",
+    "y": 238,
+    "h": 21,
+    "path": "div.zb-pb-content > div#ember6.zb-template-container.ember-view > div#ember7.zb-ctheme-container.ember-view > div.zb-ctheme-content > div.zb-ctheme-panel > div.zb-ct-rightpanel > div.zb-ct-datetime-container > div#ember18.zb-ct-date-timezone-container.ember-view > h2.zb-ct-right-header"
+   }
+  ],
+  "scrollers": [],
+  "content": {
+   "top": 30,
+   "bottom": 749,
+   "sh": 719,
+   "ch": 719
+  },
+  "left": {
+   "top": 30,
+   "h": 184,
+   "w": 1040
+  },
+  "doc": {
+   "sh": 804,
+   "ch": 804,
+   "iw": 1100,
+   "ih": 804
+  },
+  "href": "https://jared-delphi-me.zohobookings.com/portal-embed#/4937208000000036014"
+ },
+ "1440 tall 2000": {
+  "hits": [
+   {
+    "t": "Schedule a Demo!",
+    "y": 68,
+    "h": 22,
+    "path": "div#ember7.zb-ctheme-container.ember-view > div.zb-ctheme-content > div.zb-ctheme-panel > div.zb-ct-leftpanel > div#ember14.zb-selected-container.ember-view > div#ember16.zb-all-details.zb-service-selected.ember-view > span.zb-ad-namedetails > span.zb-ad-name > span.zb-ad-names"
+   },
+   {
+    "t": "Select date and time",
+    "y": 238,
+    "h": 21,
+    "path": "div.zb-pb-content > div#ember6.zb-template-container.ember-view > div#ember7.zb-ctheme-container.ember-view > div.zb-ctheme-content > div.zb-ctheme-panel > div.zb-ct-rightpanel > div.zb-ct-datetime-container > div#ember18.zb-ct-date-timezone-container.ember-view > h2.zb-ct-right-header"
+   }
+  ],
+  "scrollers": [],
+  "content": {
+   "top": 30,
+   "bottom": 1945,
+   "sh": 1915,
+   "ch": 1915
+  },
+  "left": {
+   "top": 30,
+   "h": 184,
+   "w": 1040
+  },
+  "doc": {
+   "sh": 2000,
+   "ch": 2000,
+   "iw": 1100,
+   "ih": 2000
+  },
+  "href": "https://jared-delphi-me.zohobookings.com/portal-embed#/4937208000000036014"
+ },
+ "1440 slots": {
+  "hits": [
+   {
+    "t": "Schedule a Demo!",
+    "y": 68,
+    "h": 22,
+    "path": "div#ember7.zb-ctheme-container.ember-view > div.zb-ctheme-content > div.zb-ctheme-panel > div.zb-ct-leftpanel > div#ember14.zb-selected-container.ember-view > div#ember16.zb-all-details.zb-service-selected.ember-view > span.zb-ad-namedetails > span.zb-ad-name > span.zb-ad-names"
+   },
+   {
+    "t": "Select date and time",
+    "y": 238,
+    "h": 21,
+    "path": "div.zb-pb-content > div#ember6.zb-template-container.ember-view > div#ember7.zb-ctheme-container.ember-view > div.zb-ctheme-content > div.zb-ctheme-panel > div.zb-ct-rightpanel > div.zb-ct-datetime-container > div#ember18.zb-ct-date-timezone-container.ember-view > h2.zb-ct-right-header"
+   }
+  ],
+  "scrollers": [],
+  "content": {
+   "top": 30,
+   "bottom": 749,
+   "sh": 719,
+   "ch": 719
+  },
+  "left": {
+   "top": 30,
+   "h": 184,
+   "w": 1040
+  },
+  "doc": {
+   "sh": 804,
+   "ch": 804,
+   "iw": 1100,
+   "ih": 804
+  },
+  "href": "https://jared-delphi-me.zohobookings.com/portal-embed#/4937208000000036014"
+ },
+ "1440 clicked": null,
+ "1440 details step": "SC\nSchedule a Demo!\njared_delphi-me\n1 hr\nSelect date and time\nSep\n2026\nS\tM\tT\tW\tT\tF\tS\n\t\t1\t2\t3\t4\t5\n6\t7\t8\t9\t10\t11\t12\n13\t14\t15\t16\t17\t18\t19\n20\t21\t22\t23\t24\t25\t26\n27\t28\t29\t30\nTime Zone\nAmerica/Denver - MDT (-06:00)",
+ "1440 details map": {
+  "hits": [
+   {
+    "t": "Schedule a Demo!",
+    "y": 68,
+    "h": 22,
+    "path": "div#ember7.zb-ctheme-container.ember-view > div.zb-ctheme-content > div.zb-ctheme-panel > div.zb-ct-leftpanel > div#ember14.zb-selected-container.ember-view > div#ember16.zb-all-details.zb-service-selected.ember-view > span.zb-ad-namedetails > span.zb-ad-name > span.zb-ad-names"
+   },
+   {
+    "t": "Select date and time",
+    "y": 238,
+    "h": 21,
+    "path": "div.zb-pb-content > div#ember6.zb-template-container.ember-view > div#ember7.zb-ctheme-container.ember-view > div.zb-ctheme-content > div.zb-ctheme-panel > div.zb-ct-rightpanel > div.zb-ct-datetime-container > div#ember18.zb-ct-date-timezone-container.ember-view > h2.zb-ct-right-header"
+   }
+  ],
+  "scrollers": [],
+  "content": {
+   "top": 30,
+   "bottom": 749,
+   "sh": 719,
+   "ch": 719
+  },
+  "left": {
+   "top": 30,
+   "h": 184,
+   "w": 1040
+  },
+  "doc": {
+   "sh": 804,
+   "ch": 804,
+   "iw": 1100,
+   "ih": 804
+  },
+  "href": "https://jared-delphi-me.zohobookings.com/portal-embed#/4937208000000036014"
+ },
+ "390 date step": {
+  "hits": [
+   {
+    "t": "Schedule a Demo!",
+    "y": 266,
+    "h": 22,
+    "path": "div.zb-ctheme-panel > div.zb-ct-rightpanel > div#ember23.zb-card-container.ember-view > div.zb-card-view > button#ab-service-choose > div#ember25.zb-all-details.ember-view > span.zb-ad-namedetails > span.zb-ad-name > span.zb-ad-names"
+   }
+  ],
+  "scrollers": [],
+  "content": {
+   "top": 30,
+   "bottom": 693,
+   "sh": 663,
+   "ch": 663
+  },
+  "left": {
+   "top": 30,
+   "h": 126,
+   "w": 298
+  },
+  "doc": {
+   "sh": 748,
+   "ch": 748,
+   "iw": 358,
+   "ih": 748
+  },
+  "href": "https://jared-delphi-me.zohobookings.com/portal-embed#/4937208000000036014"
+ },
+ "390 tall 2000": {
+  "hits": [
+   {
+    "t": "Schedule a Demo!",
+    "y": 266,
+    "h": 22,
+    "path": "div.zb-ctheme-panel > div.zb-ct-rightpanel > div#ember23.zb-card-container.ember-view > div.zb-card-view > button#ab-service-choose > div#ember25.zb-all-details.ember-view > span.zb-ad-namedetails > span.zb-ad-name > span.zb-ad-names"
+   }
+  ],
+  "scrollers": [],
+  "content": {
+   "top": 30,
+   "bottom": 1945,
+   "sh": 1915,
+   "ch": 1915
+  },
+  "left": {
+   "top": 30,
+   "h": 126,
+   "w": 298
+  },
+  "doc": {
+   "sh": 2000,
+   "ch": 2000,
+   "iw": 358,
+   "ih": 2000
+  },
+  "href": "https://jared-delphi-me.zohobookings.com/portal-embed#/4937208000000036014"
+ },
+ "390 slots": {
+  "hits": [
+   {
+    "t": "Schedule a Demo!",
+    "y": 266,
+    "h": 22,
+    "path": "div.zb-ctheme-panel > div.zb-ct-rightpanel > div#ember23.zb-card-container.ember-view > div.zb-card-view > button#ab-service-choose > div#ember25.zb-all-details.ember-view > span.zb-ad-namedetails > span.zb-ad-name > span.zb-ad-names"
+   }
+  ],
+  "scrollers": [],
+  "content": {
+   "top": 30,
+   "bottom": 693,
+   "sh": 663,
+   "ch": 663
+  },
+  "left": {
+   "top": 30,
+   "h": 126,
+   "w": 298
+  },
+  "doc": {
+   "sh": 748,
+   "ch": 748,
+   "iw": 358,
+   "ih": 748
+  },
+  "href": "https://jared-delphi-me.zohobookings.com/portal-embed#/4937208000000036014"
+ },
+ "390 clicked": null,
+ "390 details step": "DE\nDelphi M.E.\n\nChoose Consultation\nSC\nSchedule a Demo!",
+ "390 details map": {
+  "hits": [
+   {
+    "t": "Schedule a Demo!",
+    "y": 266,
+    "h": 22,
+    "path": "div.zb-ctheme-panel > div.zb-ct-rightpanel > div#ember23.zb-card-container.ember-view > div.zb-card-view > button#ab-service-choose > div#ember25.zb-all-details.ember-view > span.zb-ad-namedetails > span.zb-ad-name > span.zb-ad-names"
+   }
+  ],
+  "scrollers": [],
+  "content": {
+   "top": 30,
+   "bottom": 693,
+   "sh": 663,
+   "ch": 663
+  },
+  "left": {
+   "top": 30,
+   "h": 126,
+   "w": 298
+  },
+  "doc": {
+   "sh": 748,
+   "ch": 748,
+   "iw": 358,
+   "ih": 748
+  },
+  "href": "https://jared-delphi-me.zohobookings.com/portal-embed#/4937208000000036014"
+ }
+}

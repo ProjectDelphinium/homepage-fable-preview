@@ -1,0 +1,67 @@
+[
+ [
+  "highered 1440",
+  {
+   "display": "flex",
+   "html": "of students don't finish a bachelor's in 4 years, and about 40% still haven't in 6. Time-to-degree keeps stretching.",
+   "pWeight": "400",
+   "bold": [],
+   "plainText": [
+    "of students don't finish a bachelor's in 4 years, and about 40% still haven't in 6. Time-to-degree keeps stretching."
+   ],
+   "ref2M": {
+    "text": "2M a year",
+    "weight": "700",
+    "color": "rgb(35, 35, 42)"
+   },
+   "boldColor": null,
+   "pColor": "rgb(35, 35, 42)"
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-completion-card.png"
+ ],
+ [
+  "highered 390",
+  {
+   "display": "flex",
+   "html": "of students don't finish a bachelor's in 4 years, and about 40% still haven't in 6. Time-to-degree keeps stretching.",
+   "pWeight": "400",
+   "bold": [],
+   "plainText": [
+    "of students don't finish a bachelor's in 4 years, and about 40% still haven't in 6. Time-to-degree keeps stretching."
+   ],
+   "ref2M": {
+    "text": "2M a year",
+    "weight": "700",
+    "color": "rgb(35, 35, 42)"
+   },
+   "boldColor": null,
+   "pColor": "rgb(35, 35, 42)"
+  }
+ ],
+ [
+  "shot",
+  "highered-390-completion-card.png"
+ ],
+ [
+  "home 1440",
+  {
+   "display": "none",
+   "html": "of students don't finish a bachelor's in 4 years, and about 40% still haven't in 6. Time-to-degree keeps stretching.",
+   "pWeight": "400",
+   "bold": [],
+   "plainText": [
+    "of students don't finish a bachelor's in 4 years, and about 40% still haven't in 6. Time-to-degree keeps stretching."
+   ],
+   "ref2M": {
+    "text": "2M a year",
+    "weight": "700",
+    "color": "rgb(35, 35, 42)"
+   },
+   "boldColor": null,
+   "pColor": "rgb(35, 35, 42)"
+  }
+ ]
+]

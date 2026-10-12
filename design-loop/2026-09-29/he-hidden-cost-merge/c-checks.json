@@ -1,0 +1,510 @@
+{
+ "he-1440": {
+  "cols": "182px 182px 182px 182.016px 182px 182px",
+  "grid": [
+   133,
+   1160
+  ],
+  "docOverflow": false,
+  "cards": [
+   {
+    "x": 0,
+    "y": 0,
+    "w": 378,
+    "h": 207,
+    "kicker": "Dropouts",
+    "num": "~4 in 10",
+    "txt": "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+    "src": "National Center for Education Statistics",
+    "kickerCss": "uppercase",
+    "numColor": "rgb(43, 47, 126)",
+    "numSize": "40.8px",
+    "overflow": false
+   },
+   {
+    "x": 391,
+    "y": 0,
+    "w": 378,
+    "h": 207,
+    "kicker": "Completion",
+    "num": "~40%",
+    "txt": "of students finish a bachelor's in 4 years (about 60% in 6). Time-to-degree keeps stretching.",
+    "src": "NCES graduation rates",
+    "kickerCss": "uppercase",
+    "numColor": "rgb(43, 47, 126)",
+    "numSize": "40.8px",
+    "overflow": false
+   },
+   {
+    "x": 782,
+    "y": 0,
+    "w": 378,
+    "h": 207,
+    "kicker": "Higher withdrawal rates",
+    "num": "10–15%",
+    "txt": "for lower income and underprepared students in online courses.",
+    "src": "Columbia University",
+    "kickerCss": "uppercase",
+    "numColor": "rgb(43, 47, 126)",
+    "numSize": "40.8px",
+    "overflow": false
+   },
+   {
+    "x": 0,
+    "y": 221,
+    "w": 573,
+    "h": 185,
+    "kicker": "Retention",
+    "num": "~1 in 3",
+    "txt": "first-year students don't return for year two. Seats and tuition that never come back.",
+    "src": "NCES / IPEDS retention",
+    "kickerCss": "uppercase",
+    "numColor": "rgb(43, 47, 126)",
+    "numSize": "40.8px",
+    "overflow": false
+   },
+   {
+    "x": 587,
+    "y": 221,
+    "w": 573,
+    "h": 185,
+    "kicker": "Earnings and employment",
+    "num": "~$1M & 2x",
+    "txt": "less in lifetime earnings without a degree, and twice as likely to be unemployed.",
+    "src": "Pew Research Center",
+    "kickerCss": "uppercase",
+    "numColor": "rgb(43, 47, 126)",
+    "numSize": "40.8px",
+    "overflow": false
+   }
+  ]
+ },
+ "he-1280": {
+  "cols": "182px 182px 182px 182.016px 182px 182px",
+  "grid": [
+   53,
+   1160
+  ],
+  "docOverflow": false,
+  "cards": [
+   {
+    "x": 0,
+    "y": 0,
+    "w": 378,
+    "h": 205,
+    "kicker": "Dropouts",
+    "num": "~4 in 10",
+    "txt": "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+    "src": "National Center for Education Statistics",
+    "kickerCss": "uppercase",
+    "numColor": "rgb(43, 47, 126)",
+    "numSize": "38.4px",
+    "overflow": false
+   },
+   {
+    "x": 391,
+    "y": 0,
+    "w": 378,
+    "h": 205,
+    "kicker": "Completion",
+    "num": "~40%",
+    "txt": "of students finish a bachelor's in 4 years (about 60% in 6). Time-to-degree keeps stretching.",
+    "src": "NCES graduation rates",
+    "kickerCss": "uppercase",
+    "numColor": "rgb(43, 47, 126)",
+    "numSize": "38.4px",
+    "overflow": false
+   },
+   {
+    "x": 782,
+    "y": 0,
+    "w": 378,
+    "h": 205,
+    "kicker": "Higher withdrawal rates",
+    "num": "10–15%",
+    "txt": "for lower income and underprepared students in online courses.",
+    "src": "Columbia University",
+    "kickerCss": "uppercase",
+    "numColor": "rgb(43, 47, 126)",
+    "numSize": "38.4px",
+    "overflow": false
+   },
+   {
+    "x": 0,
+    "y": 219,
+    "w": 573,
+    "h": 182,
+    "kicker": "Retention",
+    "num": "~1 in 3",
+    "txt": "first-year students don't return for year two. Seats and tuition that never come back.",
+    "src": "NCES / IPEDS retention",
+    "kickerCss": "uppercase",
+    "numColor": "rgb(43, 47, 126)",
+    "numSize": "38.4px",
+    "overflow": false
+   },
+   {
+    "x": 587,
+    "y": 219,
+    "w": 573,
+    "h": 182,
+    "kicker": "Earnings and employment",
+    "num": "~$1M & 2x",
+    "txt": "less in lifetime earnings without a degree, and twice as likely to be unemployed.",
+    "src": "Pew Research Center",
+    "kickerCss": "uppercase",
+    "numColor": "rgb(43, 47, 126)",
+    "numSize": "38.4px",
+    "overflow": false
+   }
+  ]
+ },
+ "he-1040": {
+  "cols": "152.828px 152.828px 152.844px 152.828px 152.844px 152.844px",
+  "grid": [
+   20,
+   985
+  ],
+  "docOverflow": false,
+  "cards": [
+   {
+    "x": 0,
+    "y": 0,
+    "w": 319,
+    "h": 198,
+    "kicker": "Dropouts",
+    "num": "~4 in 10",
+    "txt": "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+    "src": "National Center for Education Statistics",
+    "kickerCss": "uppercase",
+    "numColor": "rgb(43, 47, 126)",
+    "numSize": "31.2px",
+    "overflow": false
+   },
+   {
+    "x": 333,
+    "y": 0,
+    "w": 319,
+    "h": 198,
+    "kicker": "Completion",
+    "num": "~40%",
+    "txt": "of students finish a bachelor's in 4 years (about 60% in 6). Time-to-degree keeps stretching.",
+    "src": "NCES graduation rates",
+    "kickerCss": "uppercase",
+    "numColor": "rgb(43, 47, 126)",
+    "numSize": "31.2px",
+    "overflow": false
+   },
+   {
+    "x": 666,
+    "y": 0,
+    "w": 319,
+    "h": 198,
+    "kicker": "Higher withdrawal rates",
+    "num": "10–15%",
+    "txt": "for lower income and underprepared students in online courses.",
+    "src": "Columbia University",
+    "kickerCss": "uppercase",
+    "numColor": "rgb(43, 47, 126)",
+    "numSize": "31.2px",
+    "overflow": false
+   },
+   {
+    "x": 0,
+    "y": 212,
+    "w": 486,
+    "h": 175,
+    "kicker": "Retention",
+    "num": "~1 in 3",
+    "txt": "first-year students don't return for year two. Seats and tuition that never come back.",
+    "src": "NCES / IPEDS retention",
+    "kickerCss": "uppercase",
+    "numColor": "rgb(43, 47, 126)",
+    "numSize": "31.2px",
+    "overflow": false
+   },
+   {
+    "x": 499,
+    "y": 212,
+    "w": 486,
+    "h": 175,
+    "kicker": "Earnings and employment",
+    "num": "~$1M & 2x",
+    "txt": "less in lifetime earnings without a degree, and twice as likely to be unemployed.",
+    "src": "Pew Research Center",
+    "kickerCss": "uppercase",
+    "numColor": "rgb(43, 47, 126)",
+    "numSize": "31.2px",
+    "overflow": false
+   }
+  ]
+ },
+ "he-760": {
+  "cols": "106.172px 106.172px 106.172px 106.172px 106.172px 106.172px",
+  "grid": [
+   20,
+   705
+  ],
+  "docOverflow": false,
+  "cards": [
+   {
+    "x": 0,
+    "y": 0,
+    "w": 226,
+    "h": 279,
+    "kicker": "Dropouts",
+    "num": "~4 in 10",
+    "txt": "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+    "src": "National Center for Education Statistics",
+    "kickerCss": "uppercase",
+    "numColor": "rgb(43, 47, 126)",
+    "numSize": "29.6px",
+    "overflow": false
+   },
+   {
+    "x": 240,
+    "y": 0,
+    "w": 226,
+    "h": 279,
+    "kicker": "Completion",
+    "num": "~40%",
+    "txt": "of students finish a bachelor's in 4 years (about 60% in 6). Time-to-degree keeps stretching.",
+    "src": "NCES graduation rates",
+    "kickerCss": "uppercase",
+    "numColor": "rgb(43, 47, 126)",
+    "numSize": "29.6px",
+    "overflow": false
+   },
+   {
+    "x": 479,
+    "y": 0,
+    "w": 226,
+    "h": 279,
+    "kicker": "Higher withdrawal rates",
+    "num": "10–15%",
+    "txt": "for lower income and underprepared students in online courses.",
+    "src": "Columbia University",
+    "kickerCss": "uppercase",
+    "numColor": "rgb(43, 47, 126)",
+    "numSize": "29.6px",
+    "overflow": false
+   },
+   {
+    "x": 0,
+    "y": 292,
+    "w": 346,
+    "h": 174,
+    "kicker": "Retention",
+    "num": "~1 in 3",
+    "txt": "first-year students don't return for year two. Seats and tuition that never come back.",
+    "src": "NCES / IPEDS retention",
+    "kickerCss": "uppercase",
+    "numColor": "rgb(43, 47, 126)",
+    "numSize": "29.6px",
+    "overflow": false
+   },
+   {
+    "x": 359,
+    "y": 292,
+    "w": 346,
+    "h": 174,
+    "kicker": "Earnings and employment",
+    "num": "~$1M & 2x",
+    "txt": "less in lifetime earnings without a degree, and twice as likely to be unemployed.",
+    "src": "Pew Research Center",
+    "kickerCss": "uppercase",
+    "numColor": "rgb(43, 47, 126)",
+    "numSize": "29.6px",
+    "overflow": false
+   }
+  ]
+ },
+ "he-390": {
+  "cols": "350px",
+  "grid": [
+   20,
+   350
+  ],
+  "docOverflow": false,
+  "cards": [
+   {
+    "x": 0,
+    "y": 0,
+    "w": 350,
+    "h": 197,
+    "kicker": "Retention",
+    "num": "~4 in 10",
+    "txt": "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+    "src": "National Center for Education Statistics",
+    "kickerCss": "uppercase",
+    "numColor": "rgb(43, 47, 126)",
+    "numSize": "29.6px",
+    "overflow": false
+   },
+   {
+    "x": 0,
+    "y": 210,
+    "w": 350,
+    "h": 174,
+    "kicker": "Completion",
+    "num": "~40%",
+    "txt": "of students finish a bachelor's in 4 years (about 60% in 6). Time-to-degree keeps stretching.",
+    "src": "NCES graduation rates",
+    "kickerCss": "uppercase",
+    "numColor": "rgb(43, 47, 126)",
+    "numSize": "29.6px",
+    "overflow": false
+   },
+   {
+    "x": 0,
+    "y": 398,
+    "w": 350,
+    "h": 174,
+    "kicker": "Higher withdrawal rates",
+    "num": "10–15%",
+    "txt": "for lower income and underprepared students in online courses.",
+    "src": "Columbia University",
+    "kickerCss": "uppercase",
+    "numColor": "rgb(43, 47, 126)",
+    "numSize": "29.6px",
+    "overflow": false
+   },
+   {
+    "x": 0,
+    "y": 585,
+    "w": 350,
+    "h": 174,
+    "kicker": "Retention",
+    "num": "~1 in 3",
+    "txt": "first-year students don't return for year two. Seats and tuition that never come back.",
+    "src": "NCES / IPEDS retention",
+    "kickerCss": "uppercase",
+    "numColor": "rgb(43, 47, 126)",
+    "numSize": "29.6px",
+    "overflow": false
+   },
+   {
+    "x": 0,
+    "y": 773,
+    "w": 350,
+    "h": 174,
+    "kicker": "Earnings and employment",
+    "num": "~$1M & 2x",
+    "txt": "less in lifetime earnings without a degree, and twice as likely to be unemployed.",
+    "src": "Pew Research Center",
+    "kickerCss": "uppercase",
+    "numColor": "rgb(43, 47, 126)",
+    "numSize": "29.6px",
+    "overflow": false
+   }
+  ]
+ },
+ "home-1440": {
+  "identical": true,
+  "baselineStable": true,
+  "k12": [
+   [
+    "Attendance",
+    "1 in 4",
+    "students are chronically absent, still elevated years after the shift online.",
+    "RAND / Return to Learn Tracker, 2024-25"
+   ],
+   [
+    "Achievement",
+    "1 in 3",
+    "students score below grade level. The lowest performers keep losing ground.",
+    "The Nation's Report Card (NAEP), 2024"
+   ],
+   [
+    "Cost",
+    "$229K",
+    "the cost of a K-12 education and lost potential when students don't finish.",
+    "U.S. Census Bureau, FY2024"
+   ]
+  ]
+ },
+ "home-1040": {
+  "identical": true,
+  "baselineStable": true,
+  "k12": [
+   [
+    "Attendance",
+    "1 in 4",
+    "students are chronically absent, still elevated years after the shift online.",
+    "RAND / Return to Learn Tracker, 2024-25"
+   ],
+   [
+    "Achievement",
+    "1 in 3",
+    "students score below grade level. The lowest performers keep losing ground.",
+    "The Nation's Report Card (NAEP), 2024"
+   ],
+   [
+    "Cost",
+    "$229K",
+    "the cost of a K-12 education and lost potential when students don't finish.",
+    "U.S. Census Bureau, FY2024"
+   ]
+  ]
+ },
+ "home-760": {
+  "identical": true,
+  "baselineStable": true,
+  "k12": [
+   [
+    "Attendance",
+    "1 in 4",
+    "students are chronically absent, still elevated years after the shift online.",
+    "RAND / Return to Learn Tracker, 2024-25"
+   ],
+   [
+    "Achievement",
+    "1 in 3",
+    "students score below grade level. The lowest performers keep losing ground.",
+    "The Nation's Report Card (NAEP), 2024"
+   ],
+   [
+    "Cost",
+    "$229K",
+    "the cost of a K-12 education and lost potential when students don't finish.",
+    "U.S. Census Bureau, FY2024"
+   ]
+  ]
+ },
+ "home-390": {
+  "identical": false,
+  "baselineStable": true,
+  "k12": [
+   [
+    "Retention",
+    "~4 in 10",
+    "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+    "National Center for Education Statistics"
+   ],
+   [
+    "Completion",
+    "~40%",
+    "of students finish a bachelor's in 4 years (about 60% in 6). Time-to-degree keeps stretching.",
+    "NCES graduation rates"
+   ],
+   [
+    "Higher withdrawal rates",
+    "10–15%",
+    "for lower income and underprepared students in online courses.",
+    "Columbia University"
+   ],
+   [
+    "Retention",
+    "~1 in 3",
+    "first-year students don't return for year two. Seats and tuition that never come back.",
+    "NCES / IPEDS retention"
+   ],
+   [
+    "Earnings and employment",
+    "~$1M & 2x",
+    "less in lifetime earnings without a degree, and twice as likely to be unemployed.",
+    "Pew Research Center"
+   ]
+  ]
+ }
+}

@@ -1,0 +1,85 @@
+[
+ [
+  "highered 1440",
+  {
+   "heDisplay": "flex",
+   "heParas": [
+    "Completion and retention",
+    "4 in 10",
+    "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+    "1 in 3",
+    "first-year students don't return for year two.",
+    "60%",
+    "of students don't finish a bachelor's in 4 years, and about 40% still haven't in 6.",
+    "National Center for Education Statistics (NCES / IPEDS)"
+   ],
+   "hasFinal": true,
+   "finalVisible": true,
+   "hasTimeToDegree": false,
+   "hasOldParen": false,
+   "emDash": false
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-card.png"
+ ],
+ [
+  "shot",
+  "highered-1440-section.png"
+ ],
+ [
+  "highered 390",
+  {
+   "heDisplay": "flex",
+   "heParas": [
+    "Completion and retention",
+    "4 in 10",
+    "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+    "1 in 3",
+    "first-year students don't return for year two.",
+    "60%",
+    "of students don't finish a bachelor's in 4 years, and about 40% still haven't in 6.",
+    "National Center for Education Statistics (NCES / IPEDS)"
+   ],
+   "hasFinal": true,
+   "finalVisible": true,
+   "hasTimeToDegree": false,
+   "hasOldParen": false,
+   "emDash": false
+  }
+ ],
+ [
+  "shot",
+  "highered-390-card.png"
+ ],
+ [
+  "shot",
+  "highered-390-section.png"
+ ],
+ [
+  "home 1440",
+  {
+   "heDisplay": "none",
+   "heParas": [
+    "Completion and retention",
+    "4 in 10",
+    "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+    "1 in 3",
+    "first-year students don't return for year two.",
+    "60%",
+    "of students don't finish a bachelor's in 4 years, and about 40% still haven't in 6.",
+    "National Center for Education Statistics (NCES / IPEDS)"
+   ],
+   "hasFinal": true,
+   "finalVisible": false,
+   "hasTimeToDegree": false,
+   "hasOldParen": false,
+   "emDash": false
+  }
+ ],
+ [
+  "shot",
+  "home-1440-section.png"
+ ]
+]

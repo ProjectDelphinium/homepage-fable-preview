@@ -1,0 +1,41 @@
+{
+  "highered-1440": {
+    "index": 2,
+    "kicker": "HIGHER WITHDRAWAL RATES",
+    "number": "10–15%",
+    "body": "for lower income and underprepared students in online courses.",
+    "source": "Columbia University",
+    "rect": {
+      "x": 914.890625,
+      "y": 1446.703125,
+      "w": 377.59375,
+      "h": 207.265625
+    }
+  },
+  "highered-390": {
+    "index": 0,
+    "kicker": "ATTENDANCE",
+    "number": "1 in 4",
+    "body": "students are chronically absent, still elevated years after the shift online.",
+    "source": "RAND / Return to Learn Tracker, 2024-25",
+    "rect": {
+      "x": 20,
+      "y": 1436.515625,
+      "w": 350,
+      "h": 173.890625
+    }
+  },
+  "home-1440": {
+    "index": 2,
+    "kicker": "HIGHER WITHDRAWAL RATES",
+    "number": "10–15%",
+    "body": "for lower income and underprepared students in online courses.",
+    "source": "Columbia University",
+    "rect": {
+      "x": 914.890625,
+      "y": 1428.703125,
+      "w": 377.59375,
+      "h": 207.265625
+    }
+  }
+}

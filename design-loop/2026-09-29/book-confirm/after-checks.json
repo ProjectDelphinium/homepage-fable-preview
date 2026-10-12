@@ -1,0 +1,1017 @@
+[
+ [
+  "after-home-1440 1-date",
+  {
+   "zohoW": 1316,
+   "scale": 1,
+   "box": [
+    978,
+    854
+   ],
+   "frame": [
+    231,
+    73,
+    1209,
+    877
+   ],
+   "headerTextVisiblePx": [
+    0,
+    142
+   ],
+   "dividerX_inFrame": 93,
+   "mask": [
+    "92px",
+    "3px"
+   ],
+   "stepContent_inFrame": [
+    134,
+    474
+   ],
+   "frameW": 978,
+   "clippedRight": false,
+   "clippedLeft": false,
+   "panelBg": [
+    "rgba(0, 0, 0, 0)",
+    "rgba(0, 0, 0, 0)"
+   ]
+  }
+ ],
+ [
+  "after-home-1440 2-times",
+  {
+   "zohoW": 1316,
+   "scale": 1,
+   "box": [
+    978,
+    854
+   ],
+   "frame": [
+    231,
+    73,
+    1209,
+    877
+   ],
+   "headerTextVisiblePx": [
+    0,
+    174
+   ],
+   "dividerX_inFrame": 93,
+   "mask": [
+    "92px",
+    "3px"
+   ],
+   "stepContent_inFrame": [
+    404,
+    654
+   ],
+   "frameW": 978,
+   "clippedRight": false,
+   "clippedLeft": false,
+   "panelBg": [
+    "rgba(0, 0, 0, 0)",
+    "rgba(0, 0, 0, 0)"
+   ]
+  }
+ ],
+ [
+  "after-home-1440 2b-time-picked",
+  {
+   "zohoW": 1316,
+   "scale": 1,
+   "box": [
+    978,
+    854
+   ],
+   "frame": [
+    231,
+    73,
+    1209,
+    877
+   ],
+   "headerTextVisiblePx": [
+    0,
+    174
+   ],
+   "dividerX_inFrame": 93,
+   "mask": [
+    "92px",
+    "3px"
+   ],
+   "stepContent_inFrame": [
+    404,
+    654
+   ],
+   "frameW": 978,
+   "clippedRight": false,
+   "clippedLeft": false,
+   "panelBg": [
+    "rgba(0, 0, 0, 0)",
+    "rgba(0, 0, 0, 0)"
+   ]
+  }
+ ],
+ [
+  "after-home-1440 3-details",
+  {
+   "zohoW": 1316,
+   "scale": 1,
+   "box": [
+    978,
+    854
+   ],
+   "frame": [
+    231,
+    73,
+    1209,
+    877
+   ],
+   "headerTextVisiblePx": [
+    0,
+    245
+   ],
+   "dividerX_inFrame": 93,
+   "mask": [
+    "92px",
+    "3px"
+   ],
+   "stepContent_inFrame": [
+    134,
+    938
+   ],
+   "frameW": 978,
+   "clippedRight": false,
+   "clippedLeft": false,
+   "panelBg": [
+    "rgba(0, 0, 0, 0)",
+    "rgba(0, 0, 0, 0)"
+   ]
+  }
+ ],
+ [
+  "after-home-1440 3-details submit button (not clicked)",
+  [
+   441,
+   701,
+   841,
+   761,
+   906
+  ]
+ ],
+ [
+  "after-home-1440 inject confirmation replica",
+  "ok"
+ ],
+ [
+  "after-home-1440 4-confirm",
+  {
+   "zohoW": 1316,
+   "font": "23px zohopuvi-medium",
+   "zohoHeading": [
+    407,
+    79,
+    909,
+    106
+   ],
+   "zohoCard": [
+    413,
+    156,
+    903,
+    455
+   ],
+   "frameW": 978,
+   "heading_inFrame": [
+    100,
+    602
+   ],
+   "card_inFrame": [
+    106,
+    596
+   ],
+   "headingTop_inFrame": 48,
+   "marginsLR": [
+    100,
+    376
+   ],
+   "headingClipped": false,
+   "cardClipped": false,
+   "maskOverHeading": false
+  }
+ ],
+ [
+  "after-home-1024 1-date",
+  {
+   "zohoW": 1316,
+   "scale": 1,
+   "box": [
+    978,
+    722
+   ],
+   "frame": [
+    23,
+    73,
+    1001,
+    745
+   ],
+   "headerTextVisiblePx": [
+    0,
+    142
+   ],
+   "dividerX_inFrame": 93,
+   "mask": [
+    "92px",
+    "3px"
+   ],
+   "stepContent_inFrame": [
+    134,
+    474
+   ],
+   "frameW": 978,
+   "clippedRight": false,
+   "clippedLeft": false,
+   "panelBg": [
+    "rgba(0, 0, 0, 0)",
+    "rgba(0, 0, 0, 0)"
+   ]
+  }
+ ],
+ [
+  "after-home-1024 2-times",
+  {
+   "zohoW": 1316,
+   "scale": 1,
+   "box": [
+    978,
+    722
+   ],
+   "frame": [
+    23,
+    73,
+    1001,
+    745
+   ],
+   "headerTextVisiblePx": [
+    0,
+    174
+   ],
+   "dividerX_inFrame": 93,
+   "mask": [
+    "92px",
+    "3px"
+   ],
+   "stepContent_inFrame": [
+    404,
+    654
+   ],
+   "frameW": 978,
+   "clippedRight": false,
+   "clippedLeft": false,
+   "panelBg": [
+    "rgba(0, 0, 0, 0)",
+    "rgba(0, 0, 0, 0)"
+   ]
+  }
+ ],
+ [
+  "after-home-1024 2b-time-picked",
+  {
+   "zohoW": 1316,
+   "scale": 1,
+   "box": [
+    978,
+    722
+   ],
+   "frame": [
+    23,
+    73,
+    1001,
+    745
+   ],
+   "headerTextVisiblePx": [
+    0,
+    174
+   ],
+   "dividerX_inFrame": 93,
+   "mask": [
+    "92px",
+    "3px"
+   ],
+   "stepContent_inFrame": [
+    404,
+    654
+   ],
+   "frameW": 978,
+   "clippedRight": false,
+   "clippedLeft": false,
+   "panelBg": [
+    "rgba(0, 0, 0, 0)",
+    "rgba(0, 0, 0, 0)"
+   ]
+  }
+ ],
+ [
+  "after-home-1024 3-details",
+  {
+   "zohoW": 1316,
+   "scale": 1,
+   "box": [
+    978,
+    722
+   ],
+   "frame": [
+    23,
+    73,
+    1001,
+    745
+   ],
+   "headerTextVisiblePx": [
+    0,
+    245
+   ],
+   "dividerX_inFrame": 93,
+   "mask": [
+    "92px",
+    "3px"
+   ],
+   "stepContent_inFrame": [
+    134,
+    938
+   ],
+   "frameW": 978,
+   "clippedRight": false,
+   "clippedLeft": false,
+   "panelBg": [
+    "rgba(0, 0, 0, 0)",
+    "rgba(0, 0, 0, 0)"
+   ]
+  }
+ ],
+ [
+  "after-home-1024 3-details submit button (not clicked)",
+  [
+   441,
+   569,
+   841,
+   629,
+   774
+  ]
+ ],
+ [
+  "after-home-1024 inject confirmation replica",
+  "ok"
+ ],
+ [
+  "after-home-1024 4-confirm",
+  {
+   "zohoW": 1316,
+   "font": "23px zohopuvi-medium",
+   "zohoHeading": [
+    407,
+    79,
+    909,
+    106
+   ],
+   "zohoCard": [
+    413,
+    156,
+    903,
+    455
+   ],
+   "frameW": 978,
+   "heading_inFrame": [
+    100,
+    602
+   ],
+   "card_inFrame": [
+    106,
+    596
+   ],
+   "headingTop_inFrame": 48,
+   "marginsLR": [
+    100,
+    376
+   ],
+   "headingClipped": false,
+   "cardClipped": false,
+   "maskOverHeading": false
+  }
+ ],
+ [
+  "after-home-900 1-date",
+  {
+   "zohoW": 1316,
+   "scale": 0.8241,
+   "box": [
+    806,
+    754
+   ],
+   "frame": [
+    47,
+    73,
+    853,
+    777
+   ],
+   "headerTextVisiblePx": [
+    0,
+    117
+   ],
+   "dividerX_inFrame": 76.6,
+   "mask": [
+    "75.5px",
+    "3px"
+   ],
+   "stepContent_inFrame": [
+    110,
+    391
+   ],
+   "frameW": 806,
+   "clippedRight": false,
+   "clippedLeft": false,
+   "panelBg": [
+    "rgba(0, 0, 0, 0)",
+    "rgba(0, 0, 0, 0)"
+   ]
+  }
+ ],
+ [
+  "after-home-900 2-times",
+  {
+   "zohoW": 1316,
+   "scale": 0.8241,
+   "box": [
+    806,
+    754
+   ],
+   "frame": [
+    47,
+    73,
+    853,
+    777
+   ],
+   "headerTextVisiblePx": [
+    0,
+    143
+   ],
+   "dividerX_inFrame": 76.6,
+   "mask": [
+    "75.5px",
+    "3px"
+   ],
+   "stepContent_inFrame": [
+    333,
+    539
+   ],
+   "frameW": 806,
+   "clippedRight": false,
+   "clippedLeft": false,
+   "panelBg": [
+    "rgba(0, 0, 0, 0)",
+    "rgba(0, 0, 0, 0)"
+   ]
+  }
+ ],
+ [
+  "after-home-900 2b-time-picked",
+  {
+   "zohoW": 1316,
+   "scale": 0.8241,
+   "box": [
+    806,
+    754
+   ],
+   "frame": [
+    47,
+    73,
+    853,
+    777
+   ],
+   "headerTextVisiblePx": [
+    0,
+    143
+   ],
+   "dividerX_inFrame": 76.6,
+   "mask": [
+    "75.5px",
+    "3px"
+   ],
+   "stepContent_inFrame": [
+    333,
+    539
+   ],
+   "frameW": 806,
+   "clippedRight": false,
+   "clippedLeft": false,
+   "panelBg": [
+    "rgba(0, 0, 0, 0)",
+    "rgba(0, 0, 0, 0)"
+   ]
+  }
+ ],
+ [
+  "after-home-900 3-details",
+  {
+   "zohoW": 1316,
+   "scale": 0.8241,
+   "box": [
+    806,
+    754
+   ],
+   "frame": [
+    47,
+    73,
+    853,
+    777
+   ],
+   "headerTextVisiblePx": [
+    0,
+    202
+   ],
+   "dividerX_inFrame": 76.6,
+   "mask": [
+    "75.5px",
+    "3px"
+   ],
+   "stepContent_inFrame": [
+    110,
+    773
+   ],
+   "frameW": 806,
+   "clippedRight": false,
+   "clippedLeft": false,
+   "panelBg": [
+    "rgba(0, 0, 0, 0)",
+    "rgba(0, 0, 0, 0)"
+   ]
+  }
+ ],
+ [
+  "after-home-900 3-details submit button (not clicked)",
+  [
+   441,
+   751,
+   841,
+   811,
+   956
+  ]
+ ],
+ [
+  "after-home-900 inject confirmation replica",
+  "ok"
+ ],
+ [
+  "after-home-900 4-confirm",
+  {
+   "zohoW": 1316,
+   "font": "23px zohopuvi-medium",
+   "zohoHeading": [
+    407,
+    79,
+    909,
+    106
+   ],
+   "zohoCard": [
+    413,
+    156,
+    903,
+    455
+   ],
+   "frameW": 806,
+   "heading_inFrame": [
+    82,
+    496
+   ],
+   "card_inFrame": [
+    87,
+    491
+   ],
+   "headingTop_inFrame": 40,
+   "marginsLR": [
+    82,
+    310
+   ],
+   "headingClipped": false,
+   "cardClipped": false,
+   "maskOverHeading": false
+  }
+ ],
+ [
+  "after-highered-1440 1-date",
+  {
+   "zohoW": 1316,
+   "scale": 1,
+   "box": [
+    978,
+    854
+   ],
+   "frame": [
+    231,
+    73,
+    1209,
+    877
+   ],
+   "headerTextVisiblePx": [
+    0,
+    142
+   ],
+   "dividerX_inFrame": 93,
+   "mask": [
+    "92px",
+    "3px"
+   ],
+   "stepContent_inFrame": [
+    134,
+    474
+   ],
+   "frameW": 978,
+   "clippedRight": false,
+   "clippedLeft": false,
+   "panelBg": [
+    "rgba(0, 0, 0, 0)",
+    "rgba(0, 0, 0, 0)"
+   ]
+  }
+ ],
+ [
+  "after-highered-1440 2-times",
+  {
+   "zohoW": 1316,
+   "scale": 1,
+   "box": [
+    978,
+    854
+   ],
+   "frame": [
+    231,
+    73,
+    1209,
+    877
+   ],
+   "headerTextVisiblePx": [
+    0,
+    174
+   ],
+   "dividerX_inFrame": 93,
+   "mask": [
+    "92px",
+    "3px"
+   ],
+   "stepContent_inFrame": [
+    404,
+    654
+   ],
+   "frameW": 978,
+   "clippedRight": false,
+   "clippedLeft": false,
+   "panelBg": [
+    "rgba(0, 0, 0, 0)",
+    "rgba(0, 0, 0, 0)"
+   ]
+  }
+ ],
+ [
+  "after-highered-1440 2b-time-picked",
+  {
+   "zohoW": 1316,
+   "scale": 1,
+   "box": [
+    978,
+    854
+   ],
+   "frame": [
+    231,
+    73,
+    1209,
+    877
+   ],
+   "headerTextVisiblePx": [
+    0,
+    174
+   ],
+   "dividerX_inFrame": 93,
+   "mask": [
+    "92px",
+    "3px"
+   ],
+   "stepContent_inFrame": [
+    404,
+    654
+   ],
+   "frameW": 978,
+   "clippedRight": false,
+   "clippedLeft": false,
+   "panelBg": [
+    "rgba(0, 0, 0, 0)",
+    "rgba(0, 0, 0, 0)"
+   ]
+  }
+ ],
+ [
+  "after-highered-1440 3-details",
+  {
+   "zohoW": 1316,
+   "scale": 1,
+   "box": [
+    978,
+    854
+   ],
+   "frame": [
+    231,
+    73,
+    1209,
+    877
+   ],
+   "headerTextVisiblePx": [
+    0,
+    245
+   ],
+   "dividerX_inFrame": 93,
+   "mask": [
+    "92px",
+    "3px"
+   ],
+   "stepContent_inFrame": [
+    134,
+    938
+   ],
+   "frameW": 978,
+   "clippedRight": false,
+   "clippedLeft": false,
+   "panelBg": [
+    "rgba(0, 0, 0, 0)",
+    "rgba(0, 0, 0, 0)"
+   ]
+  }
+ ],
+ [
+  "after-highered-1440 3-details submit button (not clicked)",
+  [
+   441,
+   701,
+   841,
+   761,
+   906
+  ]
+ ],
+ [
+  "after-highered-1440 inject confirmation replica",
+  "ok"
+ ],
+ [
+  "after-highered-1440 4-confirm",
+  {
+   "zohoW": 1316,
+   "font": "23px zohopuvi-medium",
+   "zohoHeading": [
+    407,
+    79,
+    909,
+    106
+   ],
+   "zohoCard": [
+    413,
+    156,
+    903,
+    455
+   ],
+   "frameW": 978,
+   "heading_inFrame": [
+    100,
+    602
+   ],
+   "card_inFrame": [
+    106,
+    596
+   ],
+   "headingTop_inFrame": 48,
+   "marginsLR": [
+    100,
+    376
+   ],
+   "headingClipped": false,
+   "cardClipped": false,
+   "maskOverHeading": false
+  }
+ ],
+ [
+  "after-highered-1024 1-date",
+  {
+   "zohoW": 1316,
+   "scale": 1,
+   "box": [
+    978,
+    722
+   ],
+   "frame": [
+    23,
+    73,
+    1001,
+    745
+   ],
+   "headerTextVisiblePx": [
+    0,
+    142
+   ],
+   "dividerX_inFrame": 93,
+   "mask": [
+    "92px",
+    "3px"
+   ],
+   "stepContent_inFrame": [
+    134,
+    474
+   ],
+   "frameW": 978,
+   "clippedRight": false,
+   "clippedLeft": false,
+   "panelBg": [
+    "rgba(0, 0, 0, 0)",
+    "rgba(0, 0, 0, 0)"
+   ]
+  }
+ ],
+ [
+  "after-highered-1024 2-times",
+  {
+   "zohoW": 1316,
+   "scale": 1,
+   "box": [
+    978,
+    722
+   ],
+   "frame": [
+    23,
+    73,
+    1001,
+    745
+   ],
+   "headerTextVisiblePx": [
+    0,
+    174
+   ],
+   "dividerX_inFrame": 93,
+   "mask": [
+    "92px",
+    "3px"
+   ],
+   "stepContent_inFrame": [
+    404,
+    654
+   ],
+   "frameW": 978,
+   "clippedRight": false,
+   "clippedLeft": false,
+   "panelBg": [
+    "rgba(0, 0, 0, 0)",
+    "rgba(0, 0, 0, 0)"
+   ]
+  }
+ ],
+ [
+  "after-highered-1024 2b-time-picked",
+  {
+   "zohoW": 1316,
+   "scale": 1,
+   "box": [
+    978,
+    722
+   ],
+   "frame": [
+    23,
+    73,
+    1001,
+    745
+   ],
+   "headerTextVisiblePx": [
+    0,
+    174
+   ],
+   "dividerX_inFrame": 93,
+   "mask": [
+    "92px",
+    "3px"
+   ],
+   "stepContent_inFrame": [
+    404,
+    654
+   ],
+   "frameW": 978,
+   "clippedRight": false,
+   "clippedLeft": false,
+   "panelBg": [
+    "rgba(0, 0, 0, 0)",
+    "rgba(0, 0, 0, 0)"
+   ]
+  }
+ ],
+ [
+  "after-highered-1024 3-details",
+  {
+   "zohoW": 1316,
+   "scale": 1,
+   "box": [
+    978,
+    722
+   ],
+   "frame": [
+    23,
+    73,
+    1001,
+    745
+   ],
+   "headerTextVisiblePx": [
+    0,
+    245
+   ],
+   "dividerX_inFrame": 93,
+   "mask": [
+    "92px",
+    "3px"
+   ],
+   "stepContent_inFrame": [
+    134,
+    938
+   ],
+   "frameW": 978,
+   "clippedRight": false,
+   "clippedLeft": false,
+   "panelBg": [
+    "rgba(0, 0, 0, 0)",
+    "rgba(0, 0, 0, 0)"
+   ]
+  }
+ ],
+ [
+  "after-highered-1024 3-details submit button (not clicked)",
+  [
+   441,
+   569,
+   841,
+   629,
+   774
+  ]
+ ],
+ [
+  "after-highered-1024 inject confirmation replica",
+  "ok"
+ ],
+ [
+  "after-highered-1024 4-confirm",
+  {
+   "zohoW": 1316,
+   "font": "23px zohopuvi-medium",
+   "zohoHeading": [
+    407,
+    79,
+    909,
+    106
+   ],
+   "zohoCard": [
+    413,
+    156,
+    903,
+    455
+   ],
+   "frameW": 978,
+   "heading_inFrame": [
+    100,
+    602
+   ],
+   "card_inFrame": [
+    106,
+    596
+   ],
+   "headingTop_inFrame": 48,
+   "marginsLR": [
+    100,
+    376
+   ],
+   "headingClipped": false,
+   "cardClipped": false,
+   "maskOverHeading": false
+  }
+ ],
+ [
+  "blocked non-GET requests",
+  [
+   [
+    "POST",
+    "https://jared-delphi-me.zohobookings.com/service/api/v1/jared_delphi-me/bookings/functions/Common/PublicAction/execute"
+   ],
+   [
+    "POST",
+    "https://jared-delphi-me.zohobookings.com/service/api/v1/jared_delphi-me/bookings/functions/Common/PublicAction/execute"
+   ],
+   [
+    "POST",
+    "https://jared-delphi-me.zohobookings.com/service/api/v1/jared_delphi-me/bookings/functions/Common/PublicAction/execute"
+   ],
+   [
+    "POST",
+    "https://jared-delphi-me.zohobookings.com/service/api/v1/jared_delphi-me/bookings/functions/Common/PublicAction/execute"
+   ],
+   [
+    "POST",
+    "https://jared-delphi-me.zohobookings.com/service/api/v1/jared_delphi-me/bookings/functions/Common/PublicAction/execute"
+   ]
+  ]
+ ]
+]

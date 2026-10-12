@@ -1,0 +1,151 @@
+[
+ [
+  "home-1440 page",
+  {
+   "path": "/home",
+   "cls": "dl-path-home js"
+  }
+ ],
+ [
+  "home-1440 cards (DOM order)",
+  [
+   {
+    "kicker": "ATTENDANCE",
+    "num": "1 in 4",
+    "src": "RAND / Return to Learn Tracker, 2024-25"
+   },
+   {
+    "kicker": "ACHIEVEMENT",
+    "num": "1 in 3",
+    "src": "The Nation's Report Card (NAEP), 2024"
+   },
+   {
+    "kicker": "COST",
+    "num": "$229K",
+    "src": "U.S. Census Bureau, FY2024"
+   }
+  ]
+ ],
+ [
+  "home-1440 kickers (visual order)",
+  [
+   "ATTENDANCE (1 in 4)",
+   "ACHIEVEMENT (1 in 3)",
+   "COST ($229K)"
+  ]
+ ],
+ [
+  "shot",
+  "home-1440-stats.png"
+ ],
+ [
+  "highered-1440 page",
+  {
+   "path": "/highered",
+   "cls": "dl-path-he js dl-he-ready"
+  }
+ ],
+ [
+  "highered-1440 cards (DOM order)",
+  [
+   {
+    "kicker": "RETENTION",
+    "num": "~4 in 10",
+    "src": "National Center for Education Statistics"
+   },
+   {
+    "kicker": "COMPLETION",
+    "num": "~40%",
+    "src": "NCES graduation rates"
+   },
+   {
+    "kicker": "HIGHER WITHDRAWAL RATES",
+    "num": "10–15%",
+    "src": "Columbia University"
+   },
+   {
+    "kicker": "RETENTION",
+    "num": "~1 in 3",
+    "src": "NCES / IPEDS retention"
+   },
+   {
+    "kicker": "EARNINGS AND EMPLOYMENT",
+    "num": "~$1M & 2x",
+    "src": "Pew Research Center"
+   }
+  ]
+ ],
+ [
+  "highered-1440 kickers (visual order)",
+  [
+   "RETENTION (~4 in 10)",
+   "HIGHER WITHDRAWAL RATES (10–15%)",
+   "COMPLETION (~40%)",
+   "RETENTION (~1 in 3)",
+   "EARNINGS AND EMPLOYMENT (~$1M & 2x)"
+  ]
+ ],
+ [
+  "shot",
+  "highered-1440-stats.png"
+ ],
+ [
+  "shot",
+  "highered-1440-card1.png"
+ ],
+ [
+  "highered-390 page",
+  {
+   "path": "/highered",
+   "cls": "dl-path-he js dl-he-ready"
+  }
+ ],
+ [
+  "highered-390 cards (DOM order)",
+  [
+   {
+    "kicker": "RETENTION",
+    "num": "~4 in 10",
+    "src": "National Center for Education Statistics"
+   },
+   {
+    "kicker": "COMPLETION",
+    "num": "~40%",
+    "src": "NCES graduation rates"
+   },
+   {
+    "kicker": "HIGHER WITHDRAWAL RATES",
+    "num": "10–15%",
+    "src": "Columbia University"
+   },
+   {
+    "kicker": "RETENTION",
+    "num": "~1 in 3",
+    "src": "NCES / IPEDS retention"
+   },
+   {
+    "kicker": "EARNINGS AND EMPLOYMENT",
+    "num": "~$1M & 2x",
+    "src": "Pew Research Center"
+   }
+  ]
+ ],
+ [
+  "highered-390 kickers (visual order)",
+  [
+   "RETENTION (~4 in 10)",
+   "HIGHER WITHDRAWAL RATES (10–15%)",
+   "COMPLETION (~40%)",
+   "RETENTION (~1 in 3)",
+   "EARNINGS AND EMPLOYMENT (~$1M & 2x)"
+  ]
+ ],
+ [
+  "shot",
+  "highered-390-stats.png"
+ ],
+ [
+  "shot",
+  "highered-390-card1.png"
+ ]
+]

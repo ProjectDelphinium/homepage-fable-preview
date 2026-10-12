@@ -1,0 +1,1195 @@
+{
+ "he-1440": {
+  "docOverflow": false,
+  "scrollW": 1440,
+  "cards": [
+   {
+    "x": 140,
+    "y": 1429,
+    "w": 378,
+    "h": 207,
+    "b": 1636,
+    "cls": "dl-card",
+    "kids": [
+     {
+      "t": "RETENTION",
+      "y": 1448,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "~4 in 10",
+      "y": 1474,
+      "h": 39,
+      "fs": "40.8px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+      "y": 1521,
+      "h": 68,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "National Center for Education Statistics",
+      "y": 1601,
+      "h": 18,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 922,
+    "y": 1429,
+    "w": 378,
+    "h": 207,
+    "b": 1636,
+    "cls": "dl-card dl-he",
+    "kids": [
+     {
+      "t": "COMPLETION",
+      "y": 1448,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "~60%",
+      "y": 1474,
+      "h": 39,
+      "fs": "40.8px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "of students don't finish a bachelor's in 4 years (about 40% still haven't in 6). Time-to-degree keeps stretching.",
+      "y": 1521,
+      "h": 68,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "NCES graduation rates",
+      "y": 1601,
+      "h": 18,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 140,
+    "y": 1650,
+    "w": 573,
+    "h": 162,
+    "b": 1811,
+    "cls": "dl-card",
+    "kids": [
+     {
+      "t": "HIGHER WITHDRAWAL RATES",
+      "y": 1669,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "10–15%",
+      "y": 1695,
+      "h": 39,
+      "fs": "40.8px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "for lower income and underprepared students in online courses.",
+      "y": 1742,
+      "h": 23,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "Columbia University",
+      "y": 1777,
+      "h": 18,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 531,
+    "y": 1429,
+    "w": 378,
+    "h": 207,
+    "b": 1636,
+    "cls": "dl-card dl-he",
+    "kids": [
+     {
+      "t": "RETENTION",
+      "y": 1448,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "~1 in 3",
+      "y": 1474,
+      "h": 39,
+      "fs": "40.8px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "first-year students don't return for year two. Seats and tuition that never come back.",
+      "y": 1521,
+      "h": 68,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "NCES / IPEDS retention",
+      "y": 1601,
+      "h": 18,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 727,
+    "y": 1650,
+    "w": 573,
+    "h": 162,
+    "b": 1811,
+    "cls": "dl-card",
+    "kids": [
+     {
+      "t": "EARNINGS AND EMPLOYMENT",
+      "y": 1669,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "~$1M",
+      "y": 1695,
+      "h": 39,
+      "fs": "40.8px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "less in lifetime earnings without a degree, and twice as likely to be unemployed.",
+      "y": 1742,
+      "h": 23,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "Pew Research Center",
+      "y": 1777,
+      "h": 18,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   }
+  ]
+ },
+ "he-1440-hash": "fb37e90811044f0b",
+ "home-1440-case-hash": "0d2bdecd4e938879",
+ "home-1440-full-hash": "0762130e8e59ee07",
+ "he-1280": {
+  "docOverflow": false,
+  "scrollW": 1280,
+  "cards": [
+   {
+    "x": 60,
+    "y": 1429,
+    "w": 378,
+    "h": 205,
+    "b": 1634,
+    "cls": "dl-card",
+    "kids": [
+     {
+      "t": "RETENTION",
+      "y": 1448,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "~4 in 10",
+      "y": 1474,
+      "h": 36,
+      "fs": "38.4px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+      "y": 1519,
+      "h": 68,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "National Center for Education Statistics",
+      "y": 1599,
+      "h": 18,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 842,
+    "y": 1429,
+    "w": 378,
+    "h": 205,
+    "b": 1634,
+    "cls": "dl-card dl-he",
+    "kids": [
+     {
+      "t": "COMPLETION",
+      "y": 1448,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "~60%",
+      "y": 1474,
+      "h": 36,
+      "fs": "38.4px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "of students don't finish a bachelor's in 4 years (about 40% still haven't in 6). Time-to-degree keeps stretching.",
+      "y": 1519,
+      "h": 68,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "NCES graduation rates",
+      "y": 1599,
+      "h": 18,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 60,
+    "y": 1647,
+    "w": 573,
+    "h": 160,
+    "b": 1807,
+    "cls": "dl-card",
+    "kids": [
+     {
+      "t": "HIGHER WITHDRAWAL RATES",
+      "y": 1667,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "10–15%",
+      "y": 1692,
+      "h": 36,
+      "fs": "38.4px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "for lower income and underprepared students in online courses.",
+      "y": 1738,
+      "h": 23,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "Columbia University",
+      "y": 1772,
+      "h": 18,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 451,
+    "y": 1429,
+    "w": 378,
+    "h": 205,
+    "b": 1634,
+    "cls": "dl-card dl-he",
+    "kids": [
+     {
+      "t": "RETENTION",
+      "y": 1448,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "~1 in 3",
+      "y": 1474,
+      "h": 36,
+      "fs": "38.4px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "first-year students don't return for year two. Seats and tuition that never come back.",
+      "y": 1519,
+      "h": 68,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "NCES / IPEDS retention",
+      "y": 1599,
+      "h": 18,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 647,
+    "y": 1647,
+    "w": 573,
+    "h": 160,
+    "b": 1807,
+    "cls": "dl-card",
+    "kids": [
+     {
+      "t": "EARNINGS AND EMPLOYMENT",
+      "y": 1667,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "~$1M",
+      "y": 1692,
+      "h": 36,
+      "fs": "38.4px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "less in lifetime earnings without a degree, and twice as likely to be unemployed.",
+      "y": 1738,
+      "h": 23,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "Pew Research Center",
+      "y": 1772,
+      "h": 18,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   }
+  ]
+ },
+ "he-1280-hash": "8d8f5c6a3bca46a8",
+ "he-1040": {
+  "docOverflow": false,
+  "scrollW": 1040,
+  "cards": [
+   {
+    "x": 20,
+    "y": 1327,
+    "w": 324,
+    "h": 198,
+    "b": 1525,
+    "cls": "dl-card",
+    "kids": [
+     {
+      "t": "RETENTION",
+      "y": 1347,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "~4 in 10",
+      "y": 1372,
+      "h": 30,
+      "fs": "31.2px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+      "y": 1411,
+      "h": 68,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "National Center for Education Statistics",
+      "y": 1491,
+      "h": 18,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 696,
+    "y": 1327,
+    "w": 324,
+    "h": 198,
+    "b": 1525,
+    "cls": "dl-card dl-he",
+    "kids": [
+     {
+      "t": "COMPLETION",
+      "y": 1347,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "~60%",
+      "y": 1372,
+      "h": 30,
+      "fs": "31.2px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "of students don't finish a bachelor's in 4 years (about 40% still haven't in 6). Time-to-degree keeps stretching.",
+      "y": 1411,
+      "h": 68,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "NCES graduation rates",
+      "y": 1491,
+      "h": 18,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 20,
+    "y": 1539,
+    "w": 493,
+    "h": 175,
+    "b": 1714,
+    "cls": "dl-card",
+    "kids": [
+     {
+      "t": "HIGHER WITHDRAWAL RATES",
+      "y": 1558,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "10–15%",
+      "y": 1584,
+      "h": 30,
+      "fs": "31.2px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "for lower income and underprepared students in online courses.",
+      "y": 1622,
+      "h": 45,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "Columbia University",
+      "y": 1680,
+      "h": 18,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 358,
+    "y": 1327,
+    "w": 324,
+    "h": 198,
+    "b": 1525,
+    "cls": "dl-card dl-he",
+    "kids": [
+     {
+      "t": "RETENTION",
+      "y": 1347,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "~1 in 3",
+      "y": 1372,
+      "h": 30,
+      "fs": "31.2px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "first-year students don't return for year two. Seats and tuition that never come back.",
+      "y": 1411,
+      "h": 68,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "NCES / IPEDS retention",
+      "y": 1491,
+      "h": 18,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 527,
+    "y": 1539,
+    "w": 493,
+    "h": 175,
+    "b": 1714,
+    "cls": "dl-card",
+    "kids": [
+     {
+      "t": "EARNINGS AND EMPLOYMENT",
+      "y": 1558,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "~$1M",
+      "y": 1584,
+      "h": 30,
+      "fs": "31.2px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "less in lifetime earnings without a degree, and twice as likely to be unemployed.",
+      "y": 1622,
+      "h": 45,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "Pew Research Center",
+      "y": 1680,
+      "h": 18,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   }
+  ]
+ },
+ "he-1040-hash": "d0b9e4fa4b95fc8a",
+ "home-1040-case-hash": "aeb9f11aad4efddd",
+ "home-1040-full-hash": "85e9cb591cd20fbe",
+ "he-760": {
+  "docOverflow": false,
+  "scrollW": 760,
+  "cards": [
+   {
+    "x": 20,
+    "y": 1218,
+    "w": 231,
+    "h": 260,
+    "b": 1477,
+    "cls": "dl-card",
+    "kids": [
+     {
+      "t": "RETENTION",
+      "y": 1237,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "~4 in 10",
+      "y": 1263,
+      "h": 28,
+      "fs": "29.6px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+      "y": 1300,
+      "h": 114,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "National Center for Education Statistics",
+      "y": 1425,
+      "h": 35,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 509,
+    "y": 1218,
+    "w": 231,
+    "h": 260,
+    "b": 1477,
+    "cls": "dl-card dl-he",
+    "kids": [
+     {
+      "t": "COMPLETION",
+      "y": 1237,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "~60%",
+      "y": 1263,
+      "h": 28,
+      "fs": "29.6px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "of students don't finish a bachelor's in 4 years (about 40% still haven't in 6). Time-to-degree keeps stretching.",
+      "y": 1300,
+      "h": 114,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "NCES graduation rates",
+      "y": 1443,
+      "h": 18,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 20,
+    "y": 1491,
+    "w": 353,
+    "h": 174,
+    "b": 1665,
+    "cls": "dl-card",
+    "kids": [
+     {
+      "t": "HIGHER WITHDRAWAL RATES",
+      "y": 1510,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "10–15%",
+      "y": 1536,
+      "h": 28,
+      "fs": "29.6px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "for lower income and underprepared students in online courses.",
+      "y": 1573,
+      "h": 45,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "Columbia University",
+      "y": 1630,
+      "h": 18,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 265,
+    "y": 1218,
+    "w": 231,
+    "h": 260,
+    "b": 1477,
+    "cls": "dl-card dl-he",
+    "kids": [
+     {
+      "t": "RETENTION",
+      "y": 1237,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "~1 in 3",
+      "y": 1263,
+      "h": 28,
+      "fs": "29.6px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "first-year students don't return for year two. Seats and tuition that never come back.",
+      "y": 1300,
+      "h": 114,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "NCES / IPEDS retention",
+      "y": 1443,
+      "h": 18,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 387,
+    "y": 1491,
+    "w": 353,
+    "h": 174,
+    "b": 1665,
+    "cls": "dl-card",
+    "kids": [
+     {
+      "t": "EARNINGS AND EMPLOYMENT",
+      "y": 1510,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "~$1M",
+      "y": 1536,
+      "h": 28,
+      "fs": "29.6px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "less in lifetime earnings without a degree, and twice as likely to be unemployed.",
+      "y": 1573,
+      "h": 45,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "Pew Research Center",
+      "y": 1630,
+      "h": 18,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   }
+  ]
+ },
+ "he-760-hash": "d2f61adab6a804ec",
+ "home-760-case-hash": "fa908eb40816160e",
+ "home-760-full-hash": "c854116eaff39ce7",
+ "he-390": {
+  "docOverflow": false,
+  "scrollW": 390,
+  "cards": [
+   {
+    "x": 20,
+    "y": 1419,
+    "w": 350,
+    "h": 197,
+    "b": 1615,
+    "cls": "dl-card",
+    "kids": [
+     {
+      "t": "RETENTION",
+      "y": 1438,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "~4 in 10",
+      "y": 1463,
+      "h": 28,
+      "fs": "29.6px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt.",
+      "y": 1500,
+      "h": 68,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "National Center for Education Statistics",
+      "y": 1581,
+      "h": 18,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 20,
+    "y": 1816,
+    "w": 350,
+    "h": 197,
+    "b": 2013,
+    "cls": "dl-card dl-he",
+    "kids": [
+     {
+      "t": "COMPLETION",
+      "y": 1836,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "~60%",
+      "y": 1861,
+      "h": 28,
+      "fs": "29.6px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "of students don't finish a bachelor's in 4 years (about 40% still haven't in 6). Time-to-degree keeps stretching.",
+      "y": 1898,
+      "h": 68,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "NCES graduation rates",
+      "y": 1978,
+      "h": 18,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 20,
+    "y": 2026,
+    "w": 350,
+    "h": 174,
+    "b": 2200,
+    "cls": "dl-card",
+    "kids": [
+     {
+      "t": "HIGHER WITHDRAWAL RATES",
+      "y": 2046,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "10–15%",
+      "y": 2071,
+      "h": 28,
+      "fs": "29.6px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "for lower income and underprepared students in online courses.",
+      "y": 2108,
+      "h": 45,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "Columbia University",
+      "y": 2166,
+      "h": 18,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 20,
+    "y": 1629,
+    "w": 350,
+    "h": 174,
+    "b": 1803,
+    "cls": "dl-card dl-he",
+    "kids": [
+     {
+      "t": "RETENTION",
+      "y": 1648,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "~1 in 3",
+      "y": 1674,
+      "h": 28,
+      "fs": "29.6px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "first-year students don't return for year two. Seats and tuition that never come back.",
+      "y": 1711,
+      "h": 45,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "NCES / IPEDS retention",
+      "y": 1768,
+      "h": 18,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   },
+   {
+    "x": 20,
+    "y": 2214,
+    "w": 350,
+    "h": 174,
+    "b": 2388,
+    "cls": "dl-card",
+    "kids": [
+     {
+      "t": "EARNINGS AND EMPLOYMENT",
+      "y": 2233,
+      "h": 19,
+      "fs": "12px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     },
+     {
+      "t": "~$1M",
+      "y": 2259,
+      "h": 28,
+      "fs": "29.6px",
+      "color": "rgb(43, 47, 126)",
+      "bt": "0px none rgb(43, 47, 126)",
+      "over": false
+     },
+     {
+      "t": "less in lifetime earnings without a degree, and twice as likely to be unemployed.",
+      "y": 2296,
+      "h": 45,
+      "fs": "15.68px",
+      "color": "rgb(35, 35, 42)",
+      "bt": "0px none rgb(35, 35, 42)",
+      "over": false
+     },
+     {
+      "t": "Pew Research Center",
+      "y": 2353,
+      "h": 18,
+      "fs": "13px",
+      "color": "rgb(85, 85, 95)",
+      "bt": "0px none rgb(85, 85, 95)",
+      "over": false
+     }
+    ]
+   }
+  ]
+ },
+ "he-390-hash": "f7afd46dca01291f",
+ "home-390-case-hash": "ed5e5b4097d21af8",
+ "home-390-full-hash": "89bc1a6b637aba39"
+}

@@ -1,0 +1,1152 @@
+{
+ "he-1440": {
+  "heReady": true,
+  "docH": 12825,
+  "secH": 1149,
+  "cols": "84.2031px 84.2031px 84.2031px 84.2031px 84.2031px 84.2031px 84.2031px 84.2031px 84.2031px 84.2031px 84.2031px 84.2031px",
+  "gridW": 1160,
+  "punch": "Many crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "cards": [
+   {
+    "kicker": "LOWER INCOME AND UNDERPREPARED STUDENTS",
+    "num": "10–15%",
+    "txt": "higher withdrawal rates in online courses.",
+    "src": "Columbia University",
+    "box": [
+     133,
+     445,
+     280,
+     226
+    ],
+    "srcBottomGap": 17,
+    "numTop": 509,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "40.8px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Retention",
+    "num": "~1 in 3",
+    "txt": "first-year students don't return for year two. Seats and tuition that never come back.",
+    "src": "NCES / IPEDS retention",
+    "box": [
+     426,
+     445,
+     280,
+     226
+    ],
+    "srcBottomGap": 17,
+    "numTop": 509,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "40.8px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Completion",
+    "num": "~40%",
+    "txt": "of students finish a bachelor's in 4 years (about 60% in 6). Time-to-degree keeps stretching.",
+    "src": "NCES graduation rates",
+    "box": [
+     719,
+     445,
+     280,
+     226
+    ],
+    "srcBottomGap": 17,
+    "numTop": 509,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "40.8px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "DROPOUTS",
+    "num": "~4 in 10",
+    "txt": "students drop out of college.",
+    "src": "National Center for Education Statistics",
+    "box": [
+     1013,
+     445,
+     280,
+     226
+    ],
+    "srcBottomGap": 17,
+    "numTop": 509,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "40.8px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Student debt",
+    "num": "~2M",
+    "txt": "students drop out each year with student debt.",
+    "src": "National Center for Education Statistics",
+    "box": [
+     133,
+     685,
+     378,
+     162
+    ],
+    "srcBottomGap": 17,
+    "numTop": 730,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "40.8px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "EARNINGS",
+    "num": "~$1M",
+    "txt": "less in lifetime earnings without a degree.",
+    "src": "Pew Research Center",
+    "box": [
+     524,
+     685,
+     378,
+     162
+    ],
+    "srcBottomGap": 17,
+    "numTop": 730,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "40.8px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Employment",
+    "num": "2x",
+    "txt": "as likely to be unemployed without a degree.",
+    "src": "Pew Research Center",
+    "box": [
+     915,
+     685,
+     378,
+     162
+    ],
+    "srcBottomGap": 17,
+    "numTop": 730,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "40.8px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   }
+  ]
+ },
+ "he-1280": {
+  "heReady": true,
+  "docH": 12797,
+  "secH": 1144,
+  "cols": "84.2031px 84.2031px 84.2031px 84.2031px 84.2031px 84.2031px 84.2031px 84.2031px 84.2031px 84.2031px 84.2031px 84.2031px",
+  "gridW": 1160,
+  "punch": "Many crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "cards": [
+   {
+    "kicker": "LOWER INCOME AND UNDERPREPARED STUDENTS",
+    "num": "10–15%",
+    "txt": "higher withdrawal rates in online courses.",
+    "src": "Columbia University",
+    "box": [
+     53,
+     445,
+     280,
+     224
+    ],
+    "srcBottomGap": 17,
+    "numTop": 509,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "38.4px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Retention",
+    "num": "~1 in 3",
+    "txt": "first-year students don't return for year two. Seats and tuition that never come back.",
+    "src": "NCES / IPEDS retention",
+    "box": [
+     346,
+     445,
+     280,
+     224
+    ],
+    "srcBottomGap": 17,
+    "numTop": 509,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "38.4px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Completion",
+    "num": "~40%",
+    "txt": "of students finish a bachelor's in 4 years (about 60% in 6). Time-to-degree keeps stretching.",
+    "src": "NCES graduation rates",
+    "box": [
+     639,
+     445,
+     280,
+     224
+    ],
+    "srcBottomGap": 17,
+    "numTop": 509,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "38.4px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "DROPOUTS",
+    "num": "~4 in 10",
+    "txt": "students drop out of college.",
+    "src": "National Center for Education Statistics",
+    "box": [
+     933,
+     445,
+     280,
+     224
+    ],
+    "srcBottomGap": 17,
+    "numTop": 509,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "38.4px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Student debt",
+    "num": "~2M",
+    "txt": "students drop out each year with student debt.",
+    "src": "National Center for Education Statistics",
+    "box": [
+     53,
+     683,
+     378,
+     160
+    ],
+    "srcBottomGap": 17,
+    "numTop": 728,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "38.4px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "EARNINGS",
+    "num": "~$1M",
+    "txt": "less in lifetime earnings without a degree.",
+    "src": "Pew Research Center",
+    "box": [
+     444,
+     683,
+     378,
+     160
+    ],
+    "srcBottomGap": 17,
+    "numTop": 728,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "38.4px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Employment",
+    "num": "2x",
+    "txt": "as likely to be unemployed without a degree.",
+    "src": "Pew Research Center",
+    "box": [
+     835,
+     683,
+     378,
+     160
+    ],
+    "srcBottomGap": 17,
+    "numTop": 728,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "38.4px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   }
+  ]
+ },
+ "he-1040": {
+  "heReady": true,
+  "docH": 12138,
+  "secH": 1115,
+  "cols": "69.6094px 69.6094px 69.6094px 69.625px 69.625px 69.625px 69.6094px 69.6094px 69.625px 69.625px 69.625px 69.625px",
+  "gridW": 985,
+  "punch": "Many crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "cards": [
+   {
+    "kicker": "LOWER INCOME AND UNDERPREPARED STUDENTS",
+    "num": "10–15%",
+    "txt": "higher withdrawal rates in online courses.",
+    "src": "Columbia University",
+    "box": [
+     20,
+     412,
+     236,
+     258
+    ],
+    "srcBottomGap": 17,
+    "numTop": 476,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "31.2px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Retention",
+    "num": "~1 in 3",
+    "txt": "first-year students don't return for year two. Seats and tuition that never come back.",
+    "src": "NCES / IPEDS retention",
+    "box": [
+     270,
+     412,
+     236,
+     258
+    ],
+    "srcBottomGap": 17,
+    "numTop": 476,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "31.2px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Completion",
+    "num": "~40%",
+    "txt": "of students finish a bachelor's in 4 years (about 60% in 6). Time-to-degree keeps stretching.",
+    "src": "NCES graduation rates",
+    "box": [
+     519,
+     412,
+     236,
+     258
+    ],
+    "srcBottomGap": 17,
+    "numTop": 476,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "31.2px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "DROPOUTS",
+    "num": "~4 in 10",
+    "txt": "students drop out of college.",
+    "src": "National Center for Education Statistics",
+    "box": [
+     769,
+     412,
+     236,
+     258
+    ],
+    "srcBottomGap": 17,
+    "numTop": 476,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "31.2px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Student debt",
+    "num": "~2M",
+    "txt": "students drop out each year with student debt.",
+    "src": "National Center for Education Statistics",
+    "box": [
+     20,
+     683,
+     319,
+     175
+    ],
+    "srcBottomGap": 17,
+    "numTop": 728,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "31.2px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "EARNINGS",
+    "num": "~$1M",
+    "txt": "less in lifetime earnings without a degree.",
+    "src": "Pew Research Center",
+    "box": [
+     353,
+     683,
+     319,
+     175
+    ],
+    "srcBottomGap": 17,
+    "numTop": 728,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "31.2px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Employment",
+    "num": "2x",
+    "txt": "as likely to be unemployed without a degree.",
+    "src": "Pew Research Center",
+    "box": [
+     686,
+     683,
+     319,
+     175
+    ],
+    "srcBottomGap": 17,
+    "numTop": 728,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "31.2px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   }
+  ]
+ },
+ "he-760": {
+  "heReady": true,
+  "docH": 14900,
+  "secH": 1144,
+  "cols": "106.172px 106.172px 106.172px 106.172px 106.172px 106.172px",
+  "gridW": 705,
+  "punch": "Many crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "cards": [
+   {
+    "kicker": "LOWER INCOME AND UNDERPREPARED STUDENTS",
+    "num": "10–15%",
+    "txt": "higher withdrawal rates in online courses.",
+    "src": "Columbia University",
+    "box": [
+     20,
+     353,
+     226,
+     258
+    ],
+    "srcBottomGap": 17,
+    "numTop": 437,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Retention",
+    "num": "~1 in 3",
+    "txt": "first-year students don't return for year two. Seats and tuition that never come back.",
+    "src": "NCES / IPEDS retention",
+    "box": [
+     260,
+     353,
+     226,
+     258
+    ],
+    "srcBottomGap": 17,
+    "numTop": 437,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Completion",
+    "num": "~40%",
+    "txt": "of students finish a bachelor's in 4 years (about 60% in 6). Time-to-degree keeps stretching.",
+    "src": "NCES graduation rates",
+    "box": [
+     499,
+     353,
+     226,
+     258
+    ],
+    "srcBottomGap": 17,
+    "numTop": 437,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "DROPOUTS",
+    "num": "~4 in 10",
+    "txt": "students drop out of college.",
+    "src": "National Center for Education Statistics",
+    "box": [
+     20,
+     625,
+     346,
+     151
+    ],
+    "srcBottomGap": 17,
+    "numTop": 670,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Student debt",
+    "num": "~2M",
+    "txt": "students drop out each year with student debt.",
+    "src": "National Center for Education Statistics",
+    "box": [
+     379,
+     625,
+     346,
+     151
+    ],
+    "srcBottomGap": 17,
+    "numTop": 670,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "EARNINGS",
+    "num": "~$1M",
+    "txt": "less in lifetime earnings without a degree.",
+    "src": "Pew Research Center",
+    "box": [
+     20,
+     789,
+     346,
+     151
+    ],
+    "srcBottomGap": 17,
+    "numTop": 834,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Employment",
+    "num": "2x",
+    "txt": "as likely to be unemployed without a degree.",
+    "src": "Pew Research Center",
+    "box": [
+     379,
+     789,
+     346,
+     151
+    ],
+    "srcBottomGap": 17,
+    "numTop": 834,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   }
+  ]
+ },
+ "he-390": {
+  "heReady": true,
+  "docH": 17741,
+  "secH": 1873,
+  "cols": "350px",
+  "gridW": 350,
+  "punch": "Many crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "cards": [
+   {
+    "kicker": "LOWER INCOME AND UNDERPREPARED STUDENTS",
+    "num": "10–15%",
+    "txt": "higher withdrawal rates in online courses.",
+    "src": "Columbia University",
+    "box": [
+     20,
+     441,
+     350,
+     170
+    ],
+    "srcBottomGap": 17,
+    "numTop": 505,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Retention",
+    "num": "~1 in 3",
+    "txt": "first-year students don't return for year two. Seats and tuition that never come back.",
+    "src": "NCES / IPEDS retention",
+    "box": [
+     20,
+     625,
+     350,
+     174
+    ],
+    "srcBottomGap": 17,
+    "numTop": 670,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Completion",
+    "num": "~40%",
+    "txt": "of students finish a bachelor's in 4 years (about 60% in 6). Time-to-degree keeps stretching.",
+    "src": "NCES graduation rates",
+    "box": [
+     20,
+     812,
+     350,
+     174
+    ],
+    "srcBottomGap": 17,
+    "numTop": 857,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "DROPOUTS",
+    "num": "~4 in 10",
+    "txt": "students drop out of college.",
+    "src": "National Center for Education Statistics",
+    "box": [
+     20,
+     1000,
+     350,
+     151
+    ],
+    "srcBottomGap": 17,
+    "numTop": 1045,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Student debt",
+    "num": "~2M",
+    "txt": "students drop out each year with student debt.",
+    "src": "National Center for Education Statistics",
+    "box": [
+     20,
+     1164,
+     350,
+     151
+    ],
+    "srcBottomGap": 17,
+    "numTop": 1209,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "EARNINGS",
+    "num": "~$1M",
+    "txt": "less in lifetime earnings without a degree.",
+    "src": "Pew Research Center",
+    "box": [
+     20,
+     1329,
+     350,
+     151
+    ],
+    "srcBottomGap": 17,
+    "numTop": 1374,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "Employment",
+    "num": "2x",
+    "txt": "as likely to be unemployed without a degree.",
+    "src": "Pew Research Center",
+    "box": [
+     20,
+     1494,
+     350,
+     151
+    ],
+    "srcBottomGap": 17,
+    "numTop": 1539,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   }
+  ]
+ },
+ "k12-1440": {
+  "heReady": false,
+  "docH": 13729,
+  "secH": 962,
+  "cols": "377.594px 377.609px 377.594px",
+  "gridW": 1160,
+  "punch": "Three crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "cards": [
+   {
+    "kicker": "ATTENDANCE",
+    "num": "1 in 4",
+    "txt": "students are chronically absent, still elevated years after the shift online.",
+    "src": "RAND / Return to Learn Tracker, 2024-25",
+    "box": [
+     133,
+     475,
+     378,
+     185
+    ],
+    "srcBottomGap": 17,
+    "numTop": 520,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "40.8px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "ACHIEVEMENT",
+    "num": "1 in 3",
+    "txt": "students score below grade level. The lowest performers keep losing ground.",
+    "src": "The Nation's Report Card (NAEP), 2024",
+    "box": [
+     524,
+     475,
+     378,
+     185
+    ],
+    "srcBottomGap": 17,
+    "numTop": 520,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "40.8px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "COST",
+    "num": "$229K",
+    "txt": "the cost of a K-12 education and lost potential when students don't finish.",
+    "src": "U.S. Census Bureau, FY2024",
+    "box": [
+     915,
+     475,
+     378,
+     185
+    ],
+    "srcBottomGap": 17,
+    "numTop": 520,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "40.8px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   }
+  ]
+ },
+ "k12-1280": {
+  "heReady": false,
+  "docH": 13699,
+  "secH": 960,
+  "cols": "377.594px 377.609px 377.594px",
+  "gridW": 1160,
+  "punch": "Three crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "cards": [
+   {
+    "kicker": "ATTENDANCE",
+    "num": "1 in 4",
+    "txt": "students are chronically absent, still elevated years after the shift online.",
+    "src": "RAND / Return to Learn Tracker, 2024-25",
+    "box": [
+     53,
+     475,
+     378,
+     182
+    ],
+    "srcBottomGap": 17,
+    "numTop": 520,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "38.4px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "ACHIEVEMENT",
+    "num": "1 in 3",
+    "txt": "students score below grade level. The lowest performers keep losing ground.",
+    "src": "The Nation's Report Card (NAEP), 2024",
+    "box": [
+     444,
+     475,
+     378,
+     182
+    ],
+    "srcBottomGap": 17,
+    "numTop": 520,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "38.4px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "COST",
+    "num": "$229K",
+    "txt": "the cost of a K-12 education and lost potential when students don't finish.",
+    "src": "U.S. Census Bureau, FY2024",
+    "box": [
+     835,
+     475,
+     378,
+     182
+    ],
+    "srcBottomGap": 17,
+    "numTop": 520,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "38.4px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   }
+  ]
+ },
+ "k12-1040": {
+  "heReady": false,
+  "docH": 13013,
+  "secH": 875,
+  "cols": "319.266px 319.266px 319.281px",
+  "gridW": 985,
+  "punch": "Three crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "cards": [
+   {
+    "kicker": "ATTENDANCE",
+    "num": "1 in 4",
+    "txt": "students are chronically absent, still elevated years after the shift online.",
+    "src": "RAND / Return to Learn Tracker, 2024-25",
+    "box": [
+     20,
+     443,
+     319,
+     175
+    ],
+    "srcBottomGap": 17,
+    "numTop": 488,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "31.2px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "ACHIEVEMENT",
+    "num": "1 in 3",
+    "txt": "students score below grade level. The lowest performers keep losing ground.",
+    "src": "The Nation's Report Card (NAEP), 2024",
+    "box": [
+     353,
+     443,
+     319,
+     175
+    ],
+    "srcBottomGap": 17,
+    "numTop": 488,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "31.2px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "COST",
+    "num": "$229K",
+    "txt": "the cost of a K-12 education and lost potential when students don't finish.",
+    "src": "U.S. Census Bureau, FY2024",
+    "box": [
+     686,
+     443,
+     319,
+     175
+    ],
+    "srcBottomGap": 17,
+    "numTop": 488,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "31.2px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   }
+  ]
+ },
+ "k12-760": {
+  "heReady": false,
+  "docH": 15664,
+  "secH": 801,
+  "cols": "225.938px 225.938px 225.938px",
+  "gridW": 705,
+  "punch": "Three crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "cards": [
+   {
+    "kicker": "ATTENDANCE",
+    "num": "1 in 4",
+    "txt": "students are chronically absent, still elevated years after the shift online.",
+    "src": "RAND / Return to Learn Tracker, 2024-25",
+    "box": [
+     20,
+     384,
+     226,
+     214
+    ],
+    "srcBottomGap": 17,
+    "numTop": 429,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "ACHIEVEMENT",
+    "num": "1 in 3",
+    "txt": "students score below grade level. The lowest performers keep losing ground.",
+    "src": "The Nation's Report Card (NAEP), 2024",
+    "box": [
+     260,
+     384,
+     226,
+     214
+    ],
+    "srcBottomGap": 17,
+    "numTop": 429,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "COST",
+    "num": "$229K",
+    "txt": "the cost of a K-12 education and lost potential when students don't finish.",
+    "src": "U.S. Census Bureau, FY2024",
+    "box": [
+     499,
+     384,
+     226,
+     214
+    ],
+    "srcBottomGap": 35,
+    "numTop": 429,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   }
+  ]
+ },
+ "k12-390": {
+  "heReady": false,
+  "docH": 18738,
+  "secH": 1218,
+  "cols": "350px",
+  "gridW": 350,
+  "punch": "Three crises, one cause: disengagement.\nDoing nothing is the most expensive option you have.",
+  "cards": [
+   {
+    "kicker": "ATTENDANCE",
+    "num": "1 in 4",
+    "txt": "students are chronically absent, still elevated years after the shift online.",
+    "src": "RAND / Return to Learn Tracker, 2024-25",
+    "box": [
+     20,
+     441,
+     350,
+     174
+    ],
+    "srcBottomGap": 17,
+    "numTop": 486,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "ACHIEVEMENT",
+    "num": "1 in 3",
+    "txt": "students score below grade level. The lowest performers keep losing ground.",
+    "src": "The Nation's Report Card (NAEP), 2024",
+    "box": [
+     20,
+     628,
+     350,
+     174
+    ],
+    "srcBottomGap": 17,
+    "numTop": 673,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   },
+   {
+    "kicker": "COST",
+    "num": "$229K",
+    "txt": "the cost of a K-12 education and lost potential when students don't finish.",
+    "src": "U.S. Census Bureau, FY2024",
+    "box": [
+     20,
+     816,
+     350,
+     174
+    ],
+    "srcBottomGap": 17,
+    "numTop": 861,
+    "numOverflow": false,
+    "styles": [
+     "12px 700 rgb(85, 85, 95) uppercase 0px 6.4px",
+     "29.6px 700 rgb(43, 47, 126) none 0px 0px",
+     "15.68px 400 rgb(35, 35, 42) none 8.8px 0px",
+     "13px 400 rgb(85, 85, 95) none 12px 0px"
+    ]
+   }
+  ]
+ }
+}

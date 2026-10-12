@@ -1,0 +1,331 @@
+{
+ "failures": [],
+ "results": [
+  [
+   "he 390 links",
+   [
+    {
+     "sec": ".dl-hero",
+     "label": "Watch: Online learning, elevated",
+     "yt": "9mfMC9jC6lU",
+     "href": "https://www.youtube.com/watch?v=9mfMC9jC6lU",
+     "visible": true
+    },
+    {
+     "sec": "#product",
+     "label": "Watch: Insightful data",
+     "yt": "MBYmCCeZqxo",
+     "href": "https://www.youtube.com/watch?v=MBYmCCeZqxo",
+     "visible": true
+    },
+    {
+     "sec": "#community",
+     "label": "Watch: Communication that works!",
+     "yt": "4vzDJ1poyvU",
+     "href": "https://www.youtube.com/watch?v=4vzDJ1poyvU",
+     "visible": true
+    },
+    {
+     "sec": "#makeover",
+     "label": "Watch: Meaningful engagement",
+     "yt": "63Iu4Xxg_tg",
+     "href": "https://www.youtube.com/watch?v=63Iu4Xxg_tg",
+     "visible": true
+    },
+    {
+     "sec": "#engagement",
+     "label": "Watch: Effortless gamification",
+     "yt": "xbdP6GSjPgY",
+     "href": "https://www.youtube.com/watch?v=xbdP6GSjPgY",
+     "visible": true
+    },
+    {
+     "sec": "#videos",
+     "label": "",
+     "yt": "Tp3IO0TzvM0",
+     "href": "https://www.youtube.com/watch?v=Tp3IO0TzvM0",
+     "visible": false
+    },
+    {
+     "sec": "#videos",
+     "label": "",
+     "yt": "3N0SXpFT36w",
+     "href": "https://www.youtube.com/watch?v=3N0SXpFT36w",
+     "visible": false
+    },
+    {
+     "sec": "#proof",
+     "label": "Watch: Evidence, research, and theory",
+     "yt": "UgEyq7gUWmM",
+     "href": "https://www.youtube.com/watch?v=UgEyq7gUWmM",
+     "visible": true
+    },
+    {
+     "sec": ".dl-section.dl-how",
+     "label": "Watch: Integration is easy!",
+     "yt": "U615qsZh8bc",
+     "href": "https://www.youtube.com/watch?v=U615qsZh8bc",
+     "visible": true
+    }
+   ]
+  ],
+  [
+   "he 390 text",
+   {
+    "ready": true,
+    "lead": "Delphinium transforms the Canvas courses you already teach into <b>engaging student experiences</b> and an <b>early-warning system</b> for teachers. No migration. No extra work. <em>Just turn it on.</em>",
+    "upto": "Lower course failures, as much as",
+    "num": "47%!",
+    "study": "Utah Valley University studies",
+    "txt": "<b>lower course failures</b>",
+    "punch": "The courses didn't change. The teachers didn't change. <b>Engagement did, and so did the outcomes.</b>"
+   }
+  ],
+  [
+   "he 390 warm iframes",
+   [
+    "9mfMC9jC6lU",
+    "MBYmCCeZqxo",
+    "4vzDJ1poyvU",
+    "63Iu4Xxg_tg",
+    "xbdP6GSjPgY",
+    "UgEyq7gUWmM",
+    "U615qsZh8bc"
+   ]
+  ],
+  [
+   "PASS he 390 hero link has 9mfMC9jC6lU",
+   {
+    "label": "Watch: Online learning, elevated",
+    "href": "https://www.youtube.com/watch?v=9mfMC9jC6lU",
+    "title": "Watch: Online learning, elevated"
+   }
+  ],
+  [
+   "PASS he 390 hero no id9dqfNZsf4 left",
+   "id9dqfNZsf4"
+  ],
+  [
+   "PASS he 390 hero warm-up has 9mfMC9jC6lU",
+   [
+    "9mfMC9jC6lU",
+    "MBYmCCeZqxo",
+    "4vzDJ1poyvU",
+    "63Iu4Xxg_tg",
+    "xbdP6GSjPgY",
+    "UgEyq7gUWmM",
+    "U615qsZh8bc"
+   ]
+  ],
+  [
+   "PASS he 390 hero click point hits link",
+   [
+    160.0859375,
+    481.84375
+   ]
+  ],
+  [
+   "PASS he 390 hero modal embeds 9mfMC9jC6lU",
+   {
+    "open": true,
+    "src": "https://www.youtube.com/embed/9mfMC9jC6lU?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767",
+    "url": "http://127.0.0.1:8767/highered"
+   }
+  ],
+  [
+   "PASS he 390 control-tower link has MBYmCCeZqxo",
+   {
+    "label": "Watch: Insightful data",
+    "href": "https://www.youtube.com/watch?v=MBYmCCeZqxo",
+    "title": "Watch: Insightful data"
+   }
+  ],
+  [
+   "PASS he 390 control-tower no xC1b-9bZW4w left",
+   "xC1b-9bZW4w"
+  ],
+  [
+   "PASS he 390 control-tower warm-up has MBYmCCeZqxo",
+   [
+    "9mfMC9jC6lU",
+    "MBYmCCeZqxo",
+    "4vzDJ1poyvU",
+    "63Iu4Xxg_tg",
+    "xbdP6GSjPgY",
+    "UgEyq7gUWmM",
+    "U615qsZh8bc"
+   ]
+  ],
+  [
+   "PASS he 390 control-tower click point hits link",
+   [
+    124.9609375,
+    446.34375
+   ]
+  ],
+  [
+   "PASS he 390 control-tower modal embeds MBYmCCeZqxo",
+   {
+    "open": true,
+    "src": "https://www.youtube.com/embed/MBYmCCeZqxo?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767",
+    "url": "http://127.0.0.1:8767/highered"
+   }
+  ],
+  [
+   "PASS he 390 community link has 4vzDJ1poyvU",
+   {
+    "label": "Watch: Communication that works!",
+    "href": "https://www.youtube.com/watch?v=4vzDJ1poyvU",
+    "title": "Watch: Communication that works!"
+   }
+  ],
+  [
+   "PASS he 390 community no acjbTVs8IUM left",
+   "acjbTVs8IUM"
+  ],
+  [
+   "PASS he 390 community warm-up has 4vzDJ1poyvU",
+   [
+    "9mfMC9jC6lU",
+    "MBYmCCeZqxo",
+    "4vzDJ1poyvU",
+    "63Iu4Xxg_tg",
+    "xbdP6GSjPgY",
+    "UgEyq7gUWmM",
+    "U615qsZh8bc"
+   ]
+  ],
+  [
+   "PASS he 390 community click point hits link",
+   [
+    169.9609375,
+    463.9375
+   ]
+  ],
+  [
+   "PASS he 390 community modal embeds 4vzDJ1poyvU",
+   {
+    "open": true,
+    "src": "https://www.youtube.com/embed/4vzDJ1poyvU?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767",
+    "url": "http://127.0.0.1:8767/highered"
+   }
+  ],
+  [
+   "PASS he 390 makeover link has 63Iu4Xxg_tg",
+   {
+    "label": "Watch: Meaningful engagement",
+    "href": "https://www.youtube.com/watch?v=63Iu4Xxg_tg",
+    "title": "Watch: Meaningful engagement"
+   }
+  ],
+  [
+   "PASS he 390 makeover no Ek-BBS8rP_0 left",
+   "Ek-BBS8rP_0"
+  ],
+  [
+   "PASS he 390 makeover warm-up has 63Iu4Xxg_tg",
+   [
+    "9mfMC9jC6lU",
+    "MBYmCCeZqxo",
+    "4vzDJ1poyvU",
+    "63Iu4Xxg_tg",
+    "xbdP6GSjPgY",
+    "UgEyq7gUWmM",
+    "U615qsZh8bc"
+   ]
+  ],
+  [
+   "PASS he 390 makeover click point hits link",
+   [
+    157.5078125,
+    463.953125
+   ]
+  ],
+  [
+   "PASS he 390 makeover modal embeds 63Iu4Xxg_tg",
+   {
+    "open": true,
+    "src": "https://www.youtube.com/embed/63Iu4Xxg_tg?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767",
+    "url": "http://127.0.0.1:8767/highered"
+   }
+  ],
+  [
+   "PASS he 390 engagement link has xbdP6GSjPgY",
+   {
+    "label": "Watch: Effortless gamification",
+    "href": "https://www.youtube.com/watch?v=xbdP6GSjPgY",
+    "title": "Watch: Effortless gamification"
+   }
+  ],
+  [
+   "PASS he 390 engagement no ejtU7miZWD4 left",
+   "ejtU7miZWD4"
+  ],
+  [
+   "PASS he 390 engagement warm-up has xbdP6GSjPgY",
+   [
+    "9mfMC9jC6lU",
+    "MBYmCCeZqxo",
+    "4vzDJ1poyvU",
+    "63Iu4Xxg_tg",
+    "xbdP6GSjPgY",
+    "UgEyq7gUWmM",
+    "U615qsZh8bc"
+   ]
+  ],
+  [
+   "PASS he 390 engagement click point hits link",
+   [
+    151.484375,
+    463.515625
+   ]
+  ],
+  [
+   "PASS he 390 engagement modal embeds xbdP6GSjPgY",
+   {
+    "open": true,
+    "src": "https://www.youtube.com/embed/xbdP6GSjPgY?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767",
+    "url": "http://127.0.0.1:8767/highered"
+   }
+  ],
+  [
+   "PASS he 390 how link has U615qsZh8bc",
+   {
+    "label": "Watch: Integration is easy!",
+    "href": "https://www.youtube.com/watch?v=U615qsZh8bc",
+    "title": "Watch: Integration is easy!"
+   }
+  ],
+  [
+   "PASS he 390 how no L90IoF6LGAE left",
+   "L90IoF6LGAE"
+  ],
+  [
+   "PASS he 390 how warm-up has U615qsZh8bc",
+   [
+    "9mfMC9jC6lU",
+    "MBYmCCeZqxo",
+    "4vzDJ1poyvU",
+    "63Iu4Xxg_tg",
+    "xbdP6GSjPgY",
+    "UgEyq7gUWmM",
+    "U615qsZh8bc"
+   ]
+  ],
+  [
+   "PASS he 390 how click point hits link",
+   [
+    139.578125,
+    481.6875
+   ]
+  ],
+  [
+   "PASS he 390 how modal embeds U615qsZh8bc",
+   {
+    "open": true,
+    "src": "https://www.youtube.com/embed/U615qsZh8bc?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767",
+    "url": "http://127.0.0.1:8767/highered"
+   }
+  ]
+ ]
+}

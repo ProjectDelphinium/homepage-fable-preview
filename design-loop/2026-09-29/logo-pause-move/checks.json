@@ -1,0 +1,448 @@
+[
+ [
+  "1440 geometry",
+  {
+   "toggleBeforeViewportInDOM": true,
+   "toggleInsideLogos": true,
+   "toggle": {
+    "t": 319.3,
+    "b": 347.3,
+    "l": 1258.5,
+    "r": 1286.5,
+    "h": 28
+   },
+   "lede": {
+    "t": 318.1,
+    "b": 348.5,
+    "l": 132.5,
+    "r": 364,
+    "h": 30.4
+   },
+   "viewport": {
+    "t": 372.5,
+    "b": 420.5,
+    "l": 132.5,
+    "r": 1292.5,
+    "h": 48
+   },
+   "logos": {
+    "t": 277.3,
+    "b": 420.5,
+    "l": 132.5,
+    "r": 1292.5,
+    "h": 143.2
+   },
+   "section": {
+    "t": 164.3,
+    "b": 533.5,
+    "l": 0,
+    "r": 1425,
+    "h": 369.2
+   },
+   "buttonAboveLogos": true,
+   "centerDelta": 0,
+   "buttonRightGapToWrap": 6,
+   "overlapsLede": false,
+   "ledeLines": 1,
+   "spaceBelowViewportInLogos": 0,
+   "sectionPadBottom": "112px"
+  }
+ ],
+ [
+  "1440 rest",
+  {
+   "label": "Pause logos",
+   "title": "Pause logos",
+   "pressed": null,
+   "paused": false,
+   "play": "running",
+   "display": "flex",
+   "border": "color(srgb 0.168627 0.184314 0.494118 / 0.55)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "outline": "none 3px",
+   "focusVisible": false
+  }
+ ],
+ [
+  "shot",
+  "home-logos-1440-rest.png"
+ ],
+ [
+  "1440 hover button",
+  {
+   "label": "Pause logos",
+   "title": "Pause logos",
+   "pressed": null,
+   "paused": false,
+   "play": "running",
+   "display": "flex",
+   "border": "rgb(43, 47, 126)",
+   "bg": "rgb(255, 255, 255)",
+   "outline": "none 3px",
+   "focusVisible": false
+  }
+ ],
+ [
+  "shot",
+  "home-logos-1440-hover.png"
+ ],
+ [
+  "1440 click -> paused",
+  {
+   "label": "Play logos",
+   "title": "Play logos",
+   "pressed": null,
+   "paused": true,
+   "play": "paused",
+   "display": "flex",
+   "border": "color(srgb 0.168627 0.184314 0.494118 / 0.55)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "outline": "none 3px",
+   "focusVisible": false
+  }
+ ],
+ [
+  "shot",
+  "home-logos-1440-paused.png"
+ ],
+ [
+  "1440 keyboard focus",
+  {
+   "label": "Play logos",
+   "title": "Play logos",
+   "pressed": null,
+   "paused": true,
+   "play": "paused",
+   "display": "flex",
+   "border": "rgb(43, 47, 126)",
+   "bg": "rgb(255, 255, 255)",
+   "outline": "solid 3px",
+   "focusVisible": true
+  }
+ ],
+ [
+  "shot",
+  "home-logos-1440-focus.png"
+ ],
+ [
+  "1440 Enter -> playing",
+  {
+   "label": "Pause logos",
+   "title": "Pause logos",
+   "pressed": null,
+   "paused": false,
+   "play": "running",
+   "display": "flex",
+   "border": "rgb(43, 47, 126)",
+   "bg": "rgb(255, 255, 255)",
+   "outline": "solid 3px",
+   "focusVisible": true
+  }
+ ],
+ [
+  "1100 geometry",
+  {
+   "toggleBeforeViewportInDOM": true,
+   "toggleInsideLogos": true,
+   "toggle": {
+    "t": 422.5,
+    "b": 450.5,
+    "l": 1031,
+    "r": 1059,
+    "h": 28
+   },
+   "lede": {
+    "t": 421.4,
+    "b": 451.8,
+    "l": 20,
+    "r": 251.5,
+    "h": 30.4
+   },
+   "viewport": {
+    "t": 475.8,
+    "b": 523.8,
+    "l": 20,
+    "r": 1065,
+    "h": 48
+   },
+   "logos": {
+    "t": 380.6,
+    "b": 523.8,
+    "l": 20,
+    "r": 1065,
+    "h": 143.2
+   },
+   "section": {
+    "t": 280.6,
+    "b": 623.8,
+    "l": 0,
+    "r": 1085,
+    "h": 343.2
+   },
+   "buttonAboveLogos": true,
+   "centerDelta": -0.1,
+   "buttonRightGapToWrap": 6,
+   "overlapsLede": false,
+   "ledeLines": 1,
+   "spaceBelowViewportInLogos": 0,
+   "sectionPadBottom": "99px"
+  }
+ ],
+ [
+  "1100 rest",
+  {
+   "label": "Pause logos",
+   "title": "Pause logos",
+   "pressed": null,
+   "paused": false,
+   "play": "running",
+   "display": "flex",
+   "border": "color(srgb 0.168627 0.184314 0.494118 / 0.55)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "outline": "none 3px",
+   "focusVisible": false
+  }
+ ],
+ [
+  "shot",
+  "home-logos-1100-rest.png"
+ ],
+ [
+  "1100 hover button",
+  {
+   "label": "Pause logos",
+   "title": "Pause logos",
+   "pressed": null,
+   "paused": false,
+   "play": "running",
+   "display": "flex",
+   "border": "rgb(43, 47, 126)",
+   "bg": "rgb(255, 255, 255)",
+   "outline": "none 3px",
+   "focusVisible": false
+  }
+ ],
+ [
+  "shot",
+  "home-logos-1100-hover.png"
+ ],
+ [
+  "1100 click -> paused",
+  {
+   "label": "Pause logos",
+   "title": "Pause logos",
+   "pressed": null,
+   "paused": false,
+   "play": "running",
+   "display": "flex",
+   "border": "color(srgb 0.168627 0.184314 0.494118 / 0.55)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "outline": "none 3px",
+   "focusVisible": false
+  }
+ ],
+ [
+  "shot",
+  "home-logos-1100-paused.png"
+ ],
+ [
+  "1100 keyboard focus",
+  {
+   "label": "Pause logos",
+   "title": "Pause logos",
+   "pressed": null,
+   "paused": false,
+   "play": "running",
+   "display": "flex",
+   "border": "rgb(43, 47, 126)",
+   "bg": "rgb(255, 255, 255)",
+   "outline": "solid 3px",
+   "focusVisible": true
+  }
+ ],
+ [
+  "shot",
+  "home-logos-1100-focus.png"
+ ],
+ [
+  "1100 Enter -> playing",
+  {
+   "label": "Play logos",
+   "title": "Play logos",
+   "pressed": null,
+   "paused": true,
+   "play": "paused",
+   "display": "flex",
+   "border": "rgb(43, 47, 126)",
+   "bg": "rgb(255, 255, 255)",
+   "outline": "solid 3px",
+   "focusVisible": true
+  }
+ ],
+ [
+  "390 geometry",
+  {
+   "toggleBeforeViewportInDOM": true,
+   "toggleInsideLogos": true,
+   "toggle": {
+    "t": 502.2,
+    "b": 530.2,
+    "l": 336,
+    "r": 364,
+    "h": 28
+   },
+   "lede": {
+    "t": 501,
+    "b": 531.4,
+    "l": 20,
+    "r": 251.5,
+    "h": 30.4
+   },
+   "viewport": {
+    "t": 555.4,
+    "b": 591.4,
+    "l": 20,
+    "r": 370,
+    "h": 36
+   },
+   "logos": {
+    "t": 431.4,
+    "b": 591.4,
+    "l": 20,
+    "r": 370,
+    "h": 160
+   },
+   "section": {
+    "t": 366.4,
+    "b": 656.4,
+    "l": 0,
+    "r": 390,
+    "h": 290
+   },
+   "buttonAboveLogos": true,
+   "centerDelta": 0,
+   "buttonRightGapToWrap": 6,
+   "overlapsLede": false,
+   "ledeLines": 1,
+   "spaceBelowViewportInLogos": 0,
+   "sectionPadBottom": "64px"
+  }
+ ],
+ [
+  "390 rest",
+  {
+   "label": "Pause logos",
+   "title": "Pause logos",
+   "pressed": null,
+   "paused": false,
+   "play": "running",
+   "display": "flex",
+   "border": "color(srgb 0.168627 0.184314 0.494118 / 0.55)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "outline": "none 3px",
+   "focusVisible": false
+  }
+ ],
+ [
+  "shot",
+  "home-logos-390-rest.png"
+ ],
+ [
+  "390 hover button",
+  {
+   "label": "Pause logos",
+   "title": "Pause logos",
+   "pressed": null,
+   "paused": false,
+   "play": "running",
+   "display": "flex",
+   "border": "rgb(43, 47, 126)",
+   "bg": "rgb(255, 255, 255)",
+   "outline": "none 3px",
+   "focusVisible": false
+  }
+ ],
+ [
+  "shot",
+  "home-logos-390-hover.png"
+ ],
+ [
+  "390 click -> paused",
+  {
+   "label": "Play logos",
+   "title": "Play logos",
+   "pressed": null,
+   "paused": true,
+   "play": "paused",
+   "display": "flex",
+   "border": "color(srgb 0.168627 0.184314 0.494118 / 0.55)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "outline": "none 3px",
+   "focusVisible": false
+  }
+ ],
+ [
+  "shot",
+  "home-logos-390-paused.png"
+ ],
+ [
+  "390 keyboard focus",
+  {
+   "label": "Play logos",
+   "title": "Play logos",
+   "pressed": null,
+   "paused": true,
+   "play": "paused",
+   "display": "flex",
+   "border": "rgb(43, 47, 126)",
+   "bg": "rgb(255, 255, 255)",
+   "outline": "solid 3px",
+   "focusVisible": true
+  }
+ ],
+ [
+  "shot",
+  "home-logos-390-focus.png"
+ ],
+ [
+  "390 Enter -> playing",
+  {
+   "label": "Pause logos",
+   "title": "Pause logos",
+   "pressed": null,
+   "paused": false,
+   "play": "running",
+   "display": "flex",
+   "border": "rgb(43, 47, 126)",
+   "bg": "rgb(255, 255, 255)",
+   "outline": "solid 3px",
+   "focusVisible": true
+  }
+ ],
+ [
+  "1440 reduced-motion",
+  {
+   "label": "Pause logos",
+   "title": "Pause logos",
+   "pressed": null,
+   "paused": false,
+   "play": "running",
+   "display": "none",
+   "border": "color(srgb 0.168627 0.184314 0.494118 / 0.55)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "outline": "none 3px",
+   "focusVisible": false
+  }
+ ],
+ [
+  "shot",
+  "home-logos-1440-reduced-motion.png"
+ ],
+ [
+  "highered strip",
+  {
+   "html": "dl-path-he js dl-he-ready",
+   "display": "none"
+  }
+ ]
+]

@@ -1,0 +1,144 @@
+[
+ [
+  "highered 1440",
+  {
+   "path": "/highered",
+   "html": "dl-path-he js dl-he-ready",
+   "kicker": "The Utah Valley University study",
+   "heCtxChildren": [
+    "UL.dl-card__ctx-list"
+   ],
+   "heCtxText": "14 sections, ~420 students. High enrollment, high failure, freshman level, gateway classes, just like the ones at your school that need so much help.",
+   "heCtxDisplay": "block",
+   "davisCtxDisplay": "none",
+   "davisCtxText": "",
+   "uvuParaPresent": false,
+   "outcomesPresent": false,
+   "shownBorderTop": "1px solid",
+   "shownPaddingTop": "18.4px",
+   "firstChild": "UL",
+   "firstChildMarginTop": "0px",
+   "dividerToFirstBox": 19.4,
+   "dividerToText": 20.4,
+   "ctxH": 96,
+   "cardW": 672,
+   "cardH": 710,
+   "overflowX": false
+  }
+ ],
+ [
+  "highered 1440 console errors",
+  [
+   "Failed to load resource: the server responded with a status of 404 (File not found) http://127.0.0.1:8767/favicon.ico"
+  ]
+ ],
+ [
+  "shot",
+  "after-highered-1440-study-card.png"
+ ],
+ [
+  "home 1440",
+  {
+   "path": "/home",
+   "html": "dl-path-home js",
+   "kicker": "The Davis Connect study",
+   "heCtxChildren": [
+    "UL.dl-card__ctx-list"
+   ],
+   "heCtxText": "14 sections, ~420 students. High enrollment, high failure, freshman level, gateway classes, just like the ones at your school that need so much help.",
+   "heCtxDisplay": "none",
+   "davisCtxDisplay": "block",
+   "davisCtxText": "Davis School District, Utah. 72 online classes and 6,000 students.",
+   "uvuParaPresent": false,
+   "outcomesPresent": false,
+   "shownBorderTop": "1px solid",
+   "shownPaddingTop": "18.4px",
+   "firstChild": "B",
+   "firstChildMarginTop": "0px",
+   "dividerToFirstBox": 20.4,
+   "dividerToText": 20.4,
+   "ctxH": 43,
+   "cardW": 672,
+   "cardH": 497,
+   "overflowX": false
+  }
+ ],
+ [
+  "home 1440 console errors",
+  []
+ ],
+ [
+  "shot",
+  "after-home-1440-study-card.png"
+ ],
+ [
+  "highered 390",
+  {
+   "path": "/highered",
+   "html": "dl-path-he js dl-he-ready",
+   "kicker": "The Utah Valley University study",
+   "heCtxChildren": [
+    "UL.dl-card__ctx-list"
+   ],
+   "heCtxText": "14 sections, ~420 students. High enrollment, high failure, freshman level, gateway classes, just like the ones at your school that need so much help.",
+   "heCtxDisplay": "block",
+   "davisCtxDisplay": "none",
+   "davisCtxText": "",
+   "uvuParaPresent": false,
+   "outcomesPresent": false,
+   "shownBorderTop": "1px solid",
+   "shownPaddingTop": "16px",
+   "firstChild": "UL",
+   "firstChildMarginTop": "0px",
+   "dividerToFirstBox": 17,
+   "dividerToText": 18,
+   "ctxH": 118,
+   "cardW": 350,
+   "cardH": 454,
+   "overflowX": false
+  }
+ ],
+ [
+  "highered 390 console errors",
+  []
+ ],
+ [
+  "shot",
+  "after-highered-390-study-card.png"
+ ],
+ [
+  "home 390",
+  {
+   "path": "/home",
+   "html": "dl-path-home js",
+   "kicker": "The Davis Connect study",
+   "heCtxChildren": [
+    "UL.dl-card__ctx-list"
+   ],
+   "heCtxText": "14 sections, ~420 students. High enrollment, high failure, freshman level, gateway classes, just like the ones at your school that need so much help.",
+   "heCtxDisplay": "none",
+   "davisCtxDisplay": "block",
+   "davisCtxText": "Davis School District, Utah. 72 online classes and 6,000 students.",
+   "uvuParaPresent": false,
+   "outcomesPresent": false,
+   "shownBorderTop": "1px solid",
+   "shownPaddingTop": "16px",
+   "firstChild": "B",
+   "firstChildMarginTop": "0px",
+   "dividerToFirstBox": 18,
+   "dividerToText": 18,
+   "ctxH": 65,
+   "cardW": 350,
+   "cardH": 401,
+   "overflowX": false
+  }
+ ],
+ [
+  "home 390 console errors",
+  []
+ ],
+ [
+  "shot",
+  "after-home-390-study-card.png"
+ ]
+]

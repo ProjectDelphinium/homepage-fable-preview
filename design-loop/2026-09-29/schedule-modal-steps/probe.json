@@ -1,0 +1,644 @@
+{
+ "highered-1440 1 date": {
+  "hash": "#/4937208000000036014",
+  "vw": 1600,
+  "vh": 906,
+  "card": {
+   "top": 31,
+   "bottom": 835,
+   "h": 804,
+   "w": 392,
+   "left": 201
+  },
+  "headings": [
+   [
+    55,
+    "Select date and time"
+   ],
+   [
+    466,
+    "Time Zone"
+   ]
+  ],
+  "back": [],
+  "contentScroll": {
+   "sh": 804,
+   "ch": 804
+  },
+  "text": "SC Schedule a Demo! jared_delphi-me 1 hr Select date and time Sep 2026 S M T W T F S 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 2"
+ },
+ "highered-1440 click day": [
+  527,
+  439.59375
+ ],
+ "highered-1440 2 slots": {
+  "hash": "#/4937208000000036014",
+  "vw": 1600,
+  "vh": 906,
+  "card": {
+   "top": 31,
+   "bottom": 835,
+   "h": 804,
+   "w": 392,
+   "left": 201
+  },
+  "headings": [
+   [
+    55,
+    "Wednesday, September 30"
+   ]
+  ],
+  "back": [
+   51
+  ],
+  "contentScroll": {
+   "sh": 804,
+   "ch": 804
+  },
+  "text": "Back SC Schedule a Demo! jared_delphi-me 1 hr Wednesday, September 30 09:00 am 09:30 am 10:00 am 10:30 am 11:00 am 11:30 am 12:00 pm 12:30 p"
+ },
+ "highered-1440 click slot": [
+  712,
+  155.796875
+ ],
+ "highered-1440 2b slot picked": {
+  "hash": "#/4937208000000036014",
+  "vw": 1600,
+  "vh": 906,
+  "card": {
+   "top": 31,
+   "bottom": 835,
+   "h": 804,
+   "w": 392,
+   "left": 201
+  },
+  "headings": [
+   [
+    55,
+    "Wednesday, September 30"
+   ]
+  ],
+  "back": [
+   51
+  ],
+  "contentScroll": {
+   "sh": 804,
+   "ch": 804
+  },
+  "text": "Back SC Schedule a Demo! jared_delphi-me 1 hr Wednesday, September 30 09:00 am Next 09:30 am 10:00 am 10:30 am 11:00 am 11:30 am 12:00 pm 12"
+ },
+ "highered-1440 click next": [
+  779.8515625,
+  155.796875
+ ],
+ "highered-1440 3 details": {
+  "hash": "#/4937208000000036014",
+  "vw": 1600,
+  "vh": 906,
+  "card": {
+   "top": 31,
+   "bottom": 835,
+   "h": 804,
+   "w": 392,
+   "left": 201
+  },
+  "headings": [],
+  "back": [
+   51
+  ],
+  "contentScroll": {
+   "sh": 804,
+   "ch": 804
+  },
+  "text": "Back SC Schedule a Demo! jared_delphi-me 30 Sep 2026 09:00 am 1 hr America/Denver Please enter your details Name * Email * Contact Number * "
+ },
+ "highered-1440 messages": [],
+ "highered-1440 activeElement": "IFRAME",
+ "highered-390 1 date": {
+  "hash": "#/4937208000000036014",
+  "vw": 358,
+  "vh": 1036,
+  "card": {
+   "top": 30,
+   "bottom": 214,
+   "h": 184,
+   "w": 298,
+   "left": 30
+  },
+  "headings": [
+   [
+    238,
+    "Select date and time"
+   ],
+   [
+    649,
+    "Time Zone"
+   ]
+  ],
+  "back": [],
+  "contentScroll": {
+   "sh": 951,
+   "ch": 951
+  },
+  "text": "SC Schedule a Demo! jared_delphi-me 1 hr Select date and time Sep 2026 S M T W T F S 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 2"
+ },
+ "highered-390 click day": [
+  195.1875,
+  401.59375
+ ],
+ "highered-390 2 slots": {
+  "hash": "#/4937208000000036014",
+  "vw": 358,
+  "vh": 1036,
+  "card": {
+   "top": 30,
+   "bottom": 246,
+   "h": 216,
+   "w": 283,
+   "left": 30
+  },
+  "headings": [
+   [
+    270,
+    "Wednesday, September 30"
+   ]
+  ],
+  "back": [
+   51
+  ],
+  "contentScroll": {
+   "sh": 1260,
+   "ch": 951
+  },
+  "text": "Back SC Schedule a Demo! jared_delphi-me 1 hr Wednesday, September 30 09:00 am 09:30 am 10:00 am 10:30 am 11:00 am 11:30 am 12:00 pm 12:30 p"
+ },
+ "highered-390 click slot": [
+  186.5,
+  170.796875
+ ],
+ "highered-390 2b slot picked": {
+  "hash": "#/4937208000000036014",
+  "vw": 358,
+  "vh": 1036,
+  "card": {
+   "top": 30,
+   "bottom": 246,
+   "h": 216,
+   "w": 283,
+   "left": 30
+  },
+  "headings": [
+   [
+    270,
+    "Wednesday, September 30"
+   ]
+  ],
+  "back": [
+   51
+  ],
+  "contentScroll": {
+   "sh": 1260,
+   "ch": 951
+  },
+  "text": "Back SC Schedule a Demo! jared_delphi-me 1 hr Wednesday, September 30 09:00 am Next 09:30 am 10:00 am 10:30 am 11:00 am 11:30 am 12:00 pm 12"
+ },
+ "highered-390 click next": [
+  254.3515625,
+  170.796875
+ ],
+ "highered-390 3 details": {
+  "hash": "#/4937208000000036014",
+  "vw": 358,
+  "vh": 1036,
+  "card": {
+   "top": 30,
+   "bottom": 317,
+   "h": 287,
+   "w": 283,
+   "left": 30
+  },
+  "headings": [],
+  "back": [
+   51
+  ],
+  "contentScroll": {
+   "sh": 1228,
+   "ch": 951
+  },
+  "text": "Back SC Schedule a Demo! jared_delphi-me 30 Sep 2026 09:00 am 1 hr America/Denver Please enter your details Name * Email * Contact Number * "
+ },
+ "highered-390 messages": [],
+ "highered-390 activeElement": "IFRAME",
+ "home-1440 1 date": {
+  "hash": "#/4937208000000036014",
+  "vw": 1600,
+  "vh": 906,
+  "card": {
+   "top": 31,
+   "bottom": 835,
+   "h": 804,
+   "w": 392,
+   "left": 201
+  },
+  "headings": [
+   [
+    55,
+    "Select date and time"
+   ],
+   [
+    466,
+    "Time Zone"
+   ]
+  ],
+  "back": [],
+  "contentScroll": {
+   "sh": 804,
+   "ch": 804
+  },
+  "text": "SC Schedule a Demo! jared_delphi-me 1 hr Select date and time Sep 2026 S M T W T F S 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 2"
+ },
+ "home-1440 click day": [
+  527,
+  439.59375
+ ],
+ "home-1440 2 slots": {
+  "hash": "#/4937208000000036014",
+  "vw": 1600,
+  "vh": 906,
+  "card": {
+   "top": 31,
+   "bottom": 835,
+   "h": 804,
+   "w": 392,
+   "left": 201
+  },
+  "headings": [
+   [
+    55,
+    "Wednesday, September 30"
+   ]
+  ],
+  "back": [
+   51
+  ],
+  "contentScroll": {
+   "sh": 804,
+   "ch": 804
+  },
+  "text": "Back SC Schedule a Demo! jared_delphi-me 1 hr Wednesday, September 30 09:00 am 09:30 am 10:00 am 10:30 am 11:00 am 11:30 am 12:00 pm 12:30 p"
+ },
+ "home-1440 click slot": [
+  712,
+  155.796875
+ ],
+ "home-1440 2b slot picked": {
+  "hash": "#/4937208000000036014",
+  "vw": 1600,
+  "vh": 906,
+  "card": {
+   "top": 31,
+   "bottom": 835,
+   "h": 804,
+   "w": 392,
+   "left": 201
+  },
+  "headings": [
+   [
+    55,
+    "Wednesday, September 30"
+   ]
+  ],
+  "back": [
+   51
+  ],
+  "contentScroll": {
+   "sh": 804,
+   "ch": 804
+  },
+  "text": "Back SC Schedule a Demo! jared_delphi-me 1 hr Wednesday, September 30 09:00 am Next 09:30 am 10:00 am 10:30 am 11:00 am 11:30 am 12:00 pm 12"
+ },
+ "home-1440 click next": [
+  779.8515625,
+  155.796875
+ ],
+ "home-1440 3 details": {
+  "hash": "#/4937208000000036014",
+  "vw": 1600,
+  "vh": 906,
+  "card": {
+   "top": 31,
+   "bottom": 835,
+   "h": 804,
+   "w": 392,
+   "left": 201
+  },
+  "headings": [],
+  "back": [
+   51
+  ],
+  "contentScroll": {
+   "sh": 804,
+   "ch": 804
+  },
+  "text": "Back SC Schedule a Demo! jared_delphi-me 30 Sep 2026 09:00 am 1 hr America/Denver Please enter your details Name * Email * Contact Number * "
+ },
+ "home-1440 messages": [
+  {
+   "t": 1238,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"initialDelivery\",\"info\":{\"apiInterface\":[\"cueVideoById\",\"loadVideoById\",\"cueVideoByUrl\",\"loadVideoByUrl\",\"playVideo\",\"pauseVideo\",\"stopVideo\",\"clearVideo\",\"getVideoBytesLoaded\",\"getVideoBytesTotal\",\"getVideoLoadedFraction\",\"getVideoStartBytes\",\"cuePlaylist\",\"loadPlaylist\",\"nextVideo\",\"prev"
+  },
+  {
+   "t": 1238,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"onReady\",\"info\":null,\"channel\":\"widget\",\"id\":\"dl-yt\"}"
+  },
+  {
+   "t": 1449,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"initialDelivery\",\"info\":{\"apiInterface\":[\"cueVideoById\",\"loadVideoById\",\"cueVideoByUrl\",\"loadVideoByUrl\",\"playVideo\",\"pauseVideo\",\"stopVideo\",\"clearVideo\",\"getVideoBytesLoaded\",\"getVideoBytesTotal\",\"getVideoLoadedFraction\",\"getVideoStartBytes\",\"cuePlaylist\",\"loadPlaylist\",\"nextVideo\",\"prev"
+  },
+  {
+   "t": 1449,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"onReady\",\"info\":null,\"channel\":\"widget\",\"id\":\"dl-yt\"}"
+  },
+  {
+   "t": 1597,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"initialDelivery\",\"info\":{\"apiInterface\":[\"cueVideoById\",\"loadVideoById\",\"cueVideoByUrl\",\"loadVideoByUrl\",\"playVideo\",\"pauseVideo\",\"stopVideo\",\"clearVideo\",\"getVideoBytesLoaded\",\"getVideoBytesTotal\",\"getVideoLoadedFraction\",\"getVideoStartBytes\",\"cuePlaylist\",\"loadPlaylist\",\"nextVideo\",\"prev"
+  },
+  {
+   "t": 1597,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"onReady\",\"info\":null,\"channel\":\"widget\",\"id\":\"dl-yt\"}"
+  },
+  {
+   "t": 1600,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"initialDelivery\",\"info\":{\"apiInterface\":[\"cueVideoById\",\"loadVideoById\",\"cueVideoByUrl\",\"loadVideoByUrl\",\"playVideo\",\"pauseVideo\",\"stopVideo\",\"clearVideo\",\"getVideoBytesLoaded\",\"getVideoBytesTotal\",\"getVideoLoadedFraction\",\"getVideoStartBytes\",\"cuePlaylist\",\"loadPlaylist\",\"nextVideo\",\"prev"
+  },
+  {
+   "t": 1600,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"onReady\",\"info\":null,\"channel\":\"widget\",\"id\":\"dl-yt\"}"
+  },
+  {
+   "t": 1603,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"initialDelivery\",\"info\":{\"apiInterface\":[\"cueVideoById\",\"loadVideoById\",\"cueVideoByUrl\",\"loadVideoByUrl\",\"playVideo\",\"pauseVideo\",\"stopVideo\",\"clearVideo\",\"getVideoBytesLoaded\",\"getVideoBytesTotal\",\"getVideoLoadedFraction\",\"getVideoStartBytes\",\"cuePlaylist\",\"loadPlaylist\",\"nextVideo\",\"prev"
+  },
+  {
+   "t": 1603,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"onReady\",\"info\":null,\"channel\":\"widget\",\"id\":\"dl-yt\"}"
+  },
+  {
+   "t": 1619,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"initialDelivery\",\"info\":{\"apiInterface\":[\"cueVideoById\",\"loadVideoById\",\"cueVideoByUrl\",\"loadVideoByUrl\",\"playVideo\",\"pauseVideo\",\"stopVideo\",\"clearVideo\",\"getVideoBytesLoaded\",\"getVideoBytesTotal\",\"getVideoLoadedFraction\",\"getVideoStartBytes\",\"cuePlaylist\",\"loadPlaylist\",\"nextVideo\",\"prev"
+  },
+  {
+   "t": 1619,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"onReady\",\"info\":null,\"channel\":\"widget\",\"id\":\"dl-yt\"}"
+  },
+  {
+   "t": 1620,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"initialDelivery\",\"info\":{\"apiInterface\":[\"cueVideoById\",\"loadVideoById\",\"cueVideoByUrl\",\"loadVideoByUrl\",\"playVideo\",\"pauseVideo\",\"stopVideo\",\"clearVideo\",\"getVideoBytesLoaded\",\"getVideoBytesTotal\",\"getVideoLoadedFraction\",\"getVideoStartBytes\",\"cuePlaylist\",\"loadPlaylist\",\"nextVideo\",\"prev"
+  },
+  {
+   "t": 1620,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"onReady\",\"info\":null,\"channel\":\"widget\",\"id\":\"dl-yt\"}"
+  },
+  {
+   "t": 1623,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"initialDelivery\",\"info\":{\"apiInterface\":[\"cueVideoById\",\"loadVideoById\",\"cueVideoByUrl\",\"loadVideoByUrl\",\"playVideo\",\"pauseVideo\",\"stopVideo\",\"clearVideo\",\"getVideoBytesLoaded\",\"getVideoBytesTotal\",\"getVideoLoadedFraction\",\"getVideoStartBytes\",\"cuePlaylist\",\"loadPlaylist\",\"nextVideo\",\"prev"
+  },
+  {
+   "t": 1623,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"onReady\",\"info\":null,\"channel\":\"widget\",\"id\":\"dl-yt\"}"
+  },
+  {
+   "t": 1626,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"initialDelivery\",\"info\":{\"apiInterface\":[\"cueVideoById\",\"loadVideoById\",\"cueVideoByUrl\",\"loadVideoByUrl\",\"playVideo\",\"pauseVideo\",\"stopVideo\",\"clearVideo\",\"getVideoBytesLoaded\",\"getVideoBytesTotal\",\"getVideoLoadedFraction\",\"getVideoStartBytes\",\"cuePlaylist\",\"loadPlaylist\",\"nextVideo\",\"prev"
+  },
+  {
+   "t": 1626,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"onReady\",\"info\":null,\"channel\":\"widget\",\"id\":\"dl-yt\"}"
+  }
+ ],
+ "home-1440 activeElement": "IFRAME",
+ "home-390 1 date": {
+  "hash": "#/4937208000000036014",
+  "vw": 358,
+  "vh": 1036,
+  "card": {
+   "top": 30,
+   "bottom": 214,
+   "h": 184,
+   "w": 298,
+   "left": 30
+  },
+  "headings": [
+   [
+    238,
+    "Select date and time"
+   ],
+   [
+    649,
+    "Time Zone"
+   ]
+  ],
+  "back": [],
+  "contentScroll": {
+   "sh": 951,
+   "ch": 951
+  },
+  "text": "SC Schedule a Demo! jared_delphi-me 1 hr Select date and time Sep 2026 S M T W T F S 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 2"
+ },
+ "home-390 click day": [
+  195.1875,
+  401.59375
+ ],
+ "home-390 2 slots": {
+  "hash": "#/4937208000000036014",
+  "vw": 358,
+  "vh": 1036,
+  "card": {
+   "top": 30,
+   "bottom": 246,
+   "h": 216,
+   "w": 283,
+   "left": 30
+  },
+  "headings": [
+   [
+    270,
+    "Wednesday, September 30"
+   ]
+  ],
+  "back": [
+   51
+  ],
+  "contentScroll": {
+   "sh": 1260,
+   "ch": 951
+  },
+  "text": "Back SC Schedule a Demo! jared_delphi-me 1 hr Wednesday, September 30 09:00 am 09:30 am 10:00 am 10:30 am 11:00 am 11:30 am 12:00 pm 12:30 p"
+ },
+ "home-390 click slot": [
+  186.5,
+  170.796875
+ ],
+ "home-390 2b slot picked": {
+  "hash": "#/4937208000000036014",
+  "vw": 358,
+  "vh": 1036,
+  "card": {
+   "top": 30,
+   "bottom": 246,
+   "h": 216,
+   "w": 283,
+   "left": 30
+  },
+  "headings": [
+   [
+    270,
+    "Wednesday, September 30"
+   ]
+  ],
+  "back": [
+   51
+  ],
+  "contentScroll": {
+   "sh": 1260,
+   "ch": 951
+  },
+  "text": "Back SC Schedule a Demo! jared_delphi-me 1 hr Wednesday, September 30 09:00 am Next 09:30 am 10:00 am 10:30 am 11:00 am 11:30 am 12:00 pm 12"
+ },
+ "home-390 click next": [
+  254.3515625,
+  170.796875
+ ],
+ "home-390 3 details": {
+  "hash": "#/4937208000000036014",
+  "vw": 358,
+  "vh": 1036,
+  "card": {
+   "top": 30,
+   "bottom": 317,
+   "h": 287,
+   "w": 283,
+   "left": 30
+  },
+  "headings": [],
+  "back": [
+   51
+  ],
+  "contentScroll": {
+   "sh": 1228,
+   "ch": 951
+  },
+  "text": "Back SC Schedule a Demo! jared_delphi-me 30 Sep 2026 09:00 am 1 hr America/Denver Please enter your details Name * Email * Contact Number * "
+ },
+ "home-390 messages": [
+  {
+   "t": 1373,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"initialDelivery\",\"info\":{\"apiInterface\":[\"cueVideoById\",\"loadVideoById\",\"cueVideoByUrl\",\"loadVideoByUrl\",\"playVideo\",\"pauseVideo\",\"stopVideo\",\"clearVideo\",\"getVideoBytesLoaded\",\"getVideoBytesTotal\",\"getVideoLoadedFraction\",\"getVideoStartBytes\",\"cuePlaylist\",\"loadPlaylist\",\"nextVideo\",\"prev"
+  },
+  {
+   "t": 1373,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"onReady\",\"info\":null,\"channel\":\"widget\",\"id\":\"dl-yt\"}"
+  },
+  {
+   "t": 1456,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"initialDelivery\",\"info\":{\"apiInterface\":[\"cueVideoById\",\"loadVideoById\",\"cueVideoByUrl\",\"loadVideoByUrl\",\"playVideo\",\"pauseVideo\",\"stopVideo\",\"clearVideo\",\"getVideoBytesLoaded\",\"getVideoBytesTotal\",\"getVideoLoadedFraction\",\"getVideoStartBytes\",\"cuePlaylist\",\"loadPlaylist\",\"nextVideo\",\"prev"
+  },
+  {
+   "t": 1456,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"onReady\",\"info\":null,\"channel\":\"widget\",\"id\":\"dl-yt\"}"
+  },
+  {
+   "t": 1498,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"initialDelivery\",\"info\":{\"apiInterface\":[\"cueVideoById\",\"loadVideoById\",\"cueVideoByUrl\",\"loadVideoByUrl\",\"playVideo\",\"pauseVideo\",\"stopVideo\",\"clearVideo\",\"getVideoBytesLoaded\",\"getVideoBytesTotal\",\"getVideoLoadedFraction\",\"getVideoStartBytes\",\"cuePlaylist\",\"loadPlaylist\",\"nextVideo\",\"prev"
+  },
+  {
+   "t": 1498,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"onReady\",\"info\":null,\"channel\":\"widget\",\"id\":\"dl-yt\"}"
+  },
+  {
+   "t": 1657,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"initialDelivery\",\"info\":{\"apiInterface\":[\"cueVideoById\",\"loadVideoById\",\"cueVideoByUrl\",\"loadVideoByUrl\",\"playVideo\",\"pauseVideo\",\"stopVideo\",\"clearVideo\",\"getVideoBytesLoaded\",\"getVideoBytesTotal\",\"getVideoLoadedFraction\",\"getVideoStartBytes\",\"cuePlaylist\",\"loadPlaylist\",\"nextVideo\",\"prev"
+  },
+  {
+   "t": 1657,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"onReady\",\"info\":null,\"channel\":\"widget\",\"id\":\"dl-yt\"}"
+  },
+  {
+   "t": 1662,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"initialDelivery\",\"info\":{\"apiInterface\":[\"cueVideoById\",\"loadVideoById\",\"cueVideoByUrl\",\"loadVideoByUrl\",\"playVideo\",\"pauseVideo\",\"stopVideo\",\"clearVideo\",\"getVideoBytesLoaded\",\"getVideoBytesTotal\",\"getVideoLoadedFraction\",\"getVideoStartBytes\",\"cuePlaylist\",\"loadPlaylist\",\"nextVideo\",\"prev"
+  },
+  {
+   "t": 1662,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"onReady\",\"info\":null,\"channel\":\"widget\",\"id\":\"dl-yt\"}"
+  },
+  {
+   "t": 1664,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"initialDelivery\",\"info\":{\"apiInterface\":[\"cueVideoById\",\"loadVideoById\",\"cueVideoByUrl\",\"loadVideoByUrl\",\"playVideo\",\"pauseVideo\",\"stopVideo\",\"clearVideo\",\"getVideoBytesLoaded\",\"getVideoBytesTotal\",\"getVideoLoadedFraction\",\"getVideoStartBytes\",\"cuePlaylist\",\"loadPlaylist\",\"nextVideo\",\"prev"
+  },
+  {
+   "t": 1664,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"onReady\",\"info\":null,\"channel\":\"widget\",\"id\":\"dl-yt\"}"
+  },
+  {
+   "t": 1666,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"initialDelivery\",\"info\":{\"apiInterface\":[\"cueVideoById\",\"loadVideoById\",\"cueVideoByUrl\",\"loadVideoByUrl\",\"playVideo\",\"pauseVideo\",\"stopVideo\",\"clearVideo\",\"getVideoBytesLoaded\",\"getVideoBytesTotal\",\"getVideoLoadedFraction\",\"getVideoStartBytes\",\"cuePlaylist\",\"loadPlaylist\",\"nextVideo\",\"prev"
+  },
+  {
+   "t": 1666,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"onReady\",\"info\":null,\"channel\":\"widget\",\"id\":\"dl-yt\"}"
+  },
+  {
+   "t": 1668,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"initialDelivery\",\"info\":{\"apiInterface\":[\"cueVideoById\",\"loadVideoById\",\"cueVideoByUrl\",\"loadVideoByUrl\",\"playVideo\",\"pauseVideo\",\"stopVideo\",\"clearVideo\",\"getVideoBytesLoaded\",\"getVideoBytesTotal\",\"getVideoLoadedFraction\",\"getVideoStartBytes\",\"cuePlaylist\",\"loadPlaylist\",\"nextVideo\",\"prev"
+  },
+  {
+   "t": 1668,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"onReady\",\"info\":null,\"channel\":\"widget\",\"id\":\"dl-yt\"}"
+  },
+  {
+   "t": 1671,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"initialDelivery\",\"info\":{\"apiInterface\":[\"cueVideoById\",\"loadVideoById\",\"cueVideoByUrl\",\"loadVideoByUrl\",\"playVideo\",\"pauseVideo\",\"stopVideo\",\"clearVideo\",\"getVideoBytesLoaded\",\"getVideoBytesTotal\",\"getVideoLoadedFraction\",\"getVideoStartBytes\",\"cuePlaylist\",\"loadPlaylist\",\"nextVideo\",\"prev"
+  },
+  {
+   "t": 1671,
+   "origin": "https://www.youtube.com",
+   "data": "{\"event\":\"onReady\",\"info\":null,\"channel\":\"widget\",\"id\":\"dl-yt\"}"
+  }
+ ],
+ "home-390 activeElement": "IFRAME"
+}

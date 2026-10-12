@@ -1,0 +1,54 @@
+[
+ [
+  "1440 /home",
+  {
+   "found": true,
+   "innerHTML": "With Delphinium, students can see at a glance what's done, what's in progress, and what comes next, so they own the journey.",
+   "innerText": "With Delphinium, students can see at a glance what's done, what's in progress, and what comes next, so they own the journey.",
+   "children": 0,
+   "visible": true,
+   "heEnabled": false,
+   "parentTextAnywhere": false,
+   "matchesExpected": true
+  }
+ ],
+ [
+  "1440 /highered",
+  {
+   "found": true,
+   "innerHTML": "With Delphinium, students can see at a glance what's done, what's in progress, and what comes next, so they own the journey.",
+   "innerText": "With Delphinium, students can see at a glance what's done, what's in progress, and what comes next, so they own the journey.",
+   "children": 0,
+   "visible": true,
+   "heEnabled": true,
+   "parentTextAnywhere": false,
+   "matchesExpected": true
+  }
+ ],
+ [
+  "390 /home",
+  {
+   "found": true,
+   "innerHTML": "With Delphinium, students can see at a glance what's done, what's in progress, and what comes next, so they own the journey.",
+   "innerText": "With Delphinium, students can see at a glance what's done, what's in progress, and what comes next, so they own the journey.",
+   "children": 0,
+   "visible": true,
+   "heEnabled": false,
+   "parentTextAnywhere": false,
+   "matchesExpected": true
+  }
+ ],
+ [
+  "390 /highered",
+  {
+   "found": true,
+   "innerHTML": "With Delphinium, students can see at a glance what's done, what's in progress, and what comes next, so they own the journey.",
+   "innerText": "With Delphinium, students can see at a glance what's done, what's in progress, and what comes next, so they own the journey.",
+   "children": 0,
+   "visible": true,
+   "heEnabled": true,
+   "parentTextAnywhere": false,
+   "matchesExpected": true
+  }
+ ]
+]

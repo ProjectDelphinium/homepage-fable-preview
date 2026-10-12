@@ -1,0 +1,78 @@
+[
+ [
+  "highered 1440",
+  {
+   "html": "dl-path-he js dl-he-ready",
+   "kicker": "EARNINGS AND EMPLOYMENT",
+   "kickerShown": "EARNINGS AND EMPLOYMENT",
+   "num": "~$1M",
+   "txt": "less in lifetime earnings without a degree, and twice as likely to be unemployed.",
+   "src": "Pew Research Center",
+   "numFont": "40.8px",
+   "numH": 39,
+   "numW": 534,
+   "cardW": 573
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-case-stats.png"
+ ],
+ [
+  "highered 390",
+  {
+   "html": "dl-path-he js dl-he-ready",
+   "kicker": "EARNINGS AND EMPLOYMENT",
+   "kickerShown": "EARNINGS AND EMPLOYMENT",
+   "num": "~$1M",
+   "txt": "less in lifetime earnings without a degree, and twice as likely to be unemployed.",
+   "src": "Pew Research Center",
+   "numFont": "29.6px",
+   "numH": 28,
+   "numW": 311,
+   "cardW": 350
+  }
+ ],
+ [
+  "shot",
+  "highered-390-case-stats.png"
+ ],
+ [
+  "home 1440",
+  {
+   "html": "dl-path-home js",
+   "kicker": "COST",
+   "kickerShown": "COST",
+   "num": "$229K",
+   "txt": "the cost of a K-12 education and lost potential when students don't finish.",
+   "src": "U.S. Census Bureau, FY2024",
+   "numFont": "40.8px",
+   "numH": 39,
+   "numW": 339,
+   "cardW": 378
+  }
+ ],
+ [
+  "shot",
+  "home-1440-case-stats.png"
+ ],
+ [
+  "home 390",
+  {
+   "html": "dl-path-home js",
+   "kicker": "COST",
+   "kickerShown": "COST",
+   "num": "$229K",
+   "txt": "the cost of a K-12 education and lost potential when students don't finish.",
+   "src": "U.S. Census Bureau, FY2024",
+   "numFont": "29.6px",
+   "numH": 28,
+   "numW": 311,
+   "cardW": 350
+  }
+ ],
+ [
+  "shot",
+  "home-390-case-stats.png"
+ ]
+]

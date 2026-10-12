@@ -1,0 +1,739 @@
+[
+ [
+  "1440 /home toggle",
+  {
+   "path": "/home",
+   "html": "dl-path-home js",
+   "bar": {
+    "shown": true,
+    "label": true,
+    "opts": [
+     {
+      "text": "K-12",
+      "href": "/",
+      "current": "page",
+      "w": 57,
+      "h": 32,
+      "bg": "rgb(43, 47, 126)"
+     },
+     {
+      "text": "Higher Ed",
+      "href": "/highered",
+      "current": null,
+      "w": 91,
+      "h": 32,
+      "bg": "rgba(0, 0, 0, 0)"
+     }
+    ]
+   },
+   "menu": {
+    "shown": false,
+    "label": true,
+    "opts": [
+     {
+      "text": "K-12",
+      "href": "/",
+      "current": "page",
+      "w": 0,
+      "h": 0,
+      "bg": "rgb(43, 47, 126)"
+     },
+     {
+      "text": "Higher Ed",
+      "href": "/highered",
+      "current": null,
+      "w": 0,
+      "h": 0,
+      "bg": "rgba(0, 0, 0, 0)"
+     }
+    ]
+   },
+   "higherEdNavLink": false,
+   "overflowX": false
+  }
+ ],
+ [
+  "1440 /home head",
+  {
+   "title": "Delphinium · Canvas delivers content. Delphinium delivers engagement.",
+   "titles": 1,
+   "descs": [
+    "The Canvas engagement layer for K-12 online schools. Turn the Canvas courses you already run into engaging student experiences and an early-warning system for teachers. Up to 31% fewer course failures."
+   ],
+   "ogTitle": "Delphinium · Canvas delivers content. Delphinium delivers engagement.",
+   "ogDesc": "The Canvas engagement layer for K-12 online schools. Turn the Canvas courses you already run into engaging student experiences and an early-warning system for teachers. Up to 31% fewer course failures.",
+   "ogUrl": "https://www.delphi-me.com/",
+   "ogImage": "https://www.delphi-me.com/dl28-og-default.jpg",
+   "twCard": "summary_large_image",
+   "canonical": "https://www.delphi-me.com/home",
+   "jsonld": [
+    "Organization+WebSite+SoftwareApplication"
+   ],
+   "h1": 3
+  }
+ ],
+ [
+  "1440 /home intact",
+  {
+   "pauseBtn": {
+    "shown": true,
+    "label": "Pause logos"
+   },
+   "sectionPads": {
+    "112px/112px": 11,
+    "0px/112px": 1
+   }
+  }
+ ],
+ [
+  "shot",
+  "home-1440-header.png"
+ ],
+ [
+  "shot",
+  "home-1440-view.png"
+ ],
+ [
+  "1440 after clicking Higher Ed",
+  {
+   "path": "/highered",
+   "html": "dl-path-he js dl-he-ready",
+   "bar": {
+    "shown": true,
+    "label": true,
+    "opts": [
+     {
+      "text": "K-12",
+      "href": "/",
+      "current": null,
+      "w": 56,
+      "h": 32,
+      "bg": "rgba(0, 0, 0, 0)"
+     },
+     {
+      "text": "Higher Ed",
+      "href": "/highered",
+      "current": "page",
+      "w": 92,
+      "h": 32,
+      "bg": "rgb(43, 47, 126)"
+     }
+    ]
+   },
+   "menu": {
+    "shown": false,
+    "label": true,
+    "opts": [
+     {
+      "text": "K-12",
+      "href": "/",
+      "current": null,
+      "w": 0,
+      "h": 0,
+      "bg": "rgba(0, 0, 0, 0)"
+     },
+     {
+      "text": "Higher Ed",
+      "href": "/highered",
+      "current": "page",
+      "w": 0,
+      "h": 0,
+      "bg": "rgb(43, 47, 126)"
+     }
+    ]
+   },
+   "higherEdNavLink": false,
+   "overflowX": false
+  }
+ ],
+ [
+  "1440 /highered head",
+  {
+   "title": "Higher Ed Online · Delphinium",
+   "titles": 1,
+   "descs": [
+    "Delphinium is the Canvas engagement layer for Higher Ed Online programs. In Higher Ed Online sections, course failure is as much as 47% lower, withdrawal as much as 67% lower, and dropout as much as 65% lower. Dropout means finishing with less than about a third of the points."
+   ],
+   "ogTitle": "Higher Ed Online · Delphinium",
+   "ogDesc": "Delphinium is the Canvas engagement layer for Higher Ed Online programs. In Higher Ed Online sections, course failure is as much as 47% lower, withdrawal as much as 67% lower, and dropout as much as 65% lower. Dropout means finishing with less than about a third of the points.",
+   "ogUrl": "https://www.delphi-me.com/highered",
+   "ogImage": "https://www.delphi-me.com/dl28-og-default.jpg",
+   "twCard": "summary_large_image",
+   "canonical": "https://www.delphi-me.com/highered",
+   "jsonld": [
+    "Organization+WebSite+SoftwareApplication"
+   ],
+   "h1": 3
+  }
+ ],
+ [
+  "1440 /highered intact",
+  {
+   "pauseBtn": {
+    "shown": true,
+    "label": "Pause logos"
+   },
+   "sectionPads": {
+    "112px/112px": 8,
+    "0px/112px": 2
+   }
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-header.png"
+ ],
+ [
+  "shot",
+  "highered-1440-view.png"
+ ],
+ [
+  "1440 focus after 3 tabs",
+  {
+   "text": "K-12",
+   "cls": "dl-aud__opt",
+   "focusVisible": true,
+   "outline": "solid 3px rgb(43, 47, 126)"
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-focus-k12.png"
+ ],
+ [
+  "1440 after clicking K-12",
+  {
+   "path": "/",
+   "html": "dl-path-home js",
+   "bar": {
+    "shown": true,
+    "label": true,
+    "opts": [
+     {
+      "text": "K-12",
+      "href": "/",
+      "current": "page",
+      "w": 57,
+      "h": 32,
+      "bg": "rgb(43, 47, 126)"
+     },
+     {
+      "text": "Higher Ed",
+      "href": "/highered",
+      "current": null,
+      "w": 91,
+      "h": 32,
+      "bg": "rgba(0, 0, 0, 0)"
+     }
+    ]
+   },
+   "menu": {
+    "shown": false,
+    "label": true,
+    "opts": [
+     {
+      "text": "K-12",
+      "href": "/",
+      "current": "page",
+      "w": 0,
+      "h": 0,
+      "bg": "rgb(43, 47, 126)"
+     },
+     {
+      "text": "Higher Ed",
+      "href": "/highered",
+      "current": null,
+      "w": 0,
+      "h": 0,
+      "bg": "rgba(0, 0, 0, 0)"
+     }
+    ]
+   },
+   "higherEdNavLink": false,
+   "overflowX": false
+  }
+ ],
+ [
+  "1280 bar",
+  {
+   "shown": true,
+   "label": true,
+   "overflowX": false,
+   "menuShown": false
+  }
+ ],
+ [
+  "1080 bar",
+  {
+   "shown": true,
+   "label": true,
+   "overflowX": false,
+   "menuShown": false
+  }
+ ],
+ [
+  "1024 bar",
+  {
+   "shown": true,
+   "label": false,
+   "overflowX": false,
+   "menuShown": false
+  }
+ ],
+ [
+  "shot",
+  "home-1024-header.png"
+ ],
+ [
+  "980 bar",
+  {
+   "shown": true,
+   "label": false,
+   "overflowX": false,
+   "menuShown": false
+  }
+ ],
+ [
+  "900 bar",
+  {
+   "shown": true,
+   "label": true,
+   "overflowX": false,
+   "menuShown": false
+  }
+ ],
+ [
+  "800 bar",
+  {
+   "shown": true,
+   "label": true,
+   "overflowX": false,
+   "menuShown": false
+  }
+ ],
+ [
+  "shot",
+  "home-800-header.png"
+ ],
+ [
+  "760 bar",
+  {
+   "shown": true,
+   "label": false,
+   "overflowX": false,
+   "menuShown": false
+  }
+ ],
+ [
+  "shot",
+  "home-760-header.png"
+ ],
+ [
+  "720 bar",
+  {
+   "shown": true,
+   "label": false,
+   "overflowX": false,
+   "menuShown": false
+  }
+ ],
+ [
+  "719 bar",
+  {
+   "shown": false,
+   "label": false,
+   "overflowX": false,
+   "menuShown": false
+  }
+ ],
+ [
+  "shot",
+  "home-1440-logos-pause.png"
+ ],
+ [
+  "390 /home toggle (menu closed)",
+  {
+   "path": "/home",
+   "html": "dl-path-home js",
+   "bar": {
+    "shown": false,
+    "label": false,
+    "opts": [
+     {
+      "text": "K-12",
+      "href": "/",
+      "current": "page",
+      "w": 0,
+      "h": 0,
+      "bg": "rgb(43, 47, 126)"
+     },
+     {
+      "text": "Higher Ed",
+      "href": "/highered",
+      "current": null,
+      "w": 0,
+      "h": 0,
+      "bg": "rgba(0, 0, 0, 0)"
+     }
+    ]
+   },
+   "menu": {
+    "shown": false,
+    "label": true,
+    "opts": [
+     {
+      "text": "K-12",
+      "href": "/",
+      "current": "page",
+      "w": 0,
+      "h": 0,
+      "bg": "rgb(43, 47, 126)"
+     },
+     {
+      "text": "Higher Ed",
+      "href": "/highered",
+      "current": null,
+      "w": 0,
+      "h": 0,
+      "bg": "rgba(0, 0, 0, 0)"
+     }
+    ]
+   },
+   "higherEdNavLink": false,
+   "overflowX": false
+  }
+ ],
+ [
+  "390 /home head",
+  {
+   "title": "Delphinium · Canvas delivers content. Delphinium delivers engagement.",
+   "titles": 1,
+   "descs": [
+    "The Canvas engagement layer for K-12 online schools. Turn the Canvas courses you already run into engaging student experiences and an early-warning system for teachers. Up to 31% fewer course failures."
+   ],
+   "ogTitle": "Delphinium · Canvas delivers content. Delphinium delivers engagement.",
+   "ogDesc": "The Canvas engagement layer for K-12 online schools. Turn the Canvas courses you already run into engaging student experiences and an early-warning system for teachers. Up to 31% fewer course failures.",
+   "ogUrl": "https://www.delphi-me.com/",
+   "ogImage": "https://www.delphi-me.com/dl28-og-default.jpg",
+   "twCard": "summary_large_image",
+   "canonical": "https://www.delphi-me.com/home",
+   "jsonld": [
+    "Organization+WebSite+SoftwareApplication"
+   ],
+   "h1": 3
+  }
+ ],
+ [
+  "shot",
+  "home-390-view.png"
+ ],
+ [
+  "390 /home toggle (menu open)",
+  {
+   "path": "/home",
+   "html": "dl-path-home js",
+   "bar": {
+    "shown": false,
+    "label": false,
+    "opts": [
+     {
+      "text": "K-12",
+      "href": "/",
+      "current": "page",
+      "w": 0,
+      "h": 0,
+      "bg": "rgb(43, 47, 126)"
+     },
+     {
+      "text": "Higher Ed",
+      "href": "/highered",
+      "current": null,
+      "w": 0,
+      "h": 0,
+      "bg": "rgba(0, 0, 0, 0)"
+     }
+    ]
+   },
+   "menu": {
+    "shown": true,
+    "label": true,
+    "opts": [
+     {
+      "text": "K-12",
+      "href": "/",
+      "current": "page",
+      "w": 175,
+      "h": 44,
+      "bg": "rgb(43, 47, 126)"
+     },
+     {
+      "text": "Higher Ed",
+      "href": "/highered",
+      "current": null,
+      "w": 175,
+      "h": 44,
+      "bg": "rgba(0, 0, 0, 0)"
+     }
+    ]
+   },
+   "higherEdNavLink": false,
+   "overflowX": false
+  }
+ ],
+ [
+  "shot",
+  "home-390-menu.png"
+ ],
+ [
+  "390 /highered toggle (menu closed)",
+  {
+   "path": "/highered",
+   "html": "dl-path-he js dl-he-ready",
+   "bar": {
+    "shown": false,
+    "label": false,
+    "opts": [
+     {
+      "text": "K-12",
+      "href": "/",
+      "current": null,
+      "w": 0,
+      "h": 0,
+      "bg": "rgba(0, 0, 0, 0)"
+     },
+     {
+      "text": "Higher Ed",
+      "href": "/highered",
+      "current": "page",
+      "w": 0,
+      "h": 0,
+      "bg": "rgb(43, 47, 126)"
+     }
+    ]
+   },
+   "menu": {
+    "shown": false,
+    "label": true,
+    "opts": [
+     {
+      "text": "K-12",
+      "href": "/",
+      "current": null,
+      "w": 0,
+      "h": 0,
+      "bg": "rgba(0, 0, 0, 0)"
+     },
+     {
+      "text": "Higher Ed",
+      "href": "/highered",
+      "current": "page",
+      "w": 0,
+      "h": 0,
+      "bg": "rgb(43, 47, 126)"
+     }
+    ]
+   },
+   "higherEdNavLink": false,
+   "overflowX": false
+  }
+ ],
+ [
+  "390 /highered head",
+  {
+   "title": "Higher Ed Online · Delphinium",
+   "titles": 1,
+   "descs": [
+    "Delphinium is the Canvas engagement layer for Higher Ed Online programs. In Higher Ed Online sections, course failure is as much as 47% lower, withdrawal as much as 67% lower, and dropout as much as 65% lower. Dropout means finishing with less than about a third of the points."
+   ],
+   "ogTitle": "Higher Ed Online · Delphinium",
+   "ogDesc": "Delphinium is the Canvas engagement layer for Higher Ed Online programs. In Higher Ed Online sections, course failure is as much as 47% lower, withdrawal as much as 67% lower, and dropout as much as 65% lower. Dropout means finishing with less than about a third of the points.",
+   "ogUrl": "https://www.delphi-me.com/highered",
+   "ogImage": "https://www.delphi-me.com/dl28-og-default.jpg",
+   "twCard": "summary_large_image",
+   "canonical": "https://www.delphi-me.com/highered",
+   "jsonld": [
+    "Organization+WebSite+SoftwareApplication"
+   ],
+   "h1": 3
+  }
+ ],
+ [
+  "shot",
+  "highered-390-view.png"
+ ],
+ [
+  "390 /highered toggle (menu open)",
+  {
+   "path": "/highered",
+   "html": "dl-path-he js dl-he-ready",
+   "bar": {
+    "shown": false,
+    "label": false,
+    "opts": [
+     {
+      "text": "K-12",
+      "href": "/",
+      "current": null,
+      "w": 0,
+      "h": 0,
+      "bg": "rgba(0, 0, 0, 0)"
+     },
+     {
+      "text": "Higher Ed",
+      "href": "/highered",
+      "current": "page",
+      "w": 0,
+      "h": 0,
+      "bg": "rgb(43, 47, 126)"
+     }
+    ]
+   },
+   "menu": {
+    "shown": true,
+    "label": true,
+    "opts": [
+     {
+      "text": "K-12",
+      "href": "/",
+      "current": null,
+      "w": 175,
+      "h": 44,
+      "bg": "rgba(0, 0, 0, 0)"
+     },
+     {
+      "text": "Higher Ed",
+      "href": "/highered",
+      "current": "page",
+      "w": 175,
+      "h": 44,
+      "bg": "rgb(43, 47, 126)"
+     }
+    ]
+   },
+   "higherEdNavLink": false,
+   "overflowX": false
+  }
+ ],
+ [
+  "shot",
+  "highered-390-menu.png"
+ ],
+ [
+  "390 after clicking K-12 in menu",
+  {
+   "path": "/",
+   "html": "dl-path-home js",
+   "bar": {
+    "shown": false,
+    "label": false,
+    "opts": [
+     {
+      "text": "K-12",
+      "href": "/",
+      "current": "page",
+      "w": 0,
+      "h": 0,
+      "bg": "rgb(43, 47, 126)"
+     },
+     {
+      "text": "Higher Ed",
+      "href": "/highered",
+      "current": null,
+      "w": 0,
+      "h": 0,
+      "bg": "rgba(0, 0, 0, 0)"
+     }
+    ]
+   },
+   "menu": {
+    "shown": false,
+    "label": true,
+    "opts": [
+     {
+      "text": "K-12",
+      "href": "/",
+      "current": "page",
+      "w": 0,
+      "h": 0,
+      "bg": "rgb(43, 47, 126)"
+     },
+     {
+      "text": "Higher Ed",
+      "href": "/highered",
+      "current": null,
+      "w": 0,
+      "h": 0,
+      "bg": "rgba(0, 0, 0, 0)"
+     }
+    ]
+   },
+   "higherEdNavLink": false,
+   "overflowX": false
+  }
+ ],
+ [
+  "390 focus in open menu",
+  {
+   "text": "K-12",
+   "focusVisible": true,
+   "outline": "solid 3px rgb(43, 47, 126)"
+  }
+ ],
+ [
+  "shot",
+  "home-390-menu-focus.png"
+ ],
+ [
+  "1440 /contact-us toggle",
+  {
+   "path": "/contact-us",
+   "html": "dl-path-contact js",
+   "bar": {
+    "shown": true,
+    "label": true,
+    "opts": [
+     {
+      "text": "K-12",
+      "href": "/",
+      "current": null,
+      "w": 56,
+      "h": 32,
+      "bg": "rgba(0, 0, 0, 0)"
+     },
+     {
+      "text": "Higher Ed",
+      "href": "/highered",
+      "current": null,
+      "w": 91,
+      "h": 32,
+      "bg": "rgba(0, 0, 0, 0)"
+     }
+    ]
+   },
+   "menu": {
+    "shown": false,
+    "label": true,
+    "opts": [
+     {
+      "text": "K-12",
+      "href": "/",
+      "current": null,
+      "w": 0,
+      "h": 0,
+      "bg": "rgba(0, 0, 0, 0)"
+     },
+     {
+      "text": "Higher Ed",
+      "href": "/highered",
+      "current": null,
+      "w": 0,
+      "h": 0,
+      "bg": "rgba(0, 0, 0, 0)"
+     }
+    ]
+   },
+   "higherEdNavLink": false,
+   "overflowX": false
+  }
+ ]
+]

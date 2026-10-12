@@ -1,0 +1,186 @@
+[
+ [
+  "home 1440 logo",
+  {
+   "img": [
+    36,
+    12,
+    140,
+    99
+   ],
+   "navH": 60,
+   "filter": "none",
+   "aBg": "none",
+   "clippingAncestors": []
+  }
+ ],
+ [
+  "shot",
+  "before-home-1440-rest.png"
+ ],
+ [
+  "home 1440 h1",
+  {
+   "scrollY": 62,
+   "top": 58,
+   "left": 133
+  }
+ ],
+ [
+  "shot",
+  "before-home-1440-scrolled-h1.png"
+ ],
+ [
+  "home 1440 em",
+  {
+   "scrollY": 475,
+   "top": 78,
+   "left": 133
+  }
+ ],
+ [
+  "shot",
+  "before-home-1440-scrolled-lead.png"
+ ],
+ [
+  "home 390 logo",
+  {
+   "img": [
+    16,
+    10,
+    90,
+    64
+   ],
+   "navH": 56,
+   "filter": "none",
+   "aBg": "none",
+   "clippingAncestors": []
+  }
+ ],
+ [
+  "shot",
+  "before-home-390-rest.png"
+ ],
+ [
+  "home 390 h1",
+  {
+   "scrollY": 32,
+   "top": 50,
+   "left": 20
+  }
+ ],
+ [
+  "shot",
+  "before-home-390-scrolled-h1.png"
+ ],
+ [
+  "home 390 em",
+  {
+   "scrollY": 332,
+   "top": 60,
+   "left": 67
+  }
+ ],
+ [
+  "shot",
+  "before-home-390-scrolled-lead.png"
+ ],
+ [
+  "highered 1440 logo",
+  {
+   "img": [
+    36,
+    12,
+    140,
+    99
+   ],
+   "navH": 60,
+   "filter": "none",
+   "aBg": "none",
+   "clippingAncestors": []
+  }
+ ],
+ [
+  "shot",
+  "before-highered-1440-rest.png"
+ ],
+ [
+  "highered 1440 h1",
+  {
+   "scrollY": 62,
+   "top": 58,
+   "left": 133
+  }
+ ],
+ [
+  "shot",
+  "before-highered-1440-scrolled-h1.png"
+ ],
+ [
+  "highered 1440 em",
+  {
+   "scrollY": 442,
+   "top": 78,
+   "left": 133
+  }
+ ],
+ [
+  "shot",
+  "before-highered-1440-scrolled-lead.png"
+ ],
+ [
+  "highered 390 logo",
+  {
+   "img": [
+    16,
+    10,
+    90,
+    64
+   ],
+   "navH": 56,
+   "filter": "none",
+   "aBg": "none",
+   "clippingAncestors": []
+  }
+ ],
+ [
+  "shot",
+  "before-highered-390-rest.png"
+ ],
+ [
+  "highered 390 h1",
+  {
+   "scrollY": 32,
+   "top": 50,
+   "left": 20
+  }
+ ],
+ [
+  "shot",
+  "before-highered-390-scrolled-h1.png"
+ ],
+ [
+  "highered 390 em",
+  {
+   "scrollY": 303,
+   "top": 60,
+   "left": 20
+  }
+ ],
+ [
+  "shot",
+  "before-highered-390-scrolled-lead.png"
+ ],
+ [
+  "focus",
+  {
+   "cls": "dl-nav__logo",
+   "focusVisible": true,
+   "outline": "solid 3px rgb(43, 47, 126)"
+  }
+ ],
+ [
+  "shot",
+  "before-home-1440-logo-focus.png"
+ ]
+]

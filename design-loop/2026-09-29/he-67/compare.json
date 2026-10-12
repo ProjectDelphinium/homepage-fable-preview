@@ -1,0 +1,86 @@
+{
+  "home-1440": {
+    "after_size": [
+      1440,
+      13518
+    ],
+    "before": {
+      "size": [
+        1440,
+        13677
+      ],
+      "identical": false,
+      "note": "size differs"
+    },
+    "before2": {
+      "identical": true,
+      "diff_bbox": null
+    }
+  },
+  "home-390": {
+    "after_size": [
+      780,
+      37438
+    ],
+    "before": {
+      "identical": true,
+      "diff_bbox": null
+    },
+    "before2": {
+      "identical": true,
+      "diff_bbox": null
+    }
+  },
+  "highered-1440": {
+    "after_size": [
+      1440,
+      12622
+    ],
+    "before": {
+      "identical": false,
+      "diff_bbox": [
+        609,
+        9537,
+        674,
+        9576
+      ]
+    },
+    "before2": {
+      "identical": false,
+      "diff_bbox": [
+        609,
+        9537,
+        674,
+        9576
+      ]
+    }
+  },
+  "highered-390": {
+    "after_size": [
+      780,
+      34610
+    ],
+    "before": {
+      "identical": false,
+      "diff_bbox": [
+        118,
+        24131,
+        192,
+        24175
+      ]
+    },
+    "before2": {
+      "identical": false,
+      "diff_bbox": [
+        118,
+        24131,
+        192,
+        24175
+      ]
+    }
+  },
+  "he_meta": {
+    "description": "Canvas engagement for online college and university courses. In a Utah Valley University study, course failure fell as much as 47% and withdrawals 67%.",
+    "chars": 151
+  }
+}

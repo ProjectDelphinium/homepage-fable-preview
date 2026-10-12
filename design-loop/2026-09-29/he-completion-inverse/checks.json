@@ -1,0 +1,120 @@
+[
+ [
+  "highered 1440 cards",
+  [
+   {
+    "text": "RETENTION ~4 in 10 students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt. National Center for Education Statistics",
+    "x": 133,
+    "y": 1429,
+    "w": 378,
+    "h": 207
+   },
+   {
+    "text": "COMPLETION ~60% of students don't finish a bachelor's in 4 years (about 40% still haven't in 6). Time-to-degree keeps stretching. NCES graduation rates",
+    "x": 915,
+    "y": 1429,
+    "w": 378,
+    "h": 207
+   },
+   {
+    "text": "HIGHER WITHDRAWAL RATES 10–15% for lower income and underprepared students in online courses. Columbia University",
+    "x": 524,
+    "y": 1429,
+    "w": 378,
+    "h": 207
+   },
+   {
+    "text": "RETENTION ~1 in 3 first-year students don't return for year two. Seats and tuition that never come back. NCES / IPEDS retention",
+    "x": 133,
+    "y": 1650,
+    "w": 573,
+    "h": 185
+   },
+   {
+    "text": "EARNINGS AND EMPLOYMENT ~$1M & 2x less in lifetime earnings without a degree, and twice as likely to be unemployed. Pew Research Center",
+    "x": 719,
+    "y": 1650,
+    "w": 573,
+    "h": 185
+   }
+  ]
+ ],
+ [
+  "shot",
+  "highered-1440-case.png"
+ ],
+ [
+  "highered 390 cards",
+  [
+   {
+    "text": "RETENTION ~4 in 10 students drop out of college. About 2M a year leave with student loan debt, but no degree to help pay for that debt. National Center for Education Statistics",
+    "x": 20,
+    "y": 1419,
+    "w": 350,
+    "h": 197
+   },
+   {
+    "text": "COMPLETION ~60% of students don't finish a bachelor's in 4 years (about 40% still haven't in 6). Time-to-degree keeps stretching. NCES graduation rates",
+    "x": 20,
+    "y": 1816,
+    "w": 350,
+    "h": 197
+   },
+   {
+    "text": "HIGHER WITHDRAWAL RATES 10–15% for lower income and underprepared students in online courses. Columbia University",
+    "x": 20,
+    "y": 1629,
+    "w": 350,
+    "h": 174
+   },
+   {
+    "text": "RETENTION ~1 in 3 first-year students don't return for year two. Seats and tuition that never come back. NCES / IPEDS retention",
+    "x": 20,
+    "y": 2026,
+    "w": 350,
+    "h": 174
+   },
+   {
+    "text": "EARNINGS AND EMPLOYMENT ~$1M & 2x less in lifetime earnings without a degree, and twice as likely to be unemployed. Pew Research Center",
+    "x": 20,
+    "y": 2214,
+    "w": 350,
+    "h": 174
+   }
+  ]
+ ],
+ [
+  "shot",
+  "highered-390-case.png"
+ ],
+ [
+  "home 1440 cards",
+  [
+   {
+    "text": "ATTENDANCE 1 in 4 students are chronically absent, still elevated years after the shift online. RAND / Return to Learn Tracker, 2024-25",
+    "x": 133,
+    "y": 1459,
+    "w": 378,
+    "h": 185
+   },
+   {
+    "text": "ACHIEVEMENT 1 in 3 students score below grade level. The lowest performers keep losing ground. The Nation's Report Card (NAEP), 2024",
+    "x": 524,
+    "y": 1459,
+    "w": 378,
+    "h": 185
+   },
+   {
+    "text": "COST $229K the cost of a K-12 education and lost potential when students don't finish. U.S. Census Bureau, FY2024",
+    "x": 915,
+    "y": 1459,
+    "w": 378,
+    "h": 185
+   }
+  ]
+ ],
+ [
+  "shot",
+  "home-1440-case.png"
+ ]
+]

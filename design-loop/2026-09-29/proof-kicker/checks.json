@@ -1,0 +1,90 @@
+{
+ "1440 /home": {
+  "htmlClass": "dl-path-home js",
+  "kickerText": "The Davis Connect study",
+  "kickerRendered": "THE DAVIS CONNECT STUDY",
+  "textTransform": "uppercase",
+  "kickerClass": "dl-card__kicker",
+  "ariaLabelledby": "proof-study-heading",
+  "labelledbyCount": 1,
+  "cardNum": "31%",
+  "studyPunch": "The courses didn't change. The teachers didn't change. Engagement did, and so did the outcomes.",
+  "coverUpto": "Cut failures, up to",
+  "coverNum": "31%!",
+  "cardVisibility": "visible",
+  "rect": [
+   132.5,
+   9876.540672302246,
+   672,
+   496.9687194824219
+  ],
+  "accessibleName": "THE DAVIS CONNECT STUDY",
+  "accessibleRole": "article"
+ },
+ "1440 /highered": {
+  "htmlClass": "dl-path-he js dl-he-ready",
+  "kickerText": "The Utah Valley University study",
+  "kickerRendered": "THE UTAH VALLEY UNIVERSITY STUDY",
+  "textTransform": "uppercase",
+  "kickerClass": "dl-card__kicker",
+  "ariaLabelledby": "proof-study-heading",
+  "labelledbyCount": 1,
+  "cardNum": "47%",
+  "studyPunch": "The courses didn't change. The teachers didn't change. Engagement did, and so did the outcomes.",
+  "coverUpto": "Lower course failure, as much as",
+  "coverNum": "47%!",
+  "cardVisibility": "visible",
+  "rect": [
+   132.5,
+   7621.907318115234,
+   672,
+   520.96875
+  ],
+  "accessibleName": "THE UTAH VALLEY UNIVERSITY STUDY",
+  "accessibleRole": "article"
+ },
+ "390 /home": {
+  "htmlClass": "dl-path-home js",
+  "kickerText": "The Davis Connect study",
+  "kickerRendered": "THE DAVIS CONNECT STUDY",
+  "textTransform": "uppercase",
+  "kickerClass": "dl-card__kicker",
+  "ariaLabelledby": "proof-study-heading",
+  "labelledbyCount": 1,
+  "cardNum": "31%",
+  "studyPunch": "The courses didn't change. The teachers didn't change. Engagement did, and so did the outcomes.",
+  "coverUpto": "Cut failures, up to",
+  "coverNum": "31%!",
+  "cardVisibility": "visible",
+  "rect": [
+   20,
+   12792.525360107422,
+   350,
+   401.4375305175781
+  ],
+  "accessibleName": "THE DAVIS CONNECT STUDY",
+  "accessibleRole": "article"
+ },
+ "390 /highered": {
+  "htmlClass": "dl-path-he js dl-he-ready",
+  "kickerText": "The Utah Valley University study",
+  "kickerRendered": "THE UTAH VALLEY UNIVERSITY STUDY",
+  "textTransform": "uppercase",
+  "kickerClass": "dl-card__kicker",
+  "ariaLabelledby": "proof-study-heading",
+  "labelledbyCount": 1,
+  "cardNum": "47%",
+  "studyPunch": "The courses didn't change. The teachers didn't change. Engagement did, and so did the outcomes.",
+  "coverUpto": "Lower course failure, as much as",
+  "coverNum": "47%!",
+  "cardVisibility": "visible",
+  "rect": [
+   20,
+   9940.134735107422,
+   350,
+   425.4375305175781
+  ],
+  "accessibleName": "THE UTAH VALLEY UNIVERSITY STUDY",
+  "accessibleRole": "article"
+ }
+}

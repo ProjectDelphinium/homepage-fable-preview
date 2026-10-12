@@ -1,0 +1,658 @@
+{
+ "home-1440": {
+  "sections": [
+   {
+    "section": "dl-hero",
+    "bg": "rgba(0, 0, 0, 0)",
+    "padTop": 36,
+    "padBottom": 72,
+    "visTop": 67,
+    "visBottom": 70.4
+   },
+   {
+    "section": "dl-case",
+    "bg": "rgb(238, 244, 244)",
+    "padTop": 112,
+    "padBottom": 112,
+    "visTop": 113,
+    "visBottom": 112
+   },
+   {
+    "section": "dl-teach",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 112,
+    "padBottom": 112,
+    "visTop": 109,
+    "visBottom": 112
+   },
+   {
+    "section": "product",
+    "bg": "rgb(245, 244, 250)",
+    "padTop": 112,
+    "padBottom": 112,
+    "visTop": 113,
+    "visBottom": 76.4
+   },
+   {
+    "section": "community",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 112,
+    "padBottom": 112,
+    "visTop": 113,
+    "visBottom": 112
+   },
+   {
+    "section": "makeover",
+    "bg": "rgb(245, 244, 250)",
+    "padTop": 112,
+    "padBottom": 112,
+    "visTop": 113,
+    "visBottom": 112
+   },
+   {
+    "section": "engagement",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 112,
+    "padBottom": 112,
+    "visTop": 107,
+    "visBottom": 112
+   },
+   {
+    "section": "customers",
+    "bg": "rgb(245, 244, 250)",
+    "padTop": 112,
+    "padBottom": 112,
+    "visTop": 114,
+    "visBottom": 113
+   },
+   {
+    "section": "videos",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 112,
+    "padBottom": 112,
+    "visTop": 113,
+    "visBottom": 110.9
+   },
+   {
+    "section": "proof",
+    "bg": "rgb(238, 244, 244)",
+    "padTop": 112,
+    "padBottom": 112,
+    "visTop": 113,
+    "visBottom": 112
+   },
+   {
+    "section": "dl-how",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 112,
+    "padBottom": 112,
+    "visTop": 113,
+    "visBottom": 112
+   },
+   {
+    "section": "dl-close",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 0,
+    "padBottom": 112,
+    "visTop": 0,
+    "visBottom": 112
+   },
+   {
+    "section": "dl-faq",
+    "bg": "rgba(0, 0, 0, 0)",
+    "padTop": 0,
+    "padBottom": 88,
+    "visTop": -3,
+    "visBottom": 89
+   }
+  ],
+  "hero": {
+   "heroTop": 60,
+   "coverToHeroBottom": 72,
+   "coverToNextContent": 185
+  },
+  "header": {
+   "scrollY": 483,
+   "topBg": "rgba(0, 0, 0, 0)",
+   "topPosition": "sticky",
+   "navBg": "color(srgb 1 0.992157 0.964706 / 0.94)",
+   "navBackdrop": "blur(12px)",
+   "navBottom": 60,
+   "logoBg": "rgba(0, 0, 0, 0)",
+   "logoTop": 12,
+   "logoBottom": 111.4,
+   "leadEmTop": 70.2,
+   "leadEmBottom": 99.2
+  }
+ },
+ "home-1100": {
+  "sections": [
+   {
+    "section": "dl-hero",
+    "bg": "rgba(0, 0, 0, 0)",
+    "padTop": 33,
+    "padBottom": 66,
+    "visTop": 64,
+    "visBottom": 64.4
+   },
+   {
+    "section": "dl-case",
+    "bg": "rgb(238, 244, 244)",
+    "padTop": 99,
+    "padBottom": 99,
+    "visTop": 100,
+    "visBottom": 99
+   },
+   {
+    "section": "dl-teach",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 99,
+    "padBottom": 99,
+    "visTop": 96,
+    "visBottom": 99
+   },
+   {
+    "section": "product",
+    "bg": "rgb(245, 244, 250)",
+    "padTop": 99,
+    "padBottom": 99,
+    "visTop": 100,
+    "visBottom": 65.6
+   },
+   {
+    "section": "community",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 99,
+    "padBottom": 99,
+    "visTop": 100,
+    "visBottom": 99
+   },
+   {
+    "section": "makeover",
+    "bg": "rgb(245, 244, 250)",
+    "padTop": 99,
+    "padBottom": 99,
+    "visTop": 100,
+    "visBottom": 99
+   },
+   {
+    "section": "engagement",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 99,
+    "padBottom": 99,
+    "visTop": 94,
+    "visBottom": 99
+   },
+   {
+    "section": "customers",
+    "bg": "rgb(245, 244, 250)",
+    "padTop": 99,
+    "padBottom": 99,
+    "visTop": 101,
+    "visBottom": 100
+   },
+   {
+    "section": "videos",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 99,
+    "padBottom": 99,
+    "visTop": 100,
+    "visBottom": 98.1
+   },
+   {
+    "section": "proof",
+    "bg": "rgb(238, 244, 244)",
+    "padTop": 99,
+    "padBottom": 99,
+    "visTop": 100,
+    "visBottom": 99
+   },
+   {
+    "section": "dl-how",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 99,
+    "padBottom": 99,
+    "visTop": 100,
+    "visBottom": 99
+   },
+   {
+    "section": "dl-close",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 0,
+    "padBottom": 99,
+    "visTop": 0,
+    "visBottom": 99
+   },
+   {
+    "section": "dl-faq",
+    "bg": "rgba(0, 0, 0, 0)",
+    "padTop": 0,
+    "padBottom": 77,
+    "visTop": -3,
+    "visBottom": 78
+   }
+  ],
+  "hero": {
+   "heroTop": 60,
+   "coverToHeroBottom": 66,
+   "coverToNextContent": 166
+  },
+  "header": {
+   "scrollY": 462,
+   "topBg": "rgba(0, 0, 0, 0)",
+   "topPosition": "sticky",
+   "navBg": "color(srgb 1 0.992157 0.964706 / 0.94)",
+   "navBackdrop": "blur(12px)",
+   "navBottom": 60,
+   "logoBg": "rgba(0, 0, 0, 0)",
+   "logoTop": 12,
+   "logoBottom": 111.4,
+   "leadEmTop": 69.8,
+   "leadEmBottom": 97.8
+  }
+ },
+ "home-390": {
+  "sections": [
+   {
+    "section": "dl-hero",
+    "bg": "rgba(0, 0, 0, 0)",
+    "padTop": 20,
+    "padBottom": 48,
+    "visTop": 34.6,
+    "visBottom": 48
+   },
+   {
+    "section": "dl-case",
+    "bg": "rgb(238, 244, 244)",
+    "padTop": 64,
+    "padBottom": 64,
+    "visTop": 65,
+    "visBottom": 63.7
+   },
+   {
+    "section": "dl-teach",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 64,
+    "padBottom": 64,
+    "visTop": 62,
+    "visBottom": 62.4
+   },
+   {
+    "section": "product",
+    "bg": "rgb(245, 244, 250)",
+    "padTop": 64,
+    "padBottom": 64,
+    "visTop": 65,
+    "visBottom": 36.6
+   },
+   {
+    "section": "community",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 64,
+    "padBottom": 64,
+    "visTop": 65,
+    "visBottom": 63.7
+   },
+   {
+    "section": "makeover",
+    "bg": "rgb(245, 244, 250)",
+    "padTop": 64,
+    "padBottom": 64,
+    "visTop": 65,
+    "visBottom": 64
+   },
+   {
+    "section": "engagement",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 64,
+    "padBottom": 64,
+    "visTop": 61,
+    "visBottom": 64
+   },
+   {
+    "section": "customers",
+    "bg": "rgb(245, 244, 250)",
+    "padTop": 64,
+    "padBottom": 64,
+    "visTop": 66,
+    "visBottom": 65
+   },
+   {
+    "section": "videos",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 64,
+    "padBottom": 64,
+    "visTop": 65,
+    "visBottom": 63
+   },
+   {
+    "section": "proof",
+    "bg": "rgb(238, 244, 244)",
+    "padTop": 64,
+    "padBottom": 64,
+    "visTop": 65,
+    "visBottom": 64
+   },
+   {
+    "section": "dl-how",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 64,
+    "padBottom": 64,
+    "visTop": 65,
+    "visBottom": 63.7
+   },
+   {
+    "section": "dl-close",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 0,
+    "padBottom": 64,
+    "visTop": 0,
+    "visBottom": 64
+   },
+   {
+    "section": "dl-faq",
+    "bg": "rgba(0, 0, 0, 0)",
+    "padTop": 0,
+    "padBottom": 56,
+    "visTop": -3,
+    "visBottom": 57
+   }
+  ],
+  "hero": {
+   "heroTop": 56,
+   "coverToHeroBottom": 48,
+   "coverToNextContent": 113
+  }
+ },
+ "highered-1440": {
+  "sections": [
+   {
+    "section": "dl-hero",
+    "bg": "rgba(0, 0, 0, 0)",
+    "padTop": 36,
+    "padBottom": 72,
+    "visTop": 67,
+    "visBottom": 70.4
+   },
+   {
+    "section": "dl-teach",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 112,
+    "padBottom": 112,
+    "visTop": 109,
+    "visBottom": 112
+   },
+   {
+    "section": "product",
+    "bg": "rgb(245, 244, 250)",
+    "padTop": 112,
+    "padBottom": 112,
+    "visTop": 113,
+    "visBottom": 76.4
+   },
+   {
+    "section": "community",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 112,
+    "padBottom": 112,
+    "visTop": 113,
+    "visBottom": 112
+   },
+   {
+    "section": "makeover",
+    "bg": "rgb(245, 244, 250)",
+    "padTop": 112,
+    "padBottom": 112,
+    "visTop": 113,
+    "visBottom": 112
+   },
+   {
+    "section": "engagement",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 112,
+    "padBottom": 112,
+    "visTop": 107,
+    "visBottom": 112
+   },
+   {
+    "section": "videos",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 0,
+    "padBottom": 112,
+    "visTop": 1,
+    "visBottom": 110.9
+   },
+   {
+    "section": "proof",
+    "bg": "rgb(238, 244, 244)",
+    "padTop": 112,
+    "padBottom": 112,
+    "visTop": 113,
+    "visBottom": 112
+   },
+   {
+    "section": "dl-how",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 112,
+    "padBottom": 112,
+    "visTop": 113,
+    "visBottom": 112
+   },
+   {
+    "section": "dl-close",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 0,
+    "padBottom": 112,
+    "visTop": 0,
+    "visBottom": 112
+   },
+   {
+    "section": "dl-faq",
+    "bg": "rgba(0, 0, 0, 0)",
+    "padTop": 0,
+    "padBottom": 88,
+    "visTop": -3,
+    "visBottom": 89
+   }
+  ],
+  "hero": {
+   "heroTop": 60,
+   "coverToHeroBottom": 72,
+   "coverToNextContent": 181
+  }
+ },
+ "highered-1100": {
+  "sections": [
+   {
+    "section": "dl-hero",
+    "bg": "rgba(0, 0, 0, 0)",
+    "padTop": 33,
+    "padBottom": 66,
+    "visTop": 64,
+    "visBottom": 64.4
+   },
+   {
+    "section": "dl-teach",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 99,
+    "padBottom": 99,
+    "visTop": 96,
+    "visBottom": 99
+   },
+   {
+    "section": "product",
+    "bg": "rgb(245, 244, 250)",
+    "padTop": 99,
+    "padBottom": 99,
+    "visTop": 100,
+    "visBottom": 65.6
+   },
+   {
+    "section": "community",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 99,
+    "padBottom": 99,
+    "visTop": 100,
+    "visBottom": 99
+   },
+   {
+    "section": "makeover",
+    "bg": "rgb(245, 244, 250)",
+    "padTop": 99,
+    "padBottom": 99,
+    "visTop": 100,
+    "visBottom": 99
+   },
+   {
+    "section": "engagement",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 99,
+    "padBottom": 99,
+    "visTop": 94,
+    "visBottom": 99
+   },
+   {
+    "section": "videos",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 0,
+    "padBottom": 99,
+    "visTop": 1,
+    "visBottom": 98.1
+   },
+   {
+    "section": "proof",
+    "bg": "rgb(238, 244, 244)",
+    "padTop": 99,
+    "padBottom": 99,
+    "visTop": 100,
+    "visBottom": 99
+   },
+   {
+    "section": "dl-how",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 99,
+    "padBottom": 99,
+    "visTop": 100,
+    "visBottom": 99
+   },
+   {
+    "section": "dl-close",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 0,
+    "padBottom": 99,
+    "visTop": 0,
+    "visBottom": 99
+   },
+   {
+    "section": "dl-faq",
+    "bg": "rgba(0, 0, 0, 0)",
+    "padTop": 0,
+    "padBottom": 77,
+    "visTop": -3,
+    "visBottom": 78
+   }
+  ],
+  "hero": {
+   "heroTop": 60,
+   "coverToHeroBottom": 66,
+   "coverToNextContent": 162
+  }
+ },
+ "highered-390": {
+  "sections": [
+   {
+    "section": "dl-hero",
+    "bg": "rgba(0, 0, 0, 0)",
+    "padTop": 20,
+    "padBottom": 48,
+    "visTop": 34.6,
+    "visBottom": 48
+   },
+   {
+    "section": "dl-teach",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 64,
+    "padBottom": 64,
+    "visTop": 62,
+    "visBottom": 62.4
+   },
+   {
+    "section": "product",
+    "bg": "rgb(245, 244, 250)",
+    "padTop": 64,
+    "padBottom": 64,
+    "visTop": 65,
+    "visBottom": 36.6
+   },
+   {
+    "section": "community",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 64,
+    "padBottom": 64,
+    "visTop": 65,
+    "visBottom": 63.7
+   },
+   {
+    "section": "makeover",
+    "bg": "rgb(245, 244, 250)",
+    "padTop": 64,
+    "padBottom": 64,
+    "visTop": 65,
+    "visBottom": 64
+   },
+   {
+    "section": "engagement",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 64,
+    "padBottom": 64,
+    "visTop": 61,
+    "visBottom": 64
+   },
+   {
+    "section": "videos",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 0,
+    "padBottom": 64,
+    "visTop": 1,
+    "visBottom": 63
+   },
+   {
+    "section": "proof",
+    "bg": "rgb(238, 244, 244)",
+    "padTop": 64,
+    "padBottom": 64,
+    "visTop": 65,
+    "visBottom": 64
+   },
+   {
+    "section": "dl-how",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 64,
+    "padBottom": 64,
+    "visTop": 65,
+    "visBottom": 63.7
+   },
+   {
+    "section": "dl-close",
+    "bg": "rgb(255, 253, 246)",
+    "padTop": 0,
+    "padBottom": 64,
+    "visTop": 0,
+    "visBottom": 64
+   },
+   {
+    "section": "dl-faq",
+    "bg": "rgba(0, 0, 0, 0)",
+    "padTop": 0,
+    "padBottom": 56,
+    "visTop": -3,
+    "visBottom": 57
+   }
+  ],
+  "hero": {
+   "heroTop": 56,
+   "coverToHeroBottom": 48,
+   "coverToNextContent": 110
+  }
+ }
+}

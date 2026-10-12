@@ -1,0 +1,374 @@
+[
+ [
+  "highered 1440 html class",
+  "dl-path-he js dl-he-ready"
+ ],
+ [
+  "highered 1440 hero",
+  {
+   "href": "https://www.youtube.com/watch?v=9mfMC9jC6lU",
+   "yt": "9mfMC9jC6lU",
+   "title": "Watch: Online learning, elevated",
+   "attrTitle": "Watch: Online learning, elevated",
+   "text": "Watch: Online learning, elevated"
+  }
+ ],
+ [
+  "highered 1440 ct",
+  {
+   "href": "https://www.youtube.com/watch?v=MBYmCCeZqxo",
+   "yt": "MBYmCCeZqxo",
+   "title": "Watch: Insightful data",
+   "attrTitle": "Watch: Insightful data",
+   "text": "Watch: Insightful data"
+  }
+ ],
+ [
+  "PASS highered 1440 hero id",
+  true
+ ],
+ [
+  "PASS highered 1440 ct id",
+  true
+ ],
+ [
+  "PASS highered 1440 ct label",
+  true
+ ],
+ [
+  "highered 1440 HE copy swaps",
+  {
+   "ready": true,
+   "lead": "Delphinium transforms the Canvas courses",
+   "num": "47%!",
+   "study": "Utah Valley University studies",
+   "davisNum": "47%"
+  }
+ ],
+ [
+  "PASS highered 1440 HE copy swaps land",
+  true
+ ],
+ [
+  "highered 1440 warmed yt ids",
+  [
+   "9mfMC9jC6lU",
+   "MBYmCCeZqxo",
+   "4vzDJ1poyvU",
+   "63Iu4Xxg_tg",
+   "xbdP6GSjPgY",
+   "UgEyq7gUWmM",
+   "U615qsZh8bc"
+  ]
+ ],
+ [
+  "shot",
+  "highered-1440-ct-link.png"
+ ],
+ [
+  "highered 1440 ct modal",
+  {
+   "open": true,
+   "title": "Watch: Insightful data",
+   "iframe": "https://www.youtube.com/embed/MBYmCCeZqxo?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767"
+  }
+ ],
+ [
+  "PASS highered 1440 ct modal opens with MBYmCCeZqxo",
+  true
+ ],
+ [
+  "shot",
+  "highered-1440-ct-modal.png"
+ ],
+ [
+  "highered 1440 hero modal",
+  {
+   "open": true,
+   "title": "Watch: Online learning, elevated",
+   "iframe": "https://www.youtube.com/embed/9mfMC9jC6lU?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767"
+  }
+ ],
+ [
+  "PASS highered 1440 hero modal opens with 9mfMC9jC6lU",
+  true
+ ],
+ [
+  "home 1440 html class",
+  "dl-path-home js"
+ ],
+ [
+  "home 1440 hero",
+  {
+   "href": "https://www.youtube.com/watch?v=id9dqfNZsf4",
+   "yt": "id9dqfNZsf4",
+   "title": "Watch: Online learning, elevated",
+   "attrTitle": "Watch: Online learning, elevated",
+   "text": "Watch: Online learning, elevated"
+  }
+ ],
+ [
+  "home 1440 ct",
+  {
+   "href": "https://www.youtube.com/watch?v=xC1b-9bZW4w",
+   "yt": "xC1b-9bZW4w",
+   "title": "Watch: Insightful data",
+   "attrTitle": "Watch: Insightful data",
+   "text": "Watch: Insightful data"
+  }
+ ],
+ [
+  "PASS home 1440 hero id",
+  true
+ ],
+ [
+  "PASS home 1440 ct id",
+  true
+ ],
+ [
+  "PASS home 1440 ct label",
+  true
+ ],
+ [
+  "home 1440 warmed yt ids",
+  [
+   "id9dqfNZsf4",
+   "xC1b-9bZW4w",
+   "acjbTVs8IUM",
+   "Ek-BBS8rP_0",
+   "ejtU7miZWD4",
+   "Tp3IO0TzvM0",
+   "3N0SXpFT36w",
+   "UgEyq7gUWmM",
+   "L90IoF6LGAE"
+  ]
+ ],
+ [
+  "shot",
+  "home-1440-ct-link.png"
+ ],
+ [
+  "home 1440 ct modal",
+  {
+   "open": true,
+   "title": "Watch: Insightful data",
+   "iframe": "https://www.youtube.com/embed/xC1b-9bZW4w?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767"
+  }
+ ],
+ [
+  "PASS home 1440 ct modal opens with xC1b-9bZW4w",
+  true
+ ],
+ [
+  "shot",
+  "home-1440-ct-modal.png"
+ ],
+ [
+  "home 1440 hero modal",
+  {
+   "open": true,
+   "title": "Watch: Online learning, elevated",
+   "iframe": "https://www.youtube.com/embed/id9dqfNZsf4?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767"
+  }
+ ],
+ [
+  "PASS home 1440 hero modal opens with id9dqfNZsf4",
+  true
+ ],
+ [
+  "highered 390 html class",
+  "dl-path-he js dl-he-ready"
+ ],
+ [
+  "highered 390 hero",
+  {
+   "href": "https://www.youtube.com/watch?v=9mfMC9jC6lU",
+   "yt": "9mfMC9jC6lU",
+   "title": "Watch: Online learning, elevated",
+   "attrTitle": "Watch: Online learning, elevated",
+   "text": "Watch: Online learning, elevated"
+  }
+ ],
+ [
+  "highered 390 ct",
+  {
+   "href": "https://www.youtube.com/watch?v=MBYmCCeZqxo",
+   "yt": "MBYmCCeZqxo",
+   "title": "Watch: Insightful data",
+   "attrTitle": "Watch: Insightful data",
+   "text": "Watch: Insightful data"
+  }
+ ],
+ [
+  "PASS highered 390 hero id",
+  true
+ ],
+ [
+  "PASS highered 390 ct id",
+  true
+ ],
+ [
+  "PASS highered 390 ct label",
+  true
+ ],
+ [
+  "highered 390 HE copy swaps",
+  {
+   "ready": true,
+   "lead": "Delphinium transforms the Canvas courses",
+   "num": "47%!",
+   "study": "Utah Valley University studies",
+   "davisNum": "47%"
+  }
+ ],
+ [
+  "PASS highered 390 HE copy swaps land",
+  true
+ ],
+ [
+  "highered 390 warmed yt ids",
+  [
+   "9mfMC9jC6lU",
+   "MBYmCCeZqxo",
+   "4vzDJ1poyvU",
+   "63Iu4Xxg_tg",
+   "xbdP6GSjPgY",
+   "UgEyq7gUWmM",
+   "U615qsZh8bc"
+  ]
+ ],
+ [
+  "shot",
+  "highered-390-ct-link.png"
+ ],
+ [
+  "highered 390 ct modal",
+  {
+   "open": true,
+   "title": "Watch: Insightful data",
+   "iframe": "https://www.youtube.com/embed/MBYmCCeZqxo?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767"
+  }
+ ],
+ [
+  "PASS highered 390 ct modal opens with MBYmCCeZqxo",
+  true
+ ],
+ [
+  "shot",
+  "highered-390-ct-modal.png"
+ ],
+ [
+  "highered 390 hero modal",
+  {
+   "open": true,
+   "title": "Watch: Online learning, elevated",
+   "iframe": "https://www.youtube.com/embed/9mfMC9jC6lU?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767"
+  }
+ ],
+ [
+  "PASS highered 390 hero modal opens with 9mfMC9jC6lU",
+  true
+ ],
+ [
+  "home 390 html class",
+  "dl-path-home js"
+ ],
+ [
+  "home 390 hero",
+  {
+   "href": "https://www.youtube.com/watch?v=id9dqfNZsf4",
+   "yt": "id9dqfNZsf4",
+   "title": "Watch: Online learning, elevated",
+   "attrTitle": "Watch: Online learning, elevated",
+   "text": "Watch: Online learning, elevated"
+  }
+ ],
+ [
+  "home 390 ct",
+  {
+   "href": "https://www.youtube.com/watch?v=xC1b-9bZW4w",
+   "yt": "xC1b-9bZW4w",
+   "title": "Watch: Insightful data",
+   "attrTitle": "Watch: Insightful data",
+   "text": "Watch: Insightful data"
+  }
+ ],
+ [
+  "PASS home 390 hero id",
+  true
+ ],
+ [
+  "PASS home 390 ct id",
+  true
+ ],
+ [
+  "PASS home 390 ct label",
+  true
+ ],
+ [
+  "home 390 warmed yt ids",
+  [
+   "id9dqfNZsf4",
+   "xC1b-9bZW4w",
+   "acjbTVs8IUM",
+   "Ek-BBS8rP_0",
+   "ejtU7miZWD4",
+   "Tp3IO0TzvM0",
+   "3N0SXpFT36w",
+   "UgEyq7gUWmM",
+   "L90IoF6LGAE"
+  ]
+ ],
+ [
+  "shot",
+  "home-390-ct-link.png"
+ ],
+ [
+  "home 390 ct modal",
+  {
+   "open": true,
+   "title": "Watch: Insightful data",
+   "iframe": "https://www.youtube.com/embed/xC1b-9bZW4w?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767"
+  }
+ ],
+ [
+  "PASS home 390 ct modal opens with xC1b-9bZW4w",
+  true
+ ],
+ [
+  "shot",
+  "home-390-ct-modal.png"
+ ],
+ [
+  "home 390 hero modal",
+  {
+   "open": true,
+   "title": "Watch: Online learning, elevated",
+   "iframe": "https://www.youtube.com/embed/id9dqfNZsf4?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767"
+  }
+ ],
+ [
+  "PASS home 390 hero modal opens with id9dqfNZsf4",
+  true
+ ],
+ [
+  "home 390 fresh-load hero modal",
+  {
+   "open": true,
+   "title": "Watch: Online learning, elevated",
+   "iframe": "https://www.youtube.com/embed/id9dqfNZsf4?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767"
+  }
+ ],
+ [
+  "PASS home 390 fresh-load hero modal opens with id9dqfNZsf4",
+  true
+ ],
+ [
+  "shot",
+  "home-390-hero-modal-fresh.png"
+ ],
+ [
+  "fails",
+  0
+ ]
+]

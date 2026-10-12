@@ -1,0 +1,70 @@
+{
+  "home-1440": {
+    "items": [
+      "65% fewer failures for part-time faculty",
+      "68% fewer withdrawals",
+      "65% fewer dropouts"
+    ],
+    "visible": false,
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+    },
+    "metaDescription": "Delphinium makes Canvas courses engaging for online and virtual K-12 students and gives teachers an early-warning system. Up to 31% fewer course failures.",
+    "title": "Canvas engagement for online K-12 schools · Delphinium",
+    "scrollHeight": 13677
+  },
+  "home-390": {
+    "items": [
+      "65% fewer failures for part-time faculty",
+      "68% fewer withdrawals",
+      "65% fewer dropouts"
+    ],
+    "visible": false,
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+    },
+    "metaDescription": "Delphinium makes Canvas courses engaging for online and virtual K-12 students and gives teachers an early-warning system. Up to 31% fewer course failures.",
+    "title": "Canvas engagement for online K-12 schools · Delphinium",
+    "scrollHeight": 18719
+  },
+  "highered-1440": {
+    "items": [
+      "65% fewer failures for part-time faculty",
+      "68% fewer withdrawals",
+      "65% fewer dropouts"
+    ],
+    "visible": true,
+    "rect": {
+      "x": 140,
+      "y": 9463.828125,
+      "w": 1160,
+      "h": 184.28125
+    },
+    "metaDescription": "Canvas engagement for online college and university courses. In a Utah Valley University study, course failure fell as much as 47% and withdrawals 68%.",
+    "title": "Canvas engagement for colleges and universities · Delphinium",
+    "scrollHeight": 12622
+  },
+  "highered-390": {
+    "items": [
+      "65% fewer failures for part-time faculty",
+      "68% fewer withdrawals",
+      "65% fewer dropouts"
+    ],
+    "visible": true,
+    "rect": {
+      "x": 20,
+      "y": 11930.203125,
+      "w": 350,
+      "h": 240.578125
+    },
+    "metaDescription": "Canvas engagement for online college and university courses. In a Utah Valley University study, course failure fell as much as 47% and withdrawals 68%.",
+    "title": "Canvas engagement for colleges and universities · Delphinium",
+    "scrollHeight": 17305
+  }
+}

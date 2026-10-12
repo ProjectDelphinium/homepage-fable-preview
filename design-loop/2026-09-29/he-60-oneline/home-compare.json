@@ -1,0 +1,14 @@
+[
+ {
+  "width": "1440",
+  "before": "6e850e37d79fadb3670a38178ade78156d339da5bf5322c30ea968e76278bc8f",
+  "after": "6e850e37d79fadb3670a38178ade78156d339da5bf5322c30ea968e76278bc8f",
+  "identical": true
+ },
+ {
+  "width": "390",
+  "before": "c602e68fd26c3c6c2ee04c6f7695d65eaf78627451bb3a2e7e4fec7f70b41766",
+  "after": "e7a64aa32fd60c525f89e4f2ebbe7ea7fa5d342fa187c20f0938d940c9d1f05b",
+  "identical": false
+ }
+]

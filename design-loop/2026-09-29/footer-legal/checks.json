@@ -1,0 +1,118 @@
+[
+ [
+  "1440 /home",
+  {
+   "path": "/home",
+   "html": "dl-path-home js",
+   "legalEls": 0,
+   "eulaLinks": [],
+   "bottom": {
+    "display": "block",
+    "padTop": "20px",
+    "padBottom": "0px",
+    "h": 41,
+    "gapBelowToFooterEnd": 24,
+    "children": [
+     {
+      "tag": "P",
+      "cls": "",
+      "text": "© 2026 Delphinium",
+      "h": 20
+     }
+    ]
+   },
+   "overflowX": false
+  }
+ ],
+ [
+  "shot",
+  "home-1440-footer.png"
+ ],
+ [
+  "390 /home",
+  {
+   "path": "/home",
+   "html": "dl-path-home js",
+   "legalEls": 0,
+   "eulaLinks": [],
+   "bottom": {
+    "display": "block",
+    "padTop": "20px",
+    "padBottom": "0px",
+    "h": 41,
+    "gapBelowToFooterEnd": 24,
+    "children": [
+     {
+      "tag": "P",
+      "cls": "",
+      "text": "© 2026 Delphinium",
+      "h": 20
+     }
+    ]
+   },
+   "overflowX": false
+  }
+ ],
+ [
+  "shot",
+  "home-390-footer.png"
+ ],
+ [
+  "1440 /highered",
+  {
+   "path": "/highered",
+   "html": "dl-path-he js dl-he-ready",
+   "legalEls": 0,
+   "eulaLinks": [],
+   "bottom": {
+    "display": "block",
+    "padTop": "20px",
+    "padBottom": "0px",
+    "h": 41,
+    "gapBelowToFooterEnd": 24,
+    "children": [
+     {
+      "tag": "P",
+      "cls": "",
+      "text": "© 2026 Delphinium",
+      "h": 20
+     }
+    ]
+   },
+   "overflowX": false
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-footer.png"
+ ],
+ [
+  "390 /highered",
+  {
+   "path": "/highered",
+   "html": "dl-path-he js dl-he-ready",
+   "legalEls": 0,
+   "eulaLinks": [],
+   "bottom": {
+    "display": "block",
+    "padTop": "20px",
+    "padBottom": "0px",
+    "h": 41,
+    "gapBelowToFooterEnd": 24,
+    "children": [
+     {
+      "tag": "P",
+      "cls": "",
+      "text": "© 2026 Delphinium",
+      "h": 20
+     }
+    ]
+   },
+   "overflowX": false
+  }
+ ],
+ [
+  "shot",
+  "highered-390-footer.png"
+ ]
+]

@@ -1,0 +1,35 @@
+{
+ "1440 /home": {
+  "htmlClass": "dl-path-home js",
+  "statText": "Cut failures, up to\n31%!",
+  "coverText": "Cut failures, up to\n31%!\nGo live in less than 3 minutes. Keep Canvas, enhance with Delphinium.\nZero learning curve. Teachers keep using Canvas exactly as before.\nBuilt on science. 14 years of publishe",
+  "rect": [
+   132.5,
+   720.875,
+   980,
+   150.75
+  ]
+ },
+ "1440 /highered": {
+  "htmlClass": "dl-path-he js dl-he-ready",
+  "statText": "Lower course failures, as much as\n47%!",
+  "coverText": "Lower course failures, as much as\n47%!\nGo live in less than 3 minutes. Keep Canvas, enhance with Delphinium.\nZero learning curve. Teachers keep using Canvas exactly as before.\nBuilt on science. 14 yea",
+  "rect": [
+   132.5,
+   720.875,
+   980,
+   150.75
+  ]
+ },
+ "390 /highered": {
+  "htmlClass": "dl-path-he js dl-he-ready",
+  "statText": "Lower course failures, as much as\n47%!",
+  "coverText": "Lower course failures, as much as\n47%!\nGo live in less than 3 minutes. Keep Canvas, enhance with Delphinium.\nZero learning curve. Teachers keep using Canvas exactly as before.\nBuilt on science. 14 yea",
+  "rect": [
+   20,
+   600.03125,
+   350,
+   313.6875
+  ]
+ }
+}

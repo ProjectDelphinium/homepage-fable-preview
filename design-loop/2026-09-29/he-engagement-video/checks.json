@@ -1,0 +1,448 @@
+[
+ [
+  "highered-1440 swaps",
+  {
+   "html": [
+    "dl-path-he",
+    "dl-he-ready"
+   ],
+   "links": [
+    {
+     "name": "hero",
+     "href": "https://www.youtube.com/watch?v=9mfMC9jC6lU",
+     "yt": "9mfMC9jC6lU",
+     "dataTitle": "Watch: Online learning, elevated",
+     "title": "Watch: Online learning, elevated",
+     "text": "Watch: Online learning, elevated",
+     "visible": true,
+     "k12InDom": 0,
+     "heInDom": 3
+    },
+    {
+     "name": "product",
+     "href": "https://www.youtube.com/watch?v=MBYmCCeZqxo",
+     "yt": "MBYmCCeZqxo",
+     "dataTitle": "Watch: Insightful data",
+     "title": "Watch: Insightful data",
+     "text": "Watch: Insightful data",
+     "visible": true,
+     "k12InDom": 0,
+     "heInDom": 3
+    },
+    {
+     "name": "community",
+     "href": "https://www.youtube.com/watch?v=4vzDJ1poyvU",
+     "yt": "4vzDJ1poyvU",
+     "dataTitle": "Watch: Communication that works!",
+     "title": "Watch: Communication that works!",
+     "text": "Watch: Communication that works!",
+     "visible": true,
+     "k12InDom": 0,
+     "heInDom": 3
+    },
+    {
+     "name": "makeover",
+     "href": "https://www.youtube.com/watch?v=63Iu4Xxg_tg",
+     "yt": "63Iu4Xxg_tg",
+     "dataTitle": "Watch: Meaningful engagement",
+     "title": "Watch: Meaningful engagement",
+     "text": "Watch: Meaningful engagement",
+     "visible": true,
+     "k12InDom": 0,
+     "heInDom": 3
+    },
+    {
+     "name": "engagement",
+     "href": "https://www.youtube.com/watch?v=xbdP6GSjPgY",
+     "yt": "xbdP6GSjPgY",
+     "dataTitle": "Watch: Effortless gamification",
+     "title": "Watch: Effortless gamification",
+     "text": "Watch: Effortless gamification",
+     "visible": true,
+     "k12InDom": 0,
+     "heInDom": 3
+    },
+    {
+     "name": "integration",
+     "href": "https://www.youtube.com/watch?v=U615qsZh8bc",
+     "yt": "U615qsZh8bc",
+     "dataTitle": "Watch: Integration is easy!",
+     "title": "Watch: Integration is easy!",
+     "text": "Watch: Integration is easy!",
+     "visible": true,
+     "k12InDom": 0,
+     "heInDom": 3
+    }
+   ],
+   "ytPreloads": [
+    "9mfMC9jC6lU",
+    "MBYmCCeZqxo",
+    "4vzDJ1poyvU",
+    "63Iu4Xxg_tg",
+    "xbdP6GSjPgY",
+    "UgEyq7gUWmM",
+    "U615qsZh8bc"
+   ]
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-engagement.png"
+ ],
+ [
+  "highered-1440 hit",
+  "xbdP6GSjPgY"
+ ],
+ [
+  "highered-1440 modal",
+  {
+   "open": true,
+   "title": "Watch: Effortless gamification",
+   "iframe": "https://www.youtube.com/embed/xbdP6GSjPgY?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767",
+   "iframeTitle": "Watch: Effortless gamification"
+  }
+ ],
+ [
+  "shot",
+  "highered-1440-modal.png"
+ ],
+ [
+  "highered-1440 exceptions",
+  []
+ ],
+ [
+  "home-1440 swaps",
+  {
+   "html": [
+    "dl-path-home"
+   ],
+   "links": [
+    {
+     "name": "hero",
+     "href": "https://www.youtube.com/watch?v=id9dqfNZsf4",
+     "yt": "id9dqfNZsf4",
+     "dataTitle": "Watch: Online learning, elevated",
+     "title": "Watch: Online learning, elevated",
+     "text": "Watch: Online learning, elevated",
+     "visible": true,
+     "k12InDom": 3,
+     "heInDom": 0
+    },
+    {
+     "name": "product",
+     "href": "https://www.youtube.com/watch?v=xC1b-9bZW4w",
+     "yt": "xC1b-9bZW4w",
+     "dataTitle": "Watch: Insightful data",
+     "title": "Watch: Insightful data",
+     "text": "Watch: Insightful data",
+     "visible": true,
+     "k12InDom": 3,
+     "heInDom": 0
+    },
+    {
+     "name": "community",
+     "href": "https://www.youtube.com/watch?v=acjbTVs8IUM",
+     "yt": "acjbTVs8IUM",
+     "dataTitle": "Watch: Communication that works!",
+     "title": "Watch: Communication that works!",
+     "text": "Watch: Communication that works!",
+     "visible": true,
+     "k12InDom": 3,
+     "heInDom": 0
+    },
+    {
+     "name": "makeover",
+     "href": "https://www.youtube.com/watch?v=Ek-BBS8rP_0",
+     "yt": "Ek-BBS8rP_0",
+     "dataTitle": "Watch: Meaningful engagement",
+     "title": "Watch: Meaningful engagement",
+     "text": "Watch: Meaningful engagement",
+     "visible": true,
+     "k12InDom": 3,
+     "heInDom": 0
+    },
+    {
+     "name": "engagement",
+     "href": "https://www.youtube.com/watch?v=ejtU7miZWD4",
+     "yt": "ejtU7miZWD4",
+     "dataTitle": "Watch: Effortless gamification",
+     "title": "Watch: Effortless gamification",
+     "text": "Watch: Effortless gamification",
+     "visible": true,
+     "k12InDom": 3,
+     "heInDom": 0
+    },
+    {
+     "name": "integration",
+     "href": "https://www.youtube.com/watch?v=L90IoF6LGAE",
+     "yt": "L90IoF6LGAE",
+     "dataTitle": "Watch: Integration is easy!",
+     "title": "Watch: Integration is easy!",
+     "text": "Watch: Integration is easy!",
+     "visible": true,
+     "k12InDom": 3,
+     "heInDom": 0
+    }
+   ],
+   "ytPreloads": [
+    "id9dqfNZsf4",
+    "xC1b-9bZW4w",
+    "acjbTVs8IUM",
+    "Ek-BBS8rP_0",
+    "ejtU7miZWD4",
+    "Tp3IO0TzvM0",
+    "3N0SXpFT36w",
+    "UgEyq7gUWmM",
+    "L90IoF6LGAE"
+   ]
+  }
+ ],
+ [
+  "shot",
+  "home-1440-engagement.png"
+ ],
+ [
+  "home-1440 hit",
+  "ejtU7miZWD4"
+ ],
+ [
+  "home-1440 modal",
+  {
+   "open": true,
+   "title": "Watch: Effortless gamification",
+   "iframe": "https://www.youtube.com/embed/ejtU7miZWD4?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767",
+   "iframeTitle": "Watch: Effortless gamification"
+  }
+ ],
+ [
+  "shot",
+  "home-1440-modal.png"
+ ],
+ [
+  "home-1440 exceptions",
+  []
+ ],
+ [
+  "highered-390 swaps",
+  {
+   "html": [
+    "dl-path-he",
+    "dl-he-ready"
+   ],
+   "links": [
+    {
+     "name": "hero",
+     "href": "https://www.youtube.com/watch?v=9mfMC9jC6lU",
+     "yt": "9mfMC9jC6lU",
+     "dataTitle": "Watch: Online learning, elevated",
+     "title": "Watch: Online learning, elevated",
+     "text": "Watch: Online learning, elevated",
+     "visible": true,
+     "k12InDom": 0,
+     "heInDom": 3
+    },
+    {
+     "name": "product",
+     "href": "https://www.youtube.com/watch?v=MBYmCCeZqxo",
+     "yt": "MBYmCCeZqxo",
+     "dataTitle": "Watch: Insightful data",
+     "title": "Watch: Insightful data",
+     "text": "Watch: Insightful data",
+     "visible": true,
+     "k12InDom": 0,
+     "heInDom": 3
+    },
+    {
+     "name": "community",
+     "href": "https://www.youtube.com/watch?v=4vzDJ1poyvU",
+     "yt": "4vzDJ1poyvU",
+     "dataTitle": "Watch: Communication that works!",
+     "title": "Watch: Communication that works!",
+     "text": "Watch: Communication that works!",
+     "visible": true,
+     "k12InDom": 0,
+     "heInDom": 3
+    },
+    {
+     "name": "makeover",
+     "href": "https://www.youtube.com/watch?v=63Iu4Xxg_tg",
+     "yt": "63Iu4Xxg_tg",
+     "dataTitle": "Watch: Meaningful engagement",
+     "title": "Watch: Meaningful engagement",
+     "text": "Watch: Meaningful engagement",
+     "visible": true,
+     "k12InDom": 0,
+     "heInDom": 3
+    },
+    {
+     "name": "engagement",
+     "href": "https://www.youtube.com/watch?v=xbdP6GSjPgY",
+     "yt": "xbdP6GSjPgY",
+     "dataTitle": "Watch: Effortless gamification",
+     "title": "Watch: Effortless gamification",
+     "text": "Watch: Effortless gamification",
+     "visible": true,
+     "k12InDom": 0,
+     "heInDom": 3
+    },
+    {
+     "name": "integration",
+     "href": "https://www.youtube.com/watch?v=U615qsZh8bc",
+     "yt": "U615qsZh8bc",
+     "dataTitle": "Watch: Integration is easy!",
+     "title": "Watch: Integration is easy!",
+     "text": "Watch: Integration is easy!",
+     "visible": true,
+     "k12InDom": 0,
+     "heInDom": 3
+    }
+   ],
+   "ytPreloads": [
+    "9mfMC9jC6lU",
+    "MBYmCCeZqxo",
+    "4vzDJ1poyvU",
+    "63Iu4Xxg_tg",
+    "xbdP6GSjPgY",
+    "UgEyq7gUWmM",
+    "U615qsZh8bc"
+   ]
+  }
+ ],
+ [
+  "shot",
+  "highered-390-engagement.png"
+ ],
+ [
+  "highered-390 hit",
+  "xbdP6GSjPgY"
+ ],
+ [
+  "highered-390 modal",
+  {
+   "open": true,
+   "title": "Watch: Effortless gamification",
+   "iframe": "https://www.youtube.com/embed/xbdP6GSjPgY?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767",
+   "iframeTitle": "Watch: Effortless gamification"
+  }
+ ],
+ [
+  "shot",
+  "highered-390-modal.png"
+ ],
+ [
+  "highered-390 exceptions",
+  []
+ ],
+ [
+  "home-390 swaps",
+  {
+   "html": [
+    "dl-path-home"
+   ],
+   "links": [
+    {
+     "name": "hero",
+     "href": "https://www.youtube.com/watch?v=id9dqfNZsf4",
+     "yt": "id9dqfNZsf4",
+     "dataTitle": "Watch: Online learning, elevated",
+     "title": "Watch: Online learning, elevated",
+     "text": "Watch: Online learning, elevated",
+     "visible": true,
+     "k12InDom": 3,
+     "heInDom": 0
+    },
+    {
+     "name": "product",
+     "href": "https://www.youtube.com/watch?v=xC1b-9bZW4w",
+     "yt": "xC1b-9bZW4w",
+     "dataTitle": "Watch: Insightful data",
+     "title": "Watch: Insightful data",
+     "text": "Watch: Insightful data",
+     "visible": true,
+     "k12InDom": 3,
+     "heInDom": 0
+    },
+    {
+     "name": "community",
+     "href": "https://www.youtube.com/watch?v=acjbTVs8IUM",
+     "yt": "acjbTVs8IUM",
+     "dataTitle": "Watch: Communication that works!",
+     "title": "Watch: Communication that works!",
+     "text": "Watch: Communication that works!",
+     "visible": true,
+     "k12InDom": 3,
+     "heInDom": 0
+    },
+    {
+     "name": "makeover",
+     "href": "https://www.youtube.com/watch?v=Ek-BBS8rP_0",
+     "yt": "Ek-BBS8rP_0",
+     "dataTitle": "Watch: Meaningful engagement",
+     "title": "Watch: Meaningful engagement",
+     "text": "Watch: Meaningful engagement",
+     "visible": true,
+     "k12InDom": 3,
+     "heInDom": 0
+    },
+    {
+     "name": "engagement",
+     "href": "https://www.youtube.com/watch?v=ejtU7miZWD4",
+     "yt": "ejtU7miZWD4",
+     "dataTitle": "Watch: Effortless gamification",
+     "title": "Watch: Effortless gamification",
+     "text": "Watch: Effortless gamification",
+     "visible": true,
+     "k12InDom": 3,
+     "heInDom": 0
+    },
+    {
+     "name": "integration",
+     "href": "https://www.youtube.com/watch?v=L90IoF6LGAE",
+     "yt": "L90IoF6LGAE",
+     "dataTitle": "Watch: Integration is easy!",
+     "title": "Watch: Integration is easy!",
+     "text": "Watch: Integration is easy!",
+     "visible": true,
+     "k12InDom": 3,
+     "heInDom": 0
+    }
+   ],
+   "ytPreloads": [
+    "id9dqfNZsf4",
+    "xC1b-9bZW4w",
+    "acjbTVs8IUM",
+    "Ek-BBS8rP_0",
+    "ejtU7miZWD4",
+    "Tp3IO0TzvM0",
+    "3N0SXpFT36w",
+    "UgEyq7gUWmM",
+    "L90IoF6LGAE"
+   ]
+  }
+ ],
+ [
+  "shot",
+  "home-390-engagement.png"
+ ],
+ [
+  "home-390 hit",
+  "ejtU7miZWD4"
+ ],
+ [
+  "home-390 modal",
+  {
+   "open": true,
+   "title": "Watch: Effortless gamification",
+   "iframe": "https://www.youtube.com/embed/ejtU7miZWD4?enablejsapi=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0&iv_load_policy=3&hl=en&origin=http%3A%2F%2F127.0.0.1%3A8767",
+   "iframeTitle": "Watch: Effortless gamification"
+  }
+ ],
+ [
+  "shot",
+  "home-390-modal.png"
+ ],
+ [
+  "home-390 exceptions",
+  []
+ ]
+]

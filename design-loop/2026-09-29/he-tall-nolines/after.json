@@ -1,0 +1,301 @@
+{
+ "highered-1440": {
+  "card": {
+   "top": 214,
+   "bottom": 638,
+   "left": 133,
+   "h": 425
+  },
+  "gaps": [
+   38,
+   38
+  ],
+  "children": [
+   {
+    "text": "Completion and retention",
+    "border": "0px none",
+    "mt": "0px",
+    "pt": "0px",
+    "top": 19,
+    "bottom": 39
+   },
+   {
+    "text": "4 in 10",
+    "border": "0px none",
+    "mt": "0px",
+    "pt": "0px",
+    "top": 45,
+    "bottom": 84
+   },
+   {
+    "text": "students drop out of col",
+    "border": "0px none",
+    "mt": "8.8px",
+    "pt": "0px",
+    "top": 93,
+    "bottom": 138
+   },
+   {
+    "text": "1 in 3",
+    "border": "0px none",
+    "mt": "38.4px",
+    "pt": "0px",
+    "top": 176,
+    "bottom": 215
+   },
+   {
+    "text": "first-year students don'",
+    "border": "0px none",
+    "mt": "8.8px",
+    "pt": "0px",
+    "top": 224,
+    "bottom": 247
+   },
+   {
+    "text": "60%",
+    "border": "0px none",
+    "mt": "38.4px",
+    "pt": "0px",
+    "top": 285,
+    "bottom": 324
+   },
+   {
+    "text": "of students don't finish",
+    "border": "0px none",
+    "mt": "8.8px",
+    "pt": "0px",
+    "top": 333,
+    "bottom": 378
+   },
+   {
+    "text": "National Center for Educ",
+    "border": "0px none",
+    "mt": "0px",
+    "pt": "12px",
+    "top": 378,
+    "bottom": 408
+   }
+  ],
+  "others": [
+   {
+    "top": 214,
+    "bottom": 419,
+    "left": 719
+   },
+   {
+    "top": 433,
+    "bottom": 638,
+    "left": 719
+   }
+  ],
+  "docH": 12881,
+  "shotHash": "2f39cc0120ff646a34c1cf21dfb0d7b91a7c3e9c",
+  "cardHash": "93ef5e4e15a28db96925383cf71ccc6d7b6e221c"
+ },
+ "highered-760": {
+  "card": {
+   "top": 216,
+   "bottom": 609,
+   "left": 20,
+   "h": 393
+  },
+  "gaps": [
+   38,
+   38
+  ],
+  "children": [
+   {
+    "text": "Completion and retention",
+    "border": "0px none",
+    "mt": "0px",
+    "pt": "0px",
+    "top": 19,
+    "bottom": 39
+   },
+   {
+    "text": "4 in 10",
+    "border": "0px none",
+    "mt": "0px",
+    "pt": "0px",
+    "top": 45,
+    "bottom": 73
+   },
+   {
+    "text": "students drop out of col",
+    "border": "0px none",
+    "mt": "8.8px",
+    "pt": "0px",
+    "top": 82,
+    "bottom": 127
+   },
+   {
+    "text": "1 in 3",
+    "border": "0px none",
+    "mt": "38.4px",
+    "pt": "0px",
+    "top": 166,
+    "bottom": 194
+   },
+   {
+    "text": "first-year students don'",
+    "border": "0px none",
+    "mt": "8.8px",
+    "pt": "0px",
+    "top": 203,
+    "bottom": 225
+   },
+   {
+    "text": "60%",
+    "border": "0px none",
+    "mt": "38.4px",
+    "pt": "0px",
+    "top": 264,
+    "bottom": 292
+   },
+   {
+    "text": "of students don't finish",
+    "border": "0px none",
+    "mt": "8.8px",
+    "pt": "0px",
+    "top": 301,
+    "bottom": 346
+   },
+   {
+    "text": "National Center for Educ",
+    "border": "0px none",
+    "mt": "0px",
+    "pt": "12px",
+    "top": 346,
+    "bottom": 376
+   }
+  ],
+  "others": [
+   {
+    "top": 622,
+    "bottom": 796,
+    "left": 20
+   },
+   {
+    "top": 622,
+    "bottom": 796,
+    "left": 379
+   }
+  ],
+  "docH": 14915,
+  "shotHash": "65e05ba046b67038225784ca5217eabcf765e24b",
+  "cardHash": "df4cbaa5ad30096b1195a05b3d09fd047706078d"
+ },
+ "highered-390": {
+  "card": {
+   "top": 7,
+   "bottom": 445,
+   "left": 20,
+   "h": 438
+  },
+  "gaps": [
+   38,
+   38
+  ],
+  "children": [
+   {
+    "text": "Completion and retention",
+    "border": "0px none",
+    "mt": "0px",
+    "pt": "0px",
+    "top": 19,
+    "bottom": 39
+   },
+   {
+    "text": "4 in 10",
+    "border": "0px none",
+    "mt": "0px",
+    "pt": "0px",
+    "top": 45,
+    "bottom": 73
+   },
+   {
+    "text": "students drop out of col",
+    "border": "0px none",
+    "mt": "8.8px",
+    "pt": "0px",
+    "top": 82,
+    "bottom": 150
+   },
+   {
+    "text": "1 in 3",
+    "border": "0px none",
+    "mt": "38.4px",
+    "pt": "0px",
+    "top": 188,
+    "bottom": 217
+   },
+   {
+    "text": "first-year students don'",
+    "border": "0px none",
+    "mt": "8.8px",
+    "pt": "0px",
+    "top": 225,
+    "bottom": 248
+   },
+   {
+    "text": "60%",
+    "border": "0px none",
+    "mt": "38.4px",
+    "pt": "0px",
+    "top": 287,
+    "bottom": 315
+   },
+   {
+    "text": "of students don't finish",
+    "border": "0px none",
+    "mt": "8.8px",
+    "pt": "0px",
+    "top": 323,
+    "bottom": 392
+   },
+   {
+    "text": "National Center for Educ",
+    "border": "0px none",
+    "mt": "0px",
+    "pt": "12px",
+    "top": 392,
+    "bottom": 421
+   }
+  ],
+  "others": [
+   {
+    "top": 458,
+    "bottom": 632,
+    "left": 20
+   },
+   {
+    "top": 646,
+    "bottom": 820,
+    "left": 20
+   }
+  ],
+  "docH": 17372,
+  "shotHash": "452a4509a87dcb56567a91f4fb11f9d9c914ac60",
+  "cardHash": "67b415e0b338eba1247507f7be171f85bb16d50d"
+ },
+ "home-1440": {
+  "shotHash": "6d56260c5056b9b8bd0ae4f499820716aed8e529",
+  "fullHash": "2a2aa26784d39decbbe31e2a8f49b6e5369a70b7",
+  "docH": 13729
+ },
+ "home-1040": {
+  "shotHash": "f6672bf5dc0eed4350786bbbe60e4e9c9dfb4756",
+  "fullHash": "b417fd100b49bd775ef8c234559b48dc756db850",
+  "docH": 12924
+ },
+ "home-760": {
+  "shotHash": "932183c87fb5f996b26062ac15623584a74162fa",
+  "fullHash": "a6d027595dcf58b308a2c517bcbcee86219ad47d",
+  "docH": 15668
+ },
+ "home-390": {
+  "shotHash": "ec009b3345d23f4070eda56fa736b26b97e2843d",
+  "fullHash": "20a1c4df9e2ca3a2c8003a9b5adca8ae131ea3aa",
+  "docH": 18744
+ }
+}

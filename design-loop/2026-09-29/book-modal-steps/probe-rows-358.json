@@ -1,0 +1,558 @@
+{
+ "date": {
+  "card": [
+   30,
+   214
+  ],
+  "rows": [
+   [
+    -375,
+    1875,
+    "DIV",
+    "signup-container ",
+    ""
+   ],
+   [
+    51,
+    107,
+    "DIV",
+    "zb-ad-icon color-10",
+    "SC"
+   ],
+   [
+    68,
+    90,
+    "SPAN",
+    "zb-ad-names",
+    "Schedule a Demo!"
+   ],
+   [
+    139,
+    159,
+    "IMG",
+    "zb-ct-selected-staff",
+    ""
+   ],
+   [
+    175,
+    193,
+    "SPAN",
+    "zb zb-availability",
+    ""
+   ],
+   [
+    238,
+    259,
+    "H2",
+    "zb-ct-right-header",
+    "Select date and time"
+   ],
+   [
+    273,
+    617,
+    "DIV",
+    "zdatetimepicker zdatetimepicker--inline",
+    "Sep   2026                    "
+   ],
+   [
+    274,
+    616,
+    "DIV",
+    "zdatetimepicker__monthcontainer zdatetim",
+    "Sep   2026                    "
+   ],
+   [
+    274,
+    331,
+    "DIV",
+    "zdatetimepicker__navbar ",
+    "Sep   2026"
+   ],
+   [
+    274,
+    318,
+    "DIV",
+    "zdatetimepicker__leftnav",
+    ""
+   ],
+   [
+    283,
+    311,
+    "BUTTON",
+    "zbutton zbutton--medium zbutton--normal ",
+    ""
+   ],
+   [
+    289,
+    305,
+    "I",
+    "zdatetimepicker__icon zbutton__icon",
+    ""
+   ],
+   [
+    289,
+    305,
+    "svg",
+    "[object SVGAnimatedString]",
+    ""
+   ],
+   [
+    293,
+    303,
+    "use",
+    "[object SVGAnimatedString]",
+    ""
+   ],
+   [
+    288,
+    319,
+    "DIV",
+    "zdatetimepicker__monthyearnav zh-cursorp",
+    "Sep   2026"
+   ],
+   [
+    293,
+    314,
+    "SPAN",
+    "zdatetimepicker__monthnav",
+    "Sep"
+   ],
+   [
+    293,
+    314,
+    "SPAN",
+    "zdatetimepicker__yearnav",
+    "2026"
+   ],
+   [
+    274,
+    318,
+    "DIV",
+    "zdatetimepicker__rightnav",
+    ""
+   ],
+   [
+    283,
+    311,
+    "BUTTON",
+    "zbutton zbutton--medium zbutton--normal ",
+    ""
+   ],
+   [
+    289,
+    305,
+    "I",
+    "zdatetimepicker__icon zbutton__icon",
+    ""
+   ],
+   [
+    289,
+    305,
+    "svg",
+    "[object SVGAnimatedString]",
+    ""
+   ],
+   [
+    293,
+    303,
+    "use",
+    "[object SVGAnimatedString]",
+    ""
+   ],
+   [
+    331,
+    616,
+    "DIV",
+    "zdatetimepicker__calendar",
+    "SMTWTFS              1    2   "
+   ],
+   [
+    341,
+    606,
+    "TABLE",
+    "zdatetimepicker__month ",
+    "SMTWTFS              1    2   "
+   ],
+   [
+    346,
+    376,
+    "TR",
+    "zdatetimepicker__week",
+    "SMTWTFS"
+   ],
+   [
+    346,
+    376,
+    "TH",
+    " zdatetimepicker__day ",
+    "S"
+   ],
+   [
+    346,
+    376,
+    "TH",
+    " zdatetimepicker__day ",
+    "M"
+   ],
+   [
+    346,
+    376,
+    "TH",
+    " zdatetimepicker__day ",
+    "T"
+   ],
+   [
+    346,
+    376,
+    "TH",
+    " zdatetimepicker__day ",
+    "W"
+   ],
+   [
+    346,
+    376,
+    "TH",
+    " zdatetimepicker__day ",
+    "T"
+   ],
+   [
+    346,
+    376,
+    "TH",
+    " zdatetimepicker__day ",
+    "F"
+   ],
+   [
+    346,
+    376,
+    "TH",
+    " zdatetimepicker__day ",
+    "S"
+   ],
+   [
+    381,
+    421,
+    "TD",
+    "zdatetimepicker__date   is-disabled zdis",
+    "1"
+   ],
+   [
+    392,
+    409,
+    "SPAN",
+    "zdatetimepicker__text",
+    "1"
+   ],
+   [
+    381,
+    421,
+    "TD",
+    "zdatetimepicker__date   is-disabled zdis",
+    "2"
+   ],
+   [
+    392,
+    409,
+    "SPAN",
+    "zdatetimepicker__text",
+    "2"
+   ],
+   [
+    381,
+    421,
+    "TD",
+    "zdatetimepicker__date   is-disabled zdis",
+    "3"
+   ],
+   [
+    392,
+    409,
+    "SPAN",
+    "zdatetimepicker__text",
+    "3"
+   ],
+   [
+    381,
+    421,
+    "TD",
+    "zdatetimepicker__date   is-disabled zdis",
+    "4"
+   ],
+   [
+    392,
+    409,
+    "SPAN",
+    "zdatetimepicker__text",
+    "4"
+   ],
+   [
+    381,
+    421,
+    "TD",
+    "zdatetimepicker__date   is-disabled zdis",
+    "5"
+   ],
+   [
+    392,
+    409,
+    "SPAN",
+    "zdatetimepicker__text",
+    "5"
+   ],
+   [
+    -574,
+    -559,
+    "SPAN",
+    "zb zb-info-icon fs-lower-large vmiddle m",
+    ""
+   ],
+   [
+    -589,
+    -570,
+    "DIV",
+    "zb zb-close pos-abs right10 top10 fs-low",
+    ""
+   ],
+   [
+    0,
+    1500,
+    "DIV",
+    "overlay pos-fix ",
+    ""
+   ]
+  ]
+ },
+ "slots": {
+  "card": [
+   30,
+   246
+  ],
+  "rows": [
+   [
+    -375,
+    1875,
+    "DIV",
+    "signup-container ",
+    ""
+   ],
+   [
+    53,
+    65,
+    "SPAN",
+    "zb zb-arrow-left",
+    ""
+   ],
+   [
+    51,
+    67,
+    "SPAN",
+    "",
+    "Back"
+   ],
+   [
+    83,
+    139,
+    "DIV",
+    "zb-ad-icon color-10",
+    "SC"
+   ],
+   [
+    100,
+    122,
+    "SPAN",
+    "zb-ad-names",
+    "Schedule a Demo!"
+   ],
+   [
+    171,
+    191,
+    "IMG",
+    "zb-ct-selected-staff",
+    ""
+   ],
+   [
+    207,
+    225,
+    "SPAN",
+    "zb zb-availability",
+    ""
+   ],
+   [
+    270,
+    312,
+    "H2",
+    "",
+    "Wednesday, September 30"
+   ],
+   [
+    330,
+    370,
+    "BUTTON",
+    "zb-ct-time",
+    "09:00 am"
+   ],
+   [
+    330,
+    370,
+    "BUTTON",
+    "zb-ct-next",
+    "Next"
+   ],
+   [
+    386,
+    426,
+    "BUTTON",
+    "zb-ct-time",
+    "09:30 am"
+   ],
+   [
+    386,
+    426,
+    "BUTTON",
+    "zb-ct-next",
+    "Next"
+   ],
+   [
+    -574,
+    -559,
+    "SPAN",
+    "zb zb-info-icon fs-lower-large vmiddle m",
+    ""
+   ],
+   [
+    -589,
+    -570,
+    "DIV",
+    "zb zb-close pos-abs right10 top10 fs-low",
+    ""
+   ],
+   [
+    0,
+    1500,
+    "DIV",
+    "overlay pos-fix ",
+    ""
+   ]
+  ]
+ },
+ "details": {
+  "card": [
+   30,
+   317
+  ],
+  "rows": [
+   [
+    -375,
+    1875,
+    "DIV",
+    "signup-container ",
+    ""
+   ],
+   [
+    53,
+    65,
+    "SPAN",
+    "zb zb-arrow-left",
+    ""
+   ],
+   [
+    51,
+    67,
+    "SPAN",
+    "",
+    "Back"
+   ],
+   [
+    83,
+    139,
+    "DIV",
+    "zb-ad-icon color-10",
+    "SC"
+   ],
+   [
+    100,
+    122,
+    "SPAN",
+    "zb-ad-names",
+    "Schedule a Demo!"
+   ],
+   [
+    171,
+    191,
+    "IMG",
+    "zb-ct-selected-staff",
+    ""
+   ],
+   [
+    208,
+    226,
+    "SPAN",
+    "zb zb-appointment-icon",
+    ""
+   ],
+   [
+    209,
+    226,
+    "SPAN",
+    "zb-select-date-time",
+    "30 Sep 2026 09:00 am"
+   ],
+   [
+    242,
+    260,
+    "SPAN",
+    "zb zb-availability",
+    ""
+   ],
+   [
+    276,
+    296,
+    "SPAN",
+    "zb zb-timezone",
+    ""
+   ],
+   [
+    278,
+    295,
+    "SPAN",
+    "",
+    "America/Denver"
+   ],
+   [
+    341,
+    362,
+    "DIV",
+    "service-header",
+    "Please enter your details"
+   ],
+   [
+    402,
+    418,
+    "SPAN",
+    "text-danger pos-rel font-family-auto",
+    "*"
+   ],
+   [
+    -574,
+    -559,
+    "SPAN",
+    "zb zb-info-icon fs-lower-large vmiddle m",
+    ""
+   ],
+   [
+    -589,
+    -570,
+    "DIV",
+    "zb zb-close pos-abs right10 top10 fs-low",
+    ""
+   ],
+   [
+    0,
+    1500,
+    "DIV",
+    "overlay pos-fix ",
+    ""
+   ]
+  ]
+ }
+}
