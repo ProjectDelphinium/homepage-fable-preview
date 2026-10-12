@@ -20,7 +20,7 @@ www.delphi-me.com has been live on Zoho Sites since the 2026-09-28 cutover. `zoh
 ## How the publish works
 
 - There is **no Zoho Sites REST API** for this. Publishing is browser automation of the Sites builder: Playwright on a dedicated Chromium (`channel="chrome"`), the "Jev+Playwright" path in `zoho-sites/scripts/publish/`. Grok computer-use is only a fallback.
-- The session comes from a stored Zoho browser session on the Web Design box (never in this repo). On a login wall the script waits for a OneAuth push instead of typing a password.
+- The session comes from a stored Zoho browser session on the Web Design box (never in this repo). On a login wall the script prefers waiting for a OneAuth push (up to 4 minutes); `publish_sites_v5.py` adds a password-login fallback through the box vault.
 - Route guards block every host except Zoho and the allowlist (HubSpot is blocked).
 - Site-wide parts: **Custom CSS**, **Header Code**, **Footer Code** from `zoho-sites/dist/`. Each code part is saved, then read back from the editor and compared exactly. If any part does not match, the script does not publish.
 - Publish counts as done only when the `/zs-site/api/v1/publish` POST returns 200, then the public page is verified.
