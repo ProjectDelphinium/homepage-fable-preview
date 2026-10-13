@@ -18,6 +18,7 @@ This is the source of truth for what is live. **`main` should always equal live.
 | `/support` | Support | live |
 | `/eula` | EULA (native Zoho body, text in `legal/eula.md`) | live |
 | `/purchase-agreement` | Purchase Agreement (native Zoho body, text in `legal/purchase-agreement.md`) | live |
+| `/privacy-policy` | Delphinium Privacy Policy (native Zoho body, text in `legal/privacy-policy.md`; includes the 10DLC SMS paragraphs for Zoho Voice ticket 168721963). Linked from the footer "Talk with us" list next to Contact and Support | draft (not yet published) |
 | `/schedule-jared` | Schedule Jared (`2187225000000053002`); hidden page, sitemap off, page Header/Footer instant redirect to Schedule Jared 60 min. See `pages/schedule-jared/` | live |
 | `/home` | | coming |
 | `/highered` | Higher Ed | coming |
