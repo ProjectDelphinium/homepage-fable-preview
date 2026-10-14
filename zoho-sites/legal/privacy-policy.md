@@ -13,7 +13,7 @@ At Delphi M.E., we are committed to respecting your privacy. We recognize that w
 
 Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information. When reading through this Privacy Policy, please read the entire contents and do not rely on headings, which are illustrative of some but not all the contents and should not be read so as to limit any of the terms and conditions detailed below each heading.
 
-This Privacy Policy should be read together with the Delphinium End User License Agreement at https://www.delphi-me.com/eula.
+This Privacy Policy should be read together with the Delphinium End User License Agreement at <https://www.delphi-me.com/eula>.
 
 ## Definitions
 
@@ -44,7 +44,7 @@ We collect information primarily when the institution installs/configures Delphi
 
 ## How We Use Information
 
-We use information solely to provide, secure, support, and improve the contracted educational Services for the Purchaser; to send Authorized User / parent communications they have consented to or that the Purchaser authorized under the Purchase Agreement; and for de-identified/aggregate analytics. We do not use student Personal Information for targeted advertising or for sale.
+We use information solely to provide, secure, support, and improve the contracted educational Services for the Purchaser; to send Authorized User / parent communications they have consented to or that the Purchaser authorized under the [Purchase Agreement](https://www.delphi-me.com/purchase-agreement); and for de-identified/aggregate analytics. We do not use student Personal Information for targeted advertising or for sale.
 
 ## How We Protect Your Information
 
@@ -127,7 +127,7 @@ When parents or guardians opt in to receive SMS text messages through our platfo
 
 ## Institutional Authorized User Communications
 
-Separately, under our Purchase Agreement (https://www.delphi-me.com/purchase-agreement) Section 15, the Purchaser may authorize us to contact Authorized Users (teachers, administrators, and staff, not students) by email, SMS, in-product notice, or phone for onboarding, training, service notices, and support. We do not use Authorized User contact information to communicate directly with students. Opt-out: STOP for SMS; other channels as provided. Details are in the Purchase Agreement; this Policy governs how we handle the contact data.
+Separately, under our Purchase Agreement (<https://www.delphi-me.com/purchase-agreement>) Section 15, the Purchaser may authorize us to contact Authorized Users (teachers, administrators, and staff, not students) by email, SMS, in-product notice, or phone for onboarding, training, service notices, and support. We do not use Authorized User contact information to communicate directly with students. Opt-out: STOP for SMS; other channels as provided. Details are in the [Purchase Agreement](https://www.delphi-me.com/purchase-agreement); this Policy governs how we handle the contact data.
 
 ## Service Providers (Subprocessors)
 
