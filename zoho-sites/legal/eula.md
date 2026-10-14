@@ -11,7 +11,7 @@ Effective / Last Reviewed: September 30, 2026
 - Term follows the dates on your Order Form / invoice / Statement of Work (or agreed demo period).
 - You receive hosted access for educational use by your institution and Authorized Users — not a transferable software ownership sale.
 - You may not resell or re-license Delphinium as a product; using it inside tuition-bearing courses is allowed per your Order Form.
-- Student and institutional data are addressed in our Privacy Policy and any signed DPA — not transferred to Delphi as a sale of education records.
+- Student and institutional data are addressed in our [Privacy Policy](https://www.delphi-me.com/privacy-policy) and any signed DPA — not transferred to Delphi as a sale of education records.
 - This Summary does not modify the binding terms below.
 
 ---
@@ -48,7 +48,7 @@ Licensor may suspend access immediately for material Acceptable Use violations t
 
 Upon termination of this license, Licensor shall cease providing the SaaS Services unless a new license or agreement is signed.
 
-Upon termination of this license and upon subsequent written request by the disclosing party, the receiving party of tangible Confidential Information shall return or destroy such information and provide written certification of such destruction, provided that the receiving party may permit its legal counsel to retain one archival copy in the event of a subsequent dispute. Customer Data is handled under the Customer Data section and the Privacy Policy / DPA, not solely under this Confidential Information paragraph.
+Upon termination of this license and upon subsequent written request by the disclosing party, the receiving party of tangible Confidential Information shall return or destroy such information and provide written certification of such destruction, provided that the receiving party may permit its legal counsel to retain one archival copy in the event of a subsequent dispute. Customer Data is handled under the Customer Data section and the [Privacy Policy](https://www.delphi-me.com/privacy-policy) / DPA, not solely under this Confidential Information paragraph.
 
 ## Upgrades
 
@@ -67,7 +67,7 @@ Software is provided on an AS-IS basis and is supported only to the extent detai
 
 ## Customer Data
 
-As between the parties, Licensee (or Licensee's students/parents as applicable under law) retains all right, title, and interest in data submitted to or collected through The Software in connection with Licensee's courses ("Customer Data"), including education records. Licensor receives only a limited license to host, process, and display Customer Data solely to provide The Software and related support, as described in the Privacy Policy and any signed Student Data Privacy Agreement / DPA / Utah NDPA. Licensor does not sell Customer Data. On termination or Licensee's written request, Licensor will delete or return Customer Data in accordance with the Privacy Policy and applicable DPA (backup residual copies overwritten on normal rotation). If there is a conflict regarding student personal information, the DPA controls over this EULA.
+As between the parties, Licensee (or Licensee's students/parents as applicable under law) retains all right, title, and interest in data submitted to or collected through The Software in connection with Licensee's courses ("Customer Data"), including education records. Licensor receives only a limited license to host, process, and display Customer Data solely to provide The Software and related support, as described in the [Privacy Policy](https://www.delphi-me.com/privacy-policy) and any signed Student Data Privacy Agreement / DPA / Utah NDPA. Licensor does not sell Customer Data. On termination or Licensee's written request, Licensor will delete or return Customer Data in accordance with the [Privacy Policy](https://www.delphi-me.com/privacy-policy) and applicable DPA (backup residual copies overwritten on normal rotation). If there is a conflict regarding student personal information, the DPA controls over this EULA.
 
 ## Acceptable Use
 
@@ -75,7 +75,7 @@ Licensee and Authorized Users will not: (a) reverse engineer, decompile, or atte
 
 ## Communications
 
-Licensee consents to receive operational communications from Licensor by email and in-product notification relating to use of The Software (onboarding, training, professional development, product education, service notices, and support). SMS/text and phone communications, if any, are governed by the Purchase Agreement (including Authorized User / parent channels and the prohibition on marketing SMS to students) and the Privacy Policy SMS section. Consent to operational email does not waive SMS opt-out rights.
+Licensee consents to receive operational communications from Licensor by email and in-product notification relating to use of The Software (onboarding, training, professional development, product education, service notices, and support). SMS/text and phone communications, if any, are governed by the Purchase Agreement (including Authorized User / parent channels and the prohibition on marketing SMS to students) and the [Privacy Policy](https://www.delphi-me.com/privacy-policy) SMS section. Consent to operational email does not waive SMS opt-out rights.
 
 ## Limitation of Liability
 
@@ -115,4 +115,4 @@ This Agreement is governed by the laws of the State of Utah, excluding conflict-
 
 ## Order of Precedence; Entire Agreement
 
-If there is a conflict: (1) a signed Student DPA / NDPA controls for student personal information; (2) then the Purchase Agreement / Order Form; (3) then this EULA; (4) then the Privacy Policy (public description). Product marketing pages are not contract terms.
+If there is a conflict: (1) a signed Student DPA / NDPA controls for student personal information; (2) then the Purchase Agreement / Order Form; (3) then this EULA; (4) then the [Privacy Policy](https://www.delphi-me.com/privacy-policy) (public description). Product marketing pages are not contract terms.
