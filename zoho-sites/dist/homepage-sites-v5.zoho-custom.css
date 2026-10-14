@@ -1,7 +1,7 @@
 
 /* publish_sites_v2 soft chrome — moon/zpsection safety + zoho badge */
 .theme-skip-to-needed-content { display: none !important; }
-html:not(.dl-path-eula):not(.dl-path-agree) .theme-content-area .zpsection { display: none !important; }
+html[class*=dl-path-]:not(.dl-path-eula):not(.dl-path-agree) .theme-content-area .zpsection { display: none !important; }
 .theme-footer-area .zpsection { display: none !important; }
 .zs-poweredby, .theme-poweredby, .zpfooter-poweredby,
 a[href*="zoho.com/sites"], a[href*="www.zoho.com/sites"],
@@ -40,7 +40,7 @@ body > div:has(a[href*="www.zoho.com/sites"]) {
 
 /* Safety net: blank-theme sections under content area (moon / Responsive Design / Endless Security).
    /eula and /purchase-agreement keep the native page body; see the legal-document block below. */
-html:not(.dl-path-eula):not(.dl-path-agree) .theme-content-area .zpsection { display: none !important; }
+html[class*=dl-path-]:not(.dl-path-eula):not(.dl-path-agree) .theme-content-area .zpsection { display: none !important; }
 .theme-footer-area .zpsection { display: none !important; }
 .theme-content-area:empty { display: none !important; }
 body { margin: 0; }

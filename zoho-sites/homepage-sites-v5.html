@@ -3047,19 +3047,21 @@
     if(p==="/"||p==="/home"||b==="homepage-sites-v5.html"||b==="homepage-sites-v5.zoho-ready.html")k="home";
     else if(/\/contact-us$/.test(p))k="contact";
     else if(/\/support$/.test(p))k="support";
-    else if(/\/eula$/.test(p))k="eula";
+    else if(/\/eula$|^\/zcms/.test(p))k="eula";
     else if(/\/purchase-agreement$/.test(p))k="agree";
+    else if(/\/privacy-policy$/.test(p))k="pp";
     else if(/\/highered$/.test(p))k="he";
-    d.documentElement.classList.add("dl-path-"+k);
+    d.documentElement.classList.add("dl-path-"+(k=="pp"?"eula":k));
     var M={
       home:["Canvas engagement for online K-12 schools \u00b7 Delphinium","Delphinium makes Canvas courses engaging for online and virtual K-12 students and gives teachers an early-warning system. Up to 31% fewer course failures."],
       he:["Canvas engagement for colleges and universities \u00b7 Delphinium","Canvas engagement for online college and university courses. In a Utah Valley University study, course failure fell as much as 47% and withdrawals 67%."],
       contact:["Contact \u00b7 Delphinium","Contact Delphi M.E. about Delphinium for K-12 online schools and Higher Ed Online programs on Canvas."],
       support:["Support \u00b7 Delphinium","Get support for Delphinium on Canvas. Send a ticket and Delphi M.E. will get back to you."],
       eula:["EULA \u00b7 Delphinium","End user license agreement for Delphinium (Delphi M.E. LLC)."],
-      agree:["Purchase agreement \u00b7 Delphinium","Purchase agreement for Delphinium (Delphi M.E. LLC)."]
+      agree:["Purchase agreement \u00b7 Delphinium","Purchase agreement for Delphinium (Delphi M.E. LLC)."],
+    pp:["Privacy policy \u00b7 Delphinium","Privacy policy for Delphinium (Delphi M.E. LLC)."]
     };
-    var row=M[k]||M.home,url="https://www.delphi-me.com"+({he:"/highered",contact:"/contact-us",support:"/support",eula:"/eula",agree:"/purchase-agreement"}[k]||"/"),desc=d.querySelectorAll('meta[name="description"]'),m=desc[0],i;
+    var row=M[k]||M.home,url="https://www.delphi-me.com"+({he:"/highered",contact:"/contact-us",support:"/support",eula:"/eula",agree:"/purchase-agreement",pp:"/privacy-policy"}[k]||"/"),desc=d.querySelectorAll('meta[name="description"]'),m=desc[0],i;
     d.title=row[0];
     if(!m){m=d.createElement("meta");m.setAttribute("name","description");d.head.appendChild(m);}
     m.setAttribute("content",row[1]);

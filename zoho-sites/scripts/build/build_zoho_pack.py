@@ -37,14 +37,10 @@ FAVICON_LINKS = (
 )
 
 NEUTRALIZE = (
-    "<script>/* dl28: page is standalone; switch off Zoho theme CSS + legacy Home-snippet inline styles so only zs-customcss (ours) applies */\n"
-    "(function(){var d=document;var legal=/\\/(?:eula|purchase-agreement)$/.test((location.pathname||\"/\").replace(/\\/+$/,\"\")||\"/\");function off(n){try{if(n.tagName==='LINK'&&/stylesheet/i.test(n.rel||'')&&/\\/template\\/|zsite-core|webfonts\\.zoho|fonts\\.googleapis/.test(n.href||'')){n.disabled=true;n.media='not all';n.setAttribute('data-dl-off','1');}\n"
-    "else if(!legal&&n.closest&&n.closest('.theme-content-area,.zpcontent-container,[data-element-type]')){var t=n.tagName;n.setAttribute('data-dl-off','1');\n"
-    "if(t==='STYLE'){n.media='not all';}else if(t==='SCRIPT'){n.type='text/plain';}else if(t==='LINK'){n.removeAttribute('href');}\n"
-    "else if(t==='IMG'||t==='SOURCE'){n.removeAttribute('srcset');n.removeAttribute('src');}else if(t==='VIDEO'){n.removeAttribute('poster');n.removeAttribute('src');n.preload='none';}else if(t==='IFRAME'){n.removeAttribute('src');}}}catch(e){}}\n"
-    "function sweep(){d.querySelectorAll('link,style,script,img,source,video,iframe').forEach(off);}sweep();\n"
-    "var mo=new MutationObserver(function(ms){ms.forEach(function(m){m.addedNodes.forEach(function(n){if(n.nodeType===1){off(n);if(n.querySelectorAll)n.querySelectorAll('link,style,script,img,source,video,iframe').forEach(off);}});});});\n"
-    "mo.observe(d.documentElement,{childList:true,subtree:true});d.addEventListener('DOMContentLoaded',function(){sweep();setTimeout(function(){sweep();mo.disconnect();},4000);});})();</script>"
+    # dl28: switch off Zoho theme CSS + legacy Home-snippet inline styles so only zs-customcss applies.
+    # Skips /zcms (editor canvas); legal pages (eula, purchase-agreement, privacy-policy) keep their content.
+    # Pre-minified (terser -c unsafe_arrows=true,passes=2 -m --ecma 2015) to stay under the Header Code cap.
+    "<script>(()=>{var e=document,t=location.pathname;if(!/^\\/zcms/.test(t)){var r=/\\/(eula|purchase-agreement|privacy-policy)\\/*$/.test(t);i();var o=new MutationObserver((e=>{e.forEach((e=>{e.addedNodes.forEach((e=>{1===e.nodeType&&(a(e),e.querySelectorAll&&e.querySelectorAll(\"link,style,script,img,source,video,iframe\").forEach(a))}))}))}));o.observe(e.documentElement,{childList:!0,subtree:!0}),e.addEventListener(\"DOMContentLoaded\",(()=>{i(),setTimeout((()=>{i(),o.disconnect()}),4e3)}))}function a(e){try{if(\"LINK\"===e.tagName&&/stylesheet/i.test(e.rel||\"\")&&/\\/template\\/|zsite-core|webfonts\\.zoho|fonts\\.googleapis/.test(e.href||\"\"))e.disabled=!0,e.media=\"not all\",e.setAttribute(\"data-dl-off\",\"1\");else if(!r&&e.closest&&e.closest(\".theme-content-area,.zpcontent-container,[data-element-type]\")){var t=e.tagName;e.setAttribute(\"data-dl-off\",\"1\"),\"STYLE\"===t?e.media=\"not all\":\"SCRIPT\"===t?e.type=\"text/plain\":\"LINK\"===t?e.removeAttribute(\"href\"):\"IMG\"===t||\"SOURCE\"===t?(e.removeAttribute(\"srcset\"),e.removeAttribute(\"src\")):\"VIDEO\"===t?(e.removeAttribute(\"poster\"),e.removeAttribute(\"src\"),e.preload=\"none\"):\"IFRAME\"===t&&e.removeAttribute(\"src\")}}catch(e){}}function i(){e.querySelectorAll(\"link,style,script,img,source,video,iframe\").forEach(a)}})();</script>"
 )
 
 FONT_COMMENT = "/* self-hosted fonts (Zoho Files) 2026-09-28 */\n"
