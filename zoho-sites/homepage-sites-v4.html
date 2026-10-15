@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Delphinium · Canvas delivers content. Delphinium delivers engagement.</title>
+  <meta name="description" content="The Canvas engagement layer for virtual and online K-12. Give Canvas a Makeover in about three minutes. Schools have seen up to a 31% reduction in course failure rates.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,650&family=Outfit:wght@300;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <!--
+    Sites v4 draft. Paste map: zoho-sites/SNIPPETS-V4.md
+    Header Code: the font <link> tags only.
+    Custom CSS: this <style> block, once. Do not add Zoho badge hide rules.
+    Body Code Snippet: from .dl-draft through the script.
+    Peak is Open on: the student course is the card. The gray list is a text control.
+    Hero height follows its content. padding-bottom is 72px so the last control clears a 60px credit.
+  -->
+  <style>
+    :root {
+      --paper: #fffdf6;
+      --butter: #fbeab2;
+      --ink: #23232a;
+      --ink-soft: #5a5a66;
+      --canvas: #d5d8df;
+      --navy: #2b2f7e;
+      --navy-deep: #1d2158;
+      --accent: #c7007a;
+      --accent-hover: #a50064;
+      --mark: #f8f000;
+      --cyan: #00aeef;
+      --green: #00a651;
+      --fan-magenta: #ec008c;
+      --max: 1120px;
+      --banner-h: 26px;
+      --nav-h: 52px;
+      --spine: 28px;
+      --font-display: "Outfit", system-ui, sans-serif;
+      --font-text: "Source Sans 3", system-ui, sans-serif;
+      --font-quirk: "Fraunces", Georgia, serif;
+    }
+
+    /* Zoho theme inset. Page padding, not a badge-hide rule. */
+    .zpsection { padding: 0 !important; }
+    .zpcontainer,
+    .zpelem-col {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; color-scheme: light; }
+    body {
+      margin: 0;
+      font-family: var(--font-text);
+      font-size: 1.125rem;
+      line-height: 1.55;
+      color: var(--ink);
+      background: var(--paper);
+      text-wrap: pretty;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--navy); text-underline-offset: 0.15em; }
+    a:hover { color: var(--navy-deep); }
+    :focus-visible {
+      outline: 2px solid var(--navy);
+      outline-offset: 3px;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .dl-draft {
+      height: var(--banner-h);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--mark);
+      color: var(--ink);
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .dl-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem 1rem;
+      height: var(--nav-h);
+      padding: 0 max(1rem, calc((100% - var(--max)) / 2));
+      background: color-mix(in srgb, var(--paper) 92%, transparent);
+      border-bottom: 1px solid color-mix(in srgb, var(--navy) 12%, transparent);
+      backdrop-filter: blur(10px);
+    }
+    .dl-nav__logo {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      min-width: 0;
+      text-decoration: none;
+    }
+    .dl-nav__logo img {
+      height: 40px;
+      width: auto;
+    }
+    .dl-nav__he {
+      display: none;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--ink-soft);
+      white-space: nowrap;
+    }
+    @media (min-width: 720px) {
+      .dl-nav__he { display: inline; }
+    }
+
+    .dl-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0.55rem 1.1rem;
+      border-radius: 999px;
+      border: none;
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.9375rem;
+      line-height: 1;
+      text-decoration: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .dl-btn:hover { background: var(--accent-hover); color: #fff; }
+    .dl-nav__cta { min-height: 38px; padding: 0.4rem 0.9rem; font-size: 0.875rem; }
+
+    .dl-quietlink {
+      font-weight: 600;
+      font-size: 0.9375rem;
+      text-decoration: underline;
+      text-underline-offset: 0.18em;
+    }
+
+    .dl-wrap {
+      width: min(100% - 2rem, var(--max));
+      margin-inline: auto;
+    }
+    .dl-section { padding: clamp(3.25rem, 7vw, 6rem) 0; }
+    #highered, #how, #proof, #students { scroll-margin-top: calc(var(--nav-h) + 12px); }
+    .dl-btn, .dl-see, .dl-quietlink { scroll-margin-bottom: 88px; }
+
+    /* Hero is as tall as its content. 72px under the last control clears a 60px credit. */
+    .dl-hero {
+      padding-bottom: 72px;
+    }
+    .dl-hero__copy {
+      padding-top: 0.55rem;
+    }
+    .dl-hero__eyebrow {
+      margin: 0 0 0.2rem;
+      font-family: var(--font-display);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--navy);
+    }
+    .dl-hero__h1 {
+      margin: 0;
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+      text-wrap: balance;
+      color: var(--ink-soft);
+    }
+    .dl-hero__h1 strong {
+      display: block;
+      margin-top: 0.12rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .hl {
+      background: var(--mark);
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+      padding: 0 0.1em;
+    }
+    .dl-hero:has(#dl-on:not(:checked)) .hl { background: none; }
+    .dl-hero__ask {
+      margin: 0.45rem 0 0;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+      line-height: 1.25;
+      color: var(--navy);
+    }
+
+    .dl-open {
+      position: relative;
+      width: min(100% - 2rem, var(--max));
+      margin: 0.75rem auto 0;
+      border: 1px solid color-mix(in srgb, var(--navy) 14%, transparent);
+      border-radius: 14px;
+      background: var(--paper);
+      overflow: hidden;
+    }
+    .dl-open:has(#dl-on:not(:checked)) { background: var(--canvas); }
+    #dl-on {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .dl-spine {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: var(--spine);
+      display: flex;
+      gap: 2px;
+      pointer-events: none;
+    }
+    .dl-spine i { flex: 1 1 0; display: block; min-width: 0; }
+    .dl-spine i:nth-child(1) { background: var(--mark); }
+    .dl-spine i:nth-child(2) { background: var(--green); }
+    .dl-spine i:nth-child(3) { background: var(--cyan); }
+    .dl-spine i:nth-child(4) { background: var(--navy); }
+    .dl-spine i:nth-child(5) { background: var(--fan-magenta); }
+    .dl-open:has(#dl-on:not(:checked)) .dl-spine {
+      filter: grayscale(1);
+      opacity: 0.45;
+    }
+
+    .dl-open__bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.15rem 1rem;
+      min-height: 52px;
+      padding: 0.35rem 1rem 0.35rem calc(var(--spine) + 0.85rem);
+      border-bottom: 1px solid color-mix(in srgb, var(--navy) 10%, transparent);
+    }
+    .dl-open__title {
+      margin: 0;
+      flex: 1 1 12rem;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.0625rem;
+      line-height: 1.2;
+      color: var(--ink);
+    }
+    .dl-see {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1;
+      color: var(--navy);
+      text-decoration: underline;
+      text-underline-offset: 0.18em;
+      cursor: pointer;
+      background: transparent;
+    }
+    #dl-on:focus-visible ~ .dl-open__bar .dl-see {
+      outline: 2px solid var(--navy);
+      outline-offset: 3px;
+    }
+    #dl-on:checked ~ .dl-open__bar .when-off,
+    #dl-on:not(:checked) ~ .dl-open__bar .when-on { display: none; }
+
+    .dl-faces {
+      display: grid;
+      padding: 0 1rem 0.9rem calc(var(--spine) + 0.85rem);
+    }
+    .dl-face { grid-area: 1 / 1; }
+    #dl-on:checked ~ .dl-faces .dl-face--off { display: none; }
+    #dl-on:not(:checked) ~ .dl-faces .dl-face--on { display: none; }
+
+    .dl-progress {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.4rem 0.7rem;
+      margin-top: 0.8rem;
+    }
+    .dl-progress__label {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .dl-progress__track {
+      width: 7.5rem;
+      height: 8px;
+      border-radius: 99px;
+      background: color-mix(in srgb, var(--ink) 10%, var(--paper));
+      overflow: hidden;
+    }
+    .dl-progress__fill {
+      display: block;
+      width: 62%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--mark) 0%, var(--green) 42%, var(--cyan) 100%);
+    }
+
+    .dl-openmod {
+      display: grid;
+      grid-template-columns: 8px 1fr;
+      column-gap: 0.85rem;
+      align-items: stretch;
+      margin-top: 0.7rem;
+      padding: 0.85rem 1rem;
+      border-radius: 12px;
+      background: color-mix(in srgb, var(--cyan) 18%, var(--paper));
+    }
+    .dl-openmod__bar {
+      width: 8px;
+      border-radius: 99px;
+      background: var(--cyan);
+    }
+    .dl-openmod__name {
+      margin: 0;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    .dl-openmod__line {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.4rem 0.65rem;
+      margin: 0.35rem 0 0;
+    }
+    .dl-here {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .dl-chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 1.7rem;
+      padding: 0.05rem 0.6rem;
+      border: 1.5px solid var(--navy);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--navy);
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+    .dl-openmod__meta {
+      margin: 0.28rem 0 0;
+      font-size: 1rem;
+      line-height: 1.3;
+      color: var(--ink-soft);
+    }
+
+    .dl-index {
+      list-style: none;
+      margin: 0.7rem 0 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .dl-index li {
+      display: grid;
+      grid-template-columns: 8px 1fr;
+      column-gap: 0.7rem;
+      align-items: center;
+      min-height: 1.6rem;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.25;
+      color: var(--ink);
+    }
+    .dl-index i {
+      display: block;
+      width: 8px;
+      height: 1.15rem;
+      border-radius: 99px;
+    }
+    .dl-index li:nth-child(1) i { background: var(--mark); }
+    .dl-index li:nth-child(2) i { background: var(--green); }
+    .dl-index li:nth-child(3) i { background: var(--fan-magenta); }
+
+    .dl-canvas-kicker {
+      margin: 0.85rem 0 0;
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #3a3d48;
+    }
+    .dl-mods {
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      margin-top: 0.45rem;
+    }
+    .dl-mod__name {
+      margin: 0;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.25;
+      color: #2c3038;
+    }
+    .dl-mod__meta {
+      margin: 0.08rem 0 0;
+      font-size: 1rem;
+      line-height: 1.3;
+      color: #3e4450;
+    }
+
+    .dl-hero__note { padding-top: 0.8rem; }
+    .dl-hero__cap {
+      margin: 0;
+      max-width: 62ch;
+      font-size: 0.9375rem;
+      line-height: 1.4;
+      color: var(--ink-soft);
+    }
+    .dl-hero__note .dl-btn { margin-top: 0.75rem; }
+    .dl-hero__links {
+      margin: 0.65rem 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.35rem 0.55rem;
+    }
+    .dl-hero__dot { color: var(--ink-soft); }
+
+    @media (min-width: 800px) {
+      :root { --spine: 36px; }
+      .dl-spine { top: -12%; bottom: -12%; }
+      .dl-spine i { transform: skewX(-12deg); }
+    }
+
+    @media (max-width: 799px) {
+      .dl-hero__copy { padding-top: 0.35rem; }
+      .dl-hero__note .dl-btn { width: 100%; }
+      .dl-hero__dot { display: none; }
+      .dl-hero__links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.15rem;
+      }
+      .dl-hero__links .dl-quietlink {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+      }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .dl-openmod { animation: dl-wash 700ms ease both; }
+      .dl-progress__fill {
+        transform-origin: left center;
+        animation: dl-fill 700ms ease both;
+      }
+    }
+    @keyframes dl-wash {
+      from { background-color: var(--paper); }
+      to { background-color: color-mix(in srgb, var(--cyan) 18%, var(--paper)); }
+    }
+    @keyframes dl-fill {
+      from { transform: scaleX(0); }
+      to { transform: scaleX(1); }
+    }
+
+    .dl-stat {
+      margin: 0;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(4rem, 12vw, 7.5rem);
+      line-height: 0.9;
+      letter-spacing: -0.03em;
+      font-variant-numeric: tabular-nums;
+      color: var(--navy);
+    }
+    .dl-stat__unit {
+      display: block;
+      max-width: 22ch;
+      margin-top: 0.4rem;
+      font-size: clamp(1.2rem, 2.4vw, 1.65rem);
+      font-weight: 600;
+      letter-spacing: 0;
+      line-height: 1.2;
+      color: var(--ink);
+    }
+    .dl-proof__ctx {
+      margin: 1.15rem 0 0;
+      max-width: 52ch;
+      color: var(--ink-soft);
+      font-size: 1.05rem;
+    }
+
+    .dl-students { background: var(--butter); }
+    .dl-quote {
+      margin: 0;
+      max-width: 22ch;
+      font-family: var(--font-quirk);
+      font-weight: 560;
+      font-size: clamp(1.55rem, 3.2vw, 2.35rem);
+      line-height: 1.22;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      text-wrap: balance;
+    }
+    .dl-quote cite {
+      display: block;
+      margin-top: 0.75rem;
+      font-family: var(--font-text);
+      font-size: 0.875rem;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: 0;
+      color: var(--ink-soft);
+    }
+    .dl-mot {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.25rem 1.25rem;
+      margin-top: 2rem;
+    }
+    .dl-fun__num {
+      margin: 0;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(3rem, 8vw, 5.25rem);
+      line-height: 0.9;
+      font-variant-numeric: tabular-nums;
+      color: var(--navy);
+    }
+    .dl-fun__word {
+      margin: 0;
+      font-family: var(--font-quirk);
+      font-weight: 650;
+      font-size: clamp(4.25rem, 12vw, 7.5rem);
+      line-height: 0.82;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+    }
+    .dl-mot__why {
+      margin: 0.85rem 0 0;
+      max-width: 48ch;
+      font-size: 1.05rem;
+    }
+    .dl-video-facade {
+      margin-top: 1.75rem;
+      position: relative;
+      max-width: 640px;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 1px solid color-mix(in srgb, var(--navy) 18%, transparent);
+      background: #1a1c24;
+    }
+    .dl-video-facade img { width: 100%; height: 100%; object-fit: cover; }
+    .dl-video-facade button {
+      position: absolute;
+      inset: 0;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+    }
+    .dl-video-facade button span {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: color-mix(in srgb, var(--paper) 92%, transparent);
+      border: 2px solid var(--navy);
+      display: grid;
+      place-items: center;
+    }
+    .dl-video-facade button span::after {
+      content: "";
+      width: 0;
+      height: 0;
+      margin-left: 4px;
+      border-style: solid;
+      border-width: 10px 0 10px 16px;
+      border-color: transparent transparent transparent var(--navy);
+    }
+    .dl-video-facade iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .dl-how h2,
+    .dl-close h2,
+    .dl-he h2 {
+      margin: 0;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(1.55rem, 3vw, 2.2rem);
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      text-wrap: balance;
+    }
+    .dl-how p { max-width: 62ch; }
+    .dl-dots {
+      display: inline-flex;
+      gap: 0.28rem;
+      margin-right: 0.4rem;
+      vertical-align: -0.05em;
+    }
+    .dl-dots i {
+      width: 0.7rem;
+      height: 0.7rem;
+      border-radius: 50%;
+      display: block;
+    }
+    .dl-dots i:nth-child(1) { background: #d23b3b; }
+    .dl-dots i:nth-child(2) {
+      background: var(--mark);
+      box-shadow: inset 0 0 0 1px rgba(35, 35, 42, 0.28);
+    }
+    .dl-dots i:nth-child(3) { background: var(--green); }
+    .dl-family {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid color-mix(in srgb, var(--navy) 14%, transparent);
+      max-width: 62ch;
+      color: var(--ink-soft);
+      font-size: 1.02rem;
+    }
+    .dl-family strong { color: var(--ink); }
+    .dl-links {
+      margin-top: 1.25rem;
+      font-size: 0.9375rem;
+    }
+
+    .dl-close {
+      background: var(--navy-deep);
+      color: #fff;
+    }
+    .dl-close h2 { color: #fff; }
+    .dl-close p {
+      margin: 0.9rem 0 0;
+      max-width: 42ch;
+      color: color-mix(in srgb, #fff 84%, transparent);
+    }
+    .dl-close .dl-btn { margin-top: 1.35rem; }
+    .dl-close .dl-trust {
+      margin-top: 1.15rem;
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      color: color-mix(in srgb, #fff 78%, transparent);
+    }
+    .dl-close .dl-quietlink { color: #fff; }
+
+    .dl-he h2 {
+      font-size: clamp(1.25rem, 2vw, 1.5rem);
+      color: var(--navy);
+    }
+    .dl-he p { max-width: 58ch; color: var(--ink-soft); }
+    .dl-he .dl-quietlink { display: inline-block; margin-top: 0.85rem; }
+
+    .dl-logos { padding: 2.25rem 0 2.5rem; }
+    .dl-logos p {
+      margin: 0 0 0.9rem;
+      text-align: center;
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .dl-logos__row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1.1rem 1.75rem;
+    }
+    .dl-logos__row img {
+      height: 36px;
+      width: auto;
+      max-width: 140px;
+      object-fit: contain;
+      filter: grayscale(0.9);
+      opacity: 0.78;
+    }
+
+    .dl-footer {
+      padding: 1.75rem 0 6rem;
+      background: var(--navy-deep);
+      color: color-mix(in srgb, #fff 78%, transparent);
+      font-size: 0.875rem;
+    }
+    .dl-footer a { color: #fff; text-decoration: none; }
+    .dl-footer a:hover { text-decoration: underline; }
+    .dl-footer__inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .dl-footer__logo {
+      background: var(--paper);
+      border-radius: 8px;
+      padding: 0.3rem 0.45rem;
+    }
+    .dl-footer__logo img { height: 52px; width: auto; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .dl-openmod,
+      .dl-progress__fill,
+      .dl-spine { animation: none; transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="dl-draft" role="status">Draft. Not the live site.</div>
+
+  <header class="dl-nav">
+    <a class="dl-nav__logo" href="#top" aria-label="Delphinium home">
+      <img src="https://delphi-me.com/hubfs/Delphinium%20Logo.png" width="663" height="471" alt="Delphinium">
+    </a>
+    <a class="dl-nav__he" href="#highered">Higher Ed Online</a>
+    <a class="dl-btn dl-nav__cta" href="https://jared-delphi-me.zohobookings.com/4937208000000036014">Schedule a demo</a>
+  </header>
+
+  <main id="top">
+    <section class="dl-hero" aria-labelledby="hero-heading">
+      <div class="dl-wrap dl-hero__copy">
+        <p class="dl-hero__eyebrow">Canvas engagement layer</p>
+        <h1 class="dl-hero__h1" id="hero-heading">
+          Canvas delivers content.
+          <strong>Delphinium delivers <span class="hl">engagement</span>.</strong>
+        </h1>
+        <p class="dl-hero__ask">Which class would YOU rather take?</p>
+      </div>
+
+      <div class="dl-open" id="course">
+        <input type="checkbox" id="dl-on" checked>
+        <div class="dl-spine" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="dl-open__bar">
+          <p class="dl-open__title">Introduction to Biology</p>
+          <label for="dl-on" class="dl-see" id="course-control">
+            <span class="when-on">Show Canvas list</span>
+            <span class="when-off">Turn it on</span>
+          </label>
+        </div>
+        <div class="dl-faces" id="course-faces">
+          <div class="dl-face dl-face--on">
+            <div class="dl-progress">
+              <p class="dl-progress__label">Your progress</p>
+              <div class="dl-progress__track" aria-hidden="true"><span class="dl-progress__fill"></span></div>
+            </div>
+            <div class="dl-openmod">
+              <span class="dl-openmod__bar" aria-hidden="true"></span>
+              <div>
+                <p class="dl-openmod__name">Cells and Structure</p>
+                <p class="dl-openmod__line">
+                  <span class="dl-here">Start here</span>
+                  <span class="dl-chip">Avatar points</span>
+                </p>
+                <p class="dl-openmod__meta">Readings · Quiz</p>
+              </div>
+            </div>
+            <ul class="dl-index">
+              <li><i aria-hidden="true"></i><span>Getting Started</span></li>
+              <li><i aria-hidden="true"></i><span>Energy and Metabolism</span></li>
+              <li><i aria-hidden="true"></i><span>Genetics</span></li>
+            </ul>
+          </div>
+          <div class="dl-face dl-face--off">
+            <p class="dl-canvas-kicker">Canvas</p>
+            <div class="dl-mods">
+              <div class="dl-mod">
+                <p class="dl-mod__name">Getting Started</p>
+                <p class="dl-mod__meta">Pages · Assignments · Due dates</p>
+              </div>
+              <div class="dl-mod">
+                <p class="dl-mod__name">Cells and Structure</p>
+                <p class="dl-mod__meta">Readings · Quiz</p>
+              </div>
+              <div class="dl-mod">
+                <p class="dl-mod__name">Energy and Metabolism</p>
+                <p class="dl-mod__meta">Discussion · Lab</p>
+              </div>
+              <div class="dl-mod">
+                <p class="dl-mod__name">Genetics</p>
+                <p class="dl-mod__meta">Exam review</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dl-wrap dl-hero__note">
+        <p class="dl-hero__cap">Illustrated. Same modules. Same assignments. About three minutes. Teachers turn it on. No migration.</p>
+        <a class="dl-btn" id="hero-schedule" href="https://jared-delphi-me.zohobookings.com/4937208000000036014">Schedule a demo</a>
+        <p class="dl-hero__links">
+          <a class="dl-quietlink" id="overview-link" href="https://www.youtube.com/watch?v=DuZRx9aN9tw" target="_blank" rel="noopener noreferrer">Watch the overview</a>
+          <span class="dl-hero__dot" aria-hidden="true">·</span>
+          <a class="dl-quietlink" id="makeover-link" href="https://www.youtube.com/watch?v=HuYuD8UQoiM" target="_blank" rel="noopener noreferrer">See a Makeover start to finish</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="dl-section dl-proof" id="proof" aria-labelledby="proof-heading">
+      <div class="dl-wrap">
+        <h2 class="dl-stat" id="proof-heading">31%<span class="dl-stat__unit">decrease in course failure rates at Davis Connect</span></h2>
+        <p class="dl-proof__ctx">Davis School District, Utah. 72 fully online classes. 6,000 students. Same courses, same content, same teachers. The year before Delphinium, then the year with it.</p>
+      </div>
+    </section>
+
+    <section class="dl-section dl-students" id="students" aria-labelledby="students-heading">
+      <div class="dl-wrap">
+        <h2 class="visually-hidden" id="students-heading">Student motivation</h2>
+        <blockquote class="dl-quote">
+          I was sitting on the couch watching Netflix and the thought popped into my head: I could be doing homework right now.
+          <cite>Delphinium student survey response</cite>
+        </blockquote>
+        <div class="dl-mot">
+          <p class="dl-fun__num">72%</p>
+          <p class="dl-fun__word">Fun.</p>
+        </div>
+        <p class="dl-mot__why">Of students say a Delphinium course is more or much more motivating than a traditional Canvas course. The word they use most: Fun. Tiffany Dance, Instructional Coach at Davis Connect, calls it a game changer: students redo quizzes for avatar points and googly eyes.</p>
+        <figure class="dl-video-facade" id="makeover-video">
+          <img src="https://44351218.fs1.hubspotusercontent-na1.net/hubfs/44351218/Gamification%20with%20Title%20Card.mp4/medium.jpg?t=1751624379495" width="600" height="338" alt="Makeover video title card" loading="lazy">
+          <button type="button" aria-label="Play Makeover video"><span></span></button>
+        </figure>
+      </div>
+    </section>
+
+    <section class="dl-section dl-how" id="how" aria-labelledby="how-heading">
+      <div class="dl-wrap">
+        <h2 id="how-heading">Early warning for teachers. About forty seconds to act on it.</h2>
+        <p><span class="dl-dots" aria-hidden="true"><i></i><i></i><i></i></span>Control Tower shows every student as red, yellow, or green from your Canvas data. Message Center sends one message to every struggling student, and to their families if you choose, in about forty seconds. Templates, multiple channels, no spreadsheet.</p>
+        <p>Natalie Niederhauser teaches high school math to more than 100 students at Davis Connect. She went from about 12 emails a day to about 6 messages a week. &ldquo;Saved most of my Saturday nights.&rdquo;</p>
+        <div class="dl-family">
+          <p><strong>Families stay in the loop.</strong> When a parent finds out late, the grade has already taken a hit. Delphinium gives observers the same color-coded picture teachers see. Community Builder shares weekly progress in up to 160 languages. Celebrate wins with parents.</p>
+        </div>
+        <p class="dl-links">
+          <a href="https://www.youtube.com/watch?v=PIe6VxqLwkw" target="_blank" rel="noopener noreferrer">Control Tower on YouTube</a>
+          ·
+          <a href="https://www.youtube.com/watch?v=Q80sFMP4wFQ" target="_blank" rel="noopener noreferrer">Community Builder on YouTube</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="dl-section dl-close" aria-labelledby="close-heading">
+      <div class="dl-wrap">
+        <h2 id="close-heading">See it on your Canvas courses.</h2>
+        <p>Schedule a demo with Jared. Meet the person behind Delphinium and see how it could work in your Canvas courses.</p>
+        <p>Up to a 31% reduction in course failure rates.</p>
+        <a class="dl-btn" href="https://jared-delphi-me.zohobookings.com/4937208000000036014">Schedule a demo</a>
+        <p class="dl-trust">Canvas LTI 1.3 · FERPA · Chromebook-friendly</p>
+        <p class="dl-trust">No migration to plan. Nothing to install before the call. You stay in Canvas.</p>
+        <p><a class="dl-quietlink" href="#highered">Higher Ed Online results</a></p>
+      </div>
+    </section>
+
+    <section class="dl-section dl-he" id="highered" aria-labelledby="he-heading">
+      <div class="dl-wrap">
+        <h2 id="he-heading">Higher Ed Online</h2>
+        <p>As much as 47% lower course failure in Higher Ed Online sections. Also as much as 67% lower withdrawal and 65% lower deep disengagement (students finishing with less than about a third of points). Ask on the demo for study context that matches your campus.</p>
+        <a class="dl-quietlink" href="https://jared-delphi-me.zohobookings.com/4937208000000036014">Schedule a demo</a>
+      </div>
+    </section>
+
+    <section class="dl-logos" aria-label="Programs on Canvas">
+      <div class="dl-wrap">
+        <p>Programs on Canvas</p>
+        <div class="dl-logos__row">
+          <img src="https://delphi-me.com/hs-fs/hubfs/bakerwebacademylogo.webp" width="140" height="88" alt="Baker Web Academy" loading="lazy">
+          <img src="https://delphi-me.com/hs-fs/hubfs/cropped-utva_pbk12_logo_rgb-1.webp" width="140" height="88" alt="Utah Virtual Academy" loading="lazy">
+          <img src="https://delphi-me.com/hs-fs/hubfs/web_kelseypeak_logo.png" width="450" height="150" alt="Kelsey Peak" loading="lazy">
+          <img src="https://delphi-me.com/hs-fs/hubfs/web_rockypeak_logo.png" width="450" height="150" alt="Rocky Peak" loading="lazy">
+          <img src="https://delphi-me.com/hs-fs/hubfs/richfieldlogo.png" width="340" height="280" alt="Richfield" loading="lazy">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="dl-footer">
+    <div class="dl-wrap dl-footer__inner">
+      <div class="dl-footer__logo">
+        <img src="https://delphi-me.com/hubfs/Delphinium%20Logo.png" width="663" height="471" alt="Delphinium">
+      </div>
+      <div>
+        <a href="#highered">Higher Ed Online</a>
+        ·
+        <a href="https://www.youtube.com/@DelphiniumEngagement" target="_blank" rel="noopener noreferrer">YouTube</a>
+        ·
+        <a href="https://delphi-me.com/contact-us">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var facade = document.getElementById("makeover-video");
+      var play = facade ? facade.querySelector("button") : null;
+      if (play) {
+        play.addEventListener("click", function () {
+          var iframe = document.createElement("iframe");
+          iframe.src = "https://www.youtube.com/embed/HuYuD8UQoiM?autoplay=1&rel=0";
+          iframe.title = "Delphinium Makeover video";
+          iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+          iframe.setAttribute("allowfullscreen", "");
+          facade.innerHTML = "";
+          facade.appendChild(iframe);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
