@@ -73,7 +73,7 @@ def html_parts() -> dict:
     head_bits: list[str] = []
     for m in re.finditer(
         r"<(?:link|script)[^>]+(?:fonts\.googleapis|fonts\.gstatic|bookings\.nimbuspop|"
-        r"zohobookings\.com|preload|dns-prefetch)[^>]*>",
+        r"zohobookings\.com|bookings\.delphi-me\.com|preload|dns-prefetch)[^>]*>",
         full,
         re.I,
     ):

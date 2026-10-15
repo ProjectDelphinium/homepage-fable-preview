@@ -130,7 +130,7 @@ These are tabs on a pricing-comparison module. The price spans (`plan_cost`) are
 CTA: **↪ Get Started Today!**
 
 ### CTAs on the live HE page
-Every CTA ("Schedule a FREE demo!", "Schedule Your Free Tour", "Let's Talk - Schedule Now!", "Get Started Today!") opens the same HubSpot meetings popup at `https://delphi-me.com/meetings/jared381/educate`. Don't reuse it; the HE twin should use the same booking target as v5 (Zoho Bookings `https://jared-delphi-me.zohobookings.com/4937208000000036014`, with `https://delphi-me.com/schedule-jared` as the rules-file CTA).
+Every CTA ("Schedule a FREE demo!", "Schedule Your Free Tour", "Let's Talk - Schedule Now!", "Get Started Today!") opens the same HubSpot meetings popup at `https://delphi-me.com/meetings/jared381/educate`. Don't reuse it; the HE twin should use the same booking target as v5 (Zoho Bookings `https://bookings.delphi-me.com/4937208000000036014`, with `https://delphi-me.com/schedule-jared` as the rules-file CTA).
 
 ### HE-specific naming on the live page and in the prospectus
 - **LMS:** Canvas only; no other LMS is mentioned anywhere.

@@ -58,7 +58,7 @@ with sync_playwright() as p:
             mx=pg.locator("main.dl-home [data-mux]").count()
             if mx:
                 m2=modal_open("main.dl-home [data-mux]","dl-modal","modal-watch-mux.png"); chk("watch_modal_mux_opens", m2.get("vis"), m2)
-            bk=modal_open("main.dl-home [data-bookings-open]","dl-book-modal","modal-bookings.png"); chk("bookings_modal_opens", bk.get("vis") and bk.get("media") and "zohobookings" in bk.get("media",""), bk)
+            bk=modal_open("main.dl-home [data-bookings-open]","dl-book-modal","modal-bookings.png"); chk("bookings_modal_opens", bk.get("vis") and bk.get("media") and "bookings.delphi-me.com" in bk.get("media",""), bk)
             pg.wait_for_timeout(1000)
             ct=modal_open("[data-contact-open]","dl-contact-modal","modal-contact.png"); chk("contact_modal_opens", ct.get("vis"), ct)
         ctx.close()

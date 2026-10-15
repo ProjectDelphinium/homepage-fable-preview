@@ -7,7 +7,7 @@
 
 ## Goal
 A Zoho Sites–shaped homepage that influences ICP (K–12 virtual / online Canvas directors) to **Schedule a demo**.
-Primary CTA (every button): `https://jared-delphi-me.zohobookings.com/4937208000000036014`
+Primary CTA (every button): `https://bookings.delphi-me.com/4937208000000036014`
 
 ## Story / flow (from Jared’s prospectus PDF — structure + voice; not a BYU quote page)
 Use the prospectus arc as the page journey. Prefer prospectus phrasing when it matches SOURCE; improve freely for web; no em dashes.
