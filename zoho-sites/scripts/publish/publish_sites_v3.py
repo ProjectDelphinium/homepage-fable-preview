@@ -29,7 +29,7 @@ BIN = Path("/workspace/delphinium-os/token-architecture/bin")
 STAGING_PUBLIC = "https://delphinium-marketing-staging.zohosites.com"
 SITE_ID = "2187225000000002005"
 BUILDER_BASE = "https://sitebuilder-939950337.zohositescontent.com"
-CTA_HREF = "https://jared-delphi-me.zohobookings.com/4937208000000036014"
+CTA_HREF = "https://bookings.delphi-me.com/4937208000000036014"
 TITLE_WANT = "Delphinium · Canvas delivers content. Delphinium delivers engagement."
 DESC_WANT = (
     "Canvas delivers content. Delphinium delivers engagement. "
@@ -40,7 +40,7 @@ DESC_WANT = (
 REQUIRED_STRINGS = [
     "Schedule a demo",
     "Turn it on",
-    "jared-delphi-me.zohobookings.com/4937208000000036014",
+    "bookings.delphi-me.com/4937208000000036014",
     "Canvas LTI 1.3",
     "Avatar points",
 ]

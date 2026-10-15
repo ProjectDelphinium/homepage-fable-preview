@@ -46,7 +46,7 @@ On each of those pages, also set:
 Also in Configuration > SEO:
 
 - 301 `/home` and `/index` to `/`. Both are live copies of the homepage with their own canonicals, and both are in the sitemap. If Zoho will not redirect a live page, unpublish it or turn off its Sitemap XML toggle.
-- `/schedule-jared` (live 2026-10-05): hidden page `2187225000000053002`, sitemap off; page Header/Footer Code instant-redirects to Schedule Jared 60 min (`https://jared-delphi-me.zohobookings.com/4937208000000036028`). Native 301 is only `/schedule-jared/` to `/schedule-jared`. Snippets: `pages/schedule-jared/`.
+- `/schedule-jared` (live 2026-10-05): hidden page `2187225000000053002`, sitemap off; page Header/Footer Code instant-redirects to Schedule Jared 60 min (`https://bookings.delphi-me.com/4937208000000036028`). Native 301 is only `/schedule-jared/` to `/schedule-jared`. Snippets: `pages/schedule-jared/`.
 - Robots text: keep allow-all and add `Sitemap: https://www.delphi-me.com/sitemap.xml`.
 - Site name: “Delphinium”, so Zoho’s `#schemagenerator` WebSite name matches ours.
 

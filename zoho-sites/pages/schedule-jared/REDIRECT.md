@@ -22,15 +22,15 @@ Created Zoho page **Schedule Jared** at `/schedule-jared`.
 ```html
 <!-- /schedule-jared → Schedule Jared (60 min) Zoho Bookings -->
 <meta name="robots" content="noindex, nofollow">
-<meta http-equiv="refresh" content="0;url=https://jared-delphi-me.zohobookings.com/4937208000000036028">
-<link rel="canonical" href="https://jared-delphi-me.zohobookings.com/4937208000000036028">
-<script>(function(){try{location.replace("https://jared-delphi-me.zohobookings.com/4937208000000036028");}catch(e){location.href="https://jared-delphi-me.zohobookings.com/4937208000000036028";}})();</script>
+<meta http-equiv="refresh" content="0;url=https://bookings.delphi-me.com/4937208000000036028">
+<link rel="canonical" href="https://bookings.delphi-me.com/4937208000000036028">
+<script>(function(){try{location.replace("https://bookings.delphi-me.com/4937208000000036028");}catch(e){location.href="https://bookings.delphi-me.com/4937208000000036028";}})();</script>
 ```
 
 **Page Footer Code** (noscript fallback link only):
 
 ```html
-<noscript><p style="font:16px system-ui;padding:2rem"><a href="https://jared-delphi-me.zohobookings.com/4937208000000036028">Continue to Schedule Jared</a></p></noscript>
+<noscript><p style="font:16px system-ui;padding:2rem"><a href="https://bookings.delphi-me.com/4937208000000036028">Continue to Schedule Jared</a></p></noscript>
 ```
 
 Target is **Schedule Jared 60 min** service id `4937208000000036028` — **not** the Demo embed (`…36014`).
@@ -58,7 +58,7 @@ So `/schedule-jared/` → 301 → `/schedule-jared` → client redirect → Book
 - Site-wide **Header Code / Footer Code / Custom CSS** (homepage pack untouched; live CSS still has `860px` / `min(1240px`).
 - Homepage Demo modal.
 - DNS / HubSpot.
-- `bookings.delphi-me.com` not used.
+- 2026-10-15: Bookings moved to custom domain `bookings.delphi-me.com`; page code updated from `jared-delphi-me.zohobookings.com`.
 
 ## Expected live behavior
 
@@ -68,7 +68,7 @@ So `/schedule-jared/` → 301 → `/schedule-jared` → client redirect → Book
 | `https://www.delphi-me.com/schedule-jared/` | HTTP 301 `Location: /schedule-jared` (or equivalent path) |
 | `https://delphi-me.com/schedule-jared` | CloudFront/S3 301 → www, then same as www (browser then client-navigates to Bookings) |
 
-Browsers land on `https://jared-delphi-me.zohobookings.com/4937208000000036028`. `curl` without JS stops on the www HTML that contains the redirect script.
+Browsers land on `https://bookings.delphi-me.com/4937208000000036028`. `curl` without JS stops on the www HTML that contains the redirect script.
 
 ## Repo sync
 

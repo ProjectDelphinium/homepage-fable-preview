@@ -4,7 +4,7 @@
 **Brief:** `design-loop/2026-09-24/BRIEF-V5.md` · **Current pack:** zoho-ready Sites staging pack (case section restored; not the older light-revise kicker-only cut)
 **Baseline:** Sites v2 (`cursor/homepage-sites-v2-craft-ca52`). v3/v4 fan-cut experiments are not carried forward.
 **Claims ceiling:** `context/SOURCE.md`
-**Primary CTA (every Schedule link, 6 total, all open the Bookings modal):** https://jared-delphi-me.zohobookings.com/4937208000000036014
+**Primary CTA (every Schedule link, 6 total, all open the Bookings modal):** https://bookings.delphi-me.com/4937208000000036014
 **Staging target:** https://delphinium-marketing-staging.zohosites.com (Web Design publishes after Jared OKs the PR; HubSpot, DNS, production untouched)
 
 ## 0. Zoho procedure (2026-09-28 verified pack)
