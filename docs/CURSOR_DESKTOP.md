@@ -11,6 +11,7 @@
 **Biz ops:** Cursor Environment `delphinium-bizops` · never Product/serverless.
 
 **Mirror:** `japomani/delphinium-homepage-fable-preview` (GitHub Pages preview). Prefer pushing / PRing against `ProjectDelphinium/homepage-fable-preview`.
+Biz ops · Cursor Environment delphinium-bizops · never Product/serverless.
 
 ### Windows PC (one-shot)
 
