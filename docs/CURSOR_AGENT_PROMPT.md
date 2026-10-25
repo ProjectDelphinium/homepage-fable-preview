@@ -10,7 +10,7 @@ You are continuing the Delphinium public marketing homepage redesign.
 - Repo: ProjectDelphinium/homepage-fable-preview (mirror japomani/delphinium-homepage-fable-preview)
 - Branch: main
 - Public draft: https://japomani.github.io/delphinium-homepage-fable-preview/
-- Live site https://delphi-me.com/ is HubSpot — DO NOT edit HubSpot, DNS, or production. This repo is draft-only. Zoho staging is handled later by Web Design after Jared says "stage this."
+- Live site https://www.delphi-me.com/ runs on Zoho Sites (cutover 2026-09-28; `zoho-sites/LIVE.md` is the live source of truth). Agents do not publish: no Zoho publish, HubSpot, or DNS changes. Open a PR; Web Design publishes to staging, Jared approves, then live. See `docs/ZOHO_SITES_PUBLISH.md`.
 
 ## Read first (in order)
 1. HANDOFF.md
