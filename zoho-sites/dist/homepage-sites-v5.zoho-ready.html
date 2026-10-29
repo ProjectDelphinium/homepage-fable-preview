@@ -3135,7 +3135,76 @@
     .dl-sub .dl-contact__form { max-width: 46rem; }
     .dl-sub__files { display: grid; gap: 0.5rem; }
     .dl-file { font-family: var(--font-text); font-size: 0.95rem; color: var(--ink); max-width: 100%; }
-  </style>
+  
+    /* Watch cards (2026-10-29): CSS thumbnail on the existing .dl-link__icon, keyed by data-youtube,
+       so the Higher Ed swap (rewrites data-youtube) updates it. Desktop: horizontal card beside Schedule a demo.
+       520px and below: stacked card, Schedule a demo below. */
+    a.dl-link[data-youtube] {
+      display: inline-flex; align-items: center; gap: 0.85rem;
+      white-space: nowrap; box-sizing: border-box;
+      padding: 0.4rem 1.1rem 0.4rem 0.4rem; border: 2px solid var(--navy); border-radius: 1rem;
+      background: #fff; color: var(--navy); font-family: var(--font-display); font-weight: 600; font-size: 1rem; line-height: 1.25; text-align: left;
+      box-shadow: 0 2px 6px rgba(29, 33, 88, 0.12);
+      transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease, color 150ms ease;
+    }
+    a.dl-link[data-youtube]:hover { border-color: var(--cyan); color: var(--navy-deep); background: #fff; transform: translateY(-2px); box-shadow: 0 8px 18px rgba(29, 33, 88, 0.18); }
+    a.dl-link[data-youtube]:focus-visible { outline: 3px solid var(--dl-focus); outline-offset: 3px; }
+    a.dl-link[data-youtube] .dl-link__icon {
+      position: relative; display: grid; place-items: center; flex: none; width: 8.5rem; height: auto; aspect-ratio: 16 / 9;
+      border: 0; border-radius: 0.65rem; color: #fff; background-color: var(--navy-deep);
+      background-image: linear-gradient(rgba(15, 17, 48, 0.22), rgba(15, 17, 48, 0.22)), var(--dl-t, none);
+      background-position: center; background-repeat: no-repeat; background-size: cover, auto 100%;
+      transition: background-size 250ms ease;
+    }
+    a.dl-link[data-youtube]:hover .dl-link__icon { background-size: cover, auto 106%; }
+    a.dl-link[data-youtube] .dl-link__icon::before {
+      content: ""; position: absolute; left: 50%; top: 50%; width: 2.5rem; height: 2.5rem; transform: translate(-50%, -50%);
+      border-radius: 50%; border: 1.5px solid rgba(255, 255, 255, 0.85); background: rgba(255, 255, 255, 0.25);
+      -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); transition: background 150ms ease;
+    }
+    a.dl-link[data-youtube]:hover .dl-link__icon::before { background: rgba(255, 255, 255, 0.42); }
+    a.dl-link[data-youtube] .dl-link__icon::after { position: relative; border-width: 7px 0 7px 11px; margin-left: 3px; }
+    @media (max-width: 520px) {
+      .dl-hero__actions, .dl-prod__more, .dl-proof__actions { display: flex; flex-direction: column; align-items: flex-start; gap: 0.9rem; }
+      .dl-hero__actions > a.dl-link[data-youtube], .dl-prod__more > a.dl-link[data-youtube], .dl-proof__actions > a.dl-link[data-youtube] { order: -1; }
+      a.dl-link[data-youtube] { display: flex; flex-direction: column; align-items: stretch; gap: 0.5rem; width: 12rem; max-width: 100%; white-space: normal; padding: 0.35rem 0.35rem 0.6rem; border-radius: 0.6rem; font-size: 0.95rem; }
+      a.dl-link[data-youtube] > span:not(.dl-link__icon) { padding: 0 0.25rem; }
+      a.dl-link[data-youtube] .dl-link__icon { width: 100%; aspect-ratio: 4 / 3; border-radius: 0.4rem; }
+      a.dl-link[data-youtube] .dl-link__icon::before { width: 2.75rem; height: 2.75rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      a.dl-link[data-youtube], a.dl-link[data-youtube] .dl-link__icon, a.dl-link[data-youtube] .dl-link__icon::before { transition: none; }
+      a.dl-link[data-youtube]:hover { transform: none; }
+      a.dl-link[data-youtube]:hover .dl-link__icon { background-size: cover, auto 100%; }
+    }
+    a.dl-link[data-youtube="id9dqfNZsf4"] { --dl-t: url("https://img.youtube.com/vi/id9dqfNZsf4/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="9mfMC9jC6lU"] { --dl-t: url("https://img.youtube.com/vi/9mfMC9jC6lU/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="xC1b-9bZW4w"] { --dl-t: url("https://img.youtube.com/vi/xC1b-9bZW4w/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="MBYmCCeZqxo"] { --dl-t: url("https://img.youtube.com/vi/MBYmCCeZqxo/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="acjbTVs8IUM"] { --dl-t: url("https://img.youtube.com/vi/acjbTVs8IUM/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="4vzDJ1poyvU"] { --dl-t: url("https://img.youtube.com/vi/4vzDJ1poyvU/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="Ek-BBS8rP_0"] { --dl-t: url("https://img.youtube.com/vi/Ek-BBS8rP_0/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="63Iu4Xxg_tg"] { --dl-t: url("https://img.youtube.com/vi/63Iu4Xxg_tg/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="ejtU7miZWD4"] { --dl-t: url("https://img.youtube.com/vi/ejtU7miZWD4/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="xbdP6GSjPgY"] { --dl-t: url("https://img.youtube.com/vi/xbdP6GSjPgY/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="L90IoF6LGAE"] { --dl-t: url("https://img.youtube.com/vi/L90IoF6LGAE/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="U615qsZh8bc"] { --dl-t: url("https://img.youtube.com/vi/U615qsZh8bc/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="UgEyq7gUWmM"] { --dl-t: url("https://img.youtube.com/vi/UgEyq7gUWmM/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="02HnN8nScr4"] { --dl-t: url("https://img.youtube.com/vi/02HnN8nScr4/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="9mfMC9jC6lU"] { --dl-t: url("https://img.youtube.com/vi/9mfMC9jC6lU/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="xC1b-9bZW4w"] { --dl-t: url("https://img.youtube.com/vi/xC1b-9bZW4w/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="MBYmCCeZqxo"] { --dl-t: url("https://img.youtube.com/vi/MBYmCCeZqxo/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="acjbTVs8IUM"] { --dl-t: url("https://img.youtube.com/vi/acjbTVs8IUM/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="4vzDJ1poyvU"] { --dl-t: url("https://img.youtube.com/vi/4vzDJ1poyvU/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="Ek-BBS8rP_0"] { --dl-t: url("https://img.youtube.com/vi/Ek-BBS8rP_0/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="63Iu4Xxg_tg"] { --dl-t: url("https://img.youtube.com/vi/63Iu4Xxg_tg/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="ejtU7miZWD4"] { --dl-t: url("https://img.youtube.com/vi/ejtU7miZWD4/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="xbdP6GSjPgY"] { --dl-t: url("https://img.youtube.com/vi/xbdP6GSjPgY/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="L90IoF6LGAE"] { --dl-t: url("https://img.youtube.com/vi/L90IoF6LGAE/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="U615qsZh8bc"] { --dl-t: url("https://img.youtube.com/vi/U615qsZh8bc/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="UgEyq7gUWmM"] { --dl-t: url("https://img.youtube.com/vi/UgEyq7gUWmM/maxresdefault.jpg"); }
+    a.dl-link[data-youtube="02HnN8nScr4"] { --dl-t: url("https://img.youtube.com/vi/02HnN8nScr4/maxresdefault.jpg"); }
+</style>
   <link rel="preconnect" href="https://bookings.nimbuspop.com" crossorigin>
   <link rel="preconnect" href="https://bookings.delphi-me.com" crossorigin>
   <link rel="preconnect" href="https://www.youtube.com">
@@ -3245,7 +3314,7 @@
           <a class="dl-btn" href="https://bookings.delphi-me.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
           <a class="dl-link" href="https://www.youtube.com/watch?v=id9dqfNZsf4" data-youtube="id9dqfNZsf4" data-title="Watch: Online learning, elevated" title="Watch: Online learning, elevated">
             <span class="dl-link__icon" aria-hidden="true"></span>
-            <span class="dk">Watch: Online learning, elevated</span><span class="dh">Watch: Higher Ed, elevated</span>
+            <span class="dk">Watch: <br>Online learning, elevated</span><span class="dh">Watch: <br>Higher Ed, elevated</span>
           </a>
           <script>document.querySelectorAll(".dl-path-he .dl-hero .dl-link").forEach(a=>a.title=a.dataset.title="Watch: Higher Ed, elevated")</script>
         </div>
@@ -3353,7 +3422,7 @@
                 <a class="dl-btn" href="https://bookings.delphi-me.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
                 <a class="dl-link" href="https://www.youtube.com/watch?v=xC1b-9bZW4w" data-youtube="xC1b-9bZW4w" data-title="Watch: Insightful data" title="Watch: Insightful data">
                   <span class="dl-link__icon" aria-hidden="true"></span>
-                  Watch: Insightful data
+                  Watch: <br>Insightful data
                 </a>
               </div>
             </div>
@@ -3415,7 +3484,7 @@
               <a class="dl-btn" href="https://bookings.delphi-me.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
               <a class="dl-link" href="https://www.youtube.com/watch?v=acjbTVs8IUM" data-youtube="acjbTVs8IUM" data-title="Watch: Communication that works!" title="Watch: Communication that works!">
                 <span class="dl-link__icon" aria-hidden="true"></span>
-                Watch: Communication that works!
+                Watch: <br>Communication that works!
               </a>
             </div>
           </div>
@@ -3457,7 +3526,7 @@
               <a class="dl-btn" href="https://bookings.delphi-me.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
               <a class="dl-link" href="https://www.youtube.com/watch?v=Ek-BBS8rP_0" data-youtube="Ek-BBS8rP_0" data-title="Watch: Meaningful engagement" title="Watch: Meaningful engagement">
                 <span class="dl-link__icon" aria-hidden="true"></span>
-                Watch: Meaningful engagement
+                Watch: <br>Meaningful engagement
               </a>
             </div>
           </div>
@@ -3503,7 +3572,7 @@
                 <a class="dl-btn" href="https://bookings.delphi-me.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
                 <a class="dl-link" href="https://www.youtube.com/watch?v=ejtU7miZWD4" data-youtube="ejtU7miZWD4" data-title="Watch: Effortless gamification" title="Watch: Effortless gamification">
                   <span class="dl-link__icon" aria-hidden="true"></span>
-                  Watch: Effortless gamification
+                  Watch: <br>Effortless gamification
                 </a>
               </div>
             </div>
@@ -3683,7 +3752,7 @@
             <a class="dl-btn" href="https://bookings.delphi-me.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
             <a class="dl-link" href="https://www.youtube.com/watch?v=UgEyq7gUWmM" data-youtube="UgEyq7gUWmM" data-title="Watch: Evidence, research, and theory" title="Watch: Evidence, research, and theory">
               <span class="dl-link__icon" aria-hidden="true"></span>
-              Watch: Evidence, research, and theory
+              Watch: <br>Evidence, research, and theory
             </a>
           </div>
         </div>
@@ -3721,7 +3790,7 @@
           <a class="dl-btn" href="https://bookings.delphi-me.com/4937208000000036014" data-bookings-open>Schedule a demo</a>
           <a class="dl-link" href="https://www.youtube.com/watch?v=L90IoF6LGAE" data-youtube="L90IoF6LGAE" data-title="Watch: Integration is easy!" title="Watch: Integration is easy!">
             <span class="dl-link__icon" aria-hidden="true"></span>
-            Watch: Integration is easy!
+            Watch: <br>Integration is easy!
           </a>
         </div>
         <p class="dl-punch dl-reveal"><span class="dl-punch__setup">Your <span class="dk">school</span><span class="dh">program</span> already runs on Canvas,</span> <span class="dl-punch__payoff">Make it work <em class="dl-punch__key">harder</em> for you</span></p>
