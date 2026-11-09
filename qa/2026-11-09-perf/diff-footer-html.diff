@@ -1,0 +1,100 @@
+--- live/footer.html
++++ patched/footer.html
+@@ -185,5 +185,5 @@
+ </div>
+-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+-</script>
+-<script>!function(){if(window.jQuery){var e=window.jQuery.noConflict(!0);
++<script>
++function dlJs(s,f){document.head.append(Object.assign(document.createElement("script"),{src:s,onload:f}))}
++function dlIdle(f,d){setTimeout(function(){(self.requestIdleCallback||setTimeout)(f,{timeout:2e3})},d)}document.documentElement.classList.contains("dl-path-support")&&dlJs("https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js",function(){if(window.jQuery){var e=window.jQuery.noConflict(!0);
+ window.zsRegenerateCaptcha=function(){var t=document.getElementById("zsCaptchaSrc"),a=document.getElementById("xJdfEaS");
+@@ -191,3 +191,3 @@
+ var t=document.getElementById("dl-su-captcha-reload");
+-t&&t.addEventListener("click",window.zsRegenerateCaptcha),document.documentElement.classList.contains("dl-path-support")&&window.zsRegenerateCaptcha()}}();
++t&&t.addEventListener("click",window.zsRegenerateCaptcha),window.zsRegenerateCaptcha()}});
+ </script>
+@@ -541,41 +541,7 @@
+  web-share"),o.setAttribute("allowfullscreen",""),o.setAttribute("loading","eager"),o.addEventListener("load",function(){A(o),S(o)}),n.appendChild(o),document.body.appendChild(n),g[e]={host:n,iframe:o},o}
+-function _(e,t){return t||"https://stream.mux.com/"+e+"/capped-1080p.mp4"}
+-function C(e,t){return t||"https://image.mux.com/"+e+"/thumbnail.jpg?time=3&width=1920"}
+-function I(e){var t=b[e];
+-if(t){if(t.video){try{t.video.pause()}catch(e){}t.video.removeAttribute("src");
+-try{t.video.load()}catch(e){}t.video.parentNode&&t.video.parentNode.removeChild(t.video)}delete b[e]}}
+-function O(e,t,n){var o=_(e,t),a=C(e,n),r=b[e];
+-if(r&&r.video&&r.src===o)return r.video;
+-I(e);
+-var i=document.createElement("video");
+-i.preload="auto",i.playsInline=!0,i.muted=!0,i.setAttribute("playsinline",""),i.setAttribute("aria-hidden","true"),i.setAttribute("controlslist","nodownload"),i.poster=a,i.src=o,i.style.cssText="position:fixed;
+-left:-9999px;
+-top:0;
+-width:1px;
+-height:1px;
+-overflow:hidden;
+-pointer-events:none;
+-opacity:0;
+-",document.body.appendChild(i);
+-try{i.load()}catch(e){}return b[e]={video:i,src:o,poster:a},i}
+-function B(){for(var e=document.querySelectorAll("a[data-youtube]"),t=[],n=0;
+-n<e.length;
+-n++){var o=e[n].closest("section");
+-if(!o||"none"!==getComputedStyle(o).display){var a=e[n].getAttribute("data-youtube");
+-a&&-1===t.indexOf(a)&&t.push(a)}}for(var r=document.querySelectorAll("a[data-mux]"),i=[],d=0;
+-d<r.length;
+-d++){var c=r[d],l=c.getAttribute("data-mux");
+-if(l){for(var u=!1,s=0;
+-s<i.length;
+-s++)if(i[s].id===l){u=!0;
+-break}if(!u){var f=c.querySelector("img"),m=f?f.getAttribute("src"):"";
+-m&&-1===m.indexOf("width=")&&-1!==m.indexOf("image.mux.com")&&(m=m+(-1===m.indexOf("?")?"?":"&")+"width=1920"),i.push({id:l,mp4:c.getAttribute("href"),poster:m})}}}(t.length||i.length)&&addEventListener("load",function(){for(var e=0;
+-e<t.length;
+-e++)q(t[e]);
+-for(var n=0;
+-n<i.length;
+-n++)O(i[n].id,i[n].mp4,i[n].poster)})}
++function B(){var e=[].find.call(document.querySelectorAll("a[data-youtube]"),function(e){return e.offsetParent});
++e&&q(e.getAttribute("data-youtube"))}
+ function P(e,t,n){var o=q(e);
+-v.innerHTML="",v.appendChild(o);
+-var a=g[e];
++v.innerHTML="";
++try{v.moveBefore(o,null)}catch(r){v.appendChild(o)}var a=g[e];
+ a&&a.host&&a.host.parentNode&&a.host.parentNode.removeChild(a.host),delete g[e],o.id="dl-yt-"+e,o.title=t,y.textContent=t,T.open(null,n),A(o),E(o,"playVideo"),function(e){k(),L=e,S(e),[120,400,1e3,2e3].forEach(function(t){x.push(setTimeout(function(){L===e&&S(e)},t))})}(o),setTimeout(function(){L===o&&(A(o),E(o,"playVideo"),S(o))},120),setTimeout(function(){L===o&&(E(o,"playVideo"),S(o))},400)}window.addEventListener("message",function(e){if(L&&!p.hidden){var t=e.origin||"";
+@@ -583,3 +549,3 @@
+ if("string"==typeof n)try{n=JSON.parse(n)}catch(e){return}if(n&&"object"==typeof n){var o=n.info,a=n.event,r=o&&"object"==typeof o?o.playerState:void 0;
+-("onReady"===a||"initialDelivery"===a||"onStateChange"===a||1===r||3===r||o&&null!=o.currentTime)&&S(L)}}}});
++("onReady"===a||-1===r||5===r)&&E(L,"playVideo"),("onReady"===a||"initialDelivery"===a||"onStateChange"===a||1===r||3===r||o&&null!=o.currentTime)&&S(L)}}}});
+ var T=dlDialog(p,{closeSelector:"[data-close]",initialFocus:function(){return p.querySelector(".dl-modal__close")},onClose:function(){k(),L=null;
+@@ -587,15 +553,8 @@
+ e&&(E(e,"stopVideo"),E(e,"pauseVideo"));
+-var t=v.querySelector("video");
+-if(t)try{t.pause()}catch(e){}v.innerHTML="",B()}});
+-document.addEventListener("click",function(e){var t=e.target&&e.target.closest&&e.target.closest("[data-mux], [data-youtube]");
++v.innerHTML=""}});
++document.addEventListener("click",function(e){var t=e.target&&e.target.closest&&e.target.closest("[data-youtube]");
+ if(t&&!t.closest(".theme-content-area")){e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation&&e.stopImmediatePropagation();
+-var n=t.getAttribute("data-youtube");
+-if(n)P(n,w(t),t);
+-else{var o=t.querySelector("img"),a=o?o.getAttribute("src"):"";
+-a&&-1===a.indexOf("width=")&&-1!==a.indexOf("image.mux.com")&&(a=a+(-1===a.indexOf("?")?"?":"&")+"width=1920"),function(e,t,n,o,a){var r,i=_(e,o),d=C(e,n),c=b[e];
+-c&&c.video&&c.src===i?((r=c.video).parentNode&&r.parentNode.removeChild(r),delete b[e],r.muted=!1,r.controls=!0,r.autoplay=!0,r.preload="auto",r.poster=d,r.removeAttribute("aria-hidden"),r.style.cssText="",r.title=t):(I(e),(r=document.createElement("video")).controls=!0,r.autoplay=!0,r.playsInline=!0,r.preload="auto",r.poster=d,r.src=i,r.setAttribute("controlslist","nodownload"),r.setAttribute("playsinline",""),r.title=t),v.innerHTML="",v.appendChild(r),y.textContent=t,T.open(null,a);
+-var l=r.play();
+-l&&l.catch&&l.catch(function(){})}(t.getAttribute("data-mux"),w(t),a,t.getAttribute("href"),t)}}},!0),B()}(),function(){var e=document.getElementById("dl-book-modal"),t=document.getElementById("dl-book-frame");
++P(t.getAttribute("data-youtube"),w(t),t)}},!0),self.dlYT=q,addEventListener("load",function(){dlIdle(B,1500)})}(),function(){var e=document.getElementById("dl-book-modal"),t=document.getElementById("dl-book-frame");
+ if(e&&t){var n=null,o=dlDialog(e,{closeSelector:"[data-book-close]",park:1,onOpen:function(){e.inert=!1,a()},onClose:function(){e.inert=!0},initialFocus:function(){return e.querySelector(".dl-modal__close")}}).open;
+-document.querySelectorAll("[data-bookings-open]").forEach(function(e){e.addEventListener("click",o)}),addEventListener("load",a),window.dlOpenBookings=o,window.dlBookingsFallback="https://bookings.delphi-me.com/4937208000000036014",r(),window.addEventListener("hashchange",r)}
++document.querySelectorAll("[data-bookings-open]").forEach(function(e){e.addEventListener("click",o)}),addEventListener("load",function(){dlIdle(a,2e3)}),self.dlBk=a,window.dlOpenBookings=o,window.dlBookingsFallback="https://bookings.delphi-me.com/4937208000000036014",r(),window.addEventListener("hashchange",r)}
+ function a(){return n||((n=document.createElement("iframe")).src="https://bookings.delphi-me.com/portal-embed#/4937208000000036014",n.title="Schedule a demo",n.setAttribute("allowfullscreen",""),t.appendChild(n),n)}
+@@ -611,3 +570,5 @@
+ !b&&o&&o.appendChild(n),b||"https://www.delphi-me.com"===p||(v=n.querySelector('[name="xnQsjsdp"]'),y=n.querySelector('[name="xmIwtLD"]'),g=n.querySelector('[name="CONTACTCF3"]'),v&&(v.value="33c9e1be8d9da155f5e9aa42757034c32feaef519e3e812621a1ae4ea74a84b8"),y&&(y.value="c80403ceb24b11a2e4bd4f20d1c093d25333ef1e65522ccadab1971163e8426b70642c2da599fc0b8b48822ba96d2c61"),g&&(g.value="Website Contact Us (staging)"),c&&(c.value=(p||"")+"/?contact=thanks"));
+-var w=dlDialog(t,{closeSelector:"[data-contact-close]",onOpen:function(){if(h)return h=!1,void k();
++var G=function(){G=function(){},dlJs("https://www.google.com/recaptcha/api.js")};
++b&&addEventListener("load",function(){G()});
++var w=dlDialog(t,{closeSelector:"[data-contact-close]",onOpen:function(){if(G(),h)return h=!1,void k();
+ o.hidden=!1,a.hidden=!0},initialFocus:function(){return a.hidden?l:r}});
+@@ -648,3 +609,4 @@
+ return function(e,t){var n=document.getElementById(e.err);
+-n.textContent=t,n.hidden=!t,t?e.el.setAttribute("aria-invalid","true"):e.el.removeAttribute("aria-invalid")}(e,t),!t}}();
++n.textContent=t,n.hidden=!t,t?e.el.setAttribute("aria-invalid","true"):e.el.removeAttribute("aria-invalid")}(e,t),!t}}(),["pointerover","focusin","touchstart"].forEach(function(t){addEventListener(t,function(e){var t=e.target.closest&&e.target.closest("[data-youtube],[data-bookings-open],[data-research-book],a[href$='#schedule-demo']");
++t&&(t.dataset.youtube?self.dlYT&&dlYT(t.dataset.youtube):self.dlBk&&dlBk())},{capture:!0,passive:!0})});
+ </script>

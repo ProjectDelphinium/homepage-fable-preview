@@ -1,0 +1,6 @@
+--- live/header.html
++++ patched/header.html
+@@ -17,3 +17,2 @@
+ </script>
+-<script>addEventListener("load",()=>document.head.append(Object.assign(document.createElement("script"),{src:"https://www.google.com/recaptcha/api.js"})))</script>
+ <link rel="icon" type="image/svg+xml" href="/dl28-favicon.svg">
