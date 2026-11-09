@@ -1,0 +1,176 @@
+diff --git a/zoho-sites/homepage-sites-v5.html b/zoho-sites/homepage-sites-v5.html
+index 2d06df4..ea27199 100644
+--- a/zoho-sites/homepage-sites-v5.html
++++ b/zoho-sites/homepage-sites-v5.html
+@@ -3095,6 +3095,11 @@
+       .dl-prod__quote .dl-prod__more { max-width: calc(100% - 5rem); row-gap: 1.25rem; }
+       .dl-prod__more > a.dl-link[data-youtube], .dl-hero__actions > a.dl-link[data-youtube] { margin-right: 1rem; }
+     }
++    /* perf 2026-11-09: loading spinner behind the video player (covered once YouTube paints) */
++    #dl-modal .dl-modal__frame::before { content: ""; position: absolute; left: 50%; top: 50%; width: 36px; height: 36px; margin: -18px 0 0 -18px; border: 3px solid rgba(255,255,255,.25); border-top-color: #fff; border-radius: 50%; animation: dl-spin .8s linear infinite; }
++    #dl-modal .dl-modal__frame iframe { z-index: 1; }
++    @keyframes dl-spin { to { transform: rotate(360deg); } }
++    @media (prefers-reduced-motion: reduce) { #dl-modal .dl-modal__frame::before { animation-duration: 2.4s; } }
+     a.dl-link[data-youtube="9mfMC9jC6lU"] { --dl-t: url("https://img.youtube.com/vi/9mfMC9jC6lU/maxresdefault.jpg"); }
+     a.dl-link[data-youtube="xC1b-9bZW4w"] { --dl-t: url("https://img.youtube.com/vi/xC1b-9bZW4w/maxresdefault.jpg"); }
+     a.dl-link[data-youtube="MBYmCCeZqxo"] { --dl-t: url("https://img.youtube.com/vi/MBYmCCeZqxo/maxresdefault.jpg"); }
+@@ -3115,7 +3120,6 @@
+   <link rel="preconnect" href="https://i.ytimg.com">
+   <script src="https://bookings.nimbuspop.com/assets/embed.js" defer></script>
+   <!-- reCAPTCHA after window load: SalesIQ draws its bubble only after load -->
+-  <script>addEventListener("load",()=>document.head.append(Object.assign(document.createElement("script"),{src:"https://www.google.com/recaptcha/api.js"})))</script>
+ </head>
+ <body class="dl-v5">
+   <a class="dl-skip" href="#top">Skip to main content</a>
+@@ -3885,9 +3889,12 @@
+         <p class="dl-sub__lede">We'll get back to you.</p>
+       </div>
+     </div>
+-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script>
+-    (function () {
++    /* Shared loaders (perf 2026-11-09). jQuery 3.5.1 now loads only on /support, for the Desk captcha
++       (it was a parser-blocking script on every page). */
++    function dlJs(src, onload) { document.head.append(Object.assign(document.createElement("script"), { src: src, onload: onload })); }
++    function dlIdle(fn, delay) { setTimeout(function () { (self.requestIdleCallback || setTimeout)(fn, { timeout: 2000 }); }, delay); }
++    if (document.documentElement.classList.contains("dl-path-support")) dlJs("https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js", function () {
+       if (!window.jQuery) return;
+       var zs$ = window.jQuery.noConflict(true);
+       window.zsRegenerateCaptcha = function () {
+@@ -3908,8 +3915,8 @@
+       };
+       var reload = document.getElementById("dl-su-captcha-reload");
+       if (reload) reload.addEventListener("click", window.zsRegenerateCaptcha);
+-      if (document.documentElement.classList.contains("dl-path-support")) window.zsRegenerateCaptcha();
+-    })();
++      window.zsRegenerateCaptcha();
++    });
+     </script>
+   </main>
+ 
+@@ -4379,6 +4386,8 @@
+         var info = data.info;
+         var eventName = data.event;
+         var state = (info && typeof info === "object") ? info.playerState : undefined;
++        /* Player finished loading after the click (slow phone): start it now */
++        if (eventName === "onReady" || state === -1 || state === 5) ytCommand(ytActiveIframe, "playVideo");
+         if (eventName === "onReady" || eventName === "initialDelivery" || eventName === "onStateChange" ||
+             state === 1 || state === 3 || (info && info.currentTime != null)) {
+           ytDisableCaptions(ytActiveIframe);
+@@ -4450,48 +4459,17 @@
+         muxWarmById[id] = { video: video, src: src, poster: cover };
+         return video;
+       }
++      /* perf 2026-11-09: warm ONE player (the first visible video) at idle after load.
++         Other videos warm on hover / focus / touch (intent listener at the end of this script). */
+       function scheduleVideoWarm() {
+-        var ytLinks = document.querySelectorAll("a[data-youtube]");
+-        var ytIds = [];
+-        for (var i = 0; i < ytLinks.length; i++) {
+-          var ytSec = ytLinks[i].closest("section");
+-          if (ytSec && getComputedStyle(ytSec).display === "none") continue;
+-          var ytId = ytLinks[i].getAttribute("data-youtube");
+-          if (ytId && ytIds.indexOf(ytId) === -1) ytIds.push(ytId);
+-        }
+-        var muxLinks = document.querySelectorAll("a[data-mux]");
+-        var muxItems = [];
+-        for (var m = 0; m < muxLinks.length; m++) {
+-          var el = muxLinks[m];
+-          var muxId = el.getAttribute("data-mux");
+-          if (!muxId) continue;
+-          var already = false;
+-          for (var k = 0; k < muxItems.length; k++) {
+-            if (muxItems[k].id === muxId) { already = true; break; }
+-          }
+-          if (already) continue;
+-          var img = el.querySelector("img");
+-          var poster = img ? img.getAttribute("src") : "";
+-          if (poster && poster.indexOf("width=") === -1 && poster.indexOf("image.mux.com") !== -1) {
+-            poster = poster + (poster.indexOf("?") === -1 ? "?" : "&") + "width=1920";
+-          }
+-          muxItems.push({ id: muxId, mp4: el.getAttribute("href"), poster: poster });
+-        }
+-        if (!ytIds.length && !muxItems.length) return;
+-        function warm() {
+-          for (var j = 0; j < ytIds.length; j++) ensureYtWarm(ytIds[j]);
+-          for (var n = 0; n < muxItems.length; n++) {
+-            ensureMuxWarm(muxItems[n].id, muxItems[n].mp4, muxItems[n].poster);
+-          }
+-        }
+-        /* Warm after window load: SalesIQ draws its bubble only after load,
+-           and these hidden embeds would hold load for seconds. */
+-        addEventListener("load", warm);
++        var first = [].find.call(document.querySelectorAll("a[data-youtube]"), function (a) { return a.offsetParent; });
++        if (first) ensureYtWarm(first.getAttribute("data-youtube"));
+       }
+       function openYouTube(id, name, trigger) {
+         var iframe = ensureYtWarm(id);
+         frame.innerHTML = "";
+-        frame.appendChild(iframe);
++        /* moveBefore keeps the warm player loaded (Chrome 133+); appendChild reloads it */
++        try { frame.moveBefore(iframe, null); } catch (e) { frame.appendChild(iframe); }
+         var entry = ytWarmById[id];
+         if (entry && entry.host && entry.host.parentNode) entry.host.parentNode.removeChild(entry.host);
+         delete ytWarmById[id];
+@@ -4568,7 +4546,6 @@
+           try { playing.pause(); } catch (e) {}
+         }
+         frame.innerHTML = "";
+-        scheduleVideoWarm();
+       }
+       var videoDialog = dlDialog(modal, {
+         closeSelector: "[data-close]",
+@@ -4601,7 +4578,8 @@
+           el
+         );
+       }, true);
+-      scheduleVideoWarm();
++      window.dlWarmYt = ensureYtWarm;
++      addEventListener("load", function () { dlIdle(scheduleVideoWarm, 1500); });
+     })();
+       /* Zoho Bookings: one portal-embed iframe, created at window load (or on
+          open, if sooner). Created at parse it held load, and SalesIQ draws its
+@@ -4638,7 +4616,10 @@
+           el.addEventListener("click", openBook);
+         });
+ 
+-        addEventListener("load", ensureIframe);
++        /* perf 2026-11-09: preload at idle about 2 s after load (not at load), or sooner on
++           hover / focus / touch of any Schedule a demo trigger (intent listener below) */
++        addEventListener("load", function () { dlIdle(ensureIframe, 2000); });
++        window.dlWarmBookings = ensureIframe;
+         window.dlOpenBookings = openBook;
+         window.dlBookingsFallback = FALLBACK;
+         /* #schedule-demo (SalesIQ and any link) opens this same modal.
+@@ -4839,9 +4820,14 @@
+           return !!(window.grecaptcha && grecaptcha.getResponse && grecaptcha.getResponse());
+         }
+ 
++        /* reCAPTCHA (perf 2026-11-09): on /contact-us at window load, else when the contact modal opens */
++        var recaptchaLoaded = false;
++        function loadRecaptcha() { if (recaptchaLoaded) return; recaptchaLoaded = true; dlJs("https://www.google.com/recaptcha/api.js"); }
++        if (onContactPage) addEventListener("load", loadRecaptcha);
+         var dialog = dlDialog(modal, {
+           closeSelector: "[data-contact-close]",
+           onOpen: function () {
++            loadRecaptcha();
+             if (pendingThanks) {
+               pendingThanks = false;
+               showDone();
+@@ -5001,6 +4987,16 @@
+         }
+       })();
+ 
++      /* Intent warm-up (perf 2026-11-09): hover, focus or touch on a video or a Schedule a demo trigger */
++      ["pointerover", "focusin", "touchstart"].forEach(function (type) {
++        addEventListener(type, function (e) {
++          var el = e.target.closest && e.target.closest("[data-youtube],[data-bookings-open],[data-research-book],a[href$='#schedule-demo']");
++          if (!el) return;
++          if (el.dataset.youtube) { if (window.dlWarmYt) window.dlWarmYt(el.dataset.youtube); }
++          else if (window.dlWarmBookings) window.dlWarmBookings();
++        }, { capture: true, passive: true });
++      });
++
+ </script>
+ </body>
+ </html>

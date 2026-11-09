@@ -1,0 +1,24 @@
+--- live/custom.css
++++ patched/custom.css
+@@ -6247 +6247,21 @@
+     }
++
++/* perf 2026-11-09: loading spinner behind the video player (covered once YouTube paints) */
++#dl-modal .dl-modal__frame::before { content: "";
++ position: absolute;
++ left: 50%;
++ top: 50%;
++ width: 36px;
++ height: 36px;
++ margin: -18px 0 0 -18px;
++ border: 3px solid rgba(255,255,255,.25);
++ border-top-color: #fff;
++ border-radius: 50%;
++ animation: dl-spin .8s linear infinite;
++ }
++#dl-modal .dl-modal__frame iframe { z-index: 1;
++ }
++@keyframes dl-spin { to { transform: rotate(360deg);
++ } }
++@media (prefers-reduced-motion: reduce) { #dl-modal .dl-modal__frame::before { animation-duration: 2.4s;
++ } }
