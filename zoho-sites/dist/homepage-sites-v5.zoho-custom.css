@@ -3431,3 +3431,10 @@ main a,
 #dl-modal .dl-modal__frame iframe { z-index: 1; }
 @keyframes dl-spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { #dl-modal .dl-modal__frame::before { animation-duration: 2.4s; } }
+
+/* fix3 2026-11-09: collapse empty reCAPTCHA slot */
+.dl-contact__field:has(>.g-recaptcha:empty):has(>.dl-contact__error[hidden]){display:none}
+#webform3131408000003185015 input[name=CONTACTCF53]{align-self:flex-start;margin:.2em 0 0;flex:none}
+/* batch2 2026-11-09: H2 accent words navy (magenta stays on buttons, links, hero word); modal headings are h2 */
+.dl-h2 em,.dl-research__h em{color:#2e3192}
+h2.dl-bh,h2.dl-modal__title{text-wrap:wrap}
