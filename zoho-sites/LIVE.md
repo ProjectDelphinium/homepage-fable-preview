@@ -86,6 +86,12 @@ Contact form HTML lives in the site-wide Header/Footer pack (`homepage-sites-v5.
 
 Don't merge before the live publish is verified. Don't publish to live without Jared's approval.
 
+## Speed and accessibility audit fixes (live 2026-11-09, 7:12 PM MT)
+- Footer: the CRM web-form analytics script (`wf_anal`) in the contact form is now `async` (it was parser-blocking).
+- Header: `div.dl-top` is `role=banner` and the inner `header.dl-nav` is `role=none`, so the logo is inside the banner landmark.
+- Custom CSS: the hidden YouTube warm-up frame is `visibility:hidden` (out of the tab order until it is moved into the video popup and retitled); the Zoho theme's empty `.theme-content-area` main is hidden on our pages (not EULA/agree); sections after the hero use `content-visibility:auto`; `prefers-reduced-motion` forces `scroll-behavior:auto`.
+- Sizes after: Header 44,867 / Footer 44,887 / CSS 140,257 characters.
+
 ## Guardrails
 - Header Code and Footer Code each stay **under 44,900 characters** (the Zoho cap; the publish script asserts this).
 - All assets are **hosted on Zoho** (`/dl28-*` via Zoho Files).

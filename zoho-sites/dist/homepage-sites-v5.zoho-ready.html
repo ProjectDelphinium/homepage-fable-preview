@@ -3251,6 +3251,11 @@ html:not(.dl-ff) .dl-sub__h{max-width:11.988em}
     a.dl-link[data-youtube="U615qsZh8bc"] { --dl-t: url("https://img.youtube.com/vi/U615qsZh8bc/maxresdefault.jpg"); }
     a.dl-link[data-youtube="UgEyq7gUWmM"] { --dl-t: url("https://img.youtube.com/vi/UgEyq7gUWmM/maxresdefault.jpg"); }
     a.dl-link[data-youtube="02HnN8nScr4"] { --dl-t: url("https://img.youtube.com/vi/02HnN8nScr4/maxresdefault.jpg"); }
+/* 2026-11-09 audit fixes: hidden YouTube warm-up frame out of tab order; one main landmark; skip offscreen section rendering; reduced-motion scrolling */
+iframe[title="YouTube preload"]{visibility:hidden}
+html[class*=dl-path-]:not(.dl-path-eula):not(.dl-path-agree) .theme-content-area{display:none!important}
+.dl-home>section:not(:first-child){content-visibility:auto;contain-intrinsic-size:auto 900px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
 </style>
   <link rel="preconnect" href="https://bookings.nimbuspop.com" crossorigin>
   <link rel="preconnect" href="https://bookings.delphi-me.com" crossorigin>
@@ -3292,11 +3297,11 @@ html:not(.dl-ff) .dl-sub__h{max-width:11.988em}
   }();
   </script>
   <!-- Production cutover: set data-site-origin to data-site-origin-production (https://www.delphi-me.com). That switches site links, and the contact modal, to the prod CRM form. -->
-  <div class="dl-top" data-site-origin="https://www.delphi-me.com" data-site-origin-production="https://www.delphi-me.com">
+  <div class="dl-top" role=banner data-site-origin="https://www.delphi-me.com" data-site-origin-production="https://www.delphi-me.com">
     <a class="dl-nav__logo" href="#top" aria-label="Delphinium home">
       <img src="/dl28-logo-new.svg" width="211" height="150" alt="Delphinium">
     </a>
-    <header class="dl-nav">
+    <header class="dl-nav" role=none>
       <nav class="dl-aud" aria-label="Audience">
         <p class="dl-aud__label">My institution is</p>
         <ul class="dl-aud__seg">
@@ -3937,7 +3942,7 @@ html:not(.dl-ff) .dl-sub__h{max-width:11.988em}
             <div class="dl-contact__actions">
               <button type="submit" class="dl-btn" id="dl-contact-submit">Send message</button>
             </div>
-            <script id="wf_anal" src="https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=7294d3847a3cddcf813121605b64dc4e5d3ceb615003efee447b827611e69480dbbd305b4ff652134caaad2b59374e28gid3c559df0847642cedb029d12b96dc5c3588544496161c0775066d09b4d4c4dd2gid85625935d796ba010854981f873755244642dbbfc897e05f41d346746ba5e7bbgidcf8805049e4d531f34d640c17815c10564da0dafb6d4669a0194a5025a5f30dd&amp;tw=4282b3a433cf70f99e8f644b67f797a535cc1b88200064cae43088fec45bdfcd&amp;version=v2"></script>
+            <script id=wf_anal async src="https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=7294d3847a3cddcf813121605b64dc4e5d3ceb615003efee447b827611e69480dbbd305b4ff652134caaad2b59374e28gid3c559df0847642cedb029d12b96dc5c3588544496161c0775066d09b4d4c4dd2gid85625935d796ba010854981f873755244642dbbfc897e05f41d346746ba5e7bbgidcf8805049e4d531f34d640c17815c10564da0dafb6d4669a0194a5025a5f30dd&amp;tw=4282b3a433cf70f99e8f644b67f797a535cc1b88200064cae43088fec45bdfcd&amp;version=v2"></script>
           </form>
       </div>
       <div data-cu-view="done" hidden>

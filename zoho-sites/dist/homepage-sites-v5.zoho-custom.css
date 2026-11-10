@@ -3468,3 +3468,9 @@ html:not(.dl-ff) .dl-close h2{max-width:9.990em}
 html:not(.dl-ff) .dl-close__lede{max-width:19.880em}
 html:not(.dl-ff) .dl-footer__tag{max-width:19.710em}
 html:not(.dl-ff) .dl-sub__h{max-width:11.988em}
+
+/* 2026-11-09 audit fixes: hidden YouTube warm-up frame out of tab order; one main landmark; skip offscreen section rendering; reduced-motion scrolling */
+iframe[title="YouTube preload"]{visibility:hidden}
+html[class*=dl-path-]:not(.dl-path-eula):not(.dl-path-agree) .theme-content-area{display:none!important}
+.dl-home>section:not(:first-child){content-visibility:auto;contain-intrinsic-size:auto 900px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
