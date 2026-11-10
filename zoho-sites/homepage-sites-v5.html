@@ -36,8 +36,8 @@
       --radius: 14px;
       --shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
       --shadow-sm: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
-      --font-display: "Outfit", system-ui, sans-serif;
-      --font-text: "Source Sans 3", system-ui, sans-serif;
+      --font-display: "Outfit", "Outfit FB", "Outfit FB R", system-ui, sans-serif;
+      --font-text: "Source Sans 3", "Source Sans 3 FB", "Source Sans 3 FB R", system-ui, sans-serif;
       /* Focus ring: navy on light surfaces; dark surfaces reset it to white */
       --dl-focus: var(--navy);
     }
@@ -2645,7 +2645,7 @@
       display: block;
       margin-top: 0.15rem;
       /* Fraunces italic is already on the page. Caveat is not. */
-      font-family: Fraunces, Georgia, serif;
+      font-family: Fraunces, "Fraunces FB", Georgia, serif;
       font-style: italic;
       font-weight: 560;
       font-size: 1.35em;
@@ -3091,6 +3091,36 @@
 /* fix3 2026-11-09: collapse empty reCAPTCHA slot */
 .dl-contact__field:has(>.g-recaptcha:empty):has(>.dl-contact__error[hidden]){display:none}
 #webform3131408000003185015 input[name=CONTACTCF53]{align-self:flex-start;margin:.2em 0 0;flex:none}
+/* tentative 2026-11-09 (t470u): hero "Delphinium delivers" in navy; "Engagement!" keeps magenta + highlight */
+.dl-hero__h1 strong{color:#2e3192}
+/* font-swap CLS fix 2026-11-09: metric-matched local fallbacks. ascent/descent from our woff2 files (fontTools); size-adjust calibrated in Chrome on page text vs Arial-metric Liberation Sans and Roboto */
+@font-face{font-family:"Outfit FB";src:local("Arial"),local("ArialMT"),local("Liberation Sans"),local("Arimo"),local("Helvetica");font-weight:100 500;font-style:normal;size-adjust:98.40%;ascent-override:101.63%;descent-override:26.42%;line-gap-override:0%;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Outfit FB";src:local("Arial Bold"),local("Arial-BoldMT"),local("Liberation Sans Bold"),local("Arimo Bold"),local("Helvetica Bold");font-weight:501 650;font-style:normal;size-adjust:93.35%;ascent-override:107.12%;descent-override:27.85%;line-gap-override:0%;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Outfit FB";src:local("Arial Bold"),local("Arial-BoldMT"),local("Liberation Sans Bold"),local("Arimo Bold"),local("Helvetica Bold");font-weight:651 900;font-style:normal;size-adjust:94.79%;ascent-override:105.50%;descent-override:27.43%;line-gap-override:0%;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Source Sans 3 FB";src:local("Arial"),local("ArialMT"),local("Liberation Sans"),local("Arimo"),local("Helvetica");font-weight:100 500;font-style:normal;size-adjust:93.45%;ascent-override:109.58%;descent-override:42.80%;line-gap-override:0%;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Source Sans 3 FB";src:local("Arial Bold"),local("Arial-BoldMT"),local("Liberation Sans Bold"),local("Arimo Bold"),local("Helvetica Bold");font-weight:501 650;font-style:normal;size-adjust:89.33%;ascent-override:114.63%;descent-override:44.78%;line-gap-override:0%;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Source Sans 3 FB";src:local("Arial Bold"),local("Arial-BoldMT"),local("Liberation Sans Bold"),local("Arimo Bold"),local("Helvetica Bold");font-weight:651 900;font-style:normal;size-adjust:91.43%;ascent-override:112.00%;descent-override:43.75%;line-gap-override:0%;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Source Sans 3 FB";src:local("Arial Italic"),local("Arial-ItalicMT"),local("Liberation Sans Italic"),local("Arimo Italic"),local("Helvetica Oblique");font-weight:100 900;font-style:italic;size-adjust:92.98%;ascent-override:110.13%;descent-override:43.02%;line-gap-override:0%;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Outfit FB R";src:local("Roboto"),local("Roboto-Regular");font-weight:100 500;font-style:normal;size-adjust:99.28%;ascent-override:100.73%;descent-override:26.19%;line-gap-override:0%;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Outfit FB R";src:local("Roboto Bold"),local("Roboto-Bold");font-weight:501 900;font-style:normal;size-adjust:101.13%;ascent-override:98.88%;descent-override:25.71%;line-gap-override:0%;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Source Sans 3 FB R";src:local("Roboto"),local("Roboto-Regular");font-weight:100 500;font-style:normal;size-adjust:93.69%;ascent-override:109.30%;descent-override:42.69%;line-gap-override:0%;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Source Sans 3 FB R";src:local("Roboto Bold"),local("Roboto-Bold");font-weight:501 900;font-style:normal;size-adjust:95.05%;ascent-override:107.73%;descent-override:42.08%;line-gap-override:0%;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Source Sans 3 FB R";src:local("Roboto Italic"),local("Roboto-Italic");font-weight:100 900;font-style:italic;size-adjust:93.61%;ascent-override:109.39%;descent-override:42.73%;line-gap-override:0%;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Fraunces FB";src:local("Times New Roman Italic"),local("TimesNewRomanPS-ItalicMT"),local("Liberation Serif Italic"),local("Tinos Italic");font-weight:100 900;font-style:italic;size-adjust:91.80%;ascent-override:106.54%;descent-override:27.78%;line-gap-override:0%;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+/* while web fonts load, keep ch-based max-widths at their web-font size (fallback "0" is a different width) */
+html:not(.dl-ff) .dl-h2{max-width:14.652em}
+html:not(.dl-ff) .dl-lede{max-width:29.820em}
+html:not(.dl-ff) .dl-hero__h1{max-width:11.826em}
+html:not(.dl-ff) .dl-hero__lead{max-width:25.844em}
+html:not(.dl-ff) .dl-punch{max-width:24.966em}
+html:not(.dl-ff) .dl-mk__sub{max-width:26.838em}
+html:not(.dl-ff) .dl-proof__intro .dl-lede{max-width:30.814em}
+html:not(.dl-ff) .dl-prod__sub{max-width:23.856em}
+html:not(.dl-ff) #product .dl-list{max-width:23.856em}
+html:not(.dl-ff) .dl-close h2{max-width:9.990em}
+html:not(.dl-ff) .dl-close__lede{max-width:19.880em}
+html:not(.dl-ff) .dl-footer__tag{max-width:19.710em}
+html:not(.dl-ff) .dl-sub__h{max-width:11.988em}
 #zs-fl-tip{height:auto!important;max-height:none!important;width:auto!important;max-width:none!important}
 #zs-fl-tip .zsiq-tultip-desc{font-size:0!important;overflow:visible!important;height:auto!important}
 #zs-fl-tip .zsiq-tultip-desc::after{content:"Questions about Delphinium? I can help.";font-size:15px;white-space:nowrap}
@@ -3158,7 +3188,7 @@
   }();
   </script>
   <!-- Production cutover: set data-site-origin to data-site-origin-production (https://www.delphi-me.com). That switches site links, and the contact modal, to the prod CRM form. -->
-  <div class="dl-top" data-site-origin="https://delphinium-marketing-staging.zohosites.com" data-site-origin-production="https://www.delphi-me.com">
+  <div class="dl-top" data-site-origin="https://www.delphi-me.com" data-site-origin-production="https://www.delphi-me.com">
     <a class="dl-nav__logo" href="#top" aria-label="Delphinium home">
       <img src="assets/logo-new.svg" width="211" height="150" alt="Delphinium">
     </a>
@@ -4074,6 +4104,8 @@
     (function () {
       var root = document.documentElement;
       root.classList.add("js");
+      /* Font-swap CLS fix (2026-11-09): ch-based widths use web-font sizes until the web fonts are in (see dl-ff rules in CSS) */
+      if (document.fonts) Promise.all(["300 1em Outfit", "700 1em Outfit", '400 1em "Source Sans 3"', '600 1em "Source Sans 3"'].map(function (t) { return document.fonts.load(t); })).then(function () { root.classList.add("dl-ff"); });
       /* One switch for staging URLs. Production value is [data-site-origin-production] on .dl-top. */
       var originEl = document.querySelector("[data-site-origin]");
       var siteOrigin = originEl ? (originEl.getAttribute("data-site-origin") || "").replace(/\/$/, "") : "";
