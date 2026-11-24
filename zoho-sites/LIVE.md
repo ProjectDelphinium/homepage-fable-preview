@@ -97,3 +97,10 @@ Don't merge before the live publish is verified. Don't publish to live without J
 - All assets are **hosted on Zoho** (`/dl28-*` via Zoho Files).
 - **No hotlinks**: no HubSpot (`hubfs`, `hs-fs`), `raw.githubusercontent.com` or other third-party image or font URLs.
 - No secrets, tokens, cookies or session files in this repo.
+
+## Klenty website tracking (live 2026-11-23)
+- Last block of Header Code. Loads Klenty's script after window load on `/`, `/home`, `/highered`, `/contact-us`, `/eula`, `/purchase-agreement` and `/privacy-policy`. Not on `/support` or `/schedule-jared`, and not when the browser sends Global Privacy Control. Jared approved it 2026-11-23.
+- The script sends page title and full URL to `plugin.klenty.com` and `track.connectdelphi-me.info`. It reads no form fields.
+- Header 44,873 characters. `dist` is hand-patched; the builder was not run.
+- The staging domain redirected to `www.delphi-me.com` on 2026-11-23.
+- Rollback: paste the Header Code from commit `880ae25` and publish.
