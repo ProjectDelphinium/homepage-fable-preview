@@ -94,6 +94,10 @@ SALESIQ = (
     '<script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq43657238767afe5a3238ca4de01feca14e1d65dc4607454dc9beb3e80e4c5351" defer></script>'
 )
 
+# Klenty website tracking. Allow-listed pages only (not /support, not /schedule-jared),
+# after window load, and not when the browser sends Global Privacy Control.
+KLENTY = r"""<script>/^[/](home|highered|contact-us|eula|purchase-agreement|privacy-policy)?[/]?$/.test(location.pathname)&&!navigator.globalPrivacyControl&&addEventListener('load',()=>{__kl__tr__Id='6af1d796337558f365fb5e3e';document.head.append(Object.assign(document.createElement('script'),{async:!0,src:'https://prod-kl-website-tracking.s3.amazonaws.com/klenty_track.js'}))})</script>"""
+
 FONT_COMMENT = "/* self-hosted fonts (Zoho Files) 2026-09-28 */\n"
 
 
@@ -372,7 +376,7 @@ def split_parts(full_header: str) -> tuple[str, str]:
     if top < 0:
         raise SystemExit(".dl-top not found")
     header = header[:top] + FAVICON_LINKS + NEUTRALIZE + header[top:]
-    return keep_ws(header) + SALESIQ, keep_ws(footer)
+    return keep_ws(header) + SALESIQ + KLENTY, keep_ws(footer)
 
 
 def custom_css(doc: str) -> str:
